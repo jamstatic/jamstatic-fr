@@ -1,0 +1,16 @@
+# Site settings
+title: Jekyll-fr
+email: contact@jekyll-fr.org
+description: Utilisateurs francophones de Jekyll
+baseurl: ""
+url: "http://jekyll-fr.github.io"
+permalink: /:year/:month/:day/:title/
+
+twitter_username: jekyll_fr
+github_username:  jekyll-fr
+
+# Build settings
+markdown: kramdown
+
+gems:
+  - jekyll-mentions
