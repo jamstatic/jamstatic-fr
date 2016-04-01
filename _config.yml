@@ -7,7 +7,7 @@ baseurl: ""
 url: "http://jekyll-fr.org"
 permalink: /:year/:month/:day/:title/
 timezone: Europe/Paris
-
+lang: fr
 
 twitter:
     username: jekyll_fr
