@@ -13,7 +13,7 @@ Nous observons actuellement un vrai engouement pour l'utilisation des gestionnai
 > Jekyll est un générateur de sites statiques écrit en Ruby… qui vous permet de développer des sites basés sur des templates dynamiques (codés avec Liquid) et des fichiers de contenus (YAML / Markdown / HTML / JSON / CSV). Jekyll n'utilise pas de base de données. Sur la base de ces fichiers, Jekyll va générer un site entièrement statique que vous pourrez ensuite déployer sur n'importe quel serveur web ou sur Github Pages.
 > – <cite>[Introduction à Jekyll][jekyll-introduction]</cite>
 
-On observe un bouillonnement aussi bien de la communauté qui a lancé de nombreux chantiers en parallèle que de nouveaux acteurs du monde de l'édition qui utilise Jekyll pour ses publications.
+On observe un bouillonnement aussi bien de la communauté qui a lancé de nombreux chantiers en parallèle que de nouveaux acteurs du monde de l'édition qui utilisent Jekyll pour ses publications.
 
 Jekyll est rapide à prendre en main, cependant en fonction de besoins particuliers il est parfois intéressant d'avoir accès à des exemples de codes permettant de mettre en place le comportement désiré.
 
@@ -37,7 +37,7 @@ Jekyll c'est pratique, mais Jekyll n'a pas vocation à tout faire. Parce qu'il f
 
 Nous espérons ainsi pouvoir fédérer une communauté d'utilisateurs, qui partagent leurs problématiques et leurs solutions, afin que l'utilisation de Jekyll et des gestionnaires de contenu statique soit plus simple pour tous.
 
-Toute contributiion est la bienvenue, nous sommes [Jekyll-fr sur Github](https://github.com/jekyll-fr/), [jekyll_fr sur Twitter](//twitter.com/{{ site.twitter.username }}) et vous pouvez [vous connecter sur notre canal de discussion Slack](https://jekyll-fr.herokuapp.com/), si vous souhaitez vous joindre à nous.
+Toute contributiion est la bienvenue, nous sommes [Jekyll-fr sur Github](https://github.com/{{ site.github.username}}/), [jekyll_fr sur Twitter](//twitter.com/{{ site.twitter.username }}) et vous pouvez [vous connecter sur notre canal de discussion Slack](https://jekyll-fr.herokuapp.com/), si vous souhaitez vous joindre à nous.
 
 Bon Jekyll !
 
