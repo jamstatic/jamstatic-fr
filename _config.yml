@@ -23,6 +23,15 @@ markdown: kramdown
 kramdown:
    input: GFM
 
+exclude:
+    - .editorconfig
+    - .gitignore
+    - CNAME
+    - Gemfile
+    - Gemfile.lock
+    - LICENSE
+    - README.md
+
 gems:
   - jekyll-sitemap
   - jekyll-feed
