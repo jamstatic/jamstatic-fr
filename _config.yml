@@ -1,5 +1,4 @@
 # Site settings
-repository: jekyll-fr/jekyll-fr.github.io
 title: Jekyll-fr
 email: contact@jekyll-fr.org
 description: Communauté francophone des utilisateurs de Jekyll
@@ -8,6 +7,9 @@ url: "http://jekyll-fr.org"
 permalink: /:year/:month/:day/:title/
 timezone: Europe/Paris
 lang: fr
+
+repository: jekyll-fr/jekyll-fr.github.io
+branch: master
 
 twitter:
     username: jekyll_fr
