@@ -22,6 +22,7 @@ body {
 .site-header {
     padding: $base-line 0;
     min-height: 56px;
+    background: $grey-color-dark;
 }
 
 .site-title {
@@ -42,8 +43,6 @@ body {
         padding: 0 $base-line/2;
         max-width: 300px;
         min-width: 200px;
-        background: $grey-color-dark;
-        border-radius: 15px;
     }
     &,
     &:visited {
@@ -64,7 +63,7 @@ body {
         display: none;
     }
     .page-link {
-        color: $text-color;
+        color: #fff;
         line-height: $base-line-height;
         // Gaps between nav items, but not on the last one
         &:not(:last-child) {
