@@ -2,7 +2,7 @@
 repository: jekyll-fr/jekyll-fr.github.io
 title: Jekyll-fr
 email: contact@jekyll-fr.org
-description: Utilisateurs francophones de Jekyll
+description: Communauté francophone des utilisateurs de Jekyll
 baseurl: ""
 url: "http://jekyll-fr.github.io"
 permalink: /:year/:month/:day/:title/
