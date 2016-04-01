@@ -4,7 +4,7 @@ title: Jekyll-fr
 email: contact@jekyll-fr.org
 description: Communauté francophone des utilisateurs de Jekyll
 baseurl: ""
-url: "http://jekyll-fr.github.io"
+url: "http://jekyll-fr.org"
 permalink: /:year/:month/:day/:title/
 timezone: Europe/Paris
 
