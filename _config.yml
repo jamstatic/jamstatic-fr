@@ -1,16 +1,49 @@
 # Site settings
+repository: jekyll-fr/jekyll-fr.github.io
 title: Jekyll-fr
 email: contact@jekyll-fr.org
-description: Utilisateurs francophones de Jekyll
+description: Communauté francophone des utilisateurs de Jekyll
 baseurl: ""
-url: "http://jekyll-fr.github.io"
+url: "http://jekyll-fr.org"
 permalink: /:year/:month/:day/:title/
+timezone: Europe/Paris
+lang: fr
 
-twitter_username: jekyll_fr
-github_username:  jekyll-fr
+twitter:
+    username: jekyll_fr
+github:
+    username: jekyll-fr
 
-# Build settings
+social:
+  type: organization
+  links:
+    - https://twitter.com/jekyll_fr
+    - https://github.com/jekyll-fr
+
+analytics:
+  google :
+    tracking_id : UA-75833986-1
+
 markdown: kramdown
+kramdown:
+   input: GFM
+
+sass:
+    style: compressed
+
+exclude:
+    - .editorconfig
+    - .gitignore
+    - CNAME
+    - Gemfile
+    - Gemfile.lock
+    - LICENSE
+    - README.md
 
 gems:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
   - jekyll-mentions
+  - jekyll-github-metadata
+  - jekyll-paginate
