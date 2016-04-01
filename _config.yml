@@ -1,4 +1,5 @@
 # Site settings
+repository: jekyll-fr/jekyll-fr.github.io
 title: Jekyll-fr
 email: contact@jekyll-fr.org
 description: Utilisateurs francophones de Jekyll
@@ -13,6 +14,9 @@ github_username:  jekyll-fr
 markdown: kramdown
 
 gems:
+  - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-mentions
+  - jekyll-github-metadata
+  - jekyll-paginate
