@@ -13,4 +13,5 @@ github_username:  jekyll-fr
 markdown: kramdown
 
 gems:
+  - jekyll-seo-tag
   - jekyll-mentions
