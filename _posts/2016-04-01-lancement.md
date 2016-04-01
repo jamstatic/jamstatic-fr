@@ -19,19 +19,19 @@ Jekyll est rapide à prendre en main, cependant en fonction de besoins particuli
 
 Nous aimerions relayer et aggréger en Français ce qui se passe à divers endroits de la toile autour de Jekyll.
 
-### Son actualité
+## Son actualité
 
 Les news, les conférences et appels à orateurs… tout ce qui peut toucher de près ou de loin la communauté. L'objectif est de relayer de l’information.
 
-### Ses références
+## Ses références
 
 Il existe des sites ou des articles qui font références pour l'installation, la mise en production, l'optimisation du code, la gestion du contenu… il s'agit de lister les liens que nous estimons essentiels.
 
-### Ses exemples de code
+## Ses exemples de code
 
 Pour mettre en forme un menu, des catégories ou des collections, des exemples de code sont présents sur le web, pourquoi ne simplement pas présenter un cas pratique et donner un ou plusieurs exemples de code que l'on peut utiliser.
 
-### Ses limites
+## Ses limites
 
 Jekyll c'est pratique, mais Jekyll n'a pas vocation à tout faire. Parce qu'il faut savoir utiliser les outils adaptés, nous parlerons des avantages que peuvent avoir d'autres gestionnaires de pages statiques.
 
