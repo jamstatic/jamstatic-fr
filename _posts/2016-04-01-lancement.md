@@ -18,7 +18,7 @@ Nous aimerions relayer et aggréger en Français ce qui se passe à divers endro
 
 ### Son actualité
 
-Les news, les conférences et appels à orateurs… tout ce qui peut toucher de près ou de loin la communauté. L'objectif est de relayer de l’ information.
+Les news, les conférences et appels à orateurs… tout ce qui peut toucher de près ou de loin la communauté. L'objectif est de relayer de l’information.
 
 ### Ses références
 
