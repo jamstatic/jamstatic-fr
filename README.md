@@ -1,5 +1,7 @@
 # jekyll-fr.org
 
+[![Build Status](https://travis-ci.org/jekyll-fr/jekyll-fr.github.io.svg?branch=master)](https://travis-ci.org/jekyll-fr/jekyll-fr.github.io)
+
 Vous utilisez Jekyll, vous voulez échanger avec la communauté des utilisateurs francophones ?
 
 Vous pouvez :
