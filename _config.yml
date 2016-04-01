@@ -24,6 +24,9 @@ markdown: kramdown
 kramdown:
    input: GFM
 
+sass:
+    style: compressed
+
 exclude:
     - .editorconfig
     - .gitignore
