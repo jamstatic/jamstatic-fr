@@ -7,10 +7,18 @@ baseurl: ""
 url: "http://jekyll-fr.github.io"
 permalink: /:year/:month/:day/:title/
 
-twitter_username: jekyll_fr
-github_username:  jekyll-fr
 
-# Build settings
+twitter:
+    username: jekyll_fr
+github:
+    username: jekyll-fr
+
+social:
+  type: organization
+  links:
+    - https://twitter.com/jekyll_fr
+    - https://github.com/jekyll-fr
+
 markdown: kramdown
 kramdown:
    input: GFM
