@@ -8,7 +8,7 @@ C'est avec émotion que nous avons le plaisir de vous annoncer le lancement d'un
 
 ## Pourquoi ce site ?
 
-Nous observons actuellement un vrai engouement pour l'utilisation des gestionnaires de fichiers statiques. Du fait de son utilisation par [Github Pages](https://pages.github.com/), [Jekyll](http://jekyllrb.com/) est le système le plus populaire.
+Nous observons actuellement un vrai engouement pour l'utilisation des gestionnaires de site statique. Du fait de son utilisation par [Github Pages](https://pages.github.com/), [Jekyll](http://jekyllrb.com/) est le système le plus populaire.
 
 > Jekyll est un générateur de sites statiques écrit en Ruby… qui vous permet de développer des sites basés sur des templates dynamiques (codés avec Liquid) et des fichiers de contenus (YAML / Markdown / HTML / JSON / CSV). Jekyll n'utilise pas de base de données. Sur la base de ces fichiers, Jekyll va générer un site entièrement statique que vous pourrez ensuite déployer sur n'importe quel serveur web ou sur Github Pages.
 > – <cite>[Introduction à Jekyll][jekyll-introduction]</cite>
@@ -33,11 +33,11 @@ Pour mettre en forme un menu, des catégories ou des collections, des exemples d
 
 ## Ses limites
 
-Jekyll c'est pratique, mais Jekyll n'a pas vocation à tout faire. Parce qu'il faut savoir utiliser les outils adaptés, nous parlerons des avantages que peuvent avoir d'autres gestionnaires de pages statiques.
+Jekyll c'est pratique, mais Jekyll n'a pas vocation à tout faire. Parce qu'il faut savoir utiliser les outils adaptés, nous parlerons des avantages que peuvent avoir d'autres gestionnaires de sites statiques.
 
-Nous espérons ainsi pouvoir fédérer une communauté d'utilisateurs, qui partagent leurs problématiques et leurs solutions, afin que l'utilisation de Jekyll et des gestionnaires de contenu statique soit plus simple pour tous.
+Nous espérons ainsi pouvoir fédérer une communauté d'utilisateurs, qui partagent leurs problématiques et leurs solutions, afin que l'utilisation de Jekyll et des gestionnaires de site statique soit plus simple pour tous.
 
-Toute contributiion est la bienvenue, nous sommes [Jekyll-fr sur Github](https://github.com/{{ site.github.username}}/), [jekyll_fr sur Twitter](//twitter.com/{{ site.twitter.username }}) et vous pouvez [vous connecter sur notre canal de discussion Slack](https://jekyll-fr.herokuapp.com/), si vous souhaitez vous joindre à nous.
+Toute contribution est la bienvenue, nous sommes [Jekyll-fr sur Github](https://github.com/{{ site.github.username}}/), [jekyll_fr sur Twitter](//twitter.com/{{ site.twitter.username }}) et vous pouvez [vous connecter sur notre canal de discussion Slack](https://jekyll-fr.herokuapp.com/), si vous souhaitez vous joindre à nous.
 
 Bon Jekyll !
 
