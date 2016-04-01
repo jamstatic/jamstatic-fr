@@ -8,7 +8,7 @@ C'est avec émotion que nous avons le plaisir de vous annoncer le lancement d'un
 
 ## Pourquoi ce site ?
 
-Nous observons actuellement un vrai engouement pour l'utilisation des gestionnaires de fichiers statiques. De part son utilisation par [Github Pages](https://pages.github.com/), [Jekyll](http://jekyllrb.com/) est le système le plus populaire.
+Nous observons actuellement un vrai engouement pour l'utilisation des gestionnaires de fichiers statiques. Du fait de son utilisation par [Github Pages](https://pages.github.com/), [Jekyll](http://jekyllrb.com/) est le système le plus populaire.
 
 > Jekyll est un générateur de sites statiques écrit en Ruby… qui vous permet de développer des sites basés sur des templates dynamiques (codés avec Liquid) et des fichiers de contenus (YAML / Markdown / HTML / JSON / CSV). Jekyll n'utilise pas de base de données. Sur la base de ces fichiers, Jekyll va générer un site entièrement statique que vous pourrez ensuite déployer sur n'importe quel serveur web ou sur Github Pages.
 > – <cite>[Introduction à Jekyll][jekyll-introduction]</cite>
