@@ -20,6 +20,10 @@ social:
     - https://twitter.com/jekyll_fr
     - https://github.com/jekyll-fr
 
+analytics:
+  google :
+    tracking_id : UA-75833986-1
+
 markdown: kramdown
 kramdown:
    input: GFM
