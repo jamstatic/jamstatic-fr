@@ -1,41 +1,9 @@
-////
-/// Typography
-////
-
-// Our variables
+// typography
 //-------------------------------------
-$base-font-family:        'Lato', Helvetica, Arial, sans-serif;
-$base-font-size:          16px;
-$small-font-size:         $base-font-size * 0.875;
-
-$ratio:                   1.20;
-$base:                    1;
-$base-em:                 $base * 1em;
-$base-px:                 $base * 16px;
-
-$ms0:                     1;
-$ms1:                     $ratio;        /* 1.2   */
-$ms2:                     $ratio * $ms1; /* 1.44  */
-$ms3:                     $ratio * $ms2; /* 1.728 */
-$ms4:                     $ratio * $ms3; /* 2.074 */
-$ms5:                     $ratio * $ms4; /* 2.488 */
-$ms6:                     $ratio * $ms5; /* 2.986 */
-$ms7:                     $ratio * $ms6; /* 3.583 */
-
-$small:                   $base-em / $ms1;
-$normal:                  $base-em * $ms0;
-$big:                     $base-em * $ms1;
-$bigger:                  $base-em * $ms2;
-$title2:                  $base-em * $ms3;
-$title1:                  $base-em * $ms4;
-
-$line-height-base:        $base * $ms2;
-$line-height-computed:    floor(($base-em * $line-height-base));
-$base-line:               $line-height-computed;
 
 body {
   font-family: $base-font-family;
-  font-weight: 400;
+  font-weight: $base-font-weight;
   font-size: $base-em * $ms0;
   line-height: $base * $ms2;
 }
@@ -53,14 +21,10 @@ h1, .h1 { font-size: $title1; }
 
 @include media-query($on-tablet) {
   body { font-size: $base-em * $ms1; }
-  h3, .h3 { font-size: $base-em * $ms3; }
-  h2, .h2 { font-size: $base-em * $ms4; }
-  h1, .h1 { font-size: $base-em * $ms5; }
 }
 
 @include media-query($on-desktop) {
-  h2, .h2 { font-size: $base-em * $ms5; }
-  h1, .h1 { font-size: $base-em * $ms6; }
+  body { font-size: $base-em * $ms2; }
 }
 
 h1, .h1,
@@ -146,4 +110,3 @@ dt {
 dd {
   margin-left: 0; // Undo browser default
 }
-
