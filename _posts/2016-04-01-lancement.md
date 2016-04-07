@@ -2,6 +2,7 @@
 layout: post
 title: Lancement de la communauté Jekyll France
 author: bertrand
+comments: true
 ---
 
 C'est avec émotion que nous avons le plaisir de vous annoncer le lancement d'un site relayant les actualités de la communauté Jekyll en Français.
