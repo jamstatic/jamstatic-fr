@@ -20,7 +20,7 @@ Le format Markdown qu’on rencontre dans de plus en plus de services est aussi 
 
 Enfin et c’est important il y a un très bon état d’esprit dans la communauté Jekyll. Outre le fait que ce soit inscrit noir sur blanc dans le [code de conduite](https://jekyllrb.com/docs/conduct/), les mainteneurs du projet comme Parker Moore font un gros effort pour faciliter les contributions, [il m’a même proposé de travailler avec lui sur l’apprentissage de Ruby avec Jekyll](https://talk.jekyllrb.com/t/core-data-driven-content/2213/5?u=dirtyf) !
 
-Je crois comme d’autres que nous allons assister à une utilisation de plus en plus massive de ce type de solution et qu’elles vont influencer de plus en plus les architectures ; celles-ci ne seront plus forcément entièrement monolithiques. Nous assisterons sans doute à un rapprochement entre les CMS statiques et dynamiques tels que nous les connaissons aujourd’hui.
+Je crois comme d’autres que nous allons assister à une utilisation de plus en plus massive de ce type de solution et qu’elles vont influencer de plus en plus les architectures ; celles-ci ne seront plus forcément entièrement monolithiques. Nous assistons déjà à un rapprochement entre les CMS statiques et dynamiques, avec d'un côté l'apparition d'interfaces pour gérer du statique, des flat CMS et de l'autre la possibilité de générer du statique à partir du dynamique. Les deux peuvent être complémentaires et cohabiter côte à côte. Une page d'accueil peut-être générée en statique tandis que d'autres parties avec plus d'interactions utilisateurs continuent d'être gérées avec du dynamique. Tout est possible.
 
 **Comment voudrais-tu voir Jekyll évoluer ?**
 
