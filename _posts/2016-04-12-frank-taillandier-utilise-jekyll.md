@@ -2,7 +2,7 @@
 layout: post
 title: Frank Taillandier utilise Jekyll
 description: Questions à un utilisateur de Jekyll
-author: frank
+author: bertrand
 comments: true
 ---
 
