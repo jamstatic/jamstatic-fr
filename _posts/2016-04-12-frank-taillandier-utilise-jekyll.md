@@ -10,7 +10,7 @@ Cet article est le premier d’une série qui présente des utilisateurs de Jeky
 
 **Bonjour, pourrais-tu te présenter ?**
 
-Bonjour, je m’appelle Frank, je m’intéresse au développement web front-end depuis de nombreuses années. J’ai travaillé successivement dans le public, puis dans le privé, où j’ai contribué pendant quelques années à un CMS open-source et où j’accompagnais les équipes dans une amélioration continue. Parallèlement, je participe à l’organisation de [Sud Web](//sudweb.fr/), une conférence annuelle destinés aux gens du web depuis six ans. Actuellement sans emploi, j’en profite pour [m’intéresser aux gestionnaires de contenu statique](http://frank.taillandier.me/2016/03/08/les-gestionnaires-de-contenu-statique/) et à Jekyll en particulier.
+Bonjour, je m’appelle Frank, je m’intéresse au développement web front-end depuis de nombreuses années. J’ai travaillé successivement dans le public, puis dans le privé, où j’ai contribué pendant quelques années à un CMS open-source et où j’accompagnais les équipes dans une amélioration continue. Parallèlement, je participe à l’organisation de [Sud Web](//sudweb.fr/), une conférence annuelle destinées aux gens du web depuis six ans. Actuellement sans emploi, j’en profite pour [m’intéresser aux gestionnaires de contenu statique](http://frank.taillandier.me/2016/03/08/les-gestionnaires-de-contenu-statique/) et à Jekyll en particulier.
 
 **Pourquoi utilises-tu Jekyll ?**
 
@@ -20,13 +20,13 @@ Le format Markdown qu’on rencontre dans de plus en plus de services est aussi 
 
 Enfin et c’est important il y a un très bon état d’esprit dans la communauté Jekyll. Outre le fait que ce soit inscrit noir sur blanc dans le [code de conduite](https://jekyllrb.com/docs/conduct/), les mainteneurs du projet comme Parker Moore font un gros effort pour faciliter les contributions, [il m’a même proposé de travailler avec lui sur l’apprentissage de Ruby avec Jekyll](https://talk.jekyllrb.com/t/core-data-driven-content/2213/5?u=dirtyf) !
 
-Je crois comme d’autres que nous allons assister à une utilisation de plus en plus massive de ce type de solution et qu’ils vont influencer de plus en plus les architectures, qui ne seront plus forcément entièrement monolithiques. Nous assisterons sans doute à un rapprochement entre les CMS statiques et dynamiques tels que nous les connaissons aujourd’hui.
+Je crois comme d’autres que nous allons assister à une utilisation de plus en plus massive de ce type de solution et qu’elles vont influencer de plus en plus les architectures ; celles-ci ne seront plus forcément entièrement monolithiques. Nous assisterons sans doute à un rapprochement entre les CMS statiques et dynamiques tels que nous les connaissons aujourd’hui.
 
 **Comment voudrais-tu voir Jekyll évoluer ?**
 
 J’aimerais déjà voir les [propositions faites dans le cadre du Summer of Code](https://github.com/github/mentorships/issues?q=is%3Aissue+is%3Aopen+label%3A%22project%3A+Jekyll%22) se réaliser : internationalisation, régénération plus fine et plus rapide, générer des versions des contenus dans plusieurs formats comme `amp` ou `epub`, un site dédié pour les thèmes et les plugins.
 
-Jekyll à déjà huit ans et bénéficie d’un écosystème déjà assez riche pour palier au manque de fonctionnalités du cœur.
+Jekyll a déjà huit ans et bénéficie d’un écosystème déjà assez riche pour palier le manque de fonctionnalités du cœur.
 
 Je regrette un peu le manque de vision sur le projet et jusqu’à aujourd’hui Jekyll ne bénéficiait pas encore de feuille de route, mais cela devrait être [chose faite](https://github.com/jekyll/jekyll/blob/roadmap/site/roadmap.md#v32) d’ici peu. La seule fonctionnalité annoncée pour le moment est le support de [l’installation des thèmes via des gems Ruby](https://github.com/jekyll/jekyll/pull/4595). C’est une bonne chose pour les nouveaux utilisateurs.
 
