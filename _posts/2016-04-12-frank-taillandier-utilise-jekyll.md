@@ -6,7 +6,7 @@ author: bertrand
 comments: true
 ---
 
-Cet article est le premier d’une série qui présente des utilisateurs de Jekyll, nous commençons avec Frank Taillandier, contributeur à jekyll-fr. Si vous souhaitez vous aussi répondre à ces questions, merci de [soumttre une pull request sur Github](https://github.com/jekyll-fr/jekyll-fr.github.io/pulls).
+Cet article est le premier d’une série qui présente des utilisateurs de Jekyll, nous commençons avec Frank Taillandier, contributeur à jekyll-fr. Si vous souhaitez vous aussi répondre à ces questions, merci de [soumettre une pull request sur Github](https://github.com/jekyll-fr/jekyll-fr.github.io/pulls).
 
 **Bonjour, pourrais-tu te présenter ?**
 
