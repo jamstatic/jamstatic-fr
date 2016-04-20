@@ -11,7 +11,7 @@ Nous vous proposons la traduction d'un entretien de Parker Moore, le mainteneur 
 
 <img src="{{ page.image }}" alt="Parker Moore">
 
-Alors que nous constatons une augmentation constante du nombre d'outils permettant de générer des sites statiques à destination des développeurs, profesionnels ou amateurs, aucun d'entre eux n'attire autant l'atttention que [Jekyll](https://jekyllrb.com/).
+Alors que nous constatons une augmentation constante du nombre d'outils permettant de générer des sites statiques à destination des développeurs, profesionnels ou amateurs, aucun d'entre eux n'attire autant l'attention que [Jekyll](https://jekyllrb.com/).
 
 Sa popularité n'est pas vraiment surprenante quand on sait que Jekyll a été crée par un des cofondateurs de GitHub et que c'est le moteur qui fait tourner GitHub pages.
 
@@ -21,9 +21,9 @@ Il y a quelques temps, nous avons pu assister au lancement de Jekyll 3.0, avec l
 
 Je suis ingénieur logiciel chez Github, entreprise dans laquelle j'aide au développement du service Github Pages. Mon travail consiste aussi à maintenir Jekyll et à faire grandir la communauté autour du projet.
 
-**Peux tu nous dire comment tu as été améné à t'impliquer dans Jekyll et ce qui s'est passé depuis pour aboutir à la mise en ligne de la version 3.0 de Jekyll ?**
+**Peux tu nous dire comment tu as été amené à t'impliquer dans Jekyll et ce qui s'est passé depuis pour aboutir à la mise en ligne de la version 3.0 de Jekyll ?**
 
-Le parcours était intéressant. J'ai été améné à utiliser Jekyll pour un job d'été à l'université de Cornell. Il s'agissait de la refonte du site cals.cornell.edu, nous voulions réaliser un nouveau site, et ce de manière rapide. Nous voulions garder l'existant et le migrer sur un nouveau système. Nous avions de nouvelles maquettes et de nouveaux contenus. J'avais déjà entendu parler de Jekyll ; je l'avais déjà utilisé. J'ai réussi à convaincre mon supérieur, je ne sais pas comment j'ai fait, mais il a accepté. Pour moi, Jekyll correspondait exactement à la demande, je devais juste servir du contenu. Au final, nous avons même utilisé Jekyll pour servir des pages PHP avec un serveur LAMP qui permet d' envoyer des Emails ou de générer des PDF. J'ai donc utilisé un peu Jekyll à cette période et ça m'a beaucoup plu.
+Le parcours était intéressant. J'ai été améné à utiliser Jekyll pour un job d'été à l'université de Cornell. Il s'agissait de la refonte du site cals.cornell.edu, nous voulions réaliser un nouveau site, et ce de manière rapide. Nous voulions garder l'existant et le migrer sur un nouveau système. Nous avions de nouvelles maquettes et de nouveaux contenus. J'avais déjà entendu parler de Jekyll ; je l'avais déjà utilisé. J'ai réussi à convaincre mon supérieur, je ne sais pas comment j'ai fait, mais il a accepté. Pour moi, Jekyll correspondait exactement à la demande, je devais juste servir du contenu. Au final, nous avons même utilisé Jekyll pour servir des pages PHP avec un serveur LAMP qui permet d‘envoyer des Emails ou de générer des PDF. J‘ai donc utilisé un peu Jekyll à cette période et ça m'a beaucoup plu.
 
 J'ai regardé les bugs majeurs, il y en avait tellement : plus de 800 sur le dépôt, ce qui est énorme. Beaucoup trop pour un projet Open Source majeur, selon moi. J'ai perçu un besoin, j'ai pensé que j'avais suffisament de temps libre - même si ce n'était pas le cas -  pour aider la communauté sur ces corrections. Peu avant, j'étais parti travailler en Allemagne pour une société du nom de 6 Wunderkinder — l'éditeur de Wunderlist – j'ai bombardé Tom (NdT: Prester-Werner le créateur de Jekyll) d'emails, sans cesse. Au final, j'ai publié une lettre ouverte sur mon blog, ce qui avec le recul était assez fou et immature, mais qui a eu les effets escomptés. Peu de temps après, Tom m'a répondu : "Il faut qu'on parle, tu as l'air vraiment intéressé, qu'en dis-tu ?"
 
@@ -35,7 +35,7 @@ Effectivement, je l'utilisais, et il y avait tant de choses qui ne fonctionnaien
 
 **Quelle fut ta première expérience de programmation ?**
 
-À la Rochester Institute of Technology, je m'étais rendu avec des camarades d'écoles à des journées de codes pour élèves de collège. J'avais 13 ans. Il y a eu un cours de 30 minutes sur HTML. J'ai adoré. J'arrêtais pas d'en écrire, encore et encore. Je changeais la couleur de fond avec un attribut… je faisais tous ces trucs bêtes et ordinaires.
+À la Rochester Institute of Technology, je m'étais rendu avec des camarades d'écoles à des journées de codes pour élèves de collège. J'avais 13 ans. Il y a eu un cours de 30 minutes sur HTML. J'ai adoré. Je n'arrêtais pas d'en écrire, encore et encore. Je changeais la couleur de fond avec un attribut… je faisais tous ces trucs bêtes et ordinaires.
 
 **Quel fut ta première rencontre avec les générateurs de site statique modernes ?**
 
@@ -59,7 +59,7 @@ Un truc dont j'ai parlé avec Christian et Matt, les fondateurs de Netlify (NdT 
 
 **Le dynamique a l'air bien plus intéressant !**
 
-C'est ça ! Drupal et Wordpress sont basés sur le principe de "l'installation en 1 clic". Sur wordpress.com, il est possible d'avoir un site gratuitement avec un thème en place. C'est toutes ces petites barrières qui ne sont pas grand chose mais qui font la différence. Donc que je pense que l'accessibilité c'est important. Des entreprises comme Netlify ou CloudCannon y travaillent. Plusieurs sociétés font en sorte qu'il soit plus simple d'apprendre à construire des sites statiques. Je pense qu'il faut faire évoluer le dialogue et notre vocabulaire, pour ne pas intimider ceux qui sont en train d'apprendre ce que sont les générateurs de sites statiques. Qu'est-ce que ça veut dire un site statique ? C'est un terme qui parle de lui même site statique. Mais vous avez à apprendre la différence entre le statique et le dynamique…qui n'est pas un terme que les gens emploient tous les jours. Quelle est la dernière fois où vous avez utilisez le mot statique en dehors du cadre professionnel ?
+C'est ça ! Drupal et Wordpress sont basés sur le principe de "l'installation en 1 clic". Sur wordpress.com, il est possible d'avoir un site gratuitement avec un thème en place. C'est toutes ces petites barrières qui ne sont pas grand chose mais qui font la différence. Donc que je pense que l'accessibilité c'est important. Des entreprises comme Netlify ou CloudCannon y travaillent. Plusieurs sociétés font en sorte qu'il soit plus simple d'apprendre à construire des sites statiques. Je pense qu'il faut faire évoluer le dialogue et notre vocabulaire, pour ne pas intimider ceux qui sont en train d'apprendre ce que sont les générateurs de sites statiques. Qu'est-ce que ça veut dire un site statique ? C'est un terme qui parle de lui même site statique. Mais vous avez à apprendre la différence entre le statique et le dynamique… qui n'est pas un terme que les gens emploient tous les jours. Quelle est la dernière fois où vous avez utilisez le mot statique en dehors du cadre professionnel ?
 
 **Oui statique ça fait un peu péjoratif dans ce contexte**
 
@@ -67,7 +67,7 @@ Oui, il faut véhiculer une vision claire, accessible et s'outiller d'un meilleu
 
 **En tant que mainteneur de Jekyll, qu'aimerais-tu dire, communiquer à ceux qui s'intéressent aux technos autour du web statique moderne ? La tribune est à toi.**
 
-Si j'avais une tribune, je dirais "N'abandonnez pas". Prenez  vous la tête dessus un petit moment. Si cela ne marche pas au bout d'une heure, d'un jour, allez demander de l'aide. Je dirai que ne pas abandonner et se prendre la tête sur quelque chose est la meilleure façon d'apprendre, de faire face aux problèmes. De manière générale, ma génération n'est vraiment pas douée quand il s'agit de perséverer…que ce soit travailler quelque part plus d'un an ou affronter une grande difficulté pendant plus de 15 minutes. C'est comme si tout était éphémère de nos jours, contrairement à ce que j'ai pu apprendre à travers les livres d'histoires ou les histoires que mes parents et mes grand-parents m'ont raconté. Ne pas abandonner, c'est avoir confiance dans la technologie du web statique, c'est avoir confiance dans les personnes qui développent tout ça, qui font des sites web et qui apprennent de ça, c'est avoir confiance dans notre futur.
+Si j'avais une tribune, je dirais "N'abandonnez pas". Prenez  vous la tête dessus un petit moment. Si cela ne marche pas au bout d'une heure, d'un jour, allez demander de l'aide. Je dirai que ne pas abandonner et se prendre la tête sur quelque chose est la meilleure façon d'apprendre, d'affronter les problèmes. De manière générale, ma génération n'est vraiment pas douée quand il s'agit de perséverer…que ce soit travailler quelque part plus d'un an ou affronter une grande difficulté pendant plus de 15 minutes. C'est comme si tout était éphémère de nos jours, contrairement à ce que j'ai pu apprendre à travers les livres d'histoires ou les histoires que mes parents et mes grand-parents m'ont raconté. Ne pas abandonner, c'est avoir confiance dans la technologie du web statique, c'est avoir confiance dans les personnes qui développent tout ça, qui font des sites web et qui apprennent de ça, c'est avoir confiance dans notre futur.
 
 **Et lorsqu'on n'abandonne pas, on a plus de chance de faire partie de la solution, car on s'est investi dedans.**
 
