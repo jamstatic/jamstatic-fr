@@ -7,11 +7,12 @@ images:
   - https://cdn.netlify.com/a3dc6515430891d6df896d718dd7e54f6941d647/99084/uploads/parker-moore-jekyll.jpg
 categories:
   - jekyll
+source:
+  title: Interview with Parker Moore from Jekyll
+  url: https://www.netlify.com/blog/2016/03/11/interview-with-parker-moore-from-jekyll
+  author:  Aaron Autrand
+  lang: en
 ---
-
-{{% intro %}}
-Nous vous proposons la traduction d'un entretien de Parker Moore, le mainteneur principal de Jekyll, avec Aaron Autrand, [publié le 11 mars 2016 sur le blog de la société Netlify](https://www.netlify.com/blog/2016/03/11/interview-with-parker-moore-from-jekyll).
-{{% /intro %}}
 
 {{< figure src="https://cdn.netlify.com/a3dc6515430891d6df896d718dd7e54f6941d647/99084/uploads/parker-moore-jekyll.jpg" caption="Parker Moore">}}
 

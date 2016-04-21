@@ -9,11 +9,13 @@ source:
   author: Chris Bach
   title: Smashing Magazine just got 10x faster
   url: https://www.netlify.com/blog/2017/03/16/smashing-magazine-just-got-10x-faster/
+  lang: en
 images:
   - assets/images/caching-issues.jpg
 categories:
   - hugo
   - netlify
+  - cms
 ---
 
 {{% intro %}}

@@ -7,6 +7,7 @@ source:
   author: Zander Martineau
   title: Creating dynamic layouts with Jekyll
   url: https://medium.com/tmw-interactive/creating-dynamic-layouts-with-jekyll-3bbb7fc57d1f#.iac16fjec
+  lang: en
 images:
   - assets/images/2017/02/canon-unleashprint.jpg
 categories:

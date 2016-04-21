@@ -6,6 +6,7 @@ source:
   author: Leon Barnard
   title: Hugo Templates for WordPress Designers
   url: http://blog.teamtreehouse.com/hugo-templates-wordpress-designers
+  lang: en
 images:
   - /assets/images/hugo/header.jpg
 categories:

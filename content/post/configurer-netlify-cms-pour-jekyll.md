@@ -10,6 +10,7 @@ images:
 categories:
   - jekyll
   - netlify
+  - cms
 ---
 
 {{% intro %}}

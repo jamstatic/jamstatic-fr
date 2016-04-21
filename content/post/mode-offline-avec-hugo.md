@@ -5,6 +5,7 @@ date: 2017-03-11 17:04:00 +02:00
 source:
   title: Go offline! Service Worker and Hugo
   url: https://gohugohq.com/howto/go-offline-with-service-worker/
+  lang: en
 images:
   - assets/images/service-worker.png
 categories:
