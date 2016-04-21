@@ -1,15 +1,16 @@
 @charset "utf-8";
 
-@import "normalize"
-        "fonts",
-        "variables",
-        "mixins",
-        "base",
-        "utilities",
-        "typography",
-        "layout",
-        "syntax-highlighting",
-        "print"
+@import
+  "normalize"
+  "fonts",
+  "variables",
+  "mixins",
+  "base",
+  "utilities",
+  "typography",
+  "layout",
+  "syntax-highlighting",
+  "print"
 ;
 
 figure {
@@ -18,7 +19,7 @@ figure {
 }
 
 figure > img {
-  margin: 0 auto .5em;
+  margin: 0 auto 0.5em;
 }
 
 figcaption {
