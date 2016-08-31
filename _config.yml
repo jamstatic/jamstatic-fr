@@ -28,7 +28,8 @@ analytics:
 
 markdown: kramdown
 kramdown:
-   input: GFM
+    input: GFM
+    hard_wrap: false
 
 sass:
     style: compressed
