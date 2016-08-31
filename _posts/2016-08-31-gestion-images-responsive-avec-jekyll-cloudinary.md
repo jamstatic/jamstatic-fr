@@ -19,7 +19,7 @@ Je voulais revenir à un workflow plus simple et plus rapide et qui génère moi
 
 La plupart des sites web responsive que ma société développe pour ses client utilisent des solutions ad hoc pour les images responsive, mais j'avais connaissance de quelques solutions SaaS d'images responsive. J'ai donc décidé de voir si l'une d'entre elles pouvait répondre à mes besoins.
 
-Cloudinary est une des solutions disponibles qui offre le plus de fonctionnalités **et** qui peut être utilisée gratuitement si vous avez des besoins légers. Difficile pour les autres solutions de rivaliser avec cette offre…
+[Cloudinary](http://cloudinary.com/) est une des solutions disponibles qui offre le plus de fonctionnalités **et** qui peut être utilisée gratuitement si vous avez des besoins légers. Difficile pour les autres solutions de rivaliser avec cette offre…
 
 Avec un compte gratuit, j'ai pu tester ce que je voulais, essayer différentes fonctionnalités et décider si je continuais ou si j'allais voir ailleurs.
 
