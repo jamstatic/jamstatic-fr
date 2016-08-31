@@ -50,3 +50,12 @@ gems:
   - jekyll-mentions
   - jekyll-github-metadata
   - jekyll-paginate
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
