@@ -32,22 +32,26 @@ Les fonctions principales que je cherchais et que fournit Cloudinary sont :
 
 Persuadé que Cloudinary répondait à toutes mes attentes, il me fallait encore développer un plugin Jekyll qui puisse utliser ces fonctionalités.
 
-Après réflexion, j'ai décidé de partir avec une  [balise Liquid](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers) `{% cloudinary %}` qui simplifierait la publication d'image avec Cloudinary et qui était relativement simple à développer. Je me suis inspiré d'autres plugins, j'ai trouvé de l'aide sur StackOverflow quand j'en avais besoin et j'ai fini par publier la premier version du [plugin Jekyll Cloudinary](https://nhoizey.github.io/jekyll-cloudinary/) en juillet 2016.
+Après réflexion, j'ai décidé de partir avec une  [balise Liquid](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers) {% raw %}`{% cloudinary %}`{% endraw %} qui simplifierait la publication d'image avec Cloudinary et qui était relativement simple à développer. Je me suis inspiré d'autres plugins, j'ai trouvé de l'aide sur StackOverflow quand j'en avais besoin et j'ai fini par publier la premier version du [plugin Jekyll Cloudinary](https://nhoizey.github.io/jekyll-cloudinary/) en juillet 2016.
 
 La syntaxe est assez intuitive :
 
-```liquid
+{% raw %}
+```markdown
 {% cloudinary [preset] path/to/img.jpg alt="alt text" caption="image caption" %}
 ```
+{% endraw %}
 
 À partir de cette entrée, le plugin génère le HTML de l'image responsive, en utilisant les attributs `srcset` et `sizes` pour la balise `<img>` tag (voir [la section “varier la taille et la densité” de ce billet](https://jakearchibald.com/2015/anatomy-of-responsive-images/#varying-size-and-density) pour comprendre comment fonctionnent ces attributs et [ce billet qui explique pourquoi vous devriez les utiliser plutôt que `<picture>`, la plupart du temps](https://cloudfour.com/thinks/dont-use-picture-most-of-the-time/)).
 L'attribut `srcset` et son fallback `src` contiennent les URLs Cloudinary qui récupèrent les images originales du billet à la volée et les retaillent en plusieurs tailles alternatives.
 
 Par exemple, comme indiqué dans [la documentation](https://nhoizey.github.io/jekyll-cloudinary/#live-example), ce code dans un fichier Markdown :
 
-```liquid
+{% raw %}
+```markdown
 {% cloudinary logo /assets/logos/cloudinary.png alt="Cloudinary logo" %}
 ```
+{% endraw %}
 
 va générer le code HTML suivant :
 
