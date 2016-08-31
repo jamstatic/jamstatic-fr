@@ -1,13 +1,17 @@
----
----
 /* SITE */
 
-Last Updated: {{ site.time | date:"%Y/%m/%d" }}
+Last Updated: 2016/08/06
 Standards: HTML5, CSS3
-Components: {% for dependency in site.github.versions %}{{ dependency[0] }}{% if forloop.rindex0 > 0 %}, {% endif %}{% endfor %}
+Components: jekyll, jekyll-sass-converter, kramdown, liquid, rouge, github-pages-health-check, jemoji, jekyll-mentions, jekyll-redirect-from, jekyll-sitemap, jekyll-feed, jekyll-gist, jekyll-paginate, jekyll-coffeescript, jekyll-seo-tag, jekyll-github-metadata, listen, activesupport, ruby, github-pages, html-pipeline, sass, safe_yaml
 
 /* CONTRIBUTORS */
-{% for contributor in site.github.contributors %}
-Name: {{ contributor.login }}
-Site: {{ contributor.html_url }}
-{% endfor %}
+
+Name: DirtyF
+Site: https://github.com/DirtyF
+
+Name: bertrandkeller
+Site: https://github.com/bertrandkeller
+
+Name: tut-tuuut
+Site: https://github.com/tut-tuuut
+

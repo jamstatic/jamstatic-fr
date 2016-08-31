@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://jekyll-fr.org/2016/04/19/entretien-avec-parker-moore/</loc>
+<lastmod>2016-04-19T00:00:00+02:00</lastmod>
+</url>
+<url>
+<loc>http://jekyll-fr.org/2016/04/14/jekyllconf-2016/</loc>
+<lastmod>2016-04-14T00:00:00+02:00</lastmod>
+</url>
+<url>
+<loc>http://jekyll-fr.org/2016/04/12/frank-taillandier-utilise-jekyll/</loc>
+<lastmod>2016-04-12T00:00:00+02:00</lastmod>
+</url>
+<url>
+<loc>http://jekyll-fr.org/2016/04/01/lancement/</loc>
+<lastmod>2016-04-01T00:00:00+02:00</lastmod>
+</url>
+<url>
+<loc>http://jekyll-fr.org/</loc>
+</url>
+</urlset>
