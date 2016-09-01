@@ -5,6 +5,8 @@ author: nicolas
 image: http://res-1.cloudinary.com/cloudinary/image/upload/c_fill,w_560/dpr_1.0/jekyll_cloudinary_plugin.png
 ---
 
+_[Read original English version of this post on Cloudinary's blog ](http://cloudinary.com/blog/howiusedcloudinarytosolveresponsiveimageneedsinmyjekyllwebsiteandsharedthemagicina_plugin)_
+
 J'ai récemment mis à jour [mon site perso](https://nicolas-hoizey.com) avec [la dernière version de Jekyll](https://jekyllrb.com/news/2015/10/26/jekyll-3-0-released/) et j'en ai profité pour changer quelques outils.
 
 Les plugins que j'utilisais ne répondaient pas à mes exigences pour les images reponsive, j'ai donc décidé de trouver d'autres moyens de satisfaire ces besoins.
