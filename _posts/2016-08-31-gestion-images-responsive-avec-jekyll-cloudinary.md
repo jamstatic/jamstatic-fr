@@ -5,7 +5,7 @@ author: nicolas
 image: http://res-1.cloudinary.com/cloudinary/image/upload/c_fill,w_560/dpr_1.0/jekyll_cloudinary_plugin.png
 ---
 
-_[Read original English version of this post on Cloudinary's blog ](http://cloudinary.com/blog/howiusedcloudinarytosolveresponsiveimageneedsinmyjekyllwebsiteandsharedthemagicina_plugin)_
+_[Read original English version of this post on Cloudinary's blog ](http://cloudinary.com/blog/how_i_used_cloudinary_to_solve_responsive_image_needs_in_my_jekyll_website_and_shared_the_magic_in_a_plugin)_
 
 J'ai récemment mis à jour [mon site perso](https://nicolas-hoizey.com) avec [la dernière version de Jekyll](https://jekyllrb.com/news/2015/10/26/jekyll-3-0-released/) et j'en ai profité pour changer quelques outils.
 
