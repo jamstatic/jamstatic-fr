@@ -1,7 +1,7 @@
 ---
+title: Jekyll France
 layout: default
 ---
-
 <div class="home">
 
   <h1 class="page-heading">Billets</h1>
@@ -9,7 +9,7 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <span class="post-meta">{% include fr_date.html date=post.date %}</span>
+        {% include fr_date.html date=post.date %}
 
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
@@ -18,6 +18,6 @@ layout: default
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">S‘abonner <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <p class="rss-subscribe">S‘abonner <a href="{{ " feed.xml"="" |="" prepend:="" site.baseurl="" }}"="">via RSS</a></p>
 
 </div>
