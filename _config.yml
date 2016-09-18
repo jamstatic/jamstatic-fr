@@ -45,6 +45,7 @@ exclude:
     - LICENSE
     - README.md
     - Rakefile
+    - script
 
 defaults:
   # _posts
