@@ -3,6 +3,7 @@ title: "Utiliser des plugins Jekyll avec GitHub Pages"
 description: Automatiser la publication du site généré sur GitHub Pages pour pouvoir utiliser les plugins Jekyll sans restriction.
 date: "2016-09-18 13:51:13 +0200"
 author: frank
+image: /assets/images/octojekyll.png
 ---
 
 La popularité de Jekyll est en partie due à son support par GitHub Pages. Si cette solution gratuite est bien pratique, elle n'en reste pas moins limitée en terme de support de plugins Jekyll et ce pour des raisons de sécurité. Si vous voulez utiliser des plugins comme [jekyll-cloudinary]({% post_url 2016-08-31-gestion-images-responsive-avec-jekyll-cloudinary %}) ou [jekyll-assets](https://github.com/jekyll/jekyll-assets), il vous faudra générer le site en local et le publier sur Github. Nous allons voir que cette opération est facilement automatisable à l'aide d'un fichier `Rakefile`, la manière la plus courante en Ruby de créer des tâches.
@@ -132,3 +133,5 @@ end
 Vous pouvez maintenant lancer `rake site:publish` pour générer votre site et le publier sur GitHub. Jetez également un coup d'œil au [fichier Rakefile de Jekyll][jekyll-rakefile] pour une implémentation alternation de la tâche `rake site:publish`.
 
 [jekyll-rakefile]: https://github.com/jekyll/jekyll/blob/master/rake/site.rake#L55
+
+![octojekyll]({{ page.image }})
