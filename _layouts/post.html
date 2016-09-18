@@ -13,7 +13,7 @@ layout: default
     {{ content }}
 
     <footer>
-      {% if page.comments %}
+      {% if page.comments and jekyll.environment == "production" %}
         {% include comments.html %}
       {% endif %}
       <h2>Améliorez cet article</h2>
