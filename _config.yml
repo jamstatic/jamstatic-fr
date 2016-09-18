@@ -40,7 +40,6 @@ exclude:
     - .forestryio
     - .rubocop.yml
     - .travis.yml
-    - CNAME
     - Gemfile
     - Gemfile.lock
     - LICENSE
@@ -55,3 +54,6 @@ defaults:
     values:
       layout: post
       comments: true
+
+gems:
+  - jekyll-seo-tag
