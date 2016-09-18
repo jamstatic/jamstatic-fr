@@ -20,6 +20,7 @@ task :publish => [:generate] do
 
     pwd = Dir.pwd
     Dir.chdir tmp
+    File.open(".nojekyll", "wb") { |f| f.puts(":dog: food.") }
 
     system "git init"
     system "git add ."
