@@ -9,7 +9,7 @@ timezone: Europe/Paris
 lang: fr
 
 repository: jekyll-fr/jekyll-fr.github.io
-branch: master
+branch: source
 
 twitter:
     username: jekyll_fr
