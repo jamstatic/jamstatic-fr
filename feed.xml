@@ -1,202 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="fr"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="http://jekyll-fr.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://jekyll-fr.org/" rel="alternate" type="text/html" hreflang="fr" /><updated>2016-08-06T14:57:02+02:00</updated><id>http://jekyll-fr.org/</id><title>Jekyll-fr</title><subtitle>Communauté francophone des utilisateurs de Jekyll</subtitle><entry><title>Entretien avec Parker Moore</title><link href="http://jekyll-fr.org/2016/04/19/entretien-avec-parker-moore/" rel="alternate" type="text/html" title="Entretien avec Parker Moore" /><published>2016-04-19T00:00:00+02:00</published><updated>2016-04-19T00:00:00+02:00</updated><id>http://jekyll-fr.org/2016/04/19/entretien-avec-parker-moore</id><content type="html" xml:base="http://jekyll-fr.org/2016/04/19/entretien-avec-parker-moore/">&lt;p&gt;Nous vous proposons la traduction d’un entretien de Parker Moore, le mainteneur principal de Jekyll, avec Aaron Autrand, &lt;a href=&quot;https://www.netlify.com/blog/2016/03/11/interview-with-parker-moore-from-jekyll&quot;&gt;publié le 11 mars 2016 sur le blog de la société Netlify&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://cdn.netlify.com/a3dc6515430891d6df896d718dd7e54f6941d647/99084/uploads/parker-moore-jekyll.jpg&quot; alt=&quot;Parker Moore&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Alors que nous constatons une augmentation constante du nombre d’outils permettant de générer des sites statiques à destination des développeurs, profesionnels ou amateurs, aucun d’entre eux n’attire autant l’attention que &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Sa popularité n’est pas vraiment surprenante quand on sait que Jekyll a été crée par un des cofondateurs de GitHub et que c’est le moteur qui fait tourner GitHub pages.&lt;/p&gt;
-
-&lt;p&gt;Il y a quelques temps, nous avons pu assister au lancement de Jekyll 3.0, avec la &lt;a href=&quot;https://youtu.be/sPZK8w55cBQ?t=37m58s&quot;&gt;publication en direct du commit final&lt;/a&gt; pendant une présentation de Parker Moore, actuellement en charge de la maintenance de Jekyll, lors du Meetup Static Web à San Francisco. Après sa présentation, Moore a pris quelques minutes pour parler avec nous de Jekyll, de son développement et du future des sites web statiques.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Qu’est ce que vous faites quand vous ne travaillez pas sur Jekyll ?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Je suis ingénieur logiciel chez Github, entreprise dans laquelle j’aide au développement du service Github Pages. Mon travail consiste aussi à maintenir Jekyll et à faire grandir la communauté autour du projet.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Peux tu nous dire comment tu as été amené à t’impliquer dans Jekyll et ce qui s’est passé depuis pour aboutir à la mise en ligne de la version 3.0 de Jekyll ?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Le parcours était intéressant. J’ai été améné à utiliser Jekyll pour un job d’été à l’université de Cornell. Il s’agissait de la refonte du site cals.cornell.edu, nous voulions réaliser un nouveau site, et ce de manière rapide. Nous voulions garder l’existant et le migrer sur un nouveau système. Nous avions de nouvelles maquettes et de nouveaux contenus. J’avais déjà entendu parler de Jekyll ; je l’avais déjà utilisé. J’ai réussi à convaincre mon supérieur, je ne sais pas comment j’ai fait, mais il a accepté. Pour moi, Jekyll correspondait exactement à la demande, je devais juste servir du contenu. Au final, nous avons même utilisé Jekyll pour servir des pages PHP avec un serveur LAMP qui permet d‘envoyer des Emails ou de générer des PDF. J‘ai donc utilisé un peu Jekyll à cette période et ça m’a beaucoup plu.&lt;/p&gt;
-
-&lt;p&gt;J’ai regardé les bugs majeurs, il y en avait tellement : plus de 800 sur le dépôt, ce qui est énorme. Beaucoup trop pour un projet Open Source majeur, selon moi. J’ai perçu un besoin, j’ai pensé que j’avais suffisament de temps libre - même si ce n’était pas le cas -  pour aider la communauté sur ces corrections. Peu avant, j’étais parti travailler en Allemagne pour une société du nom de 6 Wunderkinder — l’éditeur de Wunderlist – j’ai bombardé Tom (NdT: Prester-Werner le créateur de Jekyll) d’emails, sans cesse. Au final, j’ai publié une lettre ouverte sur mon blog, ce qui avec le recul était assez fou et immature, mais qui a eu les effets escomptés. Peu de temps après, Tom m’a répondu : “Il faut qu’on parle, tu as l’air vraiment intéressé, qu’en dis-tu ?”&lt;/p&gt;
-
-&lt;p&gt;Je venais juste d’avoir un échange avec Brandon Mathis, qui travaille sur Octopress, et il m’a ajouté comme contributeur au projet. Et ainsi j’ai pu dire à Tom : “regarde, je suis aussi contributeur d‘Octopress, je connais les sites statiques”. Brandon a du approuver ma canditature j’imagine. Quelques semaine plus tard alors que j’étais en visite chez ma sœur à San Fransisco, j’ai rencontré Tom au siège de GitHub pour parler de Jekyll pendant une heure. Il m’a donné les accès, j’ai corrigé quelques bugs et j’ai commencé à travailler sur Jekyll 1.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Tu as débuté avec la 0.12.1 ?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Effectivement, je l’utilisais, et il y avait tant de choses qui ne fonctionnaient pas. Je savais que je pouvais corriger tout ça ; je connaissais Ruby, j’avais fait un peu de Ruby on Rails avant, et j’avais beaucoup appris sur le développement web à cette occasion.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Quelle fut ta première expérience de programmation ?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;À la Rochester Institute of Technology, je m’étais rendu avec des camarades d’écoles à des journées de codes pour élèves de collège. J’avais 13 ans. Il y a eu un cours de 30 minutes sur HTML. J’ai adoré. Je n’arrêtais pas d’en écrire, encore et encore. Je changeais la couleur de fond avec un attribut… je faisais tous ces trucs bêtes et ordinaires.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Quel fut ta première rencontre avec les générateurs de site statique modernes ?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Je ne me souviens pas plus loin que de mon expérience avec Jekyll à Cornell. Je savais que les générateurs de site statique marcheraient car j’avais codé du HTML, de la CSS et du JavaScript et je sais ce qu’ils font. J’ai donc décidé de partir de ça, j’ai regardé plusieurs outils et Jekyll était celui qui avait le plus d’étoiles sur Github et avait l’air d’être le plus populaire. Les gens écrivaient dessus et l’utilisaient. GitHub Pages existait déjà. Du coup j’ai emprunté cette direction.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;C’était donc une question de masse critique ? Il y avait pas mal de gens donc tu savais que c’était vivant et actif.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Tu sors dans les endroits branchés en général non ? Je me suis dit qu’il y aurait des contributeurs. Un projet open-source a besoin de gens plus que de tout autre chose, parce qu’il y a besoin de code.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;La pire chose à faire sur un forum est de poser une question et de retourner voir tous les jours s’il y a une réponse, mais toujours rien.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Personne n’a répondu !&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Que souhaites-tu aux générateurs de site statique ?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Qu’ils soient mieux compris. Je les comprend et tu les comprends, mais je rêve d’un monde où ce serait le cas pour tout le monde… et j’imagine que cela arrivera, car   l’informatique s’apprend de plus en plus tôt, la création de sites web est un bon moyen pour commencer à apprendre le code. Mon plus grand souhait c’est qu’ils soient mieux compris de tous et perçus comme une vraie solution, honnête et prête pour la production, pour les sociétés intéressées dans la réalisation de sites web.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Comment est-il possible de faire cela ?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Un truc dont j’ai parlé avec Christian et Matt, les fondateurs de Netlify (NdT : Service d’hébergement et de déploiement de sites statiques) ; c’est que les sites statiques, les générateurs de sites statiques, les générateurs statiques, le site statique, tout ça a l’air plutôt ennuyeux, ça sonne très technique…&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Le dynamique a l’air bien plus intéressant !&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;C’est ça ! Drupal et Wordpress sont basés sur le principe de “l’installation en 1 clic”. Sur wordpress.com, il est possible d’avoir un site gratuitement avec un thème en place. C’est toutes ces petites barrières qui ne sont pas grand chose mais qui font la différence. Donc que je pense que l’accessibilité c’est important. Des entreprises comme Netlify ou CloudCannon y travaillent. Plusieurs sociétés font en sorte qu’il soit plus simple d’apprendre à construire des sites statiques. Je pense qu’il faut faire évoluer le dialogue et notre vocabulaire, pour ne pas intimider ceux qui sont en train d’apprendre ce que sont les générateurs de sites statiques. Qu’est-ce que ça veut dire un site statique ? C’est un terme qui parle de lui même site statique. Mais vous avez à apprendre la différence entre le statique et le dynamique… qui n’est pas un terme que les gens emploient tous les jours. Quelle est la dernière fois où vous avez utilisez le mot statique en dehors du cadre professionnel ?&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Oui statique ça fait un peu péjoratif dans ce contexte&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Oui, il faut véhiculer une vision claire, accessible et s’outiller d’un meilleur lexique. Quelque chose qui explique tout ça très bien, sans utiliser de mots qui font peur.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;En tant que mainteneur de Jekyll, qu’aimerais-tu dire, communiquer à ceux qui s’intéressent aux technos autour du web statique moderne ? La tribune est à toi.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Si j’avais une tribune, je dirais “N’abandonnez pas”. Prenez  vous la tête dessus un petit moment. Si cela ne marche pas au bout d’une heure, d’un jour, allez demander de l’aide. Je dirai que ne pas abandonner et se prendre la tête sur quelque chose est la meilleure façon d’apprendre, d’affronter les problèmes. De manière générale, ma génération n’est vraiment pas douée quand il s’agit de perséverer…que ce soit travailler quelque part plus d’un an ou affronter une grande difficulté pendant plus de 15 minutes. C’est comme si tout était éphémère de nos jours, contrairement à ce que j’ai pu apprendre à travers les livres d’histoires ou les histoires que mes parents et mes grand-parents m’ont raconté. Ne pas abandonner, c’est avoir confiance dans la technologie du web statique, c’est avoir confiance dans les personnes qui développent tout ça, qui font des sites web et qui apprennent de ça, c’est avoir confiance dans notre futur.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Et lorsqu’on n’abandonne pas, on a plus de chance de faire partie de la solution, car on s’est investi dedans.&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Oui, c’est exactement ça.&lt;/p&gt;</content><author><name>bertrand</name></author><summary>Nous vous proposons la traduction d’un entretien de Parker Moore, le mainteneur principal de Jekyll, avec Aaron Autrand, publié le 11 mars 2016 sur le blog de la société Netlify.
-
-
-
-Alors que nous constatons une augmentation constante du nombre d’outils permettant de générer des sites statiques à destination des développeurs, profesionnels ou amateurs, aucun d’entre eux n’attire autant l’attention que Jekyll.
-
-Sa popularité n’est pas vraiment surprenante quand on sait que Jekyll a été crée par un des cofondateurs de GitHub et que c’est le moteur qui fait tourner GitHub pages.
-
-Il y a quelques temps, nous avons pu assister au lancement de Jekyll 3.0, avec la publication en direct du commit final pendant une présentation de Parker Moore, actuellement en charge de la maintenance de Jekyll, lors du Meetup Static Web à San Francisco. Après sa présentation, Moore a pris quelques minutes pour parler avec nous de Jekyll, de son développement et du future des sites web statiques.
-
-Qu’est ce que vous faites quand vous ne travaillez pas sur Jekyll ?
-
-Je suis ingénieur logiciel chez Github, entreprise dans laquelle j’aide au développement du service Github Pages. Mon travail consiste aussi à maintenir Jekyll et à faire grandir la communauté autour du projet.
-
-Peux tu nous dire comment tu as été amené à t’impliquer dans Jekyll et ce qui s’est passé depuis pour aboutir à la mise en ligne de la version 3.0 de Jekyll ?
-
-Le parcours était intéressant. J’ai été améné à utiliser Jekyll pour un job d’été à l’université de Cornell. Il s’agissait de la refonte du site cals.cornell.edu, nous voulions réaliser un nouveau site, et ce de manière rapide. Nous voulions garder l’existant et le migrer sur un nouveau système. Nous avions de nouvelles maquettes et de nouveaux contenus. J’avais déjà entendu parler de Jekyll ; je l’avais déjà utilisé. J’ai réussi à convaincre mon supérieur, je ne sais pas comment j’ai fait, mais il a accepté. Pour moi, Jekyll correspondait exactement à la demande, je devais juste servir du contenu. Au final, nous avons même utilisé Jekyll pour servir des pages PHP avec un serveur LAMP qui permet d‘envoyer des Emails ou de générer des PDF. J‘ai donc utilisé un peu Jekyll à cette période et ça m’a beaucoup plu.
-
-J’ai regardé les bugs majeurs, il y en avait tellement : plus de 800 sur le dépôt, ce qui est énorme. Beaucoup trop pour un projet Open Source majeur, selon moi. J’ai perçu un besoin, j’ai pensé que j’avais suffisament de temps libre - même si ce n’était pas le cas -  pour aider la communauté sur ces corrections. Peu avant, j’étais parti travailler en Allemagne pour une société du nom de 6 Wunderkinder — l’éditeur de Wunderlist – j’ai bombardé Tom (NdT: Prester-Werner le créateur de Jekyll) d’emails, sans cesse. Au final, j’ai publié une lettre ouverte sur mon blog, ce qui avec le recul était assez fou et immature, mais qui a eu les effets escomptés. Peu de temps après, Tom m’a répondu : “Il faut qu’on parle, tu as l’air vraiment intéressé, qu’en dis-tu ?”
-
-Je venais juste d’avoir un échange avec Brandon Mathis, qui travaille sur Octopress, et il m’a ajouté comme contributeur au projet. Et ainsi j’ai pu dire à Tom : “regarde, je suis aussi contributeur d‘Octopress, je connais les sites statiques”. Brandon a du approuver ma canditature j’imagine. Quelques semaine plus tard alors que j’étais en visite chez ma sœur à San Fransisco, j’ai rencontré Tom au siège de GitHub pour parler de Jekyll pendant une heure. Il m’a donné les accès, j’ai corrigé quelques bugs et j’ai commencé à travailler sur Jekyll 1.
-
-Tu as débuté avec la 0.12.1 ?
-
-Effectivement, je l’utilisais, et il y avait tant de choses qui ne fonctionnaient pas. Je savais que je pouvais corriger tout ça ; je connaissais Ruby, j’avais fait un peu de Ruby on Rails avant, et j’avais beaucoup appris sur le développement web à cette occasion.
-
-Quelle fut ta première expérience de programmation ?
-
-À la Rochester Institute of Technology, je m’étais rendu avec des camarades d’écoles à des journées de codes pour élèves de collège. J’avais 13 ans. Il y a eu un cours de 30 minutes sur HTML. J’ai adoré. Je n’arrêtais pas d’en écrire, encore et encore. Je changeais la couleur de fond avec un attribut… je faisais tous ces trucs bêtes et ordinaires.
-
-Quel fut ta première rencontre avec les générateurs de site statique modernes ?
-
-Je ne me souviens pas plus loin que de mon expérience avec Jekyll à Cornell. Je savais que les générateurs de site statique marcheraient car j’avais codé du HTML, de la CSS et du JavaScript et je sais ce qu’ils font. J’ai donc décidé de partir de ça, j’ai regardé plusieurs outils et Jekyll était celui qui avait le plus d’étoiles sur Github et avait l’air d’être le plus populaire. Les gens écrivaient dessus et l’utilisaient. GitHub Pages existait déjà. Du coup j’ai emprunté cette direction.
-
-C’était donc une question de masse critique ? Il y avait pas mal de gens donc tu savais que c’était vivant et actif.
-
-Tu sors dans les endroits branchés en général non ? Je me suis dit qu’il y aurait des contributeurs. Un projet open-source a besoin de gens plus que de tout autre chose, parce qu’il y a besoin de code.
-
-La pire chose à faire sur un forum est de poser une question et de retourner voir tous les jours s’il y a une réponse, mais toujours rien.
-
-Personne n’a répondu !
-
-Que souhaites-tu aux générateurs de site statique ?
-
-Qu’ils soient mieux compris. Je les comprend et tu les comprends, mais je rêve d’un monde où ce serait le cas pour tout le monde… et j’imagine que cela arrivera, car   l’informatique s’apprend de plus en plus tôt, la création de sites web est un bon moyen pour commencer à apprendre le code. Mon plus grand souhait c’est qu’ils soient mieux compris de tous et perçus comme une vraie solution, honnête et prête pour la production, pour les sociétés intéressées dans la réalisation de sites web.
-
-Comment est-il possible de faire cela ?
-
-Un truc dont j’ai parlé avec Christian et Matt, les fondateurs de Netlify (NdT : Service d’hébergement et de déploiement de sites statiques) ; c’est que les sites statiques, les générateurs de sites statiques, les générateurs statiques, le site statique, tout ça a l’air plutôt ennuyeux, ça sonne très technique…
-
-Le dynamique a l’air bien plus intéressant !
-
-C’est ça ! Drupal et Wordpress sont basés sur le principe de “l’installation en 1 clic”. Sur wordpress.com, il est possible d’avoir un site gratuitement avec un thème en place. C’est toutes ces petites barrières qui ne sont pas grand chose mais qui font la différence. Donc que je pense que l’accessibilité c’est important. Des entreprises comme Netlify ou CloudCannon y travaillent. Plusieurs sociétés font en sorte qu’il soit plus simple d’apprendre à construire des sites statiques. Je pense qu’il faut faire évoluer le dialogue et notre vocabulaire, pour ne pas intimider ceux qui sont en train d’apprendre ce que sont les générateurs de sites statiques. Qu’est-ce que ça veut dire un site statique ? C’est un terme qui parle de lui même site statique. Mais vous avez à apprendre la différence entre le statique et le dynamique… qui n’est pas un terme que les gens emploient tous les jours. Quelle est la dernière fois où vous avez utilisez le mot statique en dehors du cadre professionnel ?
-
-Oui statique ça fait un peu péjoratif dans ce contexte
-
-Oui, il faut véhiculer une vision claire, accessible et s’outiller d’un meilleur lexique. Quelque chose qui explique tout ça très bien, sans utiliser de mots qui font peur.
-
-En tant que mainteneur de Jekyll, qu’aimerais-tu dire, communiquer à ceux qui s’intéressent aux technos autour du web statique moderne ? La tribune est à toi.
-
-Si j’avais une tribune, je dirais “N’abandonnez pas”. Prenez  vous la tête dessus un petit moment. Si cela ne marche pas au bout d’une heure, d’un jour, allez demander de l’aide. Je dirai que ne pas abandonner et se prendre la tête sur quelque chose est la meilleure façon d’apprendre, d’affronter les problèmes. De manière générale, ma génération n’est vraiment pas douée quand il s’agit de perséverer…que ce soit travailler quelque part plus d’un an ou affronter une grande difficulté pendant plus de 15 minutes. C’est comme si tout était éphémère de nos jours, contrairement à ce que j’ai pu apprendre à travers les livres d’histoires ou les histoires que mes parents et mes grand-parents m’ont raconté. Ne pas abandonner, c’est avoir confiance dans la technologie du web statique, c’est avoir confiance dans les personnes qui développent tout ça, qui font des sites web et qui apprennent de ça, c’est avoir confiance dans notre futur.
-
-Et lorsqu’on n’abandonne pas, on a plus de chance de faire partie de la solution, car on s’est investi dedans.
-
-Oui, c’est exactement ça.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cdn.netlify.com/a3dc6515430891d6df896d718dd7e54f6941d647/99084/uploads/parker-moore-jekyll.jpg" /></entry><entry><title>JekyllConf 2016</title><link href="http://jekyll-fr.org/2016/04/14/jekyllconf-2016/" rel="alternate" type="text/html" title="JekyllConf 2016" /><published>2016-04-14T00:00:00+02:00</published><updated>2016-04-14T00:00:00+02:00</updated><id>http://jekyll-fr.org/2016/04/14/jekyllconf-2016</id><content type="html" xml:base="http://jekyll-fr.org/2016/04/14/jekyllconf-2016/">&lt;p&gt;&lt;a href=&quot;http://jekyllconf.com/&quot;&gt;JekyllConf&lt;/a&gt; est la première conférence entièrement consacrée à Jekyll. C’est une conférence en ligne, gratuite et ouverte à tous, preuve de la volonté de partage qui anime la communauté. Elle aura lieu le samedi 7 mai prochain à partir de 19h heure française, les vidéos seront mises en ligne peu après.&lt;/p&gt;
-
-&lt;p&gt;La première édition avait rassemblé Tom Preston-Werner, Parker Moore, Brandon Mathis ou Ben Balter, respectivement créateurs et mainteneurs de Jekyll, OctoPress et Github Pages ; outre une vision des futures améliorations possibles pour les générateurs de sites statiques, il y avait eu quelques retours d’expérience plus pratiques comme la création de &lt;em&gt;styleguide&lt;/em&gt;. Nous ne pouvons que vous inviter à aller regarder les &lt;a href=&quot;http://jekyllconf.com/2015/&quot;&gt;vidéos de l’édition de 2015&lt;/a&gt; si vous vous intéressez à Jekyll et aux gestionnaires de site statique.&lt;/p&gt;
-
-&lt;p&gt;Le &lt;a href=&quot;http://jekyllconf.com/&quot;&gt;programme&lt;/a&gt; de cette deuxième édition s’annonce tout aussi intéressant et met encore plus l’accent sur des retours d’expérience ainsi que différents cas d’utilisation avancée de Jekyll.&lt;/p&gt;
-
-&lt;p&gt;Cette édition permettra de constater comment Jekyll peut répondre à différentes problématiques, que ce soit générer de la documentation, tester ses CSS, prototyper ses sites web, travailler sa stratégie de contenu voire faire des choses beaucoup moins conventionnelles comme c’est le cas chez Mapbox.&lt;/p&gt;
-
-&lt;p&gt;Les témoignages de Stack Overflow et quelques unes des meilleures agences seront surement riches en enseignements. CloudCannon nous montrera comment les utilisateurs finaux peuvent éditer des sites sous Jekyll.&lt;/p&gt;
-
-&lt;p&gt;La conférence compte aussi plusieurs interventions sur des aspects plus techniques comme les différentes manières de déployer Jekyll : sur Amazon, déploiement continu avec Docker… d’implémenter une solution de recherche comme Algolia ou Elasticsearch ou comment gérer les images responsive.&lt;/p&gt;
-
-&lt;p&gt;Cette deuxième édition s’annonce donc prometteuse, nous ne manquerons pas de vous faire un petit compte-rendu, promis.&lt;/p&gt;</content><author><name>frank</name></author><summary>JekyllConf est la première conférence entièrement consacrée à Jekyll. C’est une conférence en ligne, gratuite et ouverte à tous, preuve de la volonté de partage qui anime la communauté. Elle aura lieu le samedi 7 mai prochain à partir de 19h heure française, les vidéos seront mises en ligne peu après.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://d1qmdf3vop2l07.cloudfront.net/important-mantis.cloudvent.net/compressed/1bdce97b1a6815888e0dadf72f1b19c5.png" /></entry><entry><title>Frank Taillandier utilise Jekyll</title><link href="http://jekyll-fr.org/2016/04/12/frank-taillandier-utilise-jekyll/" rel="alternate" type="text/html" title="Frank Taillandier utilise Jekyll" /><published>2016-04-12T00:00:00+02:00</published><updated>2016-04-12T00:00:00+02:00</updated><id>http://jekyll-fr.org/2016/04/12/frank-taillandier-utilise-jekyll</id><content type="html" xml:base="http://jekyll-fr.org/2016/04/12/frank-taillandier-utilise-jekyll/">&lt;p&gt;Cet article est le premier d’une série qui présente des utilisateurs de Jekyll, nous commençons avec Frank Taillandier, contributeur à jekyll-fr. Si vous souhaitez vous aussi répondre à ces questions, merci de &lt;a href=&quot;https://github.com/jekyll-fr/jekyll-fr.github.io/pulls&quot;&gt;soumettre une pull request sur Github&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Bonjour, pourrais-tu te présenter ?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Bonjour, je m’appelle Frank, je m’intéresse au développement web front-end depuis de nombreuses années. J’ai travaillé successivement dans le public, puis dans le privé, où j’ai contribué pendant quelques années à un CMS open-source et où j’accompagnais les équipes dans une amélioration continue. Parallèlement, je participe à l’organisation de &lt;a href=&quot;//sudweb.fr/&quot;&gt;Sud Web&lt;/a&gt;, une conférence annuelle destinées aux gens du web depuis six ans. Actuellement sans emploi, j’en profite pour &lt;a href=&quot;http://frank.taillandier.me/2016/03/08/les-gestionnaires-de-contenu-statique/&quot;&gt;m’intéresser aux gestionnaires de site statique&lt;/a&gt; et à Jekyll en particulier.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Pourquoi utilises-tu Jekyll ?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;J’aime la philosophie des gestionnaires de site statique, leur simplicité, et le fait de pouvoir adapter la courbe d’apprentissage à son propre rythme. Jekyll est pensé dès le début comme un outil de publication de contenus versionnés et stockés en local, la transition est toute naturelle quand vous versionnez déjà du code. Vous pouvez ensuite héberger vos fichiers statiques où bon vous semble, sans avoir à configurer quoi que ce soit sur votre serveur et sans avoir peur de vous faire hacker — on l’a vu encore récemment avec la fuite d’information des &lt;em&gt;Pananama Papers&lt;/em&gt;, dont &lt;a href=&quot;http://www.numerama.com/tech/161800-panama-papers-wordpress-et-drupal-a-lorigine-de-la-fuite.html&quot;&gt;la faille d’un plugin Wordpress serait peut-être à l’origine&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Le format Markdown qu’on rencontre dans de plus en plus de services est aussi à mon sens un vrai plus pour les rédacteurs. Vu qu’il est possible d’y incorporer du HTML, on dispose ainsi du meilleur des deux mondes.&lt;/p&gt;
-
-&lt;p&gt;Enfin et c’est important il y a un très bon état d’esprit dans la communauté Jekyll. Outre le fait que ce soit inscrit noir sur blanc dans le &lt;a href=&quot;https://jekyllrb.com/docs/conduct/&quot;&gt;code de conduite&lt;/a&gt;, les mainteneurs du projet comme Parker Moore font un gros effort pour faciliter les contributions, &lt;a href=&quot;https://talk.jekyllrb.com/t/core-data-driven-content/2213/5?u=dirtyf&quot;&gt;il m’a même proposé de travailler avec lui sur l’apprentissage de Ruby avec Jekyll&lt;/a&gt; !&lt;/p&gt;
-
-&lt;p&gt;Je crois comme d’autres que nous allons assister à une utilisation de plus en plus massive de ce type de solution et qu’elles vont influencer de plus en plus les architectures ; celles-ci ne seront plus forcément entièrement monolithiques. Nous assistons déjà à un rapprochement entre les CMS statiques et dynamiques, avec d’un côté l’apparition d’interfaces pour gérer du statique, des &lt;em&gt;flat&lt;/em&gt; CMS et de l’autre la possibilité de générer du statique à partir du dynamique. Les deux peuvent être complémentaires et cohabiter côte à côte. Une page d’accueil peut-être générée en statique tandis que d’autres parties avec plus d’interactions utilisateurs continuent d’être gérées avec du dynamique. Tout est possible.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Comment voudrais-tu voir Jekyll évoluer ?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;J’aimerais déjà voir les &lt;a href=&quot;https://github.com/github/mentorships/issues?q=is%3Aissue+is%3Aopen+label%3A%22project%3A+Jekyll%22&quot;&gt;propositions faites dans le cadre du Summer of Code&lt;/a&gt; se réaliser : internationalisation, régénération plus fine et plus rapide, générer des versions des contenus dans plusieurs formats comme &lt;code class=&quot;highlighter-rouge&quot;&gt;amp&lt;/code&gt; ou &lt;code class=&quot;highlighter-rouge&quot;&gt;epub&lt;/code&gt;, un site dédié pour les thèmes et les plugins.&lt;/p&gt;
-
-&lt;p&gt;Jekyll a déjà huit ans et bénéficie d’un écosystème déjà assez riche pour palier le manque de fonctionnalités du cœur.&lt;/p&gt;
-
-&lt;p&gt;Je regrette un peu le manque de vision sur le projet et jusqu’à aujourd’hui Jekyll ne bénéficiait pas encore de feuille de route, mais cela devrait être &lt;a href=&quot;https://github.com/jekyll/jekyll/blob/roadmap/site/roadmap.md#v32&quot;&gt;chose faite&lt;/a&gt; d’ici peu. La seule fonctionnalité annoncée pour le moment est le support de &lt;a href=&quot;https://github.com/jekyll/jekyll/pull/4595&quot;&gt;l’installation des thèmes via des gems Ruby&lt;/a&gt;. C’est une bonne chose pour les nouveaux utilisateurs.&lt;/p&gt;
-
-&lt;p&gt;Enfin j’aimerais surtout pouvoir bénéficier de services qui permettent d’enrichir les sites statiques en fonctionnalités, là aussi il y a déjà des choses intéressantes, mais il y a encore de la place pour innover.&lt;/p&gt;</content><author><name>bertrand</name></author><summary>Cet article est le premier d’une série qui présente des utilisateurs de Jekyll, nous commençons avec Frank Taillandier, contributeur à jekyll-fr. Si vous souhaitez vous aussi répondre à ces questions, merci de soumettre une pull request sur Github.</summary></entry><entry><title>Lancement de la communauté Jekyll France</title><link href="http://jekyll-fr.org/2016/04/01/lancement/" rel="alternate" type="text/html" title="Lancement de la communauté Jekyll France" /><published>2016-04-01T00:00:00+02:00</published><updated>2016-04-01T00:00:00+02:00</updated><id>http://jekyll-fr.org/2016/04/01/lancement</id><content type="html" xml:base="http://jekyll-fr.org/2016/04/01/lancement/">&lt;p&gt;C’est avec émotion que nous avons le plaisir de vous annoncer le lancement d’un site relayant les actualités de la communauté Jekyll en Français.&lt;/p&gt;
-
-&lt;h2 id=&quot;pourquoi-ce-site-&quot;&gt;Pourquoi ce site ?&lt;/h2&gt;
-
-&lt;p&gt;Nous observons actuellement un vrai engouement pour l’utilisation des gestionnaires de site statique. Du fait de son utilisation par &lt;a href=&quot;https://pages.github.com/&quot;&gt;Github Pages&lt;/a&gt;, &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; est le système le plus populaire.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Jekyll est un générateur de sites statiques écrit en Ruby… qui vous permet de développer des sites basés sur des templates dynamiques (codés avec Liquid) et des fichiers de contenus (YAML / Markdown / HTML / JSON / CSV). Jekyll n’utilise pas de base de données. Sur la base de ces fichiers, Jekyll va générer un site entièrement statique que vous pourrez ensuite déployer sur n’importe quel serveur web ou sur Github Pages.
-– &lt;cite&gt;&lt;a href=&quot;https://github.com/jeromecoupe/iad_jekyll_introduction/blob/master/jekyll_introduction_fr.md#introduction-à-jekyll&quot;&gt;Introduction à Jekyll&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;On observe un bouillonnement aussi bien de la communauté qui a lancé de nombreux chantiers en parallèle que de nouveaux acteurs du monde de l’édition qui utilisent Jekyll pour ses publications.&lt;/p&gt;
-
-&lt;p&gt;Jekyll est rapide à prendre en main, cependant en fonction de besoins particuliers il est parfois intéressant d’avoir accès à des exemples de codes permettant de mettre en place le comportement désiré.&lt;/p&gt;
-
-&lt;p&gt;Nous aimerions relayer et aggréger en Français ce qui se passe à divers endroits de la toile autour de Jekyll.&lt;/p&gt;
-
-&lt;h2 id=&quot;son-actualit&quot;&gt;Son actualité&lt;/h2&gt;
-
-&lt;p&gt;Les news, les conférences et appels à orateurs… tout ce qui peut toucher de près ou de loin la communauté. L’objectif est de relayer de l’information.&lt;/p&gt;
-
-&lt;h2 id=&quot;ses-rfrences&quot;&gt;Ses références&lt;/h2&gt;
-
-&lt;p&gt;Il existe des sites ou des articles qui font références pour l’installation, la mise en production, l’optimisation du code, la gestion du contenu… il s’agit de lister les liens que nous estimons essentiels.&lt;/p&gt;
-
-&lt;h2 id=&quot;ses-exemples-de-code&quot;&gt;Ses exemples de code&lt;/h2&gt;
-
-&lt;p&gt;Pour mettre en forme un menu, des catégories ou des collections, des exemples de code sont présents sur le web, pourquoi ne simplement pas présenter un cas pratique et donner un ou plusieurs exemples de code que l’on peut utiliser.&lt;/p&gt;
-
-&lt;h2 id=&quot;ses-limites&quot;&gt;Ses limites&lt;/h2&gt;
-
-&lt;p&gt;Jekyll c’est pratique, mais Jekyll n’a pas vocation à tout faire. Parce qu’il faut savoir utiliser les outils adaptés, nous parlerons des avantages que peuvent avoir d’autres gestionnaires de sites statiques.&lt;/p&gt;
-
-&lt;p&gt;Nous espérons ainsi pouvoir fédérer une communauté d’utilisateurs, qui partagent leurs problématiques et leurs solutions, afin que l’utilisation de Jekyll et des gestionnaires de site statique soit plus simple pour tous.&lt;/p&gt;
-
-&lt;p&gt;Toute contribution est la bienvenue, nous sommes &lt;a href=&quot;https://github.com/jekyll-fr/&quot;&gt;Jekyll-fr sur Github&lt;/a&gt;, &lt;a href=&quot;//twitter.com/jekyll_fr&quot;&gt;jekyll_fr sur Twitter&lt;/a&gt; et vous pouvez &lt;a href=&quot;https://jekyll-fr.herokuapp.com/&quot;&gt;vous connecter sur notre canal de discussion Slack&lt;/a&gt;, si vous souhaitez vous joindre à nous.&lt;/p&gt;
-
-&lt;p&gt;Bon Jekyll !&lt;/p&gt;</content><author><name>bertrand</name></author><summary>C’est avec émotion que nous avons le plaisir de vous annoncer le lancement d’un site relayant les actualités de la communauté Jekyll en Français.</summary></entry></feed>
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <description>{{ site.description | xml_escape }}</description>
+    <link>{{ site.url }}{{ site.baseurl }}/</link>
+    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <generator>Jekyll v{{ jekyll.version }}</generator>
+    {% for post in site.posts limit:10 %}
+      <item>
+        <title>{{ post.title | xml_escape }}</title>
+        <description>{{ post.content | xml_escape }}</description>
+        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
+        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
+        {% for tag in post.tags %}
+        <category>{{ tag | xml_escape }}</category>
+        {% endfor %}
+        {% for cat in post.categories %}
+        <category>{{ cat | xml_escape }}</category>
+        {% endfor %}
+      </item>
+    {% endfor %}
+  </channel>
+</rss>
