@@ -37,11 +37,15 @@ sass:
 exclude:
     - .editorconfig
     - .gitignore
+    - .forestryio
+    - .rubocop.yml
+    - .travis.yml
     - CNAME
     - Gemfile
     - Gemfile.lock
     - LICENSE
     - README.md
+    - Rakefile
 
 defaults:
   # _posts
