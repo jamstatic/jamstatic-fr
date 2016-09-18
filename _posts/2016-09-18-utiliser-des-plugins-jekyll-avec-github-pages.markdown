@@ -44,7 +44,7 @@ Maintenant que vous avez crée la branche `source`, vous pouvez en faire la bran
 ### Publication automatique
 
 Maintenant que le dépôt est configuré, vous pouvez générer votre site et pousser les fichiers générés sur la branche `master`. Mais plutôt que de s'embêter à faire ça manuellement, créons un simple tâche `rake`.
-Créez (si vous n'en avez pas déjà un) un fichier `Rakefile` et ajouter le contenu suivant :
+Créez (si vous n'en avez pas déjà un) un fichier `Rakefile` et ajouter le contenu suivant [^1] :
 
 ``` ruby
 require "rubygems"
@@ -70,6 +70,7 @@ task :publish => [:generate] do
 
     pwd = Dir.pwd
     Dir.chdir tmp
+    File.open(".nojekyll", "wb") { |f| f.puts("Site généré localement.") }
 
     system "git init"
     system "git add ."
@@ -138,4 +139,8 @@ Vous pouvez maintenant lancer `rake site:publish` pour générer votre site et l
 
 ![octojekyll]({{ page.image }})
 
-Si vous souhaitez contourner cette limitation, sachez qu'il existe d'autres solutions d'hébergement comme [GitLab Pages](https://pages.gitlab.io/), [Netlify](https://www.netlify.com), [Cloudcannon](http://cloudcannon.com), [Siteleaf](https://www.siteleaf.com/) ou [Forestry.io](https://forestry.io/) qui vous permettent d'utiliser les plugins de votre choix.
+Enfin, sachez qu'il existe d'autres solutions d'hébergement comme [GitLab Pages](https://pages.gitlab.io/), [Netlify](https://www.netlify.com), [Cloudcannon](http://cloudcannon.com), [Siteleaf](https://www.siteleaf.com/) ou [Forestry.io](https://forestry.io/) qui vous permettent d'utiliser les plugins de votre choix, sans avoir recours à ce genre de hack.
+
+### Notes
+
+[^1]: Les tâches utilisées dans ce billet ont été écrites par [Ixti](http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html), le créateur du plugin `jekyll-assets`.
