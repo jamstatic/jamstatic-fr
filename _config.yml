@@ -34,6 +34,9 @@ kramdown:
 sass:
     style: compressed
 
+gist:
+  noscript: false
+
 exclude:
     - .editorconfig
     - .gitignore
