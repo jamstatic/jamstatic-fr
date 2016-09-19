@@ -186,3 +186,9 @@ body {
 .post-content {
     margin-bottom: $spacing-unit;
 }
+
+.avatar {
+  border-radius: 50%;
+  border: 1px solid $grey-color;
+  margin-right: $spacing-unit/4;
+}
