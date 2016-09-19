@@ -12,9 +12,9 @@ repository: jekyll-fr/jekyll-fr.github.io
 branch: source
 
 twitter:
-    username: jekyll_fr
+  username: jekyll_fr
 github:
-    username: jekyll-fr
+  username: jekyll-fr
 
 social:
   type: organization
@@ -23,32 +23,32 @@ social:
     - https://github.com/jekyll-fr
 
 analytics:
-  google :
-    tracking_id : UA-75833986-1
+  google:
+    tracking_id: UA-75833986-1
 
 markdown: kramdown
 kramdown:
-    input: GFM
-    hard_wrap: false
+  input: GFM
+  hard_wrap: false
 
 sass:
-    style: compressed
+  style: compressed
 
 gist:
   noscript: false
 
 exclude:
-    - .editorconfig
-    - .gitignore
-    - .forestryio
-    - .rubocop.yml
-    - .travis.yml
-    - Gemfile
-    - Gemfile.lock
-    - LICENSE
-    - README.md
-    - Rakefile
-    - script
+  - .editorconfig
+  - .gitignore
+  - .forestryio
+  - .rubocop.yml
+  - .travis.yml
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - Rakefile
+  - script
 
 defaults:
   # _posts
