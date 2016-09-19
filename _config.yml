@@ -58,11 +58,11 @@ defaults:
       image: /assets/images/logo-2x.png
 
 gems:
-  - "jekyll-sitemap"
-  - "jekyll-feed"
-  - "jekyll-seo-tag"
-  - "jekyll-mentions"
-  - "jekyll-avatar"
-  - "jekyll-paginate"
-  - "jekyll-github-metadata"
-  - "jekyll-gist"
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-mentions
+  - jekyll-avatar
+  - jekyll-paginate
+  - jekyll-github-metadata
+  - jekyll-gist

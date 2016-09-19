@@ -6,13 +6,13 @@ author: frank
 image: /assets/images/octojekyll.png
 ---
 
-La popularité de Jekyll est en partie due à son support natif par GitHub Pages. Si cette solution gratuite est bien pratique, elle n'en reste pas moins limitée en terme de support de plugins Jekyll et ce pour des raisons de sécurité. Si vous voulez utiliser des plugins comme [jekyll-cloudinary]({% post_url 2016-08-31-gestion-images-responsive-avec-jekyll-cloudinary %}) ou [jekyll-assets](https://github.com/jekyll/jekyll-assets), il vous faudra générer le site en local et le publier sur Github.
+La popularité de Jekyll est en partie due à son support natif par GitHub Pages. Si cette solution gratuite est bien pratique, elle n’en reste pas moins limitée en terme de support de plugins Jekyll et ce pour des raisons de sécurité. Si vous voulez utiliser des plugins comme [jekyll-cloudinary]({% post_url 2016-08-31-gestion-images-responsive-avec-jekyll-cloudinary %}) ou [jekyll-assets](https://github.com/jekyll/jekyll-assets), il vous faudra générer le site en local et le publier sur Github.
 
 Nous allons voir que cette opération est facilement automatisable à l'aide d'un fichier `Rakefile`, la manière la plus courante en Ruby de créer des tâches.
 
 ## Pré-requis
 
-Nous partons du principe que vous avez déjà un site qui tourne avec Jekyll sur GitHub, si ce n'est pas le cas, reportez-vous à la [documentation officielle](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/).
+Nous partons du principe que vous avez déjà un site qui tourne avec Jekyll sur GitHub, si ce n’est pas le cas, reportez-vous à la [documentation officielle](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/).
 
 Comme nous allons utiliser `rake` pour écrire une tâche automatisée, il vous faut ajoutez la dépendance à votre fichier `Gemfile`, si elle n'est pas déjà présente :
 
@@ -26,7 +26,7 @@ Maintenant que vous êtes parés sous allons voir les deux cas de figures possib
 
 ## Pages utilisateur et organisation
 
-Pour activer la génération automatique par GitHub Pages d'un dépôt de compte utilisateur ou organisation, il suffit de respecter la convention de nommage `username/username.github.io`. Par exemple ce dépôt s'apelle `jekyll-fr/jekyll-fr.github.io`.
+Pour activer la génération automatique par GitHub Pages d’un dépôt de compte utilisateur ou organisation, il suffit de respecter la nomenclature  `username/username.github.io`. Par exemple ce dépôt s’appelle `jekyll-fr/jekyll-fr.github.io`.
 
 GitHub va utiliser la branche `master` de ces dépôts et publier les pages. Cela fait que nous aurons une branche `master` qui contient le site généré et une branche `source` avec les sources de notre site.
 
@@ -44,49 +44,13 @@ Maintenant que vous avez crée la branche `source`, vous pouvez en faire la bran
 ### Publication automatique
 
 Maintenant que le dépôt est configuré, vous pouvez générer votre site et pousser les fichiers générés sur la branche `master`. Mais plutôt que de s'embêter à faire ça manuellement, créons un simple tâche `rake`.
-Créez (si vous n'en avez pas déjà un) un fichier `Rakefile` et ajouter le contenu suivant [^1] :
+Créez (si vous n'en avez pas déjà un) un fichier `Rakefile` à la racine de votre site et ajoutez le contenu suivant [^1] :
 
-``` ruby
-require "rubygems"
-require "tmpdir"
-require "bundler/setup"
-require "jekyll"
-
-# Indiquez le nom de votre dépôt
-GITHUB_REPONAME = "USERNAME/USERNAME.github.io"
-
-desc "Génération des fichiers du site"
-task :generate do
-  Jekyll::Site.new(Jekyll.configuration({
-    "source"      => ".",
-    "destination" => "_site"
-  })).process
-end
-
-desc "Génération et publication des fichiers sur GitHub"
-task :publish => [:generate] do
-  Dir.mktmpdir do |tmp|
-    cp_r "_site/.", tmp
-
-    pwd = Dir.pwd
-    Dir.chdir tmp
-    File.open(".nojekyll", "wb") { |f| f.puts("Site généré localement.") }
-
-    system "git init"
-    system "git add ."
-    message = "Site mis à jour le #{Time.now.utc}"
-    system "git commit -m #{message.inspect}"
-    system "git remote add origin git@github.com:#{GITHUB_REPONAME}.git"
-    system "git push origin master --force"
-
-    Dir.chdir pwd
-  end
-end
-```
+{% gist DirtyF/24cb9c96b64173ecd85578f38bcc940d %}
 
 Maintenant vous pouvez simplement lancer la commande `rake publish` pour générer et publier votre site sur GitHub Pages.
 
-Si vous utilisez un nom de domaine personnalisé, vérifiez bien que le fichier CNAME est bien présent dans la branche genérée.
+Si vous utilisez un nom de domaine personnalisé, vérifiez bien que le fichier CNAME est bien présent dans la branche générée.
 
 ## Pages projet
 
@@ -94,44 +58,7 @@ Les pages projet sont presque pareilles que les pages utilisateur et organisatio
 
 Il n'y a aucune configuration supplémentaire à faire, il faut simplement apporter quelques petites modifications au fichier `Rakefile` :
 
-``` ruby
-require "rubygems"
-require "tmpdir"
-require "bundler/setup"
-require "jekyll"
-
-# Indiquez le nom de votre dépôt
-GITHUB_REPONAME = "USERNAME/REPO"
-
-namespace :site do
-  desc "Génération des fichiers du site"
-  task :generate do
-    Jekyll::Site.new(Jekyll.configuration({
-      "source"      => ".",
-      "destination" => "_site"
-    })).process
-  end
-
-  desc "Génération et publication des fichiers sur GitHub"
-  task :publish => [:generate] do
-    Dir.mktmpdir do |tmp|
-      cp_r "_site/.", tmp
-
-      pwd = Dir.pwd
-      Dir.chdir tmp
-
-      system "git init"
-      system "git add ."
-      message = "Site mis à jour le #{Time.now.utc}"
-      system "git commit -m #{message.inspect}"
-      system "git remote add origin git@github.com:#{GITHUB_REPONAME}.git"
-      system "git push origin master:refs/heads/gh-pages --force"
-
-      Dir.chdir pwd
-    end
-  end
-end
-```
+{% gist DirtyF/2eacfb7ecec18b3b738af1c3c8d1fe5e %}
 
 Vous pouvez maintenant lancer `rake site:publish` pour générer votre site et le publier sur GitHub. Jetez également un coup d'œil au [fichier Rakefile de Jekyll][jekyll-rakefile] pour une implémentation alternation de la tâche `rake site:publish`.
 
