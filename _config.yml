@@ -65,3 +65,4 @@ gems:
   - "jekyll-avatar"
   - "jekyll-paginate"
   - "jekyll-github-metadata"
+  - "jekyll-gist"

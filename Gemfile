@@ -10,6 +10,7 @@ group :jekyll_plugins do
   gem "jekyll-avatar"
   gem "jekyll-paginate"
   gem "jekyll-github-metadata"
+  gem "jekyll-gist"
 end
 
 group :development do
