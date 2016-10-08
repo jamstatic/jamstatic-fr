@@ -10,11 +10,11 @@ title: Communauté Jekyll francophone
     {% for post in site.posts %}
       <li>
         <span class="post-meta">{% include fr_date.html date=post.date %}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl}}">{{ post.title }}</a>
+        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
       </li>
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe small">S‘abonner <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <p class="rss-subscribe small">S‘abonner <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 
 </div>

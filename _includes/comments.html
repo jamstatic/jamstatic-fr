@@ -2,8 +2,8 @@
 <script>
 
 var disqus_config = function () {
-  this.page.url = '{{ site.github.url }}{{ page.url }}';
-  this.page.identifier = '{{ site.github.url }}{{ page.url }}';
+  this.page.url = '{{ page.url | absolute_url }}';
+  this.page.identifier = '{{ page.url | absolute_url }}';
   this.page.title = '{{ page.title }}';
 };
 // DON'T EDIT BELOW THIS LINE

@@ -2,13 +2,13 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ site.baseurl }}/"><span><img src="{{ "/assets/images/logo-2x.png" | prepend: site.baseurl }}" alt="{{ site.title }}"></span></a>
+    <a class="site-title" href="{{ "" | relative_url }}/"><span><img src="{{ "/assets/images/logo-2x.png" | relative_url }}" alt="{{ site.title }}"></span></a>
 
     <nav class="site-nav">
       <div class="trigger">
         {% for my_page in site.pages %}
           {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+          <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title }}</a>
           {% endif %}
         {% endfor %}
       </div>
