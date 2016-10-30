@@ -32,7 +32,7 @@ Ce dossier comprend tous les dossiers évoqués plus haut : `_includes`, `_layou
 
 Vous pouvez maintenant recopier les fichiers de votre thème dans cette structure d'exemple.
 
-L'autre manière de faire, c'est de partir de votre site fonctionnel et d'adapter son structure de manière à vous retrouver avec quelque chose qui ressemble à ça :
+L'autre manière de faire, c'est de partir de votre site fonctionnel et d'adapter sa structure de manière à vous retrouver avec quelque chose qui ressemble à ça :
 
 ```shell
 ├── .gitignore
@@ -72,18 +72,18 @@ L'autre manière de faire, c'est de partir de votre site fonctionnel et d'adapte
 └── screenshot.png
 ```
 
-Parmi les différences avec un site Jekyll classique, on remarque la présence d'un fichier `Gemfile` un peu particulier, d'un fichier `gemspec` pour la spécification de la gem, d'un fichier LICENSE (MIT par défaut), d'un fichier `README.md`, d'une capture d'écran et d'un dossier `demo` (ou `example` c'est selon).
+Parmi les différences avec un site Jekyll classique, on remarque la présence d'un fichier `Gemfile` un peu particulier, d'un fichier `gemspec` pour la spécification de la gem, d'un fichier LICENSE (MIT par défaut), d'un fichier `README.md`, d'une capture d'écran et d'un dossier `demo` (ou `example`, c'est selon).
 
-Si on regarde le contenu du fichier `Gemfile` d'une gem, il est différent de ceux que vous avez l'habitude d'utiliser, il fait simplement référence au fichier de spécification de la gem :
+Si on regarde le contenu du fichier `Gemfile` d'une gem, il est différent de ceux que vous avez l'habitude d'utiliser. Il fait simplement référence au fichier de spécification de la gem :
 
 ```ruby
 source "https://rubygems.org"
 gemspec
 ```
 
-En effet c'est le fichier `gemspec` qui va contenir toutes les infos sur notre thème : le numéro de version, sa description, ses dépendances, etc. Pour savoir tout ce que peut contenir ce type de fichier, je vous invite à consulter la [documentation de référence des spécifications d'une gem](http://guides.rubygems.org/specification-reference/).
+En effet, c'est le fichier `gemspec` qui va contenir toutes les infos sur notre thème : le numéro de version, sa description, ses dépendances, etc. Pour savoir tout ce que peut contenir ce type de fichier, je vous invite à consulter la [documentation de référence des spécifications d'une gem](http://guides.rubygems.org/specification-reference/).
 
-Lorsque vous utilisez la commande `new-theme` de Jekyll, par défaut le fichier de spécification de votre gem ressemble à ça :
+Lorsque vous utilisez la commande `new-theme` de Jekyll, par défaut, le fichier de spécification de votre gem ressemble à ça :
 
 ```
 # coding: utf-8
@@ -114,7 +114,7 @@ On constate aussi que `bundler` est déclaré en tant que dépendance pour le d�
 
 Vous pouvez très bien vouloir ajouter d'autres dépendances lors de l'exécution, si vous souhaitez utiliser des plugins dans votre thème. Dans notre exemple, nous voulons ajouter la gestion d'un flux RSS, la génération d'un sitemap et des méta-données pour le SEO.
 
-Nous ajoutons donc les dépendances ainsi que les version minimum requises, comme nous le ferions dans un fichier `Gemfile` à l'aide de [`spec.add_runtime_dependency`](http://guides.rubygems.org/specification-reference/#add_runtime_dependency) :
+Nous ajoutons donc les dépendances ainsi que les version minimales requises, comme nous le ferions dans un fichier `Gemfile` à l'aide de [`spec.add_runtime_dependency`](http://guides.rubygems.org/specification-reference/#add_runtime_dependency) :
 
 ```ruby
 spec.add_runtime_dependency "jekyll-feed", "~> 0.8"
@@ -122,7 +122,7 @@ spec.add_runtime_dependency "jekyll-sitemap", "~> 0.12"
 spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.0"
 ```
 
-Une fois que votre fichier de spécification est complété, vous allez pouvoir tester notre thème.
+Une fois que votre fichier de spécification est complété, vous allez pouvoir tester votre thème.
 
 ## Tester son thème
 
@@ -196,7 +196,7 @@ gem build mon-super-theme.gemspec
   File: mon-super-theme-0.0.1.gem
 ```
 
-Comme il est inutile de versionner la gem générée, pensez donc à ajouter la ligne suivante dans votre fichier `.gitignore` :
+Comme il est inutile de versionner la gem générée (mais cela ne vous dispense pas d'utiliser les tags git pour vous rappeler du moment où vous l'avez générée), pensez donc à ajouter la ligne suivante dans votre fichier `.gitignore` :
 
 ```
 *.gem
@@ -225,4 +225,4 @@ Si vous cherchez des références, vous pouvez toujours prendre exemple sur des 
 * [Alembic](https://github.com/daviddarnes/alembic/) un bon point de départ un plus complet proposé par David Darnes
 * [Minimal mistakes](https://github.com/mmistakes/minimal-mistakes/tree/feature/theme-gem), le thème très complet de Michael Rose, qui utilise des collections et tout un tas d'autres fonctionnalités plus avancées de Jekyll.
 
-Voilà maintenant c'est à vous de jouer, faites de beaux thèmes pour Jekyll !
+Voilà, maintenant c'est à vous de jouer, faites de beaux thèmes pour Jekyll !
