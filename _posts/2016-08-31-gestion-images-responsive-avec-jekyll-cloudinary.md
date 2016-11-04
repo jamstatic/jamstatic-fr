@@ -11,7 +11,7 @@ J'ai récemment mis à jour [mon site perso](https://nicolas-hoizey.com) avec [l
 
 Les plugins que j'utilisais ne répondaient pas à mes exigences pour les images reponsive, j'ai donc décidé de trouver d'autres moyens de satisfaire ces besoins.
 
-Pour générer le code HTML des images responsive (dois-je vous vraiment vous rappeler qu'utiliser les [images responsive natives](https://responsiveimages.org/) devrait ête un réflexe de nos jours ?), j'ai resté le plugin [Jekyll Responsive Image](https://github.com/wildlyinaccurate/jekyll-responsive-image). Il est vraiment sympa, il vous laisse définir vos propres gabarits de balisage d'image, vous pouvez donc utiliser `srcset` ou `<picture>` selon votre envie. Mais il ne répondait à tous mes besoins :
+Pour générer le code HTML des images responsive (dois-je vous vraiment vous rappeler qu'utiliser les [images responsive natives](http://responsiveimages.org/) devrait ête un réflexe de nos jours ?), j'ai resté le plugin [Jekyll Responsive Image](https://github.com/wildlyinaccurate/jekyll-responsive-image). Il est vraiment sympa, il vous laisse définir vos propres gabarits de balisage d'image, vous pouvez donc utiliser `srcset` ou `<picture>` selon votre envie. Mais il ne répondait à tous mes besoins :
 
 - Lors de la première génération d'un site statique Jekyll avec ce plugin vous devez générer toutes les variantes à partir des images originales. J'ai actuellement environ 750 images sur mon blog et cela entraîne des temps de compilation extrêment longs,
 - Envoyer toutes ces variantes au serveur prend également du temps, car je n'ai pas un accès très rapide chez moi,

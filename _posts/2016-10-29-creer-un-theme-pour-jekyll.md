@@ -26,7 +26,7 @@ Vous avez donc un site statique sous Jekyll et vous souhaitez le partager avec l
 bundle exec jekyll new-theme mon-super-theme
 ```
 
-Cette commande va créer un dossier dans le répertoire courant, qui portera le même nom que celui que vous avez fourni en argument de la commande — étonnant non ?.
+Cette commande va créer un dossier dans le répertoire courant, qui portera le même nom que celui que vous avez fourni en argument, étonnant non ?
 
 Ce dossier comprend tous les dossiers évoqués plus haut : `_includes`, `_layouts`, `_sass` et `assets` ainsi qu'un fichier `Gemfile` et un fichier `mon-super-theme.gempsec` qui contient les informations sur votre thème.
 
@@ -61,7 +61,6 @@ L'autre manière de faire, c'est de partir de votre site fonctionnel et d'adapte
 ├── demo
 │   ├── 404.html
 │   ├── Gemfile
-│   ├── Gemfile.lock
 │   ├── _config.yml
 │   ├── _posts
 │   │   ├── 2016-10-20-presentation-de-jekyll.md
@@ -130,15 +129,15 @@ Commencez par lancer `bundle install` pour installer les dépendances mentionné
 
 ### Fournir des exemples de contenu
 
-Comme nous l'avons dit plus haut, pour le moment les thèmes sont livrés sans contenu et ne contiennent que les modèles de pages et tous les assets. En effet lors d'une mise à jour de thème, tous ces fichiers seront écrasés, mais vous ne souhaitez pas écraser les contenus existants.
+Comme nous l'avons dit plus haut, pour le moment les thèmes sont livrés sans contenu et ne contiennent que les modèles et les assets. **Lors d'une mise à jour de thème, tous ces fichiers seront écrasés**, c'est le principal intérêt d'utiliser une gem pour le designer ou l'utilisateur, mais à aucun moment vous ne souhaitez écraser les contenus existants.
 
 Cependant, même si la gem ne contient pas de contenus, rien ne vous empêche d'en ajouter dans le dépôt de votre thème pour fournir un exemple de thème entièrement fonctionnel à vos utilisateurs.
 
-Afin de ne pas mélanger les fichiers d'exemple avec ceux de votre thème, il est conseillé de créer un dossier `demo` ou `example` et d'y stocker des contenus destinés à montrer aux utilisateurs finaux comment utiliser votre thème.
+Afin de ne pas mélanger les fichiers d'exemple avec ceux de votre thème, il est donc conseillé de créer un dossier `demo` (ou `example` ou ce que vous voulez) et d'y stocker des contenus destinés à présenter aux utilisateurs le rendu de votre thème.
 
-En plus des fichiers générés par la commande `new-theme`, nous ajouterons dans ce dossier `demo` tout ce qu'il faut pour faire tourner un site sous Jekyll :  un fichier `_config.yml`,  un fichier `Gemfile` ainsi que des pages et des posts. Vous pouvez également y ajouter des données dans le dossier `_data` voire des collections, comme vous le feriez dans n'importe quel site.
+En plus des fichiers générés par la commande `new-theme`, nous ajouterons dans ce dossier `demo` tout ce qu'il faut pour faire tourner un site sous Jekyll :  un fichier `_config.yml`,  un fichier `Gemfile` ainsi que des pages et des posts bien entendu. Vous pouvez également ajouter des exemples de données dans le dossier `_data` voire des collections, comme vous le feriez dans n'importe quel site.
 
-Le fichier `demo/Gemfile` est différent de celui fourni avec votre thème, celui-ci est en tout point semblable à celui que vous utilisez d'habitude :
+Le fichier `demo/Gemfile` ressemble à quelques détails près à celui que vous utiliseriez pour n'importe quel site :
 
 ```ruby
 source "https://rubygems.org"
@@ -153,9 +152,10 @@ group :jekyll_plugins do
 end
 ```
 
-Comme pour le moment nous n'avons pas encore publié notre thème sous forme de gem, nous nous contentons de faire référence au dossier parent, qui contient les fichiers de notre thème. Cette notation est pratique pour tester votre thème en local. Nous listons également les plugins utilisés dans notre thème dans notre fichier `demo/Gemfile`.
+Nous voyons qu'il fait référence à la gem de notre thème, mais comme pour le moment nous n'avons pas encore publié notre thème sous forme de gem, nous nous contentons de faire référence au dossier parent, qui contient les fichiers de notre thème. Cette notation est bien pratique pour tester votre thème en local. Une fois votre gem publiée, vous pourrez choisir de supprimer paramètre path de votre gem, pour que bundler aille télécharger la dernière version sur Rubygems.
+Nous listons également les plugins utilisés dans notre thème.
 
-Pour que Jekyll utilise notre thème, nous allons devoir lui indiquer dans le fichier `demo/_config.yml` :
+Maintenant, pour que Jekyll utilise notre thème, nous allons devoir le lui indiquer dans le fichier `demo/_config.yml` en ajoutant la ligne :
 
 ```yaml
 theme: mon-super-theme
@@ -170,21 +170,21 @@ gems:
   - jekyll-seo-tag
 ```
 
-Maintenant que nous avons tous nos fichiers de thème, ainsi que les fichiers de contenus on peut tester tout en exécutant la commande `bundle exec jekyll build --source demo` depuis le répertoire racine ou `cd demo && bundle exec jekyll serve`, c'est du pareil au même.
+Nous pouvons maintenant tester notre thème en exécutant la commande `bundle exec jekyll serve --source demo` depuis le répertoire racine ou `cd demo && bundle exec jekyll serve`, c'est du pareil au même. N'oubliez pas d'ajouter le répertoire de destination - `_site` par défaut - à votre fichier `.gitignore`.
 
-Vérifiez que tout fonctionne correctement dans votre navigateur, vous pouvez vous aider d'[html-proofer](https://github.com/gjtorikian/html-proofer) si vous souhaitez vous assurer que tous les liens internes fonctionnent :
+Vérifiez le rendu sur différents navigateurs et appareils, aidez vous d'[html-proofer](https://github.com/gjtorikian/html-proofer) si vous souhaitez vous assurer que tous les liens internes fonctionnent :
 
 ```shell
 bundle exec htmlproofer ./demo/_site --disable-external
 ```
 
-La première version de votre thème fonctionne ? Parfait ! Veillez maintenant à bien renseigner le fichier `README.md` pour expliquer comment installer et utiliser votre thème, c'est toujours agréable d'avoir une bonne documentation à sa disposition.
+Vous êtes satisfait de la première version de votre thème ? Parfait ! Veillez maintenant à bien renseigner le fichier `README.md` pour expliquer comment installer et utiliser votre thème, c'est toujours agréable d'avoir une bonne documentation à sa disposition.
 
-Afin de permettre aux utilisateurs d'avoir un aperçu de votre thème, il est également conseillé d'ajouter une capture d'écran `screenshot.png` à la racine de votre dépôt et de l'insérer dans votre fichier `README.md`.
+Afin de permettre aux utilisateurs d'avoir un aperçu de votre thème, il est également recommandé d'ajouter une capture d'écran nommée `screenshot.png` à la racine de votre dépôt et de l'insérer dans votre fichier `README.md`.
 
 ### Packager son thème
 
-Une fois que votre thème est fonctionnel, documenté, vous êtes parés pour la publication. Cette étape est déjà [documentée sur le site de Jekyll](https://jekyllrb.com/docs/themes/#publishing-your-theme), nous nous contenterons simplement ici de rappeler qu'elle se fait en deux commandes.
+Une fois que votre thème est fonctionnel, documenté, vous êtes parés pour la publication. Cette étape est déjà [documentée sur le site de Jekyll](https://jekyllrb.com/docs/themes/#publishing-your-theme), nous nous contenterons simplement ici de rappeler qu'elle se fait en deux temps.
 
 La première commande va créer la gem à proprement parlée à partir du fichier de spécification :
 
@@ -223,6 +223,6 @@ Si vous cherchez des références, vous pouvez toujours prendre exemple sur des 
 
 * [Minima](https://github.com/jekyll/minima), le thème par défaut de Jekyll, idéal pour se familiariser avec la structure que nous venons de voir,
 * [Alembic](https://github.com/daviddarnes/alembic/) un bon point de départ un plus complet proposé par David Darnes
-* [Minimal mistakes](https://github.com/mmistakes/minimal-mistakes/tree/feature/theme-gem), le thème très complet de Michael Rose, qui utilise des collections et tout un tas d'autres fonctionnalités plus avancées de Jekyll.
+* [Minimal mistakes](https://github.com/mmistakes/minimal-mistakes/), le thème très complet de Michael Rose, qui utilise des collections et tout un tas d'autres fonctionnalités plus avancées de Jekyll.
 
 Voilà, maintenant c'est à vous de jouer, faites de beaux thèmes pour Jekyll !
