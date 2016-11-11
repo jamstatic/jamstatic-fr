@@ -4,7 +4,7 @@
 var disqus_config = function () {
   this.page.url = '{{ page.url | absolute_url }}';
   this.page.identifier = '{{ page.url | absolute_url }}';
-  this.page.title = '{{ page.title }}';
+  this.page.title = '{{ page.title | escape }}';
 };
 // DON'T EDIT BELOW THIS LINE
 (function() {
