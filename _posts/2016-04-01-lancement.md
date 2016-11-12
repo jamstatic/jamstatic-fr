@@ -37,7 +37,7 @@ Jekyll c'est pratique, mais Jekyll n'a pas vocation à tout faire. Parce qu'il f
 
 Nous espérons ainsi pouvoir fédérer une communauté d'utilisateurs, qui partagent leurs problématiques et leurs solutions, afin que l'utilisation de Jekyll et des gestionnaires de site statique soit plus simple pour tous.
 
-Toute contribution est la bienvenue, nous sommes [Jekyll-fr sur Github](https://github.com/{{ site.github.username}}/), [jekyll_fr sur Twitter](//twitter.com/{{ site.twitter.username }}) et vous pouvez [vous connecter sur notre canal de discussion Slack](https://jekyll-fr.herokuapp.com/), si vous souhaitez vous joindre à nous.
+Toute contribution est la bienvenue, nous sommes [Jekyll-fr sur Github](https://github.com/{{ site.github.username}}/), [jamstatic_fr sur Twitter](//twitter.com/{{ site.twitter.username }}) et vous pouvez [vous connecter sur notre canal de discussion Slack](https://jekyll-fr.herokuapp.com/), si vous souhaitez vous joindre à nous.
 
 Bon Jekyll !
 

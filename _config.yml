@@ -12,14 +12,14 @@ repository: jekyll-fr/jekyll-fr.github.io
 branch: source
 
 twitter:
-  username: jekyll_fr
+  username: jamstatic_fr
 github:
   username: jekyll-fr
 
 social:
   type: organization
   links:
-    - https://twitter.com/jekyll_fr
+    - https://twitter.com/jamstatic_fr
     - https://github.com/jekyll-fr
 
 analytics:
