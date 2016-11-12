@@ -33,4 +33,14 @@ task :publish => [:generate] do
   end
 end
 
+require "html-proofer"
+
+task :test do
+  sh "bundle exec jekyll build"
+  HTMLProofer.check_directory("./_site", {
+    :empty_alt_ignore => true,
+    :disable_external => true
+  }).run
+end
+
 task :default => "publish"
