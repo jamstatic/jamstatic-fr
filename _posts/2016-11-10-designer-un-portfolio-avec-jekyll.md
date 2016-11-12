@@ -90,7 +90,7 @@ js/            # fichiers Javascript, les vôtres et ceux des différentes bibli
 
 ## Modifier les paramètres de votre site
 
-Jekyll inclus ce super fichier nommé `_config.yml` dans le répertoire racine. Vous pouvez définir [n'importe quel paramètre](http://jekyllrb.com/docs/configuration/) global de votre portfolio dedans. Ouvrons-le et personnalisation tout ça !
+Jekyll inclus ce super fichier nommé `_config.yml` dans le répertoire racine. Vous pouvez définir [n'importe quel paramètre](http://jekyllrb.com/docs/configuration/) global de votre portfolio dedans. Ouvrons-le et personnalisons tout ça !
 
 {% include figure.html url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*fF_CWur2wd6DS7uQDGX6ew/RS/w704.png?&ssl=1" description="Remplissez vos infos !" %}
 
