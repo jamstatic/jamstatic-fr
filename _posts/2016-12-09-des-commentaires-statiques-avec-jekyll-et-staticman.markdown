@@ -53,10 +53,11 @@ Je ne suis pas vraiment certain que l’opération suivante soit nécessaire. Je
 
 Quoi qu’il en soit, vous pouvez toujours partager votre expérience de la mise à jour de la version 1 à la version 2 de Staticman dans les commentaires de ce billet.
 
-1. Révoquer les droits de collaboration de Staticman `v1` dans les paramètres de votre dépôt GitHub.
-![Supprimer staticmanapp en tant que collaborator](https://mademistakes.com/assets/images/staticman-remove-collaborator.png)
-2. Ajouter de nouveau Staticman en tant que  [collaborateur](https://mademistakes.com/articles/jekyll-static-comments/#setting-up-staticman).
-3. Faire un appel sur ce endpoint de la version 2 de l’API `https://api.staticman.net/v2/connect/{votre nom d'utilisateur GitHub}/{nom de votre dépôt}` pour accepter l'invitation de collaboration.
+1. Révoquez les droits de collaboration de Staticman `v1` dans les paramètres de votre dépôt GitHub.  
+![Supprimer staticmanapp en tant que collaborator](https://mademistakes.com/assets/images/staticman-remove-collaborator.png)  
+2. Ajoutez de nouveau Staticman en tant que  [collaborateur](https://mademistakes.com/articles/jekyll-static-comments/#setting-up-staticman).  
+3. Faites un appel sur ce endpoint de la version 2 de l’API `https://api.staticman.net/v2/connect/{votre nom d'utilisateur GitHub}/{nom de votre dépôt}` pour accepter l'invitation de collaboration.  
+
 
 ### Mettre à jour l'appel POST du formulaire de commentaires
 
@@ -241,7 +242,7 @@ Tout dépend donc de comment vous nommez vos fichiers de commentaires.
 
 Voici ce que je cherchais à accomplir… avant que le mal de tête ne commence :anguished: :gun:
 
-- Déclarer une boucle et à chaque itération créer un nouveau tableau nommé  `replies` ne contenant que les réponses aux commentaires.
+- Déclarer une boucle et, à chaque itération, créer un nouveau tableau nommé  `replies` ne contenant que les réponses aux commentaires.
 - Évaluer la valeur de `_parent` pour ces réponses.
 - Si `_parent` est égal à l'index de la boucle parente alors il doit être traité comme un commentaire "enfant".
 - Sinon, on passe à l'entrée suivante du tableau
@@ -253,7 +254,7 @@ J'ai déterminé que la manière la plus simple d'assigner un identifiant unique
 {% raw %}{% assign index = forloop.index %}{% endraw %}
 ```
 
-Ensuite j'ai imbriqué une copie modifiée de la boucle *parent* précédente à l'intérieur d'elle même --- pour faire fonction de boucle "enfant" ou `replies`.
+Ensuite j'ai imbriqué une copie modifiée de la boucle *parent* précédente à l'intérieur d'elle-même --- pour faire fonction de boucle "enfant" ou `replies`.
 
 ```liquid
 {% raw %}{% assign replies = site.data.comments[page.slug] | where_exp:"item","item._parent == include.index" %}
@@ -275,7 +276,7 @@ Après avoir brièvement songé un moment au film  **Inception**, j'ai appliqué
 
 [^integer-string]: `15` n'est pas la même chose que `'15'`. Ces guillemets simples font toute la différence...
 
-Pour résoudre cela j'ai placé une balise `capture` autour de la variable d'index pour la convertir en chaîne de caractères. Puis j'ai modifié la condition du filtre `where_exp` afin de comparer `_parent` avec cette nouvelle variable `{% raw %}{{ i }}{% endraw %}` --- pour corriger le problème et me permettre de passer à la suite.
+Pour résoudre cela, j'ai placé une balise `capture` autour de la variable d'index pour la convertir en chaîne de caractères. Puis j'ai modifié la condition du filtre `where_exp` afin de comparer `_parent` avec cette nouvelle variable `{% raw %}{{ i }}{% endraw %}` --- pour corriger le problème et me permettre de passer à la suite.
 
 ```liquid
 {% raw %}{% capture i %}{{ include.index }}{% endcapture %}
@@ -423,7 +424,7 @@ Pour résoudre cela j'ai placé une balise `capture` autour de la variable d'ind
 
 L'étape suivante a consisté à ajouter quelques touches finales pour que le tout fonctionne.
 
-Habitué à la manière dont [**Wordpress**](https://wordpress.org/) gère les formulaires de réponse, j'y ai pioché de l'inspiration. En mettant le nez dans le code JavaScript dans [`wp-includes/js/comment-reply.js`](https://core.svn.wordpress.org/trunk/wp-includes/js/comment-reply.js) j'ai trouvé tout ce dont j'avais besoin:
+Habitué à la manière dont [**Wordpress**](https://wordpress.org/) gère les formulaires de réponse, j'y ai pioché de l'inspiration. En mettant le nez dans le code JavaScriptqui se trouve dans [`wp-includes/js/comment-reply.js`](https://core.svn.wordpress.org/trunk/wp-includes/js/comment-reply.js) j'ai trouvé tout ce dont j'avais besoin:
 
 - une fonction `respond` pour déplacer le formulaire dans la vue,
 - une fonction `cancel` pour supprimer un formulaire de réponse et le repositionner à son état d'origine,
@@ -468,7 +469,7 @@ Comparées aux réponses de commentaires imbriqués, les notifications par mail 
 
 ### Mise à jour de la configuration `staticman.yml`
 
-Pour s'assurer que les liens dans les mails de notifications sont surs et ne proviennent que de domaines de confiance, définissez `allowedOrigins` en fonction.
+Pour s'assurer que les liens dans les mails de notifications sont sûrs et ne proviennent que de domaines de confiance, définissez `allowedOrigins` en fonction.
 
 **Exemple :**
 
@@ -476,7 +477,7 @@ Pour s'assurer que les liens dans les mails de notifications sont surs et ne pro
 allowedOrigins: ["mademistakes.com"]
 ```
 
-Le(s) domaine(s) autorisés doivent correspondre à ceux passés par le champ `options.origin` que nous allons ajouter à la prochaine étape. Seuls les domaines correspondants déclencheront les notifications à envoyer, faut de quoi l'opération échouera.
+Le(s) domaine(s) autorisé()s doi(ven)t correspondre à ceux passés par le champ `options.origin` que nous allons ajouter à la prochaine étape. Seuls les domaines correspondants déclencheront les notifications à envoyer, faute de quoi l'opération échouera.
 
 <div class="notice--info" markdown="1">
 
@@ -519,4 +520,4 @@ Si tout est correctement configuré, l'utilisateur devrait recevoir un mail dès
 
 ---
 
-Voilà, vous avez mis en place un système de commentaires basé sur des fichiers statiques dans Jekyll qui gère les commentaires imbriqués et les notifications de réponse. Maintenant j'aimerais gagner une minute de temps de génération pour pouvoir ajouter les nouveaux commentaires encore plus vite :frowning:.
+Voilà, vous avez mis en place un système de commentaires basé sur des fichiers statiques dans Jekyll et qui gère les commentaires imbriqués et les notifications de réponse. Maintenant j'aimerais gagner une minute de temps de génération pour pouvoir ajouter les nouveaux commentaires encore plus vite :frowning:.
