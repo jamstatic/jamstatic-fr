@@ -1,7 +1,7 @@
 # Site settings
 title: Jekyll-fr
 email: contact@jekyll-fr.org
-description: Communauté francophone des utilisateurs de Jekyll
+description: Communauté francophone des utilisateurs de générateurs de site statique
 baseurl: ""
 url: "http://jekyll-fr.org"
 permalink: /:year/:month/:day/:title/
