@@ -3,9 +3,8 @@
 
 body {
   font-family: $base-font-family;
-  font-weight: $base-font-weight;
   font-size: $base-em * $ms0;
-  line-height: $base * $ms2;
+  line-height: $base-line-height;
 }
 
 h3,
@@ -58,7 +57,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-  margin: 0 0 ($line-height-computed / 2);
+  margin: 0 0 $line-height-computed;
 }
 
 // Lists

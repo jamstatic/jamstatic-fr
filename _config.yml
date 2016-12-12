@@ -69,3 +69,4 @@ gems:
   - jekyll-paginate
   - jekyll-github-metadata
   - jekyll-gist
+  - jemoji

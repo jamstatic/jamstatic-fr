@@ -148,6 +148,25 @@ body {
 
 .page-content {
     padding: $spacing-unit 0;
+    li {
+      margin-bottom: .5em;
+      img {
+        margin: .5em 0;
+      }
+    }
+    hr {
+      margin: 1em 0;
+    }
+    .notice--info h4 {
+        font-size: 1em
+    }
+    .notice--info a {
+        border-bottom-width: 2px;
+        box-shadow: none!important
+    }
+    .notice--info a:hover {
+        background-color: transparent!important
+    }
 }
 
 .page-heading {
@@ -191,4 +210,23 @@ body {
   border-radius: 50%;
   border: 1px solid $grey-color;
   margin-right: $spacing-unit/4;
+}
+
+.notice--info {
+    margin: 2em 0;
+    padding: 1em;
+    background-color: #e9f1f9;
+    border-left: .25em solid #91bae0;
+    h4 {
+        margin-top: 0;
+        margin-bottom: .75em;
+    }
+    p {
+        a {
+            color: #1a5891!important;
+        }
+    }
+    code {
+        background-color: #bdd6ec;
+    }
 }
