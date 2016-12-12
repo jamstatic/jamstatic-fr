@@ -2,6 +2,7 @@
 title: Jamstatic
 email: contact@jamstatic.fr
 description: Communauté francophone des utilisateurs de générateurs de site statique
+url: https://jamstatic.fr
 baseurl: ""
 permalink: /:year/:month/:day/:title/
 timezone: Europe/Paris
