@@ -6,7 +6,7 @@ date: "2016-12-09 21:53:42 +0100"
 image: https://mademistakes.com/assets/images/improving-jekyll-static-comments-feature.jpg
 ---
 
-[Michael Rose](https://github.com/mmistakes), l'auteur du [thème Jekyll Minimal Mistakes](https://mademistakes.com/work/minimal-mistakes-jekyll-theme/), revient sur les détails de l'implémentation de commentaires statiques - les commentaires sont versionnés au format YAML dans le dépôt GitHub - à l'aide de [Staticman](https://eduardoboucas.com/blog/2016/08/10/staticman.html), un service open-source développé par [Eduardo Bouças](https://eduardoboucas.com), qui permet d'insérer des contenus générés par les utilisateurs sur un site plus si statique que ça, proposant ainsi une alternative à Disque au même titre que [Jekyll AWS comment](https://github.com/ummels/jekyll-aws-comments).
+[Michael Rose](https://github.com/mmistakes), l'auteur du [thème Jekyll Minimal Mistakes](https://mademistakes.com/work/minimal-mistakes-jekyll-theme/), revient sur les détails de l'implémentation de commentaires statiques - les commentaires sont versionnés au format YAML dans le dépôt GitHub - à l'aide de [Staticman](https://eduardoboucas.com/blog/2016/08/10/staticman.html), un service open-source développé par [Eduardo Bouças](https://eduardoboucas.com), qui permet d'insérer des contenus générés par les utilisateurs sur un site plus si statique que ça, proposant ainsi une alternative à Disqus au même titre que [Jekyll AWS comment](https://github.com/ummels/jekyll-aws-comments).
 
 *Article original publié sur [https://mademistakes.com/articles/improving-jekyll-static-comments/](https://mademistakes.com/articles/improving-jekyll-static-comments/)*
 
@@ -57,6 +57,7 @@ Quoi qu’il en soit, vous pouvez toujours partager votre expérience de la mise
 ![Supprimer staticmanapp en tant que collaborator](https://mademistakes.com/assets/images/staticman-remove-collaborator.png)  
 2. Ajoutez de nouveau Staticman en tant que  [collaborateur](https://mademistakes.com/articles/jekyll-static-comments/#setting-up-staticman).  
 3. Faites un appel sur ce endpoint de la version 2 de l’API `https://api.staticman.net/v2/connect/{votre nom d'utilisateur GitHub}/{nom de votre dépôt}` pour accepter l'invitation de collaboration.  
+
 
 ### Mettre à jour l'appel POST du formulaire de commentaires
 
