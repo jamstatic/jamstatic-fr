@@ -1,9 +1,8 @@
 # Site settings
-title: Jekyll-fr
-email: contact@jekyll-fr.org
+title: Jamstatic
+email: contact@jamstatic.fr
 description: Communauté francophone des utilisateurs de générateurs de site statique
 baseurl: ""
-url: "http://jekyll-fr.org"
 permalink: /:year/:month/:day/:title/
 timezone: Europe/Paris
 lang: fr
