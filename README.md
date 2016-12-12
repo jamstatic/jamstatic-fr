@@ -14,11 +14,6 @@ Vous pouvez aussi nous aider nous à constituer une liste de [sites statiques fr
 
 ## Développement
 
-La branche par défaut est la branche `source`.
-Merci de travailler sur une branche et d'ouvrir une PR pour soumettre votre contribution.
+Chaque commit dans la branche `source` génère un déploiement en production.
 
-Le fichier `Rakefile` contient plusieurs tâches :
-
-  * `rake generate` pour générer le site
-  * `rake test` pour tester les liens internes du site
-  * `rake publish` pour publier le site généré sur la branche `master`
+Si vous souhaitez contribuer, proposer des articles, vous pouvez ouvrir une issue ou soumettre directement une pull request :heart:
