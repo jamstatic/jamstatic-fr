@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Une communauté Jekyll francophone"
+title:  "Une communauté statique francophone"
 date:   2016-02-23 22:37:07 +0100
 author: "Frank Taillandier"
 categories: jekyll

@@ -26,7 +26,7 @@ Maintenant que vous êtes parés sous allons voir les deux cas de figures possib
 
 ## Pages utilisateur et organisation
 
-Pour activer la génération automatique par GitHub Pages d’un dépôt de compte utilisateur ou organisation, il suffit de respecter la nomenclature  `username/username.github.io`. Par exemple ce dépôt s’appelle `jekyll-fr/jekyll-fr.github.io`.
+Pour activer la génération automatique par GitHub Pages d’un dépôt de compte utilisateur ou organisation, il suffit de respecter la nomenclature  `username/username.github.io`.
 
 GitHub va utiliser la branche `master` de ces dépôts et publier les pages. Cela fait que nous aurons une branche `master` qui contient le site généré et une branche `source` avec les sources de notre site.
 

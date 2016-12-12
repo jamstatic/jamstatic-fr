@@ -8,19 +8,19 @@ permalink: /:year/:month/:day/:title/
 timezone: Europe/Paris
 lang: fr
 
-repository: jekyll-fr/jekyll-fr.github.io
+repository: jamstatic/jamstatic-fr
 branch: source
 
 twitter:
   username: jamstatic_fr
 github:
-  username: jekyll-fr
+  username: jamstatic
 
 social:
   type: organization
   links:
     - https://twitter.com/jamstatic_fr
-    - https://github.com/jekyll-fr
+    - https://github.com/jamstatic
 
 analytics:
   google:

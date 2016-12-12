@@ -44,7 +44,7 @@ Le même principe s'applique au filtre `absolute_url`, il ajoute les valeurs dé
 
 {% highlight liquid %}
 {% raw %}
-{{ "/docs/assets/" | absolute_url }} => http://jekyll-fr.org/mondossier/docs/assets
+{{ "/docs/assets/" | absolute_url }} => http://jamstatic.fr/mondossier/docs/assets
 {% endraw %}
 {% endhighlight %}
 

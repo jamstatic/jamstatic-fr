@@ -3,7 +3,7 @@ require "tmpdir"
 require "bundler/setup"
 require "jekyll"
 
-GITHUB_REPONAME = "jekyll-fr/jekyll-fr.github.io".freeze
+GITHUB_REPONAME = "jamstatic/jamstatic-fr".freeze
 
 desc "Génération des fichiers du site"
 task :generate do

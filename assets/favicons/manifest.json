@@ -1,5 +1,7 @@
+---
+---
 {
-	"name": "Jekyll-fr",
+	"name": "{{ site.title }}",
 	"icons": [
 		{
 			"src": "\/assets\/favicons\/android-chrome-36x36.png",
