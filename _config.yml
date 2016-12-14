@@ -1,72 +1,68 @@
-# Site settings
+---
 title: Jamstatic
+timezone: Europe/Paris
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+    comments: true
+    image: "/assets/images/logo-2x.png"
 email: contact@jamstatic.fr
 description: Communauté francophone des utilisateurs de générateurs de site statique
 url: https://jamstatic.fr
-baseurl: ""
-permalink: /:year/:month/:day/:title/
-timezone: Europe/Paris
+baseurl: ''
+permalink: "/:year/:month/:day/:title/"
 lang: fr
-
 repository: jamstatic/jamstatic-fr
 branch: source
-
 twitter:
   username: jamstatic_fr
 github:
   username: jamstatic
-
 social:
   type: organization
   links:
-    - https://twitter.com/jamstatic_fr
-    - https://github.com/jamstatic
-
+  - https://twitter.com/jamstatic_fr
+  - https://github.com/jamstatic
 analytics:
   google:
     tracking_id: UA-75833986-1
-
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
-
 sass:
   style: compressed
-
 gist:
   noscript: false
-
 exclude:
-  - .editorconfig
-  - .gitignore
-  - .forestryio
-  - .rubocop.yml
-  - .travis.yml
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
-  - README.md
-  - Rakefile
-  - script
-
-defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
-      comments: true
-      image: /assets/images/logo-2x.png
-
+- ".editorconfig"
+- ".gitignore"
+- ".forestryio"
+- ".rubocop.yml"
+- ".travis.yml"
+- Gemfile
+- Gemfile.lock
+- LICENSE
+- README.md
+- Rakefile
+- script
 gems:
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-mentions
-  - jekyll-avatar
-  - jekyll-paginate
-  - jekyll-github-metadata
-  - jekyll-gist
-  - jemoji
+- jekyll-sitemap
+- jekyll-feed
+- jekyll-seo-tag
+- jekyll-mentions
+- jekyll-avatar
+- jekyll-paginate
+- jekyll-github-metadata
+- jekyll-gist
+- jemoji

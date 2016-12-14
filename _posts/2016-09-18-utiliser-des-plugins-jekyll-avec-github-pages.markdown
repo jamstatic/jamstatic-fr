@@ -1,9 +1,10 @@
 ---
-title: "Utiliser des plugins Jekyll avec GitHub Pages"
-description: Automatiser la publication du site généré sur GitHub Pages pour pouvoir utiliser les plugins Jekyll sans restriction.
-date: "2016-09-18 13:51:13 +0200"
+title: Utiliser des plugins Jekyll avec GitHub Pages
+date: 2016-09-18 13:51:13 +02:00
+description: Automatiser la publication du site généré sur GitHub Pages pour pouvoir
+  utiliser les plugins Jekyll sans restriction.
 author: frank
-image: /assets/images/octojekyll.png
+image: "/assets/images/octojekyll.png"
 ---
 
 La popularité de Jekyll est en partie due à son support natif par GitHub Pages. Si cette solution gratuite est bien pratique, elle n’en reste pas moins limitée en terme de support de plugins Jekyll et ce pour des raisons de sécurité. Si vous voulez utiliser des plugins comme [jekyll-cloudinary]({% post_url 2016-08-31-gestion-images-responsive-avec-jekyll-cloudinary %}) ou [jekyll-assets](https://github.com/jekyll/jekyll-assets), il vous faudra générer le site en local et le publier sur Github.

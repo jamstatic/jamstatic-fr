@@ -1,9 +1,10 @@
 ---
+title: Une communauté statique francophone
+date: 2016-02-23 22:37:07 +01:00
+categories:
+- jekyll
 layout: post
-title:  "Une communauté statique francophone"
-date:   2016-02-23 22:37:07 +0100
-author: "Frank Taillandier"
-categories: jekyll
+author: Frank Taillandier
 ---
 
 Comme Jekyll n'a pas l'air de disposer d'une communauté francophone, aussi nous nous proposons d'essayer d'y remedier. Pour le moment l'idée est simplement de pouvoir de partir à sa rencontre,  d'apprendre à connaître les utilisateurs de Jekyll en France et dans les pays francophones, et de voir comment contribuer à faire vivre et grandir cette communauté.

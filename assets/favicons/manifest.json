@@ -1,5 +1,6 @@
 ---
 ---
+
 {
 	"name": "{{ site.title }}",
 	"icons": [

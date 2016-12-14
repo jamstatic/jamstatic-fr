@@ -1,8 +1,9 @@
 ---
 title: Frank Taillandier utilise Jekyll
+date: 2016-04-12 00:00:00 +02:00
+published: false
 description: Questions à un utilisateur de Jekyll
 author: bertrand
-published: false
 ---
 
 Cet article est le premier d’une série qui présente des utilisateurs de Jekyll, nous commençons avec Frank Taillandier, contributeur à Jamstatic. Si vous souhaitez vous aussi répondre à ces questions, merci de [soumettre une pull request sur Github](https://github.com/{{ site.repository }}/pulls).

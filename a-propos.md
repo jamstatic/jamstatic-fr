@@ -1,8 +1,8 @@
 ---
-layout: page
-title: "À propos"
-permalink: /a-propos/
+title: À propos
+permalink: "/a-propos/"
 published: false
+layout: page
 ---
 
 Cet espace est destiné à tous les utilsateurs francophones de [Jekyll](http://jekyllrb.com/)

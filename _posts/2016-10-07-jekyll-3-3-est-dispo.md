@@ -1,7 +1,8 @@
 ---
-title: 'Les nouveautés de Jekyll 3.3'
-date: 2016-10-07 11:10:38 +0200
-description: Cettte version intègre le support des assets dans les thèmes, de nouveaux filtres pour les URLs et bien plus encore.
+title: Les nouveautés de Jekyll 3.3
+date: 2016-10-07 11:10:38 +02:00
+description: Cettte version intègre le support des assets dans les thèmes, de nouveaux
+  filtres pour les URLs et bien plus encore.
 author: frank
 image: https://avatars3.githubusercontent.com/u/3083652?v=3&amp;s=200
 ---

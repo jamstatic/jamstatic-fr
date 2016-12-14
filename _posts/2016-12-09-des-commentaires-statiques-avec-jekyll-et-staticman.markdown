@@ -1,8 +1,9 @@
 ---
-title: "Des commentaires statiques avec Jekyll et Staticman"
-description: "Utilisation de Staticman pour ajouter des commentaires et des notifications de réponses sur un site statique sous Jekyll"
+title: Des commentaires statiques avec Jekyll et Staticman
+date: 2016-12-09 21:53:42 +01:00
+description: Utilisation de Staticman pour ajouter des commentaires et des notifications
+  de réponses sur un site statique sous Jekyll
 author: frank
-date: "2016-12-09 21:53:42 +0100"
 image: https://mademistakes.com/assets/images/improving-jekyll-static-comments-feature.jpg
 ---
 
