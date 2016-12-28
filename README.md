@@ -1,6 +1,7 @@
 # jamstatic.fr
 
 [![Build Status](https://travis-ci.org/jamstatic/jamstatic-fr.svg?branch=source)](https://travis-ci.org/jamstatic/jamstatic-fr)
+[![Slack Channel](https://jamstatic.herokuapp.com/badge.svg)](https://jamstatic.herokuapp.com)
 
 Vous utilisez Jekyll ou un autre générateur de site statique, vous voulez échanger avec la communauté francophone ?
 
