@@ -5,6 +5,6 @@ published: false
 layout: page
 ---
 
-Cet espace est destiné à tous les utilsateurs francophones de [Jekyll](http://jekyllrb.com/)
+Cet espace est destiné à tous les utilisateurs francophones de [Jekyll](http://jekyllrb.com/)
 
 Le code source est disponible sur {% include icon-github.html username="{{ site.github.username }}" %}
