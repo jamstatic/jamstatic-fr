@@ -19,7 +19,7 @@ defaults:
 email: contact@jamstatic.fr
 description: Communauté francophone des utilisateurs de générateurs de site statique
 url: https://jamstatic.fr
-baseurl: 
+baseurl:
 permalink: "/:year/:month/:day/:title/"
 lang: fr
 repository: jamstatic/jamstatic-fr
@@ -42,8 +42,6 @@ kramdown:
   hard_wrap: false
 sass:
   style: compressed
-gist:
-  noscript: false
 exclude:
 - ".editorconfig"
 - ".gitignore"
