@@ -6,11 +6,7 @@ author: frank
 image: "assets/images/jekyll-rendering-rules.png"
 ---
 
-Si vous suivez ce blog, vous savez déjà que Jekyll est un générateur de site statique développé en Ruby. Jack Phelan a décidé d'aller jeter un œil dans le moteur de Jekyll histoire de mieux comprendre comment sont traités les différents types fichiers qui sont passés en entrée. Nous traduisons son article afin de vous inciter à plonger un peu dans le code de Jekyll et prendre connaissance des concepts fondamentaux de ce générateur. Nous espérons que cela vous permettra de mieux appréhender la philosophie de Jekyll ou que cela vous sera utile si vous songez à développer un plugin.
-
------
-
-[Article original](https://www.bytesandwich.com/jekyll/software/blogging/2016/09/14/how-does-jekyll-work.html)
+Si vous suivez ce blog, vous savez déjà que Jekyll est un générateur de site statique développé en Ruby. Jack Phelan a décidé d'aller jeter un œil dans le moteur de Jekyll histoire de mieux comprendre comment sont traités les différents types fichiers qui sont passés en entrée. Nous traduisons [son article](https://www.bytesandwich.com/jekyll/software/blogging/2016/09/14/how-does-jekyll-work.html) afin de vous inciter à plonger un peu dans le code de Jekyll et prendre connaissance des concepts fondamentaux de ce générateur. Nous espérons que cela vous permettra de mieux appréhender la philosophie de Jekyll ou que cela vous sera utile si vous songez à développer un plugin.
 
 [Jekyll](https://jekyllrb.com) peut paraître un peu déroutant au début. En effet Jekyll ne fait pas grand chose à vos fichiers, si ce n'est qu'il les classifie de différentes façons.
 
@@ -20,12 +16,12 @@ Si un fichier commence par une entête [YAML FrontMatter](https://jekyllrb.com/d
 
 1. **Interprétation du code Liquid** : Le contenu du fichier est d'abord parcouru par le parser de [Liquid](http://shopify.github.io/liquid/), les variables comme `site` ou `page` auxquelles le modèle Liquid veut accéder sont alors interprétées.
 1. **Conversion du contenu** : en fonction de l'extension de fichier, Jekyll fait appel à un convertisseur dédié, par example Kramdown pour les fichiers `.md` ou `.markdown`, qui est chargé de convertir le résultat obtenu après l'étape 1.
-1. **Parsing du modèle**: Le résultat de cette conversion est alors transmis dans la variable `{{content}}`, soit au modèle de page par défaut, soit à celui qui est spécifié dans l'entête YAML FrontMatter..
+1. **Parsing du modèle**: Le résultat de cette conversion est alors transmis dans la variable {% raw %}`{{content}}`{% endraw %}, soit au modèle de page par défaut, soit à celui qui est spécifié dans l'entête YAML FrontMatter.
 1. Le résultat de cette dernière conversion du modèle de page, généralement un fichier HTML, est écrit dans votre répertoire de destination.
 
 J'aimerais maintenant vous montrer un exemple où Jekyll applique cette transformation. Ensuite, lors d'un [test complet](#test-d-une-generation-complete) de génération de site, nous irons étudier la structure générale de l'algorithme au [cœur de Jekyll](#au-cœur-de-jekyll) pour voir quels traitements sont effectués sur les différents types de fichiers.
 
-La transformation de Jekyll
+## La transformation de Jekyll
 
 Le mécanisme de transformation de Jekyll est situé dans [la méthode run du fichier renderer](https://github.com/jekyll/jekyll/blob/2b15b0b3251d35c290dc96eb07e18fa31a58bcc6/lib/jekyll/renderer.rb#L32-L79), qui fait essentiellement la chose suivante, en sautant potentiellement quelques étapes :
 
@@ -35,47 +31,243 @@ after_markdown = convert(after_liquid) # line 66
 place_in_layout(after_markdown) # line 71
 ```
 
-Donc si nous transformons l'article livré avec Jekyll par défaut :
+Donc si nous transformons l'article présent dans le thème par défaut de Jekyll :
 
 ```markdown
- ---
- layout: post
- title:  "Bienvenue dans Jekyll !"
- date:   2016-08-17 13:50:36 +0100
- categories: jekyll update
- ---
- You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+{% raw %}
+---
+layout: post
+title:  "Bienvenue dans Jekyll !"
+date:   2016-08-17 13:50:36 +0100
+categories: jekyll update
+---
+You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
- To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
- Jekyll also offers powerful support for code snippets:
+Jekyll also offers powerful support for code snippets:
 
- {% highlight ruby %}
- def print_hi(name)
-   puts "Hi, #{name}"
- end
- print_hi('Tom')
- #=> prints 'Hi, Tom' to STDOUT.
- {% endhighlight %}
+{% highlight ruby %}
+def print_hi(name)
+ puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
 
- Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
- [jekyll-docs]: http://jekyllrb.com/docs/home
- [jekyll-gh]:   https://github.com/jekyll/jekyll
- [jekyll-talk]: https://talk.jekyllrb.com/{% raw %}
+[jekyll-docs]: http://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
+{% endraw %}
 ```
 
-… vous pouvez voir le résultat des deux premières étape de la transformation :
+…vous pouvez voir le résultat des deux premières étapes de la transformation :
 
-input 1. liquified 2. converted
+<div class="tabs">
 
-INSERT CODE HERE
+  <div class="tab">En entrée</div>
+  <div class="tab">1. Liquidifié</div>
+  <div class="tab">2. Converti</div>
+  <div class="tab-content" markdown="1">
 
-Puis vient la dernière étape où nous mettons tout cela dans la variable `{{ content }}` de notre modèle :
+```markdown
+You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-template body 3. final output
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
-INSERT CODE HERE
+Jekyll also offers powerful support for code snippets:
+
+{% raw %}
+{% highlight ruby %}
+def print_hi(name)
+  puts \"Hi, \#{name}\"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+{% endraw %}
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+[jekyll-docs]: http://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
+```
+
+  </div>
+  <div class="tab-content" markdown="1">
+
+```markdown
+You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Jekyll also offers powerful support for code snippets:
+
+
+<figure class=\"highlight\"><pre><code class=\"language-ruby\" data-lang=\"ruby\"><span class=\"k\">def</span> <span class=\"nf\">print_hi</span><span class=\"p\">(</span><span class=\"nb\">name</span><span class=\"p\">)</span>
+  <span class=\"nb\">puts</span> <span class=\"s2\">\"Hi, </span><span class=\"si\">\#{</span><span class=\"nb\">name</span><span class=\"si\">}</span><span class=\"s2\">\"</span>
+<span class=\"k\">end</span>
+<span class=\"n\">print_hi</span><span class=\"p\">(</span><span class=\"s1\">'Tom'</span><span class=\"p\">)</span>
+<span class=\"c1\">#=> prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+[jekyll-docs]: http://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
+```
+
+  </div>
+  <div class="tab-content" markdown="1">
+
+```markdown
+<p>You’ll find this post in your <code class=\"highlighter-rouge\">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class=\"highlighter-rouge\">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>To add new posts, simply add a file in the <code class=\"highlighter-rouge\">_posts</code> directory that follows the convention <code class=\"highlighter-rouge\">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class=\"highlight\"><pre><code class=\"language-ruby\" data-lang=\"ruby\"><span class=\"k\">def</span> <span class=\"nf\">print_hi</span><span class=\"p\">(</span><span class=\"nb\">name</span><span class=\"p\">)</span>
+  <span class=\"nb\">puts</span> <span class=\"s2\">\"Hi, </span><span class=\"si\">\#{</span><span class=\"nb\">name</span><span class=\"si\">}</span><span class=\"s2\">\"</span>
+<span class=\"k\">end</span>
+<span class=\"n\">print_hi</span><span class=\"p\">(</span><span class=\"s1\">'Tom'</span><span class=\"p\">)</span>
+<span class=\"c1\">#=> prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<p>Check out the <a href=\"http://jekyllrb.com/docs/home\">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href=\"https://github.com/jekyll/jekyll\">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href=\"https://talk.jekyllrb.com/\">Jekyll Talk</a>.</p>
+```
+
+</div>
+</div>
+
+<style type="text/css">
+
+.tabs {
+    position: relative;
+    margin: 25px 0;
+}
+.tab {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #e8e8e8;
+    margin: 0;
+    margin-left: -1px;
+    position: relative;
+    left: 4px;
+    bottom: -1px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.tab.tab-selected {
+    background-color: #eef;
+    border-bottom: 1px solid #eef;
+}
+
+table {
+  font-size: 0.775em;
+}
+
+table, tr, td, th {
+  border: 1px solid white;
+  border-collapse: collapse;
+  padding: .5em;
+}
+
+th, tr td:first-child {
+  font-weight: bold;
+  background-color: #e8e8e8;
+}
+
+.copied {
+  background-color: lightskyblue;
+}
+.transformed {
+  background-color: yellow;
+}
+.post-transformed {
+  background-color: mediumseagreen;
+}
+</style>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    function activateTab(tab) {
+        var $tabs = $(tab).closest('.tabs')
+        var index = $(tab).index()
+        var $tabAreas = $tabs.find('.tab-content')
+        var $toShow = $tabAreas.eq(index);
+
+        $tabs.find('.tab-selected').removeClass('tab-selected');
+        $(tab).addClass('tab-selected');
+
+        $tabAreas.hide()
+        $toShow.show()
+    }
+    $(() => {
+      $(".tab").click((e) => activateTab(e.target))
+      $('.tabs').each((i, tabs) => activateTab($(tabs).find('.tab').first().get()));
+    })
+</script>
+
+Puis vient la dernière étape où nous mettons tout cela dans la variable {% raw %}`{{content}}`{% endraw %} de notre modèle :
+
+<div class="tabs">
+  <div class="tab">Modèle</div>
+  <div class="tab">3. Résultat final</div>
+  <div class="tab-content" markdown="1">
+
+```markdown
+<article class=\"post\" itemscope itemtype=\"http://schema.org/BlogPosting\">
+
+  <header class=\"post-header\">
+    <h1 class=\"post-title\" itemprop=\"name headline\">{{ page.title | escape }}</h1>
+    <p class=\"post-meta\"><time datetime=\"{% raw %}{{ page.date | date_to_xmlschema }}{% endraw %}\" itemprop=\"datePublished\">{% raw %}{{ page.date | date: \"%b %-d, %Y\" }}{% endraw %}</time>{% if page.author %} • <span itemprop=\"author\" itemscope itemtype=\"http://schema.org/Person\"><span itemprop=\"name\">{% raw %}{{ page.author }}{% endraw %}</span></span>{% endif %}</p>
+  </header>
+
+  <div class=\"post-content\" itemprop=\"articleBody\">
+    {% raw %}{{ content }}{% endraw %}
+  </div>
+
+</article>
+```
+
+  </div>
+  <div class="tab-content" markdown="1">
+
+```markdown
+<article class=\"post\" itemscope itemtype=\"http://schema.org/BlogPosting\">
+
+  <header class=\"post-header\">
+    <h1 class=\"post-title\" itemprop=\"name headline\">Welcome to Jekyll!</h1>
+    <p class=\"post-meta\"><time datetime=\"2016-08-17T23:50:36-04:00\" itemprop=\"datePublished\">Aug 17, 2016</time></p>
+  </header>
+
+  <div class=\"post-content\" itemprop=\"articleBody\">
+    <p>You’ll find this post in your <code class=\"highlighter-rouge\">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class=\"highlighter-rouge\">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+    <p>To add new posts, simply add a file in the <code class=\"highlighter-rouge\">_posts</code> directory that follows the convention <code class=\"highlighter-rouge\">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+    <p>Jekyll also offers powerful support for code snippets:</p>
+
+    <figure class=\"highlight\"><pre><code class=\"language-ruby\" data-lang=\"ruby\">
+    <span class=\"k\">def</span> <span class=\"nf\">print_hi</span><span class=\"p\">(</span><span class=\"nb\">name</span><span class=\"p\">)</span>
+    <span class=\"nb\">puts</span> <span class=\"s2\">\"Hi, </span><span class=\"si\">\#{</span><span class=\"nb\">name</span><span class=\"si\">}</span><span class=\"s2\">\"</span>
+    <span class=\"k\">end</span>
+    <span class=\"n\">print_hi</span><span class=\"p\">(</span><span class=\"s1\">'Tom'</span><span class=\"p\">)</span>
+    <span class=\"c1\">#=> prints 'Hi, Tom' to STDOUT.</span></code></pre>
+    </figure>
+
+    <p>Check out the <a href=\"http://jekyllrb.com/docs/home\">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href=\"https://github.com/jekyll/jekyll\">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href=\"https://talk.jekyllrb.com/\">Jekyll Talk</a>.</p>
+  </div>
+
+</article>
+```
+  </div>
+</div>
 
 Ceci est juste un exemple de conversion avec kramdown pour le markdown et d'insertion du résultat dans un modèle. Jekyll intègre d'autres convertisseurs comme [smartypants](https://github.com/jekyll/jekyll/blob/2b15b0b3251d35c290dc96eb07e18fa31a58bcc6/lib/jekyll/converters/smartypants.rb). Jekyll inclut aussi par défaut un [convertisseur pour Sass](https://github.com/jekyll/jekyll-sass-converter) dans le [fichier de spécification de sa gem Ruby](https://github.com/jekyll/jekyll/blob/499b83236c0289471118991bd5fe743effe9b348/jekyll.gemspec), qui n'est pas un convertisseur intégré, mais vous comprendrez quand vous lancerez la commande `jekyll new`. Vous pouvez installer d'autres convertisseurs à l'aide de plugins. Les modèles sont des fichiers qui sont soit stockés dans votre dossier `_layouts`, soit dans celui empaqueté dans la gem du thème utilisé par votre fichier de configuration.
 
@@ -169,36 +361,189 @@ J'ai fait un tableau avec une ligne par répertoire et une colonne par fichier, 
 
 ## Génération des fichiers sans l'option brouillons
 
-|                           | text.txt                  | frontmatter-not-post.md | 2016-05-05-post-without-frontmatter.md |     yaml.yml     | 2020-02-02-post-future.md | 2016-05-05-post-normal.md |
-|---------------------------|:-----------------------:|:--------------------------------------:|:----------------:|:-------------------------:|:-------------------------:|:----------------:|
-| /                         |          copié         |               transformé              |      copié      |           copié          |        transformé        |    transformé   |
-| /posts                    |         omis         |                 omis                | post transformé |          omis          |          omis          | post transformé |
-| /drafts                   |         omis         |                 omis                |      omis     |          omis          |          omis          |      omis     |
-| /data                     |         omis         |                 omis                |      omis     |          omis          |          omis          |      omis     |
-| /my_output_collection     |          copié         |               transformé              |      copié      |           copié          |          omis          |    transformé   |
-| /my_non_output_collection |          copié         |                 omis                |      copié      |           copié          |          omis          |      omis     |
-| /underscore_dir           |         omis         |                 omis                |      omis     |          omis          |          omis          |      omis     |
-| /regular_dir              |          copié         |               transformé              |      copié      |           copié          |        transformé        |    transformé   |
-
+<table>
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>text.txt</th>
+      <th>frontmatter-not-post.md</th>
+      <th>2016-05-05-post-without-frontmatter.md</th>
+      <th>yaml.yml</th>
+      <th>2020-02-02-post-future.md</th>
+      <th>2016-05-05-post-normal.md</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>/</th>
+      <td class="copied">copié</td>
+      <td class="transformed">transformé</td>
+      <td class="copied">copié</td>
+      <td class="copied">copié</td>
+      <td class="transformed">transformé</td>
+      <td class="transformed">transformé</td>
+    </tr>
+    <tr>
+      <td>/posts</td>
+      <td class="omitted">omis</td>
+      <td class="omitted">omis</td>
+      <td class="post-transformed">post transformé</td>
+      <td class="omitted">omis</td>
+      <td class="omitted">omis</td>
+      <td class="post-transformed">post transformé</td>
+    </tr>
+    <tr>
+      <td>/drafts</td>
+      <td class="omitted">omis</td>
+      <td class="omitted">omis</td>
+      <td class="omitted">omis</td>
+      <td class="omitted">omis</td>
+      <td class="omitted">omis</td>
+      <td class="omitted">omis</td>
+    </tr>
+    <tr>
+      <td>/data</td>
+      <td class="omitted">omis</td>
+      <td class="omitted">omis</td>
+      <td class="omitted">omis</td>
+      <td class="omitted">omis</td>
+      <td class="omitted">omis</td>
+      <td class="omitted">omis</td>
+    </tr>
+    <tr>
+      <td>/my_output_collection</td>
+      <td class="copied">copié</td>
+      <td class="transformed">transformé</td>
+      <td class="copied">copié</td>
+      <td class="copied">copié</td>
+      <td class="omitted">omis</td>
+      <td class="transformed">transformé</td>
+    </tr>
+    <tr>
+      <td>/my_non_output_collection</td>
+      <td class="copied">copié</td>
+      <td class="omitted">omis</td>
+      <td class="copied">copié</td>
+      <td class="copied">copié</td>
+      <td class="omitted">omis</td>
+      <td class="omitted">omis</td>
+    </tr>
+    <tr>
+      <td>/underscore_dir</td>
+      <td class="omitted">omis</td>
+      <td class="omitted">omis</td>
+      <td class="omitted">omis</td>
+      <td class="omitted">omis</td>
+      <td class="omitted">omis</td>
+      <td class="omitted">omis</td>
+    </tr>
+    <tr>
+      <td>/regular_dir</td>
+      <td class="copied">copié</td>
+      <td class="transformed">transformé</td>
+      <td class="copied">copié</td>
+      <td class="copied">copié</td>
+      <td class="transformed">transformé</td>
+      <td class="transformed">transformé</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Génération des fichiers avec l'option brouillon
 
+<table>
+  <thead>
+    <tr>
+      <th>&nbsp;</th>
+      <th>text.txt</th>
+      <th>frontmatter-not-post.md</th>
+      <th>2016-05-05-post-without-frontmatter.md</th>
+      <th>yaml.yml</th>
+      <th>2020-02-02-post-future.md</th>
+      <th>2016-05-05-post-normal.md</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>/</td>
+      <td class="copied">copié</td>
+      <td class="transformed">transformé</td>
+      <td class="copied">copié</td>
+      <td class="copied">copié</td>
+      <td class="transformed">transformé</td>
+      <td class="transformed">transformé</td>
+    </tr>
+    <tr>
+      <td>/posts</td>
+      <td>omis</td>
+      <td>omis</td>
+      <td class="post-transformed">post transformé</td>
+      <td>omis</td>
+      <td>omis</td>
+      <td class="post-transformed">post transformé</td>
+    </tr>
+    <tr>
+      <td>/drafts</td>
+      <td>Aucune</td>
+      <td class="post-transformed">post transformé</td>
+      <td class="post-transformed">post transformé</td>
+      <td class="post-transformed">post transformé</td>
+      <td>omis</td>
+      <td class="post-transformed">post transformé</td>
+    </tr>
+    <tr>
+      <td>/data</td>
+      <td>omis</td>
+      <td>omis</td>
+      <td>omis</td>
+      <td>omis</td>
+      <td>omis</td>
+      <td>omis</td>
+    </tr>
+    <tr>
+      <td>/my_output_collection</td>
+      <td class="copied">copié</td>
+      <td class="transformed">transformé</td>
+      <td class="copied">copié</td>
+      <td class="copied">copié</td>
+      <td>omis</td>
+      <td class="transformed">transformé</td>
+    </tr>
+    <tr>
+      <td>/my_non_output_collection</td>
+      <td class="copied">copié</td>
+      <td>omis</td>
+      <td class="copied">copié</td>
+      <td class="copied">copié</td>
+      <td>omis</td>
+      <td>omis</td>
+    </tr>
+    <tr>
+      <td>/underscore_dir</td>
+      <td>omis</td>
+      <td>omis</td>
+      <td>omis</td>
+      <td>omis</td>
+      <td>omis</td>
+      <td>omis</td>
+    </tr>
+    <tr>
+      <td>/regular_dir</td>
+      <td class="copied">copié</td>
+      <td class="transformed">transformé</td>
+      <td class="copied">copié</td>
+      <td class="copied">copié</td>
+      <td class="transformed">transformé</td>
+      <td class="transformed">transformé</td>
+    </tr>
+  </tbody>
+</table>
 
-|                           | text.txt                  | frontmatter-not-post.md | 2016-05-05-post-without-frontmatter.md |     yaml.yml     | 2020-02-02-post-future.md | 2016-05-05-post-normal.md |
-|---------------------------|:-----------------------:|:--------------------------------------:|:----------------:|:-------------------------:|:-------------------------:|:----------------:|
-| /                         |          copié         |               transformé              |      copié      |           copié          |        transformé        |    transformé   |
-| /posts                    |         omis         |                 omis                | post transformé |          omis          |          omis          | post transformé |
-| /drafts                   |           None          |            post transformé            | post transformé |      post transformé     |          omis          | post transformé |
-| /data                     |         omis         |                 omis                |      omis     |          omis          |          omis          |      omis     |
-| /my_output_collection     |          copié         |               transformé              |      copié      |           copié          |          omis          |    transformé   |
-| /my_non_output_collection |          copié         |                 omis                |      copié      |           copié          |          omis          |      omis     |
-| /underscore_dir           |         omis         |                 omis                |      omis     |          omis          |          omis          |      omis     |
-| /regular_dir              |          copié         |               transformé              |      copié      |           copié          |        transformé        |    transformé   |
-
-
-source site site with drafts
-
-INSERT CODE HERE
+<div class="tabs">
+  <div class="tab tab-selected">Source</div>
+  <div class="tab">Site</div>
+  <div class="tab">Site avec les brouillons</div>
+  <div class="tab-content" markdown="1">
 
 ```shell
 bash-4.3# tree .
@@ -272,14 +617,127 @@ bash-4.3# tree .
 
 9 directories, 57 files
 ```
+  </div>
+  <div class="tab-content" markdown="1">
 
-Jekyll’s objects: Posts, Drafts, Pages, Data, Collections, Layouts, & Includes
+```shell
+bash-4.3# tree _site
+_site
+├── 2016
+│   └── 05
+│       └── 05
+│           ├── post-normal-posts.html
+│           └── post-without-frontmatter-posts.html
+├── 2016-05-05-post-normal.html
+├── 2016-05-05-post-without-frontmatter.md
+├── 2020-02-02-post-future.html
+├── Gemfile
+├── Gemfile.lock
+├── about
+│   └── index.html
+├── css
+│   └── main.css
+├── feed.xml
+├── frontmatter-not-post.html
+├── index.html
+├── jekyll
+│   └── update
+│       └── 2016
+│           └── 09
+│               └── 14
+│                   └── welcome-to-jekyll.html
+├── my_non_output_collection
+│   ├── 2016-05-05-post-without-frontmatter-my_non_output_collection.md
+│   ├── text-my_non_output_collection.txt
+│   └── yaml-my_non_output_collection.yml
+├── my_output_collection
+│   ├── 2016-05-05-post-normal-my_output_collection.html
+│   ├── 2016-05-05-post-without-frontmatter-my_output_collection.md
+│   ├── frontmatter-not-post-my_output_collection.html
+│   ├── text-my_output_collection.txt
+│   └── yaml-my_output_collection.yml
+├── regular_dir
+│   ├── 2016-05-05-post-normal-regular_dir.html
+│   ├── 2016-05-05-post-without-frontmatter-regular_dir.md
+│   ├── 2020-02-02-post-future-regular_dir.html
+│   ├── frontmatter-not-post-regular_dir.html
+│   ├── text-regular_dir.txt
+│   └── yaml-regular_dir.yml
+├── text.txt
+└── yaml.yml
 
-The best place to continue to learn is jekyll directory structure, where you can find further descriptions of the types of files in these directories.
+13 directories, 29 files
+```
+
+  </div>
+  <div class="tab-content" markdown="1">
+
+```shell
+bash-4.3# tree _site
+_site
+├── 2016
+│   ├── 05
+│   │   └── 05
+│   │       ├── post-normal-drafts.html
+│   │       ├── post-normal-posts.html
+│   │       ├── post-without-frontmatter-drafts.html
+│   │       └── post-without-frontmatter-posts.html
+│   └── 09
+│       └── 14
+│           ├── frontmatter-not-post-drafts.html
+│           ├── text-drafts.txt
+│           └── yaml-drafts.yml
+├── 2016-05-05-post-normal.html
+├── 2016-05-05-post-without-frontmatter.md
+├── 2020-02-02-post-future.html
+├── Gemfile
+├── Gemfile.lock
+├── about
+│   └── index.html
+├── css
+│   └── main.css
+├── feed.xml
+├── frontmatter-not-post.html
+├── index.html
+├── jekyll
+│   └── update
+│       └── 2016
+│           └── 09
+│               └── 14
+│                   └── welcome-to-jekyll.html
+├── my_non_output_collection
+│   ├── 2016-05-05-post-without-frontmatter-my_non_output_collection.md
+│   ├── text-my_non_output_collection.txt
+│   └── yaml-my_non_output_collection.yml
+├── my_output_collection
+│   ├── 2016-05-05-post-normal-my_output_collection.html
+│   ├── 2016-05-05-post-without-frontmatter-my_output_collection.md
+│   ├── frontmatter-not-post-my_output_collection.html
+│   ├── text-my_output_collection.txt
+│   └── yaml-my_output_collection.yml
+├── regular_dir
+│   ├── 2016-05-05-post-normal-regular_dir.html
+│   ├── 2016-05-05-post-without-frontmatter-regular_dir.md
+│   ├── 2020-02-02-post-future-regular_dir.html
+│   ├── frontmatter-not-post-regular_dir.html
+│   ├── text-regular_dir.txt
+│   └── yaml-regular_dir.yml
+├── text.txt
+└── yaml.yml
+
+15 directories, 34 files
+```
+
+  </div>
+</div>
+
+## Les objets de Jekyll : Posts, Drafts, Pages, Data, Collections, Layouts et Includes
+
+Le meilleur endroit pour continuer à apprendre est d'aller voir [la structure des répertoires de Jekyll](https://jekyllrb.com/docs/structure/), où vous pourrez trouver des descriptions plus détaillées des types de fichiers dans ces répertoires.
 
 ## Debugging
 
-Sous Mac OS X, avec `rbenv`, en ligne de commande l'exécutable de Jekyll est un script situé dans une Gem Ruby qui appelle `~/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/jekyll-3.3.1`[^3] où nous pouvons commencer à  débugguer à l'aide de `pry-byebugù si nous ajoutons deux lignes (la 8 et la 10 dans l'extrait ci-dessous) :
+Sous Mac OS X, avec `rbenv`, en ligne de commande l'exécutable de Jekyll est un script situé dans une Gem Ruby qui appelle `~/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/jekyll-3.3.1`[^3] où nous pouvons commencer à  débugguer à l'aide de `pry-byebug` si nous ajoutons deux lignes (la 8 et la 10 dans l'extrait ci-dessous) :
 
 Le fichier ~/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/jekyll-3.3.1 /exe/jekyll @ line 12 :
 
@@ -319,7 +777,7 @@ Mercenary.program(:jekyll) do |p|
 
 `process_site` appelle ensuite `site.process`.
 
-
+Voilà, maintenant vous en savez un peu plus sur les mécanismes internes de Jekyll !
 
 
 [^1]: Lorsque Jekyll omet un fichier, il se peut qu'il lise le fichier comme une donnée à laquelle vous pouvez accéder à l'aide de variables Liquid dans d'autres fichiers de modèles Liquid.
