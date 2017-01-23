@@ -8,6 +8,8 @@ image: http://blogs.getty.edu/iris/files/2016/05/eric_ruth_greg_1009_1200.jpg
 
 Suite à la parution du [procédé de publication numérique basé sur Git et Middleman](http://blogs.getty.edu/iris/an-editors-view-of-digital-publishing/) d'un éditeur, [Antoine Fauchié](https://www.quaternum.net/) est allé poser quelques questions à [Eric Gardner](http://egardner.github.io/), développeur et designer, actuellement en charge de la modernisation de la chaîne de publication chez [The Getty](https://getty.edu/), un campus culturel et de recherche situé à Los Angeles.
 
+![Digital Publishing at the Getty]({{ page.image }})
+
 > Comment et pourquoi en êtes vous arrivés à choisir un générateur de site statique comme clé de voûte de votre processus de publication aux éditions Getty ? Pourquoi ne pas avoir opté pour un développement natif ?
 
 Lorsque j'ai commencé à travailler chez Getty, le programme de publication numérique était assez récent. Il y avait eu précédemment plusieurs expérimentations qui adoptaient toutes une approche CMS plus traditionnelle ainsi qu'une application mobile développée par un prestataire externe, mais au bout de quelques années ces projets sont devenus difficile à maintenir.
