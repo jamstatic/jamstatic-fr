@@ -19,10 +19,6 @@ h2, .h2 { font-size: $title2; }
 h1, .h1 { font-size: $title1; }
 
 @include media-query($on-tablet) {
-  body { font-size: $base-em * $ms1; }
-}
-
-@include media-query($on-desktop) {
   body { font-size: $base-em * $ms2; }
 }
 
