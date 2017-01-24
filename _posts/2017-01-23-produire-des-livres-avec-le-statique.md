@@ -9,7 +9,7 @@ author: antoine
 
 Suite à la parution du [procédé de publication numérique basé sur Git et Middleman](http://blogs.getty.edu/iris/an-editors-view-of-digital-publishing/) d'un éditeur, [Antoine Fauchié](https://www.quaternum.net/) est allé poser quelques questions à [Eric Gardner](http://egardner.github.io/), développeur et designer, actuellement en charge de la modernisation de la chaîne de publication chez [The Getty](https://getty.edu/), un campus culturel et de recherche situé à Los Angeles.
 
-!\[Digital Publishing at the Getty\]({{ page.image }})
+![Digital Publishing at the Getty]({{ page.image }})
 
 > Comment et pourquoi en êtes vous arrivés à choisir un générateur de site statique comme clé de voûte de votre processus de publication aux éditions Getty ? Pourquoi ne pas avoir opté pour un développement natif ?
 
@@ -27,7 +27,7 @@ Il est vrai que publier de cette façon signifie que pas mal de choses vont chan
 
 > Est-ce que tu penses qu'un process à base de technologies web peut remplacer le couple démoniaque Word et InDesign ? Particulièrement en ce qui concerne la facilité d'écriture et de structuration des contenus (WYSIWYG) ainsi que la mise en page (InDesign) ?
 
-Je pense qu'on s'en rapproche (et je frémis à l'idée d'essayer d'obtenir un texte propre à partir d'un jeu de fichiers InDesign…). Mais nos outils ont encore du chemin à parcourir ; j'ai écris [un article là dessus](http://blogs.getty.edu/iris/digital-publishing-needs-new-tools/) sur le blog de The Getty il y a un petit moment. Les gens utilisent Word et InDesign parce qu'ils sont intuitifs et bien pensés, notre workflow est encore un peu rude en comparaison. Toutefois le monde du texte brut possède des outils vraiment puissants lui aussi : une véritable gestion des versions (bien mieux que le système de révisions), des éditeurs étonnamment puissants comme Vim ou Emacs\[^1\], la possibilité de spécifier ce qu'on veut dire vraiment avec des languages de balisage simples comme [Markdown](https://learnxinyminutes.com/docs/fr-fr/markdown/) ou [Asciidoc](https://learnxinyminutes.com/docs/asciidoc/), etc. Je pense que l'équivalence visuelle exacte n'est plus l'objectif à atteindre ici. A contrario, des outils intuitifs et fiables, qui essaient avant tout d'aider les gens à exprimer du *sens* et ce dans plus d'un contexte de présentation, c'est plutôt ça la voie à suivre.
+Je pense qu'on s'en rapproche (et je frémis à l'idée d'essayer d'obtenir un texte propre à partir d'un jeu de fichiers InDesign…). Mais nos outils ont encore du chemin à parcourir ; j'ai écris [un article là dessus](http://blogs.getty.edu/iris/digital-publishing-needs-new-tools/) sur le blog de The Getty il y a un petit moment. Les gens utilisent Word et InDesign parce qu'ils sont intuitifs et bien pensés, notre workflow est encore un peu rude en comparaison. Toutefois le monde du texte brut possède des outils vraiment puissants lui aussi : une véritable gestion des versions (bien mieux que le système de révisions), des éditeurs étonnamment puissants comme Vim ou Emacs[^1], la possibilité de spécifier ce qu'on veut dire vraiment avec des languages de balisage simples comme [Markdown](https://learnxinyminutes.com/docs/fr-fr/markdown/) ou [Asciidoc](https://learnxinyminutes.com/docs/asciidoc/), etc. Je pense que l'équivalence visuelle exacte n'est plus l'objectif à atteindre ici. A contrario, des outils intuitifs et fiables, qui essaient avant tout d'aider les gens à exprimer du *sens* et ce dans plus d'un contexte de présentation, c'est plutôt ça la voie à suivre.
 
 > Est-ce que ce nouveau process augmente la qualité des publications de The Getty ?
 
@@ -39,7 +39,7 @@ Cela varie en fonction des maisons d'édition, mais globalement je dirais que no
 
 > Quelles sont les contraintes auxquelles vous vous heurtez encore aujourd'hui ? Quel serait votre workflow idéal ?
 
-Tout à l'heure j'ai dit que le fait de configurer un environnement de développement, de travailler avec les outils de programmation plus bas-niveau (comme Git) peut s'avérer être frustrant et déroutant pour les non-programmeurs et que ces outils pourraient être améliorés. J'aimerais une application avec une interface simple qui facilite l'écriture en Markdown, branchée sur Git et qui permette de faire des choses comme choisir un modèle de livre, sans forcer l'utilisateur final à se soucier de la gestion de dépendances ou de l'installation de librairies\[^2\].
+Tout à l'heure j'ai dit que le fait de configurer un environnement de développement, de travailler avec les outils de programmation plus bas-niveau (comme Git) peut s'avérer être frustrant et déroutant pour les non-programmeurs et que ces outils pourraient être améliorés. J'aimerais une application avec une interface simple qui facilite l'écriture en Markdown, branchée sur Git et qui permette de faire des choses comme choisir un modèle de livre, sans forcer l'utilisateur final à se soucier de la gestion de dépendances ou de l'installation de librairies[^2].
 
 > Est-ce que tu penses que d'autres maisons d'édition vont adopter à leur tour cette stratégie avec des générateurs de site statique (pas de WYSIWYG, un balisage léger, pas de base de données, des métadonnées YAML, versionnement avec Git, etc.) ? Est-ce qu'un courant pourrait se former autour de ce concept ?
 
@@ -47,5 +47,5 @@ Des collègues qui travaillent pour d'autres musées m'ont fait part de leur int
 
 ---
 
-\[^1\]: NdT: Des éditeurs comme Sublime ou Atom sont aussi puissants et encore plus accessibles.
-\[^2\]: NdT: Le projet [GitBook](https://www.gitbook.com) adopte cette démarche.
+[^1]: NdT: Des éditeurs comme Sublime ou Atom sont aussi puissants et encore plus accessibles.
+[^2]: NdT: Le projet [GitBook](https://www.gitbook.com) adopte cette démarche.
