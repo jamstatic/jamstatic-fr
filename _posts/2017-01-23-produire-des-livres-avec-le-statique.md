@@ -7,7 +7,7 @@ description: Le web au secours de la modernisation du procédé de publication d
 author: antoine
 ---
 
-Suite à la parution du [procédé de publication numérique basé sur Git et Middleman](http://blogs.getty.edu/iris/an-editors-view-of-digital-publishing/) d'un éditeur, [Antoine Fauchié](https://www.quaternum.net/) est allé poser quelques questions à [Eric Gardner](http://egardner.github.io/), développeur et designer, actuellement en charge de la modernisation de la chaîne de publication chez [The Getty](https://getty.edu/), un campus culturel et de recherche situé à Los Angeles.
+Suite à la parution du [procédé de publication numérique basé sur Git et Middleman](http://blogs.getty.edu/iris/an-editors-view-of-digital-publishing/) d'un éditeur, [Antoine Fauchié](https://www.quaternum.net/) est allé poser quelques questions à [Eric Gardner](http://egardner.github.io/), développeur et designer au sein de l'équipe d'édition numérique de [The Getty](https://getty.edu/), un campus culturel et de recherche situé à Los Angeles.
 
 ![Digital Publishing at the Getty]({{ page.image }})
 
