@@ -20,7 +20,7 @@ Si un fichier commence par une entête [YAML FrontMatter](https://jekyllrb.com/d
 1. **Parsing du modèle**: Le résultat de cette conversion est alors transmis dans la variable {% raw %}`{{content}}`{% endraw %}, soit au modèle de page par défaut, soit à celui qui est spécifié dans l'entête YAML FrontMatter.
 1. Le résultat de cette dernière conversion du modèle de page, généralement un fichier HTML, est écrit dans votre répertoire de destination.
 
-J'aimerais maintenant vous montrer un exemple où Jekyll applique cette transformation. Ensuite, lors d'un [test complet](#test-d-une-generation-complete) de génération de site, nous irons étudier la structure générale de l'algorithme au [cœur de Jekyll](#au-cœur-de-jekyll) pour voir quels traitements sont effectués sur les différents types de fichiers.
+J'aimerais maintenant vous montrer un exemple où Jekyll applique cette transformation. Ensuite, lors d'un [test complet](#test-exhaustif-dune-génération) de génération de site, nous irons étudier la structure générale de l'algorithme au [cœur de Jekyll](#le-cœur-de-jekyll) pour voir quels traitements sont effectués sur les différents types de fichiers.
 
 ## La transformation de Jekyll
 
@@ -736,7 +736,7 @@ _site
 
 Le meilleur endroit pour continuer à apprendre est d'aller voir [la structure des répertoires de Jekyll](https://jekyllrb.com/docs/structure/), où vous pourrez trouver des descriptions plus détaillées des types de fichiers dans ces répertoires.
 
-## Debugging
+## Déboguer Jekyll {#debug}
 
 Sous Mac OS X, avec `rbenv`, en ligne de commande l'exécutable de Jekyll est un script situé dans une Gem Ruby qui appelle `~/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/jekyll-3.3.1`[^3] où nous pouvons commencer à  débugguer à l'aide de `pry-byebug` si nous ajoutons deux lignes (la 8 et la 10 dans l'extrait ci-dessous) :
 
