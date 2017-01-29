@@ -26,8 +26,8 @@ $small:                   $base-em / $ms1;
 $normal:                  $base-em * $ms0;
 $big:                     $base-em * $ms1;
 $bigger:                  $base-em * $ms2;
-$title2:                  $base-em * $ms3;
-$title1:                  $base-em * $ms4;
+$title2:                  $base-em * $ms1;
+$title1:                  $base-em * $ms3;
 
 $line-height-base:        $base * $ms2;
 $line-height-computed:    floor(($base-em * $line-height-base));

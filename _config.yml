@@ -42,6 +42,7 @@ kramdown:
   hard_wrap: false
 sass:
   style: compressed
+livereload: true
 exclude:
 - ".editorconfig"
 - ".gitignore"

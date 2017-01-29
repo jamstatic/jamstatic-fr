@@ -7,6 +7,7 @@ group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jekyll-gist"
   gem "jekyll-github-metadata"
+  gem "jekyll-livereload"
   gem "jekyll-mentions"
   gem "jekyll-paginate"
   gem "jekyll-seo-tag"
