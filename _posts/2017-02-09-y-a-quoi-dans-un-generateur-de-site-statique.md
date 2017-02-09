@@ -6,7 +6,7 @@ author: frank
 image: https://cdn.css-tricks.com/wp-content/uploads/2017/02/terraform-1.jpg
 ---
 
-Toujours dans l'idée de continuer à nous familiariser avec les générateurs de site statique, voici la traduction d'un [article de Brian Rinaldi paru chez CSS-tricks](https://css-tricks.com/really-makes-static-site-generator/), qui nous entraîne dans les entrailles de [Harp](https://harpjs.com/), un générateur de fichiers statiques développé en Javascript, qui illustre bien ce que peut faire ce type d'outil.
+Après être aller regarder [sous le capot de Jekyll]({% post_url 2017-01-17-comment-fonctionne-jekyll %}) et toujours dans l'idée de continuer à nous familiariser avec différents générateurs de site statique, voici la traduction d'un [article de Brian Rinaldi paru chez CSS-tricks](https://css-tricks.com/really-makes-static-site-generator/), qui nous entraîne cette fois-ci dans les entrailles de [Harp](https://harpjs.com/), un générateur de fichiers statiques développé en JavaScript, qui résume bien le périmètre fonctionnel de ces outils.
 
 ----
 
