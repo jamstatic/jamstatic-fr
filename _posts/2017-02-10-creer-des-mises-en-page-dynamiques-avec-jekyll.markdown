@@ -3,14 +3,14 @@ title: Créer des mises en page dynamiques avec Jekyll
 date: 2017-02-10 22:33:24 +01:00
 description: ''
 author: frank
-image: 
+image: https://cdn-images-1.medium.com/max/400/1*rS4n3wyRac82CtdSpi3Mpg.jpeg
 ---
 
 _Dans [son article publié sur Medium](https://medium.com/tmw-interactive/creating-dynamic-layouts-with-jekyll-3bbb7fc57d1f#.iac16fjec), Zander Martineau partage les secrets de fabrication du portfolio client de son agence. Zander a du faire preuve d'ingéniosité et de créativité afin de pouvoir varier les mises en pages des différentes études de cas à l'aide de Jekyll._
 
 > Voici comment nous avons tiré profit du YAML front-matter pour pouvoir effectuer de nombreux changements au sein d'un même modèle pour différents articles sur le nouveau site de notre agence.
 
-{% include figure.html url="https://cdn-images-1.medium.com/max/2000/1*rS4n3wyRac82CtdSpi3Mpg.jpeg" description="Extrait de la <a href=\"http://www.tmwunlimited.com/work/canon-unleashprint/\">campagne Canon #unleashprint</a>" %}
+{% include figure.html url="https://cdn-images-1.medium.com/max/800/1*rS4n3wyRac82CtdSpi3Mpg.jpeg" description="Extrait de la <a href=\"http://www.tmwunlimited.com/work/canon-unleashprint/\">campagne Canon #unleashprint</a>" %}
 
 Les sites web crées avec [Jekyll](http://jekyllrb.com/) sont généralement simples et leurs mises en page prévisible. J'aimerais vous montrer comme j'ai crée une mise en page pseudo-dynamique pour des études de cas sur [le nouveau site de TMW](http://www.tmwunlimited.com), en utilisant du YAML front-matter et un peu de magie[^1]…
 
@@ -61,13 +61,13 @@ Les couleurs primaires, secondaires ainsi que celles du textes sont définies da
 
 Grâce à tout cela, nous avons pu ajouter pas mal de personnalisation à notre nouveau site web, ci-dessous une sélection d' études de cas :
 
-{% include figure.html url="https://cdn-images-1.medium.com/max/500/1*UVZ-0lHLA702VVWUGAAmTA.png" description="" %}
+{% include figure.html url="https://cdn-images-1.medium.com/max/800/1*UVZ-0lHLA702VVWUGAAmTA.png" description="" %}
 
-{% include figure.html url="https://cdn-images-1.medium.com/max/1000/1*rmRNs1tb1D7vCOr_eRBO5Q.png" description="<a href=\"http://www.tmwunlimited.com/work/\">http://www.tmwunlimited.com/work/</a>" %}
+{% include figure.html url="https://cdn-images-1.medium.com/max/800/1*rmRNs1tb1D7vCOr_eRBO5Q.png" description="<a href=\"http://www.tmwunlimited.com/work/\">http://www.tmwunlimited.com/work/</a>" %}
 
-{% include figure.html url="https://cdn-images-1.medium.com/max/1000/1*Q8RQduFxoRUMSJauZ0ED-Q.png" description="" %}
+{% include figure.html url="https://cdn-images-1.medium.com/max/800/1*Q8RQduFxoRUMSJauZ0ED-Q.png" description="" %}
 
-{% include figure.html url="https://cdn-images-1.medium.com/max/500/1*M5f4_au8Xo05A8CyRRdmYQ.png" description="" %}
+{% include figure.html url="https://cdn-images-1.medium.com/max/800/1*M5f4_au8Xo05A8CyRRdmYQ.png" description="" %}
 
 ### 👋
 
