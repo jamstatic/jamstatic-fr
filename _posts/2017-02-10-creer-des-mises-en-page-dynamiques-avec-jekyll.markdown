@@ -1,9 +1,9 @@
 ---
-title: "Créer des mises en page dynamiques avec Jekyll"
-date: "2017-02-10 22:33:24 +0100"
-description: ""
+title: Créer des mises en page dynamiques avec Jekyll
+date: 2017-02-10 22:33:24 +01:00
+description: ''
 author: frank
-image:
+image: 
 ---
 
 _Dans [son article publié sur Medium](https://medium.com/tmw-interactive/creating-dynamic-layouts-with-jekyll-3bbb7fc57d1f#.iac16fjec), Zander Martineau partage les secrets de fabrication du portfolio client de son agence. Zander a du faire preuve d'ingéniosité et de créativité afin de pouvoir varier les mises en pages des différentes études de cas à l'aide de Jekyll._
