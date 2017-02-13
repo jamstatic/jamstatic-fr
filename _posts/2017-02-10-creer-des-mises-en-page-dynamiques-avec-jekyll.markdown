@@ -34,7 +34,7 @@ Extrait de [l'étude de cas Canon. Unleashing Print.](http://www.tmwunlimited.co
 
 La boucle en question a été ajoutée dans le modèle `work` du dossier `_layouts`. Ça a l'air un peu timbré - et ça l'est - mais s'il vous plaît, restez avec moi. La façon intrinsèque dont Jekyll compile les fichiers fait que j'ai du listé toutes les propriétés possibles pour chaque module utilisé dans le YAML.
 
-La boucle parcourt le tableau `partials` et utilise la proriété `name` pour inclure un module _différent_, comme ceci: `include {{item.name}}.html`. Ceux-ci ont ensuite été transmis au module inclus en utilisant les paramètres suivants de la balise `include` . Even if the property was not needed in that module, it still needed to be passed down.
+La boucle parcourt le tableau `partials` et utilise la proriété `name` pour inclure un module _différent_, comme ceci: `include {{item.name}}.html`. Ceux-ci ont ensuite été transmis au module inclus en utilisant les paramètres suivants de la balise `include` . Mme si la propriété n'était pas nécessaire dans ce module, elle devait néanmoins être transmise.
 
 {% gist e0ad7ae56552c9571e285e30e3469476 %}
 
