@@ -2,7 +2,8 @@
 title: Passez en mode hors-connexion avec un Service Worker et Hugo !
 date: 2017-03-11 17:04:01 +01:00
 layout: post
-description: Améliorer le temps de chargement et permettez aux visiteurs de votre site statique de consulter les contenus en mode hors-connexion.
+description: Améliorer le temps de chargement et permettez aux visiteurs de votre
+  site statique de consulter les contenus en mode hors-connexion.
 author: frank
 image: assets/images/service-worker.png
 ---
