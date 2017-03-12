@@ -2,19 +2,17 @@
 title: Passez en mode hors-connexion avec un Service Worker et Hugo !
 date: 2017-03-11 17:04:01 +01:00
 layout: post
-description: 'Permettez aux visiteurs de consulter votre site statique en mode hors-connexion
-  à l''aide d''un Service Worker
-
-'
+description: "Permettez aux visiteurs de consulter votre site statique en mode hors-connexion
+  à l'aide d'un Service Worker"
 author: frank
 image: assets/images/service-worker.png
 ---
 
-La majorité des articles publiés jusqu'ici se référaient à Jekyll, cette fois place à [Hugo](http://gohugo.io/). Hugo est un générateur de site statique populaire très performant, plus encore si vous lui adjoignez les services d'un Service Worker pour gérer le mode déconnecté de votre site web comme nous allons le voir dans cet article. Les explications fournies ici sont valables et facilement adpatables pour tout autre générateur statique.
+La majorité des articles publiés jusqu'ici se référaient à Jekyll, cette fois place à [Hugo](http://gohugo.io/). Hugo est un générateur de site statique populaire très performant et beaucoup plus performant pour vos visiteurs si vous lui adjoignez les services d'un Service Worker pour gérer le mode déconnecté de votre site web. Notez que les explications fournies ici sont valables et facilement adaptables pour tout autre générateur statique.
 
 ---
 
-_Article original paru sur [https://gohugohq.com/howto/go-offline-with-service-worker/](https://gohugohq.com/howto/go-offline-with-service-worker/)_
+_Article original publié sur [https://gohugohq.com/howto/go-offline-with-service-worker/](https://gohugohq.com/howto/go-offline-with-service-worker/)_
 
 Après le _mobile first_, place maintenant au _offline first_ et [_aux progressive web apps (PWA)_](https://frank.taillandier.me/2016/06/28/que-sont-les-progressive-web-apps/) tous deux très tendances en ce moment. Les Service Workers jouent un rôle majeur dans tous les cas de figure. Un Service Worker en gros c'est un script qui va jouer le rôle d'un proxy entre le navigateur web et le réseau Internet. Vous trouverez dans cet article un exemple simple qui vous permettra d'installer un Service Worker sur un site statique généré avec [Hugo](http://gohugo.io/) afin de le rendre ultra-performant.
 
@@ -82,7 +80,7 @@ Mais déjà grâce à notre exemple, nous avons généré une page `offline/inde
 
 ### Créer une page 404 personnalisée
 
-Si votre projet ne possède pas encore de page 404 personnalisée, vous pouvez vous référer à [la documentation d'Hugo pour créer une page 404](https://gohugo.io/templates/404/) ou vous contenter de suivres les quelques instructions de base ci-dessous :
+Si votre projet ne possède pas encore de page 404 personnalisée, vous pouvez vous référer à [la documentation d'Hugo pour créer une page 404](https://gohugo.io/templates/404/) ou vous contenter de suivre les quelques instructions de base ci-dessous :
 
 Pour cela, vous aurez besoin des fichiers suivants :
 
@@ -121,7 +119,7 @@ Le fichier **layouts/404.html** :
 
 ### Créer les icônes de l'application Web
 
-Les icônes des applications sont juste des favicons qu'on affiche sur un écran de démarrage au chargement du site depuis l'écran d'accueil
+Les icônes des applications sont juste des favicons qu'on affiche sur un écran de démarrage au chargement du site depuis l'écran d'accueil.
 
 Les tailles suivantes sont recommandées :
 
@@ -131,7 +129,7 @@ Les tailles suivantes sont recommandées :
 -   192px × 192px
 -   256px × 256px
 
-Pour les générer rapidement, vous pouvez utiliser un générateur comme
+Pour les générer rapidement, vous pouvez utiliser un service comme
 [favicomatic.com](http://www.favicomatic.com/).
 
 Ensuite placez les fichiers PNG dans votre dossier `/static` folder.
@@ -139,7 +137,7 @@ Par exemple :
 
 ```sh
 ├── static
-│   ├── appicons
+│   ├── favicons
 │   │   ├── icon-128x128.png
 │   │   ├── icon-144x144.png
 │   │   ├── icon-152x152.png
@@ -153,14 +151,14 @@ Le vrai travail commence maintenant avec la création et la configuration du fic
 
 Nous allons utiliser pour cela un [exemple de fichier manifest](https://github.com/wildhaber/offline-first-sw/blob/master/manifest.json) existant tiré du dépôt `offline-first-sw`.
 
-Placez ce fichier également dans le dossier `static/`, il doit obligatoirement se trouver à la raçine comme ceci :
+Placez ce fichier également dans le dossier `static/`, il doit obligatoirement se trouver à la racine comme ceci :
 
 ```sh
 ├── static
 │   ├── manifest.json
 ```
 
-Vous pouvez recopier ce fichier à la main ou utiliser la commande suivante si vous travaillez dans un environnemnt GNU Linux ou MacOS :
+Vous pouvez recopier ce fichier à la main ou utiliser la commande suivante si vous travaillez dans un environnement GNU Linux ou MacOS :
 
 ```sh
 # à partir du dossier raçine de Hugo
@@ -168,7 +166,7 @@ cd static
 wget https://raw.githubusercontent.com/wildhaber/offline-first-sw/master/manifest.js
 ```
 
-Vous devriez maintenant avoir un fichier qui ressemble à ça dans votre dossier `static` :
+Vous devriez maintenant avoir un fichier qui ressemble à cela dans votre dossier `static` :
 
 ```json
 {
@@ -232,7 +230,7 @@ cd static
 wget https://raw.githubusercontent.com/wildhaber/offline-first-sw/master/sw.js
 ```
 
-Vous devez vous retrouver avec le fichier suivant à la raçine :
+Vous devez vous retrouver avec le fichier suivant à la racine :
 
 ```js
 const CACHE_VERSION = 1;
@@ -267,7 +265,7 @@ const CACHE_VERSIONS = {
   notFound: '404-v' + CACHE_VERSION,
 };
 
-// Define MAX_TTL's in SECONDS for specific file extensions
+// Durée de mise en cache en SECONDES en fonction des différentes extensions
 const MAX_TTL = {
   '/': 3600,
   html: 3600,
@@ -278,7 +276,7 @@ const MAX_TTL = {
 
 const CACHE_BLACKLIST = [
   //(str) => {
-  //    return !str.startsWith('http://localhost') && !str.startsWith('https://gohugohq.com');
+  //    return !str.startsWith('http://localhost') && !str.startsWith('https://jamstatic.fr');
   //},
 ];
 
@@ -425,7 +423,7 @@ self.addEventListener(
   }
 );
 
-// The activate handler takes care of cleaning up old caches.
+// La méthode activate est chargée de supprimer les vieux caches
 self.addEventListener(
   'activate', event => {
     event.waitUntil(
@@ -567,7 +565,7 @@ self.addEventListener(
 );
 ```
 
-Maintenant vous pouvez définir le comportement souhaité de votre Service Worker :
+Maintenant vous pouvez définir le comportement souhaité pour votre Service Worker :
 
 #### Fichiers à mettre en cache par défaut
 
@@ -580,7 +578,8 @@ const BASE_CACHE_FILES = [
     '/favicon.png',
 ];
 ```
-Ajoutez dans ce tableau tous les fichiers qui devraient être mis en cache par défaut
+
+Listez dans ce tableau tous les fichiers qui devraient être mis en cache par défaut
 
 #### Fichiers en mode hors-connexion
 
@@ -592,7 +591,7 @@ const OFFLINE_CACHE_FILES = [
 ];
 ```
 
-Dans ce tableau, listez les fichiers nécessaires pour l'affichage de votre page `offline`
+Listez dans ce tableau les fichiers nécessaires pour l'affichage de votre page `offline`.
 
 #### Fichiers en cas d'erreur 4xx
 
@@ -603,6 +602,7 @@ const NOT_FOUND_CACHE_FILES = [
     '/404.html',
 ];
 ```
+
 Listez dans ce tableau les fichiers nécessaires pour l'affichage de votre page d'erreur 404.
 
 #### Page hors-connexion
@@ -634,7 +634,7 @@ const MAX_TTL = {
 ```
 Ce tableau clé-valeur indique pour chaque type d'extension de fichier la durée maximum de mise en cache appelée _Time To Live_ (définit **en secondes** et pas en millisecondes). C'est le temps qui s'écoulera avant qu'un fichier ne soit mis à jour à partir du réseau.
 
-Les extensions non présentes resteront en cache jusqu'à la prochaine la mise à jour du Service Worker.
+Les extensions non présentes resteront en cache jusqu'à la prochaine la mise à jour du cache par le Service Worker.
 
 ```js
 // 60 = 1 minute
@@ -685,10 +685,10 @@ Ce code JS va enregistrer, installer et activer votre Service Worker.
 
 Vous en avez à présent terminé avec toutes les étapes nécessaires. Vous disposez maintenant d'un site Hugo ultra-rapide. :)
 
-### Deboguer votre Service Worker
+### Débogguer votre Service Worker
 
-Pour déboguer un Service Worker avec Google Chrome, il vou suffit d'ouvrir la console et d'aller dans l'onglet `Application`. C'est là que vous trouverez votre Service Worker et vos caches.
+Pour débogguer un Service Worker avec Google Chrome, il vous suffit d'ouvrir la console et d'aller dans l'onglet `Application`. C'est là que vous trouverez votre Service Worker et vos caches.
 
-Vous en apprendrez davantage sur le [débogage de Service Workers](https://developers.google.com/web/fundamentals/getting-started/codelabs/debugging-service-workers/) sur le site pour les développeurs de Google.
+Vous en apprendrez davantage sur le [déboggage de Service Workers](https://developers.google.com/web/fundamentals/getting-started/codelabs/debugging-service-workers/) sur le site pour les développeurs de Google.
 
-Si votre navigateur préféré est Firefox vous en saurez plus sur [le débogage des Service Workers et Push à l'aide des outils de développement pour Firefox](https://hacks.mozilla.org/2016/03/debugging-service-workers-and-push-with-firefox-devtools/) sur hacks.mozilla.org.
+Si votre navigateur préféré est Firefox vous en saurez plus sur [le déboggage des Service Workers et Push à l'aide des outils de développement pour Firefox](https://hacks.mozilla.org/2016/03/debugging-service-workers-and-push-with-firefox-devtools/) sur hacks.mozilla.org.
