@@ -1,5 +1,5 @@
 ---
-title: Qui y'a t-il dans un générateur de site statique ?
+title: Qui y'a t-il dans un générateur de site statique&nbsp;?
 date: 2017-02-09 15:21:52 +01:00
 layout: post
 author: frank
