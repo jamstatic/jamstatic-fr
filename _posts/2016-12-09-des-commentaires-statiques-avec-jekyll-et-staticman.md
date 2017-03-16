@@ -8,8 +8,7 @@ image: https://mademistakes.com/assets/images/improving-jekyll-static-comments-f
 ---
 
 [Michael Rose](https://github.com/mmistakes), l'auteur du [thème Jekyll Minimal Mistakes](https://mademistakes.com/work/minimal-mistakes-jekyll-theme/), revient sur les détails de l'implémentation de commentaires statiques - les commentaires sont versionnés au format YAML dans le dépôt GitHub - à l'aide de [Staticman](https://eduardoboucas.com/blog/2016/08/10/staticman.html), un service open-source développé par [Eduardo Bouças](https://eduardoboucas.com), qui permet d'insérer des contenus générés par les utilisateurs sur un site plus si statique que ça, proposant ainsi une alternative à Disqus au même titre que [Jekyll AWS comment](https://github.com/ummels/jekyll-aws-comments).
-
-*Article original publié sur [https://mademistakes.com/articles/improving-jekyll-static-comments/](https://mademistakes.com/articles/improving-jekyll-static-comments/)*
+{: .intro }
 
 ![Photo Gabriel Santiago]({{ page.image }} "Photo Gabriel Santiago - https://unsplash.com/@gabrielssantiago")
 
@@ -54,10 +53,10 @@ Je ne suis pas vraiment certain que l’opération suivante soit nécessaire. Je
 
 Quoi qu’il en soit, vous pouvez toujours partager votre expérience de la mise à jour de la version 1 à la version 2 de Staticman dans les commentaires de ce billet.
 
-1. Révoquez les droits de collaboration de Staticman `v1` dans les paramètres de votre dépôt GitHub.  
-![Supprimer staticmanapp en tant que collaborator](https://mademistakes.com/assets/images/staticman-remove-collaborator.png)  
-2. Ajoutez de nouveau Staticman en tant que  [collaborateur](https://mademistakes.com/articles/jekyll-static-comments/#setting-up-staticman).  
-3. Faites un appel sur ce endpoint de la version 2 de l’API `https://api.staticman.net/v2/connect/{votre nom d'utilisateur GitHub}/{nom de votre dépôt}` pour accepter l'invitation de collaboration.  
+1. Révoquez les droits de collaboration de Staticman `v1` dans les paramètres de votre dépôt GitHub.
+![Supprimer staticmanapp en tant que collaborator](https://mademistakes.com/assets/images/staticman-remove-collaborator.png)
+2. Ajoutez de nouveau Staticman en tant que  [collaborateur](https://mademistakes.com/articles/jekyll-static-comments/#setting-up-staticman).
+3. Faites un appel sur ce endpoint de la version 2 de l’API `https://api.staticman.net/v2/connect/{votre nom d'utilisateur GitHub}/{nom de votre dépôt}` pour accepter l'invitation de collaboration.
 
 
 ### Mettre à jour l'appel POST du formulaire de commentaires
@@ -522,3 +521,5 @@ Si tout est correctement configuré, l'utilisateur devrait recevoir un mail dès
 ---
 
 Voilà, vous avez mis en place un système de commentaires basé sur des fichiers statiques dans Jekyll et qui gère les commentaires imbriqués et les notifications de réponse. Maintenant j'aimerais gagner une minute de temps de génération pour pouvoir ajouter les nouveaux commentaires encore plus vite :frowning:.
+
+*Article original publié sur [https://mademistakes.com/articles/improving-jekyll-static-comments/](https://mademistakes.com/articles/improving-jekyll-static-comments/)*

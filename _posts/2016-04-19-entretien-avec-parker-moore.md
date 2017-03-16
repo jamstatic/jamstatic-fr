@@ -7,6 +7,7 @@ author: bertrand
 ---
 
 Nous vous proposons la traduction d'un entretien de Parker Moore, le mainteneur principal de Jekyll, avec Aaron Autrand, [publié le 11 mars 2016 sur le blog de la société Netlify](https://www.netlify.com/blog/2016/03/11/interview-with-parker-moore-from-jekyll).
+{: .intro }
 
 <img src="{{ page.image }}" alt="Parker Moore">
 

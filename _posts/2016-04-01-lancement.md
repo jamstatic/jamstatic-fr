@@ -6,6 +6,7 @@ author: bertrand
 ---
 
 C'est avec émotion que nous avons le plaisir de vous annoncer le lancement d'un site relayant les actualités de la communauté Jekyll en Français.
+{: .intro }
 
 ## Pourquoi ce site ?
 

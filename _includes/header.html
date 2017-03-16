@@ -2,13 +2,17 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ "" | relative_url }}/"><strong>JAM</strong>Static</a>
+    {% if page.url != site.url  %}
+      <a class="site-title" href="{{ "/" | relative_url }}">JAMstatic</a>
+    {% else %}
+      <span class="site-title">JAMstatic</span>
+    {% endif %}
 
     <nav class="site-nav">
       <div class="trigger">
         {% for my_page in site.pages %}
           {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title }}</a>
+            {{ my_page.title }}
           {% endif %}
         {% endfor %}
       </div>

@@ -1,14 +1,16 @@
 /* Variables */
 
-$base-font-family:        'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$base-font-family:        "Open Sans", sans-serif;
 $base-font-size:          16px;
-$small-font-size:         $base-font-size * 0.875;
+$small-font-size:         $base-font-size * 0.833;
 $base-font-weight:        400;
-$title-font-weight:       700;
+$title-font-family:       Roboto;
+$title-font-weight:       900;
+$title-letter-spacing:    0.021736em;
 $base-line-height:        1.5;
-$spacing-unit:            30px;
 
-$ratio:                   1.20;
+
+$ratio:                   1.2;
 $base:                    1;
 $base-em:                 $base * 1em;
 $base-px:                 $base * 16px;
@@ -22,6 +24,7 @@ $ms5:                     $ratio * $ms4; /* 2.488 */
 $ms6:                     $ratio * $ms5; /* 2.986 */
 $ms7:                     $ratio * $ms6; /* 3.583 */
 
+$smaller:                 $base-em / $ms2;
 $small:                   $base-em / $ms1;
 $normal:                  $base-em * $ms0;
 $big:                     $base-em * $ms1;
@@ -29,17 +32,18 @@ $bigger:                  $base-em * $ms2;
 $title2:                  $base-em * $ms3;
 $title1:                  $base-em * $ms4;
 
+$spacing-unit:            $base-font-size * $ms3;
 $line-height-base:        $base * $ms2;
-$line-height-computed:    floor(($base-em * $line-height-base));
+$line-height-computed:    $base-em * $line-height-base;
 $base-line:               $line-height-computed;
 
 
 // Width of the content area
-$content-width:    50rem;
+$content-width:    49.766rem;
 
 // Breakpoints
 $on-tablet:        48.063em;  /*768px */
-$on-desktop:       90.063em;  /*1441px*/
+$on-desktop:       85.996em;  /*1441px*/
 
 // Colors
 

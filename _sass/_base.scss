@@ -8,8 +8,6 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
-
 /**
  * Basic styling
  */
@@ -17,6 +15,7 @@ body {
     font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
     color: $text-color;
     background-color: $background-color;
+    -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
     -moz-font-feature-settings: "kern" 1;
@@ -35,14 +34,11 @@ body {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: $line-height-computed / 2;
 }
-
-
 
 /**
  * Images
@@ -52,20 +48,12 @@ img {
     vertical-align: middle;
 }
 
-
-
 /**
  * Figures
  */
 figure > img {
     display: block;
 }
-
-figcaption {
-    font-size: $small-font-size;
-}
-
-
 
 /**
  * Lists
@@ -81,27 +69,15 @@ li {
     }
 }
 
-
-
-/**
- * Headings
- */
+/* Headings */
 h1, h2, h3, h4, h5, h6 {
     font-weight: $title-font-weight;
 }
 
-
-
-/**
- * Links
- */
+/* Links */
 a {
     color: $brand-color;
     text-decoration: none;
-
-    &:visited {
-        color: darken($brand-color, 15%);
-    }
 
     &:hover {
         color: $text-color;
@@ -109,11 +85,7 @@ a {
     }
 }
 
-
-
-/**
- * Blockquotes
- */
+/* Blockquotes */
 blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
@@ -127,14 +99,12 @@ blockquote {
     }
 }
 
-
-
 /**
  * Code formatting
  */
 pre,
 code {
-    font-size: $base-em * 0.9;
+    font-size: $small;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     background-color: #eef;
@@ -163,10 +133,9 @@ pre {
 .wrapper {
     margin-right: auto;
     margin-left: auto;
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} / 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} / 2));
-    padding-right: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+    max-width: calc(#{$content-width} - (#{$spacing-unit} / 2));
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
     @extend %clearfix;
 
     @include media-query($on-desktop) {

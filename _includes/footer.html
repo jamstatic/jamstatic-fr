@@ -3,15 +3,12 @@
     <div class="wrapper">
 
         <div class="footer-col-wrapper">
-            <div class="footer-col footer-col-1">
-                <ul class="contact-list">
-                    <li>{{ site.title }}</li>
-                    <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-                </ul>
-            </div>
 
-            <div class="footer-col footer-col-2">
+            <div class="footer-col footer-col-1">
                 <ul class="social-media-list">
+                    <li>
+                      <span class="icon icon--rss">{% include icon-rss.svg %}</span> <a href="{{ "/feed.xml" | relative_url }}">S‘abonner via RSS</a>
+                    </li>
                     {% if site.github.username %}
                     <li>
                         {% include icon-slack.html username=site.github.username %}
@@ -28,8 +25,8 @@
                 </ul>
             </div>
 
-            <div class="footer-col footer-col-3">
-                <p>{{ site.description }}</p>
+            <div class="footer-col footer-col-2">
+                <p><small>Contenus sous Licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">CC BY-NC-SA 4.0</a></small></p>
             </div>
         </div>
 

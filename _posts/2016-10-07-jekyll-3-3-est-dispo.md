@@ -8,7 +8,8 @@ image: https://avatars3.githubusercontent.com/u/3083652?v=3&amp;s=200
 ---
 
 Plein de nouveautés pour vous simplifier la vie dans la version 3.3 de Jekyll.
-On retiendra trois fonctionnalités à tester en priorité :
+On retiendra trois fonctionnalités à tester en priorite.
+{: .intro }
 
 ## Les themes peuvent désormais fournir des assets statiques et dynamiques dans le dossier `/assets`
 

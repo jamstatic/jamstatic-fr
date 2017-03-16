@@ -8,6 +8,7 @@ image: https://cdn-images-1.medium.com/max/800/1*5SbG467XN7stvnPDPyUR1g.png
 ---
 
 [The Design Portfolio Workflow](https://medium.com/@katfukui/the-design-portfolio-workflow-a94030d0b39e#.uut2a0ulw) de @katmeister, s'adresse aux webdesigners curieux de se frotter un peu à la ligne de commande et à Jekyll. Nous espérons qu'il vous permettra de faire vos premiers pas avec Jekyll, d'apprécier la liberté et la souplesse qu'il procure et qui sait de pouvoir ensuite [développer des thèmes pour Jekyll](/2016/10/29/creer-un-theme-pour-jekyll/). 😊
+{: .intro }
 
 ## Un guide complet pour coder et déployer un site, tout en ligne de commande.
 

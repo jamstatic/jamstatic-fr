@@ -6,7 +6,9 @@ author: frank
 image: https://cdn-images-1.medium.com/max/400/1*rS4n3wyRac82CtdSpi3Mpg.jpeg
 ---
 
-_Dans [son article publié sur Medium](https://medium.com/tmw-interactive/creating-dynamic-layouts-with-jekyll-3bbb7fc57d1f#.iac16fjec), Zander Martineau partage les secrets de fabrication du portfolio client de son agence. Zander a du faire preuve d'ingéniosité et de créativité afin de pouvoir varier les mises en pages des différentes études de cas à l'aide de Jekyll._
+Dans [son article publié sur Medium](https://medium.com/tmw-interactive/creating-dynamic-layouts-with-jekyll-3bbb7fc57d1f#.iac16fjec), Zander Martineau partage les secrets de fabrication du portfolio client de son agence. Zander a du faire preuve d'ingéniosité et de créativité afin de pouvoir varier les mises en pages des différentes études de cas à l'aide de Jekyll.
+{: .intro }
+
 
 > Voici comment nous avons tiré profit du YAML front-matter pour pouvoir effectuer de nombreux changements au sein d'un même modèle pour différents articles sur le nouveau site de notre agence.
 

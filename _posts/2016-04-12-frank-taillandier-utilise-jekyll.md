@@ -7,6 +7,7 @@ author: bertrand
 ---
 
 Cet article est le premier d’une série qui présente des utilisateurs de Jekyll, nous commençons avec Frank Taillandier, contributeur à Jamstatic. Si vous souhaitez vous aussi répondre à ces questions, merci de [soumettre une pull request sur Github](https://github.com/{{ site.repository }}/pulls).
+{: .intro }
 
 **Bonjour, pourrais-tu te présenter ?**
 
