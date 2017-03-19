@@ -9,7 +9,7 @@ image: https://builtvisible.com/wp-content/uploads/2017/03/Go_Static.jpg
 Adopter une stack de développement Web moderne pour pouvoir générer des sites statiques présente bien des avantages et Tom Bennet en a listé cinq des principaux. Si vous n'aviez encore jamais entendu parlé de la JAMstack, cet article donne un aperçu global du processus et de l'écosystème actuel ainsi que des gains engendrés. Vous trouverez également des lectures pour approfondir votre connaissance sur le sujet.
 {: .intro}
 
-Que ce soit pour un mettre en place blog, configurer un site de e-commerce ou développer une single page application en JavaScript, le temps où on se rabattait par défaut sur Wordpress pour tout ou presque est révolu. Les générateurs de site statique et les réseaux de CDN ultra-rapides propulsent une nouvelle génération de sites Web et c'est le bon moment pour embrasser le mouvement.
+Que ce soit pour un mettre en place un blog, configurer un site de e-commerce ou développer une single page application en JavaScript, le temps où on se rabattait par défaut sur Wordpress pour tout ou presque est révolu. Les générateurs de site statique et les réseaux de CDN ultra-rapides propulsent une nouvelle génération de sites Web et c'est le bon moment pour embrasser le mouvement.
 
 Avant d'expliquer plus en détail _pourquoi_, commençons déjà par regarder de _quoi_ on parle.
 
