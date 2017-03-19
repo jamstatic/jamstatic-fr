@@ -1,5 +1,5 @@
 ---
-title: "Passer au statique&nbsp;: 5&nbsp;raisons pour tester la JAMstack sur votre prochain projet"
+title: "Passer au statique&nbsp;: 5&nbsp;raisons de tester la JAMstack sur votre prochain projet"
 date: 2017-03-16 20:04:01 +01:00
 layout: post
 description: Référencement, performance, sécurité, automatisation, communauté grandissante, les raisons de passer au statique ne manquent pas.
