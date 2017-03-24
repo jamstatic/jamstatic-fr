@@ -1,10 +1,10 @@
 ---
-title: Comment marche Jekyll&nbsp;?
-date: 2017-01-17 17:53:42 +01:00
+title: Comment marche Jekyll ?
+date: 2017-01-17 17:53:00 +01:00
+image: assets/images/jekyll-rendering-rules.png
 description: À partir du code source, nous pouvons mieux comprendre le process de
   génération au cœur de Jekyll.
 author: frank
-image: assets/images/jekyll-rendering-rules.png
 ---
 
 Si vous suivez ce blog, vous savez déjà que Jekyll est un générateur de site statique développé en Ruby. Jack Phelan a décidé d'aller jeter un œil dans le moteur de Jekyll histoire de mieux comprendre comment sont traités les différents types de fichiers qui sont passés en entrée. Nous traduisons [son article](https://www.bytesandwich.com/jekyll/software/blogging/2016/09/14/how-does-jekyll-work.html) afin de vous inciter à plonger un peu dans le code de Jekyll et prendre connaissance des concepts fondamentaux de ce générateur. Nous espérons que cela vous permettra de mieux appréhender la philosophie de Jekyll ou que cela vous sera utile si vous songez à développer un plugin.
@@ -289,7 +289,7 @@ def process
   # d'où ils se trouvent, ce qu'ils contiennent et de votre fichier de configuration.
   generate # Vous donne la chance de lancer des générateurs pour ajouter plus de choses au site..
   render # c'est la méthode chargée de la conversion.
-  cleanup # se débarasse de tous les fichiers qui auraient pu restés d'une génération précédente ou qui traitentn des metadonnées.
+  cleanup # se débarasse de tous les fichiers qui auraient pu restés d'une génération précédente ou qui traitent des metadonnées.
   write # écrit les fichiers dans votre dossier de destination.
   print_stats
 end
