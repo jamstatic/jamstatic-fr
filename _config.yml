@@ -15,6 +15,7 @@ defaults:
   values:
     layout: post
     comments: true
+    author: Frank Taillandier
     image: "/assets/images/logo-2x.png"
 email: contact@jamstatic.fr
 description: Communauté francophone des utilisateurs de générateurs de site statique

@@ -6,7 +6,6 @@ description: Smashing fait désormais partie de la renaissance du web moderne. S
   que leur site pouvait aller six fois plus vite en tirant parti d'un CDN global,
   Smashing a opté pour la JAMstack et s'est adjoint les services de Netlify pour les
   aider à migrer.
-author: frank
 image: assets/images/caching-issues.jpg
 ---
 
