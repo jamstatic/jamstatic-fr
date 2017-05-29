@@ -6,14 +6,14 @@ description: >-
 image: /assets/images/netlify-cms/netlify-cms.png
 ---
 
-Les outils de gestion de contenus connectés aux générateurs de site statique continuent d’évoluer. Lors de [la refonte de de Smashing Magazine]({% post_url 2017-03-17-smashing-mag-va-dix-fois-plus-vite %}), Netlify la startup basée à San Francisco spécialisée dans l’hébergement et le déploiement de sites statiques a développé un [CMS headless](https://www.netlifycms.org/) pour faciliter la contribution des rédacteurs. Ce [CMS open-source](https://www.netlify.com/blog/2017/03/17/an-open-source-cms-with-a-git-centric-workflow/) est simple à configurer, cela ne vous prendra que quelques minutes. Dans cet article, nous utiliserons [Jekyll](https://jekyllrb.com/), le générateur le plus populaire, sachez que le principe est similaire pour [Hugo](https://gohugo.io/) ou d’autres générateurs.
+Les outils de gestion de contenus connectés aux générateurs de site statique continuent d’évoluer. Lors de [la refonte de Smashing Magazine]({% post_url 2017-03-17-smashing-mag-va-dix-fois-plus-vite %}), Netlify la startup basée à San Francisco spécialisée dans l’hébergement et le déploiement de sites statiques a développé un [CMS headless](https://www.netlifycms.org/) pour faciliter la contribution des rédacteurs. Ce [CMS open source](https://www.netlify.com/blog/2017/03/17/an-open-source-cms-with-a-git-centric-workflow/) est simple à configurer, cela ne vous prendra que quelques minutes. Dans cet article, nous utiliserons [Jekyll](https://jekyllrb.com/), le générateur le plus populaire, sachez que le principe est similaire pour [Hugo](https://gohugo.io/) ou d’autres générateurs.
 {: .intro }
 
 Nous partirons du principe que vous avez une installation de Jekyll déjà fonctionnelle, dans le cas contraire, reportez vous à la [documentation officielle](https://jekyllrb.com/docs/installation/). Nous présupposons également que vous versionnez votre projet avec Git et vous poussez votre code sur [GitHub](github.com), [GitLab](https://gitlab.com) ou [BitBucket](https://bitbucket.org/).
 
 ## Configurer Netlify
 
-La première étape est de [se connecter chez Netlify](https://app.netlify.com/signup) afin de pouvoir relier votre dépôt Git à ce service d'hébergement et de déploiement continu. C'est **gratuit** et si vous travaillez sur un [projet open-source](https://www.netlify.com/open-source/), vous pouvez utiliser la formule pro.
+La première étape est de [se connecter chez Netlify](https://app.netlify.com/signup) afin de pouvoir relier votre dépôt Git à ce service d'hébergement et de déploiement continu. C'est **gratuit** et si vous travaillez sur un [projet open source](https://www.netlify.com/open-source/), vous pouvez utiliser la formule pro.
 
 {% include figure.html url="/assets/images/netlify-cms/new-site-netlify.png" description="Ajout de site, étape 2 : choix du dépôt" %}
 
@@ -69,7 +69,7 @@ Netlify est en train de travailler sur son [Styleguide](https://styleguide.netli
 
 {% include figure.html url="/assets/images/netlify-cms/netlify-cms.png" description="La liste des articles dans Netlify CMS" %}
 
-Dans notre exemple, nous avons un site Jekyll tout ce qu'il a de plus simple, avec la collection par défaut, celle des posts (renommés Articles dans notre interface via le fichier de configuration). Si vous avez défini d'autres collections dfans votre fichier de configuration, vous pourrez également les gérer depuis le CMS.
+Dans notre exemple, nous avons un site Jekyll tout ce qu'il y a de plus simple, avec la collection par défaut, celle des posts (renommés Articles dans notre interface via le fichier de configuration). Si vous avez défini d'autres collections dfans votre fichier de configuration, vous pourrez également les gérer depuis le CMS.
 
 Si vous souhaitez donner l'accès à plusieurs collaborateurs, rendez vous sur [app.netlify.com](https://app.netlify.com/) dans l'onglet access de votre site et ajoutez autant de collaborateurs que vous le souhaitez.
 
@@ -91,4 +91,4 @@ Il est important de noter que le fait d'ajouter ce type de CMS en parallèle de 
 
 Nous sommes convaincus que ce type de workflow va continuer de se répandre de plus en plus dans les équipes, pas seulement avec Netlify CMS mais avec toutes les solutions de CMS headless qui sont désormais disponibles.
 
-La solution présentée ici a l'avantage d'être totalement open-source, gageons que le projet gagnera en maturité avec l'aide de la communauté, c'est tout le mal qu'on lui souhaite.
+La solution présentée ici a l'avantage d'être totalement open source, gageons que le projet gagnera en maturité avec l'aide de la communauté, c'est tout le mal qu'on lui souhaite.
