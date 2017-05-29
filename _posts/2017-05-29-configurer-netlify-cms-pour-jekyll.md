@@ -69,13 +69,13 @@ Netlify est en train de travailler sur son [Styleguide](https://styleguide.netli
 
 {% include figure.html url="/assets/images/netlify-cms/netlify-cms.png" description="La liste des articles dans Netlify CMS" %}
 
-Dans notre exemple, nous avons un site Jekyll tout ce qu'il y a de plus simple, avec la collection par défaut, celle des posts (renommés Articles dans notre interface via le fichier de configuration). Si vous avez défini d'autres collections dfans votre fichier de configuration, vous pourrez également les gérer depuis le CMS.
+Dans notre exemple, nous avons un site Jekyll tout ce qu'il y a de plus simple, avec la collection par défaut, celle des posts (renommés Articles dans notre interface via le fichier de configuration). Si vous avez défini d'autres collections dans votre fichier de configuration, vous pourrez également les gérer depuis le CMS.
 
 Si vous souhaitez donner l'accès à plusieurs collaborateurs, rendez vous sur [app.netlify.com](https://app.netlify.com/) dans l'onglet access de votre site et ajoutez autant de collaborateurs que vous le souhaitez.
 
 {% include figure.html url="/assets/images/netlify-cms/access-netlify.png" description="Configuration de l'accès au site Netlify" %}
 
-## Conclusion
+## Et voilà !
 
 Félicitations, vous venez d'ajouter une interface d'administration pour la gestion de vos contenus gérés à l'aide d'un générateur de site statique. Vos collaborateurs peuvent se focaliser sur la rédaction et l'édition de contenus, sans avoir à se préoccuper des commandes Git ou du déploiement, tout est automatisé ! Vous bénéficiez d'un workflow de publication de type Kanban si vous le désirez et Netlify va jusqu'à génèrer une [URL unique de prévisualisation](https://www.youtube.com/watch?v=s_4UL9oAcVE) accessible depuis GitHub pour chaque pull-request créée. Elle est pas belle la vie ?
 
