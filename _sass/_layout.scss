@@ -63,19 +63,23 @@ body {
  * Site footer
  */
 .site-footer {
+  padding: $spacing-unit $spacing-unit/2 0;
   background: $grey-color-dark;
-  padding: $spacing-unit $spacing-unit/2;
 }
 
 .contact-list,
 .social-media-list {
   list-style: none;
   margin-left: 0;
+  li {
+    display: inline-block;
+    padding: 0 .335em;
+  }
 }
 
 .footer-col-wrapper {
-  font-size: $small;
   color: #fff;
+  font-size: $smaller;
   margin-left: -$spacing-unit / 2;
   @extend %clearfix;
 
@@ -93,6 +97,9 @@ body {
   float: none;
   width: -webkit-calc(100% - (#{$spacing-unit} / 2));
   width: calc(100% - (#{$spacing-unit} / 2));
+}
+.footer-col-2 {
+  text-align: right;
 }
 @include media-query($on-tablet) {
   .footer-col {
@@ -155,6 +162,8 @@ body {
   > li {
     margin-bottom: $spacing-unit;
     line-height: 1.1;
+    min-height: 6.192em;
+    border-bottom: .0279em solid;
   }
 }
 @include media-query($on-tablet) {
@@ -174,7 +183,7 @@ body {
 
 .post-link {
   font-family: $title-font-family;
-  font-size: $big;
+  font-size: $bigger;
   font-weight: 700;
   letter-spacing: $title-letter-spacing;
   display: block;
@@ -203,7 +212,8 @@ body {
 .intro {
   font-family: $title-font-family;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.44;
+  font-size: 1.2em
 }
 
 .notice--info {
@@ -230,7 +240,7 @@ body {
 
 figure {
   display: block;
-  margin-top: $base-line-height * 2em;
+  margin-top: $base-line-height * 1.44em;
 }
 
 figure > img {
@@ -239,8 +249,9 @@ figure > img {
 
 figcaption {
   text-align: center;
+  font-style: italic;
+  line-height: 1;
   color: rgba(0, 0, 0, 0.6);
-  line-height: 1.1;
 }
 
 @include media-query($on-desktop) {
@@ -256,6 +267,7 @@ figcaption {
   height: 0;
   padding-bottom: 56.25%;
   overflow: hidden;
+  margin: 1.2em auto;
 
   iframe {
     position: absolute;
