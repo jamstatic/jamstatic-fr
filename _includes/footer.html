@@ -1,35 +1,35 @@
 <footer class="site-footer">
 
-    <div class="wrapper">
+  <div class="wrapper">
 
-        <div class="footer-col-wrapper">
+    <div class="footer-col-wrapper">
 
-            <div class="footer-col footer-col-1">
-                <ul class="social-media-list">
-                    <li>
-                      <span class="icon icon--rss">{% include icon-rss.svg %}</span> <a href="{{ "/feed.xml" | relative_url }}">S‘abonner via RSS</a>
-                    </li>
-                    {% if site.github.username %}
-                    <li>
-                        {% include icon-slack.html username=site.github.username %}
-                    </li>
-                    <li>
-                        {% include icon-github.html username=site.github.username %}
-                    </li>
-                    {% endif %} {% if site.twitter.username %}
-                    <li>
-                        {% include icon-twitter.html username=site.twitter.username %}
-                    </li>
-                    {% endif %}
+      <div class="footer-col footer-col-1">
+        <ul class="social-media-list">
+          <li>
+            <span class="icon icon--rss">{% include icon-rss.svg %}</span> <a href="{{ "/feed.xml" | relative_url }}">S‘abonner via RSS</a> ou <a href="{{ "/feed.json" | relative_url }}">JSON</a>
+          </li>
+          {% if site.github.username %}
+          <li>
+            {% include icon-slack.html username=site.github.username %}
+          </li>
+          <li>
+            {% include icon-github.html username=site.github.username %}
+          </li>
+          {% endif %} {% if site.twitter.username %}
+          <li>
+            {% include icon-twitter.html username=site.twitter.username %}
+          </li>
+          {% endif %}
 
-                </ul>
-            </div>
+        </ul>
+      </div>
 
-            <div class="footer-col footer-col-2">
-                <p><small>Contenus sous Licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">CC BY-NC-SA 4.0</a></small></p>
-            </div>
-        </div>
-
+      <div class="footer-col footer-col-2">
+        <p><small>Contenus sous Licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">CC BY-NC-SA 4.0</a></small></p>
+      </div>
     </div>
+
+  </div>
 
 </footer>
