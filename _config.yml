@@ -20,7 +20,7 @@ defaults:
 email: contact@jamstatic.fr
 description: L'actualité autour des générateurs de site statique et de la JAMStack
 url: https://jamstatic.fr
-baseurl:
+baseurl: 
 permalink: "/:year/:month/:day/:title/"
 lang: fr
 repository: jamstatic/jamstatic-fr

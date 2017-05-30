@@ -2,8 +2,7 @@
 title: Comment marche Jekyll ?
 date: 2017-01-17 17:53:00 +01:00
 image: assets/images/jekyll-rendering-rules.png
-description: >-
-  À partir du code source, nous pouvons mieux comprendre le process de
+description: À partir du code source, nous pouvons mieux comprendre le process de
   génération au cœur de Jekyll.
 ---
 
