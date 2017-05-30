@@ -1,9 +1,9 @@
 ---
 title: Configurer Netlify CMS pour Jekyll
 date: 2017-05-29 00:00:00 +02:00
-description: Netlify CMS est une application web qui vous permet d'éditer vos fichiers
-  Markdown depuis une interface visuelle. Cette application web facilite l'utilisation
-  de générateurs de site statique pour les collaborateurs non techniques.
+description: >-
+  Netlify CMS est une application web qui vous permet d'éditer vos fichiers
+  Markdown depuis une interface visuelle. Cette application web facilite l'utilisation de générateurs de site statique pour les collaborateurs non techniques.
 image: "/assets/images/netlify-cms/netlify-cms.png"
 ---
 

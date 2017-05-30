@@ -1,7 +1,8 @@
 ---
 title: Créer un thème pour Jekyll
 date: 2016-10-29 15:18:59 +02:00
-description: Jekyll permet de publier des thèmes sous forme de gem, afin de faciliter
+description: >-
+  Jekyll permet de publier des thèmes sous forme de gem, afin de faciliter
   l'installation et les mises à jour.
 ---
 
