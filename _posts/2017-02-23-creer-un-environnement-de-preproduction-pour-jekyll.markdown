@@ -4,7 +4,6 @@ date: 2017-02-23 21:51:01 +01:00
 layout: post
 description: Netlify vous permet de créer simplement un environnement de préprofuction
   pour votre site statique.
-author: frank
 image: https://eduardoboucas.com/assets/posts/2017-02-22-creating-a-staging-environment-for-jekyll/netlify1.png
 ---
 

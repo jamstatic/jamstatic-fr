@@ -2,7 +2,6 @@
 title: Qui y'a t-il dans un générateur de site statique&nbsp;?
 date: 2017-02-09 15:21:52 +01:00
 layout: post
-author: frank
 image: https://cdn.css-tricks.com/wp-content/uploads/2017/02/terraform-1.jpg
 ---
 

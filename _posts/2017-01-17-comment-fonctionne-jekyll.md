@@ -4,7 +4,6 @@ date: 2017-01-17 17:53:00 +01:00
 image: assets/images/jekyll-rendering-rules.png
 description: À partir du code source, nous pouvons mieux comprendre le process de
   génération au cœur de Jekyll.
-author: frank
 ---
 
 Si vous suivez ce blog, vous savez déjà que Jekyll est un générateur de site statique développé en Ruby. Jack Phelan a décidé d'aller jeter un œil dans le moteur de Jekyll histoire de mieux comprendre comment sont traités les différents types de fichiers qui sont passés en entrée. Nous traduisons [son article](https://www.bytesandwich.com/jekyll/software/blogging/2016/09/14/how-does-jekyll-work.html) afin de vous inciter à plonger un peu dans le code de Jekyll et prendre connaissance des concepts fondamentaux de ce générateur. Nous espérons que cela vous permettra de mieux appréhender la philosophie de Jekyll ou que cela vous sera utile si vous songez à développer un plugin.

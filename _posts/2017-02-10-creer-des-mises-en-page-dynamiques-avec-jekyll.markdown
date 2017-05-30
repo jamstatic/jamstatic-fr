@@ -2,7 +2,6 @@
 title: Créer des mises en page dynamiques avec Jekyll
 date: 2017-02-10 22:33:24 +01:00
 description: ''
-author: frank
 image: https://cdn-images-1.medium.com/max/400/1*rS4n3wyRac82CtdSpi3Mpg.jpeg
 ---
 

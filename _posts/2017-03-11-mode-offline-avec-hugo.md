@@ -4,7 +4,6 @@ date: 2017-03-11 17:04:01 +01:00
 layout: post
 description: Permettez aux visiteurs de consulter votre site statique en mode hors-connexion
   à l'aide d'un Service Worker
-author: frank
 image: assets/images/service-worker.png
 ---
 
