@@ -4,7 +4,7 @@ date: 2017-01-23 15:37:00 +01:00
 image: https://blogs.getty.edu/iris/files/2016/05/eric_ruth_greg_1009_1200.jpg
 description: Le web au secours de la modernisation du procéde de publication de livres
   numériques et papier.
-author: antoine
+author: Antoine Fauchié
 ---
 
 Suite à la parution du [procédé de publication numérique basé sur Git et Middleman](http://blogs.getty.edu/iris/an-editors-view-of-digital-publishing/) d'un éditeur, [Antoine Fauchié](https://www.quaternum.net/) est allé poser quelques questions à [Eric Gardner](http://egardner.github.io/), développeur et designer au sein de l'équipe d'édition numérique de [The Getty](https://getty.edu/), un campus culturel et de recherche situé à Los Angeles.

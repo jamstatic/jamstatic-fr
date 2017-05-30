@@ -2,7 +2,7 @@
 title: Lancement de la communauté Jekyll France
 date: 2016-04-01 00:00:00 +02:00
 description: Les actualités autour de Jekyll et des générateurs de site statique
-author: bertrand
+author: Bertrand Keller
 ---
 
 C'est avec émotion que nous avons le plaisir de vous annoncer le lancement d'un site relayant les actualités de la communauté Jekyll en Français.
