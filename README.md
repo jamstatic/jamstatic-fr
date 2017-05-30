@@ -1,5 +1,6 @@
 # jamstatic.fr
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/bd599117332a461bb8f8e5e65f7adfe3)](https://www.codacy.com/app/DirtyF/jamstatic-fr?utm_source=github.com&utm_medium=referral&utm_content=jamstatic/jamstatic-fr&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/jamstatic/jamstatic-fr.svg?branch=source)](https://travis-ci.org/jamstatic/jamstatic-fr)
 [![Slack Channel](https://jamstatic.herokuapp.com/badge.svg)](https://jamstatic.herokuapp.com)
 
