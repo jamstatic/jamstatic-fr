@@ -1,9 +1,10 @@
 ---
 title: Configurer Netlify CMS pour Jekyll
-description: >-
-  Netlify CMS est une application web qui vous permet d'éditer vos fichiers
-  Markdown depuis une interface visuelle. Cette application web facilite l'utilisation de générateurs de site statique pour les collaborateurs non techniques.
-image: /assets/images/netlify-cms/netlify-cms.png
+date: 2017-05-29 00:00:00 +02:00
+description: Netlify CMS est une application web qui vous permet d'éditer vos fichiers
+  Markdown depuis une interface visuelle. Cette application web facilite l'utilisation
+  de générateurs de site statique pour les collaborateurs non techniques.
+image: "/assets/images/netlify-cms/netlify-cms.png"
 ---
 
 Les outils de gestion de contenus connectés aux générateurs de site statique continuent d’évoluer. Lors de [la refonte de Smashing Magazine]({% post_url 2017-03-17-smashing-mag-va-dix-fois-plus-vite %}), Netlify la startup basée à San Francisco spécialisée dans l’hébergement et le déploiement de sites statiques a développé un [CMS headless](https://www.netlifycms.org/) pour faciliter la contribution des rédacteurs. Ce [CMS open source](https://www.netlify.com/blog/2017/03/17/an-open-source-cms-with-a-git-centric-workflow/) est simple à configurer, cela ne vous prendra que quelques minutes. Dans cet article, nous utiliserons [Jekyll](https://jekyllrb.com/), le générateur le plus populaire, sachez que le principe est similaire pour [Hugo](https://gohugo.io/) ou d’autres générateurs.
