@@ -7,7 +7,7 @@ Vous utilisez Jekyll, Hugo ou tout autre générateur de site statique, vous vou
 
 Vous pouvez :
 
-* [Nous suivre sur Twitter](https://twitter.com/jamstatic_fr }})
+* [Nous suivre sur Twitter](https://twitter.com/jamstatic_fr)
 * [Rejoindre le channel Slack jamstatic-fr](https://jamstatic.herokuapp.com/)
 * [Soumettre un article à la  publication](https://github.com/jamstatic/jamstatic-fr/projects/1)
 
