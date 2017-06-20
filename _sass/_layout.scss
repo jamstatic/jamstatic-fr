@@ -212,14 +212,36 @@ body {
   font-family: $title-font-family;
   font-weight: 700;
   line-height: 1.44;
-  font-size: 1.2em
+  font-size: 1.2em;
 }
 
-.notice--info {
+.marker {
+  background-color: rgba(255,228,0,.4);
+  padding: .1rem;
+  code {
+    background-color: inherit;
+    border: none;
+    font-weight: bold;
+  }
+}
+
+
+
+
+.notice {
   margin: 2em 0;
   padding: 1em;
-  background-color: #e9f1f9;
   border-left: 0.25em solid #91bae0;
+
+  &.info {
+    background-color: #e9f1f9;
+  }
+
+  &.update {
+    background-color: #7fb842;
+    color: white;
+    border-color: #5C8530
+  }
 
   h4 {
     margin-top: 0;
@@ -242,8 +264,13 @@ figure {
   margin-top: $base-line-height * 1.44em;
 }
 
-figure > img {
+figure > img,
+figure > iframe {
   margin: 0 auto .5em;
+}
+
+figure iframe {
+  display: block;
 }
 
 figcaption {
