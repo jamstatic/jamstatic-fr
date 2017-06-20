@@ -1,8 +1,9 @@
 ---
 title: Passer de Jekyll+Github Pages à Hugo+Netlify
-description: >-
-  Le détail de la migration du blog de Sara Soueidan de Jekyll à Hugo et son passage de GitHub Pages à Netlify.
-image: "https://d33wubrfki0l68.cloudfront.net/4aa07c8129bdae37f8c6510453f274a32ac664c0/09ca5/images/article-assets/hugo-netlify/hugo-folder-structure.png"
+date: 2017-06-07 00:00:00 +02:00
+description: Le détail de la migration du blog de Sara Soueidan de Jekyll à Hugo et
+  son passage de GitHub Pages à Netlify.
+image: https://d33wubrfki0l68.cloudfront.net/4aa07c8129bdae37f8c6510453f274a32ac664c0/09ca5/images/article-assets/hugo-netlify/hugo-folder-structure.png
 ---
 
 	Si vous faites du développement front-end, du CSS, du SVG et autres joyeusetés, vous connaissez sans doute déjà la talentueuse [Sara Soueidan](http://www.sarasoueidan.com/). Il se trouve que Sara a travaillé récemment sur la refonte de Smashing Magazine et [la migration de Wordpress à Hugo]({% post_url 2017-03-17-smashing-mag-va-dix-fois-plus-vite %}). Cette mission lui a permis de se familiariser avec Hugo et de découvrir au passage le service offert par [Netlify](https://www.netlify.com/), la nouvelle référence en terme d'hébergement d'applications statiques. Fatiguée des faibles temps de compilation proposés par Jekyll (dû en grande partie à la lenteur de Kramdown, le parseur Markdown utilisé, et ses traitements d'expressions régulières), Sara en a profité pour s'attaquer à la migration de son site perso. Comme beaucoup d'autres, elle a été immédiatement séduite par les performances proposées par Hugo, le générateur statique ultra-rapide et ultra-souple écrit en Go. Elle nous livre ici en détails le récit de cette migration qu'elle est bien contente d'avoir menée à bien. Puisse le partage son périple vous épargner de subir les mêmes écueils et vous aider à commencer à vous familiariser avec les concepts d'Hugo.
