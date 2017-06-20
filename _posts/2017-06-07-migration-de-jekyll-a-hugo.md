@@ -175,7 +175,7 @@ title = "Accueil"
 description = "Sara Soueidan — Développeuse Web Front-end, auteure et conférencière"
 +++
 ```
-La description est utilisée dans le fichier partiel d'entête du site en tant que valeur pour l'attribut `<title>` ainsi :
+La description est utilisée dans le fichier partiel d'entête du site en tant que valeur de l'attribut `<title>` ainsi :
 
 ```html
 {% raw %}
@@ -183,11 +183,11 @@ La description est utilisée dans le fichier partiel d'entête du site en tant q
 {% endraw %}
 ```
 
-La raison pour laquelle je n'utilise pas la valeur du `title` dans le front matter pour la balise HTML `<title>` c'est parce que dans les autres pages, le `title` de la page est aussi utilisé comme intitulé de lien dans le menu principal de navigation. Mais nous verrons tout ça plus tard.
+La raison pour laquelle je n'utilise pas la valeur du `title` dans le front matter pour la balise HTML `<title>` est que dans les autres pages, le `title` de la page est aussi utilisé comme intitulé de lien dans le menu principal de navigation. Mais nous verrons tout ça plus tard.
 
 Les fichiers Markdown (`.md`) peuvent contenir du Markdown et du HTML et comme pour la page d'accueil je n'ai aucune entrée dynamique telle qu'une liste d'articles , elle contient juste le code HTML de la page. Mais comment est mis en forme ce code Markdown et HTML ? Et comment fait-on pour inclure un entête et un pied de page ? Tout ça se passe dans le modèle de mise en page.
 
-Le fichier `/layouts/index.html` est la mise en page utilisée pour l'accueil et voici à quoi elle ressemble :
+Le fichier `/layouts/index.html` est la mise en page utilisée pour l'accueil et voici à quoi il ressemble :
 
 ```html
 {% raw %}
@@ -218,7 +218,7 @@ J'ai du faire pas mal de recherches et lire quelques fils de discussions d'aide 
 
 Les pages statiques sont créées à la racine du répertoire `/content/`, tout comme la page d'accueil. Toutefois, contrairement à la page d'accueil, les noms de fichiers ne commencent pas un underscore.
 
-Et contrairement à la page d'accueil, vous allez devoir définir le type de page et dire à Hugo de l'inclure dans le menu principal du site, en lui attribuant un titre et une description. d
+Et contrairement à la page d'accueil, vous allez devoir définir le type de page et dire à Hugo de l'inclure dans le menu principal du site, en lui attribuant un titre et une description.
 
 Pour la page À propos de mon site, j'ai crée un fichier `/content/about.md`. Le front matter de la page est le suivant :
 
@@ -237,8 +237,7 @@ Notez la valeur de `type`. Comme dit plus haut, vous pouvez attribuer la valeur 
 
 La variable `page` indique à Hugo quel modèle de mise en page présent dans le répertoire `/layouts/` utiliser.
 
-Il est bon de noter également ici qu'Hugo utilisera automatiquement ce modèle même je ne lui dit pas. Mais je me rappelle avoir eu quelques prises de têtes au début quand j'essayais de comprendre comment utiliser les modèles pour les différentes pages. Je ne savais pas quel modèle allait être utilisé. Même en ayant lu la documentation, je me suis retrouvé à faire et défaire pas mal de choses pour m'apercevoir que les choses marchaient pas magie, ou pas. Au début Hugo ressemblait à une boîte noire pour moi et il m'a fallu quelques jours pour
- en comprendre assez pour oser écrire à son sujet. Quand ça a fini par fonctionner, j'ai décidé de ne plus toucher au front matter car j'avais peur de casser une nouvelle fois ma mise en page. Mais maintenant que j'en sais plus, il est bon de signaler que vous n'avez pas vraiment besoin de la variable `page` ici.
+Il est bon de noter également ici qu'Hugo utilisera automatiquement ce modèle même je ne lui dit pas. Mais je me rappelle avoir eu quelques prises de têtes au début quand j'essayais de comprendre comment utiliser les modèles pour les différentes pages. Je ne savais pas quel modèle allait être utilisé. Même en ayant lu la documentation, je me suis retrouvé à faire et défaire pas mal de choses pour m'apercevoir que les choses marchaient pas magie, ou pas. Au début Hugo ressemblait à une boîte noire pour moi et il m'a fallu quelques jours pour en comprendre assez pour oser écrire à son sujet. Quand ça a fini par fonctionner, j'ai décidé de ne plus toucher au front matter car j'avais peur de casser une nouvelle fois ma mise en page. Mais maintenant que j'en sais plus, il est bon de signaler que vous n'avez pas vraiment besoin de la variable `page` ici.
 
 Le `title` est utilisé comme intitulé de lien dans le menu. (Sur mon site le menu situé en haut de page contient une entrée "About &amp; Interviews").
 
@@ -269,15 +268,15 @@ Pour expliquer à quoi sert ce répertoire, je vais commencer par citer [la page
 
 > Les archetypes vous permettent de créer de nouvelles instances de types de contenu et de définir des paramètres par défaut à partir de la ligne de commande.
 >
-> Les archetypes sont des fichiers de contenu stockés dans le répertoire `archetypes` de votre projet, qui contiennent du front-matter pré-configuré pour les types de contenu de votre site web. Les archétypes facilitent la consistence des métadonnées des contenus à travers tout votre site et permettent aux auteurs de générer rapidement de nouvelles instances de type de contenu à l'aide de la commande `hugo new`
+> Les archetypes sont des fichiers de contenu stockés dans le répertoire `archetypes` de votre projet, qui contiennent un front-matter pré-configuré pour les types de contenu de votre site web. Les archétypes facilitent la consistence des métadonnées des contenus à travers tout votre site et permettent aux auteurs de générer rapidement de nouvelles instances de type de contenu à l'aide de la commande `hugo new`
 >
-> Hugo est capable déduire l'archetype approprié à l'aide de la section de contenu passée en argument de la commande `new` :
+> Hugo est capable de déduire l'archetype approprié à l'aide de la section de contenu passée en argument de la commande `new` :
 >
 > `hugo new <section-de-contenu>/<nom-de-fichier.md>`
 
 En d'autres mots, définir un archétype vous permet de créer de nouveaux contenus plus rapidement, puisqu'il va remplir le front-matter de notre nouvelle page avec les variables de votre choix.
 
-Par exemple, supposons que je veuille créer une nouvelle étude de cas (qui irait dans `/content/etudes-de-cas/`). Au lieu de créer un nouveau fichier Markdown dans le répertoire, je peux taper cette commande d'une ligne dans le terminal et Hugo va créer le nouveau fichier pour moi :
+Par exemple, supposons que je veuille créer une nouvelle étude de cas (qui irait dans `/content/etudes-de-cas/`). Au lieu de créer un nouveau fichier Markdown dans le répertoire, je peux taper cette commande dans le terminal et Hugo va créer le nouveau fichier pour moi :
 
 ```html
 hugo new etudes-de-cas/ma-nouvelle-etude-de-cas.md
@@ -285,13 +284,13 @@ hugo new etudes-de-cas/ma-nouvelle-etude-de-cas.md
 
 Et les variables de cette nouvelle étude de cas (`ma-nouvelle-etude-de-cas.md`) seront automatiquement ajoutées : nom du client, logo du client (chemin vers l'image), description du client, description du projet, date du projet, etc… Par défaut les valeurs de ces variables seront vierges, prêtes à être renseignées.
 
-La capture d'écran suivant montre les variables front-matter que j'ai défini pour l'archetype `etudes-de-cas` :
+La capture d'écran suivante montre les variables front-matter que j'ai défini pour l'archetype `etudes-de-cas` :
 
 {% include figure.html url="/assets/images/archetype-hugo.png" description="Les variables définies pour l'archétype des études de cas. À chaque fois que je demande à Hugo de créer une nouvelle étude de cas pour moi, il va automatiquement ajouter ces variables front-matter pour moi. Ces variables sont ensuite utilisées par le modèle HTML de la page d'études de cas." %}
 
-Notez aussi que les autres archetypes que j'ai défini dans le répertoire `archetypes`qui correspondent aux quatre autres types de section qui figurent sur mon site. C'est à peu près tout ce qu'il faut savoir sur les archetypes. Si vous souhaitez en savoir plus, reportez vous à la page dédiée dans la documentation d'Hugo. C'est bien expliqué. Vous n'êtes pas obligés de définir des archetypes, mais je pense que vous en aurez envie.
+Notez aussi que les autres archetypes que j'ai défini dans le répertoire `archetypes` qui correspondent aux quatre autres types de section qui figurent sur mon site. C'est à peu près tout ce qu'il faut savoir sur les archetypes. Si vous souhaitez en savoir plus, reportez vous à la page dédiée dans la documentation d'Hugo. C'est bien expliqué. Vous n'êtes pas obligés de définir des archetypes, mais je pense que vous en aurez envie.
 
-##### Laying content out with page layouts and creating an index page for posts
+##### Présenter le contenu avec les templates de page et créer une page d'index pour les billets
 
 C'est la partie avec laquelle j'ai eu le plus de mal au début. Comment est-ce que je sais le modèle utilisé pour telle section ? Comment je sais de combien de modèles j'ai besoin ? Et est-ce qu'il y en a vraiment besoin ?
 
@@ -301,7 +300,7 @@ En général, pour un blog très simple, vous n'aurez besoin que de deux modèle
 
 Le modèle `list.html` aura pour mission d'afficher des listes d'éléments, comme sur la page d'index où sont affichées la liste de vos billets de blog.
 
-Quant au modèle `single.html`, comme vous l'aurez deviné, il servira pour mettre en forme les pages uniques comme celle d'un article de blog.
+Quant au modèle `single.html`, comme vous l'aurez deviné, il servira pour mettre en forme les pages uniques comme celle d'un billet de blog.
 
 Ces deux modèles doivent se trouver dans le répertoire `/layouts/_defaults/`.
 
@@ -311,7 +310,7 @@ J'ai mis en place ces modèles comme solution par défaut sur mon blog, mais je 
 
 Vous pouvez surcharger les modèles par défaut en fournissant des modèles qui porteront le même nom que votre section ou votre type de contenu.
 
-En d'autres mots, vous pouvez créer dans le répertoire `/layouts/` une structure de dossiers similaire à celle que vous avez dans le répertoire `/content/` et Hugo se basera sur cette structure pour déterminer le modèle à utiliser.
+En d'autres termes, vous pouvez créer dans le répertoire `/layouts/` une structure de dossiers similaire à celle que vous avez dans le répertoire `/content/` et Hugo se basera sur cette structure pour déterminer le modèle à utiliser.
 
 Ou alors vous pouvez créer un répertoire du même nom que le `type` que vous avez défini, comme `static` par exemple que j'utilise pour les pages statiques. Plutôt que d'utiliser le modèle par défaut, Hugo utilisera alors le modèle situé dans le répertoire `/layouts/static/` pour toutes les pages qui auront le `type = static`.
 
