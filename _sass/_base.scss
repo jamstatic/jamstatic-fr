@@ -41,9 +41,10 @@ ul, ol, dl, figure,
 }
 
 /**
- * Images
+ * Images, iframes
  */
-img {
+img,
+iframe {
     max-width: 100%;
     vertical-align: middle;
 }
@@ -51,9 +52,11 @@ img {
 /**
  * Figures
  */
-figure > img {
+figure > img,
+figure > iframe {
     display: block;
 }
+
 
 /**
  * Lists
