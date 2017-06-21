@@ -52,7 +52,7 @@ $ brew install hugo
 
 J'ai suivi les instructions présentes sur la page d'installation, mis à jour `brew` et lancé quelques commandes pour m'assurer que tout était bien installé et fonctionnait correctement. C'est tout ce dont vous avez besoin pour qu'Hugo tourne sur votre machine. Difficile de faire plus simple. Avec Jekyll, ce n'était pas aussi indolore, je me rappelle avoir passé pas mal de temps à le configurer pour le faire tourner à l'époque.
 
-J'ai parfois tendance à être une développeuse paresseuse. Mais ça a du bon car cela me pousse à trouver la manière la plus rapide et la plus simple de mener à bien une tâche. Et donc la première des choses que j'ai voulu faire a été de migrer automatiquement tous mes articles de blog dans Hugo sans avoir à repasser sur chacun des billets pour modifier le front matter. (J'aurais vraisemblablement abandonné si j'avais dû faire cela 😅)
+J'ai parfois tendance à être une développeuse paresseuse. Mais ça a du bon car cela me pousse à trouver la manière la plus rapide et la plus simple de mener à bien une tâche. Et donc la première des choses que j'ai voulu faire a été de migrer automatiquement tous mes articles de blog dans Hugo sans avoir à repasser sur chacun des billets pour modifier le [front matter][front-matter]. (J'aurais vraisemblablement abandonné si j'avais dû faire cela 😅)
 
 Heureusement, depuis la version 0.15, Hugo offre [une commande pour migrer depuis Jekyll](https://gohugo.io/commands/hugo_import_jekyll/). Vous n'avez qu'à taper la ligne suivante dans le terminal  - en remplaçant `chemin_site_jekyll` et `repertoire_destination` par les chemins vers le répertoire utilisé actuellement pour votre site sous Jekyll et celui dans lequel vous voulez configurer votre nouveau site - et Hugo se chargera d'importer les fichiers de votre installation actuelle de Jekyll dans le répertoire qui contiendra votre site Hugo :
 
@@ -98,15 +98,16 @@ Après être intervenue sur le redesign de Smashing Magazine, j'ai appris que vo
 Pour chaque type de contenu dont vous avez besoin, que ce soit une page, un billet de blog, un index de vos articles, de vos études de cas, etc. vous allez devoir créer un fichier Markdown (`.md`) dans le dossier `/content/`. C'est là où sont stockés *tous* les contenus. Après avoir crée le contenu dans son
 répertoire spécifique, vous allez créer ou réutiliser un modèle de mise en page stocké dans le dossier `/layouts/`.
 
-Chaque fichier `.md` du dossier `/content/` correspond à une page qui commence avec une entête [front matter](https://gohugo.io/content/front-matter/), écrite au format `yaml` ou `toml`. Puisque je voulais m'imprégner d'un nouvel environnement et que la plupart de la documentation et des ressources dédiées à Hugo utilisent le format `toml`, c'est le format que j'ai utilisé. Jekyll utilise `yaml`.[^2]
+Chaque fichier `.md` du dossier `/content/` correspond à une page qui commence avec une entête [front matter][front-matter], écrite au format `yaml` ou `toml`. Puisque je voulais m'imprégner d'un nouvel environnement et que la plupart de la documentation et des ressources dédiées à Hugo utilisent le format `toml`, c'est le format que j'ai utilisé. Jekyll utilise `yaml`.[^2]
 
+[front-matter]: https://gohugo.io/content/front-matter/
 [^2]: NdT: Pour la petite histoire c'est Tom Preston-Werner, le créateur de Jekyll qui est à l'origine de [TOML](https://github.com/toml-lang/toml) (d'où son nom). Vous pouvez [apprendre TOML en quelques minutes](https://learnxinyminutes.com/docs/toml/), [même chose pour YAML](https://learnxinyminutes.com/docs/fr-fr/yaml-fr/)
 
 Je ne rentrerai pas ici sur les différences entre les deux formats, la documentation d'Hugo et Google sont vos amis. Personnellement ça m'a pris un peu de temps pour apprendre à utiliser toutes ces nouvelles syntaxes (TOML, les modèles de template en Go, etc.) avant de me sentir à l'aise. Néanmoins la courbe d'apprentissage est assez rapide, ne vous laissez donc pas intimider par ces nouvelles syntaxes si tout cela est nouveau pour vous.
 
 ##### Définir (ou déclarer) les types de contenu
 
-Le [front matter](https://gohugo.io/content/front-matter/) de chaque page définit le type de page ou de contenu qui à son tour définit le type de modèle qui sera utilisé pour le rendu. Le type du page est défini par la variable `type`. Par exemple le front matter d'un article dans la section blog de mon site ressemble à ça:
+Le [front matter][front-matter] de chaque page définit le type de page ou de contenu qui à son tour définit le type de modèle qui sera utilisé pour le rendu. Le type du page est défini par la variable `type`. Par exemple le front matter d'un article dans la section blog de mon site ressemble à ça:
 
 
 ```html
@@ -136,7 +137,7 @@ Les pages statiques sont créées dans des fichiers individuels au format Markdo
 
 Pour chaque contenu, il vous faut définir son type. Vous pouvez faire ça de deux manières.
 
-Le type pour les pages statiques est défini à l'aide de la variable `type` dans l'entête front matter de la page. Le type des sections (blog, ateliers, études de cas et bureau) est quant à lui défini à l'aide de l'arborescence de dossiers. Vous n'avez pas besoin de spécifier le type dans le front matter lorsque vous vous reposez sur l'arborescence de fichiers. Par exemple un billet de blog qui se trouve dans le dossier `/content/blog/` sera automatiquement traité comme un type de contenu `blog`. Inutile de le préciser dans le front matter de chaque article.
+Le type pour les pages statiques est défini à l'aide de la variable `type` dans l'entête [front matter][front-matter] de la page. Le type des sections (blog, ateliers, études de cas et bureau) est quant à lui défini à l'aide de l'arborescence de dossiers. Vous n'avez pas besoin de spécifier le type dans le front matter lorsque vous vous reposez sur l'arborescence de fichiers. Par exemple un billet de blog qui se trouve dans le dossier `/content/blog/` sera automatiquement traité comme un type de contenu `blog`. Inutile de le préciser dans le front matter de chaque article.
 
 Vous pouvez choisir de définir le type de contenu à l'aide du front matter ou de l'arborescence de fichier. Généralement vous utiliserez la variable `type` pour les pages statiques et vous vous reposerez sur l'arborescence de fichiers pour les contenus qui auront besoin d'un index, comme par exemple des billets de blog.
 
@@ -165,7 +166,7 @@ La page d'accueil se crée en plaçant un fichier nommé `_index.md` dans le dos
 
 La page d'accueil est un peu spéciale, c'est la seule de toutes les autres pages qui nécessite d'avoir son propre modèle de mise en page dans le dossier `/layouts/` - nous parlerons de ces modèles plus en détail dans la prochaine section) et ce modèle de mise en page se nomme aussi `index.html`.
 
-Vous définissez le type page dans le _front matter_ du fichier `/content/_index.md` et vous lui attribuez un titre ainsi qu'une description.
+Vous définissez le type page dans le [front matter][front-matter] du fichier `/content/_index.md` et vous lui attribuez un titre ainsi qu'une description.
 
 Le front matter de ma page d'accueil ressemble à ça :
 
@@ -268,13 +269,13 @@ Pour expliquer à quoi sert ce répertoire, je vais commencer par citer [la page
 
 > Les archétypes vous permettent de créer de nouvelles instances de types de contenu et de définir des paramètres par défaut à partir de la ligne de commande.
 >
-> Les archétypes sont des fichiers de contenu stockés dans le répertoire `archetypes` de votre projet, qui contiennent un front-matter pré-configuré pour les types de contenu de votre site web. Les archétypes facilitent la consistence des métadonnées des contenus à travers tout votre site et permettent aux auteurs de générer rapidement de nouvelles instances de type de contenu à l'aide de la commande `hugo new`
+> Les archétypes sont des fichiers de contenu stockés dans le répertoire `archetypes` de votre projet, qui contiennent un front matter pré-configuré pour les types de contenu de votre site web. Les archétypes facilitent la consistence des métadonnées des contenus à travers tout votre site et permettent aux auteurs de générer rapidement de nouvelles instances de type de contenu à l'aide de la commande `hugo new`
 >
 > Hugo est capable de déduire l'archétype approprié à l'aide de la section de contenu passée en argument de la commande `new` :
 >
 > `hugo new <section-de-contenu>/<nom-de-fichier.md>`
 
-En d'autres mots, définir un archétype vous permet de créer de nouveaux contenus plus rapidement, puisqu'il va remplir le front-matter de notre nouvelle page avec les variables de votre choix.
+En d'autres mots, définir un archétype vous permet de créer de nouveaux contenus plus rapidement, puisqu'il va remplir le front matter de notre nouvelle page avec les variables de votre choix.
 
 Par exemple, supposons que je veuille créer une nouvelle étude de cas (qui irait dans `/content/etudes-de-cas/`). Au lieu de créer un nouveau fichier Markdown dans le répertoire, je peux taper cette commande dans le terminal et Hugo va créer le nouveau fichier pour moi :
 
@@ -284,9 +285,9 @@ hugo new etudes-de-cas/ma-nouvelle-etude-de-cas.md
 
 Et les variables de cette nouvelle étude de cas (`ma-nouvelle-etude-de-cas.md`) seront automatiquement ajoutées : nom du client, logo du client (chemin vers l'image), description du client, description du projet, date du projet, etc… Par défaut les valeurs de ces variables seront vierges, prêtes à être renseignées.
 
-La capture d'écran suivante montre les variables front-matter que j'ai défini pour l'archétype `etudes-de-cas` :
+La capture d'écran suivante montre les variables front matter que j'ai défini pour l'archétype `etudes-de-cas` :
 
-{% include figure.html url="/assets/images/archetype-hugo.png" description="Les variables définies pour l'archétype des études de cas. À chaque fois que je demande à Hugo de créer une nouvelle étude de cas pour moi, il va automatiquement ajouter ces variables front-matter pour moi. Ces variables sont ensuite utilisées par le modèle HTML de la page d'études de cas." %}
+{% include figure.html url="/assets/images/archetype-hugo.png" description="Les variables définies pour l'archétype des études de cas. À chaque fois que je demande à Hugo de créer une nouvelle étude de cas pour moi, il va automatiquement ajouter ces variables front matter pour moi. Ces variables sont ensuite utilisées par le modèle HTML de la page d'études de cas." %}
 
 Notez aussi que les autres archétypes que j'ai défini dans le répertoire `archetypes` qui correspondent aux quatre autres types de section qui figurent sur mon site. C'est à peu près tout ce qu'il faut savoir sur les archétypes. Si vous souhaitez en savoir plus, reportez-vous à la page dédiée dans la documentation d'Hugo. C'est bien expliqué. Vous n'êtes pas obligés de définir des archétypes, mais je pense que vous en aurez envie.
 
@@ -362,7 +363,7 @@ Pour citer la documentation :
 > Hugo va utiliser la liste priorisée suivante. Si un fichier n'est pas présent, alors on utilisera le suivant dans la liste.
 > Cela vous permet de concevoir des modèles particuliers quand vous le souhaitez sans devoir créer plus de modèles que nécessaire.
 > Pour la plupart des sites, seul le fichier `_default` en fin de liste sera nécessaire.
-> Les utilisateurs peuvent spécifier le type et le modèle dans le front-matter.
+> Les utilisateurs peuvent spécifier le type et le modèle dans le front matter.
 > La section est déterminée en fonction de l'endroit où se trouve le fichier de contenu. Si le type est fourni, il sera utilisé à la place de la section.
 
 Vous en apprendrez davantage sur cet ordre de priorisation dans [la page qui documente l'organisation des contenus](https://hugodocs.info/content-management/organization/).
