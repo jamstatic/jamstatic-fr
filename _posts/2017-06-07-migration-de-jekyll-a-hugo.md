@@ -187,7 +187,7 @@ La description est utilisée dans le fichier partiel d'entête du site en tant q
 
 La raison pour laquelle je n'utilise pas la valeur du `title` dans le front matter pour la balise HTML `<title>` est que dans les autres pages, le `title` de la page est aussi utilisé comme intitulé de lien dans le menu principal de navigation. Mais nous verrons tout ça plus tard.
 
-Les fichiers Markdown (`.md`) peuvent contenir du Markdown et du HTML et comme pour la page d'accueil je n'ai aucune entrée dynamique telle qu'une liste d'articles, elle contient juste le code HTML de la page. Mais comment ce code Markdown et HTML est-il mis en forme ? Et comment fait-on pour inclure un entête et un pied de page ? Tout cela se passe dans le modèle de mise en page.
+Les fichiers Markdown (`.md`) peuvent contenir du Markdown et du HTML et, comme pour la page d'accueil, je n'ai aucune entrée dynamique (comme une liste d'articles), elle contient juste le code HTML de la page. Mais comment ce code Markdown et HTML sont-ils mis en forme ? Et comment fait-on pour inclure un entête et un pied de page ? Tout cela se passe dans le modèle de mise en page.
 
 Le fichier `/layouts/index.html` est la mise en page utilisée pour l'accueil et voici à quoi il ressemble :
 
@@ -205,19 +205,19 @@ _`{% raw %}{{ .Content }}{% endraw %}` récupère le contenu de la page correspo
 
 En outre, j'appelle l'entête ainsi que le pied de page à l'aide de fichiers partiels.
 
-Par défaut quand vous demandez `partial "footer.html ."`, _Hugo va regarder s'il existe un fichier partiel dans le dossier  `partials` situé dans le répertoire `layouts`._{: .marker }
+Par défaut, quand vous demandez `partial "footer.html ."`, _Hugo va regarder s'il existe un fichier partiel dans le dossier  `partials` situé dans le répertoire `layouts`._{: .marker }
 
-Reportez vous à [la documentation d'Hugo sur les fichiers partiels](http://gohugo.io/templates/partials/) pour savoir ce que veut dire le point à la fin, ce qu'il fait et comment on peut personnaliser les appels à des fichiers partiels.
+Reportez-vous à [la documentation d'Hugo sur les fichiers partiels](http://gohugo.io/templates/partials/) pour savoir ce que veut dire le point à la fin, ce qu'il fait et comment on peut personnaliser les appels à des fichiers partiels.
 
-Et voilà comment on crée une page d'accueil pour son site : un fichier `/content/_index.md` qui contient le contenu de la page d'accueil, lui même mis en page à l'aide du fichier `/layouts/index.html`.
+Et voilà comment on crée une page d'accueil pour son site : un fichier `/content/_index.md` qui contient le contenu de la page d'accueil, lui-même mis en page à l'aide du fichier `/layouts/index.html`.
 
 ###### Ajouter une page statique
 
 Une fois la page d'accueil terminée, j'ai voulu m'occuper du reste des pages statiques avant de passer à des contenus plus dynamiques. Je me suis donc mise à bâtir la page _À propos_.
 
-J'ai du faire pas mal de recherches et lire quelques fils de discussions d'aide sur le forum d'Hugo et ailleurs pour y parvenir. J'espère donc que ce billet vous sera bénéfique si vous cherchez à créer des pages statiques, ce qui s'avère étonnement simple en fait.
+J'ai dû faire pas mal de recherches et lire quelques fils de discussions d'aide sur le forum d'Hugo et ailleurs pour y parvenir. J'espère donc que ce billet vous sera bénéfique si vous cherchez à créer des pages statiques, ce qui s'avère étonnement simple en fait.
 
-Les pages statiques sont créées à la racine du répertoire `/content/`, tout comme la page d'accueil. Toutefois, contrairement à la page d'accueil, les noms de fichiers ne commencent pas un tiret bas.
+Les pages statiques sont créées à la racine du répertoire `/content/`, tout comme la page d'accueil. Toutefois, contrairement à la page d'accueil, les noms de fichiers ne commencent pas par un tiret bas.
 
 Et contrairement à la page d'accueil, vous allez devoir définir le type de page et dire à Hugo de l'inclure dans le menu principal du site, en lui attribuant un titre et une description.
 
@@ -238,7 +238,7 @@ Notez la valeur de `type`. Comme dit plus haut, vous pouvez attribuer ici la val
 
 La variable `page` indique à Hugo quel modèle de mise en page présent dans le répertoire `/layouts/` utiliser.
 
-Il est bon de noter également ici qu'Hugo utilisera automatiquement ce modèle même je ne lui dit pas. Je me rappelle tout de même avoir eu quelques prises de têtes au début quand j'essayais de comprendre comment utiliser les modèles pour les différentes pages. Je ne savais pas quel modèle allait être utilisé. Même en ayant lu la documentation, je me suis retrouvé à faire et défaire pas mal de choses pour m'apercevoir que les choses marchaient pas magie, ou pas. Au début Hugo ressemblait à une boîte noire pour moi et il m'a fallu quelques jours pour en comprendre assez et pour oser écrire à son sujet. Quand ça a fini par fonctionner, j'ai décidé de ne plus toucher au front matter car j'avais peur de casser une fois de plus ma mise en page. Mais maintenant que j'en sais davantage, il est bon de signaler que vous n'avez pas vraiment besoin de la variable `page` ici.
+Il est bon de noter également que Hugo utilisera automatiquement ce modèle même je ne lui dis pas. Je me rappelle tout de même avoir eu quelques prises de tête au début quand j'essayais de comprendre comment utiliser les modèles pour les différentes pages. Je ne savais pas quel modèle allait être utilisé. Même en ayant lu la documentation, je me suis retrouvée à faire et défaire pas mal de choses pour m'apercevoir que les choses marchaient pas magie, ou pas. Au début, Hugo ressemblait à une boîte noire pour moi et il m'a fallu quelques jours pour en comprendre assez et pour oser écrire à son sujet. Quand ça a fini par fonctionner, j'ai décidé de ne plus toucher au front matter car j'avais peur de casser une fois de plus ma mise en page. Mais maintenant que j'en sais davantage, il est bon de signaler que vous n'avez pas vraiment besoin de la variable `page` ici.
 
 Le `title` est utilisé comme intitulé de lien dans le menu. (Sur mon site le menu situé en haut de page contient une entrée "About & Interviews").
 
@@ -250,20 +250,19 @@ Je vous ai déjà dit que la `description` est utilisée dans le fichier partiel
 
 Pour faire court, je vous renvoie une fois de plus à la documentation d'Hugo pour ce qui est de l'utilisation et de la configuration du menu principal. J'ajoute que certains aspects sont encore assez confus pour moi, mais comme je suis arrivée à faire ce que je voulais maintenant : je ne touche plus à rien, j'ai trop peur de casser un truc. Une fois de plus. 😂
 
-Toutes les autres pages statiques sont crées de la même manière. La seule chose qui change c'est le titre, la description et leur ordre dans le menu. Elles utilisent toutes le même modèle de mise en page.
+Toutes les autres pages statiques sont créées de la même manière. La seule chose qui change c'est le titre, la description et leur ordre dans le menu. Elles utilisent toutes le même modèle de mise en page.
 
 Je me note quelque chose ici pour plus tard :
 
 **Hugo respecte un ordre spécifique pour décider du modèle de mise en page à utiliser pour chaque page créée dans le dossier `/content/`. Nous en reparlerons dans la section dédiée aux modèles juste après. Donc si nous n'avions pas défini le fichier `/layouts/static/single.html` comme étant le modèle à utiliser, Hugo aurait utilisé un modèle par défaut stocké dans `/layouts/`. Nous y reviendrons.**
 
-Enfin, comme pour la page d'accueil, le contenu HTML de la page _À propos_ se trouve dans le fichier `about.md` puis il est ensuite inséré dans le modèle
-`/layouts/static/single.html` à l'aide de `{% raw %}{{ .Content }}{% endraw %}`. Nous faisons aussi appel aux fichiers partiels d'entête et de bas de page. Notez la correspondance entre le type `static` et le dossier `static` situé dans `layouts` qui contient le modèle de mise en page.
+Enfin, comme pour la page d'accueil, le contenu HTML de la page _À propos_ se trouve dans le fichier `about.md` puis il est ensuite inséré dans le modèle `/layouts/static/single.html` à l'aide de `{% raw %}{{ .Content }}{% endraw %}`. Nous faisons aussi appel aux fichiers partiels d'entête et de bas de page. Notez la correspondance entre le type `static` et le dossier `static` situé dans `layouts` qui contient le modèle de mise en page.
 
 Vous n'avez pas à écrire tout le HTML dans le fichier Markdown. Vous pouvez mettre toute la structure du HTML, comme les conteneurs, etc. dans le modèle de mise en page et n'avoir que le texte dans le fichier Markdown. Si j'ai procédé de la sorte, c'est juste que ça me convient bien comme ça.
 
 ##### Les archétypes de contenu
 
-Vous avez peut être remarqué sur la capture d'écran plus haut que j'ai aussi un dossier nommé `/archetypes/` à la racine de mon site. Ce dossier est lui aussi lié aux types de contenu que vous créez. Mais il a but spécifique et bien précis.
+Vous avez peut être remarqué sur la capture d'écran plus haut que j'ai aussi un dossier nommé `/archetypes/` à la racine de mon site. Ce dossier est lui aussi lié aux types de contenu que vous créez. Mais il a un but bien précis.
 
 Pour expliquer à quoi sert ce répertoire, je vais commencer par citer [la page correspondante de la documentation d'Hugo](https://hugodocs.info/content-management/archetypes/)
 
@@ -289,13 +288,13 @@ La capture d'écran suivante montre les variables front-matter que j'ai défini 
 
 {% include figure.html url="/assets/images/archetype-hugo.png" description="Les variables définies pour l'archétype des études de cas. À chaque fois que je demande à Hugo de créer une nouvelle étude de cas pour moi, il va automatiquement ajouter ces variables front-matter pour moi. Ces variables sont ensuite utilisées par le modèle HTML de la page d'études de cas." %}
 
-Notez aussi que les autres archétypes que j'ai défini dans le répertoire `archetypes` qui correspondent aux quatre autres types de section qui figurent sur mon site. C'est à peu près tout ce qu'il faut savoir sur les archétypes. Si vous souhaitez en savoir plus, reportez vous à la page dédiée dans la documentation d'Hugo. C'est bien expliqué. Vous n'êtes pas obligés de définir des archétypes, mais je pense que vous en aurez envie.
+Notez aussi que les autres archétypes que j'ai défini dans le répertoire `archetypes` qui correspondent aux quatre autres types de section qui figurent sur mon site. C'est à peu près tout ce qu'il faut savoir sur les archétypes. Si vous souhaitez en savoir plus, reportez-vous à la page dédiée dans la documentation d'Hugo. C'est bien expliqué. Vous n'êtes pas obligés de définir des archétypes, mais je pense que vous en aurez envie.
 
 ##### Présenter le contenu avec les modèles de page et créer une page d'index pour les billets
 
 C'est la partie avec laquelle j'ai eu le plus de mal au début. Comment est-ce que je sais que tel modèle est utilisé pour telle section ? Comment est-ce que je sais de combien de modèles j'ai besoin ? Et est-ce qu'il y en a vraiment besoin de modèle ?
 
-J'ai pas mal trifouillé et chercher sur le net, puis j'ai passé le plus clair de mon temps à faire des essais, jusqu'à avoir des modèles qui fonctionnent bien. Puis j'ai tout cassé et refait les choses pour comprendre quand et comment ça fonctionnait. Je peux maintenant affirmer avec assurance que j'ai bien compris tout ça.
+J'ai pas mal trifouillé et cherché sur le net, puis j'ai passé le plus clair de mon temps à faire des essais, jusqu'à avoir des modèles qui fonctionnent bien. Puis j'ai tout cassé et refait les choses pour comprendre quand et comment ça fonctionnait. Je peux maintenant affirmer avec assurance que j'ai bien compris tout ça.
 
 En général, pour un blog très simple, vous n'aurez besoin que de deux modèles par défaut : `list.html` and `single.html`.
 
@@ -315,7 +314,7 @@ En d'autres termes, vous pouvez créer dans le répertoire `/layouts/` une struc
 
 Ou alors vous pouvez créer un répertoire du même nom que le `type` que vous avez défini, comme `static` par exemple que j'utilise pour les pages statiques. Plutôt que d'utiliser le modèle par défaut, Hugo utilisera alors le modèle situé dans le répertoire `/layouts/static/` pour toutes les pages qui auront le `type = static`.
 
-J'ai pour ma part crée le fichier `/layouts/static/single.html`, que Hugo va utiliser pour surcharger la mise en page des pages statiques `/layouts/_default/single.html` .
+J'ai pour ma part créé le fichier `/layouts/static/single.html` que Hugo va utiliser pour surcharger la mise en page des pages statiques `/layouts/_default/single.html` .
 
 Encore une fois la page `/layouts/static/single.html` est simplement un modèle avec le contenu suivant :
 
@@ -351,11 +350,11 @@ Hugo utilisera le modèle `list.html` pour la page `_index.md` et le modèle `si
 
 De la même manière, toutes les autres sections possèdent leur propre répertoire de modèles, qui contient les modèles `list.html` et `single.html`.
 
-Encore une fois vous n'avez pas réellement besoin de tous ces modèles. Et vous aurez peut-être remarqué que quelques-unes des pages sont en tout point similaires à l'exception de leur nom. Si je fais ça, c'est uniquement pour des raisons de flexibilité future. Si jamais je veux changer le modèle de l'un des types de section, j'aurais simplement à modifier son modèle correspondant. Si votre site est plus simple et n'utilise pas autant de types de contenus, vous n'avez surement pas besoin de créer autant de modèles que moi.
+Encore une fois vous n'avez pas réellement besoin de tous ces modèles. Et vous aurez peut-être remarqué que quelques-unes des pages sont en tout point similaires à l'exception de leur nom. Si je fais ça, c'est uniquement pour des raisons de flexibilité future. Si jamais je veux changer le modèle de l'un des types de section, j'aurai simplement à modifier son modèle correspondant. Si votre site est plus simple et n'utilise pas autant de types de contenus, vous n'avez surement pas besoin de créer autant de modèles que moi.
 
 La seule exception à la structuration des répertoires de modèles c'est la page d'accueil, dont le modèle de mise en page est placé à la racine du répertoire `/layouts/` et se nomme `ìndex.html`.
 
-Il est important de vérifier l'ordre dans lequel Hugo va choisir du modèle à utiliser pour chaque page. Je vous le recommande vivement.
+Il est important de vérifier l'ordre dans lequel Hugo va choisir le modèle à utiliser pour chaque page. Je vous le recommande vivement.
 
 Pour citer la documentation :
 
@@ -372,11 +371,11 @@ Vous en apprendrez davantage sur cet ordre de priorisation dans [la page qui doc
 
 Le dernier point technique sur Hugo que je veux aborder concerne le listing des articles d'une section sur la page d'index de cette section.
 
-Une fois de plus, basons nous sur l'exemple de la section blog située dans `/content/blog/`.
+Une fois de plus, basons-nous sur l'exemple de la section blog située dans `/content/blog/`.
 
 Les fichiers Markdown ne contiennent bien entendu aucune logique de modèle. Donc pour lister tous les billets de blog, nous allons devoir faire cela dans le modèle correspondant à cette page d'index, situé dans `/layouts/blog/list.html`. La boucle et toute la logique de modèle est écrite à l'aide du [templating HTML du langage Go](https://hugodocs.info/templates/introduction/).
 
-La boucle en elle-même pourra et sera probablement différente pour la majorité d'entre vous. Après avoir pas mal cherché, je suis arrivée à écrire la boucle suivante, qui affiche les cinq derniers articles suivi d'un appel à un fichier partiel pour la gestion de la pagination.
+La boucle en elle-même pourra et sera probablement différente pour la majorité d'entre vous. Après avoir pas mal cherché, je suis arrivée à écrire la boucle suivante qui affiche les cinq derniers articles, suivi d'un appel à un fichier partiel pour la gestion de la pagination.
 
 ```html
 {% raw %}
@@ -406,7 +405,7 @@ Ne faites pas attention au code HTML de cette boucle, ça fait un moment que je 
 C'est la partie `{% raw %}{{ range .Paginator.Pages }}{% endraw %}` qui est vraiment importante ici. _Chaque `.Paginator` que vous utilisez dans une page d'index de section va boucler et afficher les article **de cette section**._{: .marker }
 `(.Paginator 5).Pages` indique à Hugo de ne lister que cinq éléments. Cette boucle va parcourir tous les articles de la section `blog` et ne lister que les cinq plus récents. Une boucle similaire dans le fichier `layouts/workshops/index.html` bouclerait sur les ateliers stockés dans le dossier `/content/workshops/` et afficherait la liste des ateliers dans l'index.
 
-Je confonds encore quelques variables globales du site et des variables de page dans Hugo. Ce que j'ai pour le moment me suffit et si jamais j'avais besoin de plus de flexibilité, d'options ou de fonctionnalités, il faudrait que je me replonge de nouveau dans la documentation pour arriver à tirer de la logique d'Hugo plus qu'une simple boucle. Vous devriez en faire de même.
+Je confonds encore quelques variables globales du site et des variables de page dans Hugo. Ce que j'ai pour le moment me suffit, et si jamais j'avais besoin de plus de flexibilité, d'options ou de fonctionnalités, il faudrait que je me replonge de nouveau dans la documentation pour arriver à tirer de la logique d'Hugo plus qu'une simple boucle. Vous devriez en faire de même.
 
 Et pour ce qui est du fichier partiel `pagination.html`, le mien ressemble pour le moment à ça :
 
@@ -446,13 +445,13 @@ Et pour ce qui est du fichier partiel `pagination.html`, le mien ressemble pour 
 {% endraw %}
 ```
 
-Libre à vous d'aller en apprendre plus sur les variables. Je trouve que le code ci-dessus est comprehensible tel quel, mais encore une fois si vous avez besoin de plus de fonctionnalité, la documentation et le forum vous seront probablement d'une plus grande aide.
+Libre à vous d'aller en apprendre plus sur les variables. Je trouve que le code ci-dessus est comprehensible tel quel, mais encore une fois, si vous avez besoin de plus de fonctionnalité, la documentation et le forum vous seront probablement d'une plus grande aide.
 
 #### Créer une page d'archive
 
-En plus de la page de blog par défaut, je voulais ajouter une page d'archive qui liste la totalité de mes articles sur une seule et unique page. Ce n'était pas aussi évident que je l'aurais cru. La documentation ne m'a pas beaucoup aidé. Et j'ai du à nouveau faire des recherches. Je suis tombé sur [cet article extrêmement utile](https://parsiya.net/blog/2016-02-14-archive-page-in-hugo/) et j'ai eu recours à la même technique que celle exposée par l'auteur.
+En plus de la page de blog par défaut, je voulais ajouter une page d'archive qui liste la totalité de mes articles sur une seule et unique page. Ce n'était pas aussi évident que je l'aurais cru. La documentation ne m'a pas beaucoup aidée. Et j'ai dû à nouveau faire des recherches. Je suis tombée sur [cet article extrêmement utile](https://parsiya.net/blog/2016-02-14-archive-page-in-hugo/) et j'ai eu recours à la même technique que celle exposée par l'auteur.
 
-Pour la page d'archive, j'ai créer une page statique dans `/content/` et je lui ai donné un nouveau `type`: `archive`. La page utilise le modèle situé dans `/layouts/archive/single.html`.
+Pour la page d'archive, j'ai créé une page statique dans `/content/` et je lui ai donné un nouveau `type`: `archive`. La page utilise le modèle situé dans `/layouts/archive/single.html`.
 
 Dans le modèle de page, je boucle sur les articles comme pour la page d'index du blog, mais avec une différence importante :
 
@@ -479,30 +478,29 @@ En résumé : **`.Site.Pages` boucle sur toutes les pages de votre site. En d'au
 
 ### Héberger chez Netlify
 
-J'avais choisi d'héberger mon site avec GitHub Pages depuis quelques années. Puis il est arrivé un moment où ça commençait à faire un peu juste. Il semble qu'il y ait eu aussi de manière régulière de curieux problèmes de cache et je devais pousser deux fois les changements sur le dépôt pour que les derniers changements soient pris en compte (j'imagine que le cache n'était pas invalidé quand il devait l'être). J'ai donc commencé à devoir créer des enregistrements vides seulement pour vider le cache et être capable de voir les changements que j'avais fait en production.
+J'avais choisi d'héberger mon site avec GitHub Pages depuis quelques années. Puis est arrivé un moment où ça commençait à faire un peu juste. Il semble qu'il y ait eu aussi régulièrement de curieux problèmes de cache et je devais pousser deux fois les changements sur le dépôt pour que ces derniers soient pris en compte (j'imagine que le cache n'était pas invalidé quand il devait l'être). J'ai donc commencé à devoir créer des enregistrements vides juste pour vider le cache et être capable de voir les changements que j'avais fait en production.
 
 Maintenant, je ne suis pas certaine que c'était vraiment un problème de cache, bien que ça y ressemblait beaucoup. Je ne sais pas non plus si quelqu'un d'autre est capable de reproduire ce problème. Et non, je n'ai pas contacté le support de GitHub à ce sujet. Je détestais tellement mon site Web que je me suis dit "j'ai déjà assez bien de problèmes en local pour me soucier de ce problème en production", j'en ai donc fait totalement abstraction.
 
-J'ai pu aussi me rendre compte de l'ultra-rapidité de [Netlify](https://www.netlify.com/) quand j'ai travaillé sur Smashing Magazine. De plus Netlify permet de "rendre votre site ou votre application web bien plus rapide en la servant au plus près des utilisateurs. Au lieu d'un serveur unique, vous déployez sur un réseau global de noeuds CDN intelligents, qui gère aussi l'unicité des assets, la mise en cache automatique des entêtes, les redirections et les réécritures intelligentes."
+J'ai pu aussi me rendre compte de l'ultra-rapidité de [Netlify](https://www.netlify.com/) quand j'ai travaillé sur Smashing Magazine. De plus, Netlify permet de "rendre votre site ou votre application web bien plus rapide en la servant au plus près des utilisateurs. Au lieu d'un serveur unique, vous déployez sur un réseau global de noeuds CDN intelligents, qui gère aussi l'unicité des assets, la mise en cache automatique des entêtes, les redirections et les réécritures intelligentes."
 
 Et en plus de tout ça, si vous êtes un développeur et que vous travaillez en open source, Netlify vous offre un abonnement Pro à vie. Tout ce qu'ils demandent en retour est un lien vers Netlify sur votre site ou votre application. Pour moi ce ne fut pas un problème vu que je mentionne toujours où mon site est hébergé dans le bas de page. J'ai donc signé pour la formule Pro. Un hébergement gratuit et rapide ! Woohoo !
 
 La configuration de son site se fait en quelques clics :
 
--   Créer un compte sur [netlify.com
-](https://netlify.com)
+-   Créer un compte sur [netlify.com](https://netlify.com)
 -   Relier son compte Netlify à son dépôt de code. Le mien est hébergé sur GitHub, j'ai pu le connecter depuis l'interface de Netlify.
 -   Spécifier le dossier de destination ainsi que la commande de build, respectivement `public` et `hugo` dans mon cas. (Voir les captures d'écrans ci-dessous)
 -   Configuration de votre nom de domaine. Cela demande de faire quelques changements de DNS.
 -   Cela m'a demandé seulement 3 clics pour bénéficier d'un certificat SSL renouvelé automatiquement et d'une connexion HTTPS pour mon site.
 -   Et… c'est tout.
 
-Je devrais probablement mentionner le fait que j'ai rencontré quelques difficultés lorsque j'ai fait la bascule, mais ce n'était pas de la faute de Netlify. L'équipe de Netlify a même été super et m'a aidé à débogguer les problèmes que je rencontrais. Après avoir effectué les changements dans la console du registrar de mon domaine, cela a pris quelques heures pour que mon site soit en ligne avec mon nom de domaine personnalisé.
+Je devrais probablement mentionner le fait que j'ai rencontré quelques difficultés lorsque j'ai fait la bascule, mais ce n'était pas de la faute de Netlify. L'équipe de Netlify a même été super et m'a aidée à déboguer les problèmes que je rencontrais. Après avoir effectué les changements dans la console du registrar de mon domaine, cela a pris quelques heures pour que mon site soit en ligne avec mon nom de domaine personnalisé.
 
 Quelques trucs bons à savoir :
 
--   Ajouter votre dossier `/public/` à votre fichier `.gitignore`. Netlify va lancer la génération de votre site sur leurs serveurs. Pour éviter de possibles conflits, ne versionnez pas votre dossier de destination dans votre dépôt. Le mien n'est présent que sur ma machine. Je rencontrais des problèmes de rendus avec certains templates quand je le versionnais auparavant.
--   Vérifiez bien la version d'Hugo que vous utilisez (`hugo version`) et celle utilisée par Netlify. Au début j'ai eu droit à des erreurs de build qui empêchaient le déploiement car ma version était plus récente que celle de Netlify. Si c'est le cas [ajoutez une variable d'environnement à votre site](https://www.netlify.com/blog/2017/04/11/netlify-plus-hugo-0.20-and-beyond/) qui correspond à la version d'Hugo que vous utilisée localement.
+-   Ajouter votre dossier `/public/` à votre fichier `.gitignore`. Netlify va lancer la génération de votre site sur ses serveurs. Pour éviter de possibles conflits, ne versionnez pas votre dossier de destination dans votre dépôt. Le mien n'est présent que sur ma machine. Je rencontrais des problèmes de rendus avec certains templates quand je le versionnais auparavant.
+-   Vérifiez bien la version d'Hugo que vous utilisez (`hugo version`) et celle utilisée par Netlify. Au début j'ai eu droit à des erreurs de build qui empêchaient le déploiement car ma version était plus récente que celle de Netlify. Si c'est le cas [ajoutez une variable d'environnement à votre site](https://www.netlify.com/blog/2017/04/11/netlify-plus-hugo-0.20-and-beyond/) qui correspond à la version d'Hugo que vous utilisez localement.
 
 Voici en partie à quoi ressemble mon tableau de bord Netlify :
 
@@ -520,7 +518,7 @@ J'ai constaté quelques améliorations et plus de A verts sur la page de résult
 -   Le code source du site web est hébergé sur GitHub,
 -   J'utilise Hugo comme générateur de site statique,
 -   Déploiement automatiquement à chaque `push` sur le dépôt grâce à Netlify,
--   Hébergé gratuitement chez Netlify avec le plan Open Source.
+-   Hébergée gratuitement chez Netlify avec le plan Open Source.
 
 Il est également utilise de mentionner que désormais la compilation complète de mon site après chaque changement, sans avoir à filtrer de vieux contenus, prend à Hugo moins de 40 secondes. **Hugo met 39s pour être plus précis**, là où Jekyll, même avec des options comme `--incremental` mettait plusieurs **minutes**.
 
@@ -528,12 +526,12 @@ Il est également utilise de mentionner que désormais la compilation complète 
 
 On retrouve ici quelques unes des choses qui figurent sur ma TODO liste depuis quelques années et que j'avais jusqu'ici remis à plus tard, en partie à cause de la situation dans laquelle je me trouvais précédemment avec Jekyll  :
 
--   **Lancer une mailing liste.** C'est prévu d'ici la fin du mois.
+-   **Lancer une mailing list.** C'est prévu d'ici la fin du mois.
 -   Une nouvelle section pour les articles qui ne rentrent pas dans la section des articles techniques.
--   Améliorer la qualité du code du site pour ne plus en être embarrassée et rendre le dépôt public sur Github.
+-   Améliorer la qualité du code du site pour ne plus être embarrassée et rendre le dépôt public sur Github.
 -   **Rendre le site disponible en mode offline.** Et le rendre encore plus *rapide*.
 -   Il y aura une **FAQ** mais pas au format des AMA (Ask Me Anything) qu'on trouve sur GitHub. Il y a des aspects que je n'aime pas dans ce format. Plus d'informations et de détails dès que la lettre d'information paraîtra.
--   **Écrire plus régulièrement.** Je laisse beaucoup trop d'idées de côté que je devrais transformer en articles de blog. Je me suis promis d'écrire plus souvent même si ces idées d'articles ne sont pas aussi poussées que d'habitude. Cet article est un début.
+-   **Écrire plus régulièrement.** Je laisse beaucoup trop d'idées de côté que je devrais transformer en articles de blog. Je me suis promise d'écrire plus souvent, même si ces idées d'articles ne sont pas aussi poussées que d'habitude. Cet article est un début.
 
 ### Quelques mots de conclusion ?
 
@@ -543,8 +541,8 @@ Je laisserai à Agnès le soin d'exprimer ce que je ressens vis-à-vis de cette 
 <iframe src="https://giphy.com/embed/uHSbNh58qwIwM" width="480" height="264" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 </figure>
 
-Au moins maintenant je dispose d'un système qui m'évitera des maux de tête à chaque changement que je voudrais apporter à mon site Web. Je prends de nouveau plaisir à écrire des articles de blog, ce qui veut dire que vous pouvez vous attendre de prochaines publications dans les semaines à venir.
+Au moins maintenant je dispose d'un système qui m'évitera des maux de tête à chaque changement que je voudrais apporter à mon site Web. Je prends de nouveau plaisir à écrire des articles de blog, ce qui veut dire que vous pouvez vous attendre à de prochaines publications dans les semaines à venir.
 
-Merci de m'avoir lu jusqu'ici.
+Merci de m'avoir lue jusqu'ici.
 
 [Article original](http://www.sarasoueidan.com/blog/jekyll-ghpages-to-hugo-netlify/)
