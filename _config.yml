@@ -56,7 +56,7 @@ exclude:
 - Rakefile
 - README.md
 - script
-gems:
+plugins:
 - jekyll-avatar
 - jekyll-feed
 - jekyll-gist
