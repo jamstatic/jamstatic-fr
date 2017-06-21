@@ -6,18 +6,18 @@ description: Le détail de la migration du blog de Sara Soueidan de Jekyll à Hu
 image: https://d33wubrfki0l68.cloudfront.net/4aa07c8129bdae37f8c6510453f274a32ac664c0/09ca5/images/article-assets/hugo-netlify/hugo-folder-structure.png
 ---
 
-Si vous faites du développement front-end, du CSS, du SVG et autres joyeusetés, vous connaissez sans doute déjà la talentueuse [Sara Soueidan](http://www.sarasoueidan.com/). Il se trouve que Sara a travaillé récemment sur la refonte de Smashing Magazine et [la migration de Wordpress à Hugo]({% post_url 2017-03-17-smashing-mag-va-dix-fois-plus-vite %}). Cette mission lui a permis de se familiariser avec Hugo et de découvrir au passage le service offert par [Netlify](https://www.netlify.com/), la nouvelle référence en terme d'hébergement d'applications statiques. Fatiguée des faibles temps de compilation proposés par Jekyll (dûs en grande partie à la lenteur de Kramdown, le parseur Markdown utilisé, et à ses traitements d'expressions régulières), Sara en a profité pour s'attaquer à la migration de son site perso. Comme beaucoup d'autres, elle a été immédiatement séduite par les performances proposées par Hugo, le générateur statique ultra-rapide et ultra-souple écrit en Go. Elle nous livre ici en détails le récit de cette migration qu'elle est bien contente d'avoir menée à bien. Puisse le partage son périple vous épargner de subir les mêmes écueils et vous aider à commencer à vous familiariser avec les concepts d'Hugo.
+Si vous faites du développement front-end, du CSS, du SVG et autres joyeusetés, vous connaissez sans doute déjà la talentueuse [Sara Soueidan](http://www.sarasoueidan.com/). Il se trouve que Sara a travaillé récemment sur la refonte de Smashing Magazine et [la migration de Wordpress à Hugo]({% post_url 2017-03-17-smashing-mag-va-dix-fois-plus-vite %}). Cette mission lui a permis de se familiariser avec Hugo et de découvrir au passage le service offert par [Netlify](https://www.netlify.com/), la nouvelle référence en terme d'hébergement d'applications statiques. Fatiguée des faibles temps de compilation proposés par Jekyll (dûs en grande partie à la lenteur de Kramdown, le parseur Markdown utilisé, et à ses traitements d'expressions régulières), Sara en a profité pour s'attaquer à la migration de son site perso. Comme beaucoup d'autres, elle a été immédiatement séduite par les performances proposées par Hugo, le générateur statique ultra-rapide et ultra-souple écrit en Go. Elle nous livre ici en détails le récit de cette migration qu'elle est bien contente d'avoir menée à bien. Puisse le partage de son périple vous épargner de subir les mêmes écueils et vous aider à commencer à vous familiariser avec les concepts d'Hugo.
 {: .intro }
 
-_Ces derniers mois, travailler sur mon site web s'est révélé être de plus en plus pénible, que ce soit pour continuer à le développer, itérer sur son design, écrire un article de blog ou mettre à jour mes pages conférences et ateliers. C'était du en partie à [Jekyll](https://jekyllrb.com/), le générateur de site statique que j'utilisais alors. Le vent du changement commençait à souffler…_
+_Ces derniers mois, travailler sur mon site web s'est révélé être de plus en plus pénible, que ce soit pour continuer à le développer, itérer sur son design, écrire un article de blog ou mettre à jour mes pages conférences et ateliers. C'était dû en partie à [Jekyll](https://jekyllrb.com/), le générateur de site statique que j'utilisais alors. Le vent du changement commençait à souffler…_
 
-Jekyll était devenu incroyablement lent et chaque changement entraîne une recompilation… C'est devenu tellement lent qu'**attendre que la compilation du site soit terminée est devenue une vraie torture, tellement chronophage qu'il fallait que je m'en débarrasse à tout prix**.
+Jekyll était devenu incroyablement lent et chaque changement entraîne une recompilation… C'était devenu tellement lent qu'**attendre que la compilation du site soit terminée est devenue une vraie torture, tellement chronophage qu'il fallait que je m'en débarrasse à tout prix**.
 
 On pourrait croire que j'exagère, mais je vous promets que non. Jekyll est devenu beaucoup trop lent. "Trop lent" est en réalité un euphémisme. Dernièrement chaque fois que je modifiais une propriété CSS ou que j'effectuais une modification du code HTML **je devais attendre jusqu'à cinq minutes pour que le changement soit pris en compte et compilé par Jekyll**. Encore une fois je n'exagère _pas_. Jekyll se figeait littéralement. Il fallait que je l'arrête en faisant CTRL-C pour débloquer la situation et que je le relance pour que les changements soient pris en compte et qu'il finisse par compiler. Et si j'effectuais beaucoup de changements d'affilée, le ventilateur de mon Macbook commençait à s'emballer comme un fou, l'ordinateur chauffait et faisait le bruit d'un avion sur le point de décoller. [^1]
 
 [^1]: NdT: Il est vrai que le temps de compilation de Jekyll peut excéder plusieurs minutes quand vous compilez des centaines de pages, cela dépend des plugins que vous utilisez et de l'optimisation de vos templates Liquid. À titre de comparaison, pour ce blog, il n'excède pas les 10 secondes par défaut et à peine plus d'une seconde avec l'option `incremental` activée.
 
-Je dirais que mon site est de taille modeste. J'ai moins d'une centaine de billets de blog, moins de 60 même à l'heure où j'écris cet article, et seulement quelques pages statiques. Je ne me repose pas beaucoup sur JavaScript. En fait, j'ai à peine besoin d'utiliser la moindre ligne de JavaScript. Et pourtant, Jekyll avait du mal à chaque fois qu'il devait compiler.
+Je dirais que mon site est de taille modeste. J'ai moins d'une centaine de billets de blog, même moins de 60 à l'heure où j'écris cet article, et seulement quelques pages statiques. Je ne me repose pas beaucoup sur JavaScript. En fait, j'ai à peine besoin d'utiliser la moindre ligne de JavaScript. Et pourtant, Jekyll avait du mal à chaque fois qu'il devait compiler.
 
 Oui, j'ai utilisé des options comme `--incremental` et toutes celles que l'on m'a recommandées pour accélérer le processus de compilation. Sans le moindre résultat.
 
@@ -31,7 +31,7 @@ Mais dernièrement, sachant que j'avais quelques semaines de libres pour faire c
 
 Comme je l'ai dit plus haut, une des raisons pour laquelle je n'ai pas changé de générateur plus tôt c'est parce que je ne savais pas lequel je voulais utiliser. Plusieurs personnes sur Twitter m'ont gentiment suggéré quelques-unes des nombreuses options disponibles. Mais aucune de ces options ne m'allait. Voyez-vous, chaque personne a son propre mode de fonctionnement et ses préférences lorsqu'il s'agit d'organiser ses fichiers, ses dossiers et son travail. Aucun des générateurs statiques que j'ai regardé n'avait ce que je recherchais pour mon site. Jusqu'à ce que quelqu'un me suggère de jeter un œil à [Hugo](https://gohugo.io).
 
-J'ai passé la documentation en revue quelques minutes, simplement pour me faire une idée de ce à quoi je pouvais m'attendre et de ce que Hugo avait à offrir - histoire d'avoir une première impression, à proprement parler. Après avoir lu la partie sur la structuration des contenus et leur organisation et appris comment Hugo offre la possibilité de créer plein de sections et de catégories de contenus différents, en plus de la souplesse générale qu'il procure, je me suis dit que c'était le générateur de site statique dont j'avais toujours rêvé et celui dont j'avais besoin. L'organisation et la structure ressemblait exactement à ce que j'avais pu imaginer pour mon propre site.
+J'ai passé la documentation en revue quelques minutes, simplement pour me faire une idée de ce à quoi je pouvais m'attendre et de ce que Hugo avait à offrir – histoire d'avoir une première impression, à proprement parler. Après avoir lu la partie sur la structuration des contenus et leur organisation et appris comment Hugo offre la possibilité de créer plein de sections et de catégories de contenus différents, en plus de la souplesse générale qu'il procure, je me suis dit que c'était le générateur de site statique dont j'avais toujours rêvé et celui dont j'avais besoin. L'organisation et la structure ressemblait exactement à ce que j'avais pu imaginer pour mon propre site.
 
 Mais ce qui m'a fait adopté Hugo plus que toute autre option, c'est de voir [à quel point il est rapide](https://novelist.xyz/tech/hugo-vs-jekyll-static-site-generator/) comparé à Jekyll. Non seulement chaque billet de blog que j'ai pu lire y est allé d'une comparaison qui atteste ce fait, mais j'ai aussi pu faire l'expérience de cette vitesse pour la première fois lorsque j'ai travaillé sur la [refonte de Smashing Magazine]({% post_url 2017-03-17-smashing-mag-va-dix-fois-plus-vite %}).
 
@@ -54,7 +54,7 @@ J'ai suivi les instructions présentes sur la page d'installation, mis à jour `
 
 J'ai parfois tendance à être une développeuse paresseuse. Mais ça a du bon car cela me pousse à trouver la manière la plus rapide et la plus simple de mener à bien une tâche. Et donc la première des choses que j'ai voulu faire a été de migrer automatiquement tous mes articles de blog dans Hugo sans avoir à repasser sur chacun des billets pour modifier le [front matter][front-matter]. (J'aurais vraisemblablement abandonné si j'avais dû faire cela 😅)
 
-Heureusement, depuis la version 0.15, Hugo offre [une commande pour migrer depuis Jekyll](https://gohugo.io/commands/hugo_import_jekyll/). Vous n'avez qu'à taper la ligne suivante dans le terminal  - en remplaçant `chemin_site_jekyll` et `repertoire_destination` par les chemins vers le répertoire utilisé actuellement pour votre site sous Jekyll et celui dans lequel vous voulez configurer votre nouveau site - et Hugo se chargera d'importer les fichiers de votre installation actuelle de Jekyll dans le répertoire qui contiendra votre site Hugo :
+Heureusement, depuis la version 0.15, Hugo offre [une commande pour migrer depuis Jekyll](https://gohugo.io/commands/hugo_import_jekyll/). Vous n'avez qu'à taper la ligne suivante dans le terminal  – en remplaçant `chemin_site_jekyll` et `repertoire_destination` par les chemins vers le répertoire utilisé actuellement pour votre site sous Jekyll et celui dans lequel vous voulez configurer votre nouveau site – et Hugo se chargera d'importer les fichiers de votre installation actuelle de Jekyll dans le répertoire qui contiendra votre site Hugo :
 
 ```sh
 hugo import jekyll chemin_site_jekyll repertoire_destination
@@ -71,7 +71,7 @@ L'étape suivante consiste à convertir vos modèles Jekyll en modèles Hugo et 
 
 Laissez-moi commencer en vous disant qu'à un moment donné pendant la migration, je ne faisais que modifier des trucs, changer des valeurs, des noms de fichiers, la structure, etc. dans l'espoir que les choses allaient marcher comme par magie et, quand ce n'était pas le cas, je me disais alors : "Je n'ai aucune idée de comment ou pourquoi ce truc marche". Et comme l'a dit quelqu'un sur Twitter, apparemment je ne suis pas la seule à avoir subi ce genre de choses avec Hugo. J'espère donc que cet (assez long) article aidera certains d'entre vous à passer à Hugo, et vous évitera au passage quelques maux de têtes.
 
-**Avertissement :** Il y a encore beaucoup de choses que je ne sais **pas encore** faire et où je me retrouve à parfois devoir chercher sur Internet. Mais j'ai acquis toutes les connaissances de base et de tout ce dont j'ai besoin **pour le moment** pour avoir un système fonctionnel, et oui, je sais comment et pourquoi tout ce qui marche maintenant marche de cette manière. Donc laissez-moi vous dévoiler tout ça. Je vous partagerai aussi les articles super utiles que j'ai trouvé  et qui m'ont également bien aidé. Prenez cet article comme un pense-bête, un ensemble de rappels, une note à mon futur moi à laquelle je devrai revenir si jamais j'ai besoin de revoir les bases.
+**Avertissement :** Il y a encore beaucoup de choses que je ne sais **pas encore** faire et où je me retrouve parfois à devoir chercher sur Internet. Mais j'ai acquis toutes les connaissances de base et de tout ce dont j'ai besoin **pour le moment** pour avoir un système fonctionnel, et oui, je sais comment et pourquoi tout ce qui marche maintenant marche de cette manière. Donc laissez-moi vous dévoiler tout ça. Je vous partagerai aussi les articles super utiles que j'ai trouvé  et qui m'ont également bien aidé. Prenez cet article comme un pense-bête, un ensemble de rappels, une note à mon futur moi à laquelle je devrai revenir si jamais j'ai besoin de revoir les bases.
 
 Notez bien que vous finirez sûrement par ne pas utiliser le même processus ou la même arborescence de fichiers que moi. Il est en effet peu probable que vous ayez exactement les mêmes types de contenus que moi. Il se peut aussi que vous trouviez une meilleure façon de faire que celle que j'utilise actuellement, et c'est tant mieux. Et si vous êtes déjà un pro de Hugo et que vous repérez des choses qui pourraient être réalisées d'une meilleure façon, ne vous gênez pas pour partager vos manières de faire avec le reste d'entre nous pour que nous puissions tous apprendre de vous.
 
@@ -107,7 +107,7 @@ Je ne rentrerai pas ici sur les différences entre les deux formats, la document
 
 ##### Définir (ou déclarer) les types de contenu
 
-Le [front matter][front-matter] de chaque page définit le type de page ou de contenu qui à son tour définit le type de modèle qui sera utilisé pour le rendu. Le type du page est défini par la variable `type`. Par exemple le front matter d'un article dans la section blog de mon site ressemble à ça:
+Le [front matter][front-matter] de chaque page définit le type de page ou de contenu qui à son tour définit le type de modèle qui sera utilisé pour le rendu. Le type de page est défini par la variable `type`. Par exemple le front matter d'un article dans la section blog de mon site ressemble à ça:
 
 
 ```html
@@ -125,7 +125,7 @@ date = ...
 Il est possible de créer des sous-sections de contenu depuis la version 0.24 d'Hugo ! Cela vous permet par exemple de créer des sous-sections _design_ et _développement_ dans la section _articles_ et bien bien plus. C'est une fonctionnalité intéressante.
 {: .notice .update }
 
-C'est une des choses que j'aime chez Hugo comparativement à Jekyll qui, _à ma connaissance_, n'offre pas de fonctionnalité similaire [^3]
+C'est une des choses que j'aime chez Hugo comparativement à Jekyll qui, _à ma connaissance_, n'offre pas de fonctionnalité similaire.[^3]
 
 [^3]: NdT: C'est inexact, Jekyll offre la possibilité de créer ses propres types de contenu avec les [collections](https://jekyllrb.com/docs/collections/).
 
@@ -151,8 +151,7 @@ Voyez-vous, chaque type de contenu est associé avec un certain type de mise en 
 
 Avant de faire cela, j'aimerais préciser quelque chose quant à la création de pages d'index pour différentes sections ou types de contenu.
 
-La section blog nécessite la présence d'un fichier `_index.md` dans le dossier `/content/blog/`. C'est le fichier d'index pour cette section (celui grâce auquel nous afficherons la liste de tous les articles). Le dossier `/content/blog/` hébergera également tous les billets de blog.
-. La capture d'écran suivante montre cela de façon plus visuelle :
+La section blog nécessite la présence d'un fichier `_index.md` dans le dossier `/content/blog/`. C'est le fichier d'index pour cette section (celui grâce auquel nous afficherons la liste de tous les articles). Le dossier `/content/blog/` hébergera également tous les billets de blog. La capture d'écran suivante montre cela de façon plus visuelle :
 
 {% include figure.html url="https://d33wubrfki0l68.cloudfront.net/37bc25dc5366c0b251c5b2c50edd8ca246b85f4f/36428/images/article-assets/hugo-netlify/section-type.png" description="Le contenu du dossier `/content/blog/`" %}
 
@@ -164,7 +163,7 @@ OK, créons maintenant quelques pages.
 
 La page d'accueil se crée en plaçant un fichier nommé `_index.md` dans le dossier `/content/` comme vous pouvez le voir dans la capture d'écran un peu plus haut.
 
-La page d'accueil est un peu spéciale, c'est la seule de toutes les autres pages qui nécessite d'avoir son propre modèle de mise en page dans le dossier `/layouts/` - nous parlerons de ces modèles plus en détail dans la prochaine section) et ce modèle de mise en page se nomme aussi `index.html`.
+La page d'accueil est un peu spéciale, c'est la seule de toutes les autres pages qui nécessite d'avoir son propre modèle de mise en page dans le dossier `/layouts/` – nous parlerons de ces modèles plus en détail dans la prochaine section – et ce modèle de mise en page se nomme aussi `index.html`.
 
 Vous définissez le type page dans le [front matter][front-matter] du fichier `/content/_index.md` et vous lui attribuez un titre ainsi qu'une description.
 
@@ -247,7 +246,7 @@ Je vous ai déjà dit que la `description` est utilisée dans le fichier partiel
 
 *La variable `menu` indique à Hugo que cette page doit avoir une entrée dans le menu principal.*{: .marker }
 
-*La variable `weight` est très utile pour vous aider à définir l'ordre d'affichage des liens dans le menu.*{: .marker } Si vous ne l'utilisez pas, Hugo utilisera son propre ordre par défaut - qui n'était pas celui que je souhaitais pour mon site. Vous pouvez également définir des valeurs négatives pour cette variable.
+*La variable `weight` est très utile pour vous aider à définir l'ordre d'affichage des liens dans le menu.*{: .marker } Si vous ne l'utilisez pas, Hugo utilisera son propre ordre par défaut – qui n'était pas celui que je souhaitais pour mon site. Vous pouvez également définir des valeurs négatives pour cette variable.
 
 Pour faire court, je vous renvoie une fois de plus à la documentation d'Hugo pour ce qui est de l'utilisation et de la configuration du menu principal. J'ajoute que certains aspects sont encore assez confus pour moi, mais comme je suis arrivée à faire ce que je voulais maintenant : je ne touche plus à rien, j'ai trop peur de casser un truc. Une fois de plus. 😂
 
@@ -265,11 +264,11 @@ Vous n'avez pas à écrire tout le HTML dans le fichier Markdown. Vous pouvez me
 
 Vous avez peut être remarqué sur la capture d'écran plus haut que j'ai aussi un dossier nommé `/archetypes/` à la racine de mon site. Ce dossier est lui aussi lié aux types de contenu que vous créez. Mais il a un but bien précis.
 
-Pour expliquer à quoi sert ce répertoire, je vais commencer par citer [la page correspondante de la documentation d'Hugo](https://hugodocs.info/content-management/archetypes/)
+Pour expliquer à quoi sert ce répertoire, je vais commencer par citer [la page correspondante de la documentation d'Hugo](https://hugodocs.info/content-management/archetypes/) :
 
 > Les archétypes vous permettent de créer de nouvelles instances de types de contenu et de définir des paramètres par défaut à partir de la ligne de commande.
 >
-> Les archétypes sont des fichiers de contenu stockés dans le répertoire `archetypes` de votre projet, qui contiennent un front matter pré-configuré pour les types de contenu de votre site web. Les archétypes facilitent la consistence des métadonnées des contenus à travers tout votre site et permettent aux auteurs de générer rapidement de nouvelles instances de type de contenu à l'aide de la commande `hugo new`
+> Les archétypes sont des fichiers de contenu stockés dans le répertoire `archetypes` de votre projet, qui contiennent un front matter pré-configuré pour les types de contenu de votre site web. Les archétypes facilitent la consistance des métadonnées des contenus à travers tout votre site et permettent aux auteurs de générer rapidement de nouvelles instances de type de contenu à l'aide de la commande `hugo new`
 >
 > Hugo est capable de déduire l'archétype approprié à l'aide de la section de contenu passée en argument de la commande `new` :
 >
@@ -293,11 +292,11 @@ Notez aussi que les autres archétypes que j'ai défini dans le répertoire `arc
 
 ##### Présenter le contenu avec les modèles de page et créer une page d'index pour les billets
 
-C'est la partie avec laquelle j'ai eu le plus de mal au début. Comment est-ce que je sais que tel modèle est utilisé pour telle section ? Comment est-ce que je sais de combien de modèles j'ai besoin ? Et est-ce qu'il y en a vraiment besoin de modèle ?
+C'est la partie avec laquelle j'ai eu le plus de mal au début. Comment est-ce que je sais que tel modèle est utilisé pour telle section ? Comment est-ce que je sais de combien de modèles j'ai besoin ? Et est-ce qu'il y a vraiment besoin de modèle ?
 
 J'ai pas mal trifouillé et cherché sur le net, puis j'ai passé le plus clair de mon temps à faire des essais, jusqu'à avoir des modèles qui fonctionnent bien. Puis j'ai tout cassé et refait les choses pour comprendre quand et comment ça fonctionnait. Je peux maintenant affirmer avec assurance que j'ai bien compris tout ça.
 
-En général, pour un blog très simple, vous n'aurez besoin que de deux modèles par défaut : `list.html` and `single.html`.
+En général, pour un blog très simple, vous n'aurez besoin que de deux modèles par défaut : `list.html` et `single.html`.
 
 Le modèle `list.html` aura pour mission d'afficher des listes d'éléments, comme sur la page d'index où sont affichées la liste de vos billets de blog.
 
@@ -333,7 +332,7 @@ dans lequel le contenu est récupéré à partir des fichiers Markdown respectif
 
 Maintenant pour créer une page d'index pour une liste d'éléments, comme la page de blog et les articles listés ou la page d'ateliers et les pages de détails des ateliers, on procède de manière très similaire.
 
-De la même manière que nous avons crée un répertoire pour le type de contenu qui porte le même nom que le `type` lui-même, nous créons un répertoire pour chaque autre type de contenu que nous avons défini à l'aide de notre arborescence de dossiers et nous donnons à ce répertoire le même nom que celui du dossier présent dans le dossier `content`.
+De la même manière que nous avons créé un répertoire pour le type de contenu qui porte le même nom que le `type` lui-même, nous créons un répertoire pour chaque autre type de contenu que nous avons défini à l'aide de notre arborescence de dossiers et nous donnons à ce répertoire le même nom que celui du dossier présent dans le dossier `content`.
 
 Ou si vous préférez : de la même manière que nous avons crée un dossier dans le répertoire `layouts/` du même nom que le `type` de contenu, nous créons un dossier pour chaque section de contenu (`blog`, `ateliers`, `etudes-de-cas`, etc.) de manière à obtenir une structure de dossiers similaire dans `layouts` à celle que nous avons dans `/content/`.
 
@@ -353,7 +352,7 @@ De la même manière, toutes les autres sections possèdent leur propre réperto
 
 Encore une fois vous n'avez pas réellement besoin de tous ces modèles. Et vous aurez peut-être remarqué que quelques-unes des pages sont en tout point similaires à l'exception de leur nom. Si je fais ça, c'est uniquement pour des raisons de flexibilité future. Si jamais je veux changer le modèle de l'un des types de section, j'aurai simplement à modifier son modèle correspondant. Si votre site est plus simple et n'utilise pas autant de types de contenus, vous n'avez surement pas besoin de créer autant de modèles que moi.
 
-La seule exception à la structuration des répertoires de modèles c'est la page d'accueil, dont le modèle de mise en page est placé à la racine du répertoire `/layouts/` et se nomme `ìndex.html`.
+La seule exception à la structuration des répertoires de modèles c'est la page d'accueil, dont le modèle de mise en page est placé à la racine du répertoire `/layouts/` et se nomme `index.html`.
 
 Il est important de vérifier l'ordre dans lequel Hugo va choisir le modèle à utiliser pour chaque page. Je vous le recommande vivement.
 
@@ -446,7 +445,7 @@ Et pour ce qui est du fichier partiel `pagination.html`, le mien ressemble pour 
 {% endraw %}
 ```
 
-Libre à vous d'aller en apprendre plus sur les variables. Je trouve que le code ci-dessus est comprehensible tel quel, mais encore une fois, si vous avez besoin de plus de fonctionnalité, la documentation et le forum vous seront probablement d'une plus grande aide.
+Libre à vous d'aller en apprendre plus sur les variables. Je trouve que le code ci-dessus est comprehensible tel quel, mais encore une fois, si vous avez besoin de plus de fonctionnalités, la documentation et le forum vous seront probablement d'une plus grande aide.
 
 #### Créer une page d'archive
 
@@ -483,11 +482,11 @@ J'avais choisi d'héberger mon site avec GitHub Pages depuis quelques années. P
 
 Maintenant, je ne suis pas certaine que c'était vraiment un problème de cache, bien que ça y ressemblait beaucoup. Je ne sais pas non plus si quelqu'un d'autre est capable de reproduire ce problème. Et non, je n'ai pas contacté le support de GitHub à ce sujet. Je détestais tellement mon site Web que je me suis dit "j'ai déjà assez bien de problèmes en local pour me soucier de ce problème en production", j'en ai donc fait totalement abstraction.
 
-J'ai pu aussi me rendre compte de l'ultra-rapidité de [Netlify](https://www.netlify.com/) quand j'ai travaillé sur Smashing Magazine. De plus, Netlify permet de "rendre votre site ou votre application web bien plus rapide en la servant au plus près des utilisateurs. Au lieu d'un serveur unique, vous déployez sur un réseau global de noeuds CDN intelligents, qui gère aussi l'unicité des assets, la mise en cache automatique des entêtes, les redirections et les réécritures intelligentes."
+J'ai pu aussi me rendre compte de l'ultra-rapidité de [Netlify](https://www.netlify.com/) quand j'ai travaillé sur Smashing Magazine. De plus, Netlify permet de "rendre votre site ou votre application web bien plus rapide en la servant au plus près des utilisateurs. Au lieu d'un serveur unique, vous déployez sur un réseau global de nœuds CDN intelligents, qui gère aussi l'unicité des assets, la mise en cache automatique des entêtes, les redirections et les réécritures intelligentes."
 
 Et en plus de tout ça, si vous êtes un développeur et que vous travaillez en open source, Netlify vous offre un abonnement Pro à vie. Tout ce qu'ils demandent en retour est un lien vers Netlify sur votre site ou votre application. Pour moi ce ne fut pas un problème vu que je mentionne toujours où mon site est hébergé dans le bas de page. J'ai donc signé pour la formule Pro. Un hébergement gratuit et rapide ! Woohoo !
 
-La configuration de son site se fait en quelques clics :
+La configuration de votre site se fait en quelques clics :
 
 -   Créer un compte sur [netlify.com](https://netlify.com)
 -   Relier son compte Netlify à son dépôt de code. Le mien est hébergé sur GitHub, j'ai pu le connecter depuis l'interface de Netlify.
@@ -498,7 +497,7 @@ La configuration de son site se fait en quelques clics :
 
 Je devrais probablement mentionner le fait que j'ai rencontré quelques difficultés lorsque j'ai fait la bascule, mais ce n'était pas de la faute de Netlify. L'équipe de Netlify a même été super et m'a aidée à déboguer les problèmes que je rencontrais. Après avoir effectué les changements dans la console du registrar de mon domaine, cela a pris quelques heures pour que mon site soit en ligne avec mon nom de domaine personnalisé.
 
-Quelques trucs bons à savoir :
+Quelques bons trucs à savoir :
 
 -   Ajouter votre dossier `/public/` à votre fichier `.gitignore`. Netlify va lancer la génération de votre site sur ses serveurs. Pour éviter de possibles conflits, ne versionnez pas votre dossier de destination dans votre dépôt. Le mien n'est présent que sur ma machine. Je rencontrais des problèmes de rendus avec certains templates quand je le versionnais auparavant.
 -   Vérifiez bien la version d'Hugo que vous utilisez (`hugo version`) et celle utilisée par Netlify. Au début j'ai eu droit à des erreurs de build qui empêchaient le déploiement car ma version était plus récente que celle de Netlify. Si c'est le cas [ajoutez une variable d'environnement à votre site](https://www.netlify.com/blog/2017/04/11/netlify-plus-hugo-0.20-and-beyond/) qui correspond à la version d'Hugo que vous utilisez localement.
@@ -521,11 +520,11 @@ J'ai constaté quelques améliorations et plus de A verts sur la page de résult
 -   Déploiement automatiquement à chaque `push` sur le dépôt grâce à Netlify,
 -   Hébergée gratuitement chez Netlify avec le plan Open Source.
 
-Il est également utilise de mentionner que désormais la compilation complète de mon site après chaque changement, sans avoir à filtrer de vieux contenus, prend à Hugo moins de 40 secondes. **Hugo met 39s pour être plus précis**, là où Jekyll, même avec des options comme `--incremental` mettait plusieurs **minutes**.
+Il est également utile de mentionner que désormais la compilation complète de mon site après chaque changement, sans avoir à filtrer de vieux contenus, prend à Hugo moins de 40 secondes. **Hugo met 39ms pour être plus précis**, là où Jekyll, même avec des options comme `--incremental` mettait plusieurs **minutes**.
 
 ### Objectifs futurs
 
-On retrouve ici quelques unes des choses qui figurent sur ma TODO liste depuis quelques années et que j'avais jusqu'ici remis à plus tard, en partie à cause de la situation dans laquelle je me trouvais précédemment avec Jekyll  :
+On retrouve ici quelques-unes des choses qui figurent sur ma TODO liste depuis quelques années et que j'avais jusqu'ici remis à plus tard, en partie à cause de la situation dans laquelle je me trouvais précédemment avec Jekyll  :
 
 -   **Lancer une mailing list.** C'est prévu d'ici la fin du mois.
 -   Une nouvelle section pour les articles qui ne rentrent pas dans la section des articles techniques.
