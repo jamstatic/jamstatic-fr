@@ -1,0 +1,4 @@
+baseURL: https://jamstatic.fr
+disablePathToLower: true
+languageCode: en-us
+title: Jamstatic

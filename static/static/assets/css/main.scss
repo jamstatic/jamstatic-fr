@@ -1,0 +1,30 @@
+---
+---
+
+@charset "utf-8";
+
+@import "normalize",
+        "variables",
+        "mixins",
+        "base",
+        "utilities",
+        "typography",
+        "layout",
+        "syntax-highlighting",
+        "print"
+;
+
+
+figure {
+  display: block;
+  margin-top: $base-line-height * 2em;
+}
+
+figure > img {
+  margin: 0 auto .5em;
+}
+
+figcaption {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+}

@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: jamstatic/jamstatic-fr
+  branch: master
+
+publish_mode: editorial_workflow
+
+media_folder: "assets/images"
+
+collections:
+  - name: "Articles"
+    label: "Articles"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: # The fields for each document, usually in front matter
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Auteur", name: "author", widget: "string"}
+      - {label: "Twitter Card", name: "image", widget: "image"}
+      - {label: "Texte", name: "body", widget: "markdown"}
