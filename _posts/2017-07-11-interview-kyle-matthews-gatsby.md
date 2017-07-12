@@ -1,7 +1,9 @@
 ---
 title: Questions au créateur de Gatsby
-description: Entretien avec Kyle Mathews, le créateur de Gatsby, un générateur de site statique basé sur React
-image: /assets/images/gatsby/architecture.png
+date: 2017-07-11 00:00:00 +02:00
+description: Entretien avec Kyle Mathews, le créateur de Gatsby, un générateur de
+  site statique basé sur React
+image: "/assets/images/gatsby/architecture.png"
 ---
 
 Après deux ans de développement, Gatsby vient de passer en version 1.0.
