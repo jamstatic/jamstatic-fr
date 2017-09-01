@@ -13,17 +13,17 @@ source:
 C'est fou tout ce qu'on peut faire avec un générateur de site, des APis et du JavaScript. Et rien de mieux qu'un exemple parlant de mise en place d'une boutique de e-commerce pour illustrer les possibilités qui vous sont offertes. Dans cet exemple nous utiliserons le service [Snipcart](https://snipcart.com/) pour la gestion du panier d'achat et [Hugo](https://gohugo.io/) pour générer le site à la vitesse de l'éclair.
 {: .intro }
 
-> Pressé ? Passez directement au [tutoriel](#tutoriel) ou [à la démo au code dispo sur GitHub](#demo-repo).
+> Pressé ? Passez directement au [tutoriel](#tutoriel) ou [à la démo et au code dispo sur GitHub](#demo-repo).
 
 Il est temps de nous plonger à nouveau dans le monde en perpétuel mouvement de la [JAMstack](https://frank.taillandier.me/2016/05/21/la-jamstack/) et du développement web statique. Nos articles précédents sur la gestion d'un site e-commerce avec des générateurs de site statique comme [Middleman](https://snipcart.com/blog/static-site-e-commerce-integrating-snipcart-with-middleman) et [Jekyll](https://snipcart.com/blog/static-site-e-commerce-part-2-integrating-snipcart-with-jekyll) ont eu pas mal de succès, alors pourquoi s'arrêter en si bon chemin ?
 
 Mesdames et messieurs, aujourd'hui nous allons une fois de plus vous montrer combien il est facile de configurer la partie e-commerce sur des sites statiques. Et cette fois, nous allons le faire en vous proposant un tutoriel complet pour [Hugo](https://gohugo.io/).
 
-Dans ce tutotiel nous verrons :
+Dans ce tutoriel nous verrons :
 
 1. Comment générer votre site statique avec le générateur de site Hugo,
 2. Comment y intégrer ensuite facilement le panier d'achat de la plate-forme Snipcart,
-3. Comment déployer votre site ecommerce sur Netlify.
+3. Comment déployer votre site e-commerce sur Netlify.
 
 Mais d'abord un petit mot sur l'outil central que nous allons utiliser pour faire ceci.
 
@@ -164,7 +164,7 @@ Nous allons récupérer les produits depuis le fichier JSON que nous avons cré�
 Comme vous pouvez voir, nous importons aussi les fichiers  **header.html**, **footer.html** et
 **product.html**. Nous verrons ce qu'ils contiennent en détail.
 
-Avant d'aller plus loin, allons d'abord dans le répertoire `layouts` et créons un dossier `partials`. Si les fichiers partiels ne se trouvent pas dans ce dossier, Hugo ne sera pas capable de les trouver lorsque nous les déclarerons à l'aide de la syntaxe `{{ partial ... }}`. L'autre chose importante à savoir est pourquoi nous avons mis un point `.` après `product.html`. Cela siginifie que nous incluons les données du produit courant dans le modèle `product.html`.
+Avant d'aller plus loin, allons d'abord dans le répertoire `layouts` et créons un dossier `partials`. Si les fichiers partiels ne se trouvent pas dans ce dossier, Hugo ne sera pas capable de les trouver lorsque nous les déclarerons à l'aide de la syntaxe `{{ partial ... }}`. L'autre chose importante à savoir est pourquoi nous avons mis un point `.` après `product.html`. Cela signifie que nous incluons les données du produit courant dans le modèle `product.html`.
 
 ##### layouts/partials/header.html
 
