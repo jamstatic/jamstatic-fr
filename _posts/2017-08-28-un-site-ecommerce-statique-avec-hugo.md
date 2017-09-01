@@ -13,21 +13,19 @@ source:
 C'est fou tout ce qu'on peut faire avec un générateur de site, des APis et du JavaScript. Et rien de mieux qu'un exemple parlant de mise en place d'une boutique de e-commerce pour illustrer les possibilités qui vous sont offertes. Dans cet exemple nous utiliserons le service [Snipcart](https://snipcart.com/) pour la gestion du panier d'achat et [Hugo](https://gohugo.io/) pour générer le site à la vitesse de l'éclair.
 {: .intro }
 
-> Pressé ? Passez directement au [tutoriel](#tutoriel) ou [à la démo et au code dispo sur GitHub](#demo-repo).
+> Pressé ? Passez directement au [tutoriel](#tutoriel) ou [à la démo au code dispo sur GitHub](#demo-repo).
 
-Il est temps de nous plonger à nouveau dans le monde en perpétuel mouvement de la [JAMstack](https://frank.taillandier.me/2016/05/21/la-jamstack/) et du développement web statique. Nos articles précédents sur la gestion d'un site e-commerce avec des générateurs de site statique comme
-[Middleman](https://snipcart.com/blog/static-site-e-commerce-integrating-snipcart-with-middleman)
-et [Jekyll](https://snipcart.com/blog/static-site-e-commerce-part-2-integrating-snipcart-with-jekyll) ont eu pas mal de succès, alors pourquoi s'arrêter en si bon chemin ?
+Il est temps de nous plonger à nouveau dans le monde en perpétuel mouvement de la [JAMstack](https://frank.taillandier.me/2016/05/21/la-jamstack/) et du développement web statique. Nos articles précédents sur la gestion d'un site e-commerce avec des générateurs de site statique comme [Middleman](https://snipcart.com/blog/static-site-e-commerce-integrating-snipcart-with-middleman) et [Jekyll](https://snipcart.com/blog/static-site-e-commerce-part-2-integrating-snipcart-with-jekyll) ont eu pas mal de succès, alors pourquoi s'arrêter en si bon chemin ?
 
-Mesdames et messieurs, aujourd'hui nous allons une fois de plus vous montrer combien il est facile de configurer la partie e-commerce sur des sites statiques. Et cette fois nous allons le faire en vous proposant un tutoriel complet pour [Hugo](https://gohugo.io/).
+Mesdames et messieurs, aujourd'hui nous allons une fois de plus vous montrer combien il est facile de configurer la partie e-commerce sur des sites statiques. Et cette fois, nous allons le faire en vous proposant un tutoriel complet pour [Hugo](https://gohugo.io/).
 
-Dans ce tutoriel nous verrons :
+Dans ce tutotiel nous verrons :
 
 1. Comment générer votre site statique avec le générateur de site Hugo,
 2. Comment y intégrer ensuite facilement le panier d'achat de la plate-forme Snipcart,
-3. Comment déployer votre site e-commerce sur Netlify.
+3. Comment déployer votre site ecommerce sur Netlify.
 
-Mais d'abord un petit mot sur l'outil central que nous allons utiliser pour cela.
+Mais d'abord un petit mot sur l'outil central que nous allons utiliser pour faire ceci.
 
 ## Hugo : un générateur de site statique super rapide
 
@@ -48,22 +46,21 @@ Mais d'abord un petit mot sur l'outil central que nous allons utiliser pour cela
 </svg>
 </figure>
 
-**Hugo** peut évoquer des choses différentes selon les personnes. Les grands lecteurs penseront à l'auteur légendaire des Misérables. Les cinéphiles penseront au petit garçon dans le film de Scorcese de 2011. Mais si vous êtes un **développeur** (il y a de grandes chances que ce soit le cas si vous lisez ces lignes), ça devrait plutôt vous évoquer ceci : un moteur de site statique moderne et **rapide comme l'éclair**.
+Le nom **Hugo** peut véhiculer différents sens selon les personnes. Les grands lecteurs penseront à l'auteur légendaire des Misérables. Les cinéphiles penseront au petit garçon dans le film de Scorcese de 2011. Mais si vous êtes un **développeur** (il y a de grandes chances que ce soit le cas si vous lisez ces lignes), ça devrait plutôt vous évoquer ceci : un moteur de site statique moderne et **rapide comme l'éclair**.
 
-Écrit en [Go](https://golang.org/) par Steve Francia alias  [**spf13**](https://twitter.com/spf13) et Bjørn Erik Pedersen alias [**Bep**](https://github.com/bep), Hugo se révèle être, d'après notre expérience, une des manières les plus efficaces de générer, de gérer et de mettre à jour des sites statiques modernes. Il s'installe facilement sur toutes les plate-formes, de plus vous pouvez l'héberger n'importe où — nous vous recommandons [Netlify](https://www.netlify.com/blog/2016/09/21/a-step-by-step-guide-victor-hugo-on-netlify/) comme nous le verrons tout à l'heure. Et les temps de génération sont imbattables — environ \~1 ms
-par page. Si vous aimez la performance web comme nous, vous allez à n'en pas douter adorer ce générateur de site en Go.
+Écrit en [Go](https://golang.org/) par Steve Francia alias  [**spf13**](https://twitter.com/spf13) et Bjørn Erik Pedersen alias [**Bep**](https://github.com/bep), Hugo se révèle être, d'après notre expérience, une des manières les plus efficaces de générer, de gérer et de mettre à jour des sites statiques modernes. Il s'installe facilement sur toutes les plate-formes, de plus vous pouvez l'héberger n'importe où — nous vous recommandons [Netlify](https://www.netlify.com/blog/2016/09/21/a-step-by-step-guide-victor-hugo-on-netlify/) comme nous le verrons tout à l'heure. Et les temps de génération sont imbattables — environ \~1 ms par page. Si vous aimez la performance web comme nous, vous allez à n'en pas douter adorer ce générateur de site en Go.
 
-Aujourd'hui, nous allons voir comment utiliser Snipcart et Hugo pour réaliser une boutique en ligne Star Trek sur un site statique. Pourquoi Star Trek me direz vous ? Parce que [nous l'avons déjà fait pour Star Wars](https://snipcart.com/blog/integrating-snipcart-with-kirby-cms-to-enable-e-commerce).
+Aujourd'hui, nous allons voir comment utiliser Snipcart et Hugo pour réaliser une boutique en ligne Star Trek sur un site statique. Pourquoi Star Trek me direz-vous ? Parce que [nous l'avons déjà fait pour Star Wars](https://snipcart.com/blog/integrating-snipcart-with-kirby-cms-to-enable-e-commerce).
 
-> *Psst*: Si vous vous demandez encore ce que sont les générateurs de site statique et pourquoi il faut vous y intéresser, jetez vous sur  [l'intro d'Eduardo Boucas](https://davidwalsh.name/introduction-static-site-generators).
+> *Psst*: Si vous vous demandez encore ce que sont les générateurs de site statique et pourquoi il faut vous y intéresser, jetez-vous sur [l'intro d'Eduardo Bouças](https://davidwalsh.name/introduction-static-site-generators).
 
 ## Tutoriel Hugo : site, produits, modèles et déploiement {#tutoriel}
 
 ### 1. Installer Hugo et générer votre nouveau site web statique
 
-Nous allons commencer par installer le générateur sur votre ordinateur et créer un nouveau site web. Cela vous prendra moins peut-être 10 minutes en suivant la [documentation pour démarrer avec Hugo](https://gohugo.io/getting-started/quick-start/), ou juste **2 minutes** si vous êtes aussi rapide que Dan Hersam.
+Nous allons commencer par installer le générateur sur votre ordinateur et créer un nouveau site web. Cela vous prendra peut-être 10 minutes en suivant la [documentation pour démarrer avec Hugo](https://gohugo.io/getting-started/quick-start/), ou juste **2 minutes** si vous êtes aussi rapide que Dan Hersam.
 
-Une fois que vous avez téléchargé [Hugo sur GitHub](https://github.com/spf13/hugo/releases), l'installation est très rapide, comme vous le montre la [documentation](https://gohugo.io/getting-started/installing#quick-install). Concentrons nous donc sur la création du nouveau site à l'aide d'Hugo.
+Une fois que vous avez téléchargé [Hugo sur GitHub](https://github.com/spf13/hugo/releases), l'installation est très rapide, comme vous montre la [documentation](https://gohugo.io/getting-started/installing#quick-install). Concentrons-nous donc sur la création du nouveau site à l'aide d'Hugo.
 
 Nous n'avons qu'à utiliser la ligne de commande prévue à cet effet:
 
@@ -84,31 +81,31 @@ Cette commande va générer un squelette de base pour votre projet. Votre réper
     ├───static
     └───themes
 
-Les options de configuration se trouvent dans le fichier `config.toml`. Nous n'aurons pas à nous plonger trop dedans, vu que nous allons nous contenter de faire au plus simple pour ce qui est du site.
+Les options de configuration se trouvent dans le fichier `config.toml`. Nous n'aurons pas à nous plonger trop dedans vu que nous allons nous contenter de faire au plus simple pour ce qui est du site.
 
 Pas la peine de nous plonger dans les [rouages internes d'Hugo](https://gohugo.io/documentation/) ici.
 
-En gros, dans ce tutorial, nous allons créer des fichiers dans le répertoire `data`, qui a pour but de stocker des données additionnelles qui peuvent être utilisées lors de la génération du site.
+En gros, dans ce tutorial, nous allons créer des fichiers dans le répertoire `data` qui a pour but de stocker des données additionnelles qui peuvent être utilisées lors de la génération du site.
 
 Nous allons aussi ajouter quelques modèles dans le dossier `layouts`, l'endroit où les modèles Hugo sont stockés par défaut.
 
-Le dossier `static` peut être utiliser pour stocker des fichiers de type CSS, JavaScript ou bien encore des images. Dans notre démo, nous ajouterons un dossier `images` qui contiendra les images des produits.
+Le dossier `static` peut être utilisé pour stocker des fichiers de type CSS, JavaScript ou bien encore des images. Dans notre démo, nous ajouterons un dossier `images` qui contiendra les images des produits.
 
-Naturellement, il est préférable que vous vous soyez déjà un peu familiariser avec la documentation d'Hugo avant de vous attaquer à l'intégration complète de Snipcart.
+Naturellement, il est préférable que vous soyez déjà un peu familiarisé avec la documentation d'Hugo avant de vous attaquer à l'intégration complète de Snipcart.
 
 **Les thèmes**
 
-Nous avons décidé de ne pas installer de thème particulier pour cette démo (nous utiliserons un framework CSS pour mettre en forme notre site plus tard), mais il existe plusieurs thèmes open source à disposition. [Cet article](https://code.tutsplus.com/tutorials/make-creating-websites-fun-again-with-hugo-the-static-website-generator-written-in-go--cms-27319) montre comment installer des thèmes pour votre site Hugo, peut-être voudrez vous y jeter un œil. Il explique aussi plus en détail la création basique de site avec Hugo (Hello World, Blog, Galerie Photo, etc.)
+Nous avons décidé de ne pas installer de thème particulier pour cette démo (nous utiliserons un framework CSS pour mettre en forme notre site plus tard), mais il existe plusieurs thèmes open source à disposition. [Cet article](https://code.tutsplus.com/tutorials/make-creating-websites-fun-again-with-hugo-the-static-website-generator-written-in-go--cms-27319) montre comment installer des thèmes pour votre site Hugo, peut-être voudrez-vous y jeter un œil. Il explique aussi plus en détail la création basique de site avec Hugo (Hello World, Blog, Galerie Photo, etc.).
 
-Vous pouvez aussi aller parcourir l'annuaire officiel de [quelques uns des meilleurs thèmes pour Hugo](http://themes.gohugo.io/).
+Vous pouvez aussi aller parcourir l'annuaire officiel de [quelques-uns des meilleurs thèmes pour Hugo](http://themes.gohugo.io/).
 
 ### 2. Créer un fichier JSON statique pour les produits de notre boutique
 
-Okay, passons donc à la configuration de nos produits : un dictionnaire Klingon et un pistolet laser. Nous **aurions pu** utiliser un CMS headless ou statique pour cette partie (comme nous l'avons déjà [fait](https://www.siteleaf.com/blog/jamstack-ecommerce/) [auparavant](https://www.contentful.com/blog/2016/02/10/snipcart-middleman-contentful/))
+Okay, passons donc à la configuration de nos produits : un dictionnaire Klingon et un pistolet laser. Nous **aurions pu** utiliser un CMS headless ou statique pour cette partie (comme nous l'avons déjà [fait](https://www.siteleaf.com/blog/jamstack-e-commerce/) [auparavant](https://www.contentful.com/blog/2016/02/10/snipcart-middleman-contentful/))
 
 Vu le modeste objectif de cet article, nous allons simplement créer un fichier `.json` statique pour référencer nos produits.
 
-Hugo propose une super fonction appelée `getJSON` qui est bien utile lorsque vos données proviennent d'un CMS Headless ou de n'importe quelle API qui retourne du JSON. Ici comme notre fichier JSON est directement stocké dans le dossier `data` nous aurions pu nous contenter d'utiliser `.Site.Data.Products` à place, mais nous voulions vous monter qu'il était possible d'interagir avec des APIs externes.
+Hugo propose une super fonction appelée `getJSON` qui est bien utile lorsque vos données proviennent d'un CMS Headless ou de n'importe quelle API qui retourne du JSON. Ici, comme notre fichier JSON est directement stocké dans le dossier `data`, nous aurions pu nous contenter d'utiliser `.Site.Data.Products` à place, mais nous voulions vous monter qu'il était possible d'interagir avec des APIs externes.
 
 Nous allons devoir ajouter un nouveau fichier `products.json` dans le dossier `data`.
 
@@ -132,7 +129,7 @@ Nous allons devoir ajouter un nouveau fichier `products.json` dans le dossier `d
 
 ### 3. Genération des modèles pour Hugo
 
-La prochaine étape consiste à configurer les différents modèles pour notre site. Le plus important est le modèle d'entête, où nous ajouterons [les dépendances pour Snipcart](https://docs.snipcart.com/getting-started/installation).
+La prochaine étape consiste à configuer les différents modèles pour notre site. Le plus important est le modèle d'en-tête où nous ajouterons [les dépendances pour Snipcart](https://docs.snipcart.com/getting-started/installation).
 
 Nous allons aussi créer un modèle principal dans lequel nous bouclerons sur nos produits pour en afficher une courte description et où nous ajouterons un bouton Snipcart "Ajouter au panier".
 
@@ -162,16 +159,16 @@ Dans le répertoire `layouts` nous allons ajouter un nouveau modèle **index.htm
 
 Nous avons mentionné la méthode `getJSON` un peu plus haut, nous allons l'utiliser dans notre modèle de page `index.html`.
 
-Nous allons récupérer les produits depuis le fichier JSON que nous avons crée un peu plus tôt, puis nous allons boucler sur chaque produit pour appeler le fichier de modèle partiel `product.html` qui va être chargé du rendu.
+Nous allons récupérer les produits depuis le fichier JSON que nous avons créé un peu plus tôt, puis nous allons boucler sur chaque produit pour appeler le fichier de modèle partiel `product.html` qui va être chargé du rendu.
 
 Comme vous pouvez voir, nous importons aussi les fichiers  **header.html**, **footer.html** et
 **product.html**. Nous verrons ce qu'ils contiennent en détail.
 
-Avant d'aller plus loin, allons d'abord dans le répertoire `layouts` et créons un dossier `partials`. Si les fichiers partiels ne se trouvent pas dans ce dossier, Hugo ne sera pas capable de les trouver lorsque nous les déclarerons à l'aide de la syntaxe `{{ partial ... }}`. L'autre chose importante à savoir pourquoi nous avons mis un point `.` après `product.html`. Cela signifie que nous incluons les données du produit courant dans le modèle `product.html`.
+Avant d'aller plus loin, allons d'abord dans le répertoire `layouts` et créons un dossier `partials`. Si les fichiers partiels ne se trouvent pas dans ce dossier, Hugo ne sera pas capable de les trouver lorsque nous les déclarerons à l'aide de la syntaxe `{{ partial ... }}`. L'autre chose importante à savoir est pourquoi nous avons mis un point `.` après `product.html`. Cela siginifie que nous incluons les données du produit courant dans le modèle `product.html`.
 
 ##### layouts/partials/header.html
 
-Comme nous vous l'avons déjà dit, ce fichier est le plus important. C'est un simple fichier d'entête HTML qui va appeler les dépenses pour Snipcart. Ajoutez-le dans le dossier `layouts/partials`.
+Comme nous vous l'avons déjà dit, ce fichier est le plus important. C'est un simple fichier d'entête HTML qui va appeler les dépendances pour Snipcart. Ajoutez-le dans le dossier `layouts/partials`.
 
 ```html
 <!DOCTYPE html>
@@ -204,8 +201,7 @@ Comme nous vous l'avons déjà dit, ce fichier est le plus important. C'est un s
   </div>
 ```
 
-Nous avons choisi d'utiliser le framework
-[MaterializeCSS](http://materializecss.com) pour cette démo, mais vous pouvez bien entendu utiliser celui de votre choix. Celui-ci est assez simple à intégrer et fournit suffisamment de composants pour mettre en place quelque chose de pas trop mal.
+Nous avons choisi d'utiliser le framework [MaterializeCSS](http://materializecss.com) pour cette démo, mais vous pouvez bien entendu utiliser celui de votre choix. Celui-ci est assez simple à intégrer et fournit suffisament de composants pour mettre en place quelque chose de pas trop mal.
 
 Vous pouvez également voir que les fichiers requis par Snipcart sont appelés dans ce fichier et que nous avons ajouté un [raccourci vers le panier d'achat](https://docs.snipcart.com/getting-started/the-cart#adding-a-cart-summary) pour que les client puissent accéder à leur commande en cours.
 
@@ -273,13 +269,13 @@ Enfin, nous allons devoir générer le modèle qui va afficher le détail d'un p
 
 Puisque nous passons le produit en cours dans notre modèle **index.html**, nous pouvons maintenant accéder à tous les champs des données de notre fichier `JSON`. Ici, je les utilise pour renseigner les champs nécessaires pour le bouton d'achat Snipcart et pour ajouter le titre et la description du produit.
 
-Il est temps de lancer Hugo et regarder à quoi ressemble ce site fantaisiste !
+Il est temps de lancer Hugo et de regarder à quoi ressemble ce site fantaisiste !
 
 ```
 hugo server
 ```
 
-(Je garde ma capture d'écran de notre boutique Start Trek pour la fin, tenez vous prêts)
+(Je garde ma capture d'écran de notre boutique Star Trek pour la fin, tenez-vous prêts)
 
 ### 4. Configuration du déploiement d'Hugo sur Netlify
 
@@ -287,13 +283,13 @@ Dernier point et non des moindres : héberger tout ça !
 
 Nous avons choisi de déployer notre démo avec Hugo à l'aide de l'extraordinaire service de nos amis de chez [Netlify](https://netlify.com).
 
-Avant de toucher à quoi que de soit dans Netlify, je vous suggère de créer un fichier `.gitkeep` dans votre dossier `content`. Ce dossier est requis par Netlify pour générer le site. Et comme nous n'avons pas déposer de fichiers dedans, Git ne va pas le prendre en compte.
+Avant de toucher à quoi que ce soit dans Netlify, je vous suggère de créer un fichier `.gitkeep` dans votre dossier `content`. Ce dossier est requis par Netlify pour générer le site. Et comme nous n'avons pas déposer de fichiers dedans, Git ne va pas le prendre en compte.
 
-Une fois le fichier `.gitkeep` ajouté, vous pouvez utiliser l'interface de Netlify pour déployer facilement votre site en quelques secondes. Voici un aperçu de la configuration du déploiement de notre bouqiue Start Trek Old School :
+Une fois le fichier `.gitkeep` ajouté, vous pouvez utiliser l'interface de Netlify pour déployer facilement votre site en quelques secondes. Voici un aperçu de la configuration du déploiement de notre boutique Star Trek Old School :
 
 ![hugo-website-deployment-netlify](https://snipcart.com/media/10150/hugo-website-deployment-netlify.png)
 
-Netlify va récupérer automatiquement le code depuis GitHub et déployer votre sote web. Et voilà !
+Netlify va récupérer automatiquement le code depuis GitHub et déployer votre site web. Et voilà !
 
 ![hugo-tutorial-klingon](https://snipcart.com/media/10149/hugo-tutorial-klingon.jpg)
 
@@ -318,14 +314,14 @@ Au fait, si vous développez un site JAMstack pour un client, vous voudrez peut 
 
 **Pour les clients**
 
-Vous pensez que devoir gérer des fichiers de contenu statiques en Markdown, ça va pas être possible pour vos clients ? Il existe des outils bien pratiques pour gérer le contenu d'un site Hugo. Nous vous invitons à ajouter un des CMS statiques suivants :
+Vous pensez que devoir gérer des fichiers de contenu statiques en Markdown, ça ne va pas être possible pour vos clients ? Il existe des outils bien pratiques pour gérer le contenu d'un site Hugo. Nous vous invitons à ajouter un des CMS statiques suivants :
 
 -   [Forestry.io](https://forestry.io/)
 -   [DatoCMS](https://www.datocms.com/)
 -   [Netlify CMS](https://www.netlifycms.org/)
 -   [Appernatic](https://appernetic.io/)
 
-Pour une revue plus détaillée des outils à destination des clients, des limites et des bénéfices, reportez vous à ce [guide complet](https://snipcart.com/blog/jamstack-clients-static-site-cms).
+Pour une revue plus détaillée des outils à destination des clients, des limites et des bénéfices, reportez-vous à ce [guide complet](https://snipcart.com/blog/jamstack-clients-static-site-cms).
 
 Hugo est vraiment plaisant à utiliser. Sa documentation est à jour et sa vitesse quasi-instantanée a le don de faire sourire l'ingénieur en moi à chaque fois que je génère mon site. Mettre en place ce site Hugo avec Snipcart m'a pris environ deux heures en tout, en comptant la mise en forme du site avec MaterializeCSS et le déploiement sur Netlify.
 
