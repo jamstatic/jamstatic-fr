@@ -53,6 +53,7 @@ exclude:
 - Gemfile
 - Gemfile.lock
 - LICENSE
+- node_modules
 - Rakefile
 - README.md
 - script

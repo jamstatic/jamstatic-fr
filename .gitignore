@@ -3,6 +3,9 @@ _site/
 .sass-cache/
 .jekyll-metadata
 
+### Node ###
+node_modules
+
 ### macOS ###
 *.DS_Store
 .AppleDouble
