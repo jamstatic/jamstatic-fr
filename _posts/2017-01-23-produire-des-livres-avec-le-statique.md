@@ -1,8 +1,8 @@
 ---
 title: Publier des livres avec un générateur de site statique
-description: "Le web au secours de la modernisation du procéde de publication de
-livres numériques et papier."
 date: 2017-01-23 15:37:00 +01:00
+description: Le web au secours de la modernisation du procéde de publication de livres
+  numériques et papier.
 image: https://blogs.getty.edu/iris/files/2016/05/eric_ruth_greg_1009_1200.jpg
 author: Antoine Fauchié
 ---

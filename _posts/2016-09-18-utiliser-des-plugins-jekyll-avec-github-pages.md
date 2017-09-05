@@ -1,8 +1,8 @@
 ---
 title: Utiliser des plugins Jekyll avec GitHub Pages
 date: 2016-09-18 13:51:13 +02:00
-description: "Automatiser la publication du site généré sur GitHub Pages pour
-pouvoir utiliser les plugins Jekyll sans restriction."
+description: Automatiser la publication du site généré sur GitHub Pages pour pouvoir
+  utiliser les plugins Jekyll sans restriction.
 image: "/assets/images/octojekyll.png"
 ---
 

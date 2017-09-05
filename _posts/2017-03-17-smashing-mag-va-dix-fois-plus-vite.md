@@ -1,10 +1,10 @@
 ---
 title: Smashing Magazine est maintenant 10&nbsp;fois plus&nbsp;rapide
 date: 2017-03-17 13:44:01 +01:00
-description: "Smashing fait désormais partie de la renaissance du web moderne.
-Sachant que leur site pouvait aller six fois plus vite en tirant parti d'un CDN
-global, Smashing a opté pour la JAMstack et s'est adjoint les services de
-Netlify pour les aider à migrer."
+description: Smashing fait désormais partie de la renaissance du web moderne. Sachant
+  que leur site pouvait aller six fois plus vite en tirant parti d'un CDN global,
+  Smashing a opté pour la JAMstack et s'est adjoint les services de Netlify pour les
+  aider à migrer.
 image: assets/images/caching-issues.jpg
 source:
   url: https://www.netlify.com/blog/2017/03/16/smashing-magazine-just-got-10x-faster/

@@ -1,8 +1,8 @@
 ---
 title: Entretien avec Vincent Voyer, fullstack engineer chez Algolia
 date: 2017-07-05 00:00:00 +02:00
-description: "Présentation d'Algolia, un service de recherche personnalisé
-pour votre site web."
+description: Présentation d'Algolia, un service de recherche personnalisé pour votre
+  site web.
 image: "/assets/images/algolia-smashing.png"
 ---
 

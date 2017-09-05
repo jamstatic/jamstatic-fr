@@ -1,12 +1,11 @@
 ---
-title: "Passer au statique : 5 raisons de tester la JAMstack sur votre
-prochain projet"
+title: 'Passer au statique : 5 raisons de tester la JAMstack sur votre prochain projet'
 date: 2017-03-16 20:04:01 +01:00
-description: "Référencement, performance, sécurité, automatisation, communauté
-grandissante, les raisons de passer au statique ne manquent pas."
+description: Référencement, performance, sécurité, automatisation, communauté grandissante,
+  les raisons de passer au statique ne manquent pas.
 image: https://builtvisible.com/wp-content/uploads/2017/03/Go_Static.jpg
 source:
-  title: "Go static: 5 reasons to try JAMstack on your next project"
+  title: 'Go static: 5 reasons to try JAMstack on your next project'
   url: https://builtvisible.com/go-static-try-jamstack/
   author: Tom Bennet
 ---

@@ -1,14 +1,14 @@
 ---
 title: Entretien avec Parker Moore de Jekyll
 date: 2016-04-19 00:00:00 +02:00
-description: "Le principal développeur de Jekyll partage sa vision sur les
-générateurs de sites statiques"
-image: "https://cdn.netlify.com/a3dc6515430891d6df896d718dd7e54f6941d647/99084/uploads/parker-moore-jekyll.jpg"
+description: Le principal développeur de Jekyll partage sa vision sur les générateurs
+  de sites statiques
+image: https://cdn.netlify.com/a3dc6515430891d6df896d718dd7e54f6941d647/99084/uploads/parker-moore-jekyll.jpg
 author: Bertrand Keller
 source:
   author: Aaron Autrand
   title: Interview with Parker Moore from Jekyll
-  url: "https://www.netlify.com/blog/2016/03/11/interview-with-parker-moore-from-jekyll"
+  url: https://www.netlify.com/blog/2016/03/11/interview-with-parker-moore-from-jekyll
 ---
 
 Parker Moore est le développeur principal de Jekyll, dans un entretien paru sur

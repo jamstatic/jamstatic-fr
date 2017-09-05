@@ -1,9 +1,9 @@
 ---
 title: Frank Taillandier utilise Jekyll
 date: 2016-04-12 00:00:00 +02:00
+published: false
 description: Questions à un utilisateur de Jekyll
 author: Bertrand Keller
-published: false
 ---
 
 Cet article est le premier d’une série qui présente des utilisateurs de Jekyll,

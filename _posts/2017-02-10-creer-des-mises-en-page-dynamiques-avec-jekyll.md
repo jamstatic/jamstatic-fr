@@ -1,8 +1,8 @@
 ---
 title: Créer des mises en page dynamiques avec Jekyll
 date: 2017-02-10 22:33:24 +01:00
-description: "Les secrets de fabrication du portfolio client d'une agence à
-l'aide des possibilités offertes par Jekyll"
+description: Les secrets de fabrication du portfolio client d'une agence à l'aide
+  des possibilités offertes par Jekyll
 image: https://cdn-images-1.medium.com/max/400/1*rS4n3wyRac82CtdSpi3Mpg.jpeg
 source:
   url: https://medium.com/tmw-interactive/creating-dynamic-layouts-with-jekyll-3bbb7fc57d1f#.iac16fjec
