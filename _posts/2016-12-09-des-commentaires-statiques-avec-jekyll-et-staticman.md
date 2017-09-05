@@ -4,6 +4,10 @@ date: 2016-12-09 21:53:42 +01:00
 description: Utilisation de Staticman pour ajouter des commentaires et des notifications
   de réponses sur un site statique sous Jekyll
 image: https://mademistakes.com/assets/images/improving-jekyll-static-comments-feature.jpg
+source:
+  title: Improving Static Comments with Jekyll & Staticman
+  url: https://mademistakes.com/articles/improving-jekyll-static-comments/
+  author: Michael Rose
 ---
 
 [Michael Rose](https://github.com/mmistakes), l'auteur du [thème Jekyll Minimal Mistakes](https://mademistakes.com/work/minimal-mistakes-jekyll-theme/), revient sur les détails de l'implémentation de commentaires statiques - les commentaires sont versionnés au format YAML dans le dépôt GitHub - à l'aide de [Staticman](https://eduardoboucas.com/blog/2016/08/10/staticman.html), un service open-source développé par [Eduardo Bouças](https://eduardoboucas.com), qui permet d'insérer des contenus générés par les utilisateurs sur un site plus si statique que ça, proposant ainsi une alternative à Disqus au même titre que [Jekyll AWS comment](https://github.com/ummels/jekyll-aws-comments).
@@ -520,5 +524,3 @@ Si tout est correctement configuré, l'utilisateur devrait recevoir un mail dès
 ---
 
 Voilà, vous avez mis en place un système de commentaires basé sur des fichiers statiques dans Jekyll et qui gère les commentaires imbriqués et les notifications de réponse. Maintenant j'aimerais gagner une minute de temps de génération pour pouvoir ajouter les nouveaux commentaires encore plus vite :frowning:.
-
-*Article original publié sur [https://mademistakes.com/articles/improving-jekyll-static-comments/](https://mademistakes.com/articles/improving-jekyll-static-comments/)*

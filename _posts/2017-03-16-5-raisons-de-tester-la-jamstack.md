@@ -5,6 +5,10 @@ date: 2017-03-16 20:04:01 +01:00
 description: Référencement, performance, sécurité, automatisation, communauté grandissante,
   les raisons de passer au statique ne manquent pas.
 image: https://builtvisible.com/wp-content/uploads/2017/03/Go_Static.jpg
+source:
+  title: Go static: 5 reasons to try JAMstack on your next project
+  url: https://builtvisible.com/go-static-try-jamstack/
+  author: Tom Bennet
 ---
 
 Adopter une stack de développement Web moderne pour pouvoir générer des sites statiques présente bien des avantages et Tom Bennet en a listé cinq des principaux. Si vous n'aviez encore jamais entendu parlé de la JAMstack, cet article donne un aperçu global du processus et de l'écosystème actuel ainsi que des gains engendrés. Vous trouverez également des lectures pour approfondir votre connaissance sur le sujet.
@@ -123,5 +127,3 @@ Vous aurez du mal à faire machine arrière et de nouvelles possibilités feront
     [staticgen.com](https://www.staticgen.com/)
 -   {static is} The New Dynamic –
     [thenewdynamic.org](https://www.thenewdynamic.org/)
-
-_Article original publié sur [builtvisible.com](https://builtvisible.com/go-static-try-jamstack/)_

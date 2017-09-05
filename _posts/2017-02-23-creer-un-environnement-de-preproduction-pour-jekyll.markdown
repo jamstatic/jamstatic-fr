@@ -4,9 +4,13 @@ date: 2017-02-23 21:51:01 +01:00
 description: Netlify vous permet de créer simplement un environnement de pré-production
   pour votre site statique.
 image: https://eduardoboucas.com/assets/posts/2017-02-22-creating-a-staging-environment-for-jekyll/netlify1.png
+source:
+  title: Creating a staging environment for Jekyll
+  url: https://eduardoboucas.com/blog/2017/02/22/jekyll-staging-environment.html
+  author: Eduardo Bouças
 ---
 
-Dans son article, [Eduardo Boucas](https://eduardoboucas.com/) révèle comment il a mis simplement en place [un site de préproduction pour Jekyll grâce à Netlify](https://eduardoboucas.com/blog/2017/02/22/jekyll-staging-environment.html). Ce blog est également déployé et hébergé grâce à Netlify. La nouvelle version de leur interface d'administration propose nativement des fonctionnalités comme le fait d'associer un sous-domaine à une branche ou le fait de pouvoir bloquer le site de production à un certain commit. Vous n'avez donc pas besoin de créer deux sites dans Netlify pour bénéficier d'une prévisualisation sur une URL dédiée. L'article d'Eduardo aborde néanmoins l'utilisation des variables d'environnements et utilise Jekyll comme exemple, la technique reste bien entendu valable pour d'autres générateurs comme Hugo, Hexo et les autres.
+Dans son article, [Eduardo Bouças](https://eduardoboucas.com/) révèle comment il a mis simplement en place [un site de préproduction pour Jekyll grâce à Netlify](https://eduardoboucas.com/blog/2017/02/22/jekyll-staging-environment.html). Ce blog est également déployé et hébergé grâce à Netlify. La nouvelle version de leur interface d'administration propose nativement des fonctionnalités comme le fait d'associer un sous-domaine à une branche ou le fait de pouvoir bloquer le site de production à un certain commit. Vous n'avez donc pas besoin de créer deux sites dans Netlify pour bénéficier d'une prévisualisation sur une URL dédiée. L'article d'Eduardo aborde néanmoins l'utilisation des variables d'environnements et utilise Jekyll comme exemple, la technique reste bien entendu valable pour d'autres générateurs comme Hugo, Hexo et les autres.
 {: .intro }
 
 Un environnement de préproduction ou de _staging_ est une infrastructure de test qui s'approche autant que possible de la configuration d'un site de production. Dans le cas d'un site statique, il peut servir à partager un nouvel article ou une nouvelle fonctionnalité avec un nombre de personnes restreintes avant de le rendre disponible publiquement. Dans cet article, je vais vous montrer comment j'ai fait pour en créer un et comment je m'en sers.
@@ -75,5 +79,3 @@ Et voilà mon [site de préproduction](http://dev.eduardoboucas.com) est configu
 Vous pourriez même vous passer complètement de GitHub Pages (NdT: et de ses limitations) et vous reposer entièrement sur Netlify pour servir vos environnements de production et de préproduction (ce que je risque de faire bientôt pour des raisons que je dévoilerai dans un prochain article)
 
 Et voilà, vous avez maintenant un environnement de préproduction simple avec intégration continue pour un site statique et tout ça gratuitement. Pas mal, non ?
-
-_Article original publié sur  [https://eduardoboucas.com/blog/2017/02/22/jekyll-staging-environment.html](https://eduardoboucas.com/blog/2017/02/22/jekyll-staging-environment.html)_

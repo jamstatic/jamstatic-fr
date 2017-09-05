@@ -4,9 +4,20 @@ date: 2017-01-17 17:53:00 +01:00
 image: assets/images/jekyll-rendering-rules.png
 description: À partir du code source, nous pouvons mieux comprendre le process de
   génération au cœur de Jekyll.
+source:
+  author: Jack Phelan
+  title: How does Jekyll work?
+  url: https://www.bytesandwich.com/jekyll/software/blogging/2016/09/14/how-does-jekyll-work.html
 ---
 
-Si vous suivez ce blog, vous savez déjà que Jekyll est un générateur de site statique développé en Ruby. Jack Phelan a décidé d'aller jeter un œil dans le moteur de Jekyll histoire de mieux comprendre comment sont traités les différents types de fichiers qui sont passés en entrée. Nous traduisons [son article](https://www.bytesandwich.com/jekyll/software/blogging/2016/09/14/how-does-jekyll-work.html) afin de vous inciter à plonger un peu dans le code de Jekyll et prendre connaissance des concepts fondamentaux de ce générateur. Nous espérons que cela vous permettra de mieux appréhender la philosophie de Jekyll ou que cela vous sera utile si vous songez à développer un plugin.
+Si vous suivez ce blog, vous savez déjà que Jekyll est un générateur de site
+statique développé en Ruby. Jack Phelan a décidé d'aller jeter un œil dans le
+moteur de Jekyll histoire de mieux comprendre comment sont traités les
+différents types de fichiers qui sont passés en entrée. C'est l'occasion de
+plonger un peu dans le code de Jekyll et de faire connaissance avec certains
+concepts fondamentaux de ce générateur. Nous espérons que cela vous permettra de
+mieux appréhender la philosophie de Jekyll ou que cela vous sera utile si vous
+songez à développer un plugin.
 {: .intro }
 
 [Jekyll](https://jekyllrb.com) peut paraître un peu déroutant au début. En effet Jekyll ne fait pas grand chose à vos fichiers, si ce n'est qu'il les classifie de différentes façons.

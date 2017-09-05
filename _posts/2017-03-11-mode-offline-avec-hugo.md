@@ -4,6 +4,9 @@ date: 2017-03-11 17:04:01 +01:00
 description: Permettez aux visiteurs de consulter votre site statique en mode hors-connexion
   à l'aide d'un Service Worker
 image: assets/images/service-worker.png
+source:
+  title: Go offline! Service Worker and Hugo
+  url: https://gohugohq.com/howto/go-offline-with-service-worker/
 ---
 
 La majorité des articles publiés jusqu'ici se référaient à Jekyll, cette fois place à [Hugo](http://gohugo.io/). Hugo est un générateur de site statique populaire très performant et beaucoup plus performant pour vos visiteurs si vous lui adjoignez les services d'un Service Worker pour gérer le mode déconnecté de votre site web. Notez que les explications fournies ici sont valables et facilement adaptables pour tout autre générateur statique.
@@ -687,5 +690,3 @@ Pour débogguer un Service Worker avec Google Chrome, il vous suffit d'ouvrir la
 Vous en apprendrez davantage sur le [déboggage de Service Workers](https://developers.google.com/web/fundamentals/getting-started/codelabs/debugging-service-workers/) sur le site pour les développeurs de Google.
 
 Si votre navigateur préféré est Firefox vous en saurez plus sur [le déboggage des Service Workers et Push à l'aide des outils de développement pour Firefox](https://hacks.mozilla.org/2016/03/debugging-service-workers-and-push-with-firefox-devtools/) sur hacks.mozilla.org.
-
-_Article original publié sur [https://gohugohq.com/howto/go-offline-with-service-worker/](https://gohugohq.com/howto/go-offline-with-service-worker/)_

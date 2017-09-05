@@ -6,9 +6,13 @@ description: Smashing fait désormais partie de la renaissance du web moderne. S
   Smashing a opté pour la JAMstack et s'est adjoint les services de Netlify pour les
   aider à migrer.
 image: assets/images/caching-issues.jpg
+source:
+  url: https://www.netlify.com/blog/2017/03/16/smashing-magazine-just-got-10x-faster/
+  title: Smashing Magazine just got 10x faster
+  author: Chris Bach
 ---
 
-La refonte de Smashing Magazine à l'aide d'un générateur de site statique et d'APIs tierces comme Algolia constitue un petit évènement pour le développement Web moderne. Smashing est en effet un des sites les plus consultés et le fait de faire évoluer leur stack technique, de se reposer sur des outils actuels montre à quel point cet écosystème est mature et robuste. C'est la société Netlify, basée à San Francisco et spécialisée dans l'hébergement de sites statiques, qui a accompagné Smashing dans cette aventure. En traduisant [l'article paru sur leur blog](https://www.netlify.com/blog/2017/03/16/smashing-magazine-just-got-10x-faster/), nous continuons à promouvoir ces solutions dans l'espoir que cela vous incite à adopter à votre tour ce type d'architectures dans certains de vos projets.
+La refonte de Smashing Magazine à l'aide d'un générateur de site statique et d'APIs tierces comme Algolia constitue un petit évènement pour le développement Web moderne. Smashing est en effet un des sites les plus consultés et le fait de faire évoluer leur stack technique, de se reposer sur des outils actuels montre à quel point cet écosystème est mature et robuste. C'est la société Netlify, basée à San Francisco et spécialisée dans l'hébergement de sites statiques, qui a accompagné Smashing dans cette aventure. En traduisant [l'article paru sur leur blog]({{ page.source.url }}), nous continuons à promouvoir ces solutions dans l'espoir que cela vous incite à adopter à votre tour ce type d'architectures dans certains de vos projets.
 {: .intro }
 
 ## Écouter l'épopée de Smashing Magazine

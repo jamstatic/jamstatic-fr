@@ -5,6 +5,9 @@ description: Nicolas Hoizey présente les fonctionnalités de gestion d'images r
   offertes par le plugin Cloudinary qu'il a développé pour Jekyll.
 author: Nicolas Hoizey
 image: http://res-1.cloudinary.com/cloudinary/image/upload/c_fill,w_560/dpr_1.0/jekyll_cloudinary_plugin.png
+source:
+  title: How I used Cloudinary to solve responsive image needs in my Jekyll website, and shared the magic in a plugin
+  url: http://cloudinary.com/blog/how_i_used_cloudinary_to_solve_responsive_image_needs_in_my_jekyll_website_and_shared_the_magic_in_a_plugin
 ---
 
 J'ai récemment mis à jour [mon site perso](https://nicolas-hoizey.com) avec [la dernière version de Jekyll](https://jekyllrb.com/news/2015/10/26/jekyll-3-0-released/) et j'en ai profité pour changer quelques outils.
@@ -116,5 +119,3 @@ Et après ? Au début, je voulais permettre aux auteurs d'utiliser simplement [l
 Au final, cela a était un bon moyen d'apprendre un peu de Ruby, de comprendre les rouages internes de Jekyll, comment fonctionnent les plugins et comment publier une Gem… J'ai tellement appris en peu de temps grâce à ce petit projet si utile et important à mes yeux.
 
 Bien entendu, toute aide est la bienvenue pour aider à améliorer le plugin. Il y a déjà [quelques anomalies et demandes de fonctionnalités ouvertes](https://github.com/nhoizey/jekyll-cloudinary/issues). N'hésitez pas à me signaler tout problème ou à partager vos idées, voire même à contribuer via des [pull requests](https://github.com/nhoizey/jekyll-cloudinary/pulls) !
-
-_[Read original English version of this post on Cloudinary's blog ](http://cloudinary.com/blog/how_i_used_cloudinary_to_solve_responsive_image_needs_in_my_jekyll_website_and_shared_the_magic_in_a_plugin)_

@@ -460,5 +460,3 @@ modernes. :smile:
 
 Il est maintenant temps d'arrêter de lire ce blog et d'aller fabriquer quelque
 chose de génial.
-
-*Article original : [{{ page.source.title | remove:'"' }}]({{ page.source.url }})*

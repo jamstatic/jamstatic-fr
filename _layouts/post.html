@@ -20,6 +20,11 @@ layout: default
 
   <div class="post-content" itemprop="articleBody">
     {{ content }}
+    {%- if page.source.title and page.source.url -%}
+      <p>
+        <em>Article original : <a href="{{ page.source.url }}">{{ page.source.title }}</a></em>
+      </p>
+    {%- endif -%}
 
     <footer>
       {% if page.comments %}
