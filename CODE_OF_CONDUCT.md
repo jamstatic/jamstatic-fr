@@ -23,14 +23,14 @@ Exemples de comportements qui contribuent à créer un environnement positif :
 Exemples de comportements non acceptables :
 
 * l'utilisation de langage ou d'imagerie sexualisés et les avances sexuelles
-non sollicitées
+  non sollicitées
 * le _trolling_, les commentaires insultants ou désobligeants, et les
-attaques personnelles ou d'ordre politique
+  attaques personnelles ou d'ordre politique
 * le harcèlement en public ou en privé
 * la publication d'informations privées de tierces personnes, telles que
   des adresses physiques ou électroniques, sans permission explicite
 * toute conduite qui pourrait être raisonnablement considérée comme inappropriée
-dans un milieu professionnel
+  dans un milieu professionnel
 
 ## Nos responsabilités
 

@@ -14,4 +14,3 @@ Si vous ne connaissez pas Jekyll, pinguez nous sur Slack et nous vous aiderons d
 Une fois votre branche poussée sur votre fork, ouvrez une pull request pour soumettre votre article à la relecture.
 
 Merci de vos contributions !
-
