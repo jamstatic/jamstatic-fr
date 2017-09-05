@@ -1,6 +1,6 @@
 exports.settings = {
   bullet: "*",
-  emphasis: "*",
+  emphasis: "_",
   strong: "*",
   fence: "`",
   rule: "-",
@@ -28,6 +28,8 @@ exports.plugins = [
   require("remark-inline-links"),
   [require("remark-lint-blockquote-indentation"), { number: 2 }],
   [require("remark-lint-no-literal-urls"), false],
+  [require("remark-lint-no-file-name-irregular-characters"), false],
+  [require("remark-lint-no-file-name-articles"), false],
   [require("remark-lint-no-undefined-references"), false],
   [require("remark-lint-link-title-style"), false],
   [require("remark-lint-maximum-line-length"), true],
