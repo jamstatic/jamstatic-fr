@@ -1,18 +1,11 @@
-//
-// Utility classes
-// --------------------------------------------------
-
-
-// Floats
-// -------------------------
-
 .clearfix {
-  &:before,
-  &:after {
-    content: " "; // 1
-    display: table; // 2
+  &::before,
+  &::after {
+    content: " ";
+    display: table;
   }
-  &:after {
+
+  &::after {
     clear: both;
   }
 }
@@ -25,6 +18,7 @@
 .pull-right {
   float: right !important;
 }
+
 .pull-left {
   float: left !important;
 }
@@ -37,53 +31,31 @@
   float: right;
 }
 
-
- // List
- // -------------------------
+// List
 
 @mixin list-inline {
   padding: 0;
   margin: 0 0 $base-line;
+
   li {
     display: inline-block;
   }
 }
 
-
-
 // Toggling content
-// -------------------------
 
-// Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
-.hide {
-  display: none !important;
-}
-.show {
-  display: block !important;
-}
-.invisible {
-  visibility: hidden;
-}
-
-
-// Hide from screenreaders and browsers
-//
-// Credit: HTML5 Boilerplate
-
+.hide,
 .hidden {
   display: none !important;
 }
 
-
-// For Affix plugin
-// -------------------------
-
-.affix {
-  position: fixed;
+.show {
+  display: block !important;
 }
 
- // Icons
- // -------------------------
+.invisible {
+  visibility: hidden;
+}
 
 .icon {
   > svg {
@@ -91,6 +63,7 @@
     width: 16px;
     height: 16px;
     vertical-align: middle;
+
     path {
       fill: $grey-color;
     }

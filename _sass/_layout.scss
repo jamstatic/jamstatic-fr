@@ -1,9 +1,5 @@
-/**
- * Site layout
- */
-// Use flexbox for a Sticky Footer
 body {
-  display: flex;
+  display: flex; // Use flexbox for a Sticky Footer
   flex-direction: column;
   min-height: 100vh;
 }
@@ -11,9 +7,7 @@ body {
 .page-content {
   flex: 1;
 }
-/**
- * Site header
- */
+
 .site-header {
   padding: $base-line 0;
   min-height: 56px;
@@ -53,17 +47,15 @@ body {
 
   .page-link {
     color: #fff;
-    // Gaps between nav items, but not on the last one
+
     &:not(:last-child) {
       margin-right: 20px;
     }
   }
 }
-/**
- * Site footer
- */
+
 .site-footer {
-  padding: $spacing-unit $spacing-unit/2 0;
+  padding: $spacing-unit $spacing-unit / 2 0;
   background: $grey-color-dark;
 }
 
@@ -71,9 +63,10 @@ body {
 .social-media-list {
   list-style: none;
   margin-left: 0;
+
   li {
     display: inline-block;
-    padding: 0 .335em;
+    padding: 0 0.335em;
   }
 }
 
@@ -81,6 +74,7 @@ body {
   color: #fff;
   font-size: $smaller;
   margin-left: -$spacing-unit / 2;
+
   @extend %clearfix;
 
   a {
@@ -98,9 +92,11 @@ body {
   width: -webkit-calc(100% - (#{$spacing-unit} / 2));
   width: calc(100% - (#{$spacing-unit} / 2));
 }
+
 .footer-col-2 {
   text-align: right;
 }
+
 @include media-query($on-tablet) {
   .footer-col {
     float: left;
@@ -119,6 +115,7 @@ body {
     width: calc(100% - (#{$spacing-unit} / 2));
   }
 }
+
 /**
  * Page content
  */
@@ -133,6 +130,7 @@ body {
 
   hr {
     margin: $base-line 0;
+    width: 70%;
   }
 
   .notice--info h4 {
@@ -141,11 +139,11 @@ body {
 
   .notice--info a {
     border-bottom-width: 2px;
-    box-shadow: none!important;
+    box-shadow: none !important;
   }
 
   .notice--info a:hover {
-    background-color: transparent!important;
+    background-color: transparent !important;
   }
 }
 
@@ -163,9 +161,10 @@ body {
     margin-bottom: $spacing-unit;
     line-height: 1.1;
     min-height: 6.192em;
-    border-bottom: .0279em solid;
+    border-bottom: 0.0279em solid;
   }
 }
+
 @include media-query($on-tablet) {
   .post-list {
     display: grid;
@@ -188,6 +187,7 @@ body {
   letter-spacing: $title-letter-spacing;
   display: block;
 }
+
 /**
  * Posts
  */
@@ -205,7 +205,7 @@ body {
 
 .avatar {
   border-radius: 50%;
-  margin-right: $spacing-unit/4;
+  margin-right: $spacing-unit / 4;
 }
 
 .intro {
@@ -216,8 +216,9 @@ body {
 }
 
 .marker {
-  background-color: rgba(255,228,0,.4);
-  padding: .1rem;
+  background-color: rgba(255, 228, 0, 0.4);
+  padding: 0.1rem;
+
   code {
     background-color: inherit;
     border: none;
@@ -237,7 +238,7 @@ body {
   &.update {
     background-color: #7fb842;
     color: white;
-    border-color: #5C8530
+    border-color: #5c8530;
   }
 
   h4 {
@@ -247,7 +248,7 @@ body {
 
   p {
     a {
-      color: #1a5891!important;
+      color: #1a5891 !important;
     }
   }
 
@@ -258,12 +259,12 @@ body {
 
 figure {
   display: block;
-  margin-top: $base-line-height * 1.44em;
+  margin: $base-line-height * 1.44em;
 }
 
 figure > img,
 figure > iframe {
-  margin: 0 auto .5em;
+  margin: 0 auto 0.5em;
 }
 
 figcaption {
@@ -276,7 +277,6 @@ figcaption {
 @include media-query($on-desktop) {
   figcaption {
     margin: auto;
-    width: 70%;
   }
 }
 
