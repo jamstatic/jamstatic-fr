@@ -19,14 +19,12 @@ exports.settings = {
 
 exports.plugins = [
   [require("remark-message-control"), { name: "lint" }],
-  require("remark-preset-lint-recommended"),
-  require("remark-preset-lint-consistent"),
   require("remark-preset-lint-markdown-style-guide"),
   require("remark-lint-code"),
   require("remark-lint-no-empty-sections"),
   require("remark-squeeze-paragraphs"),
   require("remark-inline-links"),
-  [require("remark-lint-blockquote-indentation"), { number: 2 }],
+  [require("remark-lint-emphasis-marker"), "_"],
   [require("remark-lint-no-literal-urls"), false],
   [require("remark-lint-no-file-name-irregular-characters"), false],
   [require("remark-lint-no-file-name-articles"), false],
