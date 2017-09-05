@@ -1,14 +1,5 @@
 ---
-title: 'Passer au statique&nbsp;: 5&nbsp;raisons de tester la JAMstack sur votre prochain
-  projet'
-date: 2017-03-16 20:04:01 +01:00
-description: Référencement, performance, sécurité, automatisation, communauté grandissante,
-  les raisons de passer au statique ne manquent pas.
-image: https://builtvisible.com/wp-content/uploads/2017/03/Go_Static.jpg
-source:
-  title: Go static: 5 reasons to try JAMstack on your next project
-  url: https://builtvisible.com/go-static-try-jamstack/
-  author: Tom Bennet
+title: 2017 03 16 5 Raisons De Tester La Jamstack
 ---
 
 Adopter une stack de développement Web moderne pour pouvoir générer des sites statiques présente bien des avantages et Tom Bennet en a listé cinq des principaux. Si vous n'aviez encore jamais entendu parlé de la JAMstack, cet article donne un aperçu global du processus et de l'écosystème actuel ainsi que des gains engendrés. Vous trouverez également des lectures pour approfondir votre connaissance sur le sujet.

@@ -7,7 +7,7 @@ author: Bertrand Keller
 source:
   author: Aaron Autrand
   title: Interview with Parker Moore from Jekyll
-  url: "https://www.netlify.com/blog/2016/03/11/interview-with-parker-moore-from-jekyll"
+  url: https://www.netlify.com/blog/2016/03/11/interview-with-parker-moore-from-jekyll
 ---
 
 Nous vous proposons la traduction d'un entretien de Parker Moore, le mainteneur principal de Jekyll, avec Aaron Autrand, [publié le 11 mars 2016 sur le blog de la société Netlify](https://www.netlify.com/blog/2016/03/11/interview-with-parker-moore-from-jekyll).

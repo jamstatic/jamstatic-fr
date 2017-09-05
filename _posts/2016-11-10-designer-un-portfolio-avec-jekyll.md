@@ -6,7 +6,8 @@ description: Les différentes étapes pour concevoir son portfolio avec Jekyll e
 image: https://cdn-images-1.medium.com/max/800/1*5SbG467XN7stvnPDPyUR1g.png
 source:
   author: Kat Fukui
-  title: "The Design Portfolio Workflow: A complete guide to code and deploy a site, all from the terminal."
+  title: 'The Design Portfolio Workflow: A complete guide to code and deploy a site,
+    all from the terminal.'
   url: https://medium.com/@katfukui/the-design-portfolio-workflow-a94030d0b39e#.uut2a0ulw
 ---
 

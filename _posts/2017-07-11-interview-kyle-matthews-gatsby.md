@@ -5,7 +5,7 @@ description: Entretien avec Kyle Mathews, le créateur de Gatsby, un générateu
   site statique basé sur React
 image: "/assets/images/gatsby/architecture.png"
 source:
-  title: "Q&A with Kyle Mathews, Creator of React-Based Static Site Generator Gatsby"
+  title: Q&A with Kyle Mathews, Creator of React-Based Static Site Generator Gatsby
   url: https://www.infoq.com/news/2017/07/gatsby-kyle-mathews-interview
   author: David Iffland
 ---
