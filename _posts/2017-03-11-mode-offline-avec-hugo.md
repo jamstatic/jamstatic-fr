@@ -16,19 +16,19 @@ Après le _mobile first_, place maintenant au _offline first_ et [_aux progressi
 
 ## De quoi parle-t-on ?
 
-Si vous n'avez pas encore entendu parler des Service Workers et que vous voulez en savoir plus sur le sujet, merci de consulter les liens suivants&nbsp;:
+Si vous n'avez pas encore entendu parler des Service Workers et que vous voulez en savoir plus sur le sujet, merci de consulter les liens suivants :
 
--   **[Votre première Progressive Web App](https://developers.google.com/web/fundamentals/getting-started/codelabs/your-first-pwapp/)** publié sur Google Developers
--   **[L'API Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)** publié sur MDN Mozilla Developer Network
--   **[Service Worker Revolution](https://ponyfoo.com/articles/serviceworker-revolution)** publié chez Ponyfoo
--   **[Tout ce que vous devez savoir pour créer vos premières application hors-ligne](https://github.com/pazguille/offline-first)** sur Github
+* **[Votre première Progressive Web App](https://developers.google.com/web/fundamentals/getting-started/codelabs/your-first-pwapp/)** publié sur Google Developers
+* **[L'API Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)** publié sur MDN Mozilla Developer Network
+* **[Service Worker Revolution](https://ponyfoo.com/articles/serviceworker-revolution)** publié chez Ponyfoo
+* **[Tout ce que vous devez savoir pour créer vos premières application hors-ligne](https://github.com/pazguille/offline-first)** sur Github
 
-Maintenant que vous avez lu tout ça - ou du moins que vous avez compris de quoi il en retourne - voici ce que nous allons faire&nbsp;:
+Maintenant que vous avez lu tout ça - ou du moins que vous avez compris de quoi il en retourne - voici ce que nous allons faire :
 
--   **Installer un Service Worker** à partir d'un exemple dans Hugo.
--   **Afficher une page hors-connexion personnalisée** en cas de panne de réseau ou si la page n'est pas en cache
--   **Afficher une page d'erreur 404 personnalisée** en cas de requêtes HHTP retournant une erreur client de type 4xx
--   **Ajouter un fichier `manifest.json`** pour définir l'apparence de l'application Web sur mobile.
+* **Installer un Service Worker** à partir d'un exemple dans Hugo.
+* **Afficher une page hors-connexion personnalisée** en cas de panne de réseau ou si la page n'est pas en cache
+* **Afficher une page d'erreur 404 personnalisée** en cas de requêtes HHTP retournant une erreur client de type 4xx
+* **Ajouter un fichier `manifest.json`** pour définir l'apparence de l'application Web sur mobile.
 
 ## Pré-requis
 
@@ -36,7 +36,7 @@ Maintenant que vous avez lu tout ça - ou du moins que vous avez compris de quoi
 
 Assurez vous de créer une page hors-connexion personnalisée pour afficher à vos visiteurs quand ils déconnectés du réseau.
 
-Par exemple vous pouvez créer les fichiers suivants&nbsp;:
+Par exemple vous pouvez créer les fichiers suivants :
 
 ```sh
 ├── content
@@ -45,7 +45,7 @@ Par exemple vous pouvez créer les fichiers suivants&nbsp;:
 │   ├── offline/single.html
 ```
 
-Contenu du fichier **content/offline.md**&nbsp;:
+Contenu du fichier **content/offline.md** :
 
 ```md
 +++
@@ -58,7 +58,7 @@ type = "offline"
 Essayez de vous connecter à Internet pour naviguer sur le site.
 ```
 
-Le fichier **layouts/offline/single.html**&nbsp;:
+Le fichier **layouts/offline/single.html** :
 
 ```liquid
 <html>
@@ -72,7 +72,7 @@ Le fichier **layouts/offline/single.html**&nbsp;:
 </html>
 ```
 
-C'est *vraiment un exemple minimaliste*, vous pouvez bien entendu créer une page hors-connexion avec le contenu de votre choix.
+C'est _vraiment un exemple minimaliste_, vous pouvez bien entendu créer une page hors-connexion avec le contenu de votre choix.
 
 Mais déjà grâce à notre exemple, nous avons généré une page `offline/index.html`. OK, ça c'est fait.
 
@@ -80,7 +80,7 @@ Mais déjà grâce à notre exemple, nous avons généré une page `offline/inde
 
 Si votre projet ne possède pas encore de page 404 personnalisée, vous pouvez vous référer à [la documentation d'Hugo pour créer une page 404](https://gohugo.io/templates/404/) ou vous contenter de suivre les quelques instructions de base ci-dessous.
 
-Pour cela, vous aurez besoin des fichiers suivants&nbsp;:
+Pour cela, vous aurez besoin des fichiers suivants :
 
 ```sh
 ├──content
@@ -89,7 +89,7 @@ Pour cela, vous aurez besoin des fichiers suivants&nbsp;:
 │   ├── 404.html
 ```
 
-Le fichier **content/404.md**&nbsp;:
+Le fichier **content/404.md** :
 
 ```md
 +++
@@ -101,7 +101,7 @@ title = "Zut... Page non trouvée."
 Vous devriez aller voir ailleurs.
 ```
 
-Le fichier **layouts/404.html**&nbsp;:
+Le fichier **layouts/404.html** :
 
 ```html
 <html>
@@ -119,19 +119,19 @@ Le fichier **layouts/404.html**&nbsp;:
 
 Les icônes des applications sont juste des favicons qu'on affiche sur un écran de démarrage au chargement du site depuis l'écran d'accueil.
 
-Les tailles suivantes sont recommandées&nbsp;:
+Les tailles suivantes sont recommandées :
 
--   128px × 128px
--   144px × 144px
--   152px × 152px
--   192px × 192px
--   256px × 256px
+* 128px × 128px
+* 144px × 144px
+* 152px × 152px
+* 192px × 192px
+* 256px × 256px
 
 Pour les générer rapidement, vous pouvez utiliser un service comme
 [favicomatic.com](http://www.favicomatic.com/).
 
 Ensuite placez les fichiers PNG dans votre dossier `/static` folder.
-Par exemple&nbsp;:
+Par exemple :
 
 ```sh
 ├── static
@@ -149,14 +149,14 @@ Le vrai travail commence maintenant avec la création et la configuration du fic
 
 Nous allons utiliser pour cela un [exemple de fichier manifest](https://github.com/wildhaber/offline-first-sw/blob/master/manifest.json) existant tiré du dépôt `offline-first-sw`.
 
-Placez ce fichier également dans le dossier `static/`, il doit obligatoirement se trouver à la racine comme ceci&nbsp;:
+Placez ce fichier également dans le dossier `static/`, il doit obligatoirement se trouver à la racine comme ceci :
 
 ```sh
 ├── static
 │   ├── manifest.json
 ```
 
-Vous pouvez recopier ce fichier à la main ou utiliser la commande suivante si vous travaillez dans un environnement GNU Linux ou MacOS&nbsp;:
+Vous pouvez recopier ce fichier à la main ou utiliser la commande suivante si vous travaillez dans un environnement GNU Linux ou MacOS :
 
 ```sh
 # à partir du dossier raçine de Hugo
@@ -164,7 +164,7 @@ cd static
 wget https://raw.githubusercontent.com/wildhaber/offline-first-sw/master/manifest.js
 ```
 
-Vous devriez maintenant avoir un fichier qui ressemble à cela dans votre dossier `static`&nbsp;:
+Vous devriez maintenant avoir un fichier qui ressemble à cela dans votre dossier `static` :
 
 ```json
 {
@@ -203,7 +203,7 @@ Ajustez les valeurs à votre guise.
 
 ### Ajoutez un lien vers `manifest.json` dans votre modèle
 
-Pour que le navigateur soit en mesure de détecter votre `manifest.json`, ajoutez le bout du code suivant dans le `<head>` de vos modèles&nbsp;:
+Pour que le navigateur soit en mesure de détecter votre `manifest.json`, ajoutez le bout du code suivant dans le `<head>` de vos modèles :
 
 ```html
 <link rel="manifest" href="/manifest.json">
@@ -213,14 +213,14 @@ Pour que le navigateur soit en mesure de détecter votre `manifest.json`, ajoute
 
 Pour cela nous allons aussi utiliser l'exemple de [Service Worker](https://github.com/wildhaber/offline-first-sw/blob/master/sw.js) fourni dans le dépôt [`offline-first-sw`](https://github.com/wildhaber/offline-first-sw).
 
-Le fichier `sw.js` doit également se trouver à la racine du dossier `static` comme ceci&nbsp;:
+Le fichier `sw.js` doit également se trouver à la racine du dossier `static` comme ceci :
 
 ```sh
 ├── static
 │   ├── sw.js
 ```
 
-Là encore soit vous recopiez le fichier à la main, soit vous utilisez la commande suivante dans un environnement GNU Linux ou MacOS&nbsp;:
+Là encore soit vous recopiez le fichier à la main, soit vous utilisez la commande suivante dans un environnement GNU Linux ou MacOS :
 
 ```sh
 # à partir du dossier racine d'Hugo
@@ -228,7 +228,7 @@ cd static
 wget https://raw.githubusercontent.com/wildhaber/offline-first-sw/master/sw.js
 ```
 
-Vous devez vous retrouver avec le fichier suivant à la racine&nbsp;:
+Vous devez vous retrouver avec le fichier suivant à la racine :
 
 ```js
 const CACHE_VERSION = 1;
@@ -563,7 +563,7 @@ self.addEventListener(
 );
 ```
 
-Maintenant vous pouvez définir le comportement souhaité pour votre Service Worker&nbsp;:
+Maintenant vous pouvez définir le comportement souhaité pour votre Service Worker :
 
 #### Fichiers à mettre en cache par défaut
 
@@ -630,6 +630,7 @@ const MAX_TTL = {
     css: 86400,
 };
 ```
+
 Ce tableau clé-valeur indique pour chaque type d'extension de fichier la durée maximum de mise en cache appelée _Time To Live_ (définit **en secondes** et pas en millisecondes). C'est le temps qui s'écoulera avant qu'un fichier ne soit mis à jour à partir du réseau.
 
 Les extensions non présentes resteront en cache jusqu'à la prochaine la mise à jour du cache par le Service Worker.
@@ -659,7 +660,7 @@ Ajustez ces paramètres au contexte de votre site ou de votre application.
 
 ### Enregistrement du Service Worker
 
-Ajoutez le script suivant avant la fermeture de la balise `<body>` ou placez le dans votre fichier JavaScript généré&nbsp;:
+Ajoutez le script suivant avant la fermeture de la balise `<body>` ou placez le dans votre fichier JavaScript généré :
 
 ```html
 <script>
@@ -681,7 +682,7 @@ Ajoutez le script suivant avant la fermeture de la balise `<body>` ou placez le 
 
 Ce code JS va enregistrer, installer et activer votre Service Worker.
 
-Vous en avez à présent terminé avec toutes les étapes nécessaires. Vous disposez maintenant d'un site Hugo ultra-rapide.&nbsp;:)
+Vous en avez à présent terminé avec toutes les étapes nécessaires. Vous disposez maintenant d'un site Hugo ultra-rapide. :)
 
 ### Débogguer votre Service Worker
 

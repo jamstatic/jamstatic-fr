@@ -1,15 +1,10 @@
 ---
 title: Un site ecommerce statique (très performant) avec Hugo
 date: 2017-08-28 00:00:00 +02:00
-description: '"Tutoriel : un site de ecommerce statique avec Hugo, Snipcart et Netlify
-  (exemple et démo)"
-
-'
+description: "Tutoriel : un site de ecommerce statique avec Hugo, Snipcart et Netlify (exemple et démo)"
 image: https://snipcartweb-10f3.kxcdn.com/media/1173/toolbox.png
 source:
-  title: '"Hugo Tutorial: How to Build & Host a (Very Fast) Static E-Commerce Site"
-
-'
+  title: "Hugo Tutorial: How to Build & Host a (Very Fast) Static E-Commerce Site"
   url: https://snipcart.com/blog/hugo-tutorial-static-site-ecommerce
   author: Charles Ouellet
 ---
@@ -78,7 +73,7 @@ une boutique en ligne Star Trek sur un site statique. Pourquoi Star Trek me
 direz-vous ? Parce que [nous l'avons déjà fait pour Star
 Wars](https://snipcart.com/blog/integrating-snipcart-with-kirby-cms-to-enable-e-commerce).
 
-> *Psst*: Si vous vous demandez encore ce que sont les générateurs de site
+> _Psst_: Si vous vous demandez encore ce que sont les générateurs de site
 > statique et pourquoi il faut vous y intéresser, jetez-vous sur [l'intro
 > d'Eduardo Bouças](https://davidwalsh.name/introduction-static-site-generators).
 
@@ -247,9 +242,10 @@ détail.
 Avant d'aller plus loin, allons d'abord dans le répertoire `layouts` et créons
 un dossier `partials`. Si les fichiers partiels ne se trouvent pas dans ce
 dossier, Hugo ne sera pas capable de les trouver lorsque nous les déclarerons à
-l'aide de la syntaxe `{{ partial ... }}`. L'autre chose importante à savoir est
-pourquoi nous avons mis un point `.` après `product.html`. Cela signifie que
-nous incluons les données du produit courant dans le modèle `product.html`.
+l'aide de la syntaxe {% raw %}`{{ partial ... }}`{% endraw %}. L'autre chose
+importante à savoir est pourquoi nous avons mis un point `.` après
+`product.html`. Cela signifie que nous incluons les données du produit courant
+dans le modèle `product.html`.
 
 #### layouts/partials/header.html
 

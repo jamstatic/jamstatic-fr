@@ -17,7 +17,7 @@ La refonte de Smashing Magazine à l'aide d'un générateur de site statique et 
 
 ## Écouter l'épopée de Smashing Magazine
 
-{% include video.html url="https://www.youtube.com/embed/rB4Cl5LSe2c?cc_load_policy=1" width="560" height="315" %}
+{% include video.html url="https://www.youtube.com/embed/rB4Cl5LSe2c?cc_load_policy=1>" width="560" height="315" %}
 
 Smashing Magazine a toujours été une plateforme de confiance pour les développeurs. C'est un endroit où on peut trouver les meilleures pratiques liées au développement Web. Cela fait longtemps que nous leur faisons confiance, depuis que Matt Biilmann, co-fondateur et CEO de Netlify, a commencé à utiliser Smashing Magazine pour apprendre à programmer par lui-même il y a quelques années de cela.
 
@@ -27,9 +27,9 @@ En avril 2016, Matt a fait une présentation lors de la SmashingConf à San Fran
 
 La JAMstack intègre des pratiques qui la rendent idéale pour le développement Web moderne :
 
--   Les sites basés sur la JAMstack tirent partie de la puissance des CDN pour bénéficier d'une vitesse et d'une performance impossibles à battre.
--   Tout est versionné dans Git, pas besoin de bases de données à répliquer, pas d'installation compliquée.
--   Le code est pré-généré avec la JAMstack, les régénérations sont automatisées, les modifications ne seront pas en production avant la prochaine régénération… pour ne citer que quelques exemples.
+* Les sites basés sur la JAMstack tirent partie de la puissance des CDN pour bénéficier d'une vitesse et d'une performance impossibles à battre.
+* Tout est versionné dans Git, pas besoin de bases de données à répliquer, pas d'installation compliquée.
+* Le code est pré-généré avec la JAMstack, les régénérations sont automatisées, les modifications ne seront pas en production avant la prochaine régénération… pour ne citer que quelques exemples.
 
 C'est une nouvelle manière de bâtir des sites et des applications qui offrent de meilleures performances, une sécurité plus élevée, un moindre coût de redimensionnement et une meilleure expérience de développement.
 
@@ -41,15 +41,15 @@ Smashing Magazine a décidé l'année dernière de redesigner leur site car ils 
 
 WordPress leur a causé de forts maux de têtes et Smashing n'était plus satisfait de ce qu'il pouvait proposer. Même en utilisant la plupart des plugins de cache disponibles, il était clair que WordPress ne fonctionnait pas comme il fallait puisqu'il y avait des problèmes avec **chacun des plugins de cache**.
 
-{% include figure.html url="https://cdn.netlify.com/3e5d615c43e682e4601dcfcd7eb8ee15357be6d9/63741/img/blog/gif_1.gif" description="Vitaly Friedman : nous avions des problèmes de cache avec chacun des plugins de cache Wordpress existants" %}
+{% include figure.html url="https://cdn.netlify.com/3e5d615c43e682e4601dcfcd7eb8ee15357be6d9/63741/img/blog/gif_1.gif>" description="Vitaly Friedman : nous avions des problèmes de cache avec chacun des plugins de cache Wordpress existants" %}
 
 **Si** Netlify voulait relever le défi, il fallait bien comprendre les priorités cruciales pour Smashing :
 
--   L'accès à une **plate-forme unifiée** - un endroit qui regroupe les différents outils techniques utilisés pour la gestion du site,
+* L'accès à une **plate-forme unifiée** - un endroit qui regroupe les différents outils techniques utilisés pour la gestion du site,
 
--   La liberté de produire **un design** qu'ils aiment sans avoir à subir les contraintes imposées par WordPress et les autres outils,
+* La liberté de produire **un design** qu'ils aiment sans avoir à subir les contraintes imposées par WordPress et les autres outils,
 
--   Le site le **plus performant** possible en se focalisant sur la fiabilité et la rapidité.
+* Le site le **plus performant** possible en se focalisant sur la fiabilité et la rapidité.
 
 …le tout en l'espace de **quelques mois**[^1].
 
@@ -57,7 +57,7 @@ WordPress leur a causé de forts maux de têtes et Smashing n'était plus satisf
 
 Rien que ça ? Après quelques échanges et une réunion avec toute l'équipe, Netlify a décidé qu'ils ne pouvaient laisser passer une aussi belle occasion. Smashing magazine serait la parfaite étude de cas pour montrer que l'utilisation de la JAMstack constitue **la** manière de développer des sites.
 
-{% include figure.html url="https://cdn.netlify.com/8847cc537164cc098d3f77f8db225c41f14430a5/e553b/img/blog/gif_4.gif" description="Mathias Biilmann : Smashing avait besoin d'un générateur, d'un CMS, de commentaires, d'une plate-forme de E-commerce, d'une gestion des abonnements et des paiements" %}
+{% include figure.html url="https://cdn.netlify.com/8847cc537164cc098d3f77f8db225c41f14430a5/e553b/img/blog/gif_4.gif>" description="Mathias Biilmann : Smashing avait besoin d'un générateur, d'un CMS, de commentaires, d'une plate-forme de E-commerce, d'une gestion des abonnements et des paiements" %}
 
 Cela signifie que Smashing avait beaucoup de besoins. Il fallait créer un outil de build pour le magazine, un gestionnaire de contenus pour les milliers d'articles, un moteur de commentaires (avec plus de 200 000 commentaires !), une plate-forme de e-commerce pour les ventes, un service d'abonnement et un compte utilisateur.
 
@@ -69,10 +69,10 @@ Nous voulions fournir à Smashing tous les outils et les fonctionnalités dont i
 
 En partant des besoins de Smashing, le début de notre périple technique a consisté à développer les APIS open source suivantes :
 
--   **GoTell** - une API et un outil de build pour la gestion d'un grand nombre de commentaires,
--   **GoCommerce** - une petit API en Go pour les sites e-commerce pour la gestion des commandes et des paiements,
--   **GoJoin** -  une API qui intègre les abonnements Stripe pour les Single Page Apps et les sites,
--   **GoTrue** - une petite API open-source écrite en Go qui peut agir comme une API de service indépendante pour la gestion des inscriptions et des authentifications. Elle est basée sur OAuth2 et JWT et peut gérer les inscriptions, les connexions et les données personnelles des utilisateurs.
+* **GoTell** - une API et un outil de build pour la gestion d'un grand nombre de commentaires,
+* **GoCommerce** - une petit API en Go pour les sites e-commerce pour la gestion des commandes et des paiements,
+* **GoJoin** -  une API qui intègre les abonnements Stripe pour les Single Page Apps et les sites,
+* **GoTrue** - une petite API open-source écrite en Go qui peut agir comme une API de service indépendante pour la gestion des inscriptions et des authentifications. Elle est basée sur OAuth2 et JWT et peut gérer les inscriptions, les connexions et les données personnelles des utilisateurs.
 
 Vous pouvez retrouver toutes ces APIs sur notre [page open source](https://www.netlify.com/open-source/). Il y a tout un historique technique derrière ces décisions et nous dévoilerons plus de détails à ce propos dans un prochain article.
 
@@ -81,11 +81,11 @@ Vous pouvez retrouver toutes ces APIs sur notre [page open source](https://www.n
 Une des tâches les plus importantes liée au travail pour Smashing a été sans conteste le projet de gestionnaire de contenus open source **[Netlify
 CMS](https://www.netlifycms.org/)**.
 
-{% include figure.html url="https://cdn.netlify.com/f938aee2d1bd841ea4fe599a3af0f4e9bbba6b3c/024d0/img/blog/netlifycms.svg" description="Un CMS qui unifie le travail des auteurs, des éditeurs et des développeurs" %}
+{% include figure.html url="https://cdn.netlify.com/f938aee2d1bd841ea4fe599a3af0f4e9bbba6b3c/024d0/img/blog/netlifycms.svg>" description="Un CMS qui unifie le travail des auteurs, des éditeurs et des développeurs" %}
 
 Loin de ses cousins bouffis et monolithiques comme WordPress, nous voulions que le CMS de Netlify permette aux éditeurs de contenus de bénéficier du processus de versionnement basé sur Git. Qui plus est, Netlify CMS est compatible avec toutes les plate-formes et fonctionne avec (presque) tout les générateurs de site statique compatibles avec GitHub. C'est rapide, simple, souple et nous sommes très fiers du résultat.
 
-*Spéciale dédicace à toutes les technologies utilisées :*
+_Spéciale dédicace à toutes les technologies utilisées :_
 
 [Algolia](https://www.algolia.com/), un service de recherche super rapide en temps réel, [Hugo](http://gohugo.io/), combiné à une gestion moderne des assets avec Gulp et Webpack, le tout basé sur le modèle open-source [Victor Hugo](https://github.com/netlify/victor-hugo).
 
@@ -95,7 +95,7 @@ Quelques mois plus tard, nous y voici… Smashing a annoncé aujourd'hui la sort
 
 SmashingMagazine.com est aujourd'hui bien plus rapide, ils sont passés d'un temps de début de chargement de 800ms à 80ms. Les visiteurs de Smashing vont maintenant bénéficier d'une expérience plus fluide grâce à de meilleures intégrations, une vitesse accrue et une meilleure performance.
 
-{% include figure.html url="https://cdn.netlify.com/f1e06365a29be3cfcf08b8f1a82fc902cb9a75cf/ec035/img/blog/gif_2.gif" description="Le temps de début de chargement est bien plus rapide qu'auparavant" %}
+{% include figure.html url="https://cdn.netlify.com/f1e06365a29be3cfcf08b8f1a82fc902cb9a75cf/ec035/img/blog/gif_2.gif>" description="Le temps de début de chargement est bien plus rapide qu'auparavant" %}
 
 Smashing possède désormais la plate-forme unifiée dont ils rêvaient. Ils gèrent maintenant à partir **d'un seul et même endroit** tous les solides besoins de leur site. Avec Netlify, les projets open source et une manière plus efficace de gérer les contenus, fini d'hésiter pour savoir sur quel bouton appuyer ou quel outil utiliser pour réaliser une action particulière.
 
