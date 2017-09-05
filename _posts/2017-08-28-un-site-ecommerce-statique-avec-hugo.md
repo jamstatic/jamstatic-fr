@@ -153,7 +153,7 @@ Vous pouvez aussi aller parcourir l'annuaire officiel de [quelques-uns des meill
 Okay, passons donc à la configuration de nos produits : un dictionnaire Klingon
 et un pistolet laser. Nous **aurions pu** utiliser un CMS headless ou statique
 pour cette partie (comme nous l'avons déjà
-[fait](https://www.siteleaf.com/blog/jamstack-e-commerce/)
+[fait](https://www.siteleaf.com/blog/jamstack-ecommerce/)
 [auparavant](https://www.contentful.com/blog/2016/02/10/snipcart-middleman-contentful/))
 
 Vu le modeste objectif de cet article, nous allons simplement créer un fichier

@@ -67,7 +67,7 @@ incalculable d'APIs et de faire tourner des applications complexes côté client
 et que le développement front-end est dominé par JavaScript et les
 automatisations à l'aide de `npm`, n'avons nous pas déjà dépassé ce modèle ?
 
-{% include figure.html url="https://36bvmt283fg61unuud3h7qua-wpengine.netdna-ssl.com/wp-content/uploads/2017/03/Toms_Diagram_2-768x314.png>"
+{% include figure.html url="https://36bvmt283fg61unuud3h7qua-wpengine.netdna-ssl.com/wp-content/uploads/2017/03/Toms_Diagram_2-768x314.png"
 description="Un site Web statique développé à l'aide d'un processus basé
 sur la JAMstack" %}
 
