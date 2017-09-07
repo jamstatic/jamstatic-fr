@@ -104,6 +104,7 @@ h6 {
 a {
   color: $brand-color;
   text-decoration: none;
+  transition: all 0.3s ease;
 
   &:hover {
     color: $text-color;

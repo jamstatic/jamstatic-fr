@@ -27,10 +27,17 @@ body {
   text-transform: uppercase;
   vertical-align: middle;
   text-align: center;
+  transition: all 0.4s ease;
 
   &,
+  &:hover,
   &:visited {
     color: #fff;
+    text-decoration: none;
+  }
+
+  &:hover {
+    text-shadow: 4px 2px $text-color;
   }
 }
 
@@ -161,7 +168,7 @@ body {
     margin-bottom: $spacing-unit;
     line-height: 1.1;
     min-height: 6.192em;
-    border-bottom: 0.0279em solid;
+    border-bottom: 0.0279em solid $grey-color;
   }
 }
 
@@ -186,6 +193,10 @@ body {
   font-weight: 700;
   letter-spacing: $title-letter-spacing;
   display: block;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 /**
