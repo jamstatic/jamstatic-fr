@@ -4,14 +4,11 @@ layout: default
 ---
 
 <div class="home">
-
   <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{% include fr_date.html date=post.date %}</span>
-        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | widont }}</a>
-      </li>
-    {% endfor %}
+    {%- for post in site.posts -%}
+    <li><span class="post-meta">{%- include fr_date.html date=post.date -%}</span>
+      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | widont }}</a>
+    </li>
+    {%- endfor -%}
   </ul>
-
 </div>

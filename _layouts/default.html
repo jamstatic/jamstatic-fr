@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang }}">
-  {% include head.html %}
-  <body>
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+  {%- include_cached head.html -%}
+<body>
+  {%- include header.html -%}
+  <div class="page-content">
+    <div class="wrapper">
+      {{- content -}}
     </div>
-
-    {% include footer.html %}
-    <script src="{{ "assets/js/anchor.min.js" | relative_url }}"></script>
-    <script>anchors.add('.post h2, .post h3');</script>
-    <script async src="{{ "assets/js/turbolinks.js " | relative_url }}">
-  </body>
+  </div>
+  {%- include_cached footer.html -%}
+<script src="{{ "assets/js/anchor.min.js" | relative_url }}"></script>
+<script>anchors.add('.post h2, .post h3');</script>
+<script async src="{{ "assets/js/turbolinks.js " | relative_url }}">
+</body>
 </html>

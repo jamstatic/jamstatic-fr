@@ -3,36 +3,32 @@ layout: default
 ---
 
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title | widont }}</h1>
-    {% assign author = site.data.authors[page.author] %}
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{% include fr_date.html date=page.date %}</time>
-      {% if page.author %}
+    {%- assign author = site.data.authors[page.author] -%}
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{%- include fr_date.html date=page.date -%}</time>
+      {%- if page.author -%}
        • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
           <span itemprop="name">
-            <a class="post-author" rel="author" href="https://github.com/{{ author.github }}">{% avatar {{ author.github }} size=32 %}{{ author.name }}</a>
+            <a class="post-author" rel="author" href="https://github.com/{{ author.github }}">{%- avatar {{ author.github }} size=32 -%}{{ author.name }}</a>
           </span>
         </span>
-      {% endif %}
+      {%- endif -%}
     </p>
   </header>
-
   <div class="post-content" itemprop="articleBody">
-    {{ content }}
+    {{- content -}}
     {%- if page.source.title and page.source.url -%}
       <p>
         <em>Article original : <a href="{{ page.source.url }}">{{ page.source.title }}</a></em>
       </p>
     {%- endif -%}
-
     <footer>
-      {% if page.comments %}
-        {% include comments.html %}
-      {% endif %}
+      {%- if page.comments -%}
+        {%- include comments.html -%}
+      {%- endif -%}
       <h2>Améliorez cet article</h2>
       <p><a href="https://github.com/{{ site.github.repository_nwo }}/edit/{{ site.branch }}/{{ page.path }}">Éditez le contenu</a>.</p>
     </footer>
   </div>
-
 </article>

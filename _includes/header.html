@@ -1,23 +1,18 @@
 <header class="site-header">
-
   <div class="wrapper">
-
-    {% if page.url != site.url  %}
+    {%- if page.path != "index.html" -%}
       <a class="site-title" href="{{ "/" | relative_url }}">JAMstatic</a>
-    {% else %}
+    {%- else -%}
       <span class="site-title">JAMstatic</span>
-    {% endif %}
-
+    {%- endif -%}
     <nav class="site-nav">
       <div class="trigger">
-        {% for my_page in site.pages %}
-          {% if my_page.title %}
+        {%- for my_page in site.pages -%}
+          {%- if my_page.title -%}
             {{ my_page.title }}
-          {% endif %}
-        {% endfor %}
+          {%- endif -%}
+        {%- endfor -%}
       </div>
     </nav>
-
   </div>
-
 </header>

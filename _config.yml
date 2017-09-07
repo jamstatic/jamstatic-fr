@@ -1,4 +1,3 @@
----
 title: Jamstatic
 timezone: Europe/Paris
 collections:
@@ -16,11 +15,10 @@ defaults:
     layout: post
     comments: true
     author: Frank Taillandier
-    image: "/assets/images/logo-2x.png"
 email: contact@jamstatic.fr
 description: L'actualité autour des générateurs de site statique et de la JAMStack
 url: https://jamstatic.fr
-baseurl: 
+baseurl:
 permalink: "/:year/:month/:day/:title/"
 lang: fr
 repository: jamstatic/jamstatic-fr
@@ -29,11 +27,14 @@ twitter:
   username: jamstatic_fr
 github:
   username: jamstatic
+  source:
+    branch: master
 social:
   type: organization
   links:
   - https://twitter.com/jamstatic_fr
   - https://github.com/jamstatic
+google_site_verification: lrEoUhopZf6zuDH_kdABgRxWc0uAVSlXBftczsGVL10
 analytics:
   google:
     tracking_id: UA-75833986-1
@@ -62,6 +63,7 @@ plugins:
 - jekyll-feed
 - jekyll-gist
 - jekyll-github-metadata
+- jekyll-include-cache
 - jekyll-mentions
 - jekyll-paginate
 - jekyll-seo-tag
