@@ -1,9 +1,9 @@
 language: ruby
 cache: bundler
 sudo: false
-rvm: 2.2
+rvm: 2.4
 install: bundle install
-script: ./script/cibuild
+script: script/cibuild
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
