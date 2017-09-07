@@ -247,7 +247,7 @@ puissions tous apprendre de vous.
 
 La structure du répertoire de mon site en local ressemble actuellement à ça :
 
-{% include figure.html
+{% include_cached figure.html
 url="https://d33wubrfki0l68.cloudfront.net/4aa07c8129bdae37f8c6510453f274a32ac664c0/09ca5/images/article-assets/hugo-netlify/hugo-folder-structure.png"
 description="Structure de dossiers pour Hugo" %}
 
@@ -352,7 +352,7 @@ connaissance_, n'offre pas de fonctionnalité similaire.[^3]
 La capture d'écran ci-contre montre à quoi ressemble mon dossier `/content/` en
 ce moment :
 
-{% include figure.html
+{% include_cached figure.html
 url="https://d33wubrfki0l68.cloudfront.net/32450b106a26b69980db6e73094c9411c5734a61/ff4f7/images/article-assets/hugo-netlify/content-types.png"
 description="Le contenu du dossier `content` de mon site" %}
 
@@ -407,7 +407,7 @@ auquel nous afficherons la liste de tous les articles). Le dossier
 `/content/blog/` hébergera également tous les billets de blog. La capture
 d'écran suivante montre cela de façon plus visuelle :
 
-{% include figure.html
+{% include_cached figure.html
 url="https://d33wubrfki0l68.cloudfront.net/37bc25dc5366c0b251c5b2c50edd8ca246b85f4f/36428/images/article-assets/hugo-netlify/section-type.png"
 description="Le contenu du dossier `/content/blog/`" %}
 
@@ -641,7 +641,7 @@ défaut les valeurs de ces variables seront vierges, prêtes à être renseigné
 La capture d'écran suivante montre les variables front matter que j'ai défini
 pour l'archétype `etudes-de-cas` :
 
-{% include figure.html url="/assets/images/archetype-hugo.png" description="Les
+{% include_cached figure.html url="/assets/images/archetype-hugo.png" description="Les
 variables définies pour l'archétype des études de cas. À chaque fois que je
 demande à Hugo de créer une nouvelle étude de cas pour moi, il va
 automatiquement ajouter ces variables front matter pour moi. Ces variables sont
@@ -739,7 +739,7 @@ celle que nous avons dans `/content/`.
 
 C'est toujours pas clair ? Alors regardez ce que ça donne pour mon site :
 
-{% include figure.html
+{% include_cached figure.html
 url="https://d33wubrfki0l68.cloudfront.net/1e4417080932df239c9a7eae7ded8f0ad59eb2ea/7ae87/images/article-assets/hugo-netlify/layouts.png"
 description="La structuration des répertoires pour le contenu et les modèles de
 mon site." %}
@@ -1014,7 +1014,7 @@ Quelques bons trucs à savoir :
 
 Voici en partie à quoi ressemble mon tableau de bord Netlify :
 
-{% include figure.html
+{% include_cached figure.html
 url="https://d33wubrfki0l68.cloudfront.net/9827bd9472d1606e4262dc9207669478e50a48c2/76bd7/images/article-assets/hugo-netlify/netlify-dashboard.png"
 description="Deploy settings, build environment variables as seen on my Netlify
 dashboard." %}
@@ -1022,7 +1022,7 @@ dashboard." %}
 J'aime aussi le fait que Netlify propose des options pour optimiser et assembler
 les assets pour vous, afin d'améliorer les performances globales de votre site.
 
-{% include figure.html
+{% include_cached figure.html
 url="https://d33wubrfki0l68.cloudfront.net/341e3023bff0c722f41c37b91c18c9d04fa612c5/35119/images/article-assets/hugo-netlify/netlify-dashboard-2.png"
 description="Asset optimization options as seen on my Netlify dashboard" %}
 

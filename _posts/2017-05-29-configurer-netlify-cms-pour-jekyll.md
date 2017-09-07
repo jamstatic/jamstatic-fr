@@ -35,7 +35,7 @@ Netlify](https://app.netlify.com/signup) afin de pouvoir relier votre dépôt Gi
 vous travaillez sur un [projet open source](https://www.netlify.com/open-source/),
 vous pouvez utiliser la formule pro.
 
-{% include figure.html url="/assets/images/netlify-cms/new-site-netlify.png"
+{% include_cached figure.html url="/assets/images/netlify-cms/new-site-netlify.png"
 description="Ajout de site, étape 2 : choix du dépôt" %}
 
 L'ajout de site se fait en quelques clics, il n'y a qu'à sélectionner le service
@@ -44,7 +44,7 @@ commande de build utilisée (`jekyll build` pour Jekyll) ainsi que le dossier de
 publication(`_site` par défaut avec Jekyll). Une fois le site configuré, nous
 allons pouvoir nous occuper d'autoriser l'édition de contenu via Netlify CMS.
 
-{% include figure.html
+{% include_cached figure.html
 url="/assets/images/netlify-cms/deploy-settings-netlify.png" description="Ajout
 de site, étape 3 : configuration du déploiement" %}
 
@@ -56,7 +56,7 @@ utilisez) et de mentionner `https://api.netlify.com/auth/done` comme URL de
 callback d'authentification. Vous donnez ainsi l'autorisation à Netlify CMS
 d'accéder aux fichiers du dépôt.
 
-{% include figure.html
+{% include_cached figure.html
 url="/assets/images/netlify-cms/edit-oauth-app-github.png"
 description="Configuration de l'application Oauth dans GitHub" %}
 
@@ -83,7 +83,7 @@ Il contient le chemin vers votre dépôt GitHub (à adapter donc à votre cas de
 figure), ici l'option `editorial_workflow` est activée mais vous pouvez
 commenter la ligne si vous n'en avez pas l'utilité.
 
-{% include figure.html
+{% include_cached figure.html
 url="/assets/images/netlify-cms/editorial-workflow-netlify-cms.png"
 description="Aperçu du workflow de publication de Netlify CMS" %}
 
@@ -97,7 +97,7 @@ dans les variables FrontMatter des
 section](https://github.com/netlify/netlify-cms/blob/master/docs/quick-start.md#collections)
 en fonction de vos besoins et ajouter les widgets dont vous avez besoin.
 
-{% include figure.html url="/assets/images/netlify-cms/netlify-cms-edit.png"
+{% include_cached figure.html url="/assets/images/netlify-cms/netlify-cms-edit.png"
 description="Édition des champs personnalisés d'un article" %}
 
 Une fois les champs personnalisés ajoutés, il ne vous reste plus qu'à les
@@ -125,7 +125,7 @@ Netlify est en train de travailler sur son
 [Styleguide](https://styleguide.netlify.com/) et à n'en pas douter son CMS
 devrait en bénéficier quand il sera plus abouti.
 
-{% include figure.html url="/assets/images/netlify-cms/netlify-cms.png"
+{% include_cached figure.html url="/assets/images/netlify-cms/netlify-cms.png"
 description="La liste des articles dans Netlify CMS" %}
 
 Dans notre exemple, nous avons un site Jekyll tout ce qu'il y a de plus simple,
@@ -138,7 +138,7 @@ Si vous souhaitez donner l'accès à plusieurs collaborateurs, rendez vous sur
 [app.netlify.com](https://app.netlify.com/) dans l'onglet access de votre site
 et ajoutez autant de collaborateurs que vous le souhaitez.
 
-{% include figure.html url="/assets/images/netlify-cms/access-netlify.png"
+{% include_cached figure.html url="/assets/images/netlify-cms/access-netlify.png"
 description="Configuration de l'accès au site Netlify" %}
 
 ## Et voilà !
@@ -152,7 +152,7 @@ le désirez et Netlify va jusqu'à génèrer une [URL unique de
 prévisualisation](https://www.youtube.com/watch?v=s_4UL9oAcVE) accessible depuis
 GitHub pour chaque pull-request créée. Elle est pas belle la vie ?
 
-{% include figure.html
+{% include_cached figure.html
 url="/assets/images/netlify-cms/pull-request-netlify-cms.png" description="Lors
 de la sauvegarde d'un nouvel article, une pull request est créée sur GitHub avec
 un lien vers une URL de prévisualisation" %}

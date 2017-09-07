@@ -308,7 +308,7 @@ assembler ces pièces comme voulu par Harp). Terraform est constitué d'un nombr
 de fichiers qui définissent ces processeurs pour JavaScript, CSS/feuilles de
 style et modèles (qui ici comprennent Markdown).
 
-{% include figure.html
+{% include_cached figure.html
 url="https://cdn.css-tricks.com/wp-content/uploads/2017/02/terraform-1.jpg" %}
 
 Dans chacun de ces dossiers se trouve un dossier `processors`
@@ -317,7 +317,7 @@ qui renferme le code pour chacun des processeurs spécifiques que Terraform
 trouvent les fichiers qui permettent de compiler les fichiers EJS, Jade, and
 Markdown.
 
-{% include figure.html
+{% include_cached figure.html
 url="https://cdn.css-tricks.com/wp-content/uploads/2017/02/terraform_processors.png"
 %}
 
@@ -494,7 +494,7 @@ site statique
 gratuit et essaie d'aborder l'historique, le paysage actuel et les fondamentaux
 des générateurs de site statique.
 
-{% include figure.html
+{% include_cached figure.html
 url="https://cdn.css-tricks.com/wp-content/uploads/2017/02/books-1.jpg" %}
 
 Le livre que j'ai co-écrit avec [Raymond

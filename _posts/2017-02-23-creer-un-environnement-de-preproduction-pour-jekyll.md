@@ -79,7 +79,7 @@ site](https://netlify.com) et connectez vous avec votre compte GitHub (c'est
 sur 'Nouveau site avec Git', sélectionnez GitHub et sélectionnez le
 dépôt qui dans lequel se trouve votre site.
 
-{% include figure.html
+{% include_cached figure.html
 url="https://eduardoboucas.com/assets/posts/2017-02-22-creating-a-staging-environment-for-jekyll/netlify1.png"
 description="Netlify : Configuration du dépôt" %}
 
@@ -100,7 +100,7 @@ un nom de domaine personalisé pour ce site, pour cela vous devrez configurer
 votre DNS. Si vous avez choisi `dev-example-com` comme nom pour votre site, il
 vous faudra un CNAME qui pointe vers `dev-example-com.netlify.com`.
 
-{% include figure.html
+{% include_cached figure.html
 url="https://eduardoboucas.com/assets/posts/2017-02-22-creating-a-staging-environment-for-jekyll/netlify2.png"
 description="Netlify: le panneau de configuration" %}
 

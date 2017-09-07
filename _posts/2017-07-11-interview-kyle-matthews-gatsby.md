@@ -49,7 +49,7 @@ Mathews.
 > remarque que cliquer sur des liens sur un site fait avec Gatsby, c'est comme
 > naviguer sur un site en local
 
-{% include figure.html url="/assets/images/gatsby/architecture.png"
+{% include_cached figure.html url="/assets/images/gatsby/architecture.png"
 description="Vue d'ensemble de Gatsby" %}
 
 Dans une interview à InfoQ, Mathews parle des motivations pour lesquelles il

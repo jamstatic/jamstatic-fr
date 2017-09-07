@@ -26,7 +26,7 @@ nous continuons à promouvoir ces solutions dans l'espoir que cela vous incite
 
 ## Écouter l'épopée de Smashing Magazine
 
-{% include video.html
+{% include_cached video.html
 url="https://www.youtube.com/embed/rB4Cl5LSe2c?cc_load_policy=1" width="560"
 height="315" %}
 
@@ -84,7 +84,7 @@ de ce qu'il pouvait proposer. Même en utilisant la plupart des plugins de cache
 disponibles, il était clair que WordPress ne fonctionnait pas comme il fallait
 puisqu'il y avait des problèmes avec **chacun des plugins de cache**.
 
-{% include figure.html
+{% include_cached figure.html
 url="https://cdn.netlify.com/3e5d615c43e682e4601dcfcd7eb8ee15357be6d9/63741/img/blog/gif_1.gif"
 description="Vitaly Friedman : nous avions des problèmes de cache avec chacun
 des plugins de cache Wordpress existants" %}
@@ -110,7 +110,7 @@ Netlify a décidé qu'ils ne pouvaient laisser passer une aussi belle occasion.
 Smashing magazine serait la parfaite étude de cas pour montrer que l'utilisation
 de la JAMstack constitue **la** manière de développer des sites.
 
-{% include figure.html
+{% include_cached figure.html
 url="https://cdn.netlify.com/8847cc537164cc098d3f77f8db225c41f14430a5/e553b/img/blog/gif_4.gif"
 description="Mathias Biilmann : Smashing avait besoin d'un générateur, d'un CMS,
 de commentaires, d'une plate-forme de E-commerce, d'une gestion des abonnements
@@ -161,7 +161,7 @@ dans un prochain article.
 Une des tâches les plus importantes liée au travail pour Smashing a été sans
 conteste le projet de gestionnaire de contenus open source **[Netlify CMS](https://www.netlifycms.org/)**.
 
-{% include figure.html
+{% include_cached figure.html
 url="https://cdn.netlify.com/f938aee2d1bd841ea4fe599a3af0f4e9bbba6b3c/024d0/img/blog/netlifycms.svg"
 description="Un CMS qui unifie le travail des auteurs, des éditeurs et des
 développeurs" %}
@@ -191,7 +191,7 @@ temps de début de chargement de 800ms à 80ms. Les visiteurs de Smashing vont
 maintenant bénéficier d'une expérience plus fluide grâce à de meilleures
 intégrations, une vitesse accrue et une meilleure performance.
 
-{% include figure.html
+{% include_cached figure.html
 url="https://cdn.netlify.com/f1e06365a29be3cfcf08b8f1a82fc902cb9a75cf/ec035/img/blog/gif_2.gif"
 description="Le temps de début de chargement est bien plus rapide qu'auparavant"
 %}

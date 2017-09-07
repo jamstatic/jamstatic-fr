@@ -16,7 +16,7 @@ Getty](https://getty.edu/), un campus culturel et de recherche situé à Los
 Angeles.
 {: .intro }
 
-{% include figure.html url="https://thenewdynamic.imgix.net/getty-museum-ancient-terracottas-1600.jpg?w=785"
+{% include_cached figure.html url="https://thenewdynamic.imgix.net/getty-museum-ancient-terracottas-1600.jpg?w=785"
 %}
 
 ### Comment et pourquoi en êtes vous arrivés à choisir un générateur de site statique comme clé de voûte de votre processus de publication aux éditions The Getty ? Pourquoi ne pas avoir opté pour un développement natif ?

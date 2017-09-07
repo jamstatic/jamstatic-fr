@@ -45,7 +45,7 @@ constamment côté serveur pour générer le HTML final affiché par le navigate
 l'utilisateur. Prenons l'exemple (très schématique) d'un site typique qui
 fonctionne sous Wordpress.
 
-{% include figure.html url="https://36bvmt283fg61unuud3h7qua-wpengine.netdna-ssl.com/wp-content/uploads/2017/03/Toms_Diagram_1.png"
+{% include_cached figure.html url="https://36bvmt283fg61unuud3h7qua-wpengine.netdna-ssl.com/wp-content/uploads/2017/03/Toms_Diagram_1.png"
 description="Génération de page HTML à l'aide de PHP et d'un serveur MySQL" %}
 
 Quand l'utilisateur demande à afficher une page, votre serveur fait une requête
@@ -66,7 +66,7 @@ incalculable d'APIs et de faire tourner des applications complexes côté client
 et que le développement front-end est dominé par JavaScript et les
 automatisations à l'aide de `npm`, n'avons nous pas déjà dépassé ce modèle ?
 
-{% include figure.html url="https://36bvmt283fg61unuud3h7qua-wpengine.netdna-ssl.com/wp-content/uploads/2017/03/Toms_Diagram_2-768x314.png"
+{% include_cached figure.html url="https://36bvmt283fg61unuud3h7qua-wpengine.netdna-ssl.com/wp-content/uploads/2017/03/Toms_Diagram_2-768x314.png"
 description="Un site Web statique développé à l'aide d'un processus basé
 sur la JAMstack" %}
 

@@ -297,7 +297,7 @@ chacun des noms des propriétés.
 {% assign message = comment.message %}{% endraw %}
 ```
 
-{% include figure.html
+{% include_cached figure.html
 url="https://mademistakes.com/assets/images/staticman-parent-comments-only.png"
 description="Ça marche, nous avons des commentaires parents !" %}
 
@@ -550,7 +550,7 @@ pour m'en tenir à ça.
 {% endraw %}
 ```
 
-{% include figure.html
+{% include_cached figure.html
 url="https://mademistakes.com/assets/images/staticman-nested-comments.png"
 description="Commentaires imbriqués sur un seul niveau de profondeur." %}
 
@@ -648,7 +648,7 @@ Si tout est correctement configuré, l'utilisateur devrait recevoir un mail dès
 qu'un nouveau commentaire est posté sur le billet ou la page auxquels il s'est
 abonné.
 
-{% include figure.html
+{% include_cached figure.html
 url="https://mademistakes.com/assets/images/staticman-email-notification.png"
 description="Exemple d'un mail de notification \"Nouvelle réponse\" de
 Staticman." %}

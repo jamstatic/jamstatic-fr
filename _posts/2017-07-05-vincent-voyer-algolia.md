@@ -34,7 +34,7 @@ des développeurs web.
 
 ### Bonjour Vincent, on va peut-être commencer par te présenter ?
 
-{% include figure.html
+{% include_cached figure.html
 url="http://m.c.lnkd.licdn.com/mpr/mpr/shrinknp_400_400/p/2/005/070/3f2/1de75f6.jpg"
 description="Vincent Voyer, développeur JS chez Algolia" %}
 
@@ -324,7 +324,7 @@ on se fasse nous-mêmes notre propre générateur de site statique pour Algolia.
 
 ### Dans le monde des sites statiques, on a beaucoup parlé de [la refonte de Smashing Magazine]({% post_url 2017-03-17-smashing-mag-va-dix-fois-plus-vite %}) dernièrement dont la recherche a été développée avec Algolia, ça marche très bien. Le site est généré avec Hugo, un générateur écrit en Go, or, il n'y a pas de plugin natif Algolia pour Hugo, même si vous fournissez un client pour votre API en Go
 
-{% include figure.html url="/assets/images/algolia-smashing.png" description="La
+{% include_cached figure.html url="/assets/images/algolia-smashing.png" description="La
 recherche de la nouvelle version de Smashing Magazine avec Algolia" %}
 
 **Vincent Voyer** :

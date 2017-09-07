@@ -37,7 +37,7 @@ J'espère aussi que cet article montre aux designers curieux du code que ce n'es
 pas la peine d'avoir peur des outils modernes de développement web. Ça vous
 branche ? Allez, c'est parti !
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*HaArgKPM5NEVxucSnAVkpQ/RS/w704.jpeg?&ssl=1"
 description="Ce type, OK ?" %}
 
@@ -50,7 +50,7 @@ pouvez déposer sur votre site hébergé. Chaque entrée de portfolio est trait�
 comme un article de blog et est extrêmement simple à créer et à éditer. Jekyll
 inclus également un serveur web de test et supporte Sass.
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*pUi-rGl2BFZ2HuVMj_HsiA/RS/w704.gif?&ssl=1"
 description="Liz, j'ai été là bas et c'est incroyable." %}
 
@@ -64,7 +64,7 @@ C'est assez fascinant pour vous ? Développons et déployons un site ensemble po
 faire une démonstration du process de travail. Premièrement, nous allons lancer
 le terminal et travailler avec la ligne de commande.
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*-novrtLzHXbmEmpM10a7Qg/RS/w704.png?&ssl=1"
 description="Le terminal" %}
 
@@ -96,7 +96,7 @@ La commande `jekyll serve` lance un serveur web local pour prévisualiser votre
 site à l'adresse <http://localhost:4000>. Je vais garder cet onglet ouvert dans
 mon navigateur.
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*BrFV6ggy3qaZsfUQnojCVQ/RS/w704.png?&ssl=1"
 description="Le thème par défaut de Jekyll" %}
 
@@ -111,7 +111,7 @@ C'est bien documenté et les paquets de la communauté sont assez mortels -
 [bezier-curve-editor](https://atom.io/packages/bezier-curve-editor) pour n'en
 citer que quelques uns.
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*18hVdarzmkx6KkSvty5Uaw/RS/w704.png?&ssl=1"
 description="Le dossier mon-site ouvert dans Atom" %}
 
@@ -157,7 +157,7 @@ Vous pouvez définir [n'importe quel
 paramètre](http://jekyllrb.com/docs/configuration/) global de votre portfolio
 dedans. Ouvrons-le et personnalisons tout ça !
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*fF_CWur2wd6DS7uQDGX6ew/RS/w704.png?&ssl=1"
 description="Remplissez vos infos !" %}
 
@@ -170,7 +170,7 @@ serveur de Jekyll. Donc une fois les changements effectués, arrêtez le serveur
 en ligne de commande avec le raccourci `ctrl-c`. Entez à nouveau `jekyll serve`
 et jetez un coup d'œil à localhost !
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*uDszfYceRXqPFeI7Xm6m0w/RS/w704.png?&ssl=1"
 description="Les variables globales sont appliquées !" %}
 
@@ -186,7 +186,7 @@ fichier Markdown en utilisant la convention `ANNEE-MOIS-JOUR-titre`[^2]. Le
 fichier de mon article est donc nommé
 `2016-11-10-livraison-nourriture-chats.markdown`.
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*kkyEEvzkXYwHlvstT7Tytg/RS/w704.png?&ssl=1"
 description="YAML front matter" %}
 
@@ -202,7 +202,7 @@ balises Liquid, que nous allons voir très bientôt
 
 Éditons notre front matter en haut de l'article entre les triple tirets :
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*CJkHCXOIOLYrssnP4zgtiw/RS/w704.png?&ssl=1"
 description="C'est ici que nous définissons le titre, la date et la catégorie"%}
 
@@ -210,7 +210,7 @@ Jekyll possède quelques variables front-matter prédéfinies, mais c'est en cr�
 vos propres variables dans vos modèles que vous en tirerez le plus parti !
 Regardons comment notre premier article utilise les variables front matter :
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*-QBd-5OFh48-eCVM1sJMhA/RS/w704.png?&ssl=1"
 description="Ça marche !" %}
 
@@ -227,7 +227,7 @@ c'est pour faire bosser Liquid !
 Si vous ouvrez le fichier `post.html` dans le dossier `_layouts`, nous pouvons
 le voir en action.
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*FYILLFGGLdTohX7sJZjSIw/RS/w704.png?&ssl=1"
 description="" %}
 
@@ -240,7 +240,7 @@ ici](http://jekyllrb.com/docs/variables/).
 Et si nous ajoutons encore quelques variables à nous dans le front matter pour
 épicer un peu nos articles :
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*j0EnKALwOPpCRrhBPaM7Nw/RS/w704.png?&ssl=1"
 description="" %}
 
@@ -248,7 +248,7 @@ Maintenant que nous disposons de toutes ces super variables, comment pouvons
 nous les utiliser ? Modifions notre modèle de mise en page `post.html` en
 utilisant les variables `page.type` et `page.intro` :
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*kndQjfPKY_2GF10ZE2Vobg/RS/w704.png?&ssl=1"
 description="Regardez ce qui est en violet" %}
 
@@ -257,7 +257,7 @@ en forme tous les rendus de vos chouettes balises. Essayons d'autres trucs. Et
 si nous ajoutions des vignettes pour chaque article sur la page `index.html` ?
 Et leur légende aussi peut-être.
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*h4YbEuULViTNp3ixMtpxKg/RS/w704.png?&ssl=1"
 description="Front matter c'est de la bombe !" %}
 
@@ -272,7 +272,7 @@ brut en HTML. Je me suis rendu-compte qu'écrire à l'aide de la syntaxe Markdow
 me permet de mieux me concentrer sur mon contenu, plutôt que de penser quelles
 balises fermer.
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*h1nmOO9BWVno52HIGqkyyQ/RS/w704.png?&ssl=1"
 description="" %}
 
@@ -281,7 +281,7 @@ avez besoin. Pour forcer le rendu de Markdown à l'intérieur de balises HTML,
 ajoutez `markdown=1` et le tour est joué ! Le meilleur des deux mondes. Voici un
 extrait de l'article une fois généré :
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*X7jkghcRXQKIH2BSCIxvVQ/RS/w704.png?&ssl=1"
 description="Ne voudrions tous pas vivre de Purring Cat ?" %}
 
@@ -304,7 +304,7 @@ que nous avons un peu de contenu avec lequel travailler, ajoutons un peu de
 style ! Vous pouvez recopier le CSS ou le Sass de votre portfolio existant ou
 repartir de zéro.
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*9nHxZAUcaEIoPxYPB9UwQg/RS/w704.jpeg?&ssl=1"
 description="" %}
 
@@ -377,20 +377,20 @@ dépôt distant sur GitHub.
    si vous n'en possédez pas encore un.
 2. Créez un [nouveau dépôt](https://github.com/new).
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*kFGsk6bcyTe6-_c2-G0GzQ/RS/w704.png?&ssl=1"
 description="Dans le coin en haut à droite" %}
 
 3. Donnez un nom et ajoutez une description à votre dépôt. Créez le dépôt !
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*_kV4Itznh62DLnpdKBCGSA/RS/w704.png?&ssl=1"
 description="" %}
 
 4. Maintenant que vous avez créé le dépôt, vous allez voir cette page s'afficher
 sur GitHub :
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*73bT5OREQUaVsdTpqfbA-w/RS/w704.jpeg?&ssl=1"
 description="" %}
 
@@ -402,7 +402,7 @@ intéresse. Je vais copier-coller ces commandes dans le terminal.
 5. Actualisez la page de votre dépôt distant et félicitez vous ! ON A RÉUSSI.
 Maintenant le monde entier peut admirer notre super portfolio !
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*47y0QjcanT-aWr1CscE6sA/RS/w704.png?&ssl=1"
 description="" %}
 
@@ -439,7 +439,7 @@ pointer vers le port 4000. En gros, vous allez taper un truc comme
 
 ## Système de grille
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*9nraqBzaZDQU9de3zH5Klw/RS/w704.png?&ssl=1"
 description="" %}
 
@@ -451,7 +451,7 @@ chouettes, comme [Neat](http://neat.bourbon.io/) ou
 
 ## Rythme vertical
 
-{% include figure.html
+{% include_cached figure.html
 url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*h8vVPQhl-HT5AqIlTRoA8g/RS/w704.png?&ssl=1"
 description="Typecast" %}
 
@@ -478,7 +478,7 @@ moi. Créer et redesigner votre portfolio devrait être fun et enrichissant, alo
 * [Téléchargez ou forkez le dépôt de démo](https://github.com/katmeister/my-site)
 * [Voir la démo en action](http://katfukui.com/my-site/)
 
-{% include figure.html url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*qKtPxbGF11Ekq_B9hFRmhg/RS/w704.png?&ssl=1"
+{% include_cached figure.html url="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*qKtPxbGF11Ekq_B9hFRmhg/RS/w704.png?&ssl=1"
 description="" %}
 
 [^1]: [Installez Ruby et Jekyll à l'aide d'Homebrew sous Mac](https://gist.github.com/DirtyF/5d2bde5c682101b7b5d90708ad333bf3).

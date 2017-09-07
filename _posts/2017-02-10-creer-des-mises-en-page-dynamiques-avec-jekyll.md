@@ -20,7 +20,7 @@ différentes études de cas à l'aide de Jekyll.
 > effectuer de nombreux changements au sein d'un même modèle pour différents
 > articles sur le nouveau site de notre agence.
 
-{% include figure.html
+{% include_cached figure.html
 url="https://cdn-images-1.medium.com/max/800/1*rS4n3wyRac82CtdSpi3Mpg.jpeg"
 description="Extrait de la <a
 href=\"http://www.tmwunlimited.com/work/canon-unleashprint/\">campagne Canon
@@ -120,19 +120,19 @@ page et qui modifie certains aspects de la présentation de la page.
 Grâce à tout cela, nous avons pu ajouter pas mal de personnalisation à notre
 nouveau site web, ci-dessous une sélection d' études de cas :
 
-{% include figure.html
+{% include_cached figure.html
 url="https://cdn-images-1.medium.com/max/800/1*UVZ-0lHLA702VVWUGAAmTA.png"
 description="" %}
 
-{% include figure.html
+{% include_cached figure.html
 url="https://cdn-images-1.medium.com/max/800/1*rmRNs1tb1D7vCOr_eRBO5Q.png"
 description="<a href=\"http://www.tmwunlimited.com/work/\">http://www.tmwunlimited.com/work/</a>" %}
 
-{% include figure.html
+{% include_cached figure.html
 url="https://cdn-images-1.medium.com/max/800/1*Q8RQduFxoRUMSJauZ0ED-Q.png"
 description="" %}
 
-{% include figure.html
+{% include_cached figure.html
 url="https://cdn-images-1.medium.com/max/800/1*M5f4_au8Xo05A8CyRRdmYQ.png"
 description="" %}
 
