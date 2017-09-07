@@ -1,48 +1,41 @@
 # frozen_string_literal: true
 
-require "rubygems"
-require "tmpdir"
-require "bundler/setup"
 require "jekyll"
 
-GITHUB_REPONAME = "jamstatic/jamstatic-fr".freeze
+task :default => "preview"
 
-desc "Génération des fichiers du site"
-task :generate do
-  Jekyll::Site.new(Jekyll.configuration({
-    "source"      => ".",
-    "destination" => "_site"
-  })).process
+desc "Suppression des fichiers générés"
+task :clean do
+  puts "Suppression des fichiers générés…".bold
+  Jekyll::Commands::Clean.process({})
 end
 
-desc "Génération et publication des fichiers sur GitHub"
-task :publish => [:generate] do
-  Dir.mktmpdir do |tmp|
-    cp_r "_site/.", tmp
-
-    pwd = Dir.pwd
-    Dir.chdir tmp
-    File.open(".nojekyll", "wb") { |f| f.puts(":dog: food.") }
-
-    system "git init"
-    system "git add ."
-    message = "Site mise à jour le #{Time.now.utc}"
-    system "git commit -m #{message.inspect}"
-    system "git remote add origin git@github.com:#{GITHUB_REPONAME}.git"
-    system "git push origin master --force"
-
-    Dir.chdir pwd
-  end
+desc "Génération du site"
+task :build => :clean do
+  puts "Génération du site…".bold
+  Jekyll::Commands::Build.process({})
 end
 
-require "html-proofer"
+desc "Prévisualisation du site"
+task :preview => :clean do
+  puts "Prévisualisation du site…".bold
+  options = {
+    :profile     => true,
+    :serving     => true,
+    :watch       => true,
+    :incremental => true,
+  }
+  Jekyll::Commands::Build.process(options)
+  Jekyll::Commands::Serve.process(options)
+end
 
-task :test do
-  sh "bundle exec jekyll build"
+desc "Vérification des fichiers HTML"
+task :test => :build do
+  require "html-proofer"
   HTMLProofer.check_directory("./_site", {
     :empty_alt_ignore => true,
-    :disable_external => true
+    :disable_external => true,
+    :check_html       => true,
+    :parallel         => { :in_processes => 3 },
   }).run
 end
-
-task :default => "publish"
