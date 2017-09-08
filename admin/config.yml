@@ -1,7 +1,5 @@
 backend:
-  name: github
-  repo: jamstatic/jamstatic-fr
-  branch: master
+  name: git-gateway
 
 publish_mode: editorial_workflow
 
