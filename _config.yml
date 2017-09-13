@@ -84,6 +84,7 @@ plugins:
 - jekyll-github-metadata
 - jekyll-include-cache
 - jekyll-mentions
+- jekyll-octicons
 - jekyll-paginate
 - jekyll-seo-tag
 - jekyll-sitemap

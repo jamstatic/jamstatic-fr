@@ -27,8 +27,9 @@ layout: default
     {%- endif -%}
 
     <footer>
-      <h2>Améliorez cet article</h2>
-      <p>{% github_edit_link "Éditez le contenu" %}.</p>
+      <p>
+        Une correction à apporter ? <button>{% github_edit_link "Éditez cet article" %} {% octicon pencil aria-label:édition %}</button>
+      </p>
 
       {%- if page.comments -%}
         {%- include comments.html -%}
