@@ -1,6 +1,50 @@
----
 title: Jamstatic
+description: L'actualité autour des générateurs de site statique et de la JAMStack
+url: https://jamstatic.fr
+
+permalink: "/:year/:month/:day/:title/"
+lang: fr
 timezone: Europe/Paris
+
+repository: jamstatic/jamstatic-fr
+
+github:
+  username: jamstatic
+  source:
+    branch: master
+
+email: contact@jamstatic.fr
+
+twitter:
+  username: jamstatic_fr
+
+social:
+  type: organization
+  links:
+  - https://twitter.com/jamstatic_fr
+  - https://github.com/jamstatic
+
+google_site_verification: lrEoUhopZf6zuDH_kdABgRxWc0uAVSlXBftczsGVL10
+
+analytics:
+  google:
+    tracking_id: UA-75833986-1
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+sass:
+  style: compressed
+
+# Liquid
+strict_front_matter: true
+liquid:
+  error_mode: strict
+
+livereload: true
+
 collections:
   posts:
     title: Posts
@@ -8,6 +52,7 @@ collections:
   uploads:
     title: Uploads
     output: true
+
 defaults:
 - scope:
     path: ''
@@ -16,36 +61,8 @@ defaults:
     layout: post
     comments: true
     author: Frank Taillandier
-email: contact@jamstatic.fr
-description: L'actualité autour des générateurs de site statique et de la JAMStack
-url: https://jamstatic.fr
-baseurl: 
-permalink: "/:year/:month/:day/:title/"
-lang: fr
-repository: jamstatic/jamstatic-fr
-branch: master
-twitter:
-  username: jamstatic_fr
-github:
-  username: jamstatic
-  source:
-    branch: master
-social:
-  type: organization
-  links:
-  - https://twitter.com/jamstatic_fr
-  - https://github.com/jamstatic
-google_site_verification: lrEoUhopZf6zuDH_kdABgRxWc0uAVSlXBftczsGVL10
-analytics:
-  google:
-    tracking_id: UA-75833986-1
-markdown: kramdown
-kramdown:
-  input: GFM
-  hard_wrap: false
-sass:
-  style: compressed
-livereload: true
+
+
 exclude:
 - ".editorconfig"
 - ".forestryio"
@@ -59,6 +76,7 @@ exclude:
 - Rakefile
 - README.md
 - script
+
 plugins:
 - jekyll-avatar
 - jekyll-feed
