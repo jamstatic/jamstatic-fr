@@ -1,8 +1,8 @@
 ---
 title: Des bibliothèques de composants avec Shadow DOM en Markdown
 description:
-  Apprenez à inclure facilement des snippets de code dans du Markdown,
-  à l'aide de snippets de code et de l'encapsulation Shadow DOM.
+  Apprenez à inclure facilement des démos de composants dans du Markdown,
+  à l'aide des shortcodes de Hugo et de l'encapsulation Shadow DOM.
 image: /assets/images/markdown-shadowdom.png
 source:
   title: Building Pattern Libraries With Shadow DOM In Markdown
