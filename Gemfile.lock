@@ -28,7 +28,7 @@ GEM
     ffi (1.9.18)
     forwardable-extended (2.6.0)
     gemoji (3.0.0)
-    html-pipeline (2.7.0)
+    html-pipeline (2.7.1)
       activesupport (>= 2)
       nokogiri (>= 1.4)
     html-proofer (3.7.2)
@@ -42,7 +42,7 @@ GEM
       yell (~> 2.0)
     http_parser.rb (0.6.0)
     i18n (0.8.6)
-    jekyll (3.6.0.pre.beta1)
+    jekyll (3.6.0)
       addressable (~> 2.4)
       colorator (~> 1.0)
       jekyll-sass-converter (~> 1.0)
@@ -84,8 +84,8 @@ GEM
       typogruby
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
-    jemoji (0.8.0)
-      activesupport (~> 4.0)
+    jemoji (0.8.1)
+      activesupport (~> 4.0, >= 4.2.9)
       gemoji (~> 3.0)
       html-pipeline (~> 2.2)
       jekyll (>= 3.0)
@@ -95,11 +95,11 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
-    mini_portile2 (2.2.0)
+    mini_portile2 (2.3.0)
     minitest (5.10.3)
     multipart-post (2.0.0)
-    nokogiri (1.8.0)
-      mini_portile2 (~> 2.2.0)
+    nokogiri (1.8.1)
+      mini_portile2 (~> 2.3.0)
     octicons (4.0.2)
       nokogiri (>= 1.6.3.1)
     octokit (4.7.0)
@@ -138,7 +138,7 @@ PLATFORMS
 
 DEPENDENCIES
   html-proofer
-  jekyll (= 3.6.0.pre.beta1)
+  jekyll
   jekyll-avatar
   jekyll-feed
   jekyll-gist

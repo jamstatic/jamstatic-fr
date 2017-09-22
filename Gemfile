@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-gem "jekyll", "3.6.0.pre.beta1"
+gem "jekyll"
 
 group :jekyll_plugins do
   gem "jekyll-avatar"
