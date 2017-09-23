@@ -1,6 +1,16 @@
 # frozen_string_literal: true
 
 require "jekyll"
+require "bundler/setup"
+Bundler.require(:jekyll_plugins, :test)
+
+begin
+  Bundler.setup
+rescue Bundler::BundlerError => e
+  $stderr.puts e.message
+  $stderr.puts "Lancez `bundle install` pour installer les gems manquantes"
+  exit e.status_code
+end
 
 task :default => "preview"
 
@@ -24,6 +34,7 @@ task :preview => :clean do
     :serving     => true,
     :watch       => true,
     :incremental => true,
+    :livereload  => true,
   }
   Jekyll::Commands::Build.process(options)
   Jekyll::Commands::Serve.process(options)
@@ -31,7 +42,6 @@ end
 
 desc "Vérification des fichiers HTML"
 task :test => :build do
-  require "html-proofer"
   HTMLProofer.check_directory("./_site", {
     :empty_alt_ignore => true,
     :disable_external => true,
