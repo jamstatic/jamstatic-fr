@@ -1,0 +1,90 @@
+{
+  "commit": false,
+  "contributors": [
+    {
+      "avatar_url": "https://avatars3.githubusercontent.com/u/103008?v=4",
+      "contributions": [
+        "blog",
+        "code",
+        "design",
+        "infra",
+        "translation",
+        "tutorial"
+      ],
+      "login": "DirtyF",
+      "name": "Frank Taillandier",
+      "profile": "https://frank.taillandier.me"
+    },
+    {
+      "avatar_url": "https://avatars2.githubusercontent.com/u/6869488?v=4",
+      "contributions": [
+        "blog",
+        "review"
+      ],
+      "login": "antoinentl",
+      "name": "antoine",
+      "profile": "https://www.quaternum.net"
+    },
+    {
+      "avatar_url": "https://avatars2.githubusercontent.com/u/1500301?v=4",
+      "contributions": [
+        "blog",
+        "code"
+      ],
+      "login": "bertrandkeller",
+      "name": "Bertrand Keller",
+      "profile": "http://bertrandkeller.info"
+    },
+    {
+      "avatar_url": "https://avatars0.githubusercontent.com/u/2006947?v=4",
+      "contributions": [
+        "review"
+      ],
+      "login": "Natouille",
+      "name": "Nathalie Rosenberg",
+      "profile": "https://github.com/Natouille"
+    },
+    {
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1035145?v=4",
+      "contributions": [
+        "review"
+      ],
+      "login": "tut-tuuut",
+      "name": "Agnès Haasser",
+      "profile": "https://tut-tuuut.github.io"
+    },
+    {
+      "avatar_url": "https://avatars0.githubusercontent.com/u/284742?v=4",
+      "contributions": [
+        "review"
+      ],
+      "login": "borisschapira",
+      "name": "Boris SCHAPIRA",
+      "profile": "https://borisschapira.com"
+    },
+    {
+      "avatar_url": "https://avatars2.githubusercontent.com/u/78213?v=4",
+      "contributions": [
+        "review"
+      ],
+      "login": "nhoizey",
+      "name": "Nicolas Hoizey",
+      "profile": "https://nicolas-hoizey.com/"
+    },
+    {
+      "login": "P45QU10U",
+      "name": "P45QU10U",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/1941272?v=4",
+      "profile": "https://github.com/P45QU10U",
+      "contributions": [
+        "review"
+      ]
+    }
+  ],
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "projectName": "jamstatic-fr",
+  "projectOwner": "jamstatic"
+}
