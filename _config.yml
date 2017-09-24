@@ -62,6 +62,8 @@ defaults:
     comments: true
     author: Frank Taillandier
 
+include:
+  - _headers
 
 exclude:
 - ".editorconfig"
