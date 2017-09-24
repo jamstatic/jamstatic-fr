@@ -188,11 +188,12 @@ body {
 }
 
 .post-link {
+  display: block;
+  margin: ($line-height-computed / 7.43) 0;
   font-family: $title-font-family;
   font-size: $bigger;
   font-weight: 700;
   letter-spacing: $title-letter-spacing;
-  display: block;
 
   &:hover {
     text-decoration: none;
