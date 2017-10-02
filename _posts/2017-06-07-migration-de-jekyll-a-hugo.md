@@ -34,7 +34,7 @@ pénible, que ce soit pour continuer à le développer, itérer sur son design,
 écrire un article de blog ou mettre à jour mes pages conférences et ateliers.
 C'était dû en partie à [Jekyll](https://jekyllrb.com/), le générateur de site
 statique que j'utilisais alors. Le vent du changement commençait à souffler…
-{: .message .info }
+{: .notice .info }
 
 Jekyll était devenu incroyablement lent et chaque changement entraîne une
 recompilation… C'était devenu tellement lent qu'**attendre que la compilation du
@@ -584,7 +584,7 @@ utiliser pour chaque page créée dans le dossier `/content/`. Nous en reparlero
 dans la section dédiée aux modèles juste après. Donc si nous n'avions pas défini
 le fichier `/layouts/static/single.html` comme étant le modèle à utiliser, Hugo
 aurait utilisé un modèle par défaut stocké dans `/layouts/`. Nous y reviendrons.
-{: .message .info }
+{: .notice .info }
 
 Enfin, comme pour la page d'accueil, le contenu HTML de la page _À propos_ se
 trouve dans le fichier `about.md` puis il est ensuite inséré dans le modèle
