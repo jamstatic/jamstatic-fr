@@ -247,6 +247,11 @@ body {
     background-color: #e9f1f9;
   }
 
+  &.tip {
+    background-color: #ffed7f;
+    border-color: #feda00;
+  }
+
   &.update {
     background-color: #7fb842;
     color: white;
