@@ -5,6 +5,7 @@ description: >
   Bjørn Erik Pedersen répond à nos question sur Hugo, le gestionnaire de site
   statique ultra-rapide.
 slug: interview-hugo-lead-developer
+image: /assets/images/hugo/hugo-bjorn-erik-pedersen.jpg
 ---
 
 [Hugo](https://gohugo.io) est rapidement devenu l'un des gestionnaires de site
