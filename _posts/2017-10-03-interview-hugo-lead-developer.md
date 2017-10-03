@@ -59,7 +59,7 @@ structurez bien votre contenu et trouvez-le facilement.
 
 Nous nous soucions également beaucoup de la typographie et des langues. Hugo est
 très utilisé en Chine et au Japon, ce qui nous amène à relever de nouveaux
-défis. Le fait de développer avec le langage Go nous aide bien. Deux de ces
+défis. Le fait de développer avec le langage Go nous aide bien. Deux de ses
 créateurs, Ken Thompson et Rob Pike, sont également les créateurs
 d'[UTF-8](https://en.wikipedia.org/wiki/UTF-8). J'ai justement passé pas mal de
 temps sur le support des guillemets français dans Hugo il y a peu. Forcément
