@@ -2,36 +2,36 @@
 title: Entretien avec Bjørn Erik Pedersen, le développeur principal d'Hugo
 date: "2017-10-03 13:45:36 +0200"
 description: >
-  Bjørn Erik Pedersen répond à nos question sur Hugo, le gestionnaire de site
-  statique ultra-rapide.
+  Bjørn Erik Pedersen répond à nos questions sur Hugo, le gestionnaire de sites
+  statiques ultra-rapide.
 slug: interview-hugo-lead-developer
 image: /assets/images/hugo/hugo-bjorn-erik-pedersen.jpg
 ---
 
-[Hugo](https://gohugo.io) est rapidement devenu l'un des gestionnaires de site
-statique les plus populaires comme en attestent ses bientôt [20 000 étoiles sur
+[Hugo](https://gohugo.io) est rapidement devenu l'un des gestionnaires de sites
+statiques les plus populaires comme en attestent ses bientôt [20 000 étoiles sur
 GitHub](https://github.com/gohugoio/hugo). C'est dû en partie à sa vitesse de
-génération: en effet il ne lui faut qu'une petite milliseconde pour générer une
+génération : en effet il ne lui faut qu'une petite milliseconde pour générer une
 page. Oui, cela fait 1000 pages à la seconde et c'est plutôt impressionnant je
 trouve. Mais ce n'est pas la seule raison qui devrait vous faire adopter Hugo.
 
-Heureusement ce <abbr title="Générateur de site statique">GSS</abbr> propose
+Heureusement ce <abbr title="Générateur de sites statiques">GSS</abbr> propose
 aussi tout un tas de fonctionnalités comme les contenus imbriqués, les fichiers
-partiels, les shortcodes, la gestion de l'i18n, les exports personnalisés (JSON,
+partiels, les shortcodes, la gestion de l'<abbr title="internationalisation">i18n</abbr>, les exports personnalisés (JSON,
 AMP, epub, Atom, etc.) et bien d'autres… Les nouvelles versions et les
 nouveautés se succèdent à un rythme soutenu. Depuis la v0.14, [Bjørn Erik
-Pedersen](https://github.com/bep) dirige les développements, il a gentimment
+Pedersen](https://github.com/bep) dirige les développements, il a gentiment
 accepté de répondre à nos quesions.
 
 {% include figure.html url="/assets/images/hugo/hugo-bjorn-erik-pedersen.jpg"
 description="<a href=\"https://github.com/bep\">Bjørn Erik Pedersen</a>" %}
 
-## Bonjour Bjørn Erik, comment t'es tu retrouvé impliqué dans Hugo ?
+## Bonjour Bjørn Erik, comment t'es-tu retrouvé impliqué dans Hugo ?
 
-J'ai passé un dimange à migrer mon [blog](http://bepsays.com/en/) de WordPress à
+J'ai passé un dimanche à migrer mon [blog](http://bepsays.com/en/) de WordPress à
 [Jekyll](https://jekyllrb.com), et quand j'ai eu fini je me suis dit "OK, et
 maintenant je fais quoi ?". J'espérais que cela me pousserait à écrire davantage
-sur mon blog. Au cours de ce même après-midi je recherchais déjà des
+sur mon blog. Au cours de ce même après-midi je cherchais déjà des
 alternatives à Jekyll sur le net et je suis tombé sur Hugo.
 
 J'ai vu des choses que je souhaitais améliorer. Je suis un développeur très
@@ -43,14 +43,14 @@ l'apprentissage d'un nouveau langage mais également encouragé par [Steve
 Francia](https://stevefrancia.com/), qui a crée les premières versions d'Hugo.
 Il est très bon pour motiver les gens à contribuer à un projet open source.
 
-## Quel problème résout Hugo ?
+## Quels problèmes résout Hugo ?
 
 Hugo est une excellente façon de créer et de publier **de nombreux contenus**
 sur le web. Nous recevions beaucoup de questions du genre "comment créer un page
 unique de présentation de produit" au début. Même si nous savons également très
 bien faire cela, ce n'est pas le cas d'utilisation typique.
 
-Comme Gutemberg en son temps, Hugo est un générateur de sites web pour de la
+Comme Gutenberg en son temps, Hugo est un générateur de sites web pour de la
 documentation, des livres, des journaux, des magazines, des blogs, etc. C'est
 manifeste quand vous voyez les dernières fonctionnalités ajoutées comme les
 [sections imbriquées](https://github.com/gohugoio/hugo/releases/tag/v0.22) et
@@ -163,5 +163,5 @@ d'associer des contenus comme une page et des images par exemple.
 
 J'ai encore plein d'autres idées. Je testerai peut-être si Hugo est adapté pour
 de très très gros sites avec des millions de pages, mais j'ai peur que la
-tâche soit un peu trop hardue par rapport au temps libre que je peux y
+tâche soit un peu trop ardue par rapport au temps libre que je peux y
 consacrer.
