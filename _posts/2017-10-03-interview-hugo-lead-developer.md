@@ -88,7 +88,7 @@ sont dûs à une succession de petits changements au fil du temps. Et la vitesse
 compte. Essayez le serveur d'Hugo avec le Livereload et vous verrez par
 vous-même.
 
-## Quels sont les sites les plus visibles qui utilisent Hugo ?
+## Quels sont les sites les plus visibles qui utilisent Hugo&nbsp;?
 
 {% include figure.html
 url="https://thenewdynamic.imgix.net/showcase-labs-us-gov-hugo.jpg?w=700"
