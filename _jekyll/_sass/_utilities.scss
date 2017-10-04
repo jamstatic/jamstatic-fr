@@ -1,0 +1,71 @@
+.clearfix {
+  &::before,
+  &::after {
+    content: " ";
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+.center {
+  margin: 0 auto $line-height-base;
+  text-align: center;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+// List
+
+@mixin list-inline {
+  padding: 0;
+  margin: 0 0 $base-line;
+
+  li {
+    display: inline-block;
+  }
+}
+
+// Toggling content
+
+.hide,
+.hidden {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.icon {
+  > svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+
+    path {
+      fill: $grey-color;
+    }
+  }
+}

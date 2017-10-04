@@ -1,4 +1,13 @@
 baseURL: https://jamstatic.fr
 disablePathToLower: true
-languageCode: en-us
+languageCode: fr-fr
 title: Jamstatic
+enableRobotsTXT: true
+googleAnalytics: UA-75833986-1
+metaDataFormat: yaml
+paginate: 20
+permalinks:
+  post: /:year/:month/:day/:title/
+
+params:
+  description: "L'actualité autour des générateurs de site statique et de la JAMStack"

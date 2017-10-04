@@ -1,0 +1,31 @@
+<footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="social-media-list">
+          <li>
+            <span class="icon icon--rss">{%- include_cached icon-rss.svg -%}</span> <a href="{{ "/feed.xml" | relative_url }}">S‘abonner via RSS</a> ou <a href="{{ "/feed.json" | relative_url }}">JSON</a>
+          </li>
+          {%- if site.github.username -%}
+          <li>
+            {%- include_cached icon-slack.html username=site.github.username -%}
+          </li>
+          <li>
+            {%- include_cached icon-github.html username=site.github.username -%}
+          </li>
+          {%- endif -%} {%- if site.twitter.username -%}
+          <li>
+            {%- include_cached icon-twitter.html username=site.twitter.username -%}
+          </li>
+          {%- endif -%}
+        </ul>
+      </div>
+      <div class="footer-col footer-col-2">
+        <p><small>Contenus sous Licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">CC BY-NC-SA 4.0</a></small></p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="{{ "assets/js/anchor.min.js" | relative_url }}"></script>
+<script>anchors.add('.post h2, .post h3');</script>
+<script async src="{{ "assets/js/turbolinks.js " | relative_url }}">

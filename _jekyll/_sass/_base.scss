@@ -1,0 +1,197 @@
+/**
+ * Reset some basic elements
+ */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Basic styling
+ */
+
+body {
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  color: $text-color;
+  background-color: $background-color;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
+%vertical-rhythm {
+  margin-bottom: $line-height-computed / 2;
+}
+
+/**
+ * Images, iframes
+ */
+img,
+iframe {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/**
+ * Figures
+ */
+figure > img,
+figure > iframe {
+  display: block;
+}
+
+/**
+ * Lists
+ */
+ul,
+ol {
+  margin-left: $spacing-unit;
+}
+
+li {
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $title-font-weight;
+}
+
+/* Links */
+a {
+  color: $brand-color;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $text-color;
+    text-decoration: underline;
+  }
+}
+
+/* Blockquotes */
+blockquote {
+  color: $grey-color;
+  border-left: 4px solid $grey-color-light;
+  padding-left: $spacing-unit / 2;
+  font-size: $base-em * $ms1;
+  letter-spacing: -1px;
+  font-style: italic;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+  font-size: $small;
+  border: 1px solid $grey-color-light;
+  border-radius: 3px;
+  background-color: #eef;
+}
+
+code {
+  padding: 1px 5px;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+/**
+ * Wrapper
+ */
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: calc(#{$content-width} - (#{$spacing-unit} / 2));
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+
+  @extend %clearfix;
+
+  @include media-query($on-desktop) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: $spacing-unit;
+    padding-left: $spacing-unit;
+  }
+}
+
+/**
+ * Clearfix
+ */
+%clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.icon {
+  > svg {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+
+    path {
+      fill: $grey-color;
+    }
+  }
+}

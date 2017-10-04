@@ -1,0 +1,47 @@
+/* Variables */
+$base-font-family: 'Open Sans', sans-serif;
+$base-font-size: 16px;
+$small-font-size: $base-font-size * 0.833;
+$base-font-weight: 400;
+$title-font-family: 'Roboto', sans-serif;
+$title-font-weight: 900;
+$title-letter-spacing: 0.021736em;
+$base-line-height: 1.5;
+$ratio: 1.2;
+$base: 1;
+$base-em: $base * 1em;
+$base-px: $base * 16px;
+$ms0: 1;
+$ms1: $ratio; /* 1.2   */
+$ms2: $ratio * $ms1; /* 1.44  */
+$ms3: $ratio * $ms2; /* 1.728 */
+$ms4: $ratio * $ms3; /* 2.074 */
+$ms5: $ratio * $ms4; /* 2.488 */
+$ms6: $ratio * $ms5; /* 2.986 */
+$ms7: $ratio * $ms6; /* 3.583 */
+$smaller: $base-em / $ms2;
+$small: $base-em / $ms1;
+$normal: $base-em * $ms0;
+$big: $base-em * $ms1;
+$bigger: $base-em * $ms2;
+$title2: $base-em * $ms3;
+$title1: $base-em * $ms4;
+$spacing-unit: $base-font-size * $ms3;
+$line-height-base: $base * $ms2;
+$line-height-computed: $base-em * $line-height-base;
+$base-line: $line-height-computed;
+
+// Width of the content area
+$content-width: 66.24rem;
+
+// Breakpoints
+$on-tablet: 46.005em;
+$on-desktop: 79.49em;
+
+// Colors
+$text-color: #111;
+$background-color: #fdfdfd;
+$brand-color: #c30000;
+$grey-color: #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark: darken($grey-color, 25%);
