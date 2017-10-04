@@ -3,8 +3,7 @@ date: 2017-03-16T20:04:01Z
 description: Référencement, performance, sécurité, automatisation, communauté grandissante,
   les raisons de passer au statique ne manquent pas.
 image: https://builtvisible.com/wp-content/uploads/2017/03/Go_Static.jpg
-title: 'Passer au statique&nbsp;: 5&nbsp;raisons de tester la JAMstack sur votre prochain
-  projet'
+title: "Passer au statique : 5 raisons de tester la JAMstack sur votre prochain projet"
 url: /2017/03/16/5-raisons-de-tester-la-jamstack/
 ---
 

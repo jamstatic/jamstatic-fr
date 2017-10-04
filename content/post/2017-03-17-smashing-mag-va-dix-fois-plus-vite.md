@@ -5,7 +5,7 @@ description: Smashing fait désormais partie de la renaissance du web moderne. S
   Smashing a opté pour la JAMstack et s'est adjoint les services de Netlify pour les
   aider à migrer.
 image: assets/images/caching-issues.jpg
-title: Smashing Magazine est maintenant 10&nbsp;fois plus&nbsp;rapide
+title: Smashing Magazine est maintenant 10 fois plus rapide
 url: /2017/03/17/smashing-mag-va-dix-fois-plus-vite/
 ---
 

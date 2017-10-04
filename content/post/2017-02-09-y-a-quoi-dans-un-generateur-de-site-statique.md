@@ -3,7 +3,7 @@ date: 2017-02-09T15:21:52Z
 description: Jetons un coup d'œil au fonctionnement interne de Harp, un générateur
   de site statique écrit en JavaScript
 image: https://cdn.css-tricks.com/wp-content/uploads/2017/02/terraform-1.jpg
-title: Qui y'a t-il dans un générateur de site statique&nbsp;?
+title: Qui y'a t-il dans un générateur de site statique ?
 url: /2017/02/09/y-a-quoi-dans-un-generateur-de-site-statique/
 ---
 
