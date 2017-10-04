@@ -3,6 +3,9 @@ _site/
 .sass-cache/
 .jekyll-metadata
 
+### Hugo ###
+public/
+
 ### Node ###
 node_modules
 
