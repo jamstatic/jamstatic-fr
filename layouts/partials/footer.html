@@ -1,12 +1,13 @@
+{{ define "footer" }}
 <footer class="site-footer">
   <div class="wrapper">
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="social-media-list">
           <li>
-            <span class="icon icon--rss">{%- include_cached icon-rss.svg -%}</span> <a href="{{ "/feed.xml" | relative_url }}">S‘abonner via RSS</a> ou <a href="{{ "/feed.json" | relative_url }}">JSON</a>
+            <span class="icon icon--rss"></span> <a href="{{ .RSSLink }} | relURL }}">S‘abonner via RSS</a>
           </li>
-          {%- if site.github.username -%}
+          {{ with .Site.Params.github.username }}
           <li>
             {%- include_cached icon-slack.html username=site.github.username -%}
           </li>
@@ -17,7 +18,7 @@
           <li>
             {%- include_cached icon-twitter.html username=site.twitter.username -%}
           </li>
-          {%- endif -%}
+          {{ end }}
         </ul>
       </div>
       <div class="footer-col footer-col-2">
@@ -26,17 +27,7 @@
     </div>
   </div>
 </footer>
-<script src="{{ "assets/js/anchor.min.js" | relative_url }}"></script>
+<script src="{{ "assets/js/anchor.min.js" | relURL }}"></script>
 <script>anchors.add('.post h2, .post h3');</script>
-<script async src="{{ "assets/js/turbolinks.js " | relative_url }}">
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
+<script async src="{{ "assets/js/turbolinks.js " | relURL }}">
+{{ end }}

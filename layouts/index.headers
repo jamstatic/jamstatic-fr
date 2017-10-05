@@ -1,0 +1,16 @@
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Content-Security-Policy-Report-Only: default-src 'self'; object-src 'self'; img-src 'self' https://gravatar.com data:; script-src 'unsafe-inline' *.cloudfront.net www.google-analytics.com *.disqus.com; style-src 'self' 'unsafe-inline' *.cloudfront.net; font-src 'self' fonts.googleapis.com;
+/assets/*
+  Cache-Control: public, max-age=360000
+
+  /*
+    X-Frame-Options: DENY
+    X-XSS-Protection: 1; mode=block
+    X-Content-Type-Options: nosniff
+    Referrer-Policy: origin-when-cross-origin
+  */
+    Link: <{{ "assets/js/" | relURL }}>; rel=preload; as=script
+    Link: <{{ "assets/css/main.css" | relURL }}>; rel=preload; as=style

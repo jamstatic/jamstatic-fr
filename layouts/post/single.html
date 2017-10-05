@@ -1,0 +1,37 @@
+{{ define "main" }}
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ .Title }}</h1>
+    <p class="post-meta"><time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date }}</time>
+      {{/* with .Params.author }}
+       • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span itemprop="name">
+            <a class="post-author" rel="author" href="https://github.com/{{ .Params.author }}">{{ .Params.author.name }}</a>
+          </span>
+        </span>
+      {{ end */}}
+    </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ .Content }}
+
+    {{ with .Params.Source.Title and .Source.Url }}
+      <p>
+        <em>Article original : <a href="{{ .Params.Source.Url }}">{{ .Params.Source.Title }}</a></em>
+      </p>
+    {{ end }}
+
+    <footer>
+      <p>
+        Une correction à apporter ? <button> (shortcode edit) "Éditez cet article" </button>
+      </p>
+
+      {{/* with .Params.Comments }}
+        {{ partial "comments.html" . }}
+      {{ end */}}
+
+    </footer>
+  </div>
+</article>
+{{ end }}

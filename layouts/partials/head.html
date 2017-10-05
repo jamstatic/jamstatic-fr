@@ -1,18 +1,3 @@
-{{ define "head"}}
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
-<link rel="dns-prefetch" href="//fonts.googleapis.com/" data-proofer-ignore>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:900" rel="stylesheet">
-<link rel="alternate" type="application/atom+xml" title="{{ .Site.Title }}" href="{{ "/feed.xml" | relURL }}">
-<link rel="alternate" type="application/json" title="{{ .Site.Title }}" href="{{ "/feed.json" | relURL }}">
-{{ .Hugo.Generator }}
-{{ partial "seo.html" .}}
-{{ partialCached "favicons.html" . }}
-{{ with .Site.GoogleAnalytics }}
-  {{ partialCached "analytics.html" . }}
-{{ end }}
-</head>
+{{ define "head" }}
+
 {{ end }}
