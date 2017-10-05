@@ -1,7 +1,7 @@
-baseURL: https://jamstatic.fr
-disablePathToLower: true
-languageCode: fr-fr
 title: Jamstatic
+baseURL: https://jamstatic.fr
+languageCode: fr-fr
+disablePathToLower: true
 enableRobotsTXT: true
 googleAnalytics: UA-75833986-1
 metaDataFormat: yaml
@@ -11,3 +11,10 @@ permalinks:
 
 params:
   description: "L'actualité autour des générateurs de site statique et de la JAMStack"
+  email: contact@jamstatic.fr
+  github:
+    username: Jamstatic
+  twitter:
+    username: jamstatic_fr
+author:
+    name: "Frank Taillandier"
