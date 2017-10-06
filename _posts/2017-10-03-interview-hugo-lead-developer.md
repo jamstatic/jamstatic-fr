@@ -15,9 +15,9 @@ génération : en effet il ne lui faut qu'une petite milliseconde pour générer
 page. Oui, cela fait 1000 pages à la seconde et c'est plutôt impressionnant je
 trouve. Mais ce n'est pas la seule raison qui devrait vous faire adopter Hugo.
 
-Heureusement ce <abbr title="Générateur de sites statiques">GSS</abbr> propose
+Heureusement ce <abbr aria-label="Générateur de sites statiques">GSS</abbr> propose
 aussi tout un tas de fonctionnalités comme les contenus imbriqués, les fichiers
-partiels, les shortcodes, la gestion de l'<abbr title="internationalisation">i18n</abbr>, les exports personnalisés (JSON,
+partiels, les shortcodes, la gestion de l'<abbr aria-label="internationalisation">i18n</abbr>, les exports personnalisés (JSON,
 AMP, epub, Atom, etc.) et bien d'autres… Les nouvelles versions et les
 nouveautés se succèdent à un rythme soutenu. Depuis la v0.14, [Bjørn Erik
 Pedersen](https://github.com/bep) dirige les développements, il a gentiment
