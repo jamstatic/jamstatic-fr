@@ -90,5 +90,6 @@ plugins:
 - jekyll-paginate
 - jekyll-seo-tag
 - jekyll-sitemap
+- jekyll-tidy
 - jekyll-typogrify
 - jemoji
