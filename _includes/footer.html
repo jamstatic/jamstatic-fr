@@ -29,3 +29,14 @@
 <script src="{{ "assets/js/anchor.min.js" | relative_url }}"></script>
 <script>anchors.add('.post h2, .post h3');</script>
 <script async src="{{ "assets/js/turbolinks.js " | relative_url }}">
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
