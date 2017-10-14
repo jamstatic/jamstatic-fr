@@ -241,7 +241,7 @@ de se rappeler de placer vos fichiers partiels dans le dossier `partials`. 🙂
 ### Les modèles de section
 
 Pour continuer de discuter des différences philosophiques entre Hugo et
-WordPress, Hugo est beaucoup moins prescriptif quant à l'organisation de votre
+WordPress, Hugo est beaucoup moins normatif quant à l'organisation de votre
 site. Alors que WordPress utilise un modèle rigide d'articles et de pages, Hugo
 est façonné à l'aide de "contenu" générique et de répertoires.
 
