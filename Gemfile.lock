@@ -73,7 +73,7 @@ GEM
       activesupport (~> 4.0)
       html-pipeline (~> 2.3)
       jekyll (~> 3.0)
-    jekyll-octicons (4.0.6)
+    jekyll-octicons (4.0.7)
       jekyll (~> 3.1)
       octicons
     jekyll-paginate (1.1.0)
@@ -106,7 +106,7 @@ GEM
     multipart-post (2.0.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
-    octicons (5.0.4)
+    octicons (5.0.5)
       nokogiri (>= 1.6.3.1)
     octokit (4.7.0)
       sawyer (~> 0.8.0, >= 0.5.3)
