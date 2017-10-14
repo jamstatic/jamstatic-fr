@@ -21,7 +21,7 @@ partiels, les shortcodes, la gestion de l'<abbr aria-label="internationalisation
 AMP, epub, Atom, etc.) et bien d'autres… Les nouvelles versions et les
 nouveautés se succèdent à un rythme soutenu. Depuis la v0.14, [Bjørn Erik
 Pedersen](https://github.com/bep) dirige les développements, il a gentiment
-accepté de répondre à nos quesions.
+accepté de répondre à nos questions.
 
 {% include figure.html url="/assets/images/hugo/hugo-bjorn-erik-pedersen.jpg"
 description="<a href=\"https://github.com/bep\">Bjørn Erik Pedersen</a>" %}
@@ -70,7 +70,7 @@ c'est très répandu en France, mais je n'en avais jamais entendu parlé jusqu'i
 Je lis souvent qu'"Hugo est rapide parce qu'il est écrit en Go". C'est en partie
 vrai, mais Hugo a doublé sa vitesse deux fois d'affilée dans les dernières
 versions, il y a donc d'autres facteurs. Le mot "rapide" figure dans le slogan
-d'Hugo depuis le premier jour, donc nous devons faire très attention à celà.
+d'Hugo depuis le premier jour, donc nous devons faire très attention à cela.
 
 J'essaie de m'amuser à ne pas ajouter de temps supplémentaire lors de l'ajout de
 nouvelles fonctionnalités :  Le temps de traitement ajouté par la nouvelle
@@ -118,7 +118,7 @@ Nous avons adopté maintenant un processus de publication plus ou moins
 automatisé, je publie donc une nouvelle version à chaque fois que je peux écrire
 un titre et une note de version à partir des nouveautés, soit environ toutes les
 cinq semaines. Et Hugo est très utilisé, c'est difficile à mesurer parce qu'il
-peut être installé à partir de différentes sources, mais j'ai été supris
+peut être installé à partir de différentes sources, mais j'ai été surpris
 d'apprendre qu'il y avait plus de 8000 installations mensuelles rien qu'avec
 `brew` sous macOS.
 Et le site [gohugo.io](https://gohugo.io/) encaisse un trafic élevé.
