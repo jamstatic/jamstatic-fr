@@ -3,6 +3,6 @@
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  Content-Security-Policy-Report-Only: default-src 'self'; object-src 'self'; img-src 'self' https://gravatar.com data:; script-src 'unsafe-inline' *.cloudfront.net www.google-analytics.com *.disqus.com *.netlify.com; style-src 'self' 'unsafe-inline' *.cloudfront.net fonts.googleapis.com; font-src 'self' fonts.googleapis.com fonts.gstatic.com;
+  Content-Security-Policy-Report-Only: default-src 'self'; object-src 'self'; img-src 'self' *.cloudfront.net *.imgix.net www.google-analytics.com cloud.githubusercontent.com https://gravatar.com data:; script-src 'unsafe-inline' *.cloudfront.net www.google-analytics.com *.disqus.com *.netlify.com; style-src 'self' 'unsafe-inline' *.cloudfront.net fonts.googleapis.com; font-src 'self' fonts.googleapis.com fonts.gstatic.com; report-uri https://franktaillandierme.report-uri.io/r/default/csp/enforce
 /assets/*
   Cache-Control: public, max-age=360000
