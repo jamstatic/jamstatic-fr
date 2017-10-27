@@ -7,18 +7,15 @@
           <li>
             <span class="icon icon--rss"></span> <a href="{{ .RSSLink }} | relURL }}">S‘abonner via RSS</a>
           </li>
-          {{ with .Site.Params.github.username }}
           <li>
-            {%- include_cached icon-slack.html username=site.github.username -%}
+            {{ partial "icon-slack.html" . }}
           </li>
           <li>
-            {%- include_cached icon-github.html username=site.github.username -%}
+            {{ partial "icon-github.html" . }}
           </li>
-          {%- endif -%} {%- if site.twitter.username -%}
           <li>
-            {%- include_cached icon-twitter.html username=site.twitter.username -%}
+             {{ partial "icon-twitter.html" . }}
           </li>
-          {{ end }}
         </ul>
       </div>
       <div class="footer-col footer-col-2">
@@ -29,5 +26,5 @@
 </footer>
 <script src="{{ "assets/js/anchor.min.js" | relURL }}"></script>
 <script>anchors.add('.post h2, .post h3');</script>
-<script async src="{{ "assets/js/turbolinks.js " | relURL }}">
+<script async src="{{ "assets/js/turbolinks.js " | relURL }}"></script>
 {{ end }}
