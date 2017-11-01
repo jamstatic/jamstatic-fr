@@ -8,31 +8,32 @@
           {{ $mymonths := .Site.Data.mois }}
           {{ .Date.Day }} {{ index $mymonths (printf "%d" .Date.Month) }} {{ .Date.Year }}
         </time>
-        {{/* with .Params.author }}
+        {{ if .Params.author }}
          • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
             <span itemprop="name">
-              <a class="post-author" rel="author" href="https://github.com/{{ .Params.author }}">{{ .Params.author.name }}</a>
+              <a class="post-author" rel="author" href="https://github.com/{{ .Params.author }}">{{ .Params.author }}</a>
             </span>
           </span>
-        {{ end */}}
+        {{ end }}
       </p>
     </header>
 
     <div class="post-content" itemprop="articleBody">
+
       {{ .Content }}
 
-      {{ with .Params.Source.Title and .Source.Url }}
-        <p>
-          <em>Article original : <a href="{{ .Params.Source.Url }}">{{ .Params.Source.Title }}</a></em>
-        </p>
+      {{ if .Params.source }}
+      <p>
+        <em>Article original : <a href="{{ .Params.Source.Url }}">{{ .Params.Source.Title }}</a></em>
+      </p>
       {{ end }}
 
       <footer>
       {{ partial "page-edit.html" . }}
 
-        {{/* with .Params.Comments }}
-          {{ partial "comments.html" . }}
-        {{ end */}}
+      {{ if isset .Params "comments" }}
+        {{ template "_internal/disqus.html" . }}
+      {{ end }}
 
       </footer>
     </div>

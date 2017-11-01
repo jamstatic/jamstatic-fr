@@ -1,22 +1,26 @@
 title: Jamstatic
 baseURL: https://jamstatic.fr
+DefaultContentLanguage: fr
 languageCode: fr-fr
 disablePathToLower: true
 enableRobotsTXT: true
 metaDataFormat: yaml
 paginate: 20
 permalinks:
-  post: /:year/:month/:day/:title/
+  post: /:year/:month/:day/:filename/
 footnoteReturnLinkContents: "↩"
 googleAnalytics: UA-75833986-1
+disqusShortname: jekyllfr
+author:
+    name: Frank Taillandier
+    url: https://frank.taillandier.me
+    avatar: https://github.com/DirtyF.png
 params:
-  description: "L'actualité autour des générateurs de site statique et de la JAMStack"
+  description: L'actualité autour des générateurs de site statique et de la JAMStack
   email: contact@jamstatic.fr
   github:
-    username: "Jamstatic"
+    username: Jamstatic
   twitter:
-    username: "jamstatic_fr"
-  ghrepo: "https://github.com/jamstatic/jamstatic-fr/"
+    username: jamstatic_fr
+  ghrepo: https://github.com/jamstatic/jamstatic-fr/
   branch: hugo
-author:
-    name: "Frank Taillandier"
