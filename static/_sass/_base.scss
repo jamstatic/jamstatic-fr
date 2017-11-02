@@ -48,7 +48,6 @@ body {
  * Set `margin-bottom` to maintain vertical rhythm
  */
 p,
-blockquote,
 pre,
 ul,
 ol,
@@ -56,6 +55,10 @@ dl,
 figure,
 %vertical-rhythm {
   margin-bottom: $line-height-computed / 2;
+}
+
+blockquote {
+  margin: $line-height-computed 0;
 }
 
 /**
@@ -114,8 +117,7 @@ a {
 
 /* Blockquotes */
 blockquote {
-  color: $grey;
-  border-left: 4px solid $grey-light;
+  border-left: 0.5rem solid $brand-color;
   padding-left: $spacing-unit / 2;
   font-size: $base-em * $ms1;
   letter-spacing: -1px;
