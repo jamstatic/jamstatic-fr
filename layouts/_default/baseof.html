@@ -1,82 +1,36 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-
-  {{ block "head" . }}
-
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ block "title" . }}{{ with .Title }}{{ . }} · {{ end }}{{ .Site.Title }}{{ end }}</title>
-  <link rel="stylesheet" href="{{ "assets/css/main.css" | relURL }}">
-  <link rel="dns-prefetch" href="//fonts.googleapis.com/" data-proofer-ignore>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:900" rel="stylesheet">
-  <link rel="alternate" type="application/atom+xml" title="{{ .Site.Title }}" href="{{ .Site.RSSLink | relURL }}">
-  <link rel="canonical" href="{{ .Permalink }}">
   {{ .Hugo.Generator }}
+  <link rel="dns-prefetch" href="//fonts.googleapis.com/">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:900">
+  <link rel="stylesheet" href="{{ "assets/css/main.css" | relURL }}">
+  <link rel="alternate" href="{{ .Site.RSSLink | relURL }}" title="{{ .Site.Title }}" type="application/atom+xml">
+  <link rel="canonical" href="{{ .Permalink }}">
+
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
-  {{ partial "head/favicons.html" . }}
-  {{ template "_internal/google_analytics_async.html" . }}
-  </head>
-
+  {{- partialCached "head/favicons.html" . -}}
+  {{ if eq (getenv "HUGO_ENV") "production"  }}
+    {{ template "_internal/google_analytics_async.html" . }}
   {{ end }}
-
+  </head>
 <body>
 
-  {{ block "header" . }}
-
-  {{ $isHomePage := eq .Title .Site.Title }}
-  <header class="site-header">
-    <div class="wrapper">
-      {{ if eq $isHomePage false }}
-        <a class="site-title" href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
-      {{ else }}
-        <h1 class="site-title">{{ .Site.Title }}</h1>
-      {{ end }}
-      <div class="site-nav">{{ .Site.Params.description }}</div>
-    </div>
-  </header>
-
-  {{ end }}
+  {{ block "header" . }}{{ partial "site/header" . }}{{ end }}
 
   <div class="page-content">
     <div class="wrapper">
-      {{ block "main" . }} {{ end }}
+      {{ block "main" . }}{{ end }}
     </div>
   </div>
 
-  {{ block "footer" . }}
+  {{ block "footer" . }}{{ partialCached "site/footer" . }}{{ end }}
+  {{ block "scripts" . }}{{- partial "site/scripts" . -}}{{ end }}
 
-  <footer class="site-footer">
-    <div class="wrapper">
-      <div class="footer-col-wrapper">
-        <div class="footer-col footer-col-1">
-          <ul class="social-media-list">
-            <li>
-              <span class="icon icon--rss"></span> <a href="{{ .RSSLink }} | relURL }}">S‘abonner via RSS</a>
-            </li>
-            <li>
-              {{ partial "icon-slack.html" }}
-            </li>
-            <li>
-              {{ partial "icon-github.html" }}
-            </li>
-            <li>
-              {{ partial "icon-twitter.html" }}
-            </li>
-          </ul>
-        </div>
-        <div class="footer-col footer-col-2">
-          <p><small>Contenus sous Licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">CC BY-NC-SA 4.0</a></small></p>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script src="{{ "assets/js/anchor.min.js" | relURL }}"></script>
-  <script>anchors.add('.post h2, .post h3');</script>
-  <script async src="{{ "assets/js/turbolinks.js " | relURL }}"></script>
-
-  {{ end }}
 </body>
 </html>

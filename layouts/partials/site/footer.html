@@ -1,20 +1,19 @@
-{{ define "footer" }}
 <footer class="site-footer">
   <div class="wrapper">
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="social-media-list">
           <li>
-            <span class="icon icon--rss"></span> <a href="{{ .Site.RSSLink | relURL }}">S‘abonner via RSS</a>
+            <span class="icon icon--rss"></span> <a href="{{ .RSSLink | relURL }}">S‘abonner via RSS</a>
           </li>
           <li>
-            {{ partial "icon-slack.html" . }}
+            {{- partialCached "icons/slack" . -}}
           </li>
           <li>
-            {{ partial "icon-github.html" . }}
+            {{- partialCached "icons/github" . -}}
           </li>
           <li>
-             {{ partial "icon-twitter.html" . }}
+            {{- partialCached "icons/twitter" . -}}
           </li>
         </ul>
       </div>
@@ -24,7 +23,3 @@
     </div>
   </div>
 </footer>
-<script src="{{ "assets/js/anchor.min.js" | relURL }}"></script>
-<script>anchors.add('.post h2, .post h3');</script>
-<script async src="{{ "assets/js/turbolinks.js " | relURL }}"></script>
-{{ end }}

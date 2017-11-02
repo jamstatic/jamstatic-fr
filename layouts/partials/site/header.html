@@ -1,0 +1,11 @@
+{{ $isHomePage := eq .Title .Site.Title }}
+<header class="site-header">
+  <div class="wrapper">
+    {{ if eq $isHomePage false }}
+      <a class="site-title" href="{{ "/" | relURL }}">{{ .Site.Title }}</a>
+    {{ else }}
+      <h1 class="site-title">{{ .Site.Title }}</h1>
+    {{ end }}
+    <div class="site-nav">{{ .Site.Params.description }}</div>
+  </div>
+</header>
