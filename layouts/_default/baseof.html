@@ -1,27 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ block "title" . }}{{ with .Title }}{{ . }} · {{ end }}{{ .Site.Title }}{{ end }}</title>
-  {{ .Hugo.Generator }}
-  <link rel="dns-prefetch" href="//fonts.googleapis.com/">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:900">
-  <link rel="stylesheet" href="{{ "assets/css/main.css" | relURL }}">
-  <link rel="alternate" href="{{ .Site.RSSLink | relURL }}" title="{{ .Site.Title }}" type="application/atom+xml">
-  <link rel="canonical" href="{{ .Permalink }}">
 
-  {{ template "_internal/opengraph.html" . }}
-  {{ template "_internal/twitter_cards.html" . }}
-  {{- partialCached "head/favicons.html" . -}}
-  {{ if eq (getenv "HUGO_ENV") "production"  }}
-    {{ template "_internal/google_analytics_async.html" . }}
-  {{ end }}
-  </head>
+{{ block "head" . }}{{- partial "site/head" . -}}{{ end }}
+
 <body>
 
-  {{ block "header" . }}{{ partial "site/header" . }}{{ end }}
+{{ block "header" . }}{{- partial "site/header" . -}}{{ end }}
 
   <div class="page-content">
     <div class="wrapper">
@@ -29,8 +13,9 @@
     </div>
   </div>
 
-  {{ block "footer" . }}{{ partialCached "site/footer" . }}{{ end }}
-  {{ block "scripts" . }}{{- partial "site/scripts" . -}}{{ end }}
+{{ block "footer" . }}{{ partialCached "site/footer" . }}{{ end }}
+
+{{ block "scripts" . }}{{- partial "site/scripts" . -}}{{ end }}
 
 </body>
 </html>
