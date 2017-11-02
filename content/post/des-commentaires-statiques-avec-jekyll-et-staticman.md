@@ -93,7 +93,7 @@ Pour imbriquer correctement les réponses, j'avais besoin de pouvoir déterminer
 
 Afin d'éviter d'afficher des doublons, j'avais besoin d'exclure les réponses et de ne montrer que les commentaires parents dans la boucle principale. C'était le moment idéal pour utiliser le filtre `where_exp` de Jekyll.
 
-{{% notice %}}
+{{% notice info %}}
 #### Le filtre d'expression where de Jekyll
 
 Sélectionne tous les objets d'un tableau pour lesquels la condition est vraie, depuis la version 3.2.0 de Jekyll.

@@ -187,7 +187,7 @@ Voilà comment ça marche :
 {{ partial "footer.html" . }}
 ```
 
-{{% tip %}}N'oubliez pas le point (`.`) à la fin, il désigne le contexte.{{% /tip %}}
+{{% notice tip %}}N'oubliez pas le point (`.`) à la fin, il désigne le contexte.{{% /notice %}}
 
 
 Notez que le nom du fichier partiel doit se trouver dans le répertoire

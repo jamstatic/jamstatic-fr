@@ -199,7 +199,7 @@ Nous allons aussi créer un modèle principal dans lequel nous bouclerons sur no
 produits pour en afficher une courte description et où nous ajouterons un bouton
 Snipcart "Ajouter au panier".
 
-{{% notice %}}**Remarque**: les produits Snipcart sont définis directement dans le code HTML à l'aide de simples attributs data. [Plus de détails ici](https://docs.snipcart.com/configuration/product-definition).{{% /notice %}}
+{{% notice info %}}**Remarque**: les produits Snipcart sont définis directement dans le code HTML à l'aide de simples attributs data. [Plus de détails ici](https://docs.snipcart.com/configuration/product-definition).{{% /notice %}}
 
 Dans le répertoire `layouts` nous allons ajouter un nouveau modèle
 **index.html**. Ce fichier sera celui utilisé par défaut et sera le premier à

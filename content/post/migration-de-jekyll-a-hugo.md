@@ -15,7 +15,7 @@ images:
 Si vous faites du développement front-end, du CSS, du SVG et autres joyeusetés, vous connaissez sans doute déjà la talentueuse [Sara Soueidan](http://www.sarasoueidan.com/). Il se trouve que Sara a travaillé récemment sur la refonte de Smashing Magazine et [la migration de Wordpress à Hugo]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}}). Cette mission lui a permis de se familiariser avec Hugo et de découvrir au passage le service offert par [Netlify](https://www.netlify.com/), la nouvelle référence en terme d'hébergement d'applications statiques. Fatiguée des faibles temps de compilation proposés par Jekyll (dûs en grande partie à la lenteur de Kramdown, le parseur Markdown utilisé, et à ses traitements d'expressions régulières), Sara en a profité pour s'attaquer à la migration de son site perso. Comme beaucoup d'autres, elle a été immédiatement séduite par les performances proposées par Hugo, le générateur statique ultra-rapide et ultra-souple écrit en Go. Elle nous livre ici en détails le récit de cette migration qu'elle est bien contente d'avoir menée à bien. Puisse le partage de son périple vous épargner de subir les mêmes écueils et vous aider à commencer à vous familiariser avec les concepts d'Hugo.
 {{% /intro %}}
 
-_Ces derniers mois, travailler sur mon site web s'est révélé être de plus en plus pénible, que ce soit pour continuer à le développer, itérer sur son design, écrire un article de blog ou mettre à jour mes pages conférences et ateliers. C'était dû en partie à [Jekyll](https://jekyllrb.com/), le générateur de site statique que j'utilisais alors. Le vent du changement commençait à souffler…_
+Ces derniers mois, travailler sur mon site web s'est révélé être de plus en plus pénible, que ce soit pour continuer à le développer, itérer sur son design, écrire un article de blog ou mettre à jour mes pages conférences et ateliers. C'était dû en partie à [Jekyll](https://jekyllrb.com/), le générateur de site statique que j'utilisais alors. Le vent du changement commençait à souffler.
 
 Jekyll était devenu incroyablement lent et chaque changement entraîne une recompilation… C'était devenu tellement lent qu'**attendre que la compilation du site soit terminée est devenue une vraie torture, tellement chronophage qu'il fallait que je m'en débarrasse à tout prix**.
 
@@ -43,8 +43,7 @@ Mais ce qui m'a fait adopté Hugo plus que toute autre option, c'est de voir [à
 
 La nouvelle version de Smashing Magazine (actuellement accessible via [next.smashingmagazine.com](https://next.smashingmagazine.com)) utilise Hugo comme générateur de site statique. La configuration que j'ai utilisée lorsque je montais le front-end du magazine s'est montrée tellement rapide que je n'avais aucun doute quant à la véracité des résultats que je pouvais lire. Et comme mon site est bien plus petit que Smashing Magazine, je savais que je n'avais aucun souci à me faire. Si Smashing Magazine pouvait être compilé aussi rapidement, pourquoi pas mon blog ?
 
-
-Veuillez prendre note que cet article n'est en aucun cas destiné à constituer un guide exhaustif sur Hugo. Il me reste encore beaucoup de choses à comprendre, je suis donc mal placée pour écrire un tel guide. Vous verrez que vous devrez vous reporter à la documentation d'Hugo pour en savoir plus sur les sujets que je vais aborder. Prenez cet article comme un guide qui peut vous aider à savoir par où commencer (et parfois savoir quoi faire) sur certaines thématiques particulières propres à Hugo. Et ce n'est en fin de compte pas une comparaison entre Hugo et Jekyll. C'est davantage une introduction à Hugo qui comporte quelques astuces. Si vous envisagez d'adopter Hugo comme nouveau générateur de site statique, j'espère que vous trouverez quelques trucs utiles pour avoir un système fonctionnel.
+{{% notice info %}}Veuillez prendre note que cet article n'est en aucun cas destiné à constituer un guide exhaustif sur Hugo. Il me reste encore beaucoup de choses à comprendre, je suis donc mal placée pour écrire un tel guide. Vous verrez que vous devrez vous reporter à la documentation d'Hugo pour en savoir plus sur les sujets que je vais aborder. Prenez cet article comme un guide qui peut vous aider à savoir par où commencer (et parfois savoir quoi faire) sur certaines thématiques particulières propres à Hugo. Et ce n'est en fin de compte pas une comparaison entre Hugo et Jekyll. C'est davantage une introduction à Hugo qui comporte quelques astuces. Si vous envisagez d'adopter Hugo comme nouveau générateur de site statique, j'espère que vous trouverez quelques trucs utiles pour avoir un système fonctionnel.{{% /notice %}}
 
 ### Configurer Hugo
 
@@ -70,7 +69,7 @@ Si vous n'importez pas un site depuis Jekyll, vous pouvez toujours aller lire la
 
 L'étape suivante consiste à convertir vos modèles Jekyll en modèles Hugo et c'est là où réside la plus grande partie du travail et où je me suis arrachée les cheveux pas mal de fois. Mais croyez-moi, le résultat final prouve que ça valait **vraiment** le coup. Au passage, j'ai beaucoup appris. C'est ce que je vais partager avec vous dans la prochaine section.
 
-{{% notice %}}**Astuce** : Vous appartenez peut-être à une autre catégorie de développeur fainéant, vous préférez peut-être partir d'un modèle standard qui vous fournit la configuration dont vous avez besoin et qui est prêt pour que vous puissiez ajouter du contenu sur le champ, surtout si vous démarrez un nouveau blog. Dans ce cas je vous recommande chaudement le [modèle Victor Hugo](https://github.com/netlify/victor-hugo) de Netlify, qui contient tout ce qu'il faut, il y a même Webpack et Gulp de correctement configurés pour pouvoir faire tourner votre site. La structure de ce thème standard est légèrement différente de ce que je vais vous montrer, mais pas tant que ça.{{% /notice %}}
+{{% notice tip %}}**Astuce** : Vous appartenez peut-être à une autre catégorie de développeur fainéant, vous préférez peut-être partir d'un modèle standard qui vous fournit la configuration dont vous avez besoin et qui est prêt pour que vous puissiez ajouter du contenu sur le champ, surtout si vous démarrez un nouveau blog. Dans ce cas je vous recommande chaudement le [modèle Victor Hugo](https://github.com/netlify/victor-hugo) de Netlify, qui contient tout ce qu'il faut, il y a même Webpack et Gulp de correctement configurés pour pouvoir faire tourner votre site. La structure de ce thème standard est légèrement différente de ce que je vais vous montrer, mais pas tant que ça.{{% /notice %}}
 
 ### Se plonger dans Hugo : quelques détails techniques
 
@@ -78,7 +77,7 @@ Laissez-moi commencer en vous disant qu'à un moment donné pendant la migration
 
 **Avertissement :** Il y a encore beaucoup de choses que je ne sais **pas encore** faire et où je me retrouve parfois à devoir chercher sur Internet. Mais j'ai acquis toutes les connaissances de base et de tout ce dont j'ai besoin **pour le moment** pour avoir un système fonctionnel, et oui, je sais comment et pourquoi tout ce qui marche maintenant marche de cette manière. Donc laissez-moi vous dévoiler tout ça. Je vous partagerai aussi les articles super utiles que j'ai trouvé  et qui m'ont également bien aidé. Prenez cet article comme un pense-bête, un ensemble de rappels, une note à mon futur moi à laquelle je devrai revenir si jamais j'ai besoin de revoir les bases.
 
-Notez bien que vous finirez sûrement par ne pas utiliser le même processus ou la même arborescence de fichiers que moi. Il est en effet peu probable que vous ayez exactement les mêmes types de contenus que moi. Il se peut aussi que vous trouviez une meilleure façon de faire que celle que j'utilise actuellement, et c'est tant mieux. Et si vous êtes déjà un pro de Hugo et que vous repérez des choses qui pourraient être réalisées d'une meilleure façon, ne vous gênez pas pour partager vos manières de faire avec le reste d'entre nous pour que nous puissions tous apprendre de vous.
+{{% notice info %}}Notez bien que vous finirez sûrement par ne pas utiliser le même processus ou la même arborescence de fichiers que moi. Il est en effet peu probable que vous ayez exactement les mêmes types de contenus que moi. Il se peut aussi que vous trouviez une meilleure façon de faire que celle que j'utilise actuellement, et c'est tant mieux. Et si vous êtes déjà un pro de Hugo et que vous repérez des choses qui pourraient être réalisées d'une meilleure façon, ne vous gênez pas pour partager vos manières de faire avec le reste d'entre nous pour que nous puissions tous apprendre de vous.{{% /notice %}}
 
 #### La structure des dossiers d'Hugo
 
@@ -97,7 +96,7 @@ Votre site est compilé dans le répertoire `/public/`. Il correspond au dossier
 
 Le dossier `static` est destiné à héberger les contenus statiques comme les images, les fichiers CSS et JS mais aussi les fichiers audio, vidéo, les slides de présentations, etc. Je passe pas mal de temps à travailler dans ce dossier.
 
-Après être intervenue sur le redesign de Smashing Magazine, j'ai appris que votre structure peut être différente de celle présentée plus haut. C'est à peu près la même chose mais si vous utilisez un modèle comme Victor Hugo de Netlify, votre configuration sera légèrement différente, mais c'est du pareil au même pour ce qui est compilé et vers où. Notez que l'adoption du modèle Vitor Hugo est un bon moyen de commencer à intégrer Webpack et Gulp dans votre workflow. En ce qui me concerne je n'ai pas vraiment besoin de Webpack sur mon site vu le peu de JS que j'utilise, mais si vous en avez l'utilité, je vous recommande d'utiliser leur template pour Hugo. Et perso, je préfère commencer de zéro pour apprendre et comprendre comment tout ça marche. Faites comme bon vous semble.
+{{% notice info %}}Après être intervenue sur le redesign de Smashing Magazine, j'ai appris que votre structure peut être différente de celle présentée plus haut. C'est à peu près la même chose mais si vous utilisez un modèle comme Victor Hugo de Netlify, votre configuration sera légèrement différente, mais c'est du pareil au même pour ce qui est compilé et vers où. Notez que l'adoption du modèle Vitor Hugo est un bon moyen de commencer à intégrer Webpack et Gulp dans votre workflow. En ce qui me concerne je n'ai pas vraiment besoin de Webpack sur mon site vu le peu de JS que j'utilise, mais si vous en avez l'utilité, je vous recommande d'utiliser leur template pour Hugo. Et perso, je préfère commencer de zéro pour apprendre et comprendre comment tout ça marche. Faites comme bon vous semble.{{% /notice %}}
 
 #### Créer et mettre en page du contenu
 
@@ -109,7 +108,7 @@ Chaque fichier `.md` du dossier `/content/` correspond à une page qui commence 
 [front-matter]: https://gohugo.io/content/front-matter/
 [^2]: NdT: Pour la petite histoire c'est Tom Preston-Werner, le créateur de Jekyll qui est à l'origine de [TOML](https://github.com/toml-lang/toml) (d'où son nom). Vous pouvez [apprendre TOML en quelques minutes](https://learnxinyminutes.com/docs/toml/), [même chose pour YAML](https://learnxinyminutes.com/docs/fr-fr/yaml-fr/)
 
-Je ne rentrerai pas ici sur les différences entre les deux formats, la documentation d'Hugo et Google sont vos amis. Personnellement ça m'a pris un peu de temps pour apprendre à utiliser toutes ces nouvelles syntaxes (TOML, les modèles de template en Go, etc.) avant de me sentir à l'aise. Néanmoins la courbe d'apprentissage est assez rapide, ne vous laissez donc pas intimider par ces nouvelles syntaxes si tout cela est nouveau pour vous.
+{{% notice info %}}Je ne rentrerai pas ici sur les différences entre les deux formats, la documentation d'Hugo et Google sont vos amis. Personnellement ça m'a pris un peu de temps pour apprendre à utiliser toutes ces nouvelles syntaxes (TOML, les modèles de template en Go, etc.) avant de me sentir à l'aise. Néanmoins la courbe d'apprentissage est assez rapide, ne vous laissez donc pas intimider par ces nouvelles syntaxes si tout cela est nouveau pour vous.{{% /notice %}}
 
 ##### Définir (ou déclarer) les types de contenu
 
@@ -126,9 +125,9 @@ date = ...
 +++
 ```
 
-*La valeur `type` peut prendre pratiquement n'importe quelle valeur*, et c'est là où on peut se rendre compte du pouvoir d'Hugo. Vous pouvez définir autant de types de contenus que vous voulez. Par exemple, j'utilise actuellement cinq types de contenus pour mon site : _statique_ (pour les pages comme "À propos" et "Travailler avec moi"), _blog_ (pour les articles comme celui que vous êtes en train de lire), _ateliers_, _études de cas_ et _bureau_ (un nouveau type d'articles à paraître bientôt). Je peux créer autant de types de contenu que je veux.
+{{% marker %}}La valeur `type` peut prendre pratiquement n'importe quelle valeur{{% /marker %}}, et c'est là où on peut se rendre compte du pouvoir d'Hugo. Vous pouvez définir autant de types de contenus que vous voulez. Par exemple, j'utilise actuellement cinq types de contenus pour mon site : _statique_ (pour les pages comme "À propos" et "Travailler avec moi"), _blog_ (pour les articles comme celui que vous êtes en train de lire), _ateliers_, _études de cas_ et _bureau_ (un nouveau type d'articles à paraître bientôt). Je peux créer autant de types de contenu que je veux.
 
-{{% update %}}Il est possible de créer des sous-sections de contenu depuis la version 0.24 d'Hugo ! Cela vous permet par exemple de créer des sous-sections _design_ et _développement_ dans la section _articles_ et bien bien plus. C'est une fonctionnalité intéressante.{{% /update %}}
+{{% notice update %}}Il est possible de créer des sous-sections de contenu depuis la version 0.24 d'Hugo ! Cela vous permet par exemple de créer des sous-sections _design_ et _développement_ dans la section _articles_ et bien bien plus. C'est une fonctionnalité intéressante.{{% /notice %}}
 
 C'est une des choses que j'aime chez Hugo comparativement à Jekyll qui, _à ma connaissance_, n'offre pas de fonctionnalité similaire.[^3]
 
@@ -139,11 +138,7 @@ La capture d'écran ci-contre montre à quoi ressemble mon dossier `/content/` e
 {{< figure
  src="https://d33wubrfki0l68.cloudfront.net/32450b106a26b69980db6e73094c9411c5734a61/ff4f7/images/article-assets/hugo-netlify/content-types.png" caption="Le contenu du dossier `content` de mon site" >}}
 
-{{% marker %}}
-
-Les pages statiques sont créées dans des fichiers individuels au format Markdown à la racine du dossier `/content/`. Les autres types de contenus qui auraient besoin d'un index (comme des articles, des ateliers, des études de cas, etc.) sont créés dans des dossiers nommés d'après le type de contenu. Par exemple on stockera les contenus de type _ateliers_ dans un dossier `/content/ateliers/`. Mes articles se trouvent dans le répertoire `/content/blog/`. *Les dossiers de ce type sont également appelés des `sections`.*
-
-{{% /marker %}}
+Les pages statiques sont créées dans des fichiers individuels au format Markdown à la racine du dossier `/content/`. Les autres types de contenus qui auraient besoin d'un index (comme des articles, des ateliers, des études de cas, etc.) sont créés dans des dossiers nommés d'après le type de contenu. Par exemple on stockera les contenus de type _ateliers_ dans un dossier `/content/ateliers/`. Mes articles se trouvent dans le répertoire `/content/blog/`. {{% marker %}}Les dossiers de ce type sont également appelés des `sections`.{{% /marker %}}
 
 Pour chaque contenu, il vous faut définir son type. Vous pouvez faire ça de deux manières.
 
@@ -151,7 +146,7 @@ Le type pour les pages statiques est défini à l'aide de la variable `type` dan
 
 Vous pouvez choisir de définir le type de contenu à l'aide du front matter ou de l'arborescence de fichier. Généralement vous utiliserez la variable `type` pour les pages statiques et vous vous reposerez sur l'arborescence de fichiers pour les contenus qui auront besoin d'un index, comme par exemple des billets de blog.
 
-Une chose importante à savoir est que *si vous définissez le type de page à l'aide de la variable `type`, la page peut se trouver n'importe où dans le dossier `/content/`, l'arborescence n'aura alors aucune importance.*
+Une chose importante à savoir est que {{% marker %}}si vous définissez le type de page à l'aide de la variable `type`, la page peut se trouver n'importe où dans le dossier `/content/`, l'arborescence n'aura alors aucune importance.{{% /marker %}}
 
 Vous pourriez donc attribuer le type `static` à une page et la place dans le dossier `blog` et Hugo la considérera comme une page statique et ne tiendra pas compte de sa place dans l'arborescence.
 
@@ -209,11 +204,11 @@ Le fichier `/layouts/index.html` est la mise en page utilisée pour l'accueil et
 
 ```
 
-_`{{ .Content }}` récupère le contenu de la page correspondante_ dans le dossier `/content/` Donc ici ça récupère le contenu de la page d'accueil à partir du fichier `/contents/_index.md`.
+{{% marker %}}`{{ .Content }}` récupère le contenu de la page correspondante_ dans le dossier `/content/`.{{% /marker %}} Donc ici ça récupère le contenu de la page d'accueil à partir du fichier `/contents/_index.md`.
 
 En outre, j'appelle l'entête ainsi que le pied de page à l'aide de fichiers partiels.
 
-Par défaut, quand vous demandez `partial "footer.html ."`, _Hugo va regarder s'il existe un fichier partiel dans le dossier  `partials` situé dans le répertoire `layouts`._
+Par défaut, quand vous demandez `partial "footer.html ."`, {{% marker %}}Hugo va regarder s'il existe un fichier partiel dans le dossier  `partials` situé dans le répertoire `layouts`.{{% /marker %}}
 
 Reportez-vous à [la documentation d'Hugo sur les fichiers partiels](http://gohugo.io/templates/partials/) pour savoir ce que veut dire le point à la fin, ce qu'il fait et comment on peut personnaliser les appels à des fichiers partiels.
 
@@ -246,17 +241,17 @@ Notez la valeur de `type`. Comme dit plus haut, vous pouvez attribuer ici la val
 
 La variable `page` indique à Hugo quel modèle de mise en page présent dans le répertoire `/layouts/` utiliser.
 
-Il est bon de noter également que Hugo utilisera automatiquement ce modèle même je ne lui dis pas. Je me rappelle tout de même avoir eu quelques prises de tête au début quand j'essayais de comprendre comment utiliser les modèles pour les différentes pages. Je ne savais pas quel modèle allait être utilisé. Même en ayant lu la documentation, je me suis retrouvée à faire et défaire pas mal de choses pour m'apercevoir que les choses marchaient pas magie, ou pas. Au début, Hugo ressemblait à une boîte noire pour moi et il m'a fallu quelques jours pour en comprendre assez et pour oser écrire à son sujet. Quand ça a fini par fonctionner, j'ai décidé de ne plus toucher au front matter car j'avais peur de casser une fois de plus ma mise en page. Mais maintenant que j'en sais davantage, il est bon de signaler que vous n'avez pas vraiment besoin de la variable `page` ici.
+{{% notice info %}}Il est bon de noter également que Hugo utilisera automatiquement ce modèle même je ne lui dis pas. Je me rappelle tout de même avoir eu quelques prises de tête au début quand j'essayais de comprendre comment utiliser les modèles pour les différentes pages. Je ne savais pas quel modèle allait être utilisé. Même en ayant lu la documentation, je me suis retrouvée à faire et défaire pas mal de choses pour m'apercevoir que les choses marchaient pas magie, ou pas. Au début, Hugo ressemblait à une boîte noire pour moi et il m'a fallu quelques jours pour en comprendre assez et pour oser écrire à son sujet. Quand ça a fini par fonctionner, j'ai décidé de ne plus toucher au front matter car j'avais peur de casser une fois de plus ma mise en page. Mais maintenant que j'en sais davantage, il est bon de signaler que vous n'avez pas vraiment besoin de la variable `page` ici.{{% /notice %}}
 
 Le `title` est utilisé comme intitulé de lien dans le menu. (Sur mon site le menu situé en haut de page contient une entrée "About & Interviews").
 
 Je vous ai déjà dit que la `description` est utilisée dans le fichier partiel qui gère l'entête de page, cette description apparait ensuite dans l'onglet de votre navigateur.
 
-*La variable `menu` indique à Hugo que cette page doit avoir une entrée dans le menu principal.*
+{{% marker %}}La variable `menu` indique à Hugo que cette page doit avoir une entrée dans le menu principal.{{% /marker %}}
 
-*La variable `weight` est très utile pour vous aider à définir l'ordre d'affichage des liens dans le menu.* Si vous ne l'utilisez pas, Hugo utilisera son propre ordre par défaut – qui n'était pas celui que je souhaitais pour mon site. Vous pouvez également définir des valeurs négatives pour cette variable.
+{{% marker %}}La variable `weight` est très utile pour vous aider à définir l'ordre d'affichage des liens dans le menu.{{% /marker %}} Si vous ne l'utilisez pas, Hugo utilisera son propre ordre par défaut – qui n'était pas celui que je souhaitais pour mon site. Vous pouvez également définir des valeurs négatives pour cette variable.
 
-Pour faire court, je vous renvoie une fois de plus à la documentation d'Hugo pour ce qui est de l'utilisation et de la configuration du menu principal. J'ajoute que certains aspects sont encore assez confus pour moi, mais comme je suis arrivée à faire ce que je voulais maintenant : je ne touche plus à rien, j'ai trop peur de casser un truc. Une fois de plus. 😂
+{{% notice info %}}Pour faire court, je vous renvoie une fois de plus à la documentation d'Hugo pour ce qui est de l'utilisation et de la configuration du menu principal. J'ajoute que certains aspects sont encore assez confus pour moi, mais comme je suis arrivée à faire ce que je voulais maintenant : je ne touche plus à rien, j'ai trop peur de casser un truc. Une fois de plus. 😂 {{% /notice %}}
 
 Toutes les autres pages statiques sont créées de la même manière. La seule chose qui change c'est le titre, la description et leur ordre dans le menu. Elles utilisent toutes le même modèle de mise en page.
 
@@ -266,7 +261,7 @@ Je me note quelque chose ici pour plus tard :
 
 Enfin, comme pour la page d'accueil, le contenu HTML de la page _À propos_ se trouve dans le fichier `about.md` puis il est ensuite inséré dans le modèle `/layouts/static/single.html` à l'aide de `{{ .Content }}`. Nous faisons aussi appel aux fichiers partiels d'entête et de bas de page. Notez la correspondance entre le type `static` et le dossier `static` situé dans `layouts` qui contient le modèle de mise en page.
 
-Vous n'avez pas à écrire tout le HTML dans le fichier Markdown. Vous pouvez mettre toute la structure du HTML, comme les conteneurs, etc. dans le modèle de mise en page et n'avoir que le texte dans le fichier Markdown. Si j'ai procédé de la sorte, c'est juste que ça me convient bien comme ça.
+{{% notice info %}}Vous n'avez pas à écrire tout le HTML dans le fichier Markdown. Vous pouvez mettre toute la structure du HTML, comme les conteneurs, etc. dans le modèle de mise en page et n'avoir que le texte dans le fichier Markdown. Si j'ai procédé de la sorte, c'est juste que ça me convient bien comme ça.{{% /notice %}}
 
 ##### Les archétypes de contenu
 
@@ -408,12 +403,12 @@ La boucle en elle-même pourra et sera probablement différente pour la majorit�
 
 ```
 
-Ne faites pas attention au code HTML de cette boucle, ça fait un moment que je n'ai pas travaillé sur mon site, il aurait bien besoin de quelques améliorations. Le balisage sera bientôt mis à jour.
+{{% notice info %}}Ne faites pas attention au code HTML de cette boucle, ça fait un moment que je n'ai pas travaillé sur mon site, il aurait bien besoin de quelques améliorations. Le balisage sera bientôt mis à jour.{{% /notice %}}
 
-C'est la partie `{{ range .Paginator.Pages }}` qui est vraiment importante ici. _Chaque `.Paginator` que vous utilisez dans une page d'index de section va boucler et afficher les article **de cette section**._
+C'est la partie `{{ range .Paginator.Pages }}` qui est vraiment importante ici. {{% marker %}}Chaque `.Paginator` que vous utilisez dans une page d'index de section va boucler et afficher les articles **de cette section**.{{% /marker %}}
 `(.Paginator 5).Pages` indique à Hugo de ne lister que cinq éléments. Cette boucle va parcourir tous les articles de la section `blog` et ne lister que les cinq plus récents. Une boucle similaire dans le fichier `layouts/workshops/index.html` bouclerait sur les ateliers stockés dans le dossier `/content/workshops/` et afficherait la liste des ateliers dans l'index.
 
-Je confonds encore quelques variables globales du site et des variables de page dans Hugo. Ce que j'ai pour le moment me suffit, et si jamais j'avais besoin de plus de flexibilité, d'options ou de fonctionnalités, il faudrait que je me replonge de nouveau dans la documentation pour arriver à tirer de la logique d'Hugo plus qu'une simple boucle. Vous devriez en faire de même.
+{{% notice info %}}Je confonds encore quelques variables globales du site et des variables de page dans Hugo. Ce que j'ai pour le moment me suffit, et si jamais j'avais besoin de plus de flexibilité, d'options ou de fonctionnalités, il faudrait que je me replonge de nouveau dans la documentation pour arriver à tirer de la logique d'Hugo plus qu'une simple boucle. Vous devriez en faire de même.{{% /notice %}}
 
 Et pour ce qui est du fichier partiel `pagination.html`, le mien ressemble pour le moment à ça :
 
@@ -482,7 +477,7 @@ Dans le modèle de page, je boucle sur les articles comme pour la page d'index d
 
 ```
 
-En résumé : **`.Site.Pages` boucle sur toutes les pages de votre site. En d'autres termes, cela va lister tous les fichiers Markdown contenus dans le dossier `/content/`.** Pour indiquer à Hugo de n'afficher que les fichiers situés dans la section `/content/blog/`, on “filtre” les pages en précisant le `"Type" "blog"`. On procédera également de la sorte pour une page d'archive d'une autre section, en utilisant le nom de la section comme filtre. Et c'est tout.
+En résumé : {{% marker %}}`.Site.Pages` boucle sur toutes les pages de votre site. En d'autres termes, cela va lister tous les fichiers Markdown contenus dans le dossier `/content/`.{{% /marker %}} Pour indiquer à Hugo de n'afficher que les fichiers situés dans la section `/content/blog/`, on “filtre” les pages en précisant le `"Type" "blog"`. On procédera également de la sorte pour une page d'archive d'une autre section, en utilisant le nom de la section comme filtre. Et c'est tout.
 
 ### Héberger chez Netlify
 
@@ -527,7 +522,7 @@ J'ai constaté quelques améliorations et plus de A verts sur la page de résult
 -   Déploiement automatiquement à chaque `push` sur le dépôt grâce à Netlify,
 -   Hébergée gratuitement chez Netlify avec le plan Open Source.
 
-Il est également utile de mentionner que désormais la compilation complète de mon site après chaque changement, sans avoir à filtrer de vieux contenus, prend à Hugo moins de 40 secondes. **Hugo met 39ms pour être plus précis**, là où Jekyll, même avec des options comme `--incremental` mettait plusieurs **minutes**.
+Il est également utile de mentionner que désormais la compilation complète de mon site après chaque changement, sans avoir à filtrer de vieux contenus, prend à Hugo moins de 40 millisecondes. {{% marker %}}Hugo met 39ms à compiler mon site pour être plus précis{{% /marker %}}, là où Jekyll, même avec des options comme `--incremental` mettait plusieurs **minutes**.
 
 ### Objectifs futurs
 
