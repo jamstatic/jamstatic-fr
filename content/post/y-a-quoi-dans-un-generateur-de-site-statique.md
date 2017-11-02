@@ -2,6 +2,10 @@
 title: Qui y'a t-il dans un générateur de site statique ?
 description: Jetons un coup d'œil au fonctionnement interne de Harp, un générateur de site statique écrit en JavaScript
 date: 2017-02-09T15:21:52Z
+source:
+  author: Brian Rinaldi
+  title: What Really Makes a Static Site Generator?
+  url: https://css-tricks.com/really-makes-static-site-generator/
 images:
   - https://cdn.css-tricks.com/wp-content/uploads/2017/02/terraform-1.jpg
 ---
@@ -374,6 +378,4 @@ est gratuit et essaie d'aborder l'historique, le paysage actuel et les fondament
 
 {{< figure src="https://cdn.css-tricks.com/wp-content/uploads/2017/02/books-1.jpg" >}}
 
-Le livre que j'ai co-écrit avec [Raymond
-Camden](https://twitter.com/raymondcamden) s'appelle [Travailler avec les
-sites statiques](http://shop.oreilly.com/product/0636920051879.do) et est disponible en pré-publication, mais devrait bientôt être disponible en version papier.
+Le livre que j'ai co-écrit avec [Raymond Camden](https://twitter.com/raymondcamden) s'appelle [Travailler avec les sites statiques](http://shop.oreilly.com/product/0636920051879.do) et est disponible en pré-publication, mais devrait bientôt être disponible en version papier.
