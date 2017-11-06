@@ -8,30 +8,39 @@
           {{ $mymonths := .Site.Data.mois }}
           {{ .Date.Day }} {{ index $mymonths (printf "%d" .Date.Month) }} {{ .Date.Year }}
         </time>
-        {{ if .Params.author }}
-         • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        {{ with .Params.categories }}
+          {{ if ge (len .) 1 }}
+            • {{ range . }}
+                <a href="{{ printf "categories/%s" (. | urlize) | absURL }}">{{ . }}</a>
+              {{ end }}
+          {{ end }}
+        {{ end}}
+        • <span aria-label="Temps de lecture">{{ .ReadingTime }} min</span>
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
             <span itemprop="name">
-              <a class="post-author" rel="author" href="https://github.com/{{ .Params.author }}">{{ .Params.author }}</a>
+              <a class="post-author" rel="author" href="https://github.com/{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Params.Author.GitHub }}{{ end }}
+">{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Params.Author.Name }}{{ end }}</a>
             </span>
           </span>
-        {{ end }}
       </p>
     </header>
 
     <div class="post-content" itemprop="articleBody">
 
-      {{ .Content }}
-
-      {{ if .Params.source }}
-      <p>
+      {{ if .Params.Source.Title }}
+        <p class="notice info">
         <em>Article original : <a href="{{ .Params.Source.Url }}">{{ .Params.Source.Title }}</a></em>
-      </p>
+        </p>
       {{ end }}
 
-      <footer>
-      {{ partial "page-edit.html" . }}
+      {{ .Content }}
 
-      {{ if isset .Params "comments" }}
+      <footer>
+      {{ partial "page-edit" . }}
+
+      {{ partial "related" . }}
+
+      {{ with .Params.Comments }}
         {{ template "_internal/disqus.html" . }}
       {{ end }}
 

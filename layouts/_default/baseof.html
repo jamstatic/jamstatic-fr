@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
 
-{{ block "head" . }}{{- partial "site/head" . -}}{{ end }}
+{{- partial "site/head" . -}}
 
 <body>
 
-{{ block "header" . }}{{- partial "site/header" . -}}{{ end }}
+{{- partialCached "site/header" . -}}
 
   <div class="page-content">
     <div class="wrapper">
@@ -13,9 +13,7 @@
     </div>
   </div>
 
-{{ block "footer" . }}{{ partialCached "site/footer" . }}{{ end }}
-
-{{ block "scripts" . }}{{- partial "site/scripts" . -}}{{ end }}
-
+{{ partialCached "site/footer" . }}
+{{- partial "site/scripts" . -}}
 </body>
 </html>

@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:900">
 <link rel="stylesheet" href="{{ "assets/css/main.css" | relURL }}">
 <link rel="alternate" href="{{ .Site.RSSLink | relURL }}" title="{{ .Site.Title }}" type="application/atom+xml">
+<link rel="alternate" href="{{ "feed.json" | relURL }}" title="{{ .Site.Title }}" type="application/json">
 <link rel="canonical" href="{{ .Permalink }}">
 
 {{ template "_internal/opengraph.html" . }}
@@ -16,4 +17,5 @@
 {{ if eq (getenv "HUGO_ENV") "production"  }}
   {{ template "_internal/google_analytics_async.html" . }}
 {{ end }}
+<script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>

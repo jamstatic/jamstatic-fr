@@ -7,13 +7,13 @@
             <span class="icon icon--rss"></span> <a href="{{ .RSSLink | relURL }}">S‘abonner via RSS</a>
           </li>
           <li>
-            {{- partialCached "icons/slack" . -}}
+            {{- partial "icons/slack" . -}}
           </li>
           <li>
-            {{- partialCached "icons/github" . -}}
+            {{- partial "icons/github" . -}}
           </li>
           <li>
-            {{- partialCached "icons/twitter" . -}}
+            {{- partial "icons/twitter" . -}}
           </li>
         </ul>
       </div>
