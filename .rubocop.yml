@@ -1,6 +1,0 @@
-inherit_gem:
-  jekyll: .rubocop.yml
-
-Style/FrozenStringLiteralComment:
-  Enabled: true
-  EnforcedStyle: always
