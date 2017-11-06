@@ -5,6 +5,8 @@ description: Cettte version intègre le support des assets dans les thèmes, de 
 date: 2016-10-07
 images:
   - https://avatars3.githubusercontent.com/u/3083652?v=3&amp;s=200
+categories:
+  - jekyll
 ---
 
 {{% intro %}}

@@ -17,7 +17,7 @@ On observe un bouillonnement aussi bien de la communauté qui a lancé de nombre
 
 Les <abbr aria-label="Générateurs de site statique">GSS</abbr> sont rapides à prendre en main, cependant en fonction de besoins particuliers il est parfois intéressant d'avoir accès à des exemples de codes permettant de mettre en place le comportement désiré.
 
-Nous aimerions relayer et aggréger en français ce qui se passe à divers endroits de la toile autour des générateurs de site statique et de la stack JavaScript, APIs & Markup.
+Nous aimerions relayer et aggréger en français ce qui se passe à divers endroits de la toile autour des générateurs de site statique et de [la stack JavaScript, APIs & Markup]({{< relref "5-raisons-de-tester-la-jamstack.md" >}}). 
 
 ## Actualités
 

@@ -7,9 +7,10 @@ source:
   author: Michael Rose
   title: Improving Static Comments with Jekyll & Staticman
   url: https://mademistakes.com/articles/improving-jekyll-static-comments/
-
 images:
   - https://mademistakes.com/assets/images/improving-jekyll-static-comments-feature.jpg
+categories:
+  - jekyll
 ---
 
 {{% intro %}}

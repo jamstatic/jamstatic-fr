@@ -1,0 +1,151 @@
+body {
+  font-family: $base-font-family;
+  font-size: $base-em * $ms0;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $title-font-family;
+}
+
+h3,
+h2 {
+  line-height: $base * $ms1;
+}
+
+h1 {
+  line-height: $base * $ms0;
+}
+
+h6,
+.h6 {
+  font-size: $small;
+}
+
+h5,
+.h5 {
+  font-size: $normal;
+}
+
+h4,
+.h4 {
+  font-size: $big;
+}
+
+h3,
+.h3 {
+  font-size: $bigger;
+}
+
+h2,
+.h2 {
+  font-size: $title2;
+}
+
+h1,
+.h1 {
+  font-size: $title1;
+}
+
+@include media-query($on-tablet) {
+  body {
+    font-size: $base-em * $ms2;
+  }
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin-top: $line-height-computed;
+  margin-bottom: $line-height-computed / 7.43;
+}
+
+h2 + h3 {
+  margin-top: $line-height-computed / 3.583;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: $title-letter-spacing;
+
+  &,
+  a {
+    text-decoration: none;
+  }
+}
+
+small,
+.small {
+  font-size: $small;
+}
+
+p {
+  margin: 0 0 $line-height-computed;
+}
+
+// Lists
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: ($line-height-computed / 2);
+
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+// List options
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+// Inline turns list items into inline-block
+.list-inline {
+  @extend .list-unstyled;
+
+  margin-left: -5px;
+
+  > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+dl {
+  margin-top: 0;
+  margin-bottom: $line-height-computed;
+}
+
+dt,
+dd {
+  line-height: $line-height-base;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}

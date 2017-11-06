@@ -7,6 +7,8 @@ source:
   url: https://gohugohq.com/howto/go-offline-with-service-worker/
 images:
   - assets/images/service-worker.png
+categories:
+  - hugo
 ---
 
 {{% intro %}}

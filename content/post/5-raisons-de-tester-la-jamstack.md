@@ -2,12 +2,15 @@
 title: "Passer au statique : 5 raisons de tester la JAMstack sur votre prochain projet"
 description: Référencement, performance, sécurité, automatisation, communauté grandissante, les raisons de passer au statique ne manquent pas.
 date: 2017-03-16
+commments: true
 source:
   author: Tom Bennet
   title: "Go static: 5 reasons to try JAMstack on your next project"
   url: https://builtvisible.com/go-static-try-jamstack/
 images:
-  - https://builtvisible.com/wp-content/uploads/2017/03/Go_Static.jpg
+  - /assets/images/2017/03/go_static.jpg
+tags:
+  - jamstack
 ---
 
 {{% intro %}}
@@ -24,15 +27,15 @@ Le terme **JAMstack** désigne la stack JavaScript, APIs et Markup et une maniè
 
 Le truc vraiment puissant c'est que le développement avec la JAMstack est bien plus simple à appréhender que le développement de sites dynamiques à base de CMS. Il est facile d'oublier le nombre d'étapes nécessaires pour satisfaire une simple requête de page et la complexité des opérations qui sont menées constamment côté serveur pour générer le HTML final affiché par le navigateur de l'utilisateur. Prenons l'exemple (très schématique) d'un site typique qui fonctionne sous Wordpress.
 
-{{< figure src="https://36bvmt283fg61unuud3h7qua-wpengine.netdna-ssl.com/wp-content/uploads/2017/03/Toms_Diagram_1.png" caption="Génération de page HTML à l'aide de PHP et d'un serveur MySQL" >}}
+{{< figure src="/assets/images/2017/03/diagram.png" caption="Génération de page HTML à l'aide de PHP et d'un serveur MySQL" >}}
 
 Quand l'utilisateur demande à afficher une page, votre serveur fait une requête dans une base de données MySQL et utilise un interpréteur PHP, assemble les données avec le thème et les plugins pour en faire un document HTML qui pourra ensuite être affiché dans le navigateur de l'utilisateur. Ce qui fait que cette opération est extraordinairement complexe c'est surtout le **templating**. Vu qu'on ne va pas coder toutes les pages d'un blog, aussi modeste soit-il, à la main : séparer les contenus en composants réutilisables et automatiser leur assemblage fait sens.
 
 Mais pourquoi donc cette opération de templating a besoin de se passer côté serveur ? Avons-nous vraiment besoin de bases de données et de logiciels côté serveur (qui nous exposent par la même occasion à des douzaines de failles de sécurité) pour créer un simple blog ? Maintenant que les navigateurs sont devenus des systèmes d'exploitation, capable d'interagir avec un nombre incalculable d'APIs et de faire tourner des applications complexes côté client, et que le développement front-end est dominé par JavaScript et les automatisations à l'aide de `npm`, n'avons nous pas déjà dépassé ce modèle ?
 
-{{< figure src="https://36bvmt283fg61unuud3h7qua-wpengine.netdna-ssl.com/wp-content/uploads/2017/03/Toms_Diagram_2-768x314.png" caption="Un site Web statique développé à l'aide d'un processus basé sur la JAMstack" >}}
+{{< figure src="/assets/images/2017/03/diagram-ssg.png" caption="Un site Web statique développé à l'aide d'un processus basé sur la JAMstack" >}}
 
-Les générateurs de site statique comme Jekyll et Hugo permettent de rendre cela possible. Ils nous servent essentiellement de système de templating à la place du PHP mais au lieu de tourner sur un serveur et de générer du contenu à la volée, ils tournent en local en tant que partie intégrante du processus de développement. Votre HTML est généré en amont et votre site Web — désormais un ensemble de fichiers statiques faciles à mettre en cache — peut être distribué par un CDN (réseau de distribution de contenu) rapide comme l'éclair.
+Les générateurs de site statique comme Jekyll et Hugo permettent de rendre cela possible. Ils nous servent essentiellement de système de templating à la place du PHP mais au lieu de tourner sur un serveur et de générer du contenu à la volée, ils tournent en local en tant que partie intégrante du processus de développement. Votre HTML est généré en amont et votre site Web — désormais un ensemble de fichiers statiques faciles à mettre en cache — peut être distribué par un CDN (réseau de distribution de contenu) rapide comme l'éclair.
 
 Mais leurs bienfaits ne s'arrêtent pas là.
 

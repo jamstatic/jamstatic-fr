@@ -4,6 +4,8 @@ description: Présentation d'Algolia, un service de recherche personnalisé pour
 date: 2017-07-05 12:34:00 +02:00
 images:
   - /assets/images/algolia-smashing.png
+categories:
+  - algolia
 ---
 
 {{% intro %}}

@@ -5,6 +5,8 @@ description: Le programme de la deuxième conférence consacrée à Jekyll, qui 
 date: 2016-04-14
 images:
   - http://d1qmdf3vop2l07.cloudfront.net/important-mantis.cloudvent.net/compressed/1bdce97b1a6815888e0dadf72f1b19c5.png
+categories:
+  - jekyll
 ---
 
 {{% intro %}}

@@ -4,8 +4,12 @@ description: Netlify CMS est une application web qui vous permet d'éditer vos f
   Markdown depuis une interface visuelle. Cette application web facilite l'utilisation
   de générateurs de site statique pour les collaborateurs non techniques.
 date: 2017-05-29
+author: Frank Taillandier
 images:
-  - /assets/images/netlify-cms/netlify-cms.png
+  - /assets/images/2017/05/netlify-cms/netlify-cms.png
+categories:
+  - jekyll
+  - netlify
 ---
 
 {{% intro %}}
@@ -18,17 +22,17 @@ Nous partirons du principe que vous avez une installation de Jekyll déjà fonct
 
 La première étape est de [se connecter chez Netlify](https://app.netlify.com/signup) afin de pouvoir relier votre dépôt Git à ce service d'hébergement et de déploiement continu. C'est **gratuit** et si vous travaillez sur un [projet open source](https://www.netlify.com/open-source/), vous pouvez utiliser la formule pro.
 
-{{< figure src="/assets/images/netlify-cms/new-site-netlify.png" caption="Ajout de site, étape 2 : choix du dépôt" >}}
+{{< figure src="/assets/images/2017/05/netlify-cms/new-site-netlify.png" caption="Ajout de site, étape 2 : choix du dépôt" >}}
 
 L'ajout de site se fait en quelques clics, il n'y a qu'à sélectionner le service utilisé (GitHub pour nous), définir la branche (`master` dans notre cas) et la commande de build utilisée (`jekyll build` pour Jekyll) ainsi que le dossier de publication(`_site` par défaut avec Jekyll). Une fois le site configuré, nous allons pouvoir nous occuper d'autoriser l'édition de contenu via Netlify CMS.
 
-{{< figure src="/assets/images/netlify-cms/deploy-settings-netlify.png" caption="Ajout de site, étape 3 : configuration du déploiement" >}}
+{{< figure src="/assets/images/2017/05/netlify-cms/deploy-settings-netlify.png" caption="Ajout de site, étape 3 : configuration du déploiement" >}}
 
 ## Authentification via GitHub
 
 Maitenant il nous faut [créer une nouvelle application Oauth sur GitHub](https://github.com/settings/applications/new) (ou le service que vous utilisez) et de mentionner `https://api.netlify.com/auth/done` comme URL de callback d'authentification. Vous donnez ainsi l'autorisation à Netlify CMS d'accéder aux fichiers du dépôt.
 
-{{< figure src="/assets/images/netlify-cms/edit-oauth-app-github.png" caption="Configuration de l'application Oauth dans GitHub" >}}
+{{< figure src="/assets/images/2017/05/netlify-cms/edit-oauth-app-github.png" caption="Configuration de l'application Oauth dans GitHub" >}}
 
 ## Ajout des fichiers de l'admin
 
@@ -46,13 +50,13 @@ Notre fichier de configuration ressemble à ça :
 
 Il contient le chemin vers votre dépôt GitHub (à adapter donc à votre cas de figure), ici l'option `editorial_workflow` est activée mais vous pouvez commenter la ligne si vous n'en avez pas l'utilité.
 
-{{< figure src="/assets/images/netlify-cms/editorial-workflow-netlify-cms.png" caption="Aperçu du workflow de publication de Netlify CMS" >}}
+{{< figure src="/assets/images/2017/05/netlify-cms/editorial-workflow-netlify-cms.png" caption="Aperçu du workflow de publication de Netlify CMS" >}}
 
 Vous pouvez préciser le dossier dans lequel vous sauvegardez vos images, ici elles vont dans le dossier `assets/images/`.
 
 La dernière section `collections` recense les champs habituellement utilisés dans les variables FrontMatter des [collections](https://jekyllrb.com/docs/collections/) que vous souhaitez pouvoir éditer dans l'interface du CMS. Vous pouvez [personnaliser cette section](https://github.com/netlify/netlify-cms/blob/master/docs/quick-start.md#collections) en fonction de vos besoins et ajouter les widgets dont vous avez besoin.
 
-{{< figure src="/assets/images/netlify-cms/netlify-cms-edit.png" caption="Édition des champs personnalisés d'un article" >}}
+{{< figure src="/assets/images/2017/05/netlify-cms/netlify-cms-edit.png" caption="Édition des champs personnalisés d'un article" >}}
 
 Une fois les champs personnalisés ajoutés, il ne vous reste plus qu'à les enregistrer dans votre projet et à pousser le tout. Grosso modo ça revient à taper quelque chose comme :
 
@@ -70,19 +74,19 @@ Après avoir été authentifié via GitHub, vous avez maintenant accès à l'int
 
 Netlify est en train de travailler sur son [Styleguide](https://styleguide.netlify.com/) et à n'en pas douter son CMS devrait en bénéficier quand il sera plus abouti.
 
-{{< figure src="/assets/images/netlify-cms/netlify-cms.png" caption="La liste des articles dans Netlify CMS" >}}
+{{< figure src="/assets/images/2017/05/netlify-cms/netlify-cms.png" caption="La liste des articles dans Netlify CMS" >}}
 
 Dans notre exemple, nous avons un site Jekyll tout ce qu'il y a de plus simple, avec la collection par défaut, celle des posts (renommés Articles dans notre interface via le fichier de configuration). Si vous avez défini d'autres collections dans votre fichier de configuration, vous pourrez également les gérer depuis le CMS.
 
 Si vous souhaitez donner l'accès à plusieurs collaborateurs, rendez vous sur [app.netlify.com](https://app.netlify.com/) dans l'onglet access de votre site et ajoutez autant de collaborateurs que vous le souhaitez.
 
-{{< figure src="/assets/images/netlify-cms/access-netlify.png" caption="Configuration de l'accès au site Netlify" >}}
+{{< figure src="/assets/images/2017/05/netlify-cms/access-netlify.png" caption="Configuration de l'accès au site Netlify" >}}
 
 ## Et voilà !
 
 Félicitations, vous venez d'ajouter une interface d'administration pour la gestion de vos contenus gérés à l'aide d'un générateur de site statique. Vos collaborateurs peuvent se focaliser sur la rédaction et l'édition de contenus, sans avoir à se préoccuper des commandes Git ou du déploiement, tout est automatisé ! Vous bénéficiez d'un workflow de publication de type Kanban si vous le désirez et Netlify va jusqu'à génèrer une [URL unique de prévisualisation](https://www.youtube.com/watch?v=s_4UL9oAcVE) accessible depuis GitHub pour chaque pull-request créée. Elle est pas belle la vie ?
 
-{{< figure src="/assets/images/netlify-cms/pull-request-netlify-cms.png" caption="Lors de la sauvegarde d'un nouvel article, une pull request est créée sur GitHub avec un lien vers une URL de prévisualisation" >}}
+{{< figure src="/assets/images/2017/05/netlify-cms/pull-request-netlify-cms.png" caption="Lors de la sauvegarde d'un nouvel article, une pull request est créée sur GitHub avec un lien vers une URL de prévisualisation" >}}
 
 Et si vous êtes développeur, sachez que Netlify CMS utilise des composants React que vous pouvez étendre pour ajouter vos propres widgets. Vous trouverez plus d'informations à ce sujet dans [la documentation du projet](https://www.netlifycms.org/docs/).
 

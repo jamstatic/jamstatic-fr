@@ -5,6 +5,8 @@ date: 2016-08-31
 author: Nicolas Hoizey
 images:
   - http://res-1.cloudinary.com/cloudinary/image/upload/c_fill,w_560/dpr_1.0/jekyll_cloudinary_plugin.png
+categories:
+  - jekyll
 ---
 
 {{% intro %}}

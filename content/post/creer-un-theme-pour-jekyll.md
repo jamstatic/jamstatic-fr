@@ -5,6 +5,8 @@ description: Jekyll permet de publier des thèmes sous forme de gem, afin de fac
 date: 2016-10-29T15:18:59+02:00
 images:
   - https://jekyllrb.com/img/octojekyll.png
+categories:
+  - jekyll
 ---
 
 {{% intro %}}

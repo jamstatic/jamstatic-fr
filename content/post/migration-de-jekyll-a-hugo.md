@@ -9,6 +9,8 @@ source:
   author: Sara Soueidan
 images:
   - https://d33wubrfki0l68.cloudfront.net/4aa07c8129bdae37f8c6510453f274a32ac664c0/09ca5/images/article-assets/hugo-netlify/hugo-folder-structure.png
+categories:
+  - hugo
 ---
 
 {{% intro %}}

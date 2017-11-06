@@ -7,7 +7,9 @@ source:
   title: Building Pattern Libraries With Shadow DOM In Markdown
   url: "https://www.smashingmagazine.com/2017/07/pattern-libraries-in-markdown/"
 images:
-  - /assets/images/markdown-shadowdom.png
+  - /assets/images/2017/09/markdown-shadowdom.png
+categories:
+  - hugo
 ---
 
 {{% intro %}}
@@ -68,7 +70,7 @@ article, je vais vous montrer comme inclure facilement des démos de code dans
 des documents Markdown avec l'aide de snippets et de l'encapsulation du Shadow
 DOM.
 
-{{< figure src="/assets/images/markdown-shadowdom.png"
+{{< figure src="/assets/images/2017/09/markdown-shadowdom.png"
 caption="Un M, une flèche qui pointe vers le bas et un détective caché dans l'obscurité pour symboliser Markdown et Shadow Dom" >}}
 
 ### CSS And Markdown
@@ -120,7 +122,7 @@ raccourci syntaxique destiné principalement à insérer des bouts de codes
 complexes ou issus de services tiers. Par example WordPress inclus un raccourci
 pour Vimeo qui prend juste l'ID de la vidéo Vimeo en question.
 
-```html
+``` html
 [vimeo 207263942]
 ```
 
@@ -131,7 +133,7 @@ balisage HTML complet lorsque le contenu est parsé.
 créer des _shortcodes_ personnalisés. Par exemple, j'ai crée un _shortcode_
 CodePen très simple que peux inclure dans mon contenu en Markdown :
 
-```html
+``` html
 Un peu de contenu en Markdown avant le shortcode. Aliquam sodales rhoncus dui,
 sed congue velit semper ut. Class aptent taciti sociosqu ad litora torquent.
 
@@ -145,7 +147,7 @@ Hugo recherche automatiquement le modèle nommé  `codePen.html` dans le
 sous-dossier `shortcodes` pour pouvoir parser le _shortcode_ pendant l'étape de
 compilation. Mon implémentation ressemble à ça :
 
-```html
+``` html
 {{ if .Site.Params.codePenUser }}
   <iframe height='300' scrolling='no' title="démonstration CodePen" src='//codepen.io/{{ .Site.Params.codepenUser | lower }}/embed/{{ .Get 0 }}/?height=265&theme-id=dark&default-tab=result,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>
     <div>
@@ -211,7 +213,7 @@ disponible dans le fichier _shortcode_ en utilisant `{{ .Inner }}`. Imaginons
 donc que je veuille utiliser un _shortcode_ `demo` de la façon suivante :
 
 
-```
+``` hugo
 {{</* demo */>}}
   C'est le contenu !
 {{</* /demo */>}}

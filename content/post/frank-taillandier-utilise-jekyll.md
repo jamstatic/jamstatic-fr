@@ -4,6 +4,8 @@ description: Questions à un utilisateur de Jekyll
 date: 2016-04-12
 author: Bertrand Keller
 published: false
+categories:
+  - jekyll
 ---
 
 {{% intro %}}

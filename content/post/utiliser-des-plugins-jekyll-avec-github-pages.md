@@ -5,6 +5,8 @@ description: Automatiser la publication du site généré sur GitHub Pages pour 
 date: 2016-09-18T13:51:13+02:00
 images:
   - /assets/images/octojekyll.png
+categories:
+  - jekyll
 ---
 
 {{% intro %}}

@@ -10,6 +10,8 @@ source:
   url: https://eduardoboucas.com/blog/2017/02/22/jekyll-staging-environment.html
 images:
   - https://eduardoboucas.com/assets/posts/2017-02-22-creating-a-staging-environment-for-jekyll/netlify1.png
+categories:
+  - jekyll
 ---
 
 {{% intro %}}

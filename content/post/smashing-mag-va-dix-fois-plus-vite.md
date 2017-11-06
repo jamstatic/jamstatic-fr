@@ -11,6 +11,9 @@ source:
   url: https://www.netlify.com/blog/2017/03/16/smashing-magazine-just-got-10x-faster/
 images:
   - assets/images/caching-issues.jpg
+categories:
+  - hugo
+  - netlify
 ---
 
 {{% intro %}}

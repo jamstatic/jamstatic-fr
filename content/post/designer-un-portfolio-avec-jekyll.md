@@ -9,6 +9,8 @@ source:
   url: https://medium.com/@katfukui/the-design-portfolio-workflow-a94030d0b39e#.uut2a0ulw
 images:
   - https://cdn-images-1.medium.com/max/800/1*5SbG467XN7stvnPDPyUR1g.png
+categories:
+  - jekyll
 ---
 
 {{% intro %}}

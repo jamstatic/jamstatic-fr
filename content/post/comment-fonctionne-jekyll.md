@@ -8,141 +8,14 @@ source:
   title: How does Jekyll work?
   url: https://www.bytesandwich.com/jekyll/software/blogging/2016/09/14/how-does-jekyll-work.html
 images:
-  - assets/images/jekyll-rendering-rules.png
+  - assets/images/2017/01/jekyll-rendu-brouillons.png
+categories:
+  - jekyll
 ---
 
 {{% intro %}}
 Si vous suivez ce blog, vous savez déjà que Jekyll est un générateur de site statique développé en Ruby. Jack Phelan a décidé d'aller jeter un œil dans le moteur de Jekyll histoire de mieux comprendre comment sont traités les différents types de fichiers qui sont passés en entrée. Nous traduisons [son article](https://www.bytesandwich.com/jekyll/software/blogging/2016/09/14/how-does-jekyll-work.html) afin de vous inciter à plonger un peu dans le code de Jekyll et prendre connaissance des concepts fondamentaux de ce générateur. Nous espérons que cela vous permettra de mieux appréhender la philosophie de Jekyll ou que cela vous sera utile si vous songez à développer un plugin.
 {{% /intro %}}
-
-[Jekyll](https://jekyllrb.com) peut paraître un peu déroutant au début. En effet Jekyll ne fait pas grand chose à vos fichiers, si ce n'est qu'il les classifie de différentes façons.
-
-Jekyll va soit copier, soit omettre, soit transformer les fichiers du répertoire source dans le répertoire de destination[^1]. Lorsque Jekyll transforme vos fichiers, c'est toujours de cette manière, si ce n'est que la deuxième étape peut être potentiellement sautée.[^2]
-
-Si un fichier commence par une entête [YAML FrontMatter](https://jekyllrb.com/docs/frontmatter/) Jekyll va appliquer les transformations suivante au fichier:
-
-1. **Interprétation du code Liquid** : Le contenu du fichier est d'abord parcouru par le parser de [Liquid](http://shopify.github.io/liquid/), les variables comme `site` ou `page` auxquelles le modèle Liquid veut accéder sont alors interprétées.
-1. **Conversion du contenu** : en fonction de l'extension de fichier, Jekyll fait appel à un convertisseur dédié, par example Kramdown pour les fichiers `.md` ou `.markdown`, qui est chargé de convertir le résultat obtenu après l'étape 1.
-1. **Parsing du modèle**: Le résultat de cette conversion est alors transmis dans la variable `{{content}}`, soit au modèle de page par défaut, soit à celui qui est spécifié dans l'entête YAML FrontMatter.
-1. Le résultat de cette dernière conversion du modèle de page, généralement un fichier HTML, est écrit dans votre répertoire de destination.
-
-J'aimerais maintenant vous montrer un exemple où Jekyll applique cette transformation. Ensuite, lors d'un [test complet](#test-exhaustif-dune-génération) de génération de site, nous irons étudier la structure générale de l'algorithme au [cœur de Jekyll](#le-cœur-de-jekyll) pour voir quels traitements sont effectués sur les différents types de fichiers.
-
-## La transformation de Jekyll
-
-Le mécanisme de transformation de Jekyll est situé dans [la méthode run du fichier renderer](https://github.com/jekyll/jekyll/blob/2b15b0b3251d35c290dc96eb07e18fa31a58bcc6/lib/jekyll/renderer.rb#L32-L79), qui fait essentiellement la chose suivante, en sautant potentiellement quelques étapes :
-
-```ruby
-after_liquid = render_with_liquid(file_content) # line 62
-after_markdown = convert(after_liquid) # line 66
-place_in_layout(after_markdown) # line 71
-```
-
-Donc si nous transformons l'article présent dans le thème par défaut de Jekyll :
-
-```markdown
-
----
-layout: post
-title:  "Bienvenue dans Jekyll !"
-date:   2016-08-17 13:50:36 +0100
-categories: jekyll update
----
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-    def print_hi(name)
-      puts "Hi, #{name}"
-    end
-    print_hi('Tom')
-    #=> prints 'Hi, Tom' to STDOUT.
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
-
-```
-
-…vous pouvez voir le résultat des deux premières étapes de la transformation :
-
-<div class="tabs">
-
-  <div class="tab">En entrée</div>
-  <div class="tab">1. Liquidifié</div>
-  <div class="tab">2. Converti</div>
-  <div class="tab-content" markdown="1">
-
-```markdown
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-    def print_hi(name)
-      puts \"Hi, \#{name}\"
-    end
-    print_hi('Tom')
-    #=> prints 'Hi, Tom' to STDOUT.
-
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
-```
-
-  </div>
-  <div class="tab-content" markdown="1">
-
-```markdown
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
-
-<figure class=\"highlight\"><pre><code class=\"language-ruby\" data-lang=\"ruby\"><span class=\"k\">def</span> <span class=\"nf\">print_hi</span><span class=\"p\">(</span><span class=\"nb\">name</span><span class=\"p\">)</span>
-  <span class=\"nb\">puts</span> <span class=\"s2\">\"Hi, </span><span class=\"si\">\#{</span><span class=\"nb\">name</span><span class=\"si\">}</span><span class=\"s2\">\"</span>
-<span class=\"k\">end</span>
-<span class=\"n\">print_hi</span><span class=\"p\">(</span><span class=\"s1\">'Tom'</span><span class=\"p\">)</span>
-<span class=\"c1\">#=> prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
-
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
-```
-
-  </div>
-  <div class="tab-content" markdown="1">
-
-```markdown
-<p>You’ll find this post in your <code class=\"highlighter-rouge\">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class=\"highlighter-rouge\">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-<p>To add new posts, simply add a file in the <code class=\"highlighter-rouge\">_posts</code> directory that follows the convention <code class=\"highlighter-rouge\">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
-
-<p>Jekyll also offers powerful support for code snippets:</p>
-
-<figure class=\"highlight\"><pre><code class=\"language-ruby\" data-lang=\"ruby\"><span class=\"k\">def</span> <span class=\"nf\">print_hi</span><span class=\"p\">(</span><span class=\"nb\">name</span><span class=\"p\">)</span>
-  <span class=\"nb\">puts</span> <span class=\"s2\">\"Hi, </span><span class=\"si\">\#{</span><span class=\"nb\">name</span><span class=\"si\">}</span><span class=\"s2\">\"</span>
-<span class=\"k\">end</span>
-<span class=\"n\">print_hi</span><span class=\"p\">(</span><span class=\"s1\">'Tom'</span><span class=\"p\">)</span>
-<span class=\"c1\">#=> prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
-
-<p>Check out the <a href=\"http://jekyllrb.com/docs/home\">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href=\"https://github.com/jekyll/jekyll\">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href=\"https://talk.jekyllrb.com/\">Jekyll Talk</a>.</p>
-```
-
-</div>
-</div>
 
 <style type="text/css">
 
@@ -214,14 +87,132 @@ th, tr td:first-child {
     })
 </script>
 
-Puis vient la dernière étape où nous mettons tout cela dans la variable `{{content}}` de notre modèle :
+[Jekyll](https://jekyllrb.com) peut paraître un peu déroutant au début. En effet Jekyll ne fait pas grand chose à vos fichiers, si ce n'est qu'il les classifie de différentes façons.
+
+Jekyll va soit copier, soit omettre, soit transformer les fichiers du répertoire source dans le répertoire de destination[^1]. Lorsque Jekyll transforme vos fichiers, c'est toujours de cette manière, si ce n'est que la deuxième étape peut être potentiellement sautée.[^2]
+
+Si un fichier commence par une entête [YAML FrontMatter](https://jekyllrb.com/docs/frontmatter/) Jekyll va appliquer les transformations suivante au fichier:
+
+1. **Interprétation du code Liquid** : Le contenu du fichier est d'abord parcouru par le parser de [Liquid](http://shopify.github.io/liquid/), les variables comme `site` ou `page` auxquelles le modèle Liquid veut accéder sont alors interprétées.
+1. **Conversion du contenu** : en fonction de l'extension de fichier, Jekyll fait appel à un convertisseur dédié, par example Kramdown pour les fichiers `.md` ou `.markdown`, qui est chargé de convertir le résultat obtenu après l'étape 1.
+1. **Parsing du modèle**: Le résultat de cette conversion est alors transmis dans la variable `{{content}}`, soit au modèle de page par défaut, soit à celui qui est spécifié dans l'entête YAML FrontMatter.
+1. Le résultat de cette dernière conversion du modèle de page, généralement un fichier HTML, est écrit dans votre répertoire de destination.
+
+J'aimerais maintenant vous montrer un exemple où Jekyll applique cette transformation. Ensuite, lors d'un [test complet](#test-exhaustif-dune-génération) de génération de site, nous irons étudier la structure générale de l'algorithme au [cœur de Jekyll](#le-cœur-de-jekyll) pour voir quels traitements sont effectués sur les différents types de fichiers.
+
+## La transformation de Jekyll
+
+Le mécanisme de transformation de Jekyll est situé dans [la méthode run du fichier renderer](https://github.com/jekyll/jekyll/blob/2b15b0b3251d35c290dc96eb07e18fa31a58bcc6/lib/jekyll/renderer.rb#L32-L79), qui fait essentiellement la chose suivante, en sautant potentiellement quelques étapes :
+
+```ruby
+after_liquid = render_with_liquid(file_content) # line 62
+after_markdown = convert(after_liquid) # line 66
+place_in_layout(after_markdown) # line 71
+```
+
+Donc si nous transformons l'article présent dans le thème par défaut de Jekyll :
+
+```markdown
+
+---
+layout: post
+title:  "Bienvenue dans Jekyll !"
+date:   2016-08-17 13:50:36 +0100
+categories: jekyll update
+---
+You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Jekyll also offers powerful support for code snippets:
+
+    def print_hi(name)
+      puts "Hi, #{name}"
+    end
+    print_hi('Tom')
+    #=> prints 'Hi, Tom' to STDOUT.
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+[jekyll-docs]: http://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
+
+```
+
+…vous pouvez voir le résultat des deux premières étapes de la transformation :
+
+<div class="tabs">
+  <div class="tab">En entrée</div>
+  <div class="tab">1. Liquidifié</div>
+  <div class="tab">2. Converti</div>
+  <div class="tab-content">
+    <pre><code class="language-markdown">
+You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Jekyll also offers powerful support for code snippets:
+
+    def print_hi(name)
+      puts \"Hi, \#{name}\"
+    end
+    print_hi('Tom')
+    #=> prints 'Hi, Tom' to STDOUT.
+
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+[jekyll-docs]: http://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
+</code></pre>
+  </div>
+  <div class="tab-content">
+    <pre><code class="language-markdown">
+You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Jekyll also offers powerful support for code snippets:
+
+<figure class=\"highlight\"><pre><code class=\"language-ruby\" data-lang=\"ruby\"><span class=\"k\">def</span> <span class=\"nf\">print_hi</span><span class=\"p\">(</span><span class=\"nb\">name</span><span class=\"p\">)</span>
+  <span class=\"nb\">puts</span> <span class=\"s2\">\"Hi, </span><span class=\"si\">\#{</span><span class=\"nb\">name</span><span class=\"si\">}</span><span class=\"s2\">\"</span>
+<span class=\"k\">end</span>
+<span class=\"n\">print_hi</span><span class=\"p\">(</span><span class=\"s1\">'Tom'</span><span class=\"p\">)</span>
+<span class=\"c1\">#=> prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+[jekyll-docs]: http://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/
+</code></pre></div>
+<div class="tab-content">
+<pre><code class="language-markdown">
+<p>You’ll find this post in your <code class=\"highlighter-rouge\">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class=\"highlighter-rouge\">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>To add new posts, simply add a file in the <code class=\"highlighter-rouge\">_posts</code> directory that follows the convention <code class=\"highlighter-rouge\">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class=\"highlight\"><pre><code class=\"language-ruby\" data-lang=\"ruby\"><span class=\"k\">def</span> <span class=\"nf\">print_hi</span><span class=\"p\">(</span><span class=\"nb\">name</span><span class=\"p\">)</span>
+  <span class=\"nb\">puts</span> <span class=\"s2\">\"Hi, </span><span class=\"si\">\#{</span><span class=\"nb\">name</span><span class=\"si\">}</span><span class=\"s2\">\"</span>
+<span class=\"k\">end</span>
+<span class=\"n\">print_hi</span><span class=\"p\">(</span><span class=\"s1\">'Tom'</span><span class=\"p\">)</span>
+<span class=\"c1\">#=> prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<p>Check out the <a href=\"http://jekyllrb.com/docs/home\">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href=\"https://github.com/jekyll/jekyll\">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href=\"https://talk.jekyllrb.com/\">Jekyll Talk</a>.</p>
+</code></pre></div>
+</div>
+
+Puis vient la dernière étape où nous mettons tout cela dans la variable `{{content}}` de notre modèle :
 
 <div class="tabs">
   <div class="tab">Modèle</div>
   <div class="tab">3. Résultat final</div>
-  <div class="tab-content" markdown="1">
-
-```markdown
+  <div class="tab-content"><pre><code class="language-markdown">
 <article class=\"post\" itemscope itemtype=\"http://schema.org/BlogPosting\">
 
   <header class=\"post-header\">
@@ -234,12 +225,9 @@ Puis vient la dernière étape où nous mettons tout cela dans la variable `{{co
   </div>
 
 </article>
-```
-
-  </div>
-  <div class="tab-content" markdown="1">
-
-```markdown
+    </code></pre></div>
+<div class="tab-content">
+<pre><code class="language-markdown">
 <article class=\"post\" itemscope itemtype=\"http://schema.org/BlogPosting\">
 
   <header class=\"post-header\">
@@ -266,7 +254,7 @@ Puis vient la dernière étape où nous mettons tout cela dans la variable `{{co
   </div>
 
 </article>
-```
+    </code></pre>
   </div>
 </div>
 
@@ -544,9 +532,7 @@ J'ai fait un tableau avec une ligne par répertoire et une colonne par fichier, 
   <div class="tab tab-selected">Source</div>
   <div class="tab">Site</div>
   <div class="tab">Site avec les brouillons</div>
-  <div class="tab-content" markdown="1">
-
-```shell
+  <div class="tab-content"><pre><code class="language-shell">
 bash-4.3# tree .
 .
 ├── 2016-05-05-post-normal.md
@@ -617,11 +603,9 @@ bash-4.3# tree .
 └── yaml.yml
 
 9 directories, 57 files
-```
+    </code></pre>
   </div>
-  <div class="tab-content" markdown="1">
-
-```shell
+  <div class="tab-content"><pre><code class="language-shell">
 bash-4.3# tree _site
 _site
 ├── 2016
@@ -667,13 +651,8 @@ _site
 ├── text.txt
 └── yaml.yml
 
-13 directories, 29 files
-```
-
-  </div>
-  <div class="tab-content" markdown="1">
-
-```shell
+13 directories, 29 files</code></pre></div>
+<div class="tab-content"><pre><code class="language-shell">
 bash-4.3# tree _site
 _site
 ├── 2016
@@ -727,10 +706,7 @@ _site
 └── yaml.yml
 
 15 directories, 34 files
-```
-
-  </div>
-</div>
+</code></pre></div></div>
 
 ## Les objets de Jekyll : Posts, Drafts, Pages, Data, Collections, Layouts et Includes
 

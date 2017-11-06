@@ -8,6 +8,8 @@ source:
   url: http://blog.teamtreehouse.com/hugo-templates-wordpress-designers
 images:
   - /assets/images/hugo/header.jpg
+categories:
+  - hugo
 ---
 
 {{% intro %}}

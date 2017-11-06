@@ -5,10 +5,12 @@ description: Les secrets de fabrication du portfolio client d'une agence à l'ai
 date: 2017-02-10
 source:
   author: Zander Martineau
-  titre: Creating dynamic layouts with Jekyll
+  title: Creating dynamic layouts with Jekyll
   url: https://medium.com/tmw-interactive/creating-dynamic-layouts-with-jekyll-3bbb7fc57d1f#.iac16fjec
 images:
-  - https://cdn-images-1.medium.com/max/400/1*rS4n3wyRac82CtdSpi3Mpg.jpeg
+  - assets/images/2017/02/canon-unleashprint.jpg
+categories:
+  - jekyll
 ---
 
 {{% intro %}}
@@ -17,7 +19,7 @@ Dans [son article publié sur Medium](https://medium.com/tmw-interactive/creatin
 
 > Voici comment nous avons tiré profit du YAML front-matter pour pouvoir effectuer de nombreux changements au sein d'un même modèle pour différents articles sur le nouveau site de notre agence.
 
-{{< figure src="https://cdn-images-1.medium.com/max/800/1*rS4n3wyRac82CtdSpi3Mpg.jpeg" caption="Extrait de la <a href=\"http://www.tmwunlimited.com/work/canon-unleashprint/\">campagne Canon #unleashprint</a>" >}}
+{{< figure src="/assets/images/2017/02/canon-unleashprint-full.jpg" attr="Extrait de la campagne Canon #unleashprint" attrlink="http://www.tmwunlimited.com/work/canon-unleashprint" >}}
 
 Les sites web crées avec [Jekyll](http://jekyllrb.com/) sont généralement simples et leurs mises en page prévisible. J'aimerais vous montrer comme j'ai crée une mise en page pseudo-dynamique pour des études de cas sur [le nouveau site de TMW](http://www.tmwunlimited.com), en utilisant du YAML front-matter et un peu de magie[^1]…
 
@@ -33,10 +35,8 @@ Nous avons ajouté un tableau YAML `partials` dans les entêtes YAML front-matte
 
 {{< gist mrmartineau ee7cd73fcfdef19b45afd01c4d6b3b9f >}}
 
-<figcaption>
-Extrait de l<a href="http://www.tmwunlimited.com/work/canon-unleashprint/">'étude de cas Canon. Unleashing Print</a>.
+<figcaption>Extrait de <a href="http://www.tmwunlimited.com/work/canon-unleashprint/">l’étude de cas Canon. Unleashing Print.</a>
 </figcaption>
-
 
 ### La boucle `for`
 
@@ -44,14 +44,13 @@ La boucle en question a été ajoutée dans le modèle `work` du dossier `_layou
 
 La boucle parcourt le tableau `partials` et utilise la propriété `name` pour inclure un module _différent_, comme ceci: `include {{item.name}}.html`. Ceux-ci ont ensuite été transmis au module inclus en utilisant les paramètres suivants de la balise `include` . Même si la propriété n'était pas nécessaire dans ce module, elle devait néanmoins être transmise.
 
+Très vite, j'ai compris que les propriétés du tableau `partials` devaient partager les mêmes propriétés pour que ma boucle _for_ ne parte pas en sucette.
+
 {{< gist mrmartineau e0ad7ae56552c9571e285e30e3469476 >}}
 
 <figcaption>
-<a href="https://gist.github.com/mrmartineau/e0ad7ae56552c9571e285e30e3469476" data-href="https://gist.github.com/mrmartineau/e0ad7ae56552c9571e285e30e3469476" rel="nofollow noopener" target="_blank">https://gist.github.com/mrmartineau/e0ad7ae56552c9571e285e30e3469476</a>
+  <a href="https://gist.github.com/mrmartineau/e0ad7ae56552c9571e285e30e3469476" data-href="https://gist.github.com/mrmartineau/e0ad7ae56552c9571e285e30e3469476" rel="nofollow noopener" target="_blank">https://gist.github.com/mrmartineau/e0ad7ae56552c9571e285e30e3469476</a>
 </figcaption>
-
-
-Très vite, j'ai compris que les propriétés du tableau `partials` devaient partager les mêmes propriétés pour que ma boucle _for_ ne parte pas en sucette.
 
 ### Les modules
 
@@ -70,13 +69,13 @@ Les couleurs primaires, secondaires ainsi que celles du textes sont définies da
 
 Grâce à tout cela, nous avons pu ajouter pas mal de personnalisation à notre nouveau site web, ci-dessous une sélection d' études de cas :
 
-{{< figure src="https://cdn-images-1.medium.com/max/800/1*UVZ-0lHLA702VVWUGAAmTA.png" caption="" >}}
+{{< figure src="/assets/images/2017/02/canon-unleashprint-fullpage.jpg" >}}
 
-{{< figure src="https://cdn-images-1.medium.com/max/800/1*rmRNs1tb1D7vCOr_eRBO5Q.png" caption="<a href=\"http://www.tmwunlimited.com/work/\">http://www.tmwunlimited.com/work/</a>" >}}
+{{< figure src="/assets/images/2017/02/dogs-trust-fullpage.jpg" attr="http://www.tmwunlimited.com/work/" attrlink="http://www.tmwunlimited.com/work/" >}}
 
-{{< figure src="https://cdn-images-1.medium.com/max/800/1*Q8RQduFxoRUMSJauZ0ED-Q.png" caption="" >}}
+{{< figure src="/assets/images/2017/02/lynx-fullpage.jpg" >}}
 
-{{< figure src="https://cdn-images-1.medium.com/max/800/1*M5f4_au8Xo05A8CyRRdmYQ.png" caption="" >}}
+{{< figure src="/assets/images/2017/02/lynx-calm-fullpage.jpg" >}}
 
 ### 👋
 

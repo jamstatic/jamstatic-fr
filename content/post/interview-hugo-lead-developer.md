@@ -6,6 +6,8 @@ description: >
 date: "2017-10-03 13:45:36 +0200"
 images:
   - /assets/images/hugo/hugo-bjorn-erik-pedersen.jpg
+categories:
+  - hugo
 ---
 
 {{% intro %}}

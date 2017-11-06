@@ -10,7 +10,8 @@ source:
 images:
   - https://snipcartweb-10f3.kxcdn.com/media/1173/toolbox.png
 canonical_url: https://snipcart.com/blog/hugo-tutorial-static-site-ecommerce
-
+categories:
+  - hugo
 ---
 
 {{% intro %}}
