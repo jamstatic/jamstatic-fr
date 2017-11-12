@@ -79,7 +79,7 @@ C'est un gain énorme à la fois pour la performance et les forfaits de données
 mes visiteurs et également pour mon quota de bande passante chez Cloudinary.
 * **[Optimisation de la compression d'image](http://cloudinary.com/documentation/image_transformations#automatic_quality_and_encoding_settings):**
 Cloudinary est capable de calculer le meilleur niveau de compression pour
-réduire le poids de chaque image, sans pour autant dégrader la qualité du
+réduire le poids de chaque image, sans pour autant dégrader la qualité du rendu.
 
 Persuadé que Cloudinary répondait à toutes mes attentes, il me fallait encore
 développer un plugin Jekyll qui puisse utliser ces fonctionalités.
