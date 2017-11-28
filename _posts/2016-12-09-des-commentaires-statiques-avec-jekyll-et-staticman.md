@@ -5,6 +5,7 @@ description: Utilisation de Staticman pour ajouter des commentaires et des notif
   de réponses sur un site statique sous Jekyll
 image: https://mademistakes.com/assets/images/improving-jekyll-static-comments-feature.jpg
 source:
+  lang: en
   title: Improving Static Comments with Jekyll & Staticman
   url: https://mademistakes.com/articles/improving-jekyll-static-comments/
   author: Michael Rose

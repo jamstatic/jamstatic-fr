@@ -5,6 +5,7 @@ description: Jetons un coup d'œil au fonctionnement interne de Harp, un génér
   de site statique écrit en JavaScript
 image: https://cdn.css-tricks.com/wp-content/uploads/2017/02/terraform-1.jpg
 source:
+  lang: en
   author: Brian Rinaldi
   title: What Really Makes a Static Site Generator?
   url: https://css-tricks.com/really-makes-static-site-generator/

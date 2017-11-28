@@ -5,6 +5,7 @@ description: Netlify vous permet de créer simplement un environnement de pré-p
   pour votre site statique.
 image: https://eduardoboucas.com/assets/posts/2017-02-22-creating-a-staging-environment-for-jekyll/netlify1.png
 source:
+  lang: en
   title: Creating a staging environment for Jekyll
   url: https://eduardoboucas.com/blog/2017/02/22/jekyll-staging-environment.html
   author: Eduardo Bouças

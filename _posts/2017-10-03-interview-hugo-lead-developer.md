@@ -6,6 +6,9 @@ description: >
   statiques ultra-rapide.
 slug: interview-hugo-lead-developer
 image: /assets/images/hugo/hugo-bjorn-erik-pedersen.jpg
+source:
+  lang: en
+  url: https://www.thenewdynamic.org/article/interview-hugo-lead-developer/
 ---
 
 [Hugo](https://gohugo.io) est rapidement devenu l'un des gestionnaires de sites
