@@ -5,6 +5,7 @@ description: Référencement, performance, sécurité, automatisation, communaut
   les raisons de passer au statique ne manquent pas.
 image: https://builtvisible.com/wp-content/uploads/2017/03/Go_Static.jpg
 source:
+  lang: en
   title: 'Go static: 5 reasons to try JAMstack on your next project'
   url: https://builtvisible.com/go-static-try-jamstack/
   author: Tom Bennet

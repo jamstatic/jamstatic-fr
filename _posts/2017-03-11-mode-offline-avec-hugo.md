@@ -5,6 +5,7 @@ description: Permettez aux visiteurs de consulter votre site statique en mode ho
   à l'aide d'un Service Worker
 image: assets/images/service-worker.png
 source:
+  lang: en
   title: Go offline! Service Worker and Hugo
   url: https://gohugohq.com/howto/go-offline-with-service-worker/
 ---

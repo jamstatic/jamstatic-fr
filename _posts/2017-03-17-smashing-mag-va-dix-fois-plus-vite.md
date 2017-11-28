@@ -7,6 +7,7 @@ description: Smashing fait désormais partie de la renaissance du web moderne. S
   aider à migrer.
 image: assets/images/caching-issues.jpg
 source:
+  lang: en
   url: https://www.netlify.com/blog/2017/03/16/smashing-magazine-just-got-10x-faster/
   title: Smashing Magazine just got 10x faster
   author: Chris Bach

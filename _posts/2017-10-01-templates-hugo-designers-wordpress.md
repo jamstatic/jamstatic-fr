@@ -5,6 +5,7 @@ description: >
   bien connu WordPress.
 image: /assets/images/hugo/header.jpg
 source:
+  lang: en
   title: Hugo Templates for WordPress Designers
   url: http://blog.teamtreehouse.com/hugo-templates-wordpress-designers
   author: Leon Barnard

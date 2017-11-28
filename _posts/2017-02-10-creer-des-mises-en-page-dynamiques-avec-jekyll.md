@@ -5,6 +5,7 @@ description: Les secrets de fabrication du portfolio client d'une agence à l'ai
   des possibilités offertes par Jekyll
 image: https://cdn-images-1.medium.com/max/400/1*rS4n3wyRac82CtdSpi3Mpg.jpeg
 source:
+  lang: en
   url: https://medium.com/tmw-interactive/creating-dynamic-layouts-with-jekyll-3bbb7fc57d1f#.iac16fjec
   title: Creating dynamic layouts with Jekyll
   author: Zander Martineau

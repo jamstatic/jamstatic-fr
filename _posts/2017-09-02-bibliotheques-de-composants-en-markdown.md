@@ -5,6 +5,7 @@ description:
   à l'aide des shortcodes de Hugo et de l'encapsulation Shadow DOM.
 image: /assets/images/markdown-shadowdom.png
 source:
+  lang: en
   title: Building Pattern Libraries With Shadow DOM In Markdown
   url: "https://www.smashingmagazine.com/2017/07/pattern-libraries-in-markdown/"
   author: Heydon Pickering

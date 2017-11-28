@@ -5,6 +5,7 @@ description: Les différentes étapes pour concevoir son portfolio avec Jekyll e
   Pages par Kat Fukui, webdesigner chez Github.
 image: https://cdn-images-1.medium.com/max/800/1*5SbG467XN7stvnPDPyUR1g.png
 source:
+  lang: en
   author: Kat Fukui
   title: 'The Design Portfolio Workflow: A complete guide to code and deploy a site,
     all from the terminal.'

@@ -6,6 +6,7 @@ description: Le principal développeur de Jekyll partage sa vision sur les gén�
 image: https://cdn.netlify.com/a3dc6515430891d6df896d718dd7e54f6941d647/99084/uploads/parker-moore-jekyll.jpg
 author: Bertrand Keller
 source:
+  lang: en
   author: Aaron Autrand
   title: Interview with Parker Moore from Jekyll
   url: https://www.netlify.com/blog/2016/03/11/interview-with-parker-moore-from-jekyll

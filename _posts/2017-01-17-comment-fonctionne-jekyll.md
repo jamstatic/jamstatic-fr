@@ -5,6 +5,7 @@ image: assets/images/jekyll-rendering-rules.png
 description: À partir du code source, nous pouvons mieux comprendre le process de
   génération au cœur de Jekyll.
 source:
+  lang: en
   author: Jack Phelan
   title: How does Jekyll work?
   url: https://www.bytesandwich.com/jekyll/software/blogging/2016/09/14/how-does-jekyll-work.html
