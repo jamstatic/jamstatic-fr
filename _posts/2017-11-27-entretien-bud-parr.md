@@ -106,7 +106,7 @@ comprends c'est qu'il veut "un éditeur Web riche que je pourrais utiliser sans
 l'aide d'un profil technique". Je crois que malheureusement beaucoup de
 gens prennent encore ce genre de demande au pied de la lettre.
 
-## Si ce workflow est naturel pour les développeurs Web, les utilisateurs finaux préfèrenet utiliser une interface graphique complète. Ces deux manières de travailler sont-elles compatibles ?
+## Si ce workflow est naturel pour les développeurs Web, les utilisateurs finaux préfèrent utiliser une interface graphique complète. Ces deux manières de travailler sont-elles compatibles ?
 
 Tout à fait. On a le choix entre deux approches : une basée sur Git, où tout
 votre contenu est stocké dans un dépôt Git, et une autre basée sur une API, où
