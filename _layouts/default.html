@@ -6,7 +6,43 @@
 
   <div class="page-content">
     <div class="wrapper">
-      {{- content -}}
+      {% capture source %}
+        {% comment %}Inspired by https://www.sylvaindurand.org/ameliorer-la-typographie-avec-jekyll/{% endcomment %}
+        {% assign temp1 = content | split: '<pre' %}
+        {% for temp2 in temp1 %}
+          {% assign temp3 = temp2 | split: '</pre>' %}
+          {% if temp3.size == 2 %}
+            <pre{{ temp3.first }}</pre>
+          {% endif %}
+          {% assign t = temp3.last %}
+          {% assign t = t | replace_regex: '(\d)(e|è)(r|me)?([\s.,])', '\1<sup>\2\3</sup>\4' %}
+
+          {% assign t = t | replace: '&ldquo;' , '«&nbsp;' %}
+          {% assign t = t | replace: '&rdquo;' , '&nbsp;»' %}
+          {% assign t = t | replace: '“' , '«&#8239;' %}
+          {% assign t = t | replace: '”' , '&#8239;»' %}
+
+          {% assign t = t | replace: ' ?!([^\w])' , '&#8239;&#8264;\1' %}
+          {% assign t = t | replace: ' !?([^\w])' , '&#8239;&#8265;\1' %}
+          {% assign t = t | replace: ' !!!([^\w]*)' , '&#8239;&#8252;\1' %}
+          {% assign t = t | replace: ' !!([^\w])' , '&#8239;&#8252;\1' %}
+          {% assign t = t | replace: ' x ' , ' &times;&nbsp;' %}
+
+          {% assign t = t | replace: ' :', '&nbsp;:' %}
+
+          {% assign t = t | replace: ' %', '&#8239;%' %}
+          {% assign t = t | replace: ' ;', '&#8239;;' %}
+          {% assign t = t | replace: ' !', '&#8239;!' %}
+          {% assign t = t | replace: ' ?', '&#8239;?' %}
+          {% assign t = t | replace: ' px', '&#8239;px' %}
+          {% assign t = t | replace: ' €', '&#8239;€' %}
+          {% assign t = t | replace: ' $', '&#8239;$' %}
+          {% assign t = t | replace: ' – ', '&#8239;–&#8239;' %}
+          {% assign t = t | replace: '...' , '&#8230;' %}
+
+          {{ t }}
+        {% endfor %}
+      {% endcapture %}{{- source -}}
     </div>
   </div>
 
