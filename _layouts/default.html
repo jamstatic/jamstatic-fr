@@ -12,7 +12,7 @@
         {% for temp2 in temp1 %}
           {% assign temp3 = temp2 | split: '</pre>' %}
           {% if temp3.size == 2 %}
-            <pre{{ temp3.first | newline_to_br }}</pre>
+            <pre{{ temp3.first }}</pre>
           {% endif %}
           {% assign t = temp3.last %}
           {% assign t = t | replace_regex: '(\d)(e|è)(r|me)?([\s.,])', '\1<sup>\2\3</sup>\4' %}
