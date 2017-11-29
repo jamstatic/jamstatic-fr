@@ -17,8 +17,8 @@
           {% assign t = temp3.last %}
           {% assign t = t | replace_regex: '(\d)(e|è)(r|me)?([\s.,])', '\1<sup>\2\3</sup>\4' %}
 
-          {% assign t = t | replace: '&ldquo;' , '«&#8239;' %}
-          {% assign t = t | replace: '&rdquo;' , '&#8239;»' %}
+          {% assign t = t | replace: '&ldquo;' , '«&nbsp;' %}
+          {% assign t = t | replace: '&rdquo;' , '&nbsp;»' %}
           {% assign t = t | replace: '“' , '«&#8239;' %}
           {% assign t = t | replace: '”' , '&#8239;»' %}
 
