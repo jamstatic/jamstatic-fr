@@ -14,16 +14,16 @@ source:
 
 Bud Parr est impliqué dans la communauté qui gravite autour des générateurs de site
 statique depuis plusieurs années. Il possède [sa propre
-agence](https://www.thenewdynamic.com/) et aggrège sa curation autour de
+agence](https://www.thenewdynamic.com/) et agrège sa curation autour de
 l'écosystème de la JAMstack sur [thenewdynamic.org](https://thenewdynamic.org).
 Bud organise également des [meetups à
-New-York](http://www.meetup.com/the-new-dynamic/) et il est à également
+New-York](http://www.meetup.com/the-new-dynamic/) et il est également à 
 l'origine du récent redesign du [site d'Hugo](https://gohugo.io/).
 Il a gentiment accepté de répondre à nos questions.
 
 {% include figure.html url="https://github.com/budparr.png" description="Bud Parr" %}
 
-## Bonjour Bud, tu es un observateur et un défenseur de ce que beaucoup désignent encore comme de simples sites statiques. Comment les choses ont-elles évoluées depuis quelques années ?
+## Bonjour Bud, tu es un observateur et un défenseur de ce que beaucoup désignent encore comme de simples sites statiques. Comment les choses ont-elles évolué depuis quelques années ?
 
 Pour être tout à fait honnête, cela m'a causé pas mal d'insomnies au début. Ce
 paradigme faisait totalement sens pour moi, mais il y avait peu de personnes
@@ -31,10 +31,10 @@ impliquées ou qui avaient conscience de tout cela. J'étais vraiment inquiet qu
 s'il m'arrivait quelque chose, mes clients éprouveraient des difficultés à
 trouver des développeurs pour prendre la suite de leur projet. Et puis, il n'y
 avait pas énormément de choix dans l'écosytème. Le manque d'un bon éditeur pour
-les profils non-techniques était un vrai problème. J'ai même du apprendre à
+les profils non-techniques était un vrai problème. J'ai même dû apprendre à
 quelques clients comment utiliser Markdown et GitHub, mais ce n'est clairement
 pas l'idéal.
-Nous voyons que les choses ont bien évoluées depuis, certains des
+Nous voyons que les choses ont bien évolué depuis, certains des
 [éditeurs](https://thenewdynamic.org/tools/content-management/) actuels sont
 aussi bons si ce n'est meilleurs que ceux que l'on trouvent dans les CMS
 traditionnels. Cette année, nous avons assisté à l'écclosion de [CMS headless](https://www.thenewdynamic.org/tools/content-management/headless-cms/)
@@ -53,7 +53,7 @@ plus.
 
 Peter Levine, un des associés d'Andreessen Horowitz, fait également ce constat
 lorsqu'il écrit : [<q>Il y a plus de 300 millions de sites Web déployés chaque
-année, la plupart de ces sites et application Web pourraient être hébergées chez
+année, la plupart de ces sites et applications Web pourraient être hébergées chez
 Netlify</q>](https://a16z.com/2017/08/09/netlify/). Par Netlify, il sous-entend
 déployé en statique ou basé sur la [JAMstack](https://jamstack.org/). Il me
 semble que nous sommes encore loin du compte.
@@ -72,14 +72,14 @@ venir.
 
 Ce sont des organismes qui ont un large public et une forte exigence de qualité
 de service : performance, stabilité et sécurité. Il est donc naturel qu'ils
-veuillent bénéficier des avantages du statique. De plus ces organismes sont en
+veuillent bénéficier des avantages du statique. De plus, ces organismes sont en
 général composés d'équipes distribuées, qui peuvent être réparties dans
 différents services, la collaboration permise par un processus de travail basé
 sur Git - donc sur de la gestion de versions -  fait totalement sens. Tout le
 monde est gagnant et cela facilite l'adoption de cette technologie, puisqu'elle
 utilisée par des acteurs majeurs et donc crédibles.
 
-## Nous voyons aussi de plus en plus d'agences, de start-ups adopter cette manière de travailler par défaut quand il s'agit de publier des contenus. Quel sont selon toi les projets les plus suceptibles de faire réfléchir à deux fois avant de dégaîner son bon vieux CMS ?
+## Nous voyons aussi de plus en plus d'agences, de start-ups adopter cette manière de travailler par défaut quand il s'agit de publier des contenus. Quels sont selon toi les projets les plus susceptibles de faire réfléchir à deux fois avant de dégaîner son bon vieux CMS ?
 
 L'équipe qui s'était occupée de la dernière campagne de Barack Obama - site
 propulsé par Jekyll - s'est également occupée du site de campagne d'Hillary
@@ -87,7 +87,7 @@ Clinton - site généré avec Assemble en NodeJS. C'étaient des sites relativem
 importants et relativement sophistiqués. Nous avons [une galerie sur The New
 Dyanmic](https://www.thenewdynamic.org/showcase/) qui a pour but de mettre en
 avant des projets bien conçus. L'idée c'est de montrer que ce n'est pas
-uniquement fait pour [blogguer comme un
+uniquement fait pour [bloguer comme un
 hacker](http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html),
 on peut utiliser ces outils pour maintenir de la documentation, présenter des
 services et des produits et faire des choses plus sophistiquées. [Smashing
@@ -112,8 +112,8 @@ Tout à fait. On a le choix entre deux approches : une basée sur Git, où tout
 votre contenu est stocké dans un dépôt Git, et une autre basée sur une API, où
 vous générez vos contenus qui sont ensuite mis à disposition via une API, pour
 que vous puissiez les récupérer et les afficher dans votre application ou votre
-site. Il existe de bons éditeurs Web pour les sites dont le contenu est stockée
-dans un dépot Git : [Forestry.io](https://forestry.io/),
+site. Il existe de bons éditeurs Web pour les sites dont le contenu est stocké
+dans un dépôt Git : [Forestry.io](https://forestry.io/),
 [Siteleaf](https://siteleaf.com), [Cloudcannon](https://cloudcannon.com) et
 [Netlify CMS](http://netlifycms.org/) par exemple.
 Jusqu'à encore recemment il n'y avait que quelques acteurs majeurs du côté des APIs de contenu (comme [Contentful](https://www.contentful.com/) ou [Prismic](https://prismic.io/)), maintenant il existe [des dizaines de CMS headless](https://www.thenewdynamic.org/tools/content-management/headless-cms/)
@@ -132,7 +132,7 @@ contenus.
 
 Je trouve ce workflow particulièrement efficace. Hugo peut gérer n'importe quel
 type de site, quelle que soit sa taille. Netlify me permet de déployer des mises
-à jour en quelques secondes et Forestry permet à mes clients d'êtres autonomes
+à jour en quelques secondes et Forestry permet à mes clients d'être autonomes
 pendant la phase d'édition. En gros, cet ensemble d'outils me permet d'être plus
 efficace dans mon travail et de me concentrer en priorité sur les besoins de mes
 clients.
@@ -157,7 +157,7 @@ ces pics de charge aléatoires se produisent.
 
 Je n'ai pas à le faire. Mes clients m'engagent pour que je prenne ce genre de
 décision à leur place. Si je dois aborder le sujet, je vais insister sur les
-gains de performance, cet argument à lui-seul suffit à les convaincre, et les
+gains de performance, cet argument à lui seul suffit à les convaincre, et les
 sites statiques permettent une continuité de service proche de 100% tout en
 réduisant fortement la probabilité de se faire hacker. Ce que je ne mentionne
 pas trop, mais dont ils bénéficient aussi, c'est la facilité avec laquelle on
@@ -173,8 +173,8 @@ Je trouve que Netlify a fait un super boulot de vulgarisation, en nommant le
 concept et en faisant la promotion de la JAMstack, mais de ce que je peux
 observer, les gens sont encore assez désorientés, ils ne savent pas trop par où
 commencer ni quel serait le meilleur outil à utiliser dans leur cas de figure.
-J'aimerais donc que les gens puissent se familairiser davantage avec cet
-écosystèmme, je ne sais pas très bien comment. La mission de The New Dynamic est
+J'aimerais donc que les gens puissent se familiariser davantage avec cet
+écosystème, je ne sais pas très bien comment. La mission de The New Dynamic est
 de contribuer à cela, et il y a encore beaucoup de travail à faire.
 
 [Lire la version originale en anglais sur thenewdynamic.org](https://www.thenewdynamic.org/article/interview-bud-parr/)
