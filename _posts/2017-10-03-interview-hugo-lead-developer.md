@@ -11,6 +11,7 @@ source:
   url: https://www.thenewdynamic.org/article/interview-hugo-lead-developer/
 ---
 
+{: .intro }
 [Hugo](https://gohugo.io) est rapidement devenu l'un des gestionnaires de sites
 statiques les plus populaires comme en attestent ses bientôt [20 000 étoiles sur
 GitHub](https://github.com/gohugoio/hugo). C'est dû en partie à sa vitesse de
@@ -18,6 +19,7 @@ génération : en effet il ne lui faut qu'une petite milliseconde pour générer
 page. Oui, cela fait 1000 pages à la seconde et c'est plutôt impressionnant je
 trouve. Mais ce n'est pas la seule raison qui devrait vous faire adopter Hugo.
 
+{: .intro }
 Heureusement ce <abbr aria-label="Générateur de sites statiques">GSS</abbr> propose
 aussi tout un tas de fonctionnalités comme les contenus imbriqués, les fichiers
 partiels, les shortcodes, la gestion de l'<abbr aria-label="internationalisation">i18n</abbr>, les exports personnalisés (JSON,

@@ -12,12 +12,13 @@ source:
 
 ---
 
+{: .intro }
 Bud Parr est impliqué dans la communauté qui gravite autour des générateurs de site
 statique depuis plusieurs années. Il possède [sa propre
 agence](https://www.thenewdynamic.com/) et agrège sa curation autour de
 l'écosystème de la JAMstack sur [thenewdynamic.org](https://thenewdynamic.org).
 Bud organise également des [meetups à
-New-York](http://www.meetup.com/the-new-dynamic/) et il est également à 
+New-York](http://www.meetup.com/the-new-dynamic/) et il est également à
 l'origine du récent redesign du [site d'Hugo](https://gohugo.io/).
 Il a gentiment accepté de répondre à nos questions.
 
