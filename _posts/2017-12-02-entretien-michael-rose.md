@@ -54,22 +54,22 @@ Comme c'est juste un générateur, le rôle de Jekyll n'est pas de gérer les m�
 
 Le gestionnaire de médias de WordPress est excellent et il me manque à chaque fois que je travaille sur des contenus avec beaucoup d'images dans Jekyll. Bien entendu il y a des outils qui peuvent aider dans le processus, mais ce n'est pas la même chose que de pouvoir uploader en masse, éditer, retailler et générer le balisage des images reponsive qui va bien.
 
-Mis à part les différences de langages dans lequel ils sont développés, l'expérience est la même entre les différents <abbr aria-label="Générateur de Site Statique">GSS</abbr>. Quelques années auparavant, j'aurais dit que le manque d'une interface de gestion pour l'édition des articles et des pages était un gros obstacle pour les personnes issues du monde WordPress . Mais avec des services comme [Forestry.io](https://forestry.io),
+Mis à part les différences de langages dans lequel ils sont développés, l'expérience est la même entre les différents <abbr aria-label="Générateur de Site Statique">GSS</abbr>. Quelques années auparavant, j'aurais dit que le manque d'interface de gestion pour l'édition des articles et des pages était un gros frein pour les personnes issues du monde WordPress . Mais avec des services comme [Forestry.io](https://forestry.io),
 [Cloudcannon](https://cloudcannon.com), et même le [plugin `jekyll-admin`](https://github.com/jekyll/jekyll-admin/) ce vide a été en partie rempli.
 
-J'ai aussi regardé des services comme Cloudinary. Mais ils sont payants… du moins si je choisis un plan qui couvre mes besoins, alors que WordPress c'est entièrement gratuit, c'est difficile de rivaliser avec ça ;-)
+J'ai aussi regardé des services comme Cloudinary. Mais ils sont payants… du moins si je choisis un plan qui couvre mes besoins, alors que WordPress c'est entièrement gratuit, difficile de rivaliser avec ça ;-)
 
 J'essaie de plus en plus de ne pas polluer mes fichiers Markdown avec des balises personnalisées. Je rêve de pouvoir avoir un fichier en pur Markdown, portable, qui s'affiche partout où Markdown est supporté, et qui peut être prévisualisé facilement (avec les images et tout le reste).
 
-J'ai pas mal étudié [Gatsby](https://www.gatsbyjs.org/) qui est un générateur qui embarque un ensemble d'outils modernes et qui permet de ce genre de choses et bien plus. Il peut convertir automatiquement les liens vers les images écrits en Markdown, de les redimensionner, de les optimiser et de générer le balisage adéquat pour une image responsive avec `srcset` grâce aux plugins [gatsby-remark-images](https://www.gatsbyjs.org/packages/gatsby-remark-images/)
+J'ai pas mal étudié [Gatsby](https://www.gatsbyjs.org/) qui est un générateur qui embarque un ensemble d'outils modernes et qui permet de ce genre de choses et bien plus. Il peut convertir automatiquement les liens vers les images écrits en Markdown, les redimensionner, les optimiser et générer le balisage adéquat pour une image responsive avec `srcset` grâce aux plugins [gatsby-remark-images](https://www.gatsbyjs.org/packages/gatsby-remark-images/)
 et [gatsby-images](https://www.gatsbyjs.org/packages/gatsby-image/) et ce de manière assez rapide à l'aide de [sharp](https://github.com/lovell/sharp).
 
- Je n'ai pas testé [la version 3 du plugin `jekyll-assets`](https://envygeeks.io/2017/11/21/jekyll-assets-3-released) mais les plugins Jekyll écrits en Ruby qui font des choses similaires sont plutôt lents, du fait qu'ils reposent sur des bibliothèques comme Imagemagick ou équivalentes.
+Je n'ai pas testé [la version 3 du plugin `jekyll-assets`](https://envygeeks.io/2017/11/21/jekyll-assets-3-released) mais les plugins Jekyll écrits en Ruby qui font des choses similaires sont plutôt lents, du fait qu'ils reposent sur des bibliothèques comme Imagemagick ou équivalentes.
 
 ## Pourquoi y-a-t-il aussi peu de thèmes de qualité pour Jekyll selon toi?
 
 Jusqu'à récemment peu de thèmes étaient supportés nativement par GitHub Pages.
-Pour avoir accès à des thèmes de qualité, il fallait connaître Git et savoir forker un dépôt.
+Pour avoir accès à des thèmes de qualité, il fallait connaître Git et savoir _forker_ un dépôt.
 Mais je pense que la majorité des utilisateurs veulent juste profiter de GitHub Pages pour bénéficier d'un site _gratuit_ avec lequel ils pourront publier des articles.
 
 Maintenant que [GitHub Pages supporte les thèmes distants](https://github.com/blog/2464-use-any-theme-with-github-pages) peut-être verrons nous plus de thèmes de qualité apparaître. Surtout que l'installation et la mise à jour se font sans peine maintenant.
@@ -82,7 +82,7 @@ Sur mes derniers thèmes, j'ai essayé de me baser sur ce qu'à fait [Minima, le
 
 Il y aura toujours des particularités si des thèmes ont des fonctionnalités spécifiques, mais une espèce de base commune pourrait bénéficier à tout le monde. C'est dur de rivaliser avec WordPress à ce niveau. Vous pouvez installer n'importe quel thème et modifier l'apparence de votre site sans trop d'effort.
 
-## Pourquoi n'y a-t-il pas plus de designers Web qui travaillent avec des générateurs de sites statiques ?
+## Pourquoi n'y a-t-il pas plus de designers Web qui travaillent avec des générateurs de site statique ?
 
 Je n'en suis pas certain, mais je ne pense pas que ce soit par méconnaissance car il n'y a pas un jour où je tombe sur un billet de blog ou un article sur l'utilisation des sites statiques. Mais c'est peut-être l'environnement dans lequel j'évolue ;)
 
