@@ -19,7 +19,9 @@ Gatsby connait un vif succès et une [adoption](https://github.com/gatsbyjs/gats
 
 Si votre budget est serré et que vous ne voulez pas sacrifier l'expérience de développement ou les déploiements à la pointe, je me suis arrêté sur un ensemble d'outils (dont Gatsby bien entendu) pour développer des sites statiques, qui résolvent plusieurs problématiques d'un coup.
 
-L'exemple que je vais couvrir ici est le site de documentation pour le pricipal logiciel édité par notre entreprise. Le site regroupe beaucoup de contenus avec des centaines d'articles.
+L'exemple que je vais couvrir ici est [le site de documentation][rollcalldocs] pour le pricipal logiciel édité par notre entreprise. Le site regroupe beaucoup de contenus avec des centaines d'articles.
+
+  [rollcalldocs]: http://rollcalldocs.netlify.com/ "Version beta"
 
 La liste de pré-requis pour ce site est la suivante :
 
