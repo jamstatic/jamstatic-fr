@@ -21,7 +21,7 @@ Si votre budget est serré et que vous ne voulez pas sacrifier l'expérience de 
 
 L'exemple que je vais couvrir ici est [le site de documentation][rollcalldocs] pour le principal logiciel édité par notre entreprise. Le site regroupe beaucoup de contenus avec des centaines d'articles.
 
-  [rollcalldocs]: http://rollcalldocs.netlify.com/ "Version beta"
+[rollcalldocs]: http://rollcalldocs.netlify.com/ "Version beta"
 
 La liste de pré-requis pour ce site est la suivante :
 
@@ -73,12 +73,7 @@ Après avoir installé le [plugin](https://www.gatsbyjs.org/packages/gatsby-sour
 Dès que vous lancez la commande `develop` ou `build` de Gatsby, le plugin va vérifier à l'aide de l'API de Contentful si de nouveaux contenus sont disponibles et les télécharger. Toutes ces données sont dès lors disponibles pour que vous puissiez faire vos requêtes dans votre environnement de développement. Cela veut dire que vous pouvez commencer à récupérer les assets et le contenu depuis Contentful (les assets comprennent les images et autres medias, le contenu désigne les pages, les articles, tous vos contenus texte et vos fichiers Markdown) à l'aide de requêtes GraphQL directement dans vos fichiers de gabarits de page.
 
 {: .notice .tip }
-J'ai mis en place un blog pour ma femme à l'aide de Gatsby avant de travailler
-sur ce site de documentation, j'avais donc un peu d'expérience dans l'utilisation
-des APIs de Gatsby. Mais je me considère encore comme un grand débutant dès qu'il
-s'agit de travailler avec GraphQL. Heureusement pour moi, les tutos de Gatsby et
-de la communauté sont excellents et répondent aux questions qu'on peut se poser,
-ainsi qu'à celles liées à l'utilisation globale.
+J'ai mis en place un blog pour ma femme à l'aide de Gatsby avant de travailler sur ce site de documentation, j'avais donc un peu d'expérience dans l'utilisation des APIs de Gatsby. Mais je me considère encore comme un grand débutant dès qu'il s'agit de travailler avec GraphQL. Heureusement pour moi, les tutos de Gatsby et de la communauté sont excellents et répondent aux questions qu'on peut se poser, ainsi qu'à celles liées à l'utilisation globale.
 
 À l'aide d'une seule requête GraphQL, j'ai été capable de récupérer toutes les entrées et les articles relatifs définis dans mon modèle de contenu dans Contentful pour la navigation. Grâce à l'efficacité de React et à un peu de GraphQL, j'ai été capable de créer une barre de menu latérale générée dynamiquement à partir du contenu récupéré depuis Contentful. Je dois dire que c'est un sentiment assez grisant de pouvoir créer du contenu statique à partir de données dynamiques de la sorte.
 
