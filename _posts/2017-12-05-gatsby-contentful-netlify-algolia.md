@@ -21,7 +21,7 @@ Si votre budget est serré et que vous ne voulez pas sacrifier l'expérience de 
 
 L'exemple que je vais couvrir ici est [le site de documentation][rollcalldocs] pour le principal logiciel édité par notre entreprise. Le site regroupe beaucoup de contenus avec des centaines d'articles.
 
-  [rollcalldocs]: http://rollcalldocs.netlify.com/ "Version beta"
+[rollcalldocs]: http://rollcalldocs.netlify.com/ "Version beta"
 
 La liste de pré-requis pour ce site est la suivante :
 
@@ -73,16 +73,11 @@ Après avoir installé le [plugin](https://www.gatsbyjs.org/packages/gatsby-sour
 Dès que vous lancez la commande `develop` ou `build` de Gatsby, le plugin va vérifier à l'aide de l'API de Contentful si de nouveaux contenus sont disponibles et les télécharger. Toutes ces données sont dès lors disponibles pour que vous puissiez faire vos requêtes dans votre environnement de développement. Cela veut dire que vous pouvez commencer à récupérer les assets et le contenu depuis Contentful (les assets comprennent les images et autres medias, le contenu désigne les pages, les articles, tous vos contenus texte et vos fichiers Markdown) à l'aide de requêtes GraphQL directement dans vos fichiers de gabarits de page.
 
 {: .notice .tip }
-J'ai mis en place un blog pour ma femme à l'aide de Gatsby avant de travailler
-sur ce site de documentation, j'avais donc un peu d'expérience dans l'utilisation
-des APIs de Gatsby. Mais je me considère encore comme un grand débutant dès qu'il
-s'agit de travailler avec GraphQL. Heureusement pour moi, les tutos de Gatsby et
-de la communauté sont excellents et répondent aux questions qu'on peut se poser,
-ainsi qu'à celles liées à l'utilisation globale.
+J'ai mis en place un blog pour ma femme à l'aide de Gatsby avant de travailler sur ce site de documentation, j'avais donc un peu d'expérience dans l'utilisation des APIs de Gatsby. Mais je me considère encore comme un grand débutant dès qu'il s'agit de travailler avec GraphQL. Heureusement pour moi, les tutos de Gatsby et de la communauté sont excellents et répondent aux questions qu'on peut se poser, ainsi qu'à celles liées à l'utilisation globale.
 
 À l'aide d'une seule requête GraphQL, j'ai été capable de récupérer toutes les entrées et les articles relatifs définis dans mon modèle de contenu dans Contentful pour la navigation. Grâce à l'efficacité de React et d'un peu de GraphQL, j'ai été capable de créer une barre de menu latérale générée dynamiquement à partir du contenu récupéré depuis Contentful. Je dois dire que c'est un sentiment assez grisant de pouvoir créer du contenu statique à partir de données dynamiques de la sorte.
 
-Les articles quant à eux sont écrits en Markdown dans l'éditeur de Contentful. Ils sont convertis en HTML à l'aide d'un plugin dans Gatsby. L'édition de contenus en Markdown est super pratique grâce à des fonctionnalités similaire à celles que l'on retrouve dans n'importe quel éditeur WYSIWYG. J'ai n'ai eu aucun retour négatif de mes collègues.
+Les articles quant à eux sont écrits en Markdown dans l'éditeur de Contentful. Ils sont convertis en HTML à l'aide d'un plugin dans Gatsby. L'édition de contenus en Markdown est super pratique grâce à des fonctionnalités similaires à celles que l'on retrouve dans n'importe quel éditeur WYSIWYG. J'ai n'ai eu aucun retour négatif de mes collègues.
 
 Un autre "problème" avec les sites statiques, c'est qu'ils n'embarquent pas une recherche par défaut. La plupart des solutions de recherche font appel à un serveur et à une base de données. Sur un site de documentation, les utilisateurs s'attendent à bénéficier d'une recherche efficace. Il existe quelques bibliothèques front-end uniquement en JavaScript (comme [lunr.js](https://lunrjs.com/)) qui vont prendre une requête et parcourir un index pré-construit au format JSON de votre contenu.
 
@@ -93,9 +88,9 @@ J'ai rapidement compris que cette approche n'aurait pas bien fonctionner dans no
 La solution s'est profilée petit à petit en testant et en échouant. Lors de mes périgrinations de développeur j'avais vu que pas mal de sites de documentation utilisaient Algolia en production. Je savais qu'ils proposent une formule gratuite (là aussi en faisant figurer leur logo) avec un nombre gratuit d'appels à l'API suffisant pour notre audience.
 Par contre je ne savais pas comment faire pour que tout mon contenu soit indexé proprement. La documentation d'Algolia est d'une grande aide en ce qui concerne l'indexation.
 
-Le plus difficile était de savoir comment morceler le contenu des articles en morceaux pour respecter les pré-requis de l'indexation. [La documentation d'Algolia](https://www.algolia.com/doc/guides/indexing/structuring-your-data/?language=php#indexing-long-documents) indique que les enregistrements de l'index ne doivent pas dépasser 10kb chacun, ce qui équivaut à peu près à un ou deux paragraphes. C'est devenu soudainement un défi de parcourir le contenu de mes articles par section. Il n'y avait pas d'exemple assez parlant à ma disposition pour savoir comme faire cela.
+Le plus difficile était de savoir comment éclater le contenu des articles en morceaux pour respecter les pré-requis de l'indexation. [La documentation d'Algolia](https://www.algolia.com/doc/guides/indexing/structuring-your-data/?language=php#indexing-long-documents) indique que les enregistrements de l'index ne doivent pas dépasser 10kb chacun, ce qui équivaut à peu près à un ou deux paragraphes. C'est devenu soudainement un défi de parcourir le contenu de mes articles par section. Il n'y avait pas d'exemple assez parlant à ma disposition pour savoir comme faire cela.
 
-J'ai fini par me tourner vers une bibliothèque HTML vers JSON qui transforme la hiérarchie de la page en objet JSON parcourable. J'ai ajouté un script sur l'évènement onPostBuild de l'API de Gatsby qui récupère le HTML généré de chaque article. La bibliothèque s'est occupé de transformé magiquement le HTML en JSON, je n'avais plus qu'à parcourir le JSON. Tout en gardant la trace du dernier niveau de titre lié (les balises `h`), j'ai défini le lien de page de l'enregistrement d'index en conséquence pour chaque section d'article. L'index est en suite transféré chez Algolia via leur client en node.js.
+J'ai fini par me tourner vers une bibliothèque HTML vers JSON qui transforme la hiérarchie de la page en objet JSON parcourable. J'ai ajouté un script sur l'évènement onPostBuild de l'API de Gatsby qui récupère le HTML généré de chaque article. La bibliothèque s'est occupée de transformer magiquement le HTML en JSON, je n'avais plus qu'à parcourir le JSON. Tout en gardant la trace du dernier niveau de titre lié (les balises `h`), j'ai défini le lien de page de l'enregistrement d'index en conséquence pour chaque section d'article. L'index est en suite transféré chez Algolia via leur client en node.js.
 
 C'était pas super propre, mais ça marchait.
 
@@ -149,7 +144,7 @@ Associé à votre site Gatsby, la performance du site est exceptionnelle. Que ce
 
 Pour boucler la boucle, nous avions besoin de pouvoir déclencher une nouvelle génération du site à chaque édition ou ajout de contenu depuis Contentful. Une fois de plus Contentful et Netlify disposent de tout ce qu'il faut.
 
-Contentful propose une fonctionnalité de webhook qui vous permet de déclencher une requête quand une action est effectuée sur un contenu ou qu'un contenu est créée. Parfait, à l'aide de ce hook Contentful va pouvoir indiquer à Netlify quand il y a un changement, et Netlify va générer le site et le déployer.
+Contentful propose une fonctionnalité de webhook qui vous permet de déclencher une requête quand une action est effectuée sur un contenu ou qu'un contenu est créé. Parfait, à l'aide de ce hook Contentful va pouvoir indiquer à Netlify quand il y a un changement, et Netlify va générer le site et le déployer.
 
 {% include figure.html url="/assets/images/bythebook/netlify-build-webhook.png" %}
 
