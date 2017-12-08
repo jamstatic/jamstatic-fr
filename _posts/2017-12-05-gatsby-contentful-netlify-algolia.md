@@ -5,7 +5,7 @@ description: >
 image: /assets/images/gatsby-contentful-netlify-algolia.jpg
 source:
   lang: en
-  title:
+  title: Gatsby + Contentful + Netlify (and Algolia)
   url: https://www.gatsbyjs.org/blog/2017-12-06-gatsby-plus-contentful-plus-netlify/
   author: Josh Weaver
 ---
