@@ -1,18 +1,18 @@
 ---
 title: Entretien avec Bud Parr, créateur de The New Dynamic
-date: "2017-11-27 08:45:36 +0100"
-author: Frank Taillandier
+date: 2017-11-27
 description: >
   Bud Parr, créateur et gérant de l'agence The New Dynamic, partage son expérience
   et sa vision sur l'écosystème actuel de la JAMstack
-image: https://github.com/budparr.png
+images:
+  - https://github.com/budparr.png
 source:
   lang: en
+  title: Interview with Bud Parr, JAMstack engineer
   url: https://www.thenewdynamic.org/article/interview-bud-parr/
-
 ---
 
-{: .intro }
+
 Bud Parr est impliqué dans la communauté qui gravite autour des générateurs de site
 statique depuis plusieurs années. Il possède [sa propre
 agence](https://www.thenewdynamic.com/) et agrège sa curation autour de
@@ -22,7 +22,7 @@ New-York](http://www.meetup.com/the-new-dynamic/) et il est également à
 l'origine du récent redesign du [site d'Hugo](https://gohugo.io/).
 Il a gentiment accepté de répondre à nos questions.
 
-{% include figure.html url="https://github.com/budparr.png" description="Bud Parr" %}
+{{< figure src="https://github.com/budparr.png" caption="Bud Parr" >}}
 
 ## Bonjour Bud, tu es un observateur et un défenseur de ce que beaucoup désignent encore comme de simples sites statiques. Comment les choses ont-elles évolué depuis quelques années ?
 

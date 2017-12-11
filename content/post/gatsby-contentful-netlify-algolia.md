@@ -1,16 +1,22 @@
 ---
 title: Gatsby + Contentful + Netlify et Algolia
+date: 2017-12-05
 description: >
   Retour d'expérience sur la mise en place d'un site statique à l'aide de Contentful, Gatsby, Algolia et Netlify pour une qualité et un coût défiant toute concurrence.
-image: /assets/images/gatsby-contentful-netlify-algolia.jpg
+images:
+  - /assets/images/gatsby-contentful-netlify-algolia.jpg
 source:
   lang: en
   title: Gatsby + Contentful + Netlify (and Algolia)
   url: https://www.gatsbyjs.org/blog/2017-12-06-gatsby-plus-contentful-plus-netlify/
   author: Josh Weaver
+categories:
+  - gatsby
+  - netlify
+tags:
+  - jamstack
 ---
 
-{: .intro }
 Le passage d'un CMS traditionnel comme WordPress à un processus moderne de développement faisant appel à différents services dans le Cloud et à des générateurs de site statique open source peut sembler encore risqué.
 C'est sans doute pour cela qu'une fois le pas franchi, vous avez immédiatemment envie de partager votre enthousiasme, afin de montrer que non seulement c'est possible, mais que ça peut se faire sans douleur et à moindre coût.
 Le témoignage de [Josh Weaver](https://twitter.com/3cordguy) sur la migration d'un site de documentation vient s'ajouter à la longue liste des heureux convertis à la [JAMstack](/2017/03/16/5-raisons-de-tester-la-jamstack/).
@@ -47,8 +53,9 @@ Okay, revenons aux problèmes posés par le statique.
 
 Notre site a beaucoup de contenus (environ 300 articles) qui ont besoin d'être maintenus par mes collègues, qui ne sont pas des développeurs. Nous avions donc besoin d'une interface accessible pour copier et modifier le contenu. Je voulais que ce soit aussi simple que de se connecter dans WordPress et pouvoir publier depuis l'outil, mais sans WordPress. L'expérience de rédaction ne pouvait donc pas se résumer à la création d'un fichier et à enregistrer les changements dans un dépôt Git.
 
-{: .notice .tip }
+{{% notice tip %}}
 Il existe un plugin [Gatsby-Source-Wordpress](https://www.gatsbyjs.org/packages/gatsby-source-wordpress/) qui récupère le contenu via l'API de Wordpress. Toutefois, en ce qui me concerne, ce n'était pas vraiment souhaitable car je voulais éviter d'avoir à héberger un CMS traditionnel.
+{{% /notice %}}
 
 Contentful est un CMS headless hébergé avec une expérience utilisateur fantastique. C'est comme avoir une interface comme WordPress, sauf que vous êtes entièrement responsable de la couche client. La beauté de Contentful est triple :
 
@@ -64,7 +71,7 @@ Maintenant que je vous ai fait ce petit topo, comment Contentful vient s'interfa
 
 Notre documentation est composée de 40 entrées et chaque entrée comporte plusieurs articles. Le gros challenge pour nous était de concevoir une navigation par entrée.
 
-{% include figure.html url="/assets/images/bythebook/rollcall-docs.png" %}
+{{< figure src="/assets/images/bythebook/rollcall-docs.png" >}}
 
 La façon dont Gastby gère les données permet de résoudre facilement ce genre de problèmatique car il est très simple de récupérer des données depuis des sources externes. Ce n'est pas le _seul_ générateur de site statique à faire cela - il existe aussi des plugins pour d'autres générateurs qui permettent de récupérer du contenu, mais je trouve l'insertion des données dans vos composants React et vos pages à l'aide de GraphQL très élégante.
 
@@ -72,8 +79,9 @@ Après avoir installé le [plugin](https://www.gatsbyjs.org/packages/gatsby-sour
 
 Dès que vous lancez la commande `develop` ou `build` de Gatsby, le plugin va vérifier à l'aide de l'API de Contentful si de nouveaux contenus sont disponibles et les télécharger. Toutes ces données sont dès lors disponibles pour que vous puissiez faire vos requêtes dans votre environnement de développement. Cela veut dire que vous pouvez commencer à récupérer les assets et le contenu depuis Contentful (les assets comprennent les images et autres medias, le contenu désigne les pages, les articles, tous vos contenus texte et vos fichiers Markdown) à l'aide de requêtes GraphQL directement dans vos fichiers de gabarits de page.
 
-{: .notice .tip }
+{{% notice tip %}}
 J'ai mis en place un blog pour ma femme à l'aide de Gatsby avant de travailler sur ce site de documentation, j'avais donc un peu d'expérience dans l'utilisation des APIs de Gatsby. Mais je me considère encore comme un grand débutant dès qu'il s'agit de travailler avec GraphQL. Heureusement pour moi, les tutos de Gatsby et de la communauté sont excellents et répondent aux questions qu'on peut se poser, ainsi qu'à celles liées à l'utilisation globale.
+{{% /notice %}}
 
 À l'aide d'une seule requête GraphQL, j'ai été capable de récupérer toutes les entrées et les articles relatifs définis dans mon modèle de contenu dans Contentful pour la navigation. Grâce à l'efficacité de React et à un peu de GraphQL, j'ai été capable de créer une barre de menu latérale générée dynamiquement à partir du contenu récupéré depuis Contentful. Je dois dire que c'est un sentiment assez grisant de pouvoir créer du contenu statique à partir de données dynamiques de la sorte.
 
@@ -102,8 +110,7 @@ Toutefois une fois que j'ai eu mis tout ça en place, il s'est avéré que j'ava
 
 L'ironie a voulu que je découvre [DocSearch](https://community.algolia.com/docsearch/) d'Algolia à ce moment-là. Et comme le ferait tout bon développeur, j'ai mis tout mon travail à la poubelle et je me suis inscrit sur DocSearch. Pour faire cours, DocSearch va crawler votre site toutes les 24 heures et mettre à jour l'index pour vous. Vous ajoutez une balise script qui relie votre champ de rechercher à leur API. Vous affinez les styles avec un peu de CSS et bim, c'est terminé.
 
-{% include figure.html url="/assets/images/bythebook/algolia-search.png"
-description="Algolia DocSearch FTW" %}
+{{< figure src="/assets/images/bythebook/algolia-search.png" caption="Algolia DocSearch FTW" >}}
 
 Et ça marchait bien mieux que mon implémentation. Je me suis senti tout bête d'avoir du fournir autant d'efforts pour rien car j'ai réalisé que la réponse était dans le [code source](https://github.com/reactjs/reactjs.org/search?utf8=%E2%9C%93&q=docsearch&type=) du dépôt de Reactjs.org. Ils utilisent DocSearch au lieu de construire leur propre indexation et leur propre interface de recherche. Très bien.
 
@@ -140,13 +147,13 @@ Netlify c'est le robot magique qui résout votre problème de déploiement et d'
 
 Associé à votre site Gatsby, la performance du site est exceptionnelle. Que ce soit la performance perçue ou la performance mesurée. Les temps d'obtention du premier byte sont de l'ordre de quelques millisecondes. Le découpage du code et les avantages de pré-téléchargement de Gatsby aident aussi à ce que votre site obtienne de bons scores aux tests de performances. Tout ça sans n'avoir rien à faire.
 
-{% include figure.html url="/assets/images/bythebook/webpage-test.png" %}
+{{< figure src="/assets/images/bythebook/webpage-test.png" >}}
 
 Pour boucler la boucle, nous avions besoin de pouvoir déclencher une nouvelle génération du site à chaque édition ou ajout de contenu depuis Contentful. Une fois de plus Contentful et Netlify disposent de tout ce qu'il faut.
 
 Contentful propose une fonctionnalité de _webhook_ qui vous permet de déclencher une requête quand une action est effectuée sur un contenu ou qu'un contenu est crée. Parfait, à l'aide de ce hook Contentful va pouvoir indiquer à Netlify quand il y a un changement, et Netlify va générer le site et le déployer.
 
-{% include figure.html url="/assets/images/bythebook/netlify-build-webhook.png" %}
+{{< figure src="/assets/images/bythebook/netlify-build-webhook.png" >}}
 
 C'est l'association rêvée au paradis de la JAMstack.
 

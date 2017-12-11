@@ -30,22 +30,22 @@ Nous vous invitons à vous reporter à la [documentation officielle sur la gesti
 
 Deux nouveaux filtres font leur apparition pour simplifier la gestion des URLs dans vos templates. Fini de vous emmêler les pinceaux avec `baseurl` et `url`. Lorsque vous développez en local, si vous définissez la valeur de `baseurl` afin qu'elle corresponde à votre environnement de développement, mettons par exemple `baseurl: "/mondossier"`, le filtre `relative_url` se chargera de préfixer cette valeur pour toutes les URLs que vous appelerez :
 
-{{< highlight liquid >}}
+```liquid
 {{ "/docs/assets/" | relative_url }} => /mondossier/docs/assets
-{{< / highlight >}}
+```
 
 Par défaut, `baseurl` est défini à `""` et sera remplacé tel quel (ne définissez jamais cette valeur à `"/"`):
 
-{{< highlight liquid >}}
+```liquid
 {{ "/docs/assets/" | relative_url }} => /docs/assets
-{{< / highlight >}}
+```
 
 Le résultat d'un appel à `relative_url` produira toujours une URL relative au domaine racine.
 Le même principe s'applique au filtre `absolute_url`, il ajoute les valeurs définies dans `baseurl` et `url` et facilite ainsi la création d'URLs absolues :
 
-{{< highlight liquid >}}
+```liquid
 {{ "/docs/assets/" | absolute_url }} => http://jamstatic.fr/mondossier/docs/assets
-{{< / highlight >}}
+```
 
 ## `site.url` est maintenant défini pour le serveur de développement
 
