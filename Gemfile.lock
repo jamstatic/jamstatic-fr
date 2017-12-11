@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/jekyll/jekyll-seo-tag
-  revision: 47259715f7a8c272f0fc8b9cdfe0de8738ac35eb
+  revision: b480dde068f5055145b608caae5d8e6cafa2844e
   specs:
-    jekyll-seo-tag (2.3.0)
+    jekyll-seo-tag (2.4.0)
       jekyll (~> 3.3)
 
 GEM
