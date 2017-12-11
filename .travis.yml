@@ -1,5 +1,5 @@
 language: go
-
+group: travis_latest
 go:
   - master # This uses automatically the latest version of go
 
