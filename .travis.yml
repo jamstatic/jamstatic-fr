@@ -1,0 +1,10 @@
+language: go
+
+go:
+  - master # This uses automatically the latest version of go
+
+install:
+  - go get github.com/gohugoio/hugo
+
+script:
+  - hugo
