@@ -14,7 +14,7 @@ group :jekyll_plugins do
   gem "jekyll-mentions"
   gem "jekyll-octicons"
   gem "jekyll-paginate"
-  gem "jekyll-seo-tag", :git => "https://github.com/jekyll/jekyll-seo-tag"
+  gem "jekyll-seo-tag"
   gem "jekyll-sitemap"
   gem "jekyll-tidy"
   gem "jekyll-typogrify"
