@@ -5,17 +5,17 @@ backend:
 
 publish_mode: editorial_workflow
 
-media_folder: "assets/images"
+media_folder: "static/assets/images"
+public_folder: "/assets/images/"
 
 collections:
-  - name: "Articles"
-    label: "Articles"
-    folder: "_posts"
+  - name: "Article"
+    label: "Article"
+    folder: "content/post"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: # The fields for each document, usually in front matter
       - {label: "Titre", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Auteur", name: "author", widget: "string"}
-      - {label: "Twitter Card", name: "image", widget: "image"}
+      - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Texte", name: "body", widget: "markdown"}
