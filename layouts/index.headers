@@ -12,5 +12,5 @@
     X-Content-Type-Options: nosniff
     Referrer-Policy: origin-when-cross-origin
   */
-    Link: <{{ "assets/js/" | relURL }}>; rel=preload; as=script
+    Link: <{{ "assets/js/anchor.min.js" | relURL }}>; rel=preload; as=script
     Link: <{{ "assets/css/main.css" | relURL }}>; rel=preload; as=style
