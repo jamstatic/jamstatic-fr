@@ -11,7 +11,7 @@
         {{ with .Params.categories }}
           {{ if ge (len .) 1 }}
             • {{ range . }}
-                <a href="{{ printf "categories/%s" (. | urlize) | absURL }}">{{ . }}</a>
+                <a href="{{ printf "categories/%s" (. | urlize) | absURL }}">{{ . }}</a>,
               {{ end }}
           {{ end }}
         {{ end}}
