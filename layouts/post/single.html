@@ -4,17 +4,11 @@
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">{{ .Title }}</h1>
       <p class="post-meta">
-        <time datetime="{{ .Date }}" itemprop="datePublished">
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}" itemprop="datePublished">
           {{ $mymonths := .Site.Data.mois }}
           {{ .Date.Day }} {{ index $mymonths (printf "%d" .Date.Month) }} {{ .Date.Year }}
         </time>
-        {{ with .Params.categories }}
-          {{ if ge (len .) 1 }}
-            • {{ range . }}
-                <a href="{{ printf "categories/%s" (. | urlize) | absURL }}">{{ . }}</a>,
-              {{ end }}
-          {{ end }}
-        {{ end}}
+        • {{ range $index, $category := .Params.categories }}{{ if $index }}, {{ end }}<a href="{{ "categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
         • <span aria-label="Temps de lecture">{{ .ReadingTime }} min</span>
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
             <span itemprop="name">
@@ -27,10 +21,12 @@
 
     <div class="post-content" itemprop="articleBody">
 
-      {{ if .Params.Source.Title }}
+      {{ with .Params.Source }}
+        {{ if and .url .title }}
         <p class="notice info">
-        <em>Article original : <a href="{{ .Params.Source.Url }}">{{ .Params.Source.Title }}</a></em>
+          <em>Article original : <a href="{{ .url }}">{{ .title }}</a></em>
         </p>
+        {{ end }}
       {{ end }}
 
       {{ .Content }}
