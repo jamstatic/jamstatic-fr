@@ -1,3 +1,4 @@
+---
 title: "{{ replace .TranslationBaseName "-" " " | humanize }}"
 date: {{ .Date }}
 lastmod:
@@ -12,3 +13,4 @@ source:
   - author:
   - title: ""
   - url:
+---
