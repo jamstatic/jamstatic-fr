@@ -45,5 +45,3 @@ Listes de CMS headless :
 
 * [https://headlesscms.org/](https://headlesscms.org/)
 * [Tools: Headless CMS (The New Dynamic)](https://www.thenewdynamic.org/tools/content-management/headless-cms/)
-
-*[CDN]: Content Delivery Network
