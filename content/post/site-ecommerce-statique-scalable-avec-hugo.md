@@ -1,5 +1,5 @@
 ---
-title: "Un site e-commerce extensible avec Hugo"
+title: "Un site e-commerce statique et extensible avec Hugo"
 description: "Les générateurs de site statique sont-ils une solution viable pour les sites de vente en ligne qui encaissent de fortes charges de trafic ?"
 date: 2017-12-13T13:10:36+01:00
 categories:
@@ -11,6 +11,8 @@ source:
   title: "Scalable Static Ecommerce with Hugo"
   url: "https://medium.com/@GYMarshy/scalable-static-ecommerce-with-hugo-fa1382781f4c"
   lang: "en"
+aliases:
+  - /2017/12/13/site-ecommerce-scalable-avec-hugo/
 ---
 
 > Les générateurs de site statique sont-ils une solution viable pour les sites de vente en ligne qui encaissent de fortes charges de trafic ?
