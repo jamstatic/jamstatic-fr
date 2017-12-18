@@ -53,4 +53,4 @@ params:
     twitter: jamstatic_fr
     GitHub: jamstatic
   ghrepo: https://github.com/jamstatic/jamstatic-fr/
-  branch: hugo
+  branch: master
