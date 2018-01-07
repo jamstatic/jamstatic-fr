@@ -10,7 +10,7 @@ categories:
 images:
   - /assets/images/{{ dateFormat "2006" .Date }}/{{ dateFormat "01" .Date }}/
 source:
-  - author:
-  - title: ""
-  - url:
+  author: ""
+  title: ""
+  url: ""
 ---
