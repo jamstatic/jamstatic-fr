@@ -1,5 +1,6 @@
 ---
 title: "Netlify en 10 fonctionnalités"
+description: "Déployez et hébergez gratuitement vos sites statiques comme les pros : CDN, HTTPS, CI, environnements de build, formulaires, tests A/B, et bien plus."
 date: 2018-01-07T21:05:43+01:00
 categories:
   - netlify
