@@ -32,11 +32,11 @@ $line-height-computed: $base-em * $line-height-base;
 $base-line: $line-height-computed;
 
 // Width of the content area
-$content-width: 66.24rem;
+$content-width: 66.247rem;
 
 // Breakpoints
-$on-tablet: 46.005em;
-$on-desktop: 79.49em;
+$on-tablet: 46.005rem;
+$on-desktop: 67.975rem; // content-with + ms3
 
 // Colors
 $text-color: #111;

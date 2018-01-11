@@ -153,18 +153,10 @@ body {
   list-style: none;
 
   > li {
-    margin-bottom: $spacing-unit;
     line-height: 1.1;
-    min-height: 6.192em;
-    border-bottom: 0.0279em solid $grey;
-  }
-}
-
-@include media-query($on-tablet) {
-  .post-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1em;
+    padding-bottom: $spacing-unit/2;
+    margin-bottom: $spacing-unit/2;
+    border-bottom: 0.0134em solid $grey;
   }
 }
 
@@ -185,6 +177,28 @@ body {
 
   &:hover {
     text-decoration: none;
+  }
+}
+
+@include media-query($on-tablet) {
+  .post-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+
+    > li {
+      padding-bottom: $spacing-unit;
+    }
+  }
+
+  .post-link {
+    font-size: $big;
+  }
+}
+
+@include media-query($on-desktop) {
+  .post-list {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
