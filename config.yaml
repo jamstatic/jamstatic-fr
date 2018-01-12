@@ -54,3 +54,18 @@ params:
     GitHub: jamstatic
   ghrepo: https://github.com/jamstatic/jamstatic-fr/
   branch: master
+
+related:
+  threshold: 80
+  includeNewer: true
+  toLower: false
+  indices:
+    - name: "categories"
+      weight: 80
+    - name: "tags"
+      weight: 80
+    - name: "keywords"
+      weight: 80
+    - name : "date"
+      weight: 10
+      pattern: "2006"
