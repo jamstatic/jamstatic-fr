@@ -11,6 +11,7 @@ categories:
   - jekyll
   - netlify
   - cms
+  - headless
 ---
 
 {{% intro %}}

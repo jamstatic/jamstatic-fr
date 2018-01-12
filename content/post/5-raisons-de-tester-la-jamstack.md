@@ -9,8 +9,9 @@ source:
   url: https://builtvisible.com/go-static-try-jamstack/
 images:
   - /assets/images/2017/03/go_static.jpg
-tags:
+categories:
   - jamstack
+  - headless
 ---
 
 {{% intro %}}

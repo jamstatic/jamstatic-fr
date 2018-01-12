@@ -4,6 +4,7 @@ date: 2017-12-15T16:40:50+01:00
 description: Le rôle d'un CMS headless est de confier le stockage et l'édition des contenus à un service dédié
 categories:
   - cms
+  - headless
 images:
   - /assets/images/2017/12/headless-cms-logos.png
 ---
@@ -28,13 +29,13 @@ Quoi qu'il en soit dans les deux cas, le CMS headless ne s'occupe que de la part
 
 Si vous suivez de près ce qui se passe autour des architecures JAMstack, vous n'aurez pas manquer de constater que des CMS headless il y en a de plus en plus, et ce n'est pas prêt de s'arrêter vu la popularité croissante des architectures découplées, et de tous ces termes à la mode comme "microservices" ou "serverless" qui désignent des choses bien plus spécifiques.
 
-L'équipe de rédaction de Smashing Magazine édite principalement un site web et l'utlisation de [Netlify CMS](https://www.netlifycms.org/) - dont la v1.0 vient de sortir - suffit à leur besoin. Même si les rédacteurs évoluent dans les métiers du Web, une interface de rédaction et un éditeur visuel sont toujours appréciables et évitent quelques manipulations techniques. 
+L'équipe de rédaction de Smashing Magazine édite principalement un site web et l'utlisation de [Netlify CMS](https://www.netlifycms.org/) - dont la v1.0 vient de sortir - suffit à leur besoin. Même si les rédacteurs évoluent dans les métiers du Web, une interface de rédaction et un éditeur visuel sont toujours appréciables et évitent quelques manipulations techniques.
 
 Passer au statique ne veut pas dire, devoir tout faire en ligne de commande, au contraire, tout ce beau monde doit pouvoir interagir et ce de façon automatisée et sûre.
 
 Si jamais cela peut vous rassurer, Contentful, un des acteurs majeurs du marché [vient de lever 28 millions de dollars](https://www.contentful.com/blog/2017/12/04/contentful-series-c/) tout comme [Algolia](https://blog.algolia.com/redefining-incredible-search/) ou [Netlify](https://www.netlify.com/blog/2017/08/09/netlify-raises-12m-from-a16z/) avant eux, signe que ce type de solutions ont encore de beaux jours devant elles. Les services de qualité qui proposent des APIs ont la côte (ouest en tout cas).
 
-> If software is eating the world, SaaS APIs are eating the development world. 
+> If software is eating the world, SaaS APIs are eating the development world.
 
 Voilà maintenant vous savez ce qui se cache derrière cet énième anglicisme barbare - un découpage fonctionnel des responsabilités des fonctions d'édition, de stockage et d'export des données - et que vous serez un peu plus éclairé la prochaine fois que vous devrez réfléchir à moderniser votre workflow de publication.
 
