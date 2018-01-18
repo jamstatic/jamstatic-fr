@@ -252,6 +252,11 @@ body {
   &.tip {
     background-color: #ffed7f;
     border-color: #feda00;
+
+    code {
+      background-color: #feda00;
+      border-color: #feda00;
+    }
   }
 
   &.update {
