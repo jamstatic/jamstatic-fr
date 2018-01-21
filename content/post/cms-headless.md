@@ -39,8 +39,9 @@ Si jamais cela peut vous rassurer, Contentful, un des acteurs majeurs du marché
 
 Voilà maintenant vous savez ce qui se cache derrière cet énième anglicisme barbare - un découpage fonctionnel des responsabilités des fonctions d'édition, de stockage et d'export des données - et que vous serez un peu plus éclairé la prochaine fois que vous devrez réfléchir à moderniser votre workflow de publication.
 
-Si vous voulez allez un peu plus loin, voici quelques articles en anglais sur le sujet :
+Quelques articles en anglais pour approfondir le sujet :
 
+* [Le guide ultime du CMS headless de Kentico (PDF, Epub)](https://kenticocloud.com/headless-cms-guide)
 * [Les bénéfices d'un CMS headless (Forbes)](https://www.forbes.com/sites/forbestechcouncil/2017/11/22/the-benefits-of-a-headless-cms/#3447e5422d85)
 * [C'est quoi un CMS headless ? (CSS Tricks)](https://css-tricks.com/what-is-a-headless-cms/)
 * [CMS headless découplé (Contentful)](https://www.contentful.com/r/knowledgebase/headless-and-decoupled-cms/)
