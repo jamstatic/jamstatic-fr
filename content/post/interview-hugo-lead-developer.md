@@ -95,7 +95,7 @@ vous-même.
 ## Quels sont les sites les plus visibles qui utilisent Hugo&nbsp;?
 
 {{< figure
-src="https://thenewdynamic.imgix.net/showcase-labs-us-gov-hugo.jpg?w=700"
+src="https://thenewdynamic.imgix.net/showcase/labs-us-gov-hugo.jpg?w=700"
 attrlink="https://labs.usa.gov" attr="https://labs.usa.gov/" >}}
 
 Parmi les sites que je connais et que j'aime bien il y a
