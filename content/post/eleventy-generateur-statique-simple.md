@@ -171,6 +171,6 @@ Ah c'est bien mieux. Ça marche nickel.
 
 ### Pour résumer
 
-J'espère que vous vous rendez compte de l'avantage d'utiliser des moteurs de rendu et un générateur de site statique pour vos sites web. Nous verrons prochainement comment utiliser un générateur de site statique avec plusieurs gabartis de mise en page. Plus précisements, comment séparer vos modèles de fichiers HTML et votre contenu et comment utiliser des fichiers de données externes (qui s'accomodent très bien avec du front matter pour générer facilement vos données au travers de plusieurs gabarits de page).
+J'espère que vous vous rendez compte de l'avantage d'utiliser des moteurs de rendu et un générateur de site statique pour vos sites web. Nous verrons prochainement comment utiliser un générateur de site statique avec plusieurs gabartis de mise en page. Plus précisement, comment séparer vos modèles de fichiers HTML et votre contenu et comment utiliser des fichiers de données externes (qui s'accomodent très bien avec du front matter pour générer facilement vos données au travers de plusieurs gabarits de page).
 
 À suivre donc…
