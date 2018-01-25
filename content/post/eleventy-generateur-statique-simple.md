@@ -13,7 +13,7 @@ source:
 {{% intro %}}
 Il existe des centaines de générateurs de site statique et il en arrive toujours de nouveaux. Après avoir longtemps utilisé Jekyll, [Zach Leat](https://www.zachleat.com/web/), développeur front-end chez [Filament Group](https://www.filamentgroup.com/), a décidé de s'inspirer des principes de Jekyll pour les porter et les étendre grâce à l'écosystème de `npm` qu'il manipule au quotidien.
 
-Ce nouveau générateur vise donc les développeurs front end et se propose d'allier la simplicité du langage de templating [Liquid](https://shopify.github.io/liquid/) et la puissance de `npm`. Zach nous propose un premier aperçu de son fonctionnement.
+Ce nouveau générateur vise donc les développeurs front end et leur donne le choix du langage de templating ([Liquid](https://shopify.github.io/liquid/) par défaut comme dans Jekyll et aussi [tout plein d'autres qu'on peut mélanger à loisir](https://github.com/11ty/eleventy/#eleventy-) bien connus des développeurs JS) tout en leur offrant la puissance de `npm`. Zach nous propose un premier aperçu de son fonctionnement.
 {{% /intro %}}
 
 Voici [Eleventy](https://github.com/11ty/eleventy/), le générateur de site statique le plus simple et le plus intuitif. Avec Eleventy, vous pouvez généréer des sites à partir de données de manière simple et rapide — et vous concentrer sur un contenu facile à maintenir, conçu pour durer longtemps. **Faites en sorte que votre site dure 10 ans, pas 10 mois.**
