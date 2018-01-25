@@ -138,7 +138,7 @@ images:
 
 Nous avons ajouté le titre du site (utilisé à deux endroits) ainsi que la liste des images dans notre front matter.
 
-Par défaut dans Eleventy, le moteur du rendu `liquid` est disponible pour les fichiers HTML et les fichiers Markdown. Eleventy supporte une large gamme de moteur de rendu (jetez un œeil sur [la liste complète](https://github.com/11ty/eleventy/#eleventy-)) qui sont disponibles lorsque vous utilisez une extension de fichier spécifique. Par exemple notre fichiers `index.html` aurait pu s'appeler `index.liquid` et le fonctionnement aurait été le même :
+Par défaut dans Eleventy, le moteur du rendu `liquid` est disponible pour les fichiers HTML et les fichiers Markdown. Eleventy supporte une large gamme de moteur de rendu (jetez un œil sur [la liste complète](https://github.com/11ty/eleventy/#eleventy-)) qui sont disponibles lorsque vous utilisez une extension de fichier spécifique. Par exemple notre fichiers `index.html` aurait pu s'appeler `index.liquid` et le fonctionnement aurait été le même :
 
 ```
 ~/giffleball $ mv index.html index.liquid
