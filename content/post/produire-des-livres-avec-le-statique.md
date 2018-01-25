@@ -5,13 +5,17 @@ author: Antoine Fauchié
 date: 2017-01-23 15:37:00
 images:
   - https://blogs.getty.edu/iris/files/2016/05/eric_ruth_greg_1009_1200.jpg
+source:
+  url: https://www.thenewdynamic.org/article/2017/01/26/interview-with-eric-gardner-getty/
+  title:  Interview with Eric Gardner, Getty Publications
+
 ---
 
 {{% intro %}}
 Suite à la parution du [procédé de publication numérique basé sur Git et Middleman](http://blogs.getty.edu/iris/an-editors-view-of-digital-publishing/) d'un éditeur, [Antoine Fauchié](https://www.quaternum.net/) est allé poser quelques questions à [Eric Gardner](http://egardner.github.io/), développeur et designer au sein de l'équipe d'édition numérique de [The Getty](https://getty.edu/), un campus culturel et de recherche situé à Los Angeles.
 {{% /intro %}}
 
-![Ancient Terracottas Book Cover](https://thenewdynamic.imgix.net/getty-museum-ancient-terracottas-1600.jpg?w=785)
+{{< figure src="https://thenewdynamic.imgix.net/getty-museum-ancient-terracottas-1600.jpg?w=785" caption="" attr="" attrlink="" >}}
 
 ### Comment et pourquoi en êtes vous arrivés à choisir un générateur de site statique comme clé de voûte de votre processus de publication aux éditions The Getty ? Pourquoi ne pas avoir opté pour un développement natif&nbsp;?
 
@@ -48,10 +52,6 @@ Tout à l'heure j'ai dit que le fait de configurer un environnement de développ
 ### Est-ce que tu penses que d'autres maisons d'édition vont adopter à leur tour cette stratégie avec des générateurs de site statique (pas de WYSIWYG, un balisage léger, pas de base de données, des métadonnées YAML, versionnement avec Git, etc.) ? Est-ce qu'un courant pourrait se former autour de ce concept ?
 
 Des collègues qui travaillent pour d'autres musées m'ont fait part de leur interêt. Pour le moment, je ne pense pas que quelqu'un ait publié un livre à l'aide de ce procédé, mais j'espère bien que ça changera bientôt. Une fois que nous aurons un peu affiné notre procédé, je prévois de faire un peu plus d'"évangélisation" 😉
-
-[English version published on the New Dynamic](https://www.thenewdynamic.org/article/2017/01/26/interview-with-eric-gardner-getty/)
-
----
 
 [^1]: NdT: Des éditeurs comme Sublime ou Atom sont aussi puissants et encore plus accessibles.
 [^2]: NdT: Le projet [GitBook](https://www.gitbook.com) adopte cette démarche.
