@@ -42,6 +42,7 @@ outputFormats:
     notAlternative: true
 
 params:
+  title: Jamstastic
   description: L'actualité autour des générateurs de site statique et de la JAMStack
   email: contact@jamstatic.fr
   author:
@@ -54,6 +55,8 @@ params:
     GitHub: jamstatic
   ghrepo: https://github.com/jamstatic/jamstatic-fr/
   branch: master
+  images:
+    - "assets/images/jamstatic-card.png"
 
 related:
   threshold: 80

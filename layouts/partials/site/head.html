@@ -7,13 +7,12 @@
 <link rel="preload" href="{{ "fonts/mopen-sans-v15-latin-800.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{ "fonts/roboto-v18-latin-regular.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{ "fonts/roboto-v18-latin-800.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
-<title>{{ block "title" . }}{{ with .Title }}{{ . }} · {{ end }}{{ .Site.Title }}{{ end }}</title>
+<title>{{ block "title" . }}{{ if .IsHome }}{{ .Site.Params.Description }} · {{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} · {{ end }}{{ .Site.Title }}{{ end }}{{ end }}</title>
 {{ .Hugo.Generator }}
 <link rel="stylesheet" href="{{ "assets/css/main.css" | relURL }}">
 <link rel="alternate" href="{{ .Site.RSSLink | relURL }}" title="{{ .Site.Title }}" type="application/atom+xml">
 <link rel="alternate" href="{{ "feed.json" | relURL }}" title="{{ .Site.Title }}" type="application/json">
 <link rel="canonical" href="{{ .Permalink }}">
-
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
 {{- partialCached "head/favicons.html" . -}}
