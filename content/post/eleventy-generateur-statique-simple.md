@@ -3,18 +3,22 @@ title: "Un site web simple avec le plus simple des générateurs de site statiqu
 date: 2018-01-24T20:40:44+01:00
 description: "Présentation d'Eleventy, le générateur de site statique le plus simple et le plus intuitif."
 images:
-  - /assets/images/2018/01/bird.jpg
+  - https://cdn-images-1.medium.com/max/800/1*u1v8ojapeWAgL2xjaJZ5rA.png
 source:
   author: "Zach Leat"
   title: "Making a Simple Web Site with the Simplest Static Site Generator, Level 1"
   url: "https://medium.com/@11ty/making-a-simple-web-site-with-the-simplest-static-site-generator-level-1-7fc6febca1"
 ---
 
+
+
 {{% intro %}}
 Il existe des centaines de générateurs de site statique et il en arrive toujours de nouveaux. Après avoir longtemps utilisé Jekyll, [Zach Leat](https://www.zachleat.com/web/), développeur front-end chez [Filament Group](https://www.filamentgroup.com/), a décidé de s'inspirer des principes de Jekyll pour les porter et les étendre grâce à l'écosystème de `npm` qu'il manipule au quotidien.
 
 Ce nouveau générateur vise donc les développeurs front end et leur donne le choix du langage de templating ([Liquid](https://shopify.github.io/liquid/) par défaut comme dans Jekyll et aussi [tout plein d'autres qu'on peut mélanger à loisir](https://github.com/11ty/eleventy/#eleventy-) bien connus des développeurs JS) tout en leur offrant la puissance de `npm`. Zach nous propose un premier aperçu de son fonctionnement.
 {{% /intro %}}
+
+{{< figure src="https://cdn-images-1.medium.com/max/800/1*u1v8ojapeWAgL2xjaJZ5rA.png" caption="" attr="Credits: https://unsplash.com/@jogi" attrlink="https://unsplash.com/photos/uCsJqqtkDps" >}}
 
 Voici [Eleventy](https://github.com/11ty/eleventy/), le générateur de site statique le plus simple et le plus intuitif. Avec Eleventy, vous pouvez généréer des sites à partir de données de manière simple et rapide — et vous concentrer sur un contenu facile à maintenir, conçu pour durer longtemps. **Faites en sorte que votre site dure 10 ans, pas 10 mois.**
 
@@ -31,7 +35,7 @@ Voici [Eleventy](https://github.com/11ty/eleventy/), le générateur de site sta
 Faisons un site web pour notre collection d'images GIF. Une interface pour notre propre domaine [bukk.it](https://bukk.it/).
 Appelons-ça _Giffleball_.
 
-{{% notice info %}}Le code source final de ce tutoriel est [disponible sur GitHub](https://github.com/11ty/giffleball).{{% /notice %}}
+{{% notice info %}}Le code source de la première partie de ce tutoriel est [disponible sur GitHub](https://github.com/11ty/giffleball).{{% /notice %}}
 
 #### Création des fichiers
 
@@ -169,8 +173,174 @@ L'utilisation d'un moteur de rendu présente plusieurs avantages :
 
 Ah c'est bien mieux. Ça marche nickel.
 
-### Pour résumer
+J'espère que vous vous rendez compte de l'avantage d'utiliser des moteurs de rendu et un générateur de site statique pour vos sites web.
 
-J'espère que vous vous rendez compte de l'avantage d'utiliser des moteurs de rendu et un générateur de site statique pour vos sites web. Nous verrons prochainement comment utiliser un générateur de site statique avec plusieurs gabartis de mise en page. Plus précisement, comment séparer vos modèles de fichiers HTML et votre contenu et comment utiliser des fichiers de données externes (qui s'accomodent très bien avec du front matter pour générer facilement vos données au travers de plusieurs gabarits de page).
+{{% notice info %}}Le code source de la deusième partie de ce tutoriel est [disponible sur GitHub](https://github.com/11ty/giffleball/tree/level-2).{{% /notice %}}
 
-À suivre donc…
+### Ajoutons un filtre
+
+Faisons un truc plus compliqué. Affichons la taille de chacune des images GIF à côté de leur lien. Nous pouvons faire ça à l'aide d'un filtre. Les filtres d'ajoutent dans le fichier de configuration - un fichier `.eleventy.js` — créons en un. Il devrait ressembler à ça :
+
+```js
+module.exports = (function(eleventyConfig) {
+
+});
+```
+
+Si vous ne le nommez pas `.eleventy.js`, chaque fois que vous allez lancer la commande `eleventy` il faudra lui passer le nom du fichier de configuration en option à l'aide de `--config=maConfig.js`. C'est bien plus simple de s'en tenir au nom par défaut.
+
+Ajoutons notre filtre à l'aide de la méthode `.addFilter`. Appelons-le `filesize` et commençons par lui faire retourner un texte tout bête :
+
+```js
+module.exports = (function(eleventyConfig) {
+ eleventyConfig.addFilter("filesize", function(path) {
+  return "0 KB";
+ });
+});
+```
+
+Bien entendu, notre filtre n'est pas bon car nous nous contentons de retourner `"0 KB"` à chaque fois. Mais vérifions d'abord qu'il marche.
+
+Ouvrons notre modèle `index.html` et regardons à quoi ressemble notre boucle pour le moment :
+
+```html
+<ul>
+{% for filename in images %}
+ <li><a href="img/{{ filename | url_encode }}">{{ filename }}</a></li>
+{% endfor %}
+</ul>
+```
+
+Vous avez fait attention à comment on a utilisé le filtre natif `url_encode` fourni par le moteur de rendu Liquid ? Maintenant que nous avons crée le notre, ajoutons un appel à notre petit filtre maison, comme ceci :
+
+```html
+<ul>
+{% for filename in images %}
+{% capture path %}img/{{ filename }}{% endcapture %}
+ <li><a href="img/{{ filename | url_encode }}">{{ filename }}</a> {{ path | filesize }}</li>
+{% endfor %}
+</ul>
+```
+
+Bien entendu, la magie a lieu dans `{{ path | filesize }}`. Mais notez comment nous utilisons la balise `{% capture %}` de Liquid pour créer une nouvelle variable `path` avec Liquid, que nous passons ensuite à notre filtre.
+
+Maintenant, lançons `eleventy` pour générer les fichiers.
+
+```sh
+~/giffleball $ eleventy --formats=html,gif,jpg
+Writing _site/index.html from ./index.html.
+Wrote 1 file in 0.07 seconds
+```
+
+Cela va générer le code suivant dans le fichier `_site/index.html` (ici nous ne montronas que le rendu de la liste et pas le fichier HTML entier pour faire court):
+
+```html
+
+<ul>
+
+<li><a href="img/%3F%3F%3F.jpg">???.jpg</a> 0 KB</li>
+
+<li><a href="img/%E2%80%A6.jpg">….jpg</a> 0 KB</li>
+
+<li><a href="img/parrot.gif">parrot.gif</a> 0 KB</li>
+
+</ul>
+
+```
+
+OK, c'est presque ça — mais c'est quoi tous ces espacements ? *(Notez que c'est une question purement rhetorique à laquelle je vais m'empresser de répondre tout de suite.)*
+Lors du traitement des modèles, Liquid ne supprime pas les retours a la ligne et les espaces autours des balises Liquid. Heureusement pour nous, Liquid fournit un outil pour contrôler ces espacements. Il faut utiliser `{%-` à la place de `{%` pour supprimer l'espacement avant la balise Liquid. Et indépendamment on peut aussi utiliser `-%}` à la place de  `%}` à la fin pour supprimer l'espace après la balise Liquid. L'un ou l'autre. Les deux. Personellement je trouve que ça rend mieux avec juste `{%-` au début. Il est important pour moi d'avoir une vue du code source qui soit propre, alors nettoyons tout ça :
+
+```liquid
+<ul>
+ {%- for filename in images %}
+ {%- capture path %}img/{{ filename }}{% endcapture %}
+ <li><a href="img/{{ filename | url_encode }}">{{ filename }}</a> {{ path | filesize }}</li>
+ {%- endfor %}
+</ul>
+```
+
+Ce qui produit :
+
+```html
+<ul>
+ <li><a href="img/%3F%3F%3F.jpg">???.jpg</a> 0 KB</li>
+ <li><a href="img/%E2%80%A6.jpg">….jpg</a> 0 KB</li>
+ <li><a href="img/parrot.gif">parrot.gif</a> 0 KB</li>
+</ul>
+```
+
+Magnifique.
+
+### C'est encore un peu tôt pour nous réjouir, notre filtre n'est pas fini
+
+OK, faisons en sorte que notre filtre serve à quelque chose plutôt que de simplement retourner systèmatiquement
+`"0 KB"`. Modifiez votre fichier `.eleventy.js` comme ceci :
+
+```js
+const fs = require("fs");
+
+module.exports = (function(eleventyConfig) {
+ eleventyConfig.addFilter("filesize", function(path) {
+ let stat = fs.statSync(path);
+ if( stat ) {
+ return (stat.size/1024).toFixed(2) + " KB";
+ }
+ return
+                                  "";
+ });
+});
+```
+
+C'est la manière la plus simple de le faire marcher, ça n'ajoute aucune nouvelle dépendance lors d'un `npm install`.
+
+### Allons plus loin à l'aide de NPM
+
+Un des gros avantages d'Eleventy sur d'autres générateurs de site statique comme Jekyll ou Hugo, c'est l'accès à tout l'écosystème de NPM. Il y a tellement d'excellents modules. Si vous êtes assez courageux pour jouer avec `npm`, lancez cette commande pour générer un fichier `package.json` pour notre projet :
+
+```
+~/giffleball $ npm init -f
+```
+
+Nous pouvons maintenant installer des modules cools à notre projet, comme [file-size pour des tailles de fichiers plus lisibles](https://www.npmjs.com/package/file-size).
+
+```
+~/giffleball $ npm install --save file-size
++ file-size@1.0.0
+added 1 package in 1.491s
+```
+
+Utlisons-le pour coder notre filtrer dans le fichier `.eleventy.js`:
+
+```js
+const fs = require("fs");
+const filesize = require("file-size");
+
+module.exports = (function(eleventyConfig) {
+ eleventyConfig.addFilter("filesize", function(path) {
+  let stat = fs.statSync(path);
+  if( stat ) {
+   return filesize(stat.size).human();
+  }
+  return "";
+ });
+});
+```
+
+Ce qui nous donne :
+
+```html
+<ul>
+ <li><a href="img/%3F%3F%3F.jpg">???.jpg</a> 44.52 KiB</li>
+ <li><a href="img/%E2%80%A6.jpg">….jpg</a> 55.39 KiB</li>
+ <li><a href="img/parrot.gif">parrot.gif</a> 2.05 KiB</li>
+</ul>
+```
+
+Félicitations! Vous avez ajouté un filtre et tiré profit du vaste et immense écosystème NPM.
+
+J'espère que vous appréciez la puissance offerte par l'utilisation de filtres dans nos fichiers de gabarits. Ils peuvent transformer des contenus simples à l'aide de la puissance de l'écosystème NPM.
+
+#### À suivre
+
+Dans la prochaine partie nous verrons comment faire marcher ensemble plusieurs fichiers de gabarits avec des fichiers de mise en page et des fichiers de données externes.
