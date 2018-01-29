@@ -153,7 +153,7 @@ Wrote 1 file in 0.07 seconds
 
 Bien sûr vous pouvez modifier les paramètres par défaut, nous verrons ça plus
 tard (ou vous pouvez dès à présent jeter un œil au fichier
-[README](https://github.com/11ty/eleventy/#configuration-optional).
+[README](https://github.com/11ty/eleventy/#configuration-optional)).
 
 L'utilisation d'un moteur de rendu présente plusieurs avantages :
 
