@@ -1,17 +1,13 @@
 ---
 title: C'est quoi un CMS Headless ?
-date: 2017-12-15T16:40:50+01:00
-description: Le rôle d'un CMS headless est de confier le stockage et l'édition des contenus à un service dédié
-categories:
-  - cms
-  - headless
-images:
-  - /assets/images/2017/12/headless-cms-logos.png
+description: >-
+  Le rôle d'un CMS headless est de confier le stockage et l'édition des contenus
+  à un service dédié
+author: Frank Taillandier
 ---
+Dans les architectures \[JAMstack]({{< relref "5-raisons-de-tester-la-jamstack.md" >}}), chaque service est assuré par un outil spécifique qui va se contenter de faire une chose et une seule, si possible de son mieux. L'édition de contenus pourra par exemple être confiée à un CMS _headless_ - qui contrairement à un CMS dynamique classique comme WordPress ou Drupal ne sera pas chargé de la gestion des modèles, puisque c'est le rôle du générateur de site statique, ni du rendu, puisque les pages HTML générées seront ensuite directement servies depuis un CDN.
 
-Dans les architectures [JAMstack]({{< relref "5-raisons-de-tester-la-jamstack.md" >}}), chaque service est assuré par un outil spécifique qui va se contenter de faire une chose et une seule, si possible de son mieux. L'édition de contenus pourra par exemple être confiée à un CMS _headless_ - qui contrairement à un CMS dynamique classique comme WordPress ou Drupal ne sera pas chargé de la gestion des modèles, puisque c'est le rôle du générateur de site statique, ni du rendu, puisque les pages HTML générées seront ensuite directement servies depuis un CDN.
-
-Si les architectures JAMstack sont très [performantes]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}}), il n'en reste pas moins que tous les intervenants doivent pouvoir contribuer au produit quel que soit leur profil. Une interface conviviale pour l'édition de contenus est donc un passage souvent obligé si vous voulez vous assurer que tout le monde y trouve son compte.
+Si les architectures JAMstack sont très \[performantes]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}}), il n'en reste pas moins que tous les intervenants doivent pouvoir contribuer au produit quel que soit leur profil. Une interface conviviale pour l'édition de contenus est donc un passage souvent obligé si vous voulez vous assurer que tout le monde y trouve son compte.
 
 L'adoption d'un CMS headless ravira également les développeurs habitués à consommer des APIs à longueur de journée et outre les bonnes vieilles APIs RESTful on commence aussi à voir apparaître des [APIs GraphQL](https://graphcms.com/). Tout le monde a donc à y gagner, les personnes en charge de la modélisation de contenu auront à leur disposition [des outils beaucoup plus souples](https://www.contentful.com/developers/docs/concepts/data-model/) et ne sauront plus contraintes par des bases de données peu flexibles et coûteuses en performance et en maintenance. Au final le CMS headless offre plus de souplesse, de liberté, puisqu'il ne vous impose aucun choix de technologie, sans compter que vous pouvez déléguer la maintenance serveur si vous optez pour un service hébergé. Service tiers payant ou solution open source, c'est vous qui voyez comme dirait l'autre.
 
@@ -23,7 +19,7 @@ Le rôle du CMS headless c'est de vous fournir une interface à la fois pour la 
 
 Si vous utilisez un générateur de site statique, le CMS headless est donc une pièce supplémentaire que vous pourriez vouloir ajouter à votre architecture, comme d'habitude cela dépend du projet.
 
-Attention quand même à bien distinguer les CMS headless qui vous permettront de modifier les fichiers déjà présents dans votre dépôt Git ([Forestry](https://forestry.io), [Siteleaf](https://siteleaf.com), [Netlify CMS]({{< relref "configurer-netlify-cms-pour-jekyll.md" >}}), etc.) de ceux qui mettrons vos contenus à disposition via une API ([Contentful](https://www.contentful.com/), [Prismic](https://prismic.io/), [Directus](https://getdirectus.com/), [GraphCMS](https://graphcms.com/), etc.). Chris Macrae de chez Forestry détaille bien la différence entre les deux approches dans [cette vidéo](https://www.youtube.com/watch?v=KX4G49ZrvY0).
+Attention quand même à bien distinguer les CMS headless qui vous permettront de modifier les fichiers déjà présents dans votre dépôt Git ([Forestry](https://forestry.io), [Siteleaf](https://siteleaf.com), \[Netlify CMS]({{< relref "configurer-netlify-cms-pour-jekyll.md" >}}), etc.) de ceux qui mettrons vos contenus à disposition via une API ([Contentful](https://www.contentful.com/), [Prismic](https://prismic.io/), [Directus](https://getdirectus.com/), [GraphCMS](https://graphcms.com/), etc.). Chris Macrae de chez Forestry détaille bien la différence entre les deux approches dans [cette vidéo](https://www.youtube.com/watch?v=KX4G49ZrvY0).
 
 Quoi qu'il en soit dans les deux cas, le CMS headless ne s'occupe que de la partie cachée, le back, pas de la partie visible — la tête est  coupée comme le suggère le terme anglophone _headless_, d'ici à parler de révolution, il n'y a qu'un pas. Tout se recoupe !
 
@@ -45,9 +41,10 @@ Quelques articles en anglais pour approfondir le sujet :
 * [Les bénéfices d'un CMS headless (Forbes)](https://www.forbes.com/sites/forbestechcouncil/2017/11/22/the-benefits-of-a-headless-cms/#3447e5422d85)
 * [C'est quoi un CMS headless ? (CSS Tricks)](https://css-tricks.com/what-is-a-headless-cms/)
 * [CMS headless découplé (Contentful)](https://www.contentful.com/r/knowledgebase/headless-and-decoupled-cms/)
+* [Livre blanc sur l'API REST de WordPress (PDF)](https://humanmade.com/wordpress-rest-api-white-paper/)
 * [Headless CMS en 5 minutes (StoryBlok)](https://www.storyblok.com/tp/headless-cms-explained)
 
 Listes de CMS headless :
 
-* [https://headlesscms.org/](https://headlesscms.org/)
+* <https://headlesscms.org/>
 * [Tools: Headless CMS (The New Dynamic)](https://www.thenewdynamic.org/tools/content-management/headless-cms/)
