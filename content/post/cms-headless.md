@@ -46,6 +46,7 @@ Quelques articles en anglais pour approfondir le sujet :
 * [C'est quoi un CMS headless ? (CSS Tricks)](https://css-tricks.com/what-is-a-headless-cms/)
 * [CMS headless découplé (Contentful)](https://www.contentful.com/r/knowledgebase/headless-and-decoupled-cms/)
 * [Headless CMS en 5 minutes (StoryBlok)](https://www.storyblok.com/tp/headless-cms-explained)
+* [Livre blanc sur l'API REST de WordPress (PDF)](https://humanmade.com/wordpress-rest-api-white-paper/)
 
 Listes de CMS headless :
 
