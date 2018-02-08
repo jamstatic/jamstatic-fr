@@ -101,11 +101,11 @@ Heureusement pour nous, Hugo stocke le contexte de page dans un `$` donc cela ne
 #### Trois niveaux d'imbrication
 
 ```go
-{{/* 1. Le point désige le plus haut niveau de la page (de liste) */}}
+{{/* 1. Le point désigne le plus haut niveau de la page (de liste) */}}
 <h1>{{ .Title }}</h1>
 {{ range .Data.Pages }}
     <article>
-        {{/* 2. Le point désige la page en cours */}}
+        {{/* 2. Le point désigne la page en cours */}}
         <h3>{{ .Title }}</h3>
         <hr>
         {{ range .Resources.Match "images/.*" }}
