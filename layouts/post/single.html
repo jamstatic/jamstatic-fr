@@ -22,9 +22,9 @@
     <div class="post-content" itemprop="articleBody">
 
       {{ with .Params.Source }}
-        {{ if and .url .title }}
+        {{ if and .url .title .author }}
         <p class="notice info">
-          <em>Article original : <a href="{{ .url }}">{{ .title }}</a></em>
+          <em>Article original : <a href="{{ .url }}">{{ .title }}</a> de {{ .author }}</em>
         </p>
         {{ end }}
       {{ end }}
