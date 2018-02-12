@@ -4,7 +4,7 @@
       <div class="footer-col footer-col-1">
         <ul class="social-media-list">
           <li>
-            <span class="icon icon--rss"></span> <a href="{{ .RSSLink | relURL }}">S‘abonner via RSS</a>
+            <span class="icon icon--rss"></span> <a href="{{ $.Site.RSSLink | relURL }}">S‘abonner via RSS</a>
           </li>
           <li>
             {{- partial "icons/slack" . -}}
