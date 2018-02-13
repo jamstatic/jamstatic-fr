@@ -28,7 +28,7 @@ if($ciel == "sombre"){
 $salutations = $ciel == "sombre" ? "Bonjour : Bonsoir";
 ```
 
-En Go, on serait donc tenté d'écrire:
+Avec Go Template, on serait donc tenté d'écrire:
 
 ```go
 {{ $salutations := "Bonjour" }}
@@ -48,7 +48,7 @@ Du moins tant que [cette anomalie du langage Go](https://github.com/golang/go/is
 
 ## `.Scratch` à la rescousse !
 
-Au départ la fonction `.Scratch` a été ajoutée pour palier à la limitation du langage Go mentionnée plus haut et s'est mise à rendre bien d'autres services par la suite.\
+Au départ la fonction `.Scratch` a été ajoutée pour palier à la limitation de Go Template mentionnée plus haut et s'est mise à rendre bien d'autres services par la suite.\
 Cette fonction dispose de plusieurs méthodes.
 
 ### `.Scratch.Set`
@@ -167,7 +167,7 @@ Comme faire pour créer cette liste, la modifier si je suis sur la page d'accuei
 {{ end }}
 ```
 
-Nous pourrions faire bien plus de vérifications et de contorsions puis, mais en fin de compte, nous n'avons plus qu'à écrire dans notre fichier de gabarit ce joli :
+Nous pourrions faire bien plus de vérifications et de contorsions, mais en fin de compte, nous n'avons plus qu'à écrire dans notre fichier de gabarit ce joli :
 
 ```go
 <body class='{{ delimit (.Scratch.Get "classes") " " }}'>
@@ -263,7 +263,7 @@ Dans le fichier partiel vous pourrez alors écrire :
 
 ## `.Scratch` après Go 1.11
 
-Oui, l'équipe chargée de développer le langage Go finira bien par sortir cette 11e révision et nous pourrons surcharger naturellement les variables dans nos fichiers de gabarits :
+Le jour où l'équipe chargée de développer le langage Go publiera cette révision, nous pourrons surcharger naturellement les variables dans nos fichiers de gabarits :
 
 ```go
 // Enfin !
