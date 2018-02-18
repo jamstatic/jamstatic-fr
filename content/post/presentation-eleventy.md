@@ -1,18 +1,26 @@
 ---
-title: "Présentation d'Eleventy, un nouveau générateur de site statique"
-date: 2018-02-18T10:23:07+01:00
-description: "Zach Leat explique pourquoi il a développé Eleventy, un générateur de site statique basé sur JavaScript, particulièrement flexible et qui sait se faire oublier."
+title: Présentation d'Eleventy, un nouveau générateur de site statique
+date: 2018-02-18 10:23:07 +0100
+description: Zach Leat explique pourquoi il a développé Eleventy, un générateur de
+  site statique basé sur JavaScript, particulièrement flexible et qui sait se faire
+  oublier.
 author: Frank Taillandier
 categories:
-  - eleventy
+- eleventy
 images:
-  - https://cdn-images-1.medium.com/max/800/1*u1v8ojapeWAgL2xjaJZ5rA.png
+- https://cdn-images-1.medium.com/max/800/1*u1v8ojapeWAgL2xjaJZ5rA.png
 source:
-  author: "Zach Leat"
-  title: "Introducing Eleventy"
-  url: "https://www.zachleat.com/web/introducing-eleventy/"
----
+  author: Zach Leat
+  title: Introducing Eleventy
+  url: https://www.zachleat.com/web/introducing-eleventy/
+  lang: en
+lastmod: ''
+commments: false
+aliases: []
+canonical_url: ''
+keywords: []
 
+---
 {{% intro %}}
 L'auteur d'Eleventy, le talentueux [Zach Leat](https://twitter.com/zachleat), développeur front-end particulièrement attentif à la performance explique pourquoi il a décidé de développer à son tour un générateur de site statique. Eleventy se pose d'emblée comme une alternative intéressante à Jekyll ou aux générateurs qui reposent sur des bibliothèques JavaScript, tout en en s'affranchissant de leurs contraintes.
 {{% /intro %}}
