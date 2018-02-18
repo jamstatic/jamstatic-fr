@@ -95,6 +95,33 @@
       "avatar_url": "https://avatars3.githubusercontent.com/u/1499325?v=4",
       "profile": "http://gastaud.io",
       "contributions": []
+    },
+    {
+      "login": "martinsam",
+      "name": "Samuel Martin",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/34697?v=4",
+      "profile": "http://blog.creaone.fr",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "inwardmovement",
+      "name": "Victor Massé",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/9438102?v=4",
+      "profile": "http://inwardmovement.fr",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "ChristopheDucamp",
+      "name": "Christophe Ducamp",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/174418?v=4",
+      "profile": "https://christopheducamp.com/",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "files": [
