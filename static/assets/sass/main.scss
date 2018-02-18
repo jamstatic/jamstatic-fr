@@ -31,3 +31,14 @@ figcaption {
     color: $grey;
   }
 }
+
+table {
+  border-collapse: collapse;
+  margin-bottom: $line-height-computed * 2;
+
+  th,
+  td {
+    padding: $spacing-unit/2;
+    border-bottom: 0.0134em solid $grey;
+  }
+}

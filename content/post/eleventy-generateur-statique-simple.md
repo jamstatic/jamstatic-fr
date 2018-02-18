@@ -2,6 +2,8 @@
 title: "Un site web simple avec le plus simple des générateurs de site statique"
 date: 2018-01-24T20:40:44+01:00
 description: "Présentation d'Eleventy, le générateur de site statique le plus simple et le plus intuitif."
+categories:
+  - eleventy
 images:
   - https://cdn-images-1.medium.com/max/800/1*u1v8ojapeWAgL2xjaJZ5rA.png
 source:
@@ -9,8 +11,6 @@ source:
   title: "Making a Simple Web Site with the Simplest Static Site Generator, Level 1"
   url: "https://medium.com/@11ty/making-a-simple-web-site-with-the-simplest-static-site-generator-level-1-7fc6febca1"
 ---
-
-
 
 {{% intro %}}
 Il existe des centaines de générateurs de site statique et il en arrive toujours de nouveaux. Après avoir longtemps utilisé Jekyll, [Zach Leat](https://www.zachleat.com/web/), développeur front-end chez [Filament Group](https://www.filamentgroup.com/), a décidé de s'inspirer des principes de Jekyll pour les porter et les étendre grâce à l'écosystème de `npm` qu'il manipule au quotidien.
