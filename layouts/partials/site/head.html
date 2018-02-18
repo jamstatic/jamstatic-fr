@@ -2,11 +2,11 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preload" href="{{ "fonts/open-sans-v15-latin-regular.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{{ "fonts/open-sans-v15-latin-italic.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{{ "fonts/mopen-sans-v15-latin-800.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{{ "fonts/roboto-v18-latin-regular.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{{ "fonts/roboto-v18-latin-800.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "assets/fonts/open-sans-v15-latin-regular.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "assets/fonts/open-sans-v15-latin-italic.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "assets/fonts/mopen-sans-v15-latin-800.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "assets/fonts/roboto-v18-latin-regular.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "assets/fonts/roboto-v18-latin-800.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
 <title>{{ block "title" . }}{{ if .IsHome }}{{ .Site.Params.Description }} · {{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} · {{ end }}{{ .Site.Title }}{{ end }}{{ end }}</title>
 {{ .Hugo.Generator }}
 <link rel="stylesheet" href="{{ "assets/css/main.css" | relURL }}">
