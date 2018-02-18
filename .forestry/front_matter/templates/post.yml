@@ -1,0 +1,96 @@
+---
+hide_body: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: 
+- name: description
+  label: Description
+  type: textarea
+  hidden: false
+  default: ''
+- name: categories
+  label: Categories
+  type: tag_list
+  hidden: false
+  default:
+  - 
+- name: images
+  label: Images
+  type: image_gallery
+  hidden: false
+  default:
+  - "/assets/images///"
+- name: type
+  label: Type
+  type: text
+  hidden: false
+  default: ''
+- name: source
+  label: Source
+  type: field_group
+  fields:
+  - name: author
+    label: Author
+    type: text
+    hidden: false
+    default: ''
+  - name: title
+    label: Title
+    type: text
+    hidden: false
+    default: ''
+  - name: url
+    label: Url
+    type: textarea
+    hidden: false
+    default: ''
+  - name: lang
+    label: Lang
+    type: text
+    hidden: false
+    default: ''
+  hidden: false
+  default: 
+- name: author
+  label: Author
+  type: text
+  hidden: false
+  default: 
+- name: lastmod
+  label: Lastmod
+  type: datetime
+  hidden: false
+  default: 
+- name: commments
+  label: Commments
+  type: boolean
+  hidden: false
+  default: ''
+- name: aliases
+  label: Aliases
+  type: list
+  hidden: false
+  default: ''
+- name: canonical_url
+  label: Canonical url
+  type: text
+  hidden: false
+  default: ''
+- name: keywords
+  label: Keywords
+  type: list
+  hidden: false
+  default: ''
+- name: draft
+  label: Draft
+  type: boolean
+  hidden: false
+  default: true
