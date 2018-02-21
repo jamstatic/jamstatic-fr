@@ -14,12 +14,6 @@ source:
   title: Introducing Eleventy
   url: https://www.zachleat.com/web/introducing-eleventy/
   lang: en
-lastmod: ''
-commments: false
-aliases: []
-canonical_url: ''
-keywords: []
-
 ---
 {{% intro %}}
 L'auteur d'Eleventy, le talentueux [Zach Leat](https://twitter.com/zachleat), développeur front-end particulièrement attentif à la performance explique pourquoi il a décidé de développer à son tour un générateur de site statique. Eleventy se pose d'emblée comme une alternative intéressante à Jekyll ou aux générateurs qui reposent sur des bibliothèques JavaScript, tout en en s'affranchissant de leurs contraintes.
