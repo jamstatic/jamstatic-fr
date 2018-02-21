@@ -11,7 +11,9 @@ body {
 .site-header {
   padding: $base-line 0;
   min-height: 56px;
-  background: $grey-dark;
+  background-color: $brand-color;
+  background-image: linear-gradient(0deg, $brand-color 0%, #95c1d7 90%);
+
   color: white;
 }
 
@@ -37,7 +39,7 @@ body {
   }
 
   &:hover {
-    text-shadow: 4px 2px $text-color;
+    text-shadow: 4px 2px $grey;
   }
 }
 
@@ -63,7 +65,8 @@ body {
 
 .site-footer {
   padding: $spacing-unit $spacing-unit / 2 0;
-  background: $grey-dark;
+  background: #f7f8f8;
+  color: $grey;
 }
 
 .contact-list,
@@ -78,18 +81,17 @@ body {
 }
 
 .footer-col-wrapper {
-  color: #fff;
   font-size: $smaller;
   margin-left: -$spacing-unit / 2;
 
   @extend %clearfix;
 
   a {
-    color: currentcolor;
+    color: $brand-color;
     padding: 0 0.16150558em;
 
     &:hover {
-      color: $grey-light;
+      color: darken($brand-color, 10%);
     }
   }
 }
@@ -154,9 +156,10 @@ body {
 
   > li {
     line-height: 1.1;
-    padding-bottom: $spacing-unit/2;
-    margin-bottom: $spacing-unit/2;
-    border-bottom: 0.0134em solid $grey;
+    padding: $spacing-unit/2;
+    border-top: $small solid $brand-color;
+    margin-bottom: $spacing-unit;
+    box-shadow: 0 2px 4px 0 hsla(0, 0%, 0%, 0.2);
   }
 }
 
@@ -171,13 +174,18 @@ body {
   display: block;
   margin: ($line-height-computed / 7.43) 0;
   font-family: $title-font-family;
-  font-size: $bigger;
   font-weight: 700;
   letter-spacing: $title-letter-spacing;
 
-  &:hover {
+  a {
     text-decoration: none;
+    color: $grey-dark;
+
+    &:hover {
+      color: $brand-color;
+    }
   }
+
 }
 
 @include media-query($on-tablet) {
