@@ -12,8 +12,7 @@ body {
   padding: $base-line 0;
   min-height: 56px;
   background-color: $brand-color;
-  background-image: linear-gradient(0deg, #95c1d7 0%, $brand-color 95%);
-
+  background-image: linear-gradient(0deg, #95c1d7 5%, $brand-color 35%);
   color: white;
 }
 
@@ -27,6 +26,7 @@ body {
   letter-spacing: $title-letter-spacing;
   line-height: 1;
   text-transform: uppercase;
+  text-shadow: 0 1px 1px rgba(27, 31, 35, 0.15), 0 1px 25px rgba(27, 31, 35, 0.25);
   vertical-align: middle;
   text-align: center;
   transition: all 0.4s ease;
@@ -49,6 +49,7 @@ body {
   width: 100%;
   text-align: center;
   font-size: $small;
+  text-shadow: 0 1px 1px rgba(27, 31, 35, 0.25), 0 1px 25px rgba(27, 31, 35, 0.75);
 
   .menu-icon {
     display: none;
@@ -158,6 +159,7 @@ body {
     line-height: 1.1;
     padding: $spacing-unit/2;
     border-top: $small solid $brand-color;
+    border-image: linear-gradient(90deg, $brand-color 70%, #95c1d7) 10;
     margin-bottom: $spacing-unit;
     box-shadow: 0 2px 4px 0 hsla(0, 0%, 0%, 0.2);
   }
