@@ -43,7 +43,7 @@ outputFormats:
 
 params:
   title: Jamstastic
-  description: Sites statiques et architectures décentralisées
+  description: Sites statiques et architectures découplées
   email: contact@jamstatic.fr
   author:
       name: Frank Taillandier
