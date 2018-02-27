@@ -122,6 +122,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "inseo",
+      "name": "Corinne Schillinger",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/2088264?v=4",
+      "profile": "https://github.com/inseo",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "files": [
@@ -129,5 +138,6 @@
   ],
   "imageSize": 100,
   "projectName": "jamstatic-fr",
-  "projectOwner": "jamstatic"
+  "projectOwner": "jamstatic",
+  "repoType": "github"
 }
