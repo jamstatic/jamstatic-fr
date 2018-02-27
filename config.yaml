@@ -56,7 +56,7 @@ params:
   ghrepo: https://github.com/jamstatic/jamstatic-fr/
   branch: master
   images:
-    - "assets/images/twitter-card.png"
+    - "assets/images/twitter-card.jpg"
 
 related:
   threshold: 80
