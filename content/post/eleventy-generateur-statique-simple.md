@@ -74,7 +74,7 @@ giffleball/
   img/parrot.gif
 ```
 
-Créons un liste avec des liens vers nos images GIF dans le fichier `index.html` :
+Créons une liste avec des liens vers nos images GIF dans le fichier `index.html` :
 
 ```html
 <!doctype html>
@@ -111,7 +111,7 @@ Writing ailleurs/index.html from ./index.html.
 Wrote 1 file in 0.07 seconds
 ```
 
-### Basons nous sur des données
+### Basons-nous sur des données
 
 OK, jusqu'ici nous aurions simplement pu charger notre fichier `index.html` dans le navigateur et le résultat aurait été le même. Il n'y a aucune différence en entrée et en sortie. Ajoutons donc un petite touche `eleventy`. Déplaçons certaines données de la page dans notre [front matter](https://jekyllrb.com/docs/frontmatter/) :
 
@@ -142,7 +142,7 @@ images:
 
 Nous avons ajouté le titre du site (utilisé à deux endroits) ainsi que la liste des images dans notre front matter.
 
-Par défaut dans Eleventy, le moteur du rendu `liquid` est disponible pour les fichiers HTML et les fichiers Markdown. Eleventy supporte une large gamme de moteur de rendu (jetez un œil sur [la liste complète](https://github.com/11ty/eleventy/#eleventy-)) qui sont disponibles lorsque vous utilisez une extension de fichier spécifique. Par exemple notre fichiers `index.html` aurait pu s'appeler `index.liquid` et le fonctionnement aurait été le même :
+Par défaut dans Eleventy, le moteur du rendu `liquid` est disponible pour les fichiers HTML et les fichiers Markdown. Eleventy supporte une large gamme de moteurs de rendu (jetez un œil sur [la liste complète](https://github.com/11ty/eleventy/#eleventy-)) qui sont disponibles lorsque vous utilisez une extension de fichier spécifique. Par exemple notre fichier `index.html` aurait pu s'appeler `index.liquid` et le fonctionnement aurait été le même :
 
 ```
 ~/giffleball $ mv index.html index.liquid
@@ -160,7 +160,7 @@ L'utilisation d'un moteur de rendu présente plusieurs avantages :
 1.  Modifier vos données au même endroit. Pour changer le titre du site, nous
     n'avons besoin de le modifier qu'à un seul endroit (le front matter) au lieu de  deux. Pour ajouter ou supprimer des images nous n'avons pas à toucher au modèle de code HTML.
 2.  Modifier le balisage des liens vers nos images en une fois. Admettons que
-    souhaitions modifier le code HTML de notre liste d'images. Comme nous nous basons sur des données, nous pouvons modifier le modèle de code HTML dans notre boucle plutôt que de devoir modifier chaque `<li>` individuellement. Trois passe encore mais vous imaginez si notre site listait 300 images ?
+    souhaitions modifier le code HTML de notre liste d'images. Comme nous nous basons sur des données, nous pouvons modifier le modèle de code HTML dans notre boucle plutôt que de devoir modifier chaque `<li>` individuellement. Trois passent encore mais vous imaginez si notre site listait 300 images ?
 3.  Les caractères spéciaux contenus dans les noms de fichier. Quand je regarde
     dans mon navigateur, on dirait que mon serveur web n'aime pas trop des noms tels que `???.jpg`. Le fichier ne s'affiche pas correctement.
     Que se passerait-il si nos noms de fichiers comportaient des caractères bizarres que notre serveur web ou notre navigateur ne sait pas traiter ? Nous devons les échapper ! La syntaxe du moteur de template Liquid a juste ce qu'il nous faut : [un filtre `url_encode`](https://shopify.github.io/liquid/filters/url_encode/). Mettons notre gabarit à jour pour en bénéficier :
@@ -175,11 +175,11 @@ Ah c'est bien mieux. Ça marche nickel.
 
 J'espère que vous vous rendez compte de l'avantage d'utiliser des moteurs de rendu et un générateur de site statique pour vos sites web.
 
-{{% notice info %}}Le code source de la deusième partie de ce tutoriel est [disponible sur GitHub](https://github.com/11ty/giffleball/tree/level-2).{{% /notice %}}
+{{% notice info %}}Le code source de la deuxième partie de ce tutoriel est [disponible sur GitHub](https://github.com/11ty/giffleball/tree/level-2).{{% /notice %}}
 
 ### Ajoutons un filtre
 
-Faisons un truc plus compliqué. Affichons la taille de chacune des images GIF à côté de leur lien. Nous pouvons faire ça à l'aide d'un filtre. Les filtres d'ajoutent dans le fichier de configuration - un fichier `.eleventy.js` — créons en un. Il devrait ressembler à ça :
+Faisons un truc plus compliqué. Affichons la taille de chacune des images GIF à côté de leur lien. Nous pouvons faire ça à l'aide d'un filtre. Les filtres s'ajoutent dans le fichier de configuration - un fichier `.eleventy.js` — créons en un. Il devrait ressembler à ça :
 
 ```js
 module.exports = (function(eleventyConfig) {
@@ -232,7 +232,7 @@ Writing _site/index.html from ./index.html.
 Wrote 1 file in 0.07 seconds
 ```
 
-Cela va générer le code suivant dans le fichier `_site/index.html` (ici nous ne montronas que le rendu de la liste et pas le fichier HTML entier pour faire court):
+Cela va générer le code suivant dans le fichier `_site/index.html` (ici nous ne montrons que le rendu de la liste et pas le fichier HTML entier pour faire court):
 
 ```html
 
@@ -249,7 +249,7 @@ Cela va générer le code suivant dans le fichier `_site/index.html` (ici nous n
 ```
 
 OK, c'est presque ça — mais c'est quoi tous ces espacements ? *(Notez que c'est une question purement rhetorique à laquelle je vais m'empresser de répondre tout de suite.)*
-Lors du traitement des modèles, Liquid ne supprime pas les retours a la ligne et les espaces autours des balises Liquid. Heureusement pour nous, Liquid fournit un outil pour contrôler ces espacements. Il faut utiliser `{%-` à la place de `{%` pour supprimer l'espacement avant la balise Liquid. Et indépendamment on peut aussi utiliser `-%}` à la place de  `%}` à la fin pour supprimer l'espace après la balise Liquid. L'un ou l'autre. Les deux. Personellement je trouve que ça rend mieux avec juste `{%-` au début. Il est important pour moi d'avoir une vue du code source qui soit propre, alors nettoyons tout ça :
+Lors du traitement des modèles, Liquid ne supprime pas les retours à la ligne et les espaces autours des balises Liquid. Heureusement pour nous, Liquid fournit un outil pour contrôler ces espacements. Il faut utiliser `{%-` à la place de `{%` pour supprimer l'espacement avant la balise Liquid. Et indépendamment on peut aussi utiliser `-%}` à la place de  `%}` à la fin pour supprimer l'espace après la balise Liquid. L'un ou l'autre. Les deux. Personnellement je trouve que ça rend mieux avec juste `{%-` au début. Il est important pour moi d'avoir une vue du code source qui soit propre, alors nettoyons tout ça :
 
 ```liquid
 <ul>
@@ -337,7 +337,7 @@ Ce qui nous donne :
 </ul>
 ```
 
-Félicitations! Vous avez ajouté un filtre et tiré profit du vaste et immense écosystème NPM.
+Félicitations ! Vous avez ajouté un filtre et tiré profit du vaste et immense écosystème NPM.
 
 J'espère que vous appréciez la puissance offerte par l'utilisation de filtres dans nos fichiers de gabarits. Ils peuvent transformer des contenus simples à l'aide de la puissance de l'écosystème NPM.
 

@@ -62,7 +62,7 @@ Eleventy supporte actuellement :
 
 ### Flexibilité de l'arborescence de répertoires
 
-Eleventy tient à ce que vous puissiez continuer à travailler avec l'arborescence existante de votre projet. Il n'y a aucune obligation de mettre tous vos fichiers de contenu dans un répertoire `source`, `content` ou `_posts` (sauf si vous le désirez). Vous dites à Eleventy où sont vos fichiers et il s'en débrouillera.
+Eleventy tient à ce que vous puissiez continuer à travailler avec l'arborescence existante de votre projet. Il n'y a aucune obligation de mettre tous vos fichiers de contenu dans un répertoire `source`, `content` ou `_posts` (sauf si vous le désirez). Vous dites à Eleventy où sont vos fichiers et il se débrouillera avec.
 
 Un simple `eleventy` en ligne de commande va traiter les fichiers présents dans le répertoire courant et générer un site dans un dossier `_site`. Vous pouvez préciser votre choix à l'aide des options `--input` et `--output`.
 
@@ -86,7 +86,7 @@ eleventy --input=. --output=.
 
 #### Transformer un fichier à la fois
 
-Eleventy fonctionne aussi comme un petit utilitaire pour traiter un seul fichier. Pour transformer le fichier `README.md` en `README.html`.
+Eleventy fonctionne aussi comme un petit utilitaire permettant de traiter un seul fichier. Pour transformer le fichier `README.md` en `README.html`.
 
 ```sh
 eleventy --input=README.md --output=.
@@ -94,7 +94,7 @@ eleventy --input=README.md --output=.
 
 ## Pariez sur JavaScript
 
-Pariez toujours sur JavaScript. JavaScript vous donne accès à `npm`. L'écosystème d'npm est immense. Follement immense. Et il continue de gagner en popularité. Selon [modulecounts.com](http://www.modulecounts.com/), npm propose déjà trois fois plus de modules que son deuxième concurrent, Maven Central (Java). Quand vous souhaitez ajouter une fonctionnalité, il y a de grandes chances qu'il existe un module npm pour ça.
+Pariez toujours sur JavaScript. JavaScript vous donne accès à `npm`. L'écosystème d'npm est immense. Follement immense. Et il continue de gagner en popularité. Selon [modulecounts.com](http://www.modulecounts.com/), npm propose déjà trois fois plus de modules que son deuxième concurrent, Maven Central (Java). Quand vous souhaitez ajouter une fonctionnalité, il y a de grandes chances qu'il existe déjà un module npm pour ça.
 
 | Générateur de site | Langage | Nombre de modules |
 | --- | --- | --- |
@@ -125,5 +125,5 @@ npm install -g @11ty/eleventy
 
 Vous trouverez des tutoriels sur [11ty.io](https://www.11ty.io/). Dites à Zach ce que vous aimez ou que vous n'aimez pas ! [il adorerait avoir vos retours](https://twitter.com/zachleat).
 
-La chose sympa et pas impliquante que vous pouvez faire pour soutenir le projet est de le [marquer d'une étoile sur GitHub](https://github.com/11ty/eleventy).
+Une chose sympa et facile à faire que vous pouvez faire pour soutenir le projet est de le [marquer d'une étoile sur GitHub](https://github.com/11ty/eleventy).
 Comme la liste gigantesque des générateurs de site statique de [staticgen.com](https://www.staticgen.com/) est classée en fonction du nombre d'étoiles sur GitHub, ça aiderait le projet à gagner pas mal de places au classement. Merci !
