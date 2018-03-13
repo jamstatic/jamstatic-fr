@@ -13,9 +13,38 @@ collections:
     label: "Article"
     folder: "content/post"
     create: true
+    format: yaml-frontmatter
+    extension: md
     fields: # The fields for each document, usually in front matter
-      - {label: "Titre", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "string"}
-      - {label: "Auteur", name: "author", widget: "string"}
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Texte", name: "body", widget: "markdown"}
+      - label: "Titre"
+        name: "title"
+        widget: "string"
+
+      - label: "Description"
+        name: "description"
+        widget: "string"
+
+      - label: "Catégories"
+        name: "categories"
+        required: false
+        widget: "list"
+
+      - label: "Source"
+        name: "source"
+        required: false
+        widget: "object"
+        fields:
+          - {label: "Auteur", name: author, widget: string}
+          - {label: "Titre", name: title, widget: string}
+          - {label: "URL", name: url, widget: string}
+
+      - label: "Twitter Card"
+        name: "images"
+        required: false
+        widget: "list"
+        field:
+          - {label: Image, name: image, widget: image}
+
+      - label: "Texte"
+        name: "body"
+        widget: "markdown"
