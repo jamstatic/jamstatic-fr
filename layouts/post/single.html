@@ -8,7 +8,9 @@
           {{ $mymonths := .Site.Data.mois }}
           {{ .Date.Day }} {{ index $mymonths (printf "%d" .Date.Month) }} {{ .Date.Year }}
         </time>
+        {{ if isset .Params "categories" }}
         • {{ range $index, $category := .Params.categories }}{{ if $index }}, {{ end }}<a href="{{ "categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
+        {{ end }}
         • <span aria-label="Temps de lecture">{{ .ReadingTime }} min</span>
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
             <span itemprop="name">
