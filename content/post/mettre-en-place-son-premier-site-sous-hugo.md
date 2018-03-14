@@ -75,7 +75,7 @@ Nous allons commencer par ajouter de nouveaux contenus au site. Pour ce faire, n
 
 ## Mettre à jour un article
 
-Commencer par mettre à jour l'exemple d'article fourni dans notre structure de départ. Ouvrez le fichier `hugo/content/posts/example.md` dans votre éditeur de texte. Il est composé d'une entête *front matter* avec un champ titre et d'un texte d'exemple au format markdown.
+Commencer par mettre à jour l'exemple d'article fourni dans notre structure de départ. Ouvrez le fichier `hugo/content/posts/example.md` dans votre éditeur de texte. Il est composé d'un en-tête *front matter* avec un champ titre et d'un texte d'exemple au format markdown.
 
     ---
     title:  "Bienvenue dans Hugo !"
@@ -85,7 +85,7 @@ Commencer par mettre à jour l'exemple d'article fourni dans notre structure de 
 
     Pour ajouter un nouvel article, placez un nouveau fichier dans le dossier
     `content/posts` en respectant la nomenclature `titre-de-l-article.md` et
-    ajoutez les métadonnées nécessaires dans l'entête de page Front Matter.
+    ajoutez les métadonnées nécessaires dans l'en-tête de page Front Matter.
     Jetez un œil au fichier source de cet article pour voir comment ça marche.
     <!--more-->
     Hugo also offers powerful support for code snippets:
@@ -112,13 +112,13 @@ Commencer par mettre à jour l'exemple d'article fourni dans notre structure de 
     [hugo-gh]:   https://github.com/gohugoio/hugo
     [hugo-community]: https://discourse.gohugo.io/
 
-Cet article n'a pas de date ! Essayez d'en définir une en ajoutant l'entrée suivante dans l'entête _Front Matter_ de l'article:
+Cet article n'a pas de date ! Essayez d'en définir une en ajoutant l'entrée suivante dans l'en-tête _Front Matter_ de l'article:
 
     date: "YYYY-MM-DDTHH:MM:SS-00:00"
 
 {{% notice tip %}}
 
-_Remplacez_ `YYYY-MM-DDTHH:MM:SS-00:00` _avec une date valide, comme… `2018-01-01T12:42:00-00:00`. Si votre date se situe dans le futur, Hugo ne générera pas cet article en production.
+_Remplacez_ `YYYY-MM-DDTHH:MM:SS-00:00` avec une date valide, comme… `2018-01-01T12:42:00-00:00`. Si votre date se situe dans le futur, Hugo ne générera pas cet article en production.
 
 {{% /notice %}}
 
@@ -142,7 +142,7 @@ Cela va créer un nouvel article au format markdown dans `hugo/content/posts/mon
     draft: true
     ---
 
-Ce fichier comporte une entête Front Matter (des métadonnées structurées relatives à la page) dont on peut tirer parti dans les gabarits de page. Sous le *front matter*, nous pouvons ajouter du contenu au format markdown :
+Ce fichier comporte un en-tête Front Matter (des métadonnées structurées relatives à la page) dont on peut tirer parti dans les gabarits de page. Sous le *front matter*, nous pouvons ajouter du contenu au format markdown :
 
 Ajoutez par exemple le contenu suivant dans le fichier et sauvegardez vos changements :
 
@@ -206,7 +206,7 @@ Nous allons commencer par éditer les paramètres du site dans le fichier `hugo/
 
 ![](/assets/images/2018/03/casper-theme-default-config.png "La thème Casper avec du contenu et les styles par défaut")
 
-Bien, ajoutons maintenant une image de fond pour la bannière d'entête. Dans le fichier `hugo/config.toml`, vous trouverez une section `[params]`. Modifiez le paramètre `cover` pour qu'il ait la valeur `/img/darius-soodmand-116253.jpg`, sauvegardez vos changements.
+Bien, ajoutons maintenant une image de fond pour la bannière d'en-tête. Dans le fichier `hugo/config.toml`, vous trouverez une section `[params]`. Modifiez le paramètre `cover` pour qu'il ait la valeur `/img/darius-soodmand-116253.jpg`, sauvegardez vos changements.
 
 ![](/assets/images/2018/03/casper-theme-cover.jpg "Ajout d'une image de fond")
 
@@ -258,7 +258,7 @@ Ajoutez juste en dessous:
 
 Maintenant tout notre code CSS et JS personnalisé sera utilisé sur le site.
 
-Faisons un essai en augmentant la hauteur de l'entête principale. Ouvrez le fichier `src/css/styles.css` et ajoutez le code suivant à la fin du fichier :
+Faisons un essai en augmentant la hauteur de l'en-tête principal. Ouvrez le fichier `src/css/styles.css` et ajoutez le code suivant à la fin du fichier :
 
     .tag-head.main-header {
       height: 80vh;
@@ -280,7 +280,7 @@ Les fichiers des modèles de gabarits de page se trouvent dans le [_dépôt de n
 
 {{% /notice %}}
 
-Pour en apprendre un peu plus sur Hugo, reportez vous aux sections suivantes de la documentation officielle :
+Pour en apprendre un peu plus sur Hugo, reportez-vous aux sections suivantes de la documentation officielle :
 
 * [L'organisation des contenus dans Hugo](http://gohugo.io/content-management/organization/)
 * [Introduction au langage de templating d'Hugo](http://gohugo.io/templates/introduction/)
