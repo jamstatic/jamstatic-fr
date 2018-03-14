@@ -158,7 +158,7 @@ Le point ici c'est la valeur de `$path`.
 
 C'est un exemple tout simple. La plus part du temps, vous aurez besoin de beaucoup plus de valeurs.
 
-Pas de souci, nous pouvons utiliser la fonction `dict` pour passer un objet en paramètre.
+Pas de souci, nous pouvons utiliser la fonction `dict` pour passer un ensemble d'éléments en paramètre (entier, chaine de caractère, objet)
 
 `dict` va créer une *map*, souvent désignée également comme un tableau associatif.\
 Reportez-vous à la [documentation de cette fonction](https://gohugo.io/functions/dict) ou à mon propre article [sur le sujet](https://regisphilibert.com/blog/2017/04/hugo-go-template-translator-explained-understanding/#associative-arrays).
