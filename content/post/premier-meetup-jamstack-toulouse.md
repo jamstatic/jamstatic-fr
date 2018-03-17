@@ -12,7 +12,7 @@ images:
 
 {{< figure src="/assets/images/2018/03/thefrontisback.jpg" caption="The Front is back !" attr="Photo : Nicolas Manaud" attrlink="https://twitter.com/nmanaud/status/974957331279695872" >}}
 
-Lors de l'introduction, j'ai rapidement rappelé comment nous en sommes arrivés à ces workflows de déploiement et comment ils permettent aux développeurs front-end de reprendre la main sur ce qui est produit en sortie, puisqu'ils sont libres de choisir la solution de templating qui va générer le HTML et qu'ils ne seront pas contraints par la structure de la base de données d'un CMS. Une vrai aubaine pour les artisans qui aiment faire les choses bien et se soucient de la qualité.
+Lors de l'introduction, j'ai rapidement rappelé comment nous en sommes arrivés à ces workflows de déploiement et comment ils permettent aux développeurs front-end de reprendre la main sur ce qui est produit en sortie, puisqu'ils sont libres de choisir la solution de templating qui va générer le HTML et qu'ils ne seront pas contraints par la structure de la base de données d'un CMS. Une vraie aubaine pour les artisans qui aiment faire les choses bien et se soucient de la qualité.
 
 ## Making platforms promote performance
 
@@ -22,7 +22,7 @@ La présentation de [Phil Hawksworth](https://twitter.com/philhawksworth), devel
 
 Pour s'éviter de tels tracas, autant commencer par s'assurer que le déploiement automatique fonctionne comme il faut en début de projet. Mieux encore, en versionnant correctement son projet avec Git, en le déployant régulièrement, on va permettre à tous les intervenants de s'investir et de faire des retours au plus tôt. C'est la garantie de plus de sérénité pour tout le monde lors du lancement _officiel_. Et cette façon de travailler est rendue très accessible par [Netlify](https://netlify.com), nul besoin d'avoir une équipe de devops chevronnés pour vous aider à mettre en place un tel workflow. En quelques clics c'est réglé.
 
-Phil a pu observé comment Netlify utilisait Netlify pour développer et concevoir son application web, servie naturellement elle aussi en statique. Grâce à la mise en ligne du résultat de la génération du site pour chaque commit, il a pu remonter aux origines, voir les premiers prototoypes et ainsi parcourir toute la timeline du projet. Si Git permet de faire ce genre de choses dans un terminal et de voir les différences, les ajouts et les suppressions de fichiers, Netlify propose la même chose mais sous forme visuelle, vous pouvez consulter n'importe quelle version du site sur une URL unique basée sur le hash du commit.
+Phil a pu observé comment Netlify utilisait Netlify pour développer et concevoir son application web, servie naturellement elle aussi en statique. Grâce à la mise en ligne du résultat de la génération du site pour chaque commit, il a pu remonter aux origines, voir les premiers prototypes et ainsi parcourir toute la timeline du projet. Si Git permet de faire ce genre de choses dans un terminal et de voir les différences, les ajouts et les suppressions de fichiers, Netlify propose la même chose mais sous forme visuelle, vous pouvez consulter n'importe quelle version du site sur une URL unique basée sur le hash du commit.
 
 {{< figure src="/assets/images/2018/03/netlify-prototype.png" caption="Les premiers prototypes du site de Netlify sont encore accessibles en ligne" attr="" attrlink="" >}}
 
