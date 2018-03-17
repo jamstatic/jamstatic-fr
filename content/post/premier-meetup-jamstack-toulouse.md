@@ -2,7 +2,6 @@
 title: "Meetup JAMstack Toulouse #1"
 date: 2018-03-17T09:24:53+01:00
 description: "Deux très bonnes présentations de Netlify et Alogilia au premier meetup JAMStack français."
-author: Frank Taillandier
 images:
   - /assets/images/2018/03/thefrontisback.jpg
 ---

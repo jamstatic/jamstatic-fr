@@ -2,7 +2,6 @@
 title: "La fonction .Scratch d'Hugo"
 date: 2018-02-09T20:50:50+01:00
 draft: false
-author: Frank Taillandier
 categories:
   - hugo
 source:

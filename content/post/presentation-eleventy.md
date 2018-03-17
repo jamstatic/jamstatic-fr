@@ -4,7 +4,6 @@ date: 2018-02-18 10:23:07 +0100
 description: Zach Leat explique pourquoi il a développé Eleventy, un générateur de
   site statique basé sur JavaScript, particulièrement flexible et qui sait se faire
   oublier.
-author: Frank Taillandier
 categories:
 - eleventy
 images:
