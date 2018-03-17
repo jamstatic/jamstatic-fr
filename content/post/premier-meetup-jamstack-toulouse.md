@@ -4,12 +4,16 @@ date: 2018-03-17T09:24:53+01:00
 description: "Deux très bonnes présentations de Netlify et Alogilia au premier meetup JAMStack français."
 author: Frank Taillandier
 images:
-  - /assets/images/2018/03/phil-meetup-jamstack.jpg
+  - /assets/images/2018/03/thefrontisback.jpg
 ---
 
 {{% intro %}}
   Ce premier meetup JAMstack français a été l'occasion d'accueillir Netlify et Algolia, deux acteurs incontournables du mouvement. Les deux start-ups sont maintenant devenues des références dans leur domaine, l'une pour le déploiement d'applications web servies en statique, l'autre comme service de recherche embarquée. Au programme deux présentations de Phil Hawksworth et Martyn Davies toutes deux axées sur la _developer experience_ et les bénéfices apportés par ces deux services de qualité.
 {{% /intro %}}
+
+{{< figure src="/assets/images/2018/03/thefrontisback.jpg" caption="The Front is back !" attr="Photo : Nicolas Manaud" attrlink="https://twitter.com/nmanaud/status/974957331279695872" >}}
+
+Lors de l'introduction, j'ai rapidement rappelé comment nous en sommes arrivés à ces workflows de déploiement et comment ils permettent aux développeurs front-end de reprendre la main sur ce qui est produit en sortie, puisqu'ils sont libres de choisir la solution de templating qui va générer le HTML et qu'ils ne seront pas contraints par la structure de la base de données d'un CMS. Une vrai aubaine pour les artisans qui aiment faire les choses bien et se soucient de la qualité.
 
 ## Making platforms promote performance
 
