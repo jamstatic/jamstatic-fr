@@ -8,7 +8,7 @@ images:
   - https://res.cloudinary.com/practicaldev/image/fetch/s--bOzJM1UG--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/9heb90tm7eoyapp3mbl1.jpg
 source:
   author: "Jessica West"
-  title: " Getting Started with Algolia "
+  title: "Getting Started with Algolia"
   url: "https://dev.to/algolia/getting-started-with-algolia-4lnp"
 ---
 
@@ -18,7 +18,7 @@ Algolia fait tout pour faciliter l'ajout d'une recherche performante sur votre s
 
 Salut 👋 ! Ça vous est déjà arrivé de développer entièrement un moteur de recherche ? Avez-vous déjà redouté que votre Product Manager vous dise "tu sais ce qui serait super ? Ce serait d'avoir une barre de recherche sur le site" et là votre première réaction est de soupirer et de lever les yeux au ciel…
 
-Ça m'est arrivé malheureusement beaucoup trop souvent. Pour être franche, j'évitais ce genre de demande comme la peste car même quand j'arrivais à faire fonctionner la recherche, je voyais bien que c'est pas "génial" et de plus arrivée à la moitié de la documenttion je me demandais, mais bon sang, où est-ce qu'est censé aller ce module ? Vraiment, c'est pas marrant à faire.
+Ça m'est arrivé malheureusement beaucoup trop souvent. Pour être franche, j'évitais ce genre de demande comme la peste car même quand j'arrivais à faire fonctionner la recherche, je voyais bien que c'est pas "génial" et de plus arrivée à la moitié de la documentation je me demandais, mais bon sang, *où est-ce qu'est censé aller ce module ?* Vraiment, c'est pas marrant à faire.
 
 Mais maintenant, nous avons des outils et des services à notre disposition qui rendent tout cela bien plus simple. C'est fini le temps où on développait un moteur de recherche à la mano. Ah, que c'est beau le progrès. Ma vie est un peu plus simple chaque jour qui passe.
 
@@ -35,7 +35,7 @@ Une fois que c'est fait, ajoutez-les dans ce que vous utilisez pour stocker vos 
 
 ## Connecter votre source de données
 
-Si vos données déjà sont accessibles en ligne, nous pouvons commencer par la création d'une fonction qui va appeller cette URL et venir alimenter l'index de votre application Algolia. Regardons comment faire ça en JavaScript.
+Si vos données déjà sont accessibles en ligne, nous pouvons commencer par la création d'une fonction qui va appeler cette URL et venir alimenter l'index de votre application Algolia. Regardons comment faire ça en JavaScript.
 
 ```javascript
 const data_url = "https://raw.githubusercontent.com/algolia/datasets/master/movies/actors.json"
@@ -53,13 +53,13 @@ function indexData(data_url){
 ```
 
 Pour le moment cette fonction ne fait que récupérer l'url de données que nous lui passons en paramètre et affiche dans la console le premier enregistrement trouvé. Ici nous faisons appel à Axios pour effectuer des appels d'API.
-Axios est une librairie JavaScript utilisée pour faire des requêtes HTTP avec node.js ou depuis le navigateur et elle retourne une promesse, une API native en JavaScript depuis EcmaScript6. L'avantage de cette librairie, c'est qu'elle peut transformer automatiquement des données JSON.
+Axios est une librairie JavaScript utilisée pour faire des requêtes HTTP avec node.js ou depuis le navigateur et elle retourne une promesse, une API native en JavaScript depuis ECMAScript 6. L'avantage de cette librairie, c'est qu'elle peut transformer automatiquement des données JSON.
 
 ## Préparer les données pour Algolia
 
-Maintenant que nous avons fait un appel à nos données, commençons à utiliser le compte Algolia que nous venons de créer pour mettre à jour notre index avec nos données ! Nous allons faire ça en deux temps, d'abord nous allons parcourir les données retournées par notre appel axios.het et en fait un tableau d'objets. Cela va nous permettre de n'utiliser que les données que nous voulons dans notre index. Après, une fois que c'est fait nous pouvons envoyer ces données à notre index Algolia.
+Maintenant que nous avons fait un appel à nos données, commençons à utiliser le compte Algolia que nous venons de créer pour mettre à jour notre index avec nos données ! Nous allons faire ça en deux temps, d'abord nous allons parcourir les données retournées par notre appel `axios.get` et en faire un tableau d'objets. Cela va nous permettre de n'utiliser que les données que nous voulons dans notre index. Après, une fois que c'est fait nous pouvons envoyer ces données à notre index Algolia.
 
-*Première étape :* Plutôt que de juste retourner une réponse positive, créeons une fonction que va gérer l'upload en lui passant la réponse à notre appel `axios.get`.
+*Première étape :* Plutôt que de juste retourner une réponse positive, créons une fonction qui va gérer cet envoi des données en lui passant la réponse à notre appel `axios.get`.
 
 ```javascript
 function indexData(data_url){
@@ -76,7 +76,7 @@ function indexData(data_url){
 }
 ```
 
-Maintenant dans notre fonction, nous allons vouloir parcourir toutes les entrées présentes dans nos données et en faire des objets algolia, à l'aide d'une boucle qui devrait être facile à écrire.
+Maintenant dans notre fonction, nous allons vouloir parcourir toutes les entrées présentes dans nos données et en faire des objets Algolia, à l'aide d'une boucle qui devrait être assez facile à écrire.
 
 ```javascript
 function dataToAlgoliaObject(data_points){
@@ -97,7 +97,7 @@ function dataToAlgoliaObject(data_points){
 }
 ```
 
-*Deuxième étape :* Maintenant que nous avons crée nos objets, ils sont prêts à être envoyé à Algolia !
+*Deuxième étape :* Maintenant que nous avons crée nos objets, ils sont prêts à être envoyés à Algolia !
 
 Changeons quelques trucs dans notre fonction `indexData`. Nous pouvons chaîner notre appel avec un `.then` grâce la structure de notre promesse axios et utiliser `async` et `await` pour nous assurer que tout se passe bien pendant l'envoi de nos données.
 
@@ -140,11 +140,11 @@ function sendDataToAlgolia(algoliaObjects){
 
 ## Configuration des paramètres
 
-Nous avons des données dans notre index ! Maintenant, nous voulons mainenant dire à Algolia comment nous voulons que ces données soient utilisées. Nous pouvons faire cela dans l'interface d'administration ou avec du code. Je préfère la deuxième méthode, voyons comment faire cela ensemble. Nous avons beaucoup d'options mais nous pouvons nous en tenir aux options de base :
+Nous avons des données dans notre index ! Maintenant, nous voulons dire à Algolia comment nous voulons que ces données soient utilisées. Nous pouvons faire cela dans l'interface d'administration ou avec du code. Je préfère la deuxième méthode, voyons ensemble comment faire cela. Nous avons _beaucoup_ d'options mais tenons nous en pour le moment aux options de base :
 
-- *searchableAttributes*: listez ce que vous voulez pouvoir recherche dans l'objet Algolia que vous avez crée
+- *searchableAttributes*: listez ce que vous voulez pouvoir rechercher dans l'objet Algolia que vous avez crée
 - *attributesToHighlight*: mettre en surbrillance le champ recherché
-- *customRanking*: choississez la façon donc vous voulez afficher vos données, desc() ou asc()
+- *customRanking*: choisissez la façon donc vous voulez afficher vos données, `desc()` ou `asc()`
 - *attributesToRetrieve*: les attributs à afficher dans les résultats de recherche
 
 ```javascript
@@ -168,7 +168,7 @@ async function configureAlgoliaIndex(){
 }
 ```
 
-Ajoutons mainenant cette fonction, une fois l'envoi de notre index correctement effectué.
+Ajoutons maintenant cette fonction, une fois l'envoi de notre index correctement effectué.
 
 ```javascript
 function indexData(data_url){
@@ -193,20 +193,20 @@ function indexData(data_url){
 }
 ```
 
-Wow, nous avons maintenant ajouté les données à notre index comme nous le souhaitions. Nous en avons donc terminé avec la partie back-end, passons maintenant à la partie où les gens peuvent voir et rechercher dans nos si chères données.
+Waouh, nous avons maintenant ajouté les données à notre index comme nous le souhaitions. Nous en avons donc terminé avec la partie serveur, passons maintenant à la partie où les gens peuvent voir et rechercher dans nos données, si chères à nos yeux.
 
 ## Connecter le front-end
 
-Algolia a ce qu'on appelle des _widgets_, qui nous permettent d'ajouter rapidement des sections dans notre page HTML sans avoir à écrire beaucoup de code. Des éléments comme une barre de recherche ou l'endroit où nos objets Algolia seront vus dans la page peuvent être ajoutés à l'aide de quelques lignes de JavaScript. Ouvrons notre fichier pour le côté client.
+Algolia a ce qu'on appelle des _widgets_, qui nous permettent d'ajouter rapidement des sections dans notre page HTML sans avoir à écrire beaucoup de code. Des éléments comme une barre de recherche, ou bien l'endroit où nos objets Algolia seront vus dans la page, peuvent être ajoutés à l'aide de quelques lignes de JavaScript. Ouvrons notre fichier pour le côté client.
 
-Nous allons commencer par créer une instance d'`instantsearch` que nous pourrons utiliser dans notre application. Vous pouvez utiiser des cookies pour passer ces données du serveur au client ou bien vous pouvez utiliser les clefs. Pour faire au plus court, nous allons utiliser les clefs ici.
+Nous allons commencer par créer une instance d'`instantsearch` que nous pourrons utiliser dans notre application. Vous pouvez utiliser des cookies pour passer ces données du serveur au client ou bien vous pouvez utiliser les clefs. Pour faire au plus simple, nous allons utiliser les clefs ici.
 
 ```javascript
 $(document).ready(function() {
   var instantsearch = window.instantsearch;
 
   // création d'une instance d'instantsearch
-  // avc notre identidiant d'application et notre clef d'API
+  // avec notre identifiant d'application et notre clef d'API
     var search = instantsearch({
       appId: Cookies.get('app_id'),
       apiKey: Cookies.get('search_api_key'),
@@ -219,7 +219,7 @@ $(document).ready(function() {
   });
 ```
 
-Connectons maintenant notre input de recherche à notre code HTML pour que les gens aient une barre de recherche.
+Connectons maintenant notre *input* de recherche à notre code HTML pour que les gens aient une barre de recherche.
 
 ```javascript
 search.addWidget(
@@ -238,7 +238,7 @@ Maintenant, nous voulons ajouter les résultats provenant de nos données, et re
       container: '#hits',
       hitsPerPage: 12,
       templates: {
-        empty: `<div class="col-md-12" style="text-align: center;"> Nous n'avons pas trouvés de résultats correspondant à votre recherche <em>\"{{query}}\"</em></div`,
+        empty: `<div class="col-md-12" style="text-align: center;"> Nous n'avons pas trouvé de résultats correspondants à votre recherche <em>\"{{query}}\"</em></div`,
         item: function(hit) {
           try {
             return `
@@ -263,7 +263,7 @@ Maintenant, nous voulons ajouter les résultats provenant de nos données, et re
   );
 ```
 
-Une bonne expérience de recheche ne devrait pas retourner trop de résultats à la fois, ajoutons donc une paginaion aux résultats que nous renvoyons.
+Une bonne expérience de recherche ne devrait pas retourner trop de résultats à la fois, ajoutons donc une pagination aux résultats que nous renvoyons.
 
 
 ```javascript
@@ -285,4 +285,4 @@ Naturellement, si vous voulez vous épargner tout ce travail manuel, vous pouvez
 
 {{< figure src="https://cdn.glitch.com/45e6d35c-2e10-4020-8ad3-d5f1b9d3aae6%2Fezgif.com-gif-maker.gif?1514128983358" caption="" attr="" attrlink="" >}}
 
-😉 J'espère que cette lecture vous a plus et vous aura été utile !
+😉 J'espère que cette lecture vous a plu et vous aura été utile !
