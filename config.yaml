@@ -23,12 +23,18 @@ outputs:
     - rss
     - jsonfeed
     - HEADERS
+    - algolia
   page:
     - html
   section:
     - rss
 
 outputFormats:
+  algolia:
+    baseName: "algolia"
+    isPlainText: true
+    mediaType: "application/json"
+    notAlternative: true
   rss:
     baseName: "feed"
   jsonfeed:
@@ -57,6 +63,16 @@ params:
   branch: master
   images:
     - "assets/images/twitter-card.jpg"
+  algolia:
+    vars:
+      - title
+      - summary
+      - date
+      - publishdate
+      - expirydate
+      - permalink
+    params:
+      - categories
 
 related:
   threshold: 80
