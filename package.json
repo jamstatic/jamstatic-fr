@@ -1,0 +1,25 @@
+{
+  "name": "jamstatic.fr",
+  "version": "0.1.0",
+  "description": "Jamstatic website",
+  "scripts": {
+    "algolia": "atomic-algolia"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamstatic/jamstatic-fr.git"
+  },
+  "keywords": [
+    "hugo",
+    "algolia"
+  ],
+  "author": "Frank Taillandier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jamstatic/jamstatic-fr/issues"
+  },
+  "homepage": "https://github.com/jamstatic/jamstatic-fr#readme",
+  "dependencies": {
+    "atomic-algolia": "^0.3.12"
+  }
+}

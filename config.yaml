@@ -11,7 +11,6 @@ footnoteReturnLinkContents: "↩"
 googleAnalytics: UA-75833986-1
 disqusShortname: jekyllfr
 
-
 mediaTypes:
   "text/netlify":
     suffix: ""
@@ -73,6 +72,9 @@ params:
       - permalink
     params:
       - categories
+    appId: TLI4UDRZDR
+    indexName: jamstatic
+    searchOnlyApiKey: 5af8d385eec1e00ac16d0963c630b6ac
 
 related:
   threshold: 80

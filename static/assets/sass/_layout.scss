@@ -14,7 +14,7 @@ body {
   padding: $base-line 0;
   min-height: 56px;
   background-color: $brand-color;
-  background-image: linear-gradient(45deg, #4d9abf 0, $brand-color 100%);
+  background-image: linear-gradient(45deg, $brand-light 0, $brand-color 100%);
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -127,7 +127,7 @@ body {
   margin-bottom: 5rem;
   list-style: none;
 
-  > li {
+  .post-item {
     line-height: 1.1;
     padding: $spacing-unit/$ms3;
     border-radius: 8px;
@@ -138,8 +138,7 @@ body {
       display: block;
       content: "";
       border-top: $smallest solid $brand-color;
-      border-image: linear-gradient(45deg, #4d9abf 0, $brand-color 100%) 10;
-
+      border-image: linear-gradient(45deg, $brand-light 0, $brand-color 100%) 10;
     }
   }
 }
@@ -169,12 +168,12 @@ body {
 }
 
 @include media-query($on-tablet) {
-  .post-list {
+  .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 1em;
 
-    > li {
+    .post-item {
       padding-bottom: $spacing-unit;
     }
   }
@@ -185,7 +184,7 @@ body {
 }
 
 @include media-query($on-desktop) {
-  .post-list {
+  .grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
