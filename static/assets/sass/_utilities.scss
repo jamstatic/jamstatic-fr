@@ -60,12 +60,9 @@
 .icon {
   > svg {
     display: inline-block;
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
-
-    path {
-      fill: $grey;
-    }
+    width: 2em;
+    height: 1.5em;
+    vertical-align: sub;
+    fill: currentColor;
   }
 }

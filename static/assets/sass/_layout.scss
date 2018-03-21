@@ -13,8 +13,9 @@ body {
   min-height: 56px;
   background-color: $brand-color;
   background-image: linear-gradient(45deg, #4d9abf 0, $brand-color 100%);
-  color: #fff;
-  box-shadow: 0 2px 4px 0 hsla(0, 0%, 0%, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .site-title {
@@ -35,7 +36,9 @@ body {
   &,
   &:hover,
   &:visited {
-    color: #fff;
+    color: rgba(255, 255, 255, 0.9);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     text-decoration: none;
   }
 
@@ -49,7 +52,6 @@ body {
   padding: 0;
   width: 100%;
   text-align: center;
-  font-size: $small;
   text-shadow: 0 1px 1px rgba(27, 31, 35, 0.25), 0 1px 25px rgba(27, 31, 35, 0.75);
 
   .menu-icon {
@@ -66,70 +68,39 @@ body {
 }
 
 .site-footer {
-  padding: $spacing-unit $spacing-unit / 2 0;
+  position: relative;
+  padding: $spacing-unit*2 0 $spacing-unit;
   background: #f7f8f8;
   color: $grey;
+  font-size: $small;
+  text-align: center;
+
+  a {
+    color: $grey;
+
+    &:hover {
+      color: $brand-color;
+      text-decoration: none;
+    }
+  }
 }
 
 .contact-list,
 .social-media-list {
   list-style: none;
   margin-left: 0;
+  margin-bottom: $spacing-unit;
 
   li {
     display: inline-block;
-    padding: 0 0.335em;
-  }
-}
-
-.footer-col-wrapper {
-  font-size: $smaller;
-  margin-left: -$spacing-unit / 2;
-
-  @extend %clearfix;
-
-  a {
-    color: $brand-color;
-    padding: 0 0.16150558em;
-
-    &:hover {
-      color: darken($brand-color, 10%);
-    }
-  }
-}
-
-.footer-col {
-  float: none;
-  width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-  width: calc(100% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-2 {
-  text-align: right;
-}
-
-@include media-query($on-tablet) {
-  .footer-col {
-    float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
-  }
-
-  .footer-col-1,
-  .footer-col-2 {
-    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-    width: calc(50% - (#{$spacing-unit} / 2));
-  }
-
-  .footer-col-3 {
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width: calc(100% - (#{$spacing-unit} / 2));
+    padding: 0 0.69445em;
   }
 }
 
 /**
  * Page content
  */
+
 .page-content {
   li {
     margin-bottom: ($base-line-height / 2);
@@ -188,7 +159,6 @@ body {
       color: $brand-color;
     }
   }
-
 }
 
 @include media-query($on-tablet) {
