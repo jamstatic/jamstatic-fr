@@ -70,6 +70,7 @@ params:
       - publishdate
       - expirydate
       - permalink
+      - relpermalink
     params:
       - categories
     appId: TLI4UDRZDR

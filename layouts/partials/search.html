@@ -69,7 +69,6 @@ const search = instantsearch({
   appId: '{{ $.Param "algolia.appId" }}',
   indexName: '{{ $.Param "algolia.indexName" }}',
   apiKey: '{{ $.Param "algolia.searchOnlyApiKey" }}'
-
 });
 
 const hitTemplate = function(hit) {
@@ -82,7 +81,7 @@ const hitTemplate = function(hit) {
   return `
     <li class="post-item">
       <span class="post-meta">${date}</span>
-      <h2 class="post-link"><a href="${hit.permalink}">${hit.title}</a></h2>
+      <h2 class="post-link"><a href="${hit.relpermalink}">${hit.title}</a></h2>
     </li>
   `;
 }
