@@ -19,6 +19,7 @@ $ms4: $ratio * $ms3; /* 2.074 */
 $ms5: $ratio * $ms4; /* 2.488 */
 $ms6: $ratio * $ms5; /* 2.986 */
 $ms7: $ratio * $ms6; /* 3.583 */
+$smallest: $base-em / $ms3;
 $smaller: $base-em / $ms2;
 $small: $base-em / $ms1;
 $normal: $base-em * $ms0;

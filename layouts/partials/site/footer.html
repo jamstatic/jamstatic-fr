@@ -2,16 +2,19 @@
   <div class="wrapper">
     <ul class="social-media-list">
       <li>
-        {{- partial "icons/rss" . -}}
+        {{- partialCached "icons/rss" . -}}
       </li>
       <li>
-        {{- partial "icons/slack" . -}}
+        {{- partialCached "icons/slack" . -}}
       </li>
       <li>
-        {{- partial "icons/github" . -}}
+        {{- partialCached "icons/github" . -}}
       </li>
       <li>
-        {{- partial "icons/twitter" . -}}
+        {{- partialCached "icons/twitter" . -}}
+      </li>
+      <li>
+        {{- partialCached "icons/meetup" . -}}
       </li>
     </ul>
 
