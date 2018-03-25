@@ -3,6 +3,10 @@ title: Gérer les images responsive dans Jekyll avec le plugin Cloudinary
 description: Nicolas Hoizey présente les fonctionnalités de gestion d'images responsive offertes par le plugin Cloudinary qu'il a développé pour Jekyll.
 date: 2016-08-31
 author: Nicolas Hoizey
+source:
+  author: Nicolas Hoizey
+  url: http://cloudinary.com/blog/how_i_used_cloudinary_to_solve_responsive_image_needs_in_my_jekyll_website_and_shared_the_magic_in_a_plugin
+  title: How I used Cloudinary to solve responsive image needs in my Jekyll website, and shared the magic in a plugin
 images:
   - http://res-1.cloudinary.com/cloudinary/image/upload/c_fill,w_560/dpr_1.0/jekyll_cloudinary_plugin.png
 categories:
@@ -10,7 +14,7 @@ categories:
 ---
 
 {{% intro %}}
-J'ai récemment mis à jour [mon site perso](https://nicolas-hoizey.com) avec [la dernière version de Jekyll](https://jekyllrb.com/news/2015/10/26/jekyll-3-0-released/) et j'en ai profité pour changer quelques outils.
+J'ai récemment mis à jour [mon site perso](https://nicolas-hoizey.com) avec [la version 3.0 de Jekyll](https://jekyllrb.com/news/2015/10/26/jekyll-3-0-released/) et j'en ai profité pour changer quelques outils.
 {{% /intro %}}
 
 Les plugins que j'utilisais ne répondaient pas à mes exigences pour les images reponsive, j'ai donc décidé de trouver d'autres moyens de satisfaire ces besoins.
@@ -31,9 +35,9 @@ Avec un compte gratuit, j'ai pu tester ce que je voulais, essayer différentes f
 
 Les fonctions principales que je cherchais et que fournit Cloudinary sont :
 
-- **[La possibilité d'utiliser le service comme un proxy](http://cloudinary.com/documentation/upload_images#auto_fetching_remote_images):** les images originales sont stockées sur mon serveur, mais toutes les images servies à mes visiteurs le sont depuis Cloudinary, générées à la volée à partir des originales. Encore mieux, je n'ai pas besoin d'uploader les images originales - Cloudinary les récupère automatiquement à partir de mes versions publiées en local. Entre d'autres termes, le seul "client" pour mes images d'origine c'est Cloudinary. Du coup, je consomme très peu de bande passante pour mes images chez mon hébergeur.
+- **[La possibilité d'utiliser le service comme un proxy](http://cloudinary.com/documentation/upload_images#auto_fetching_remote_images) :** les images originales sont stockées sur mon serveur, mais toutes les images servies à mes visiteurs le sont depuis Cloudinary, générées à la volée à partir des originales. Encore mieux, je n'ai pas besoin d'uploader les images originales - Cloudinary les récupère automatiquement à partir de mes versions publiées en local. Entre d'autres termes, le seul "client" pour mes images d'origine c'est Cloudinary. Du coup, je consomme très peu de bande passante pour mes images chez mon hébergeur.
 - **Recadrage et options de redimensionnement des images :** actuellement, je ne fais que retailler mes images à partir des originaux en large résolution pour les adapter aux mises en page responsive. Je me penche sérieusement sur la possibilité de faire de la direction artistique avancée à l'aide des [fonctionnalités de recadrage automagiques de Cloudinary](http://cloudinary.com/blog/introducing_smart_cropping_intelligent_quality_selection_and_automated_responsive_images).
-- **[Optimisation du format des images](http://cloudinary.com/documentation/image_transformations#automatic_format_selection):** Si je publie des images JPEG dans mes billets, Cloudinary peut envoyer des images au format WebP aux visiteurs s'il est supporté par leur navigateur. Le mois dernier, deux tiers des images servies par Cloudinary à mes visiteurs étaient au format WebP, que Cloudinary génére et sert pour moi automatiquement. C'est un gain énorme à la fois pour la performance et les forfaits de données de mes visiteurs et également pour mon quota de bande passante chez Cloudinary.
+- **[Optimisation du format des images](http://cloudinary.com/documentation/image_transformations#automatic_format_selection) :** Si je publie des images JPEG dans mes billets, Cloudinary peut envoyer des images au format WebP aux visiteurs s'il est supporté par leur navigateur. Le mois dernier, deux tiers des images servies par Cloudinary à mes visiteurs étaient au format WebP, que Cloudinary génére et sert pour moi automatiquement. C'est un gain énorme à la fois pour la performance et les forfaits de données de mes visiteurs et également pour mon quota de bande passante chez Cloudinary.
 - **[Optimisation de la compression d'image](http://cloudinary.com/documentation/image_transformations#automatic_quality_and_encoding_settings):** Cloudinary est capable de calculer le meilleur niveau de compression pour réduire le poids de chaque image, sans pour autant dégrader la qualité du visuel.
 
 Persuadé que Cloudinary répondait à toutes mes attentes, il me fallait encore développer un plugin Jekyll qui puisse utliser ces fonctionalités.
@@ -115,5 +119,3 @@ Et après ? Au début, je voulais permettre aux auteurs d'utiliser simplement [l
 Au final, cela a était un bon moyen d'apprendre un peu de Ruby, de comprendre les rouages internes de Jekyll, comment fonctionnent les plugins et comment publier une Gem… J'ai tellement appris en peu de temps grâce à ce petit projet si utile et important à mes yeux.
 
 Bien entendu, toute aide est la bienvenue pour aider à améliorer le plugin. Il y a déjà [quelques anomalies et demandes de fonctionnalités ouvertes](https://github.com/nhoizey/jekyll-cloudinary/issues). N'hésitez pas à me signaler tout problème ou à partager vos idées, voire même à contribuer via des [pull requests](https://github.com/nhoizey/jekyll-cloudinary/pulls) !
-
-[Read original English version of this post on Cloudinary's blog ](http://cloudinary.com/blog/how_i_used_cloudinary_to_solve_responsive_image_needs_in_my_jekyll_website_and_shared_the_magic_in_a_plugin)
