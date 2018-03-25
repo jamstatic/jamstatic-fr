@@ -95,7 +95,7 @@ Pour imbriquer correctement les réponses, j'avais besoin de pouvoir déterminer
 
 Afin d'éviter d'afficher des doublons, j'avais besoin d'exclure les réponses et de ne montrer que les commentaires parents dans la boucle principale. C'était le moment idéal pour utiliser le filtre `where_exp` de Jekyll.
 
-{{% notice info %}}
+{{% notice tip %}}
 #### Le filtre d'expression where de Jekyll
 
 Sélectionne tous les objets d'un tableau pour lesquels la condition est vraie, depuis la version 3.2.0 de Jekyll.
@@ -232,10 +232,7 @@ Une fois cela découvert, la solution était simple --- supprimer `[1]` pour cha
 {% assign message = comment.message %}
 ```
 
-<figure>
-  <img src="https://mademistakes.com/assets/images/staticman-parent-comments-only.png" alt="Seulement des commentaires parents">
-  <figcaption>Ça marche, nous avons des commentaires parents !</figcaption>
-</figure>
+{{< figure src="https://mademistakes.com/assets/images/staticman-parent-comments-only.png" alt="Seulement des commentaires parents" caption="Ça marche, nous avons des commentaires parents.">}} 
 
 #### Note : `sort` et les filtres `where` ne font pas bon ménage
 
@@ -446,10 +443,8 @@ J'ai commencé par utiliser une condition `unless` pour n'afficher que les liens
 {% endunless %}
 ```
 
-<figure>
-  <img src="https://mademistakes.com/assets/images/staticman-nested-comments.png" alt="Commentaires imbriqués">
-  <figcaption>Commentaires imbriqués sur un seul niveau de profondeur.</figcaption>
-</figure>
+{{< figure src="https://mademistakes.com/assets/images/staticman-nested-comments.png" alt="Commentaires imbriqués" caption="Commentaires imbriqués sur un seul niveau de profondeur." >}}
+
 
 Pour donner vie au **lien répondre** j'ai lui ai ajouté l'attribut `onclick` suivant et du [JavaScript](https://github.com/mmistakes/made-mistakes-jekyll/blob/49632d19977e341b51c91dad8e71bf6ef88e79c3/src/assets/javascripts/main.js#L84-L181).
 
@@ -457,17 +452,11 @@ Pour donner vie au **lien répondre** j'ai lui ai ajouté l'attribut `onclick` s
 onclick="return addComment.moveForm('comment-{{ include.index }}', '{{ include.index }}', 'respond', '{{ page.slug }}')"
 ```
 
-
 J'ai juste eu à modifier quelques noms de variables dans le script `comment-reply.js` de WordPress pour que tout marche bien avec le balisage de mon formulaire.
 
-{% capture reply_caption %}
-Appuyer sur le **bouton répondre** déplace le formulaire du commentaire dans la vue et remplit le champ `<input type="hidden" id="comment-parent" name="options[parent]" value="">` avec la bonne `value` du *parent*. Alors qu'appuyer sur **Annuler réponse** remet le formulaire dans son état d'origine.
-{% endcapture %}
-
-<figure>
-  <img src="https://mademistakes.com/assets/images/comment-reply-animation.gif" alt="Les réponses aux commentaires en action">
-  <figcaption>{{ reply_caption | markdownify | remove: '<p>' | remove: '</p>' }}</figcaption>
-</figure>
+{{< figure
+src="https://mademistakes.com/assets/images/comment-reply-animation.gif"
+alt="Les réponses aux commentaires en action" caption= "Appuyer sur le **bouton répondre** déplace le formulaire du commentaire dans la vue et remplit le champ `<input type=\"hidden\" id=\"comment-parent\" name=\"options[parent]\" value=\"\">` avec la bonne `value` du *parent*. Alors qu'appuyer sur **Annuler réponse** remet le formulaire dans son état d'origine." >}} 
 
 ## Ajout du support des notifications par mail
 
@@ -485,13 +474,16 @@ allowedOrigins: ["mademistakes.com"]
 
 Le(s) domaine(s) autorisé()s doi(ven)t correspondre à ceux passés par le champ `options.origin` que nous allons ajouter à la prochaine étape. Seuls les domaines correspondants déclencheront les notifications à envoyer, faute de quoi l'opération échouera.
 
-<div class="notice--info" markdown="1">
-
+{{% notice tip %}}
 #### ProTip : Utilisez votre propre compte Mailgun
 
-L'instance publique de Static man utilise un compte [**Mailgun**](http://www.mailgun.com/) limité à 10 000 emails par mois. Je vous encourage à créer un compte et à ajouter votre propre [API et domaine Mailgun](https://staticman.net/docs/configuration#notifications.enabled) dans le fichier `staticman.yml`. Assurez vous de bien chiffrer les deux en utilisant le chemin suivant : `https://api.staticman.net/v2/encrypt/{TEXTE À CHIFFRER}`.
-
-</div>
+L'instance publique de Static man utilise un compte
+[**Mailgun**](http://www.mailgun.com/) limité à 10 000 emails par mois. Je vous
+encourage à créer un compte et à ajouter votre propre [API et domaine
+Mailgun](https://staticman.net/docs/configuration#notifications.enabled) dans le
+fichier `staticman.yml`. Assurez vous de bien chiffrer les deux en utilisant le
+chemin suivant : `https://api.staticman.net/v2/encrypt/{TEXTE À CHIFFRER}`.
+{{% /notice %}}
 
 ### Mise à jour du formulaire de commentaire
 
@@ -524,6 +516,4 @@ Si tout est correctement configuré, l'utilisateur devrait recevoir un mail dès
   <figcaption>Exemple d'un mail de notification "Nouvelle réponse" de Staticman.</figcaption>
 </figure>
 
----
-
-Voilà, vous avez mis en place un système de commentaires basé sur des fichiers statiques dans Jekyll et qui gère les commentaires imbriqués et les notifications de réponse. Maintenant j'aimerais gagner une minute de temps de génération pour pouvoir ajouter les nouveaux commentaires encore plus vite :frowning:.
+Voilà, vous avez mis en place un système de commentaires basé sur des fichiers statiques dans Jekyll et qui gère les commentaires imbriqués et les notifications de réponse. Maintenant j'aimerais gagner une minute de temps de génération pour pouvoir ajouter les nouveaux commentaires encore plus vite 😦.
