@@ -3,7 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
-  <div class="home">
+  <main class="home">
     <div id="search-searchbar"></div>
     <ul class="post-list" id="search-hits">
       {{ range .Data.Pages }}
@@ -13,6 +13,6 @@
       </li>
       {{ end }}
     </ul>
-  </div>
+  </main>
   {{ partial "search.html" . }}
 {{ end }}
