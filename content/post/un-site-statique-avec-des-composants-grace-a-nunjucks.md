@@ -63,7 +63,7 @@ Cela fait parfaitement sens ici de créer un gabarit de page, qui inclus des mor
 
 Vous remarquerez que les fichiers inclus sont commencent par un tiret bas et possèdent l'extension `.njk`. Ce n'est pas obligatoire, ils pourraient se nommer `header.html` ou `icons.svg` mais ils sont nommés ainsi car premièrement c'est une convention de nommmage qu'on rencontre souvent pour les fichiers partiels. Dans CodePen, cela signifie qu'ils ne seront pas compilés tous seuls, et deuxièmement utiliser l'extention `.njk` nous permettra de faire plus de choses avec Nunjucks si besoin.
 
-Rien de spécial dans ces morceaux de fichiers. C'est simplement des petits bouts de HTML destinés à être utiliser sur toutes nos pages.
+Rien de spécial dans ces morceaux de fichiers. Ce sont simplement des petits bouts de HTML destinés à être utiliser sur toutes nos pages.
 
 ```html
 <footer>

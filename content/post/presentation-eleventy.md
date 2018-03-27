@@ -20,7 +20,7 @@ L'auteur d'Eleventy, le talentueux [Zach Leat](https://twitter.com/zachleat), d�
 
 Eleventy est un nouveau générateur de site statique.
 
-_Si n'êtes pas encore au fait de ce que sont les générateurs de sites statiques et des avantages qu'ils procurent, lisez [ce très bon article](https://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/) paru dans Smashing Magazine écrit par [Matt Biilmann](https://twitter.com/biilmann)._
+{{% notice info %}}Si n'êtes pas encore au fait de ce que sont les générateurs de sites statiques et des avantages qu'ils procurent, lisez [ce très bon article](https://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/) paru dans Smashing Magazine écrit par [Matt Biilmann](https://twitter.com/biilmann).{{% /notice %}}
 
 Encore un générateur de site statique ? Oui. Mais pourquoi ? Bonne question.
 
