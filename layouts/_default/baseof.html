@@ -3,7 +3,7 @@
 
 {{- partial "site/head" . -}}
 
-<body>
+<body class="{{.Kind}}">
 
 {{- partial "site/header" . -}}
 
@@ -13,7 +13,7 @@
     </div>
   </div>
 
-{{ partialCached "site/footer" . }}
+{{- partialCached "site/footer" . -}}
 {{- partial "site/scripts" . -}}
 </body>
 </html>

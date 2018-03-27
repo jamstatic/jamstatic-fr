@@ -2,19 +2,22 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preload" href="{{ "assets/fonts/open-sans-v15-latin-regular.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{{ "assets/fonts/open-sans-v15-latin-italic.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{{ "assets/fonts/mopen-sans-v15-latin-800.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{ "assets/fonts/roboto-v18-latin-regular.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="{{ "assets/fonts/roboto-v18-latin-800.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "assets/fonts/roboto-v18-latin-900.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+{{- if ne .IsHome true }}
+<link rel="preload" href="{{ "assets/fonts/roboto-v18-latin-italic.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "assets/fonts/roboto-v18-latin-900italic.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "assets/fonts/roboto-mono-v5-latin-regular.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ "assets/fonts/roboto-mono-v5-latin-700.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+{{ end -}}
 <title>{{ block "title" . }}{{ if .IsHome }}{{ .Site.Params.Description }} · {{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} · {{ end }}{{ .Site.Title }}{{ end }}{{ end }}</title>
 {{ .Hugo.Generator }}
 <link rel="stylesheet" href="{{ "assets/css/main.css" | relURL }}">
 <link rel="alternate" href="{{ .Site.RSSLink | relURL }}" title="{{ .Site.Title }}" type="application/atom+xml">
 <link rel="alternate" href="{{ "feed.json" | relURL }}" title="{{ .Site.Title }}" type="application/json">
 <link rel="canonical" href="{{ .Permalink }}">
-{{ template "_internal/opengraph.html" . }}
-{{ template "_internal/twitter_cards.html" . }}
+{{- template "_internal/opengraph.html" . -}}
+{{- template "_internal/twitter_cards.html" . -}}
 {{- partialCached "head/favicons.html" . -}}
 {{ if eq (getenv "HUGO_ENV") "production"  }}
   {{ template "_internal/google_analytics_async.html" . }}

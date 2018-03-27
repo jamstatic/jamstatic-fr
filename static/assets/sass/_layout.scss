@@ -70,7 +70,7 @@ body {
 .site-footer {
   position: relative;
   padding: $spacing-unit*2 0 $spacing-unit;
-  background: #f7f8f8;
+  background: rgb(247,247,248);
   color: $grey;
   font-size: $small;
   text-align: center;
@@ -102,6 +102,9 @@ body {
  */
 
 .page-content {
+
+  margin-bottom: $base-line;
+
   li {
     margin-bottom: ($base-line-height / 2);
 
@@ -110,10 +113,19 @@ body {
     }
   }
 
-  hr {
+  .hr::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+    }
+
+  hr, .hr::after {
+    background-image: linear-gradient(90deg, rgba(14, 30, 37, 0) 0, #0e1e25 30%, #0e1e25 70%, rgba(14, 30, 37, 0) 100%);
+    border: none;
+    height: 1.728px;
     margin: $base-line auto;
-    width: 70%;
-    color: $grey-light;
+    opacity: 0.12;
   }
 }
 
@@ -143,11 +155,20 @@ body {
   }
 }
 
+.home .post-meta {
+  display:inline-block;
+  margin-bottom: $spacing-unit / $ms5;
+}
+
 .post-meta {
-  font-size: $small-font-size;
   color: $grey;
-  text-transform: uppercase;
+  font-size: $smaller;
   letter-spacing: $title-letter-spacing;
+  text-transform: uppercase;
+
+  a {
+    font-weight: 400;
+  }
 }
 
 .post-link {
@@ -159,10 +180,10 @@ body {
 
   a {
     text-decoration: none;
-    color: $grey-dark;
+    color: $grey-light;
 
     &:hover {
-      color: $brand-color;
+      color: $grey-dark;
     }
   }
 }
@@ -196,10 +217,6 @@ body {
   margin-bottom: $spacing-unit;
 }
 
-.post-title {
-  text-transform: uppercase;
-}
-
 .post-content {
   margin-bottom: $spacing-unit;
 }
@@ -211,8 +228,8 @@ body {
 
 .intro {
   font-family: $title-font-family;
-  font-weight: 700;
-  line-height: 1.44;
+  font-weight: 900;
+  line-height: $ms2;
   font-size: 1.2em;
 }
 
@@ -223,17 +240,21 @@ body {
   code {
     background-color: inherit;
     border: none;
-    font-weight: bold;
+    font-weight: 900;
   }
 }
 
 .notice {
   margin: 2em 0;
   padding: 1em;
-  border-left: 0.25em solid #91bae0;
+  border-left: 0.25em solid rgba(169,197,234,.6);
+
+  a {
+    color:rgba(0,81,193,.54);
+  }
 
   &.info {
-    background-color: #e9f1f9;
+    background-color: rgba(169,197,234,.2);
   }
 
   &.tip {
@@ -271,7 +292,7 @@ body {
 
 figure {
   display: block;
-  margin: $base-line-height * 1.44em;
+  margin: $base-line 0;
 }
 
 figure > img,
@@ -282,8 +303,8 @@ figure > iframe {
 figcaption {
   text-align: center;
   font-style: italic;
-  line-height: 1;
-  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.2;
+  color: $grey-light;
 }
 
 @include media-query($on-desktop) {

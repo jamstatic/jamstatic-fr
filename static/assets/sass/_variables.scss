@@ -1,9 +1,9 @@
 /* Variables */
-$base-font-family: 'Open Sans', sans-serif;
-$base-font-size: 16px;
-$small-font-size: $base-font-size * 0.833;
+$base-font-family: Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$base-font-size: 18px;
+$small-font-size: $base-font-size * (1/1.44);
 $base-font-weight: 400;
-$title-font-family: 'Roboto', sans-serif;
+$title-font-family: Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 $title-font-weight: 900;
 $title-letter-spacing: 0.021736em;
 $base-line-height: 1.5;
@@ -40,10 +40,9 @@ $on-tablet: 46.005rem;
 $on-desktop: 67.975rem; // content-with + ms3
 
 // Colors
-$text-color: #313d3e;
-$background-color: #fdfdfd;
+$text-color: rgba(14,30,37,.9);
 $brand-color: #00c7b7;
 $brand-light: #4d9abf;
 $grey: #8b8b8b;
-$grey-light: lighten($grey, 40%);
-$grey-dark: darken($grey, 20%);
+$grey-light: rgba(14,30,37,.64);
+$grey-dark: rgba(14,30,37,.9);
