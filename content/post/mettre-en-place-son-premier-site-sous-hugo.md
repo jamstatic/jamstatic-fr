@@ -9,7 +9,7 @@ source:
   title: "Up & Running With Hugo Part I: Building Your First Site"
   url: https://forestry.io/blog/up-and-running-with-hugo/
 images:
-- "https://forestry.io/uploads/2018/03/up_running_w_hugo_I_title.png"
+- "/assets/images/2018/03/up_running_w_hugo_I_1.jpg"
 ---
 
 {{% intro %}}
@@ -155,7 +155,7 @@ Vous pouvez voir l'article mis à jour dans votre navigateur à l'adresse  [http
 
 Pour le moment votre nouveau site n'est pas très beau. Remédions à cela en ajoutant un thème issu de [la galerie de thèmes de Hugo](https://themes.gohugo.io/), développé par un des meilleurs contributeurs de la communauté.
 
-![](https://forestry.io/uploads/2018/03/up_running_w_hugo_I_1.png "Le thème Casper de @vjeantet")
+![](/assets/images/2018/03/up_running_w_hugo_I_1.jpg "Le thème Casper de @vjeantet")
 
 Nous allons utiliser le thème [Casper](https://github.com/vjeantet/hugo-theme-casper) de [_@vjeantet_](https://github.com/vjeantet). Pour ce faire nous allons ajouter le thème dans le dossier `hugo/themes`, plus exactement dans le dossier `hugo/themes/hugo-theme-casper/`.
 
