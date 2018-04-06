@@ -9,7 +9,7 @@ categories:
 source:
   author: "Régis Philibert"
   title: "Better Relationships in Hugo with Hugo's Related Content"
-  url: ""
+  url: "https://regisphilibert.com/blog/2018/04/hugo-optmized-relashionships-with-related-content/"
 ---
 
 {{% intro %}}
@@ -28,14 +28,14 @@ Dans cet article, nous allons voir comme l'implémentation de relations entre vo
 
 ## Le Projet
 
-J'ai crée et commencé à maintenir un site web open source en français sur la saga des [Rougon-Macquart](http://rougon-macquart.com) d'[Émile Zola](https://fr.wikipedia.org/wiki/%C3%89mile_Zola) bien avant que je commencer à coder.
+J'ai crée et commencé à maintenir un site web open source en français sur la saga des [Rougon-Macquart](http://rougon-macquart.com) d'[Émile Zola](https://fr.wikipedia.org/wiki/%C3%89mile_Zola) bien avant que je commence à coder.
 
 Copier-coller la biographie de tous mes personnages dans WordPress m'a pris pas mal de temps, mais je me retrouve maintenant avec le projet idéal pour tester de nouveaux outils : l'API Rest de WordPress, AngularJS et plus récemment Hugo !
 
 Avec un millier d'entrées qui partagent des relations saines, c'est le projet parfait pour tester une nouvelle manière de gérer nos relations.
 
-- Chacun des quelques 1300 personnages apparaît dans quelques nouvelles. La liste des nouvelles où il apparaît est affiché sur la page de chaque personnage.
-- Dans chacune des 20 nouvelles apparaissent de nombreux personnages. Sur la page de chaque nouvelle figure tous les personnages qui y apparaissent.
+- Chacun des quelques 1300 personnages apparaît dans quelques romans. La liste des romans où il apparaît est affichée sur la page de chaque personnage.
+- Dans chacun des 20 romans apparaissent de nombreux personnages. Sur la page de chaque roman figure tous les personnages qui y apparaissent.
 
 ## Statut des relations avant _Related Content_: c'est compliqué
 
@@ -43,15 +43,15 @@ Il n'y avait pas de méthode claire pour connecter des pages entre elles et cré
 
 Une fois les taxonomies écartées, si vous deviez gérer des relations [de plusieurs à un](https://fr.wikipedia.org/wiki/Relation_de_plusieurs_%C3%A0_un), vous avez peut-être utilisé les `sections` avec la plus grande prudence.
 
-Mais quand il s'agit d'implémenter la plus commune des [relations de plusieurs à plusieurs](https://en.wikipedia.org/wiki/Many-to-many_(data_model)), je trouve que la solution la plus sensée est de créer une relation via une entrée Front Matter dans les pages concernées. Pour les Rougon-Macquart de Zola, c'était manifestement le cas.
+Mais quand il s'agit d'implémenter la plus commune des [relations de plusieurs à plusieurs](https://en.wikipedia.org/wiki/Many-to-many_(data_model)), je trouve que la solution la plus sensée est de créer une relation via une entrée Front Matter dans les pages concernées. Pour les Rougon-Macquart de Zola, c'était indéniablement le cas.
 
 ### L'implementation dans le Front Matter
 
-Dans ce projet, les nouvelles peuvent compter jusqu'à 90 personnages. Ce qui signifie qui si nous devions lister tous les personnages présents dans une nouvelle, nous nous retrouverions avec un tableau de 90 entrées en entête de notre fichier Markdown. C'est vraiment loin d'être idéal.
+Dans ce projet, les romans peuvent compter jusqu'à 90 personnages. Ce qui signifie qui si nous devions lister tous les personnages présents dans un roman, nous nous retrouverions avec un tableau de 90 entrées en entête de notre fichier Markdown. C'est vraiment loin d'être idéal.
 
-De plus nous n'avons pas vraiment besoin de référencer la connexion de notre relation à la fois dans les pages de nouvelles *et* dans les pages des personnages. Les personnages ne sont présents que dans 4 à 5 nouvelles tout au plus, il vaut donc mieux déclarer les __quelques__ nouvelles dans lesquelles ils apparaissent plutôt que de lister les __nombreux__ personnages pour chaque nouvelle.
+De plus nous n'avons pas vraiment besoin de référencer la connexion de notre relation à la fois dans les pages de romans *et* dans les pages des personnages. Les personnages ne sont présents que dans 4 à 5 romans tout au plus, il vaut donc mieux déclarer les __quelques__ romans dans lesquels ils apparaissent plutôt que de lister les __nombreux__ personnages pour chaque roman.
 
-Par exemple pour le personnage d'_Eugène Rougon_, qui figure dans 4 nouvelles, cela donne :
+Par exemple pour le personnage d'_Eugène Rougon_, qui figure dans 4 romans, cela donne :
 
 ```yaml
 title: Rougon (Eugène)
@@ -62,8 +62,8 @@ novel:
   - excellence
 ```
 
-Maintenant dans le Front Matter de la nouvelle, nous avons juste à ajouter une clef d'identifiant.
-Pour la nouvelle « Son Excellence Eugène Rougon » dans laquelle apparaît ce bon vieil Eugène nous ajoutons :
+Maintenant dans le Front Matter du roman, nous avons juste à ajouter une clef d'identifiant.
+Pour le roman « Son Excellence Eugène Rougon » dans lequel apparaît ce bon vieil Eugène nous ajoutons :
 
 ```yaml
 title: Son excellence Eugène Rougon
@@ -76,13 +76,13 @@ Nous pourrions choisir un identifiant existant comme le nom de fichier, mais je 
 
 #### Les relations dans nos gabarits de page
 
-Sur [la page d'Eugène](http://rougon-macquart.com/personnage/2010-03-15-rougon-eugene/) nous voulons afficher les nouvelles dans lesquelles il apparaît. Nous pouvons utiliser `intersect` pour construire notre liste :
+Sur [la page d'Eugène](http://rougon-macquart.com/personnage/2010-03-15-rougon-eugene/) nous voulons afficher les romans dans lesquels il apparaît. Nous pouvons utiliser `intersect` pour construire notre liste :
 
 ```go
 {{ $characters := where .Site.Pages.ByTitle ".Params.novel" "intersect" (slice .Params.id)}}
 ```
 
-Pour afficher la liste des personnages de la nouvelle sur la page [Son Excellence Eugène Rougon](http://rougon-macquart.com/roman/1876-son-excellence-eugene-rougon/), nous utilisons l'opérateur `in` avec `where`:
+Pour afficher la liste des personnages du roman sur la page [Son Excellence Eugène Rougon](http://rougon-macquart.com/roman/1876-son-excellence-eugene-rougon/), nous utilisons l'opérateur `in` avec `where`:
 
 ```go
 {{ $novels := where .Site.Pages.ByTitle ".Params.id" "in" .Params.novel }}
@@ -109,7 +109,7 @@ Vous pouvez définir plusieurs facteurs ou index en leur affectant leur propre n
 
 C'est de loin de meilleur outil pour récupérer des pages relatives à une autre à l'aide de votre *propre* formule et si vous ne l'utilisez pas déjà pour générer votre widget "Articles/Produits liés", vous devriez aller de ce pas consulter [la documentation](https://gohugo.io/content-management/related/) pour commencer à jouer avec. C'est top !
 
-Néanmoins dans notre cas, nous n'avons pas besoin d'un module "Nouvelles relatives", nous avons juste besoin d'établir une relation solide et consistante qui n’impacte pas le temps de génération du site. Et il se trouve que c'est justement ce que propose la fonctionnalité _Related Content_ !
+Néanmoins dans notre cas, nous n'avons pas besoin d'un module "romans relatifs", nous avons juste besoin d'établir une relation solide et consistante qui n’impacte pas le temps de génération du site. Et il se trouve que c'est justement ce que propose la fonctionnalité _Related Content_ !
 
 Nous n'avons même pas besoin de recourir à l'ingénieux facteur de poids d'index puisque `novel` est notre seul et unique index.
 
@@ -129,16 +129,16 @@ related:
 
 #### Bien se connecter
 
-L'entête Front Matter de notre personnage est très bien comme elle est. Elle liste déjà les nouvelles à l'aide d'une clef qui correspond au nom de notre index `novel`.
+L'entête Front Matter de notre personnage est très bien comme elle est. Elle liste déjà les romans à l'aide d'une clef qui correspond au nom de notre index `novel`.
 
-Par contre, nos nouvelles utilisent `id` pour s'identifier, il faut changer ça car elles doivent également utiliser le même nom d'index. Donc l'entête Front Matter de notre nouvelle devient :
+Par contre, nos romans utilisent `id` pour s'identifier, il faut changer ça car ils doivent également utiliser le même nom d'index. Donc l'entête Front Matter de notre roman devient :
 
 ```yaml
 title: Son Excellence Eugène Rougon
 novel: excellence # 'id' précédemment
 ```
 
-Bien, nos nouvelles et nos personnages partagent maintenant un `.Page.Param` commun qui utilise le nom de notre index nouvellement déclaré : `novel`.
+Bien, nos romans et nos personnages partagent maintenant un `.Page.Param` commun qui utilise le nom de notre index nouvellement déclaré : `novel`.
 
 #### _Related Content_ dans les gabarits de page
 
@@ -148,9 +148,9 @@ __.Related__ _permet de récupérer toutes les pages relatives d'une page donné
 
 __.RelatedIndices__ _permet de récupérer toutes les pages qui comportent un ou plusieurs index donnés. Le premier paramètre est la page donnée, les autres paramètres sont les index utilisés._
 
-Dans nos gabarits de page de détail, nous allons utiliser la fonction `.RelatedIndices` pour récuperer les nouvelles ou les personnages reliés. Ceci afin de limiter les pages reliées à notre index `novel` et empêcher que de futures index comme des tags ou un auteur viennent interférer dans notre relation existante.
+Dans nos gabarits de page de détail, nous allons utiliser la fonction `.RelatedIndices` pour récuperer les romans ou les personnages reliés. Ceci afin de limiter les pages reliées à notre index `novel` et empêcher que de futures index comme des tags ou un auteur viennent interférer dans notre relation existante.
 
-Dans le gabarit de détail d'une nouvelle comme "Son Excellence Eugène Rougon", nous pouvons lister tous ses « characters », en anglais dans le texte, de la façon suivante :
+Dans le gabarit de page de détail d'un roman comme "Son Excellence Eugène Rougon", nous pouvons lister tous ses « characters », en anglais dans le texte, de la façon suivante :
 
 ```go
 {{ $characters := where (.Site.RegularPages.RelatedIndices . "novel" ) "Type" "personnage" }}
@@ -172,9 +172,9 @@ Et qu'avons nous gagné outre un code plus propre ?
 
 Le temps de génération n'excède maintenant pas les 1.5s. Dans le mille Émile !
 
-{{< notice >}}
+{{% notice %}}
 Si vous êtes curieux, vous pouvez cloner le [repo](https://github.com/regisphilibert/rougon) et vous en donner à cœur joie avec la commande `hugo --templateMetrics`. Vous pouvez même passer sur la branche [`oldRelationship`](https://github.com/regisphilibert/rougon/tree/oldRelationships) et comparer avec l'implémentation précédente des relations.
-{{</ notice >}}
+{{%/ notice %}}
 
 ## Conclusion
 
