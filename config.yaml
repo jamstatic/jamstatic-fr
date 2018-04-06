@@ -11,6 +11,10 @@ footnoteReturnLinkContents: "↩"
 googleAnalytics: UA-75833986-1
 disqusShortname: jekyllfr
 
+blackfriday:
+  angledQuotes: true
+  smartypantsQuotesNBSP: true
+
 mediaTypes:
   "text/netlify":
     suffix: ""
