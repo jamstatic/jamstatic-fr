@@ -37,7 +37,7 @@ des développeurs web.
 ### Bonjour Vincent, on va peut-être commencer par te présenter ?
 
 {{< figure
-src="http://m.c.lnkd.licdn.com/mpr/mpr/shrinknp_400_400/p/2/005/070/3f2/1de75f6.jpg"
+src="/assets/images/2017/07/vincent-voyer.jpg"
 caption="Vincent Voyer, développeur JS chez Algolia" >}}
 
 **Vincent Voyer** : Donc moi je suis Vincent Voyer, sur Twitter j'étais zeroload
