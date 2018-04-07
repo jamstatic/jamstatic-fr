@@ -14,6 +14,7 @@ categories:
   - gatsby
   - netlify
   - headless
+  - algolia
 ---
 
 Le passage d'un CMS traditionnel comme WordPress à un processus moderne de développement faisant appel à différents services dans le Cloud et à des générateurs de site statique open source peut sembler encore risqué.
