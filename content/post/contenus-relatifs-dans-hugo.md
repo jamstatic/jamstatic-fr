@@ -28,18 +28,18 @@ Dans cet article, nous allons voir comme l'implémentation de relations entre vo
 
 ## Le Projet
 
-J'ai crée et commencé à maintenir un site web open source en français sur la saga des [Rougon-Macquart](http://rougon-macquart.com) d'[Émile Zola](https://fr.wikipedia.org/wiki/%C3%89mile_Zola) bien avant que je commence à coder.
+J'ai créé et commencé à maintenir un site web open source en français sur la saga des [Rougon-Macquart](http://rougon-macquart.com) d'[Émile Zola](https://fr.wikipedia.org/wiki/%C3%89mile_Zola) bien avant que je commence à coder.
 
 Copier-coller la biographie de tous mes personnages dans WordPress m'a pris pas mal de temps, mais je me retrouve maintenant avec le projet idéal pour tester de nouveaux outils : l'API Rest de WordPress, AngularJS et plus récemment Hugo !
 
 Avec un millier d'entrées qui partagent des relations saines, c'est le projet parfait pour tester une nouvelle manière de gérer nos relations.
 
-- Chacun des quelques 1300 personnages apparaît dans quelques romans. La liste des romans où il apparaît est affichée sur la page de chaque personnage.
+- Chacun des quelque 1300 personnages apparaît dans quelques romans. La liste des romans où il apparaît est affichée sur la page de chaque personnage.
 - Dans chacun des 20 romans apparaissent de nombreux personnages. Sur la page de chaque roman figure tous les personnages qui y apparaissent.
 
 ## Statut des relations avant _Related Content_: c'est compliqué
 
-Il n'y avait pas de méthode claire pour connecter des pages entre elles et créer des relations durables et efficaces. La première chose qui venait souvent à l'esprit était d'utiliser les taxonomies, mais ça ne marchait pas lorsqu'il s'agissait de connecter des pages entres elles.
+Il n'y avait pas de méthode claire pour connecter des pages entre elles et créer des relations durables et efficaces. La première chose qui venait souvent à l'esprit était d'utiliser les taxonomies, mais ça ne marchait pas lorsqu'il s'agissait de connecter des pages entre elles.
 
 Une fois les taxonomies écartées, si vous deviez gérer des relations [de plusieurs à un](https://fr.wikipedia.org/wiki/Relation_de_plusieurs_%C3%A0_un), vous avez peut-être utilisé les `sections` avec la plus grande prudence.
 
@@ -102,7 +102,7 @@ Rien…  enfin jusqu'à la version 0.27 d'Hugo.
 
 ## La fonctionnalité _Related Content_ d'Hugo
 
-[Les contenus relatifs natifs](https://gohugo.io/content-management/related/) ont fait leur apparition dans Hugo 0.27 en Novembre 2017.
+[Les contenus relatifs natifs](https://gohugo.io/content-management/related/) ont fait leur apparition dans Hugo 0.27 en novembre 2017.
 
 Ils ont été conçus pour aider à ajouter facilement une section __« Vous aimerez aussi : »__ dans les thèmes et les projets tout en gardant un maximum de contrôle sur l'algorithme de pondération.
 Vous pouvez définir plusieurs facteurs ou index en leur affectant leur propre niveau d'importance. Les tags, le mois de publication, les auteurs, tout ce qui peut vous aider à construire une liste de contenus relatifs pertinente.
@@ -144,7 +144,7 @@ Bien, nos romans et nos personnages partagent maintenant un `.Page.Param` commun
 
 Dans nos gabarits de page, _Related_ offre différentes fonctions pour récupérer les pages relatives. Nous allons en voir deux succinctement, mais allez lire [la documentation](https://gohugo.io/content-management/related/#list-related-content) si vous souhaitez en apprendre davantage.
 
-__.Related__ _permet de récupérer toutes les pages relatives d'une page donnée en fonction des index et du poids déclarés dans le fichier de configuration. Elle prend un seule paramètre en argument : la page donnée._
+__.Related__ _permet de récupérer toutes les pages relatives d'une page donnée en fonction des index et du poids déclarés dans le fichier de configuration. Elle prend un seul paramètre en argument : la page donnée._
 
 __.RelatedIndices__ _permet de récupérer toutes les pages qui comportent un ou plusieurs index donnés. Le premier paramètre est la page donnée, les autres paramètres sont les index utilisés._
 
@@ -166,7 +166,7 @@ Et pour la page de présentation d'un personnage comme Eugène, pour récupérer
 
 Et voilà ! Nous utilisons maintenant la fonction _Related Content_ d'Hugo pour gérer nos relations de type plusieurs à plusieurs !
 
-Et qu'avons nous gagné outre un code plus propre ?
+Et qu'avons-nous gagné outre un code plus propre ?
 
 🚀 __6 secondes de moins !__  …sur les ~7s auparavant…
 

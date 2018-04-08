@@ -122,7 +122,7 @@ function indexData(data_url){
 
 ## Envoi des données à Algolia
 
-Écrivons maintenant la fonction `sendDataToAlgolia`. C'est le moment où nous allons avoir besoin des clés que nous avons stocké auparavant dans notre fichier `.env`. Nous allons également devoir nous assurer que nous avons quelque chose qui initialise notre index et nous permette de lui donner le nom de notre choix pour y stocker nos données. Vu que notre jeu de données contient des acteurs de cinéma, ça semble être un bon nom pour notre index.
+Écrivons maintenant la fonction `sendDataToAlgolia`. C'est le moment où nous allons avoir besoin des clés que nous avons stockées auparavant dans notre fichier `.env`. Nous allons également devoir nous assurer que nous avons quelque chose qui initialise notre index et nous permette de lui donner le nom de notre choix pour y stocker nos données. Vu que notre jeu de données contient des acteurs de cinéma, ça semble être un bon nom pour notre index.
 
 ```javascript
 const algoliaClient = algoliasearch(process.env.ALGOLIA_APP_ID, process.env.ALGOLIA_ADMIN_API_KEY);

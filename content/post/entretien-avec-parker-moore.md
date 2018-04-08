@@ -50,7 +50,7 @@ parler de Jekyll ; je l'avais déjà utilisé. J'ai réussi à convaincre mon
 supérieur, je ne sais pas comment j'ai fait, mais il a accepté. Pour moi, Jekyll
 correspondait exactement à la demande, je devais juste servir du contenu. Au
 final, nous avons même utilisé Jekyll pour servir des pages PHP avec un serveur
-LAMP qui permet d‘envoyer des Emails ou de générer des PDF. J‘ai donc utilisé un
+LAMP qui permet d‘envoyer des mails ou de générer des PDF. J‘ai donc utilisé un
 peu Jekyll à cette période et ça m'a beaucoup plu.
 
 J'ai regardé les bugs majeurs, il y en avait tellement : plus de 800 sur le
@@ -58,8 +58,8 @@ dépôt, ce qui est énorme. Beaucoup trop pour un projet Open Source majeur, se
 moi. J'ai perçu un besoin, j'ai pensé que j'avais suffisament de temps libre -
 même si ce n'était pas le cas -  pour aider la communauté sur ces corrections.
 Peu avant, j'étais parti travailler en Allemagne pour une société du nom de 6
-Wunderkinder — l'éditeur de Wunderlist — j'ai bombardé Tom (NdT: Prester-Werner
-le créateur de Jekyll) d'emails, sans cesse. Au final, j'ai publié une lettre
+Wunderkinder — l'éditeur de Wunderlist — j'ai bombardé Tom — NdT: Prester-Werner
+le créateur de Jekyll — de mails, sans cesse. Au final, j'ai publié une lettre
 ouverte sur mon blog, ce qui avec le recul était assez fou et immature, mais qui
 a eu les effets escomptés. Peu de temps après, Tom m'a répondu : "Il faut qu'on
 parle, tu as l'air vraiment intéressé, qu'en dis-tu ?"

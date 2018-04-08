@@ -30,7 +30,7 @@ Le périmètre c'est ce qui est disponible dans une situation donnée dans votre
 
 Mais dans les gabarits d'Hugo, la plupart du temps, vous n'avez accès qu'à un seul objet : le **contexte**. Et il est stocké dans un point.
 
-Oui, ce point là. `{{.}}`
+Oui, ce point-là. `{{.}}`
 
 Et vous finissez donc par utiliser les propriétés de cet objet comme ça : \
 `.Title`, `.Permalink`, `.IsHome`
@@ -55,7 +55,7 @@ Si par exemple dans mon gabarit de page j'ai :
 {{ end }}
 ```
 
-A l'intérieur de ce `with` vous n'êtes plus dans le contexte de page. Le contexte, le point, c'est maintenant le titre de votre page. Ici, c'est exactement ce que nous voulons !
+À l'intérieur de ce `with` vous n'êtes plus dans le contexte de page. Le contexte, le point, c'est maintenant le titre de votre page. Ici, c'est exactement ce que nous voulons !
 
 ### Range
 
@@ -156,7 +156,7 @@ Dans le fichier `partials/img.html`, on aura donc :
 
 Le point ici c'est la valeur de `$path`.
 
-C'est un exemple tout simple. La plus part du temps, vous aurez besoin de beaucoup plus de valeurs.
+C'est un exemple tout simple. La plupart du temps, vous aurez besoin de beaucoup plus de valeurs.
 
 Pas de souci, nous pouvons utiliser la fonction `dict` pour passer un ensemble d'éléments en paramètre (entier, chaine de caractère, objet)
 

@@ -1,5 +1,5 @@
 ---
-title: Présentation d'Eleventy, un nouveau générateur de site statique
+title: Présentation d’Eleventy, un nouveau générateur de site statique
 date: 2018-02-18 10:23:07 +0100
 description: Zach Leat explique pourquoi il a développé Eleventy, un générateur de
   site statique basé sur JavaScript, particulièrement flexible et qui sait se faire
@@ -24,7 +24,7 @@ Eleventy est un nouveau générateur de site statique.
 
 Encore un générateur de site statique ? Oui. Mais pourquoi ? Bonne question.
 
-Eleventy a été crée pour trois raisons :
+Eleventy a été créé pour trois raisons :
 
 * Flexibilité
 * Parier sur JavaScript
@@ -71,7 +71,7 @@ Un simple `eleventy` en ligne de commande va traiter les fichiers présents dans
 eleventy
 ```
 
-#### Traite les fichier du dossier `src` et génère un dossier `_gh_pages`
+#### Traite les fichiers du dossier `src` et génère un dossier `_gh_pages`
 
 ```sh
 eleventy --input=src --output=_gh_pages
@@ -108,7 +108,7 @@ Bien qu'Eleventy utilise JavaScript à travers node.js pour transformer les fich
 
 Il se peut que par la suite nous insérions un peu de JavaScript pour la partie client spécifique à Eleventy, mais ce ne sera pas une option activée par défaut. Bien entendu, libre à vous d'ajouter votre propre code JavaScript pour la partie client, en fonction de votre projet et de vos besoins.
 
-La moindre des choses à faire est de toujours analyser ce qui est produit en sortie par les générateurs de site statique, surtout ceux qui sont très liés à des frameworks JavaScript. La majorité des framework JavaScript incluent du code JavaScript assez dogmatique côté client, même lorsque qu'ils utilisent le rendu côté serveur.
+La moindre des choses à faire est de toujours analyser ce qui est produit en sortie par les générateurs de site statique, surtout ceux qui sont très liés à des frameworks JavaScript. La majorité des frameworks JavaScript incluent du code JavaScript assez dogmatique côté client, même lorsque qu'ils utilisent le rendu côté serveur.
 
 Ces bibliothèques peuvent être lourdes et parfois bloquer le [rendu du contenu critique](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/) ou encore causer des congestions au niveau réseau dans le rendu de contenu critique avec `preload`.
 
@@ -116,7 +116,7 @@ La performance c'est critique. Les fichiers statiques peuvent présenter un gain
 
 ## Testez Eleventy !
 
-J'espère que vous donnerez sa chance à Eleventy ! Installez le !
+J'espère que vous donnerez sa chance à Eleventy ! Installez-le !
 
 ```
 npm install -g @11ty/eleventy

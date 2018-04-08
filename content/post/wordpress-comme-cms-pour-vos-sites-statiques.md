@@ -1,5 +1,5 @@
 ---
-title: "Utiliser Wordpress comme CMS pour vos sites statiques"
+title: "Utiliser WordPress comme CMS pour vos sites statiques"
 date: 2018-01-09T15:50:46+01:00
 description: "Grâce à son API REST WordPress fait aussi CMS headless. Stefan Baumgartner montre comment récupérer les contenus pour générer un site statique avec Metalsmith."
 author:
@@ -12,7 +12,7 @@ keywords:
   - headless
 source:
   author: "Stefan Baumgartner"
-  title: "Wordpress as CMS for your JAMStack sites"
+  title: "WordPress as CMS for your JAMStack sites"
   url: https://fettblog.eu/wordpress-and-jamstack-sites/
 ---
 
@@ -126,7 +126,7 @@ fetch(url)                                        /* 1 */
     Si notre blog WordPress contient moins de 100 articles, nous n'avons plus rien à télécharger.
 2.  L'entête `X-WP-TotalPages` nous indique combien il nous
     reste de pages à télécharger.
-3.  Nous créeons un tableau de promesses pour les pages à télécharger,
+3.  Nous créons un tableau de promesses pour les pages à télécharger,
     nous commençons à la page 2 (la page 1 a déjà été téléchargée)
 4. `Promise.all` nous permet de passer le premier résultat et tous les suivants
     issus de notre tableau `pagesToFetch`.
@@ -153,9 +153,9 @@ Regardons tout ça !
 
 ### Un plugin Wordpress pour Metalsmith
 
-Metalsmith fonctionne avec des plugins. À chaque fois que vous lancez une génération avec Metalsmith, il va appliquer tous les plugins que vous avez défini, un peu comme avec Gulp.
+Metalsmith fonctionne avec des plugins. À chaque fois que vous lancez une génération avec Metalsmith, il va appliquer tous les plugins que vous avez définis, un peu comme avec Gulp.
 
-Réutilisons l'exemple de code précédent et améliorons-le pour un faire un plugin Metalsmith :
+Réutilisons l'exemple de code précédent et améliorons-le pour en faire un plugin Metalsmith :
 
 ```js
 const { URL } = require('url');
@@ -180,19 +180,19 @@ const wordpress = (url) => (files, smith, done) => { /* 1 */
 ```
 
 1.  L'interface pour les plugins Metalsmith est `(files, metalsmith, done)`. Le
-    première paramètre désigne l'ensemble des fichiers qui doivent être transformés
+    premier paramètre désigne l'ensemble des fichiers qui doivent être transformés
     en HTML. Le deuxième paramètre est l'objet Metalsmith. Le troisième paramètre
     est une fonction de callback. C'est particulièrement utile pour les opérations
     asynchrones. Appelez `done` lorsque votre plugin a fini son travail.
-2.  Une fois que vous avons tous les articles à partir des appels à l'API (voir
-    ci-dessus), nous avons transformer quelque peu les données. D'abord, nous devons
+2.  Une fois que nous avons tous les articles à partir des appels à l'API (voir
+    ci-dessus), nous avons transformé quelque peu les données. D'abord, nous devons
     modifier les permaliens de WordPress pour que Metalsmith puisse s'y retrouver.
     Nous utilisons le package `URL` de Node pour récupérer l'URL relative (sans le nom
-    de domaine) et à partir de cela nous créeons un chemin relatif dans le système
+    de domaine) et à partir de cela nous créons un chemin relatif dans le système
     de fichier. Vous remarquerez que nous ajoutons `index.html`. De cette manière
-    nous créeons tout un tas de dossiers avec un seul fichier HTML dedans.
+    nous créons tout un tas de dossiers avec un seul fichier HTML dedans.
     Nous obtenons ainsi de belles URLs pour nos sites statiques.
-3.  Ensuite, nous créeons des paires clé/valeur pour l'objet fichier. Chaque valeur
+3.  Ensuite, nous créons des paires clé-valeur pour l'objet fichier. Chaque valeur
     correspond à une entrée dans le tableau `post` que nous avons récupéré plus tôt.
     Nous précisons ensuite le gabarit à utiliser et indiquons le contenu (le
     plugin `metalsmith-layouts` a besoin de ces deux valeurs pour fonctionner).
@@ -265,7 +265,7 @@ Le fichier de gabarit est un fichier Handlebars qui définit une structure HTML 
 
 Excellent ! Après m'être familiarisé avec l'API de WordPress, avoir récupéré
 tous les contenus, créer des sites statiques à partir des données a été un jeu
-d'enfant. J'ai crée un [dépôt à valeur d'exemple sur
+d'enfant. J'ai créé un [dépôt à valeur d'exemple sur
 GitHub](https://github.com/ddprrt/metalsmith-wordpress-sample). Dites-moi ce que
 vous en pensez.
 

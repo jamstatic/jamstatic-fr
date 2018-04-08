@@ -1,5 +1,5 @@
 ---
-title: "La fonction .Scratch d'Hugo"
+title: "La fonction .Scratch d’Hugo"
 date: 2018-02-09T20:50:50+01:00
 draft: false
 categories:
@@ -110,7 +110,7 @@ Maintenant récupérons tout ça.
 
 ### .Scratch.SetInMap
 
-Cette fonction là permet de cible la clef d'un tableau et de lui assigner une nouvelle valeur.
+Cette fonction-là permet de cible la clef d'un tableau et de lui assigner une nouvelle valeur.
 
 Elle prend comme premier paramètre votre clef `.Scratch`, comme second paramètre la clef issue du tableau ou de la map, le troisième étant la valeur que vous définissez.
 
@@ -132,7 +132,7 @@ vous explique tout ça [dans cet article](https://regisphilibert.com/blog/2017/0
 
 Souvenez-vous que si vous vous trouvez à l'intérieur d'une boucle `range` dans votre page d'index, alors le `.Scratch` de votre page d'index sera `$.Scratch` alors que la page courante que vous traitez dans votre boucle sera `.Scratch`.
 
-Retenez également que vous pouvez affecter une clef/valeur à `.Scratch` depuis n'importe où, même dans un fichier partiel du moment que vous lui passez le contexte.
+Retenez également que vous pouvez affecter une paire clef-valeur à `.Scratch` depuis n'importe où, même dans un fichier partiel du moment que vous lui passez le contexte.
 Heeeeein? Prenons un exemple concret pour illustrer les dangers qui vous guettent avec l'utilisation de `.Scratch` et du contexte.
 
 ### Un exemple classe avec `.Scratch`
@@ -224,9 +224,9 @@ Quand vous utilisez la fonction `range` pour boucler sur des éléments, vous ne
 
 C'est parce que le contexte que nous passons en paramètre de la fonction `partial` est celui de l'élément en cours parcouru grâce à la fonction `range`, pas celui de la page dont vous êtes en train de coder le gabarit.
 
-Très bien me direz vous, mais comment faire pour accéder au `.Scratch` de la page parente depuis notre fichier partiel ?
+Très bien me direz-vous, mais comment faire pour accéder au `.Scratch` de la page parente depuis notre fichier partiel ?
 
-Et bien, vous pouvez toujours stocker ce qui est retourné par la fonction `.Scratch` de la page dans une variable, pour la passer ensuite en paramètre de votre fichier partiel :
+Eh bien, vous pouvez toujours stocker ce qui est retourné par la fonction `.Scratch` de la page dans une variable, pour la passer ensuite en paramètre de votre fichier partiel :
 
 ```go
  {{ $indexScratch := .Scratch }}
@@ -273,7 +273,7 @@ Le jour où l'équipe chargée de développer le langage Go publiera cette révi
 {{ $salutations }}
 ```
 
-Mais `.Scratch` aura toujours besoin de passer les paires clef/valeur au contexte de page ou de shortcode. Sans cela, vous allez vous retrouver avec un sac de nœuds à gérer.
+Mais `.Scratch` aura toujours besoin de passer les paires clef-valeur au contexte de page ou de shortcode. Sans cela, vous allez vous retrouver avec un sac de nœuds à gérer.
 
 ### Sans `.Scratch` après Go v1.11
 

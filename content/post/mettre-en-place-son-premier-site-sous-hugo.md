@@ -14,12 +14,12 @@ images:
 
 {{% intro %}}
 
-Pour créer un nouveau projet avec Hugo, [Forestry](https://forestry.io) propose un kit de démarrage en libre téléchargement. Que vous ayez déjà utilisé le générateur de site statique Hugo ou pas, ce kit est intéressant car il propose une configuration complète et un workflow de développement moderne basé sur les outils de l'écosystème de `npm`. [Chris Macrae](https://twitter.com/chrisdmacrae) nous montre comment s'en servir pour créer votre premier site en moins de 30 minutes.
+Pour créer un nouveau projet avec Hugo, [Forestry](https://forestry.io) propose un kit de démarrage en libre téléchargement. Que vous ayez déjà utilisé le générateur de site statique Hugo ou pas, ce kit est intéressant, car il propose une configuration complète et un workflow de développement moderne basé sur les outils de l'écosystème de `npm`. [Chris Macrae](https://twitter.com/chrisdmacrae) nous montre comment s'en servir pour créer votre premier site en moins de 30 minutes.
 
 {{% /intro %}}
 
 
-[Hugo](https://gohugo.io), le générateur de site statique écrit en Go, a pris la communauté de vitesse. Il présente tous les avantages d'un générateur de site statique - 100% flexible, sécurisé et rapide - mais il vole également la vedette quand on [compare ses performances avec celles de Jekyll](https://forestry.io/blog/hugo-vs-jekyll-benchmark/). Le site de [Forestry.io](https://forestry.io) est d'ailleurs développé avec Hugo.
+[Hugo](https://gohugo.io), le générateur de site statique écrit en Go, a pris la communauté de vitesse. Il présente tous les avantages d'un générateur de site statique — 100% flexible, sécurisé et rapide — mais il vole également la vedette quand on [compare ses performances avec celles de Jekyll](https://forestry.io/blog/hugo-vs-jekyll-benchmark/). Le site de [Forestry.io](https://forestry.io) est d'ailleurs développé avec Hugo.
 
 Nous allons voir comment configurer Hugo sur votre ordinateur, comment installer et personnaliser un thème, en ajoutant nos propres fichiers CSS et JavaScript.
 
@@ -37,7 +37,7 @@ Quelle différence avec le guide de démarrage rapide de la documentation d’Hu
 
 Pou commencer, clonez ou [téléchargez notre kit de démarrage pour Hugo](https://github.com/forestryio/hugo-boilerplate/archive/master.zip "Téléchargez depuis GitHub"), et décompressez l'archive quelque part sur votre ordinateur. Vous avez aussi besoin de [Node.js](https://nodejs.org) et d'[NPM](https://www.npmjs.com/), il vous suffit de suivre les indications sur la [page de téléchargement de Node](https://nodejs.org/fr/download/) si vous ne les avez pas déjà installés.
 
-Vous bénéficiez ainsi automatiquement d'une structure de départ pour Hugo. Dans notre kit, elle est stockée dans le dossier `hugo`. À l'intérieur se trouvent divers dossiers qui abritent le contenu de votre site, les gabarits de page et les fichiers CSS, JS, images, etc. L'arborescence de la structure de base ressemble à ceci - j'ai laissé quelques fichiers et dossiers de côté de façon à ce que ce soit plus clair :
+Vous bénéficiez ainsi automatiquement d'une structure de départ pour Hugo. Dans notre kit, elle est stockée dans le dossier `hugo`. À l'intérieur se trouvent divers dossiers qui abritent le contenu de votre site, les gabarits de page et les fichiers CSS, JS, images, etc. L'arborescence de la structure de base ressemble à ceci — j'ai laissé quelques fichiers et dossiers de côté de façon à ce que ce soit plus clair :
 
     .
     ├── hugo/                  // Le site Hugo, avec les fichiers de contenu, de données, statiques.
@@ -185,7 +185,7 @@ Ouvrez le fichier `hugo/config.toml` dans votre éditeur de texte favori et remp
       hjsStyle = "default"
       paginatedsections = ["posts"]
 
-_Reportez vous à la [documentation du thème](https://github.com/vjeantet/hugo-theme-casper#configuration) pour prendre connaissance de toutes les options de configuration disponibles._
+_Reportez-vous à la [documentation du thème](https://github.com/vjeantet/hugo-theme-casper#configuration) pour prendre connaissance de toutes les options de configuration disponibles._
 
 Pour finir, supprimez les exemples de gabarits de page fournis avec notre modèle de départ. Pour cela lancez la commande :
 

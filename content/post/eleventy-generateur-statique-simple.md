@@ -1,7 +1,7 @@
 ---
 title: "Un site web simple avec le plus simple des générateurs de site statique"
 date: 2018-01-24T20:40:44+01:00
-description: "Présentation d'Eleventy, le générateur de site statique le plus simple et le plus intuitif."
+description: "Présentation d’Eleventy, le générateur de site statique le plus simple et le plus intuitif."
 categories:
   - eleventy
 images:
@@ -18,28 +18,28 @@ Il existe des centaines de générateurs de site statique et il en arrive toujou
 Ce nouveau générateur vise donc les développeurs front end et leur donne le choix du langage de templating ([Liquid](https://shopify.github.io/liquid/) par défaut comme dans Jekyll et aussi [tout plein d'autres qu'on peut mélanger à loisir](https://github.com/11ty/eleventy/#eleventy-) bien connus des développeurs JS) tout en leur offrant la puissance de `npm`. Zach nous propose un premier aperçu de son fonctionnement.
 {{% /intro %}}
 
-{{< figure src="https://cdn-images-1.medium.com/max/800/1*u1v8ojapeWAgL2xjaJZ5rA.png" caption="" attr="Credits: https://unsplash.com/@jogi" attrlink="https://unsplash.com/photos/uCsJqqtkDps" >}}
+{{< figure src="https://cdn-images-1.medium.com/max/800/1*u1v8ojapeWAgL2xjaJZ5rA.png" caption="" attr="Crédit : https://unsplash.com/@jogi" attrlink="https://unsplash.com/photos/uCsJqqtkDps" >}}
 
-Voici [Eleventy](https://github.com/11ty/eleventy/), le générateur de site statique le plus simple et le plus intuitif. Avec Eleventy, vous pouvez généréer des sites à partir de données de manière simple et rapide — et vous concentrer sur un contenu facile à maintenir, conçu pour durer longtemps. **Faites en sorte que votre site dure 10 ans, pas 10 mois.**
+Voici [Eleventy](https://github.com/11ty/eleventy/), le générateur de site statique le plus simple et le plus intuitif. Avec Eleventy, vous pouvez générer des sites à partir de données de manière simple et rapide — et vous concentrer sur un contenu facile à maintenir, conçu pour durer longtemps. **Faites en sorte que votre site dure 10 ans, pas 10 mois.**
 
 ### Installation
 
 1.  Si ce n'est pas déjà fait, [installez node.js et
     npm](https://docs.npmjs.com/getting-started/installing-node) (ils sont dispos sous la forme d'un seul et unique paquet).
-    Eleventy ne fonctionne qu' à partir de `node --version` 8.0.0 ou plus.
+    Eleventy ne fonctionne qu’à partir de `node --version` 8.0.0 ou plus.
 2.  Ensuite, installez l'utilitaire en ligne de commande, disponible sur
     [npm](https://www.npmjs.com/package/@11ty/eleventy) : `npm install -g @11ty/eleventy`
 
 ### En avant
 
 Faisons un site web pour notre collection d'images GIF. Une interface pour notre propre domaine [bukk.it](https://bukk.it/).
-Appelons-ça _Giffleball_.
+Appelons ça _Giffleball_.
 
 {{% notice info %}}Le code source de la première partie de ce tutoriel est [disponible sur GitHub](https://github.com/11ty/giffleball).{{% /notice %}}
 
 #### Création des fichiers
 
-Créeons un dossier pour notre tout nouveau site web. (`~ $ ` ne fait pas partie de la commande à lancer)
+Créons un dossier pour notre tout nouveau site web. (`~ $ ` ne fait pas partie de la commande à lancer)
 
 ```
 ~ $ mkdir giffleball
@@ -113,7 +113,7 @@ Wrote 1 file in 0.07 seconds
 
 ### Basons-nous sur des données
 
-OK, jusqu'ici nous aurions simplement pu charger notre fichier `index.html` dans le navigateur et le résultat aurait été le même. Il n'y a aucune différence en entrée et en sortie. Ajoutons donc un petite touche `eleventy`. Déplaçons certaines données de la page dans notre [front matter](https://jekyllrb.com/docs/frontmatter/) :
+OK, jusqu'ici nous aurions simplement pu charger notre fichier `index.html` dans le navigateur et le résultat aurait été le même. Il n'y a aucune différence en entrée et en sortie. Ajoutons donc une petite touche `eleventy`. Déplaçons certaines données de la page dans notre [front matter](https://jekyllrb.com/docs/frontmatter/) :
 
 ```markdown
 ---
@@ -159,7 +159,7 @@ L'utilisation d'un moteur de rendu présente plusieurs avantages :
 
 1.  Modifier vos données au même endroit. Pour changer le titre du site, nous
     n'avons besoin de le modifier qu'à un seul endroit (le front matter) au lieu de  deux. Pour ajouter ou supprimer des images nous n'avons pas à toucher au modèle de code HTML.
-2.  Modifier le balisage des liens vers nos images en une fois. Admettons que
+2.  Modifier le balisage des liens vers nos images en une fois. Admettons que nous
     souhaitions modifier le code HTML de notre liste d'images. Comme nous nous basons sur des données, nous pouvons modifier le modèle de code HTML dans notre boucle plutôt que de devoir modifier chaque `<li>` individuellement. Trois passent encore mais vous imaginez si notre site listait 300 images ?
 3.  Les caractères spéciaux contenus dans les noms de fichier. Quand je regarde
     dans mon navigateur, on dirait que mon serveur web n'aime pas trop des noms tels que `???.jpg`. Le fichier ne s'affiche pas correctement.
@@ -179,7 +179,7 @@ J'espère que vous vous rendez compte de l'avantage d'utiliser des moteurs de re
 
 ### Ajoutons un filtre
 
-Faisons un truc plus compliqué. Affichons la taille de chacune des images GIF à côté de leur lien. Nous pouvons faire ça à l'aide d'un filtre. Les filtres s'ajoutent dans le fichier de configuration - un fichier `.eleventy.js` — créons en un. Il devrait ressembler à ça :
+Faisons un truc plus compliqué. Affichons la taille de chacune des images GIF à côté de leur lien. Nous pouvons faire ça à l'aide d'un filtre. Les filtres s'ajoutent dans le fichier de configuration — un fichier `.eleventy.js` — créons en un. Il devrait ressembler à ça :
 
 ```js
 module.exports = (function(eleventyConfig) {
@@ -199,7 +199,7 @@ module.exports = (function(eleventyConfig) {
 });
 ```
 
-Bien entendu, notre filtre n'est pas bon car nous nous contentons de retourner `"0 KB"` à chaque fois. Mais vérifions d'abord qu'il marche.
+Bien entendu, notre filtre n'est pas bon, car nous nous contentons de retourner `"0 KB"` à chaque fois. Mais vérifions d'abord qu'il marche.
 
 Ouvrons notre modèle `index.html` et regardons à quoi ressemble notre boucle pour le moment :
 
@@ -211,7 +211,7 @@ Ouvrons notre modèle `index.html` et regardons à quoi ressemble notre boucle p
 </ul>
 ```
 
-Vous avez fait attention à comment on a utilisé le filtre natif `url_encode` fourni par le moteur de rendu Liquid ? Maintenant que nous avons crée le notre, ajoutons un appel à notre petit filtre maison, comme ceci :
+Vous avez fait attention à la façon dont nous avons utilisé le filtre natif `url_encode` fourni par le moteur de rendu Liquid ? Maintenant que nous avons crée le nôtre, ajoutons un appel à notre petit filtre maison, comme ceci :
 
 ```html
 <ul>
@@ -248,7 +248,7 @@ Cela va générer le code suivant dans le fichier `_site/index.html` (ici nous n
 
 ```
 
-OK, c'est presque ça — mais c'est quoi tous ces espacements ? *(Notez que c'est une question purement rhetorique à laquelle je vais m'empresser de répondre tout de suite.)*
+OK, c'est presque ça — mais c'est quoi tous ces espacements ? *(Notez que c'est une question purement rhétorique à laquelle je vais m'empresser de répondre tout de suite.)*
 Lors du traitement des modèles, Liquid ne supprime pas les retours à la ligne et les espaces autours des balises Liquid. Heureusement pour nous, Liquid fournit un outil pour contrôler ces espacements. Il faut utiliser `{%-` à la place de `{%` pour supprimer l'espacement avant la balise Liquid. Et indépendamment on peut aussi utiliser `-%}` à la place de  `%}` à la fin pour supprimer l'espace après la balise Liquid. L'un ou l'autre. Les deux. Personnellement je trouve que ça rend mieux avec juste `{%-` au début. Il est important pour moi d'avoir une vue du code source qui soit propre, alors nettoyons tout ça :
 
 ```liquid
@@ -274,8 +274,9 @@ Magnifique.
 
 ### C'est encore un peu tôt pour nous réjouir, notre filtre n'est pas fini
 
-OK, faisons en sorte que notre filtre serve à quelque chose plutôt que de simplement retourner systèmatiquement
-`"0 KB"`. Modifiez votre fichier `.eleventy.js` comme ceci :
+OK, faisons en sorte que notre filtre serve à quelque chose plutôt que de
+simplement retourner systématiquement `"0 KB"`. Modifiez votre fichier
+`.eleventy.js` comme ceci :
 
 ```js
 const fs = require("fs");
