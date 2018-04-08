@@ -31,7 +31,7 @@ Créé par Tom Preston-Werner, le fondateur de GitHub, Jekyll est à l'origine d
 
 Commencé en 2008, Jekyll est présenté comme un "générateur de site statique simple, prêt-à-bloguer".
 
-C'est le GSS (générateur de site statique) le plus populaire à l'heure actuelle avec plus de 33 000 étoiles sur GitHub ce qui est largement dû à son intégration dans [GitHub Pages](https://pages.github.com/).
+C'est le GSS (générateur de site statique) le plus populaire à l'heure actuelle avec plus de 33&npsp;000 étoiles sur GitHub ce qui est largement dû à son intégration dans [GitHub Pages](https://pages.github.com/).
 
 La valeur ajoutée de Jekyll c'est qu'il vous permet de prendre le HTML statique de n'importe quel site web et de le transformer rapidement en site statique fonctionnel grâce à [Liquid](https://shopify.github.io/liquid/), un langage simple utilisé pour définir les gabarits de page.
 
@@ -99,7 +99,7 @@ Vous pouvez ainsi accéder à votre site statique généré sur une adresse IP l
 
 #### Gestion des assets
 
-Jekyll fournit aussi un gestion intégrée des assets très basique, elle compile les fichiers Sass et CoffeeScript.
+Jekyll fournit aussi une gestion intégrée des assets très basique, elle compile les fichiers Sass et CoffeeScript.
 
 Tous les fichiers `.scss`, `.sass` ou `.coffee` qui possèdent des délimiteurs Front Matter seront traités par Jekyll et transformés en fichiers `.css` et `.js`.
 
@@ -111,7 +111,7 @@ Le fait de devoir ajouter du Front Matter à chaque fichier fait que beaucoup de
 
 Ces outils vous donnent plus de contrôle sur vos fichiers CSS, JS, vos images et votre HTML et permettent la minification et l'optimisation. Ces outils vous donnent aussi accès à BrowerSync ou LiveReload, qui facilitent le développement[^livereload].
 
-[^livereload]: NdT: Les version récentes de Jekyll [intègrent LiveReload](https://jekyllrb.com/news/2018/01/02/jekyll-3-7-0-released/) .
+[^livereload]: NdT: Les versions récentes de Jekyll [intègrent LiveReload](https://jekyllrb.com/news/2018/01/02/jekyll-3-7-0-released/) .
 
 ### Fonctionnalités utiles
 
@@ -137,7 +137,7 @@ Pour cela il faudra utiliser des plugins Jekyll tiers, qui sont de cinq types :
 * les **tags**, qui permettent d'ajouter de nouvelles balises Liquid,
 * les **filtres**, qui permettent de modifier le rendu des balises Liquid et des variables.
 
-Par exemple, Forestry a dévelopé un [plugins jekyll-menus](https://github.com/forestryio/jekyll-menus) qui permet de gérer les menus dans le CMS Forestry.
+Par exemple, Forestry a dévelopé le [plugin jekyll-menus](https://github.com/forestryio/jekyll-menus) qui permet de gérer les menus dans le CMS Forestry.
 
 Une autre fonctionnalité bien pratique de Jekyll est [l'import de contenus depuis WordPress](http://import.jekyllrb.com/docs/wordpress/). Avec 30% de l'Internet enfermé dans WordPress, il est bon de savoir que de migrer vers une stack moderne est aisé.
 
@@ -181,7 +181,7 @@ Hugo est le générateur de site statique créé[^hugo] par Steve Francia, un de
 
 [^hugo]: Hugo a été depuis principalement développé par [Bjørn Erik Pedersen]({{< relref "interview-hugo-lead-developer.md" >}}).
 
-Apparu en 2013, Hugo est rapidement devenu le deuxième GSS le plus populaire derrière Jekyll et compte à ce jour plus de 24 000 étoiles sur GitHub.
+Apparu en 2013, Hugo est rapidement devenu le deuxième GSS le plus populaire derrière Jekyll et compte à ce jour plus de 24&nbsp;000 étoiles sur GitHub.
 
 Hugo possède un avantage énorme sur tous les autres GSS. Il est **rapide**.
 
@@ -191,7 +191,7 @@ Il possède aussi une des communautés les plus (si ce n'est _la_ plus) actives 
 
 Installer Hugo est plus simple que d'installer Jekyll, que vous utilisiez Windows ou un système basé sur UNIX.
 
-Vu qu'Hugo est développé un Go — un langage compilé - installer ou mettre à jour Hugo consiste simplement à télécharger un fichier binaire et dire à votre système de l'utiliser.
+Vu qu'Hugo est développé un Go – un langage compilé – installer ou mettre à jour Hugo consiste simplement à télécharger un fichier binaire et dire à votre système de l'utiliser.
 
 Hugo propose [une documentation détaillée](https://gohugo.io/getting-started/installing/) pour faire cela.
 
@@ -291,7 +291,7 @@ Hugo est extrêmement rapide. Forestry a publié un article sur la [performance 
 
 Rendez-vous compte, lors de ces tests Hugo a généré les sites en moyenne 35 fois plus vite que Jekyll, la génération de la plupart de ces sites a pris moins d'une seconde.
 
-Lors d'un test, @darinpope un utilisateur d'Hugo a réussi à [générer 600 000 pages en moins de 5 minutes](https://discourse.gohugo.io/t/page-generation-performance-expectations/1335/12) !.
+Lors d'un test, @darinpope un utilisateur d'Hugo a réussi à [générer 600&nbsp;000 pages en moins de 5 minutes](https://discourse.gohugo.io/t/page-generation-performance-expectations/1335/12) !.
 
 ### Hugo en résumé
 
@@ -302,7 +302,7 @@ Maintenant que nous avons passé en revue les fonctionnalités natives d'Hugo, p
 * **Extrêmement rapide.** Des temps de génération de l'ordre de la seconde.
 * **Extrêmement versatile.** Plein de fonctionnalités par défaut pour des sites web d'entreprises.
 * **Paré pour l'entreprise** Avec le support des exports multiples et des sites multilingues, vous êtes opérationnel !
-* **Une communauté florissante.** Il est facile d'avoir de l'aide. Posez une question sur le forum et vous _aurez_ une réponse..
+* **Une communauté florissante.** Il est facile d'avoir de l'aide. Posez une question sur le forum et vous _aurez_ une réponse.
 
 **Contre :**
 
