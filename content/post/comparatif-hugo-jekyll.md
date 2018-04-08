@@ -1,17 +1,18 @@
 ---
-title: "Hugo ou Jekyll ? Six points à prendre en compte"
-date: 2018-04-06T20:10:03+02:00
-description: "Jekyll et Hugo sont les deux générateurs de site statiques les plus populaires. Quel est celui qu'il vous faut ?"
-draft: false
+title: Hugo ou Jekyll ? Six critères de comparaison
+description: >-
+  Jekyll et Hugo sont les deux générateurs de site statiques les plus
+  populaires. Quel est celui qu'il vous faut ?
 categories:
   - hugo
   - jekyll
-images:
-  - https://res.cloudinary.com/forestry-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://forestry.io/uploads/2018/02/hugo-jekyll-compared-1.png
 source:
-  author: "Chris Macrae"
-  title: "Hugo or Jekyll? 6 Factors You Should Know"
-  url: "https://forestry.io/blog/hugo-and-jekyll-compared/"
+  author: Chris Macrae
+  title: Hugo or Jekyll? 6 Factors You Should Know
+  url: 'https://forestry.io/blog/hugo-and-jekyll-compared/'
+images:
+  - >-
+    https://res.cloudinary.com/forestry-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://forestry.io/uploads/2018/02/hugo-jekyll-compared-1.png
 ---
 
 {{< figure src="https://res.cloudinary.com/forestry-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://forestry.io/uploads/2018/02/hugo-jekyll-compared-1.png" caption="" attr="" attrlink="" >}}
@@ -176,7 +177,9 @@ Vous pouvez consulter [le guide de Forestry pour développer avec Jekyll](https:
 
 ## Hugo
 
-Hugo est le générateur de site statique crée par Steve Francia, un des principaux contributeurs au langage de programmation Go de Google. Hugo est bien entendu développé en Go !
+Hugo est le générateur de site statique créé[^hugo] par Steve Francia, un des principaux contributeurs au langage de programmation Go de Google. Hugo est bien entendu développé en Go !
+
+[^hugo]: Hugo a été depuis principalement développé par [Bjørn Erik Pedersen]({{< relref "interview-hugo-lead-developer.md" >}}).
 
 Apparu en 2013, Hugo est rapidement devenu le deuxième GSS le plus populaire derrière Jekyll et compte à ce jour plus de 24 000 étoiles sur GitHub.
 
