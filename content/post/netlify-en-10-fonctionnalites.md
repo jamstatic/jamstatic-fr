@@ -115,7 +115,7 @@ Vous trouverez plus d'informations à ce sujet dans la [documentation des contex
 
 ### 6. SSL Management and free SSL from Let’s Encrypt
 
-Même si ce n'est pas forcément éivdent à première vue, il est très important de servir les sites web en HTTPS plutôt qu'en HTTP, même si ce sont des sites servis en statique.
+Même si ce n'est pas forcément évident à première vue, il est très important de servir les sites web en HTTPS plutôt qu'en HTTP, même si ce sont des sites servis en statique.
 
 Un des créateurs de Netlify explique tout ça très bien en donnant [cinq bonne raisons de servir votre site en HTTPS](https://www.netlify.com/blog/2014/10/03/five-reasons-you-want-https-for-your-static-site/) et Google a également publié de bons articles qui expliquent [pourquoi HTTPS est si important](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/why-https), quelle que soit l'architecture utilisée.
 
