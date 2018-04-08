@@ -13,7 +13,7 @@ source:
 ---
 
 {{% intro %}}
-En l'espace de quelques années [Netlify](https://www.netlify.com/) est devenu un acteur incontournable de l'écosystème JAMstack - ils sont d'ailleurs à l'origine de cette appelation - et des sites statiques.
+En l'espace de quelques années [Netlify](https://www.netlify.com/) est devenu un acteur incontournable de l'écosystème JAMstack - ils sont d'ailleurs à l'origine de cette appellation - et des sites statiques.
 Nous sommes nous-mêmes des utilisateurs plus que satisfaits de ce service et l'article que vous lisez en ce moment est lui-même hébergé sur un de leurs CDN. Netlify c'est le genre de service qui a réussi à faire de ses clients ses premiers ambassadeurs, tant leur produit est plus que recommandable.
 
 Netlify — la contraction de _Net_ et _Simplify_ — a pour but de simplifier la mise en production et de fournir tous les outils modernes nécessaires à des stratégies de déploiement agiles à tout un chacun, sans avoir besoin pour cela d'être un devops confirmé. Ce n'est pas simplement une solution pour héberger vos sites statiques à moindre frais, [le passage de Smashing Magazine à une architecture JAMstack]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}}) hébergée par Netlify a montré que ça pouvait aller bien au delà en faisant appel à différentes APIs et microservices.
@@ -45,17 +45,17 @@ Chaque génération réussie sur Netlify entraîne le déploiement d'une nouvell
 
 Les déploiements sont immutables. Cela signifie que chaque résultat de déploiement correspond à une version du site qui ne changera jamais. Les mises à jour créent de nouvelles instances du site pour remplacer les versions précédentes (qui sont gentiment remerciées pour leur service et mises au repos, sans être supprimées pour autant). Cela veut dire que vous pouvez revenir à tout moment à une version précédente de votre site d'un simple clic dans l'interface d'administration ou via l'API.
 
-En fait, _tout_ ce que vous pouvez faire dans l'interface d'admisnitration, vous pouvez le faire aussi avec l'API. La [documentation de l'API](https://open-api.netlify.com/) vous explique comment faire tout cela. Je ne compte pas même pas ça comme une fonctionnalité à part entière ici, c'est juste un petit bonus de plus !
+En fait, _tout_ ce que vous pouvez faire dans l'interface d'administration, vous pouvez le faire aussi avec l'API. La [documentation de l'API](https://open-api.netlify.com/) vous explique comment faire tout cela. Je ne compte pas même pas ça comme une fonctionnalité à part entière ici, c'est juste un petit bonus de plus !
 
 ## 2. Notifications et permaliens
 
 Une fois encore, il y a plus d'une fonctionnalité dans cet élément de ma liste, il faudra vous y faire.
 
-Netlify vous permet de configurer des notifications en fonction des différents types d'évènement liés à un déploiement. Vous pouvez définir qui sera informé en cas de nouveau déploiement, ou lorsqu'un déploiement réussit, échoue, est vérouillé ou dévérouillé (je ne vous ai pas dit mais on peut aussi choisir de faire pointer la version du site vers un déploiement en particulier).
+Netlify vous permet de configurer des notifications en fonction des différents types d'évènement liés à un déploiement. Vous pouvez définir qui sera informé en cas de nouveau déploiement, ou lorsqu'un déploiement réussit, échoue, est verrouillé ou déverrouillé (je ne vous ai pas dit mais on peut aussi choisir de faire pointer la version du site vers un déploiement en particulier).
 
 Vous pouvez envoyer des notifications par mail ou sur un canal Slack (je suis fan, tous mes projets ont un canal Slack dédié à l'intégration continue). Vous pouvez même décider qu'une notification va déclencher un webhook, ajouter des messages à des commits Git ou commenter sur des pull requests.
 
-Ce qui rend ces notifications encore plus utiles, c'est qu'elles incluent un lien unique vers le déploiement en question. Je vous ai dit que tous les déploiements sont immutables et toujours actifs. Cela signifie que chacun d'eux possède sa propre URL pour qu'on puisse y accéder et voir ce déploiement en particuier.
+Ce qui rend ces notifications encore plus utiles, c'est qu'elles incluent un lien unique vers le déploiement en question. Je vous ai dit que tous les déploiements sont immutables et toujours actifs. Cela signifie que chacun d'eux possède sa propre URL pour qu'on puisse y accéder et voir ce déploiement en particulier.
 
 Avoir des liens uniques pour chaque déploiement c'est énorme. Vous pouvez partager à tout moment n'importe quelle version de votre site avec votre équipe en charge des tests, votre client, ou n'importe qui d'autre. "À quoi ressemblait la version 3.2.14 du site déjà ? Tiens, voilà le lien."
 
@@ -69,7 +69,7 @@ Netlify vous permet de garder le contrôle sur la façon dont vous déployez. Vo
 
 {{< figure src="/assets/images/2018/01/controle-deploiement-continu.png" caption="Paramètres du déploiement continu" >}}
 
-Une fois déployée, chaque branche sera accessible depuis un sous-domaine généré en fonction du nom de la brance utilisée. Ça donne un truc comme ça :
+Une fois déployée, chaque branche sera accessible depuis un sous-domaine généré en fonction du nom de la branche utilisée. Ça donne un truc comme ça :
 
 `ma-branche--mon-site.netlify.com`
 
@@ -83,7 +83,7 @@ Vous pouvez partager le trafic de votre site en autant de branches que vous le s
 
 {{< figure src="/assets/images/2018/01/split-testing.png" caption="La configuration du split testing chez Netlify" >}}
 
-Cette fontionnalité me bluffe. Elle rend les différents types de tests A/B vraiment trivial à mettre en place. Si vous tirez déjà parti du déploiement de branches, il n'y a pas grand chose à faire de plus.
+Cette fonctionnalité me bluffe. Elle rend les différents types de tests A/B vraiment trivial à mettre en place. Si vous tirez déjà parti du déploiement de branches, il n'y a pas grand chose à faire de plus.
 
 Vous me direz que beaucoup d'entreprises peuvent vous vendre des services de tests A/B pour votre site. J'ai été un grand adepte de ces services. Mais la plupart, si ce n'est tous, vont faire ça en magouillant un peu à coup de JavaScript une fois votre site servi et chargé dans le navigateur.
 
@@ -101,7 +101,7 @@ Non seulement vous pouvez déployer différentes branches, mais vous pouvez auss
 
 Il fut un temps où c'était compliqué de mettre en place différents environnements de déploiement pour votre projet. Netlify rend les choses plus simples que je ne l'ai jamais vu. Vous pouvez créer `staging.votre-projet.com` et `testing.votre-projet.com` et tout ce que vous voulez à côté de votre `www.votre-projet.com` simplement à l'aide d'un peu de configuration. Et ils tournent tous sur des environnements identiques, c'est très important pour la fiabilité du développement et la stratégie de déploiement.
 
-Vous pourriez vouloir lancer des commandes de génération légèrement différentes en fonction de l'environnement sur lequel vous déployez, ou générer une fonctionnalité pas encore disponible en production. Vous pouvez faire tout celà en configurant différents contextes de déploiement.
+Vous pourriez vouloir lancer des commandes de génération légèrement différentes en fonction de l'environnement sur lequel vous déployez, ou générer une fonctionnalité pas encore disponible en production. Vous pouvez faire tout cela en configurant différents contextes de déploiement.
 
 Cela vous permet de faire des choses comme générer la production avec `npm run build:prod` et une branche de fonctionnalité avec `npm run build:ma-fonctionnalite`. Pratique !
 
@@ -113,7 +113,7 @@ Par exemple :
 
 Vous trouverez plus d'informations à ce sujet dans la [documentation des contextes de déploiement](https://www.netlify.com/docs/continuous-deployment/#deploy-contexts).
 
-### 6. SSL Management and free SSL from Let’s Encrypt
+### 6. Gestion des certificats SSL et SSL gratuit avec Let’s Encrypt
 
 Même si ce n'est pas forcément évident à première vue, il est très important de servir les sites web en HTTPS plutôt qu'en HTTP, même si ce sont des sites servis en statique.
 
@@ -121,7 +121,7 @@ Un des créateurs de Netlify explique tout ça très bien en donnant [cinq bonne
 
 Vous êtes convaincu et vous voulez acheter un certificat numérique ? N'ayez crainte, l'opération peut être bien plus simple que vous ne pourriez le penser.
 
-Netlify rend triviale la configuration de [HTTPS sur vos noms de domaines](https://www.netlify.com/docs/ssl/#https-on-custom-domains). Vous avez le choix entre la gestion automatisée de SSL, la gestion personnalisée de SSL et même une adresse IP dédiée SSL pour les entreprises qui en ont besoin.
+Netlify rend triviale la configuration de [HTTPS sur vos noms de domaines](https://www.netlify.com/docs/ssl/#https-on-custom-domains).Vous avez le choix entre la gestion automatisée de SSL, la gestion personnalisée de SSL et même une adresse IP dédiée SSL pour les entreprises qui en ont besoin.
 
 La plupart des gens peuvent se contenter de la gestion automatisée grâce aux certificats offerts par [Let's Encrypt](https://www.netlify.com/blog/2016/01/15/a-worlds-first.-free-ssl-with-lets-encrypt/). La configuration se fait en un clic (bon ok peut-être trois, mais ça m'a pris moins d'une minute). En plus le certificat est renouvelé automatiquement, pour que vous n'ayez pas à le faire tous les ans.
 
@@ -131,7 +131,7 @@ La plupart des gens peuvent se contenter de la gestion automatisée grâce aux c
 
 Une des choses qui fait que Netlify est très puissant c'est qu'en plus d'un réseau optimisé de CDN pour héberger vos sites, ils fournissent aussi un environnement de conteneurs pour lancer vos builds. Cela signifie que n'importe quel _build_ lancé dans votre environnement de développement ou sur un serveur d'intégration continue peut en fait être directement exécuté sur Netlify.
 
-Si votre script de déploiement inclus des tests, Netlify les éxécutera pour vous et qu'il en résulte un succès ou un échec, [vous serez prévenus](https://www.netlify.com/blog/2016/07/18/shiny-slack-notifications-from-netlify/) de l'issue finale.
+Si votre script de déploiement inclus des tests, Netlify les exécutera pour vous et qu'il en résulte un succès ou un échec, [vous serez prévenus](https://www.netlify.com/blog/2016/07/18/shiny-slack-notifications-from-netlify/) de l'issue finale.
 
 Remplacer mon infrastructure d'intégration continue, mon infrastructure d'hébergement ainsi que mes scripts de déploiement par un seul et unique service ? Je suis partant.
 
@@ -147,7 +147,7 @@ Les [soumissions de formulaires](https://www.netlify.com/docs/form-handling/#rec
 
 ### 9. Redirections, réécritures et proxy
 
-N'oubliez aucune URL en route ! En ajoutant un fichier `_redirects` dans votre dossier déployé nous avez accès à tout plein d'options de configuration en ce qui concerne les redirections et les réécritures d'URLs. Elles sont déclenchées sur les nœuds finaux des CDN, ce qui les rend particulèrement rapides et efficientes.
+N'oubliez aucune URL en route ! En ajoutant un fichier `_redirects` dans votre dossier déployé nous avez accès à tout plein d'options de configuration en ce qui concerne les redirections et les réécritures d'URLs. Elles sont déclenchées sur les nœuds finaux des CDN, ce qui les rend particulièrement rapides et efficientes.
 
 Vous avez aussi la possibilité de préciser le code de réponse HTTP dans le fichier `_redirects`, ce qui vous permet de personnaliser vos erreurs 404 ou même de rendre d'autres ressources accessibles au travers d'un proxy.
 
