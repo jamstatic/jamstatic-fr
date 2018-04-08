@@ -209,7 +209,7 @@ La gestion des fichiers de données d'Hugo permet de stocker des données additi
   "9000-4": {
    "allocation": 1
   },
-....
+…
 ```
 
 J'ai 6000 enregistrements en tout, puisqu'il y a six tailles de disponibles pour les 1000 produits, cela génère donc un fichier de taille non négligeable. Je range ce fichier dans `data/inventory/gb.json` (dans Hugo les fichiers de données sont censés être stockés dans le répertoire `data`).

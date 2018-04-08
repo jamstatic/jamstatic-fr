@@ -162,7 +162,7 @@ const { URL } = require('url');
 
 const wordpress = (url) => (files, smith, done) => { /* 1 */
   fetch(url)
-    /* ... include code from above ...*/
+    /* … include code from above …*/
     .then(allPages => {
       allPages.forEach(page => {
         const relativeURL

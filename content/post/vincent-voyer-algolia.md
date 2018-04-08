@@ -69,7 +69,7 @@ Ils me disent qu'ils recrutent. Je me dis je pourrais faire un petit test avec
 Algolia pour faire un moteur de recherche de paquets npm.
 
 Du coup j'ai fait ça, en fin d'année 2014, un petit test de recherche de paquets
-npm : j'ai pris 300 000 paquets npm, j'ai crée un index de recherche Algolia
+npm : j'ai pris 300 000 paquets npm, j’ai créé un index de recherche Algolia
 avec. J'ai commencé à faire les premières requêtes, ça prenait 4 millisecondes.
 
 J'étais capable de faire une recherche dans un champ de recherche, d'exécuter
@@ -262,7 +262,7 @@ modularité pour répondre à la plupart des cas d'utilisation qu'ont les gens,
 tout en laissant la porte ouverte pour des trucs un petit peu plus avancés qui
 seront faits avec des paramètres différents.
 
-InstantSearch c'est disponible pour du Vanilla JavaScript, c'est à dire sans
+InstantSearch c'est disponible pour du Vanilla JavaScript, C’est-à-dire sans
 framework, pour React, pour VueJS bientôt, pour iOS, etc.
 
 Pour React c'est intéressant, on est capable de construire notre recherche

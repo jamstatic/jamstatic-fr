@@ -242,7 +242,7 @@ détail.
 Avant d'aller plus loin, allons d'abord dans le répertoire `layouts` et créons
 un dossier `partials`. Si les fichiers partiels ne se trouvent pas dans ce
 dossier, Hugo ne sera pas capable de les trouver lorsque nous les déclarerons à
-l'aide de la syntaxe `{{ partial ... }}`. L'autre chose
+l'aide de la syntaxe `{{ partial … }}`. L'autre chose
 importante à savoir est pourquoi nous avons mis un point `.` après
 `product.html`. Cela signifie que nous incluons les données du produit courant
 dans le modèle `product.html`.

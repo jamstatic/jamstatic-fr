@@ -12,7 +12,7 @@ categories:
 {{% intro %}}
 La popularité de Jekyll est en partie due à son support natif par GitHub Pages.
 Si cette solution gratuite est bien pratique, elle n’en reste pas moins limitée
-en terme de support de plugins Jekyll et ce pour des raisons de sécurité. Si
+en termes de support de plugins Jekyll et ce pour des raisons de sécurité. Si
 vous voulez utiliser des plugins comme [jekyll-cloudinary]({{< relref
 "gestion-images-responsive-avec-jekyll-cloudinary.md" >}}) ou
 [jekyll-assets](https://github.com/jekyll/jekyll-assets), il vous faudra générer

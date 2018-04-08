@@ -47,17 +47,17 @@ L'autre manière de faire, c'est de partir de votre site fonctionnel et d'adapte
 ├── README.md
 ├── _includes
 │   └── head.html
-│   └── ...
+│   └── …
 ├── _layouts
 │   ├── default.html
 │   ├── home.html
 │   ├── page.html
 │   └── post.html
-│   └── ...
+│   └── …
 ├── _sass
 │   ├── _base.scss
 │   ├── _variables.scss
-│   ├── ...
+│   ├── …
 ├── assets
 │   ├── favicons
 │   ├── fonts
@@ -72,7 +72,7 @@ L'autre manière de faire, c'est de partir de votre site fonctionnel et d'adapte
 │   │   ├── 2016-10-20-presentation-de-jekyll.md
 │   │   ├── 2016-01-02-exemple-de-contenu.md
 │   │   └── 2016-01-03-introduction.md
-│   │   └── ...
+│   │   └── …
 ├── mon-super-theme.gemspec
 └── screenshot.png
 ```
@@ -220,7 +220,7 @@ Si tout est OK, il ne vous reste maintenant plus qu'à publier votre thème sur 
 
 ```shell
 gem push mon-super-theme-0.0.1.gem
-Pushing gem to https://rubygems.org...
+Pushing gem to https://rubygems.org…
 ```
 
 Et voilà ! Votre thème peut maintenant être utilisé avec Jekyll. Il n'existe pas encore de site officiel qui répertorie tous les thèmes installables via des gems pour Jekyll, c'est donc à vous de communiquer sur la disponibilité de votre thème, par exemple sur [le forum de Jekyll](https://talk.jekyllrb.com/t/gem-based-themes/3089/), sur Twitter avec le hashtag `#jekyllrb` ou en commentaire de ce billet :).

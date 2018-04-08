@@ -25,7 +25,7 @@ comportement de vos composants quand vous les insérez en tant qu'exemples dans
 une documentation. Heydon Pickering, consultant UX et accessibilité chez
 Paciello Group et auteur du livre [Inclusive Design
 Patterns](https://shop.smashingmagazine.com/products/inclusive-design-patterns)
-s'est dit qu'il pouvait tirer partie des fonctionnalités de templating et de
+s'est dit qu'il pouvait tirer parti des fonctionnalités de templating et de
 modularisation du générateur Hugo pour mener à bien cette tâche, il nous
 explique tout cela en détail. Une bonne occasion pour découvrir les
 fonctionnalités liées aux snippets de code dans Hugo et d'apprendre à créer des
@@ -34,7 +34,7 @@ fonctionnalités liées aux snippets de code dans Hugo et d'apprendre à créer 
 
 Il y a des gens qui détestent écrire de la documentation et d'autres qui
 détestent écrire tout court. Il se trouve que j'aime écrire, sinon vous
-ne seriez pas en train de lire ceci. Ça tombe bien car en tant que consultant
+ne seriez pas en train de lire ceci. Ça tombe bien, car en tant que consultant
 en Design qui fournit un suivi professionnel, écrire représente une part
 importante de mon travail. Par contre je déteste, mais alors je déteste les
 traitements de texte.
@@ -51,12 +51,12 @@ Mon workflow habituel de travail avec un traitement de texte ressemble un peu à
 5. Copier-coller la sélection,
 6. S'apercevoir que le formatage du texte collé est quelque peu différent
    de l'orignal,
-7. Tenter de trouver le style prédéfini qui correspond au text d'origine,
+7. Tenter de trouver le style prédéfini qui correspond au texte d'origine,
 8. Essayer d'appliquer le style,
 9. Laisser tomber et appliquer la police de caractère et la taille à la main,
-10. S'apercevoir qu'il y a un espace trop important au dessus du texte collé,
+10. S'apercevoir qu'il y a un espace trop important au-dessus du texte collé,
     et appuyer sur “Backspace” pour le supprimer,
-11. S'apercevoir que la taille du texte a brusquement changé car il a été
+11. S'apercevoir que la taille du texte a brusquement changé, car il a été
     associé au titre qui le précède et a hérité de ses propriétés,
 12. Réfléchir au sens de la vie.
 
@@ -73,7 +73,7 @@ DOM.
 {{< figure src="/assets/images/2017/09/markdown-shadowdom.png"
 caption="Un M, une flèche qui pointe vers le bas et un détective caché dans l'obscurité pour symboliser Markdown et Shadow Dom" >}}
 
-### CSS And Markdown
+### CSS et Markdown
 
 On pourra dire ce qu'on veut sur CSS, c'est un outil de composition
 certainement plus consistent et plus sûr qu'un éditeur WYSIWYG ou qu'un
@@ -88,7 +88,7 @@ Le seul problème avec CSS c'est que ça vous demande d'écrire du HTML en
 contre-partie. Même les amoureux du HTML voudront bien concéder que c'est
 pénible lorsque vous souhaitez simplement écrire de la prose. C'est là où
 Markdown entre en jeu. Avec sa syntaxe concise et son jeu de fonctionnalités
-réduit à l'essentiel, il offre un façon d'écrire qui est simple à apprendre et
+réduit à l'essentiel, il offre une façon d'écrire qui est simple à apprendre et
 qui peut tirer parti — une fois converti automatiquement en HTML — des
 fonctionnalités de composition puissantes et prédictives de CSS. Ce n'est pas
 par hasard qu'il est devenu le format _de facto_ des générateurs de site
@@ -117,7 +117,7 @@ familiers : du Markdown et des méta-données (en YAML, TOML ou JSON) transform�
 [excellente introduction aux principales fonctionnalités d'Hugo]({{< relref "migration-de-jekyll-a-hugo.md" >}}).
 
 Pour moi la fonctionnalité qui tue dans Hugo c'est son [implémentation des snippets de code](https://gohugo.io/extras/shortcodes/).
-Les habitués de WordPress seront peut-être déjà familier avec ce concept : un
+Les habitués de WordPress seront peut-être déjà familiers avec ce concept : un
 raccourci syntaxique destiné principalement à insérer des bouts de codes
 complexes ou issus de services tiers. Par example WordPress inclus un raccourci
 pour Vimeo qui prend juste l'ID de la vidéo Vimeo en question.
@@ -130,7 +130,7 @@ Les crochets indiquent que le contenu doit être traité et remplacé par le
 balisage HTML complet lorsque le contenu est parsé.
 
 À l'aide des fonctions de templating de Go, Hugo fourni une API très simple pour
-créer des _shortcodes_ personnalisés. Par exemple, j'ai crée un _shortcode_
+créer des _shortcodes_ personnalisés. Par exemple, j’ai créé un _shortcode_
 CodePen très simple que peux inclure dans mon contenu en Markdown :
 
 ``` html
@@ -199,7 +199,7 @@ d'encapsuler les styles et le comportement des éléments sans me reposer sur un
 tierce partie.
 
 Malheureusement, les iframes sont difficiles à manier et à redimensionner
-dynamiquement. En terme de complexité de création, cela demande de maintenir des
+dynamiquement. en termes de complexité de création, cela demande de maintenir des
 fichiers distincts et de créer des liens. Je préfèrerais pouvoir écrire
 mes composants _in situ_ et inclure juste le code nécessaire pour les faire
 fonctionner. Je voudrais pouvoir écrire des démos comme j'écris de la
@@ -237,9 +237,9 @@ Une solution consiste à bien cibler les sélecteurs CSS de manière à ce qu'il
 s'appliquent à différents composants ou aux composants et aux pages. Cela
 voudrait dire utiliser des sélecteurs ésotériques pour chaque composant, et ce
 n'est pas une possibilité que j'ai envie de considérer, alors que je pourrais
-écrire du code concis et lisible. Un des avantages des iframes est que le styles
-sont encapsulés par défaut donc je pourrais écrire `button { background: blue }`
-et être sûr que ce ne serait appliqué qu'à l'intérieur de l'iframe.
+écrire du code concis et lisible. Un des avantages des iframes est que les styles
+sont encapsulés par défaut, donc je pourrais écrire `button { background: blue }`
+et être sûr que ce ne sera appliqué qu'à l'intérieur de l'iframe.
 
 Une manière plus simple d'empêcher l'héritage de styles entre composants dans la
 page est d'utiliser la propriété `all` avec la valeur `initial`  sur l'élément
@@ -261,8 +261,7 @@ Ensuite, je dois appliquer la règle `all: initial` à toutes les instances de c
 ```
 
 Le comportement de `initial` est assez… particulier. En pratique, tous les
-éléments affectés sont censés retrouver les styles par défaut du user
-agent (comme  `display: block` pour les éléments `<h2>`). Toutefois, l'élément
+éléments affectés sont censés retrouver les styles par défaut du user agent (comme  `display: block` pour les éléments `<h2>`). Toutefois, l'élément
 auquel il est appliqué — `class="demo"` — a besoin qu'on redéfinisse
 explicitement certains des styles de l'agent utilisateur. Dans notre cas, c'est
 juste `display: block`, puisque `class="demo"` est un `<div>`.
@@ -278,7 +277,7 @@ juste `display: block`, puisque `class="demo"` est un `<div>`.
 `all` n'est pour l'instant pas supporté par Microsoft Edge mais c'est en
 considération.
 À part ça le support est [assurément large](https://caniuse.com/#feat=css-all).
-Pour nos besoins, la valeur `revert` aurait été plus robuste et plus sûre mais
+Pour nos besoins, la valeur `revert` aurait été plus robuste et plus sûre, mais
 elle n'est pas encore supportée.
 
 #### Faire du shortcode un ShadowDOM
@@ -396,7 +395,7 @@ toggle.addEventListener('click', (e) => {
 ```
 
 **Note** :
-J'ai écris un article détaillé sur [l'accessibilité des
+J’ai écrit un article détaillé sur [l'accessibilité des
 interrupteurs](https://inclusive-components.design/toggle-button/) pour
 Inclusive Components.
 
@@ -404,7 +403,7 @@ Inclusive Components.
 
 JavaScript n'est pas, à ma grande surprise, [encapsulé
 automatiquement](http://robdodson.me/shadow-dom-javascript/) comme CSS l'est
-dans shadow DOM. C'est à dire que, si il y avait un autre bouton
+dans shadow DOM. C’est-à-dire que, s’il y avait un autre bouton
 `[aria-pressed]` dans la page parente situé avant l'exemple de ce composant,
 alors `document.querySelector` ciblerait plutôt celui-là.
 
@@ -442,8 +441,8 @@ var toggle = demo.querySelector('[aria-pressed]');
 ```
 
 Remarquez que j'ai entouré le contenu du script de la démo avec une fonction
-immédiatement exécutée (IIFE) de manière à ce que la variable `demo` - et toues
-les variables traitées et utilisées pour le composant - n'appartiennent pas au
+immédiatement exécutée (IIFE) de manière à ce que la variable `demo` — et toutes
+les variables traitées et utilisées pour le composant — n'appartiennent pas au
 périmètre global. Comme ça `demo` peut être utilisé dans n'importe quel script
 présent dans un _shortcode_ mais se réfèrera uniquement au _shortcode_ en cours.
 
@@ -473,7 +472,7 @@ d'erreur lorsque `attachShadow` n'est pas disponible :
 if (document.head.attachShadow) {
   // Do shadow DOM stuff here
 } else {
-  root.innerHTML = 'L\'affichage des démos encapsulées demande le support de Shadow DOM. Ce n\'est pas le code de la démo en lui même qui pose problème au navigateur.';
+  root.innerHTML = 'L\'affichage des démos encapsulées demande le support de Shadow DOM. Ce n\'est pas le code de la démo en lui-même qui pose problème au navigateur.';
 }
 ```
 
@@ -488,8 +487,8 @@ que je suis ravi de vous partager pour vous aider à vous lancer.
 Maintenant que notre petite démo de base fonctionne, écrire des démos et les
 insérer dans la documentation est super simple, pour notre plus grand bonheur.
 Cela permet de nous poser des questions comme : "Et si je veux ajouter une
-légende pour identifier la démo ?" C'est parfaitement faisable puisque - comme
-nous l'avons déjà vu auparavant - le Markdown permet d'embarquer du code HTML.
+légende pour identifier la démo ?" C'est parfaitement faisable puisque — comme
+nous l'avons déjà vu auparavant — le Markdown permet d'embarquer du code HTML.
 
 ```html
 <figure role="group" aria-labelledby="legende-bouton">
@@ -509,14 +508,14 @@ nous l'avons déjà vu auparavant - le Markdown permet d'embarquer du code HTML.
 
 Toutefois, la seule nouveauté apportée par cette modification est la formulation
 de la légende. Il serait préférable de fournir une interface de saisie simple,
-pour faire gagner du temps à mon futur moi - et à tous ceux qui utiliseront le
-_shortcode_ - et minimiser par la même occasion les possibles erreurs de saisie.
-C'est faisable en fournir un paramètre nommé au _shortcode_ - ici simplement
+pour faire gagner du temps à mon futur moi — et à tous ceux qui utiliseront le
+_shortcode_ — et minimiser par la même occasion les possibles erreurs de saisie.
+C'est faisable en fournir un paramètre nommé au _shortcode_ — ici simplement
 appelé `legende` :
 
 ```html
 {{</* demo legende="Un bouton standard" */>}}
-    ... le contenu de la démo ...
+    … le contenu de la démo …
 {{</* /demo */>}}
 ```
 
@@ -586,7 +585,7 @@ De même qu'avec les web components, une bonne partie de la complexité du
 balisage (souvent pour rendre le code accessible) peut être masquée à
 l'utilisateur grâce aux _shortcodes_. Ici je pense notamment à l'inclusion de
 `role="group"` et de la relation `aria-labelledby`, qui fournit un meilleur
-support pour "group label" à la balise `<figure>` - le genre de choses que
+support pour "group label" à la balise `<figure>` — le genre de choses que
 personne ne prend plaisir à coder plus d'une fois, surtout quand il faut créer
 des valeurs d'attribut uniques pour chaque instance.
 

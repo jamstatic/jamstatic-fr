@@ -121,14 +121,14 @@ Imaginons que notre navigation soit structurée de la sorte :
       <a href="/">
         Home
       </a>
-      ...
+      …
 ```
 
 Nous pouvons maintenant cibler ce lien et lui appliquer un style spécifique en écrivant :
 
 ```css
 body.home .nav-home a,
-body.services .nav-services a { /* continue matching classes for all pages... */
+body.services .nav-services a { /* continue matching classes for all pages… */
   /* unique active state styling */
 }
 ```

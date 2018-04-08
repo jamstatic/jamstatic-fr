@@ -99,7 +99,7 @@ Le fichier **content/404.md**&nbsp;:
 +++
 date = "2016-10-16T19:28:41+02:00"
 draft = false
-title = "Zut... Page non trouvée."
+title = "Zut… Page non trouvée."
 +++
 
 Vous devriez aller voir ailleurs.
@@ -687,9 +687,9 @@ Ce code JS va enregistrer, installer et activer votre Service Worker.
 
 Vous en avez à présent terminé avec toutes les étapes nécessaires. Vous disposez maintenant d'un site Hugo ultra-rapide.&nbsp;:)
 
-### Débogguer votre Service Worker
+### déboguer votre Service Worker
 
-Pour débogguer un Service Worker avec Google Chrome, il vous suffit d'ouvrir la console et d'aller dans l'onglet `Application`. C'est là que vous trouverez votre Service Worker et vos caches.
+Pour déboguer un Service Worker avec Google Chrome, il vous suffit d'ouvrir la console et d'aller dans l'onglet `Application`. C'est là que vous trouverez votre Service Worker et vos caches.
 
 Vous en apprendrez davantage sur le [déboggage de Service Workers](https://developers.google.com/web/fundamentals/getting-started/codelabs/debugging-service-workers/) sur le site pour les développeurs de Google.
 

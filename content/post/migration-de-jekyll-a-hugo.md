@@ -15,7 +15,7 @@ categories:
 ---
 
 {{% intro %}}
-Si vous faites du développement front-end, du CSS, du SVG et autres joyeusetés, vous connaissez sans doute déjà la talentueuse [Sara Soueidan](http://www.sarasoueidan.com/). Il se trouve que Sara a travaillé récemment sur la refonte de Smashing Magazine et [la migration de Wordpress à Hugo]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}}). Cette mission lui a permis de se familiariser avec Hugo et de découvrir au passage le service offert par [Netlify](https://www.netlify.com/), la nouvelle référence en terme d'hébergement d'applications statiques. Fatiguée des faibles temps de compilation proposés par Jekyll (dûs en grande partie à la lenteur de Kramdown, le parseur Markdown utilisé, et à ses traitements d'expressions régulières), Sara en a profité pour s'attaquer à la migration de son site perso. Comme beaucoup d'autres, elle a été immédiatement séduite par les performances proposées par Hugo, le générateur statique ultra-rapide et ultra-souple écrit en Go. Elle nous livre ici en détails le récit de cette migration qu'elle est bien contente d'avoir menée à bien. Puisse le partage de son périple vous épargner de subir les mêmes écueils et vous aider à commencer à vous familiariser avec les concepts d'Hugo.
+Si vous faites du développement front-end, du CSS, du SVG et autres joyeusetés, vous connaissez sans doute déjà la talentueuse [Sara Soueidan](http://www.sarasoueidan.com/). Il se trouve que Sara a travaillé récemment sur la refonte de Smashing Magazine et [la migration de Wordpress à Hugo]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}}). Cette mission lui a permis de se familiariser avec Hugo et de découvrir au passage le service offert par [Netlify](https://www.netlify.com/), la nouvelle référence en termes d'hébergement d'applications statiques. Fatiguée des faibles temps de compilation proposés par Jekyll (dûs en grande partie à la lenteur de Kramdown, le parseur Markdown utilisé, et à ses traitements d'expressions régulières), Sara en a profité pour s'attaquer à la migration de son site perso. Comme beaucoup d'autres, elle a été immédiatement séduite par les performances proposées par Hugo, le générateur statique ultra-rapide et ultra-souple écrit en Go. Elle nous livre ici en détails le récit de cette migration qu'elle est bien contente d'avoir menée à bien. Puisse le partage de son périple vous épargner de subir les mêmes écueils et vous aider à commencer à vous familiariser avec les concepts d'Hugo.
 {{% /intro %}}
 
 Ces derniers mois, travailler sur mon site web s'est révélé être de plus en plus pénible, que ce soit pour continuer à le développer, itérer sur son design, écrire un article de blog ou mettre à jour mes pages conférences et ateliers. C'était dû en partie à [Jekyll](https://jekyllrb.com/), le générateur de site statique que j'utilisais alors. Le vent du changement commençait à souffler.
@@ -121,10 +121,10 @@ Le [front matter][front-matter] de chaque page définit le type de page ou de co
 ```html
 +++
 type = "blog"
-description = "..."
-title = "..."
-date = ...
-...
+description = "…"
+title = "…"
+date = …
+…
 +++
 ```
 
@@ -227,7 +227,7 @@ Les pages statiques sont créées à la racine du répertoire `/content/`, tout 
 
 Et contrairement à la page d'accueil, vous allez devoir définir le type de page et dire à Hugo de l'inclure dans le menu principal du site, en lui attribuant un titre et une description.
 
-Pour la page *À propos* de mon site, j'ai crée un fichier `/content/about.md`. Le front matter de la page est le suivant :
+Pour la page *À propos* de mon site, j’ai créé un fichier `/content/about.md`. Le front matter de la page est le suivant :
 
 ```html
 +++

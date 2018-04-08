@@ -211,7 +211,7 @@ exports.compile = function(projectPath, outputPath, callback){
 La première portion de code définit le chemin de destination passé en argument de l'appel à `harp compile` via la ligne de commande ([le source
 est ici](https://github.com/sintaxi/harp/blob/master/bin/harp)). Par défault, comme vous pouvez le voir c'est `www`. `callback` est une fonction de callback passée en argument de la ligne de commande qui n'est pas configurable.
 
-La portion suivante commence par appeler la fonction `setup` du [module helpers](https://github.com/sintaxi/harp/blob/master/lib/helpers.js). Pour faire court, nous n'irons pas examiner le code de la fonction (libre à vous d'aller regarder par vous-même), mais en gros ça lit la configuration du site (c'est à dire le fichier `harp.json`).
+La portion suivante commence par appeler la fonction `setup` du [module helpers](https://github.com/sintaxi/harp/blob/master/lib/helpers.js). Pour faire court, nous n'irons pas examiner le code de la fonction (libre à vous d'aller regarder par vous-même), mais en gros ça lit la configuration du site (C’est-à-dire le fichier `harp.json`).
 
 Vous aurez peut-être remarqué un appel à un truc qui s'appelle `terraform`. Cela revient ensuite de nouveau au sein de cette fonction.
 [Terraform](https://github.com/sintaxi/terraform) est en fait projet séparé dont Harp dépend pour la gestion de la [pipeline des assets](https://launchschool.com/blog/rails-asset-pipeline-best-practices).
@@ -229,7 +229,7 @@ CSS/feuilles de style et modèles (qui ici comprennent Markdown).
 
 {{< figure src="https://cdn.css-tricks.com/wp-content/uploads/2017/02/terraform-1.jpg" >}}
 
-Dans chacun de ces dossiers se trouve un dossier `processors` qui renferme le code pour chacun des processeurs spécifiques que Terraform (c'est à dire Harp) supporte.
+Dans chacun de ces dossiers se trouve un dossier `processors` qui renferme le code pour chacun des processeurs spécifiques que Terraform (C’est-à-dire Harp) supporte.
 Par exemple, dans le dossiers des modèles se trouvent les fichiers qui permettent de compiler les fichiers EJS, Jade, and Markdown.
 
 {{< figure src="https://cdn.css-tricks.com/wp-content/uploads/2017/02/terraform_processors.png" >}}
@@ -372,7 +372,7 @@ Ceci étant dit, je ne me lancerais pas dans le développement du mien!
 
 ## Mon rapport et mon livre
 
-Si vous voulez apprendre comment faire des sites à l'aide d'un générateur de site statique, j'ai écris un rapport et co-écrit un livre pour O'Reilly qui pourrait vous intéresser. Mon rapport, simplement intitulé [Les générateurs de site statique
+Si vous voulez apprendre comment faire des sites à l'aide d'un générateur de site statique, J’ai écrit un rapport et co-écrit un livre pour O'Reilly qui pourrait vous intéresser. Mon rapport, simplement intitulé [Les générateurs de site statique
 ](http://www.oreilly.com/web-platform/free/static-site-generators.csp)
 est gratuit et essaie d'aborder l'historique, le paysage actuel et les fondamentaux des générateurs de site statique.
 

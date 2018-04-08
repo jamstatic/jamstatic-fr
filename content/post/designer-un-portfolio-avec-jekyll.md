@@ -167,7 +167,7 @@ La beauté de Markdown c'est que vous pouvez toujours utiliser HTML si vous en a
 
 ## Un autre exemple d'article en .md
 
-Lorsque j'ai migré les vieux projets de mon portfolio dans Jekyll, j'ai trouvé que mélanger le HTML et Markdown c'était trop bizarre et et que ça allait à l'encontre de l'objectif de clarté de Markdown. J'ai crée [une démo](http://katfukui.com/clean-posts-jekyll/) qui montre ce que j'ai fait pour parvenir à des articles plus propres tout en gardant les styles désirés ! Ce n'est en aucun cas une obligation ou la bonne manière de faire - juste une technique pour satisfaire mon côté hyper-maniaque. 😊 Vous êtes libres de télécharger et de vous amuser avec les [fichiers sur Github](https://github.com/katmeister/clean-posts-jekyll).
+Lorsque j'ai migré les vieux projets de mon portfolio dans Jekyll, j'ai trouvé que mélanger le HTML et Markdown c'était trop bizarre et et que ça allait à l'encontre de l'objectif de clarté de Markdown. j’ai créé [une démo](http://katfukui.com/clean-posts-jekyll/) qui montre ce que j'ai fait pour parvenir à des articles plus propres tout en gardant les styles désirés ! Ce n'est en aucun cas une obligation ou la bonne manière de faire - juste une technique pour satisfaire mon côté hyper-maniaque. 😊 Vous êtes libres de télécharger et de vous amuser avec les [fichiers sur Github](https://github.com/katmeister/clean-posts-jekyll).
 
 ## Ajoutons un peu de CSS à tout ça
 

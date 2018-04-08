@@ -37,9 +37,9 @@ quelques clients comment utiliser Markdown et GitHub, mais ce n'est clairement
 pas l'idéal.
 Nous voyons que les choses ont bien évolué depuis, certains des
 [éditeurs](https://thenewdynamic.org/tools/content-management/) actuels sont
-aussi bons si ce n'est meilleurs que ceux que l'on trouvent dans les CMS
+aussi bons si ce n'est meilleurs que ceux que l'on trouve dans les CMS
 traditionnels. Cette année, nous avons assisté à l'écclosion de [CMS headless](https://www.thenewdynamic.org/tools/content-management/headless-cms/)
-propriétaires, à vous de voir si vous préférez privilégier une approché basée
+propriétaires, à vous de voir si vous préférez privilégier une approche basée
 sur Git ou sur l'utilisation d'une API.
 
 Nous avons aussi assisté à l'émergence du [Serverless
@@ -61,7 +61,7 @@ semble que nous sommes encore loin du compte.
 
 Divisons le Web en trois grandes catégories : le Web développé par des
 ingénieurs, le Web manipulé par des utilisateurs (de thèmes Wordpress par
-exemple) et le Web complètemet abstrait (avec Squarespace par exemple). Je suis loin
+exemple) et le Web complétement abstrait (avec Squarespace par exemple). Je suis loin
 d'être persuadé que les deux derniers groupes s'intéressent à l'adoption de ces
 technologies, pourtant cela représente une part importante du Web. Le premier groupe lui
 sera largement composé d'applications Web et de sites statiques. On devrait
@@ -76,15 +76,15 @@ de service : performance, stabilité et sécurité. Il est donc naturel qu'ils
 veuillent bénéficier des avantages du statique. De plus, ces organismes sont en
 général composés d'équipes distribuées, qui peuvent être réparties dans
 différents services, la collaboration permise par un processus de travail basé
-sur Git - donc sur de la gestion de versions -  fait totalement sens. Tout le
+sur Git — donc sur de la gestion de version — fait totalement sens. Tout le
 monde est gagnant et cela facilite l'adoption de cette technologie, puisqu'elle
-utilisée par des acteurs majeurs et donc crédibles.
+est utilisée par des acteurs majeurs et donc crédibles.
 
 ## Nous voyons aussi de plus en plus d'agences, de start-ups adopter cette manière de travailler par défaut quand il s'agit de publier des contenus. Quels sont selon toi les projets les plus susceptibles de faire réfléchir à deux fois avant de dégaîner son bon vieux CMS ?
 
-L'équipe qui s'était occupée de la dernière campagne de Barack Obama - site
-propulsé par Jekyll - s'est également occupée du site de campagne d'Hillary
-Clinton - site généré avec Assemble en NodeJS. C'étaient des sites relativement
+L'équipe qui s'était occupée de la dernière campagne de Barack Obama — site
+propulsé par Jekyll — s'est également occupée du site de campagne d'Hillary
+Clinton — site généré avec Assemble en NodeJS. C'étaient des sites relativement
 importants et relativement sophistiqués. Nous avons [une galerie sur The New
 Dyanmic](https://www.thenewdynamic.org/showcase/) qui a pour but de mettre en
 avant des projets bien conçus. L'idée c'est de montrer que ce n'est pas
@@ -117,7 +117,7 @@ site. Il existe de bons éditeurs Web pour les sites dont le contenu est stocké
 dans un dépôt Git : [Forestry.io](https://forestry.io/),
 [Siteleaf](https://siteleaf.com), [Cloudcannon](https://cloudcannon.com) et
 [Netlify CMS](http://netlifycms.org/) par exemple.
-Jusqu'à encore recemment il n'y avait que quelques acteurs majeurs du côté des APIs de contenu (comme [Contentful](https://www.contentful.com/) ou [Prismic](https://prismic.io/)), maintenant il existe [des dizaines de CMS headless](https://www.thenewdynamic.org/tools/content-management/headless-cms/)
+Jusqu'à encore récemment il n'y avait que quelques acteurs majeurs du côté des APIs de contenu (comme [Contentful](https://www.contentful.com/) ou [Prismic](https://prismic.io/)), maintenant il existe [des dizaines de CMS headless](https://www.thenewdynamic.org/tools/content-management/headless-cms/)
 sans base de données. Il y a donc le choix entre différentes approches et de plus
 en plus de compétition sur ce plan. C'est une très bonne nouvelle !
 

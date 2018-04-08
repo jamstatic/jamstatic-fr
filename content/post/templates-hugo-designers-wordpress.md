@@ -55,7 +55,7 @@ des fonctionnalités matures comme l'imbrication de templates ou les contenus
 relatifs, et les nouvelles fonctionnalités continuent d'affluer en permanence.
 
 {{< figure
-src="http://blog.teamtreehouse.com/wp-content/uploads/2017/09/home-page-templating-example-952x480.png"
+src="/assets/images/2017/10/home-page-templating-example-952x480.png"
 caption="Édition d'un modèle de page pour Hugo" >}}
 
 ## Fondamentaux des templates Hugo
@@ -66,7 +66,7 @@ rapidement en popularité. Treehouse propose [un aperçu du langage
 Go](https://teamtreehouse.com/library/go-language-overview).
 
 Si l'idée d'apprendre un nouveau langage de programmation représente pour vous
-un _no-Go_ (huhu 😉 ) pour changer de gestionnaire de contenu, n'abandonnez pas
+un _no-Go_ (haha 😉) pour changer de gestionnaire de contenu, n'abandonnez pas
 tout de suite, moi-même je ne sais pas programmer en Go et pourtant j'ai été
 capable d'écrire des modèles Hugo sophistiqués pour le site de documentation de
 Balsamiq, grâce à ma connaissance d'HTML et en passant en revue la
@@ -160,7 +160,7 @@ texte, c'est plus facile à lire.
 Bon, maintenant que nous avons vu quelques-unes des différences syntaxiques
 entre WordPress et Hugo, voyons maintenant les différents types de modèles.
 
-### Les includes s'appellent les `partials`
+### Les includes s'appellent des `partials`
 
 Une des principales raisons d'utiliser un générateur de site plutôt que d'écrire
 de simples fichiers HTML est de pouvoir réutiliser du code à travers les
@@ -199,21 +199,21 @@ fichiers des modèles.
 
 C'est le bon moment pour vous présenter une des différences majeures entre
 WordPress et Hugo concernant les modèles. Dans WordPress, la localisation des
-éléments est en général cachée, la plupart des choses se trouve dans une base de
-données ([comme on peut le voir sur cette
-image](http://blog.teamtreehouse.com/wp-content/uploads/2016/06/31-02_php_scheme.png)).
+éléments est en général cachée, la plupart des choses se trouvent dans une base
+de données ([comme on peut le voir sur cette
+image](/assets/images/2017/10/31-02_php_scheme.png)).
 
 Alors que les sites statiques sont simplement **des copies de fichiers sur votre
 ordinateur**, ce qui vous permet de visualiser et de manipuler la structure de
 votre site.
 
 {{< figure
-src="http://blog.teamtreehouse.com/wp-content/uploads/2017/09/layouts.png"
+src="/assets/images/2017/10/layouts.png"
 caption="Un exemple typique du dossier `layouts` d'Hugo." >}}
 
 C'est un peu comme les systèmes d'exploitation ordinateur et mobile. Sur les
 systèmes de fichiers d'un ordinateur, on peut parcourir l'arborescence de
-fichiers (via le Finder, l'Explorateur, etc.) alors que les OS mobile essaient
+fichiers (via le Finder, l'Explorateur, etc.) alors que les OS pour mobile essaient
 de masquer cette hiérarchie et se contentent d'associer des fichiers à des
 applications, vous évitant d'avoir à vous soucier de la structure interne.
 
@@ -235,11 +235,11 @@ site. Alors que WordPress utilise un modèle rigide d'articles et de pages, Hugo
 est façonné à l'aide de "contenu" générique et de répertoires.
 
 {{< figure
-src="http://blog.teamtreehouse.com/wp-content/uploads/2017/09/pages.png"
+src="/assets/images/2017/10/pages.png"
 caption="Articles et pages dans WordPress" >}}
 
 {{< figure
-src="http://blog.teamtreehouse.com/wp-content/uploads/2017/09/content-folder.png"
+src="/assets/images/2017/10/content-folder.png"
 caption="Répertoires de contenu dans Hugo" >}}
 
 L'hypothèse de base que fait Hugo à propos de votre contenu est que vous l'avez
@@ -258,7 +258,7 @@ de penser à une section d'Hugo comme à une catégorie WordPress.
 Pour vous, cela signifie qu'Hugo facilite la création de différents modèles pour
 chaque dossier("section") de contenu.
 
-En terme d'arborescence de fichiers, nous passons du dossier `partials` au
+en termes d'arborescence de fichiers, nous passons du dossier `partials` au
 dossier `section` situé lui aussi dans le dossier `layouts` d'Hugo. Une fois de
 plus, la nomenclature des dossiers est importante.
 
@@ -278,15 +278,15 @@ Pour voir à quoi cela ressemble en pratique, jetons un œil à la structure du
 [site de support de Balsamiq](https://support.balsamiq.com/) qui possède, entre
 autres, des sections appelées “plugins”, “tutorials”, “sales”.
 
-{{< figure src="http://blog.teamtreehouse.com/wp-content/uploads/2017/09/sbc-content.png"
+{{< figure src="/assets/images/2017/10/sbc-content.png"
 attr="Le dossier content du site de support de Balsamiq" attrlink="https://github.com/balsamiq/support.balsamiq.com/tree/master/content" >}}
 
-Dans le dossiers `section`, il y a des fichiers de modèles pour quelques-unes
+Dans le dossier `section`, il y a des fichiers de modèles pour quelques-unes
 d'entre elles, nommées en fonction du dossier de contenu (par exemple
 "plugins.html").
 
 {{< figure
-src="http://blog.teamtreehouse.com/wp-content/uploads/2017/09/sbc-section.png"
+src="/assets/images/2017/10/sbc-section.png"
 attrlink="https://github.com/balsamiq/support.balsamiq.com/tree/master/themes/support-balsamiq-com/layouts/section" attr="Le dossier section du site de support de Balsamiq" >}}
 
 Chaque contenu qui se trouve dans un dossier et dont le nom correspond à l'un de
@@ -299,7 +299,7 @@ entièrement d'accord. Hugo dispose d'une fonctionnalité familière bien utile
 appelée… [shortcodes](https://gohugo.io/content-management/shortcodes/), bien
 connue dans WordPress sous le nom de… `shortcodes`. 🙂
 
-Un `shortcode` est un petit bout de texte, une sorte de raccourci pour un
+Un `shortcode` est un petit bout de texte, une sorte de raccourci pour une
 portion de code plus importante.
 
 Dans WordPress, vous écrivez un `shortcode` en l'entourant de crochets et en lui
@@ -337,7 +337,7 @@ utilisons par exemple les shortcodes pour les messages d'alerte et
 d'information, comme on peut le voir ici :
 
 {{< figure
-src="http://blog.teamtreehouse.com/wp-content/uploads/2017/09/alerts.png"
+src="/assets/images/2017/10/alerts.png"
 attrlink="https://docs.balsamiq.com" attr="Les messages d’information et d'alerte dans la documentation de Balsamiq" >}}
 
 [Ce thème pour
@@ -358,7 +358,7 @@ de contenu par défaut avec les
 [`archetypes`](https://gohugo.io/content-management/archetypes/), mais vous
 n'avez pas besoin d'être tout de suite (voire jamais) familier avec ces notions.
 
-Une chose que j'ai remarqué dans l'évolution d'Hugo est qu'il devient **moins
+Une chose que j'ai remarquée dans l'évolution d'Hugo est qu'il devient **moins
 ésotérique et beaucoup plus pratique** et fonctionnel dans ses réponses aux
 besoins exprimés par les gens. Je vois ça comme une bonne chose et c'est
 sûrement une des raisons pour laquelle Hugo est rapidement en train de gagner en
@@ -377,9 +377,9 @@ moins envie d'en savoir un peu plus.
 
 * [La documentation officielle d'Hugo](https://gohugo.io/documentation/).
 * [Le forum officiel d'Hugo](https://discourse.gohugo.io/) – un bon endroit
-  pour trouver des réponses à vos questions et débogguer votre code.
+  pour trouver des réponses à vos questions et déboguer votre code.
 * [Les tutoriels vidéo de Giraffe Academy sur YouTube](https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3)
-    - 23 videos !
+    - 23 vidéos !
 * [Le thème “Learn” pour Hugo](https://themes.gohugo.io/theme/hugo-theme-learn/en)
   - Un bon endroit pour commencer à jouer.
 * [D'autres thèmes pour Hugo](https://themes.gohugo.io/)

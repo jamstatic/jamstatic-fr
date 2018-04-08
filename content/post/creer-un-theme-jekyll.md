@@ -21,7 +21,7 @@ les mettre en forme avec CSS, voire les enrichir avec du JavaScript, vous
 n'aurez aucun mal à développer des thèmes pour Jekyll. Le langage de templating
 [Liquid](https://shopify.github.io/liquid/) a été conçu par Shopify pour les web
 designers et se prend rapidement en main. Développer un thème pour Jekyll demande de respecter quelques conventions et de se familiariser avec la gestion des gems Ruby, rien de bien sorcier.
-Dans cet article, [David Darnes](https://darn.es/), développeur du thème [Alembic](https://alembic.darn.es), explique comment utiliser une 💎 gem de thème pour Jekyll, puis comment développer la votre.
+Dans cet article, [David Darnes](https://darn.es/), développeur du thème [Alembic](https://alembic.darn.es), explique comment utiliser une 💎 gem de thème pour Jekyll, puis comment développer la vôtre.
 {{% /intro %}}
 
 ![](https://www.siteleaf.com/uploads/making-jekyll-theme-intro.jpg)
@@ -117,8 +117,8 @@ De nouvelles gems de thèmes arrivent régulièrement. Il existe des annuaires d
 
 Pour ma part j'en ai développé deux :
 
-- [**Alembic**](https://alembic.darn.es) - un thème prêt à l'emploi, qui peut aussi servir de point de départ pour votre projet,
-- [**Garth**](https://garth.darn.es) - un thème de blog très simple.
+ - [**Alembic**](https://alembic.darn.es) - un thème prêt à l'emploi, qui peut aussi servir de point de départ pour votre projet,
+ - [**Garth**](https://garth.darn.es) - un thème de blog très simple.
 
 Ces deux thèmes sont compatibles avec Siteleaf, vous pouvez donc configurer un nouveau site sur Siteleaf sans problème. Je vous recommande aussi [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/), un thème très complet développé par Michael Rose. Michael développe des thèmes pour Jekyll depuis un moment et son code est très propre.
 
@@ -151,7 +151,7 @@ surtout que vous souhaitez qu'il soit utilisé par d'autres utilisateurs de
 Jekyll (et de Sitelaf) :
 
 1. **Testez votre thème :** Vous ne testerez jamais assez. Le meilleur moyen est encore de suivre votre propre documentation et de repartir de zéro. Testez votre thème avec différentes sortes de contenus. Les thèmes doivent pouvoir habiller différents types et différentes tailles de contenus.
-2. **Fournissez une bonne documentation :** Tout bon thème s'accompagne d'une documentation claire et détaillée. C'est même un pré-requis spécifique si vous souhaitez soumettre votre thème sur des marketplaces comme ThemeForest. Assurez vous que le processus d'installation soit simple à suivre et que toutes les fonctionnalités et les options sont documentées. Je fais de mon mieux pour garder la [documentation de l'utilisation d'Alembic](https://github.com/daviddarnes/alembic#alembic) à jour.
+2. **Fournissez une bonne documentation :** Tout bon thème s'accompagne d'une documentation claire et détaillée. C'est même un pré-requis spécifique si vous souhaitez soumettre votre thème sur des marketplaces comme ThemeForest. Assurez-vous que le processus d'installation soit simple à suivre et que toutes les fonctionnalités et les options sont documentées. Je fais de mon mieux pour garder la [documentation de l'utilisation d'Alembic](https://github.com/daviddarnes/alembic#alembic) à jour.
 3. **Évitez les choses trop complexes :** J'ai vu beaucoup de thèmes WordPress échouer, car ils voulaient trop en faire. Ce n'est pas forcément simple mais essayez de trouver un juste équilibre entre le nombre d'options proposées et celles activées par défaut. Vous ne voulez pas générer de frustration chez les gens en vous éloignant trop de l'aspect de la démo. De plus, Jekyll est un générateur de site statique qui prône la simplicité, votre thème devrait s'en inspirer.
 4. **Définissez un usage :** Concevoir un thème susceptible de plaire au plus grand monde _et_ à un certaine type d'industrie peut s'avérer difficile. Je ne dis pas qu'il faut faire faire quelque chose de très spécifique pour l'agence immobilière du coin de la rue, mais peut-être quelque chose en relation avec les sites immobiliers en général. Il y a beaucoup de thèmes génériques qui essaient de répondre à un maximum d'attentes, et vous feriez peut-être bien de ne pas essayer d'aller sur ce terrain mais à la rencontre d'une audience plus ciblée.
 5. **Concevez avec l'extensibilité en tête :** Il est fort probable que les utilisateurs de votre thème veuillent le personnaliser, essayez de concevoir votre thème de façon standard. Nommez vos modèles et vos fichiers en fonction [des conventions](https://jekyllrb.com/docs/structure/), et utilisez des noms explicites pour vos `_includes` (par exemple `icon.html` si c'est pour insérer une icône).
@@ -186,7 +186,7 @@ jekyll new-theme mon-theme
 
 Cette commande va générer les fichiers nécessaires pour commencer à développer notre thème avec le nom que vous aurez choisi, ici je l'ai appelé `mon-theme`.
 
-Nous devons ajouter quelques informations à notre thème avant de continuer : une courte description et une URL pour donner plus d'informations sur notre thème, généralement c'est l'URL du dépôt GitHub du thème  — ou celle du site web du thème si vous en générez un. Pour cela nous éditons le fichier `.gemspec`qui porte le nom de votre thème. Les deux champs à renseigner sont :
+Nous devons ajouter quelques informations à notre thème avant de continuer : une courte description et une URL pour donner plus d'informations sur notre thème, généralement c'est l'URL du dépôt GitHub du thème  — ou celle du site web du thème si vous en générez un. Pour cela nous éditons le fichier `.gemspec` qui porte le nom de votre thème. Les deux champs à renseigner sont :
 
 ```rb
 spec.summary       = "Une brève description de mon thème"
@@ -229,12 +229,12 @@ Configuration file: none
             Source: /Users/frank/code/jekyll/themes/mon-super-theme
        Destination: /Users/frank/code/jekyll/themes//mon-super-theme/_site
  Incremental build: disabled. Enable with --incremental
-      Generating...
+      Generating…
                     done in 0.095 seconds.
  Auto-regeneration: enabled for '/Users/frank/code/jekyll/themes/mon-super-theme'
 LiveReload address: http://127.0.0.1:35729
     Server address: http://127.0.0.1:4000
-  Server running... press ctrl-c to stop.
+  Server running… press ctrl-c to stop.
         LiveReload: Browser connected
 ```
 
@@ -279,7 +279,7 @@ Voilà pour la structure d'un thème - tout le reste, comme les exemples de cont
 
 ## Développer votre thème
 
-La base d'un thème Jekyll n'a plus de secrets pour vous. Notez bien les plugins utilisé par votre thème dans le fichier `.gemspec` et rappelez vous que par défaut GitHub pages n'autorise qu'une [liste limitée de plugins.](https://pages.github.com/versions/). Sachez que le [formule Team plan](https://www.siteleaf.com/plans/) de Siteleaf vous permet de vous affranchir de cette limitation, même chose chez [Netlify](https://netlify.com).
+La base d'un thème Jekyll n'a plus de secrets pour vous. Notez bien les plugins utilisés par votre thème dans le fichier `.gemspec` et rappelez-vous que par défaut GitHub pages n'autorise qu'une [liste limitée de plugins](https://pages.github.com/versions/). Sachez que le [formule Team plan](https://www.siteleaf.com/plans/) de Siteleaf vous permet de vous affranchir de cette limitation, même chose chez [Netlify](https://netlify.com).
 
 ## Ajouter des contenus d'exemple
 
@@ -292,9 +292,9 @@ Si vous voulez en savoir plus sur les possibilités de configuration de Jekyll, 
 
 ## Soumettre sa gem de thème
 
-Une fois que vous êtes satisfait du résultat de la première itération de votre thème, que vous avez bien enregistrer vos modifications, puis que vous les avez poussées sur votre dépôt Git, vous pouvez procéder à la génération de votre gem. Le fichier `.gem` va empaquetter tous vos modèles de page, vos styles dans un seul fichier. Il faudra ensuite publier ce fichier sur le [RubyGems.org](https://rubygems.org).
+Une fois que vous êtes satisfait du résultat de la première itération de votre thème, que vous avez bien enregistrer vos modifications, puis que vous les avez poussées sur votre dépôt Git, vous pouvez procéder à la génération de votre gem. Le fichier `.gem` va empaqueter tous vos modèles de page, vos styles dans un seul fichier. Il faudra ensuite publier ce fichier sur le [RubyGems.org](https://rubygems.org).
 
-Pour générer votre gem, il vous suffit d'utilser cette commande :
+Pour générer votre gem, il vous suffit d'utiliser cette commande :
 
 ```sh
 gem build mon-super-theme.gemspec
@@ -306,7 +306,7 @@ Une fois que c'est fait, un nouveau fichier est présent à la racine de votre p
 gem push mon-super-theme-0.1.0.gem
 ```
 
-Lors de la première soumission de gem, vous devrez entrer vos identifiants de connexion à RubyGems.org. Une fois connect, votre gem est mise en ligne et rendue publique ! Et voilà, vous venez de publier votre première gem de thème pour Jekyll. Elle dispose maintenant de sa propre URL.
+Lors de la première soumission de gem, vous devrez entrer vos identifiants de connexion à RubyGems.org. Une fois connecté, votre gem est mise en ligne et rendue publique ! Et voilà, vous venez de publier votre première gem de thème pour Jekyll. Elle dispose maintenant de sa propre URL.
 
 ![Exemple de page Rubygems](https://siteleaf.com/uploads/Sample%20rubygems%20page.png)
 
@@ -333,7 +333,7 @@ remote_theme: daviddarnes/alembic@2.3.1
 
 ## Tests et mises à jour
 
-Une fois votre thème en ligne, assurez vous une dernière fois qu'il fonctionne [comme n'importe quel autre thème Jekyll](https://jekyllrb.com/docs/themes/#installing-a-theme). Notez les difficultés qu'un utilisateur pourrait rencontrer.
+Une fois votre thème en ligne, assurez-vous une dernière fois qu'il fonctionne [comme n'importe quel autre thème Jekyll](https://jekyllrb.com/docs/themes/#installing-a-theme). Notez les difficultés qu'un utilisateur pourrait rencontrer.
 
 Si vous devez publier des corrections ou des mises à jour, vous allez devoir [incrémenter le numéro de version de façon appropriée](http://guides.rubygems.org/patterns/#semantic-versioning) dans votre fichier `.gemspec`, générer une nouvelle version de votre gem et la publier sur Rubygems.org.
 

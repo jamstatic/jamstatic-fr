@@ -1,5 +1,5 @@
 ---
-title: Entretien avec Bjørn Erik Pedersen, le développeur principal d'Hugo
+title: Entretien avec Bjørn Erik Pedersen, le développeur principal d’Hugo
 description: >
   Bjørn Erik Pedersen répond à nos questions sur Hugo, le gestionnaire de sites
   statiques ultra-rapide.
@@ -12,7 +12,7 @@ categories:
 
 {{% intro %}}
 [Hugo](https://gohugo.io) est rapidement devenu l'un des gestionnaires de sites
-statiques les plus populaires comme en attestent ses bientôt [20 000 étoiles sur
+statiques les plus populaires comme en attestent ses bientôt [20&nbsp;000 étoiles sur
 GitHub](https://github.com/gohugoio/hugo). C'est dû en partie à sa vitesse de
 génération : en effet il ne lui faut qu'une petite milliseconde pour générer une
 page. Oui, cela fait 1000 pages à la seconde et c'est plutôt impressionnant je
@@ -34,7 +34,7 @@ attr="Bjørn Erik Pedersen" attrlink="https://github.com/bep" >}}
 
 J'ai passé un dimanche à migrer mon [blog](http://bepsays.com/en/) de WordPress à
 [Jekyll](https://jekyllrb.com), et quand j'ai eu fini je me suis dit "OK, et
-maintenant je fais quoi ?". J'espérais que cela me pousserait à écrire davantage
+maintenant je fais quoi ?" . J'espérais que cela me pousserait à écrire davantage
 sur mon blog. Au cours de ce même après-midi je cherchais déjà des
 alternatives à Jekyll sur le net et je suis tombé sur Hugo.
 
@@ -80,7 +80,7 @@ J'essaie de m'amuser à ne pas ajouter de temps supplémentaire lors de l'ajout 
 nouvelles fonctionnalités :  Le temps de traitement ajouté par la nouvelle
 fonctionnalité doit être compensé par des améliorations dans les fonctionnalités
 existantes, et Go joue un rôle vital à ce niveau. C'est mieux et ça va plus vite à
-chaque nouvelle version mais ce n'est pas simplement que c'est un langage de
+chaque nouvelle version, mais ce n'est pas simplement que c'est un langage de
 programmation compilé avec un modèle de concurrence simple et une bibliothèque
 standard très robuste. C'est aussi grâce à tous les excellents outils fournis
 pour créer rapidement des applications performantes : un compilateur rapide, le
@@ -88,7 +88,7 @@ support intégré des tests et un analyseur de code très simple d'utilisation.
 
 Les ralentissements de performance surviennent toujours là où on les attend le
 moins, vous devez donc faire des tests. Les gains et les pertes de performance
-sont dûs à une succession de petits changements au fil du temps. Et la vitesse
+sont dus à une succession de petits changements au fil du temps. Et la vitesse
 compte. Essayez le serveur d'Hugo avec le Livereload et vous verrez par
 vous-même.
 

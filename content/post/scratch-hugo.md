@@ -189,7 +189,7 @@ Comme je l'expliquais plus tôt, comme `.Scratch` fait partie de l'objet page g�
 ```go
 // partials/scratching/body_classes.html
 {{ .Scratch.Add "classes" (slice "rp-body") }}
-[... ici le code vu précédemment  ...]
+[… ici le code vu précédemment  …]
 ```
 
 Dans mon fichier de gabarit, je peux maintenant écrire :
@@ -197,7 +197,7 @@ Dans mon fichier de gabarit, je peux maintenant écrire :
 ```
 {{ partial "scratching/body_classes.html" . }}
 <body class='{{ delimit (.Scratch.Get "classes") " " }}'>
-[...]
+[…]
 ```
 
 Le retour de la fonction `.Scratch` de la page a été transmis au fichier partiel via le contexte, de manière à pouvoir continuer de le modifier sans avoir à toucher au code ailleurs. En plus ça permet d'avoir des fichiers de gabarits de page plus propres !
@@ -211,7 +211,7 @@ Quand vous utilisez la fonction `range` pour boucler sur des éléments, vous ne
     {{ range where .Data.Pages}}
         <h2>{{ .Title }}</h2>
         <div class="Child Child--{{ $.Scratch.Get section_color}}">
-        [...]
+        […]
         <div>
     {{ end }}
     // Affichera le contenu de section_color.
@@ -239,7 +239,7 @@ Dans le fichier partiel on écrira alors :
 
 ```go
     <div class="Child Child--{{ .Get "section_color" }}">
-    [...]
+    […]
     <div>
 ```
 

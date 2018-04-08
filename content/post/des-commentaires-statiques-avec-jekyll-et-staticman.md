@@ -158,7 +158,7 @@ Malheureusement, le code suivant n'a pas marché :
 </article>
 ```
 
-Hmmm... j'imagine qu'il était temps d'ajouter des filtres `inspect` à mes tableaux pour voir ce que se passait.
+Hmmm… j'imagine qu'il était temps d'ajouter des filtres `inspect` à mes tableaux pour voir ce que se passait.
 
 ```liquid
 {{ site.data.comments[page.slug] | inspect }}
@@ -277,7 +277,7 @@ Malheureusement le filtre `where_exp` s'est révélé problématique une fois de
 
 Après avoir brièvement songé un moment au film  **Inception**, j'ai appliqué un filtre `inspect` pour m'aider à m'en sortir avec la boucle `replies`. J'en ai conclu que la condition `where_exp` échouait[^integer-string] parce que je tentais de comparer un entier avec une chaîne de caractères :flushed:.
 
-[^integer-string]: `15` n'est pas la même chose que `'15'`. Ces guillemets simples font toute la différence...
+[^integer-string]: `15` n'est pas la même chose que `'15'`. Ces guillemets simples font toute la différence…
 
 Pour résoudre cela, j'ai placé une balise `capture` autour de la variable d'index pour la convertir en chaîne de caractères. Puis j'ai modifié la condition du filtre `where_exp` afin de comparer `_parent` avec cette nouvelle variable `{{ i }}` --- pour corriger le problème et me permettre de passer à la suite.
 

@@ -286,13 +286,13 @@ end
 
 ```ruby
 def render
-    ...
+    …
     render_docs(payload) # cette fonction s'occupe du rendu des fichiers de collections qui possèdent des entêtes FrontMatter, y compris le dossier _posts (les brouillons sont ajoutés aux posts avec l'option --drafts)
     render_pages(payload) # cette fonction s'occupe du rendu des fichiers qui n'appartiennent pas à des collections mais qui ont des entêtes FrontMatter
     # cela peut être vos fichiers `feed.xml`, `index.html`, `main.scss`, etc.
-    ...
+    …
 end
-...
+…
 
 def render_docs(payload)
   collections.each do |_, collection|
@@ -304,7 +304,7 @@ def render_docs(payload)
     end
   end
 end
-...
+…
 def render_pages(payload)
   pages.flatten.each do |page|
     if regenerator.regenerate?(page)
@@ -744,11 +744,11 @@ va appeler la méthode `build(site, options)` dans `build.process` qui appelle �
 
 ```ruby
 Mercenary.program(:jekyll) do |p|
-  ...
+  …
   p.command(:build) do |c|
-    ...
+    …
     Jekyll::Commands::Build.process(options)
-    ...
+    …
   end
 ```
 
