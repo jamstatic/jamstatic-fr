@@ -20,6 +20,9 @@ mediaTypes:
     suffix: ""
     delimiter: ""
 
+disableKinds:
+  - section
+
 taxonomies:
   category: categories
 
@@ -32,8 +35,6 @@ outputs:
     - algolia
   page:
     - html
-  section:
-    - rss
 
 outputFormats:
   algolia:
