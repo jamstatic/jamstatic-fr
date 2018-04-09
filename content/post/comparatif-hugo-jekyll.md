@@ -17,21 +17,21 @@ source:
 
 {{< figure src="https://res.cloudinary.com/forestry-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://forestry.io/uploads/2018/02/hugo-jekyll-compared-1.png" caption="" attr="" attrlink="" >}}
 
-Choisir les bons outils pour bâtir un site web n'est pas chose aisée de nos jours. Il y a tellement d'options ! Générer un site statique est une de ces options, qui comporte son lot d'avantages comme une sécurité de premier plan, une performance de feu et une réduction des coûts d'hébergement.
+Choisir les bons outils pour bâtir un site web n'est pas chose aisée de nos jours. Il y a tellement d’options ! Générer un site statique est une de ces options, qui comporte son lot d’avantages comme une sécurité de premier plan, une performance de feu et une réduction des coûts d’hébergement.
 
 Quand il est question de générer des sites statiques, les deux solutions qui dominent actuellement le marché sont Jekyll et Hugo. La vraie question est de savoir quel est celui qui est le mieux pour vous ?
 
-Pour répondre à cette question, nous allons examiner ensemble les fonctionnalités, la rapidité et l'extensibilité de chacun d'entre eux, peser les avantages et les inconvénients de ces deux générateurs. Après avoir lu cet article, vous saurez clairement lequel des deux est le bon pour démarrer votre projet.
+Pour répondre à cette question, nous allons examiner ensemble les fonctionnalités, la rapidité et l’extensibilité de chacun d’entre eux, peser les avantages et les inconvénients de ces deux générateurs. Après avoir lu cet article, vous saurez clairement lequel des deux est le bon pour démarrer votre projet.
 
-*<strong>Version courte :</strong> Jekyll est un générateur de site statique flexible et parfait pour débuter. Hugo a une courbe d'apprentissage un peu plus élevée, mais il est très rapide et intègre plein de fonctionnalités. Lisez la suite pour en apprendre plus sur les différences entre ces deux outils.*
+*<strong>Version courte :</strong> Jekyll est un générateur de site statique flexible et parfait pour débuter. Hugo a une courbe d’apprentissage un peu plus élevée, mais il est très rapide et intègre plein de fonctionnalités. Lisez la suite pour en apprendre plus sur les différences entre ces deux outils.*
 
 ## Jekyll
 
-Créé par Tom Preston-Werner, le fondateur de GitHub, Jekyll est à l'origine de la [mouvance des sites statiques](https://frank.taillandier.me/2016/03/08/les-gestionnaires-de-contenu-statique/) à laquelle nous assistons actuellement.
+Créé par Tom Preston-Werner, le fondateur de GitHub, Jekyll est à l’origine de la [mouvance des sites statiques](https://frank.taillandier.me/2016/03/08/les-gestionnaires-de-contenu-statique/) à laquelle nous assistons actuellement.
 
 Commencé en 2008, Jekyll est présenté comme un "générateur de site statique simple, prêt-à-bloguer".
 
-C'est le GSS (générateur de site statique) le plus populaire à l'heure actuelle avec plus de 33&npsp;000 étoiles sur GitHub ce qui est largement dû à son intégration dans [GitHub Pages](https://pages.github.com/).
+C’est le GSS (générateur de site statique) le plus populaire à l’heure actuelle avec plus de 33&npsp;000 étoiles sur GitHub ce qui est largement dû à son intégration dans [GitHub Pages](https://pages.github.com/).
 
 La valeur ajoutée de Jekyll c'est qu'il vous permet de prendre le HTML statique de n'importe quel site web et de le transformer rapidement en site statique fonctionnel grâce à [Liquid](https://shopify.github.io/liquid/), un langage simple utilisé pour définir les gabarits de page.
 
@@ -39,15 +39,15 @@ La valeur ajoutée de Jekyll c'est qu'il vous permet de prendre le HTML statique
 
 Installer Jekyll n'est pas une mince affaire, surtout sous Windows.
 
-Jekyll est développé en **Ruby** et demande donc d'avoir une version récente de Ruby installé sur votre machine.
+Jekyll est développé en **Ruby** et demande donc d’avoir une version récente de Ruby installé sur votre machine.
 
-Ce n'est pas si terrible que ça, mais ce n'est pas aussi simple que de télécharger une application. Heureusement le procédé d'installation de Jekyll est [bien documenté](https://jekyllrb.com/docs/installation/).
+Ce n'est pas si terrible que ça, mais ce n'est pas aussi simple que de télécharger une application. Heureusement le procédé d’installation de Jekyll est [bien documenté](https://jekyllrb.com/docs/installation/).
 
 ### Contenu
 
 Dans Jekyll, tout votre contenu est stocké dans des fichiers texte plutôt que dans une base de données. Vous pouvez donc manipuler votre modèle de contenu simplement en ouvrant des fichiers dans votre éditeur de texte favori.
 
-La forme de contenu la plus simple dans Jekyll est stocké à la racine de votre projet sous forme de fichiers au format **Markdown ou HTML**. Ces fichiers de contenus sont traités pendant l'étape de génération, durant laquelle un fichier HTML correspondant est généré à partir des gabarits de votre thème.
+La forme de contenu la plus simple dans Jekyll est stocké à la racine de votre projet sous forme de fichiers au format **Markdown ou HTML**. Ces fichiers de contenus sont traités pendant l’étape de génération, durant laquelle un fichier HTML correspondant est généré à partir des gabarits de votre thème.
 
 Des champs [Front Matter](https://jekyllrb.com/docs/frontmatter/) peuvent être ajoutés à ces fichiers, ils vous permettent de définir les données qui peuvent être utilisées dans vos gabarits.
 
@@ -57,19 +57,19 @@ Des champs [Front Matter](https://jekyllrb.com/docs/frontmatter/) peuvent être 
     tags: [bonjour, monde]
     ---
     ## Bonjour monde
-    C'est le contenu de ma page !
+    C’est le contenu de ma page !
 
 Jekyll supporte les contenus chronologiques (comme des articles de blog) qui sont stockés dans le dossier `_posts` et qui respectent la nomenclature `yyyy-mm-dd-titre-de-l-article.md`.
 
-Jekyll supporte aussi le chargement de données modelées à partir de fichiers YAML, JSON ou CSV situés dans le répertoire `_data`. Ces données sont accessibles dans vos gabarits à l'aide de `{{ site.data }}`.
+Jekyll supporte aussi le chargement de données modelées à partir de fichiers YAML, JSON ou CSV situés dans le répertoire `_data`. Ces données sont accessibles dans vos gabarits à l’aide de `{{ site.data }}`.
 
 ### Thèmes et gabarits
 
-Jekyll possède une large communauté et un choix de thèmes gratuits ou payants prêts à l'emploi.
+Jekyll possède une large communauté et un choix de thèmes gratuits ou payants prêts à l’emploi.
 
 Les thèmes s'installent facilement, soit en les téléchargeant et en les ajoutant à votre projet Jekyll, soit en les installant comme une gem Ruby.
 
-Les thèmes pour Jekyll sont développés à l'aide du **moteur de templating Liquid** de Shopify. Liquid est un moteur de templating sécurisé conçu pour faire tourner du code tiers sur leurs serveurs. Liquid est conçu pour vous aider à faire ce que vous voulez sans qu'il y ait besoin d'ajouter de code Ruby natif.
+Les thèmes pour Jekyll sont développés à l’aide du **moteur de templating Liquid** de Shopify. Liquid est un moteur de templating sécurisé conçu pour faire tourner du code tiers sur leurs serveurs. Liquid est conçu pour vous aider à faire ce que vous voulez sans qu'il y ait besoin d’ajouter de code Ruby natif.
 
     <div class=“container”>
     {% for post in site.posts %}
@@ -83,9 +83,9 @@ Les thèmes pour Jekyll sont développés à l'aide du **moteur de templating Li
     {% endfor %}
     </div>
 
-C'est génial pour les débutants et les développeurs qui veulent créer des modèles fonctionnels, propres et simples.
+C’est génial pour les débutants et les développeurs qui veulent créer des modèles fonctionnels, propres et simples.
 
-Toutefois, cela signifie que vous aurez à étendre les possibilités à l'aide d'extensions personnalisées en Liquid via des plugins Jekyll si vous souhaitez ajouter des fonctionnalités supplémentaires.
+Toutefois, cela signifie que vous aurez à étendre les possibilités à l’aide d’extensions personnalisées en Liquid via des plugins Jekyll si vous souhaitez ajouter des fonctionnalités supplémentaires.
 
 Pour les développeurs issus du monde des CMS traditionnels comme WordPress, Liquid devrait être facile à prendre en main.
 
@@ -109,37 +109,37 @@ Tous les fichiers `.scss`, `.sass` ou `.coffee` qui possèdent des délimiteurs 
 
 Le fait de devoir ajouter du Front Matter à chaque fichier fait que beaucoup de sites importants qui tournent en production sous Jekyll, optent pour des outils de génération plus modernes comme Gulp ou [Webpack](https://forestry.io/blog/write-better-javascript-with-webpack/).
 
-Ces outils vous donnent plus de contrôle sur vos fichiers CSS, JS, vos images et votre HTML et permettent la minification et l'optimisation. Ces outils vous donnent aussi accès à BrowerSync ou LiveReload, qui facilitent le développement[^livereload].
+Ces outils vous donnent plus de contrôle sur vos fichiers CSS, JS, vos images et votre HTML et permettent la minification et l’optimisation. Ces outils vous donnent aussi accès à BrowerSync ou LiveReload, qui facilitent le développement[^livereload].
 
 [^livereload]: NdT: Les versions récentes de Jekyll [intègrent LiveReload](https://jekyllrb.com/news/2018/01/02/jekyll-3-7-0-released/) .
 
 ### Fonctionnalités utiles
 
-Le cœur de Jekyll propose des fonctionnalités minimales[^core] et n'intègre pas une bonne partie des choses qu'on pourrait attendre d'un site web moderne comme :
+Le cœur de Jekyll propose des fonctionnalités minimales[^core] et n'intègre pas une bonne partie des choses qu'on pourrait attendre d’un site web moderne comme :
 
 [^core]: NdT: La philosophie de Jekyll est de garder un cœur [réduit et extensible](https://jekyllrb.com/philosophy#5-small--extensible)
 
 * la gestion des menus,
 * la génération de sitemap XML[^core-plugin],
-* la génération d'un flux RSS/Atom[^core-plugin],
+* la génération d’un flux RSS/Atom[^core-plugin],
 * la gestion des scripts Analytics,
 * la gestion des commentaires,
 * la gestion multilingue/i18n,
 * et bien plus…
 
-[^core-plugin]: NdT: L'équipe de Jekyll maintient des plugins qui permettent de [générer un sitemap XML](https://github.com/jekyll/jekyll-sitemap), générer [un flux ATOM pour les articles](https://github.com/jekyll/jekyll-feed), les [balises-meta pour le SEO](https://github.com/jekyll/jekyll-seo-tag). La plupart des thèmes comme [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) supportent l'insertion de scripts Google Analytics ou Disqus et la gestion des menus via des fichiers YAML.
+[^core-plugin]: NdT: L'équipe de Jekyll maintient des plugins qui permettent de [générer un sitemap XML](https://github.com/jekyll/jekyll-sitemap), générer [un flux ATOM pour les articles](https://github.com/jekyll/jekyll-feed), les [balises-meta pour le SEO](https://github.com/jekyll/jekyll-seo-tag). La plupart des thèmes comme [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) supportent l’insertion de scripts Google Analytics ou Disqus et la gestion des menus via des fichiers YAML.
 
 Pour cela il faudra utiliser des plugins Jekyll tiers, qui sont de cinq types :
 
 * les **générateurs**, qui permettent de compléter et de modifier le processus de génération de Jekyll,
-* les **convertisseurs**, qui permettent d'ajouter le support de nouveaux formats de fichiers,
-* les **commandes**, qui permettent d'étendre les options de la ligne de commande de Jekyll,
-* les **tags**, qui permettent d'ajouter de nouvelles balises Liquid,
+* les **convertisseurs**, qui permettent d’ajouter le support de nouveaux formats de fichiers,
+* les **commandes**, qui permettent d’étendre les options de la ligne de commande de Jekyll,
+* les **tags**, qui permettent d’ajouter de nouvelles balises Liquid,
 * les **filtres**, qui permettent de modifier le rendu des balises Liquid et des variables.
 
 Par exemple, Forestry a dévelopé le [plugin jekyll-menus](https://github.com/forestryio/jekyll-menus) qui permet de gérer les menus dans le CMS Forestry.
 
-Une autre fonctionnalité bien pratique de Jekyll est [l'import de contenus depuis WordPress](http://import.jekyllrb.com/docs/wordpress/). Avec 30% de l'Internet enfermé dans WordPress, il est bon de savoir que de migrer vers une stack moderne est aisé.
+Une autre fonctionnalité bien pratique de Jekyll est [l’import de contenus depuis WordPress](http://import.jekyllrb.com/docs/wordpress/). Avec 30% de l’Internet enfermé dans WordPress, il est bon de savoir que de migrer vers une stack moderne est aisé.
 
 ### Performance
 
@@ -153,14 +153,14 @@ Cela représente potentiellement plus de 10 heures de perdues lors de la génér
 
 ### Jekyll en résumé
 
-Maintenant que nous avons passé en revue les fonctionnalités de base de Jekyll, prenons un peu de recul et examinons d'un œil externe ce générateur de site statique en pesant les pour et les contre.
+Maintenant que nous avons passé en revue les fonctionnalités de base de Jekyll, prenons un peu de recul et examinons d’un œil externe ce générateur de site statique en pesant les pour et les contre.
 
 **Pour :**
 
 * Un **moteur de gabarits simple.** Les gabarits de page de Jekyll sont très semblables à la syntaxe qu'on trouve dans WordPress ou Craft.
-* Un **large choix de thèmes.** Il existe plein de thèmes prêt à l'emploi pour Jekyll.
+* Un **large choix de thèmes.** Il existe plein de thèmes prêt à l’emploi pour Jekyll.
 * Un **large choix de plugins.** Il existe des dizaines de plugins pour ajouter les fonctionnalités dont vous avez besoin.
-* **Intégration dans GitHub Pages.** Installer un site avec Jekyll et GitHub Pages est un jeu d'enfant.
+* **Intégration dans GitHub Pages.** Installer un site avec Jekyll et GitHub Pages est un jeu d’enfant.
 
 **Contre :**
 
@@ -189,9 +189,9 @@ Il possède aussi une des communautés les plus (si ce n'est _la_ plus) actives 
 
 ### Installation
 
-Installer Hugo est plus simple que d'installer Jekyll, que vous utilisiez Windows ou un système basé sur UNIX.
+Installer Hugo est plus simple que d’installer Jekyll, que vous utilisiez Windows ou un système basé sur UNIX.
 
-Vu qu'Hugo est développé un Go – un langage compilé – installer ou mettre à jour Hugo consiste simplement à télécharger un fichier binaire et dire à votre système de l'utiliser.
+Vu qu'Hugo est développé un Go – un langage compilé – installer ou mettre à jour Hugo consiste simplement à télécharger un fichier binaire et dire à votre système de l’utiliser.
 
 Hugo propose [une documentation détaillée](https://gohugo.io/getting-started/installing/) pour faire cela.
 
@@ -201,7 +201,7 @@ Tout comme Jekyll, tous les contenus de votre projet sont stockés dans des fich
 
 Dans Hugo, dans les contenus destinés à être générés sont stockés dans le dossier `content` de votre projet. Vous pouvez utiliser différents formats: **Markdown, Mark,** et **HTML** sont supportés par défaut, et il existe des extensions tierces pour supporter **Asciidoc** and **reStructuredText**[^extensions].
 
-[^extensions]: NdT: à l'heure actuelle comme ces extensions ne reposent pas sur des librairies natives en Go, vous perdrez donc le gain de performance apporté par Hugo.
+[^extensions]: NdT: à l’heure actuelle comme ces extensions ne reposent pas sur des librairies natives en Go, vous perdrez donc le gain de performance apporté par Hugo.
 
 Hugo supporte aussi **TOML, YAML, et JSON** pour le Front Matter, alors que Jekyll ne supporte que le YAML.
 
@@ -220,9 +220,9 @@ Hugo supporte également les données externes, qui peuvent être stockées dans
 
 Même si Hugo n'a que 4 ans, de nombreux thèmes sont déjà disponibles pour ce GSS en forte croissance.
 
-Si vous utilisez la ligne de commande, [installer des thèmes depuis le dépôt des thèmes d'Hugo](https://gohugo.io/themes/installing-and-using-themes/) est assez simple.
+Si vous utilisez la ligne de commande, [installer des thèmes depuis le dépôt des thèmes d’Hugo](https://gohugo.io/themes/installing-and-using-themes/) est assez simple.
 
-Hugo utilise le [package de template](https://golang.org/pkg/html/template/) de Go par défaut. Tout comme avec Liquid, il est possible d'ajouter un peu logique dans vos gabarits.
+Hugo utilise le [package de template](https://golang.org/pkg/html/template/) de Go par défaut. Tout comme avec Liquid, il est possible d’ajouter un peu logique dans vos gabarits.
 
     <div class=“container”>
     {{ range .Site.Pages}
@@ -236,7 +236,7 @@ Hugo utilise le [package de template](https://golang.org/pkg/html/template/) de 
     {{ end }}
     </div>
 
-Une fois de plus, c'est très bien pour les débutants mais vous allez devoir étendre les possibilités du moteur de template à l'aide de *shortcodes* pour ajouter des fonctionnalités supplémentaires.
+Une fois de plus, c'est très bien pour les débutants mais vous allez devoir étendre les possibilités du moteur de template à l’aide de *shortcodes* pour ajouter des fonctionnalités supplémentaires.
 
 Malheureusement la syntaxe du package de template de Go n'est pas aussi évidente pour les débutants que celle de Liquid et ne semblera pas aussi familière à première vue.
 
@@ -249,35 +249,35 @@ Il est plus agréable de développer avec Hugo qu'avec Jekyll, car la générati
 
 Dans le dossier de votre projet, lancez la commande `hugo serve` pour lancer le serveur de développement.
 
-Cela vous permet d'accéder à votre site sur une adresse IP locale. Chaque changement effectué dans votre projet, déclenche une génération et recharge automatiquement le site dans votre navigateur.
+Cela vous permet d’accéder à votre site sur une adresse IP locale. Chaque changement effectué dans votre projet, déclenche une génération et recharge automatiquement le site dans votre navigateur.
 
 #### Gestion des assets
 
 Hugo ne procède à aucune transformation de vos assets (CSS, JS, SVG, etc.), il se contente de recopier tous les fichiers qui se trouvent dans le répertoire `/static` de votre projet.
 
-Si vous avez l'habitude d'utiliser Sass, CoffeeScript ou n'importe quel autre préprocesseur ou gestionnaire d'assets, il vous faudra regarder du côté d'outils comme Gulp ou Webpack. Cela signifie que vous allez devoir inclure Hugo dans votre processus de génération externalisé, ce qui peut s'avérer ennuyeux pour les débutants.
+Si vous avez l’habitude d’utiliser Sass, CoffeeScript ou n'importe quel autre préprocesseur ou gestionnaire d’assets, il vous faudra regarder du côté d’outils comme Gulp ou Webpack. Cela signifie que vous allez devoir inclure Hugo dans votre processus de génération externalisé, ce qui peut s'avérer ennuyeux pour les débutants.
 
-Une gestion plus avancée des assets est [en cours de développement](https://github.com/gohugoio/hugo/issues/4446), mais à l'heure actuelle, elle n'a pas encore été intégrée dans le cœur d'Hugo.
+Une gestion plus avancée des assets est [en cours de développement](https://github.com/gohugoio/hugo/issues/4446), mais à l’heure actuelle, elle n'a pas encore été intégrée dans le cœur d’Hugo.
 
 ### Fonctionnalités utiles
 
-Hugo brille par la multitude de fonctionnalités puissantes qu'il intègre par défaut comparativement à Jekyll et à d'autres GSS.
+Hugo brille par la multitude de fonctionnalités puissantes qu'il intègre par défaut comparativement à Jekyll et à d’autres GSS.
 
-Avec le support par défaut des menus, des flux ou des sitemaps, la configuration d'un site web pour la production est un jeu d'enfant.
+Avec le support par défaut des menus, des flux ou des sitemaps, la configuration d’un site web pour la production est un jeu d’enfant.
 
 Mais Hugo brille encore plus quand vous travaillez sur un site avec beaucoup de contenus, comme un journal, un site gouvernemental ou un site de documentation.
 
-Par exemple avec la fonctionnalité d'exports personnalisés, vous pouvez générer en même temps : votre site statique, sa version alternative pour Google AMP, ainsi que des fichiers JSON prêts à être consommés par une application mobile.
+Par exemple avec la fonctionnalité d’exports personnalisés, vous pouvez générer en même temps : votre site statique, sa version alternative pour Google AMP, ainsi que des fichiers JSON prêts à être consommés par une application mobile.
 
-Parmi les fonctionnalités bien pratiques d'Hugo on peut citer :
+Parmi les fonctionnalités bien pratiques d’Hugo on peut citer :
 
 * La gestion des menus,
 * La génération de Sitemap XML,
 * La génération de flux RSS/Atom,
-* L'intégration d'Analytics (via Google Analytics)
+* L'intégration d’Analytics (via Google Analytics)
 * L'intégration de commentaires (via Disqus)
 * La gestion du multilingue/i18n
-* Les formats d'export personnalisés
+* Les formats d’export personnalisés
 
 {{% notice %}}
 
@@ -289,25 +289,25 @@ Envie de passer à Hugo, mais encore sous Jekyll? [Hugo peut importer votre site
 
 Hugo est extrêmement rapide. Forestry a publié un article sur la [performance de Hugo et de Jekyll](https://forestry.io/blog/hugo-vs-jekyll-benchmark/) et a comparé les deux. Hugo est sorti vainqueur haut la main.
 
-Rendez-vous compte, lors de ces tests Hugo a généré les sites en moyenne 35 fois plus vite que Jekyll, la génération de la plupart de ces sites a pris moins d'une seconde.
+Rendez-vous compte, lors de ces tests Hugo a généré les sites en moyenne 35 fois plus vite que Jekyll, la génération de la plupart de ces sites a pris moins d’une seconde.
 
-Lors d'un test, @darinpope un utilisateur d'Hugo a réussi à [générer 600&nbsp;000 pages en moins de 5 minutes](https://discourse.gohugo.io/t/page-generation-performance-expectations/1335/12) !.
+Lors d’un test, @darinpope un utilisateur d’Hugo a réussi à [générer 600&nbsp;000 pages en moins de 5 minutes](https://discourse.gohugo.io/t/page-generation-performance-expectations/1335/12) !.
 
 ### Hugo en résumé
 
-Maintenant que nous avons passé en revue les fonctionnalités natives d'Hugo, prenons un peu de recul et jetons un regard externe sur ce générateur de site statique en pesant le pour et le contre.
+Maintenant que nous avons passé en revue les fonctionnalités natives d’Hugo, prenons un peu de recul et jetons un regard externe sur ce générateur de site statique en pesant le pour et le contre.
 
 **Pour :**
 
-* **Extrêmement rapide.** Des temps de génération de l'ordre de la seconde.
-* **Extrêmement versatile.** Plein de fonctionnalités par défaut pour des sites web d'entreprises.
-* **Paré pour l'entreprise** Avec le support des exports multiples et des sites multilingues, vous êtes opérationnel !
-* **Une communauté florissante.** Il est facile d'avoir de l'aide. Posez une question sur le forum et vous _aurez_ une réponse.
+* **Extrêmement rapide.** Des temps de génération de l’ordre de la seconde.
+* **Extrêmement versatile.** Plein de fonctionnalités par défaut pour des sites web d’entreprises.
+* **Paré pour l’entreprise** Avec le support des exports multiples et des sites multilingues, vous êtes opérationnel !
+* **Une communauté florissante.** Il est facile d’avoir de l’aide. Posez une question sur le forum et vous _aurez_ une réponse.
 
 **Contre :**
 
-* **Pas d'extensions.** Hugo ne prend pas les plugins en charge, il n'est donc pas possible d'ajouter des fonctionnalités personnalisées.
-* **Une syntaxe de gabarit compliquée.** Bien que le moteur de gabarits d'Hugo soit versatile, il est assez peu intuitif et compliqué pour les débutants.
+* **Pas d’extensions.** Hugo ne prend pas les plugins en charge, il n'est donc pas possible d’ajouter des fonctionnalités personnalisées.
+* **Une syntaxe de gabarit compliquée.** Bien que le moteur de gabarits d’Hugo soit versatile, il est assez peu intuitif et compliqué pour les débutants.
 * **Pas de gestion des assets.** Hugo n'intègre aucun traitement des assets, il vous faudra donc passer par des outils tiers.
 
 {{% notice %}}
@@ -318,11 +318,11 @@ Reportez-vous au [guide de Forestry pour développer avec Hugo](https://forestry
 
 ## En résumé
 
-Nous avons passé en revue les fonctionnalités de base de Jekyll et Hugo, en soulignant la facilité d'installation, la gestion de contenu, les langages de gabarits de page, les workflows de développement, les fonctionnalités offertes et la performance.
+Nous avons passé en revue les fonctionnalités de base de Jekyll et Hugo, en soulignant la facilité d’installation, la gestion de contenu, les langages de gabarits de page, les workflows de développement, les fonctionnalités offertes et la performance.
 
-Ces deux générateurs sont les leaders dans leur domaine, et il y a plein d'exemples de gros projets qui les utilisent comme [healthcare.gov](https://github.com/springmeyer/healthcare.gov), développé avec Jekyll, et le nouveau site de [Smashing Magazine](https://smashingmagazine.com/) développé avec Hugo.
+Ces deux générateurs sont les leaders dans leur domaine, et il y a plein d’exemples de gros projets qui les utilisent comme [healthcare.gov](https://github.com/springmeyer/healthcare.gov), développé avec Jekyll, et le nouveau site de [Smashing Magazine](https://smashingmagazine.com/) développé avec Hugo.
 
-Maintenant c'est l'heure de faire votre choix ! Voici un petit récapitulatif pour vous aider :
+Maintenant c'est l’heure de faire votre choix ! Voici un petit récapitulatif pour vous aider :
 
-* **Jekyll** est un excellent choix, si vous êtes familier avec l'écosystème de Ruby ou si vous êtes débutant, grâce à son moteur de templating très simple et à ses nombreux plugins.
-* **Hugo** est génial pour les sites web avec beaucoup de contenus. Il comble son manque d'extensibilité par un lot de fonctionnalités embarquées et une vitesse inégalée par aucun autre générateur de site statique.
+* **Jekyll** est un excellent choix, si vous êtes familier avec l’écosystème de Ruby ou si vous êtes débutant, grâce à son moteur de templating très simple et à ses nombreux plugins.
+* **Hugo** est génial pour les sites web avec beaucoup de contenus. Il comble son manque d’extensibilité par un lot de fonctionnalités embarquées et une vitesse inégalée par aucun autre générateur de site statique.

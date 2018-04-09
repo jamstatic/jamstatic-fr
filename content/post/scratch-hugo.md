@@ -10,7 +10,7 @@ source:
   url: https://regisphilibert.com/blog/2017/04/hugo-scratch-explained-variable/
 ---
 
-{{% intro %}}Si vous avez aimé l'article de [Régis Philibert](https://regisphilibert.com/) à propos de [la gestion du contexte]({{< relref "hugo-le-point-sur-le-contexte.md" >}}) dans les fichiers de gabarits de page pour Hugo, vous devriez tout autant apprécier cette explication par l'exemple du surchargement de variables à l'aide de la fonction `.Scratch`. Ça vous démange ? Voyons tout cela en détail.
+{{% intro %}}Si vous avez aimé l’article de [Régis Philibert](https://regisphilibert.com/) à propos de [la gestion du contexte]({{< relref "hugo-le-point-sur-le-contexte.md" >}}) dans les fichiers de gabarits de page pour Hugo, vous devriez tout autant apprécier cette explication par l’exemple du surchargement de variables à l’aide de la fonction `.Scratch`. Ça vous démange ? Voyons tout cela en détail.
 {{% /intro %}}
 
 Manipuler des variables dans Hugo peut s'avérer compliqué si vous ne connaissez que des langages de programmation classiques.
@@ -27,7 +27,7 @@ if($ciel == "sombre"){
 $salutations = $ciel == "sombre" ? "Bonjour : Bonsoir";
 ```
 
-Avec Go Template, on serait donc tenté d'écrire:
+Avec Go Template, on serait donc tenté d’écrire:
 
 ```go
 {{ $salutations := "Bonjour" }}
@@ -39,15 +39,15 @@ Avec Go Template, on serait donc tenté d'écrire:
 
 Malheureusement ça ne fonctionnera pas 😞
 
-Vous aurez besoin de l'aide de `.Scratch` pour cela et c'est ce que nous allons voir ensemble !
+Vous aurez besoin de l’aide de `.Scratch` pour cela et c'est ce que nous allons voir ensemble !
 
-Du moins tant que [cette anomalie du langage Go](https://github.com/golang/go/issues/10608) n'aura pas été résolue dans la version 1.11 annoncée actuellement pour la fin juillet, la seule manière de surcharger des variables ou d'ajouter n'importe quel type de valeur personnalisée à un objet `.Page`, c'est d'utiliser la fonction `.Scratch`.
+Du moins tant que [cette anomalie du langage Go](https://github.com/golang/go/issues/10608) n'aura pas été résolue dans la version 1.11 annoncée actuellement pour la fin juillet, la seule manière de surcharger des variables ou d’ajouter n'importe quel type de valeur personnalisée à un objet `.Page`, c'est d’utiliser la fonction `.Scratch`.
 
-`.Scratch` est super pratique mais [sa documentation est un peu légère](https://gohugo.io/extras/scratch/) si comme moi vous n'êtes pas super à l'aise avec le langage Go.
+`.Scratch` est super pratique mais [sa documentation est un peu légère](https://gohugo.io/extras/scratch/) si comme moi vous n'êtes pas super à l’aise avec le langage Go.
 
 ## `.Scratch` à la rescousse !
 
-Au départ la fonction `.Scratch` a été ajoutée pour palier à la limitation de Go Template mentionnée plus haut et s'est mise à rendre bien d'autres services par la suite.\
+Au départ la fonction `.Scratch` a été ajoutée pour palier à la limitation de Go Template mentionnée plus haut et s'est mise à rendre bien d’autres services par la suite.\
 Cette fonction dispose de plusieurs méthodes.
 
 ### `.Scratch.Set`
@@ -67,7 +67,7 @@ Pour reprendre notre exemple précédent en PHP, nous pouvons écrire quelque ch
 
 ### `.Scratch.Add`
 
-Cette méthode s'occupe d'ajouter ou de pousser des valeurs multiples dans une variable ou une clef.
+Cette méthode s'occupe d’ajouter ou de pousser des valeurs multiples dans une variable ou une clef.
 
 ```go
 // Pour les chaînes de caractères
@@ -78,7 +78,7 @@ Cette méthode s'occupe d'ajouter ou de pousser des valeurs multiples dans une v
 // Affichera : BonjourBonsoir
 ```
 
-Utilisée avec `slice`, elle permet d'ajouter une ou plusieurs valeurs à un tableau.
+Utilisée avec `slice`, elle permet d’ajouter une ou plusieurs valeurs à un tableau.
 
 ```
 {{ .Scratch.Add "salutations" (slice "Bonjour") }}
@@ -110,7 +110,7 @@ Maintenant récupérons tout ça.
 
 ### .Scratch.SetInMap
 
-Cette fonction-là permet de cible la clef d'un tableau et de lui assigner une nouvelle valeur.
+Cette fonction-là permet de cible la clef d’un tableau et de lui assigner une nouvelle valeur.
 
 Elle prend comme premier paramètre votre clef `.Scratch`, comme second paramètre la clef issue du tableau ou de la map, le troisième étant la valeur que vous définissez.
 
@@ -128,35 +128,35 @@ vous explique tout ça [dans cet article](https://regisphilibert.com/blog/2017/0
 
 ## Attention au périmètre et au contexte…
 
-`.Scratch` n'est disponible que pour l'objet page ou l'objet shortcode. Vous ne pouvez pas l'utiliser sur un autre élément.
+`.Scratch` n'est disponible que pour l’objet page ou l’objet shortcode. Vous ne pouvez pas l’utiliser sur un autre élément.
 
-Souvenez-vous que si vous vous trouvez à l'intérieur d'une boucle `range` dans votre page d'index, alors le `.Scratch` de votre page d'index sera `$.Scratch` alors que la page courante que vous traitez dans votre boucle sera `.Scratch`.
+Souvenez-vous que si vous vous trouvez à l’intérieur d’une boucle `range` dans votre page d’index, alors le `.Scratch` de votre page d’index sera `$.Scratch` alors que la page courante que vous traitez dans votre boucle sera `.Scratch`.
 
 Retenez également que vous pouvez affecter une paire clef-valeur à `.Scratch` depuis n'importe où, même dans un fichier partiel du moment que vous lui passez le contexte.
-Heeeeein? Prenons un exemple concret pour illustrer les dangers qui vous guettent avec l'utilisation de `.Scratch` et du contexte.
+Heeeeein? Prenons un exemple concret pour illustrer les dangers qui vous guettent avec l’utilisation de `.Scratch` et du contexte.
 
 ### Un exemple classe avec `.Scratch`
 
-Je trouve ça bien pratique d'affecter des classes à mon élément `body` (comme le fait WordPress) pour pouvoir faires des ajustements CSS/JavaScript en fonction de la page sur laquelle on se trouve.
+Je trouve ça bien pratique d’affecter des classes à mon élément `body` (comme le fait WordPress) pour pouvoir faires des ajustements CSS/JavaScript en fonction de la page sur laquelle on se trouve.
 
 Je trouvais ça très fastideux à faire avec Hugo, jusqu'à ce que je comprenne comment utiliser `.Scratch`.
 
 Je veux ajouter une classe CSS `rp-body` à toutes mes pages ainsi que la valeur de `.Section` à mes classes.
 
-Et seule la page d'accueil devrait hériter de la classe `rp-home`.
+Et seule la page d’accueil devrait hériter de la classe `rp-home`.
 
-Je pourrais écrire ça une bonne foi pour toute, dans un fichier partiel ou un fichier de gabarit de page qui comprend l'ouverture de la balise `body` mais… je pourrais avoir besoin de cette liste de classes ailleurs dans mon code pour réaliser des tours de magie avec ajax. Disons sous forme d'objet JavaScript.
+Je pourrais écrire ça une bonne foi pour toute, dans un fichier partiel ou un fichier de gabarit de page qui comprend l’ouverture de la balise `body` mais… je pourrais avoir besoin de cette liste de classes ailleurs dans mon code pour réaliser des tours de magie avec ajax. Disons sous forme d’objet JavaScript.
 
-Comme faire pour créer cette liste, la modifier si je suis sur la page d'accueil et la stocker dans mon objet `.Page` pour pouvoir la réutiliser par la suite ? Pour bien faire, nous allons stocker nos classes dans un tableau.
+Comme faire pour créer cette liste, la modifier si je suis sur la page d’accueil et la stocker dans mon objet `.Page` pour pouvoir la réutiliser par la suite ? Pour bien faire, nous allons stocker nos classes dans un tableau.
 
 ```go
 // Avant la balise body, je peux stocker mon unique et première classe universelle.
 {{ .Scratch.Add "classes" (slice "rp-body") }}
 
-// Puis ma section. Ce printf me permet d'ajouter la valeur de .Section avec mon préfixe personnalisé.
+// Puis ma section. Ce printf me permet d’ajouter la valeur de .Section avec mon préfixe personnalisé.
 {{ .Scratch.Add "classes" (slice (printf "rp-%s" .Section))) }}
 
-// Et maintenant sommes nous sur la page d'accueil ?
+// Et maintenant sommes nous sur la page d’accueil ?
 {{ if .IsHome }}
     {{ .Scratch.Add "classes" (slice "rp-home") }}
 {{end}}
@@ -172,7 +172,7 @@ Nous pourrions faire bien plus de vérifications et de contorsions, mais en fin 
 <body class='{{ delimit (.Scratch.Get "classes") " " }}'>
 ```
 
-Et pour JavaScript, nous pouvons créer notre objet à l'endroit où nous en avons besoin.
+Et pour JavaScript, nous pouvons créer notre objet à l’endroit où nous en avons besoin.
 
 ```js
 <script>
@@ -184,7 +184,7 @@ Très bon cas de figure, continuons notre chemin.
 
 ### `.Scratch` dans un fichier partiel
 
-Comme je l'expliquais plus tôt, comme `.Scratch` fait partie de l'objet page généralement passé en tant que contexte ([le fameux point]({{< relref "hugo-le-point-sur-le-contexte.md" >}})) à l'appel de la fonction `partial`.Déplaçons le bout de code qui stocke nos classes dans un fichier partiel pour gagner en lisibilité :
+Comme je l’expliquais plus tôt, comme `.Scratch` fait partie de l’objet page généralement passé en tant que contexte ([le fameux point]({{< relref "hugo-le-point-sur-le-contexte.md" >}})) à l’appel de la fonction `partial`.Déplaçons le bout de code qui stocke nos classes dans un fichier partiel pour gagner en lisibilité :
 
 ```go
 // partials/scratching/body_classes.html
@@ -200,7 +200,7 @@ Dans mon fichier de gabarit, je peux maintenant écrire :
 […]
 ```
 
-Le retour de la fonction `.Scratch` de la page a été transmis au fichier partiel via le contexte, de manière à pouvoir continuer de le modifier sans avoir à toucher au code ailleurs. En plus ça permet d'avoir des fichiers de gabarits de page plus propres !
+Le retour de la fonction `.Scratch` de la page a été transmis au fichier partiel via le contexte, de manière à pouvoir continuer de le modifier sans avoir à toucher au code ailleurs. En plus ça permet d’avoir des fichiers de gabarits de page plus propres !
 
 ### `.Scratch` dans un fichier partiel dans une boucle `range` 🤯
 
@@ -222,7 +222,7 @@ Quand vous utilisez la fonction `range` pour boucler sur des éléments, vous ne
     // Le fichier partiel enfant.html ne saura pas récupérer le contenu de la fonction .Scratch de la page, même si nous lui passons le contexte en paramètre…
 ```
 
-C'est parce que le contexte que nous passons en paramètre de la fonction `partial` est celui de l'élément en cours parcouru grâce à la fonction `range`, pas celui de la page dont vous êtes en train de coder le gabarit.
+C’est parce que le contexte que nous passons en paramètre de la fonction `partial` est celui de l’élément en cours parcouru grâce à la fonction `range`, pas celui de la page dont vous êtes en train de coder le gabarit.
 
 Très bien me direz-vous, mais comment faire pour accéder au `.Scratch` de la page parente depuis notre fichier partiel ?
 
@@ -243,7 +243,7 @@ Dans le fichier partiel on écrira alors :
     <div>
 ```
 
-Si vous avez également besoin de l'ensemble du contexte de la page que vous êtes en train de parcourir dans la boucle, utilisez alors la fonction `dict` :
+Si vous avez également besoin de l’ensemble du contexte de la page que vous êtes en train de parcourir dans la boucle, utilisez alors la fonction `dict` :
 
 ```go
   {{ $indexScratch := .Scratch }}
@@ -262,7 +262,7 @@ Dans le fichier partiel vous pourrez alors écrire :
 
 ## `.Scratch` après Go 1.11
 
-Le jour où l'équipe chargée de développer le langage Go publiera cette révision, nous pourrons surcharger naturellement les variables dans nos fichiers de gabarits :
+Le jour où l’équipe chargée de développer le langage Go publiera cette révision, nous pourrons surcharger naturellement les variables dans nos fichiers de gabarits :
 
 ```go
 // Enfin !

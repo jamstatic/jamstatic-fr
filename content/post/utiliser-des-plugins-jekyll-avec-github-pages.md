@@ -19,7 +19,7 @@ vous voulez utiliser des plugins comme [jekyll-cloudinary]({{< relref
 le site en local et le publier sur Github.
 {{% /intro %}}
 
-Nous allons voir que cette opération est facilement automatisable à l'aide d'un
+Nous allons voir que cette opération est facilement automatisable à l’aide d’un
 fichier `Rakefile`, la manière la plus courante en Ruby de créer des tâches.
 
 ## Pré-requis
@@ -95,7 +95,7 @@ apporter quelques petites modifications au fichier `Rakefile` :
 {{< gist DirtyF 2eacfb7ecec18b3b738af1c3c8d1fe5e >}}
 
 Vous pouvez maintenant lancer `rake site:publish` pour générer votre site et le
-publier sur GitHub. Jetez également un coup d'œil au [fichier Rakefile de
+publier sur GitHub. Jetez également un coup d’œil au [fichier Rakefile de
 Jekyll][jekyll-rakefile] pour une implémentation alternation de la tâche `rake
 site:publish`.
 
@@ -103,10 +103,10 @@ site:publish`.
 
 {{< figure src="/assets/images/octojekyll.png" >}}
 
-Enfin, sachez qu'il existe d'autres solutions d'hébergement comme [GitLab
+Enfin, sachez qu'il existe d’autres solutions d’hébergement comme [GitLab
 Pages](https://pages.gitlab.io/), [Netlify](https://www.netlify.com),
 [Cloudcannon](http://cloudcannon.com), [Siteleaf](https://www.siteleaf.com/) ou
-[Forestry.io](https://forestry.io/) qui vous permettent d'utiliser les plugins
+[Forestry.io](https://forestry.io/) qui vous permettent d’utiliser les plugins
 de votre choix, sans avoir recours à ce genre de hack.
 
 ### Notes

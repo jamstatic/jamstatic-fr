@@ -14,12 +14,12 @@ images:
 
 {{% intro %}}
 
-Pour créer un nouveau projet avec Hugo, [Forestry](https://forestry.io) propose un kit de démarrage en libre téléchargement. Que vous ayez déjà utilisé le générateur de site statique Hugo ou pas, ce kit est intéressant, car il propose une configuration complète et un workflow de développement moderne basé sur les outils de l'écosystème de `npm`. [Chris Macrae](https://twitter.com/chrisdmacrae) nous montre comment s'en servir pour créer votre premier site en moins de 30 minutes.
+Pour créer un nouveau projet avec Hugo, [Forestry](https://forestry.io) propose un kit de démarrage en libre téléchargement. Que vous ayez déjà utilisé le générateur de site statique Hugo ou pas, ce kit est intéressant, car il propose une configuration complète et un workflow de développement moderne basé sur les outils de l’écosystème de `npm`. [Chris Macrae](https://twitter.com/chrisdmacrae) nous montre comment s'en servir pour créer votre premier site en moins de 30 minutes.
 
 {{% /intro %}}
 
 
-[Hugo](https://gohugo.io), le générateur de site statique écrit en Go, a pris la communauté de vitesse. Il présente tous les avantages d'un générateur de site statique — 100% flexible, sécurisé et rapide — mais il vole également la vedette quand on [compare ses performances avec celles de Jekyll](https://forestry.io/blog/hugo-vs-jekyll-benchmark/). Le site de [Forestry.io](https://forestry.io) est d'ailleurs développé avec Hugo.
+[Hugo](https://gohugo.io), le générateur de site statique écrit en Go, a pris la communauté de vitesse. Il présente tous les avantages d’un générateur de site statique — 100% flexible, sécurisé et rapide — mais il vole également la vedette quand on [compare ses performances avec celles de Jekyll](https://forestry.io/blog/hugo-vs-jekyll-benchmark/). Le site de [Forestry.io](https://forestry.io) est d’ailleurs développé avec Hugo.
 
 Nous allons voir comment configurer Hugo sur votre ordinateur, comment installer et personnaliser un thème, en ajoutant nos propres fichiers CSS et JavaScript.
 
@@ -35,9 +35,9 @@ Quelle différence avec le guide de démarrage rapide de la documentation d’Hu
 
 ## 1) Configurer Hugo
 
-Pou commencer, clonez ou [téléchargez notre kit de démarrage pour Hugo](https://github.com/forestryio/hugo-boilerplate/archive/master.zip "Téléchargez depuis GitHub"), et décompressez l'archive quelque part sur votre ordinateur. Vous avez aussi besoin de [Node.js](https://nodejs.org) et d'[NPM](https://www.npmjs.com/), il vous suffit de suivre les indications sur la [page de téléchargement de Node](https://nodejs.org/fr/download/) si vous ne les avez pas déjà installés.
+Pou commencer, clonez ou [téléchargez notre kit de démarrage pour Hugo](https://github.com/forestryio/hugo-boilerplate/archive/master.zip "Téléchargez depuis GitHub"), et décompressez l’archive quelque part sur votre ordinateur. Vous avez aussi besoin de [Node.js](https://nodejs.org) et d’[NPM](https://www.npmjs.com/), il vous suffit de suivre les indications sur la [page de téléchargement de Node](https://nodejs.org/fr/download/) si vous ne les avez pas déjà installés.
 
-Vous bénéficiez ainsi automatiquement d'une structure de départ pour Hugo. Dans notre kit, elle est stockée dans le dossier `hugo`. À l'intérieur se trouvent divers dossiers qui abritent le contenu de votre site, les gabarits de page et les fichiers CSS, JS, images, etc. L'arborescence de la structure de base ressemble à ceci — j'ai laissé quelques fichiers et dossiers de côté de façon à ce que ce soit plus clair :
+Vous bénéficiez ainsi automatiquement d’une structure de départ pour Hugo. Dans notre kit, elle est stockée dans le dossier `hugo`. À l’intérieur se trouvent divers dossiers qui abritent le contenu de votre site, les gabarits de page et les fichiers CSS, JS, images, etc. L'arborescence de la structure de base ressemble à ceci — j'ai laissé quelques fichiers et dossiers de côté de façon à ce que ce soit plus clair :
 
     .
     ├── hugo/                  // Le site Hugo, avec les fichiers de contenu, de données, statiques.
@@ -52,7 +52,7 @@ Vous bénéficiez ainsi automatiquement d'une structure de départ pour Hugo. Da
     |   |   ├── img/           // Les images du site.
     |   |   ├── js/            // Les fichiers JS compilés
     |   |   └── svg/           // Les fichiers SVG vont ici
-    |   └── config.toml        // Le fichier de configuration d'Hugo
+    |   └── config.toml        // Le fichier de configuration d’Hugo
     └─── src/
          ├── css               // Les fichiers source CSS/SCSS à compiler vers /css/
          └── js                // Les fichiers source JS à compiler vers /js/
@@ -75,7 +75,7 @@ Nous allons commencer par ajouter de nouveaux contenus au site. Pour ce faire, n
 
 ## Mettre à jour un article
 
-Commencer par mettre à jour l'exemple d'article fourni dans notre structure de départ. Ouvrez le fichier `hugo/content/posts/example.md` dans votre éditeur de texte. Il est composé d'un en-tête *front matter* avec un champ titre et d'un texte d'exemple au format markdown.
+Commencer par mettre à jour l’exemple d’article fourni dans notre structure de départ. Ouvrez le fichier `hugo/content/posts/example.md` dans votre éditeur de texte. Il est composé d’un en-tête *front matter* avec un champ titre et d’un texte d’exemple au format markdown.
 
     ---
     title:  "Bienvenue dans Hugo !"
@@ -85,7 +85,7 @@ Commencer par mettre à jour l'exemple d'article fourni dans notre structure de 
 
     Pour ajouter un nouvel article, placez un nouveau fichier dans le dossier
     `content/posts` en respectant la nomenclature `titre-de-l-article.md` et
-    ajoutez les métadonnées nécessaires dans l'en-tête de page Front Matter.
+    ajoutez les métadonnées nécessaires dans l’en-tête de page Front Matter.
     Jetez un œil au fichier source de cet article pour voir comment ça marche.
     <!--more-->
     Hugo also offers powerful support for code snippets:
@@ -112,7 +112,7 @@ Commencer par mettre à jour l'exemple d'article fourni dans notre structure de 
     [hugo-gh]:   https://github.com/gohugoio/hugo
     [hugo-community]: https://discourse.gohugo.io/
 
-Cet article n'a pas de date ! Essayez d'en définir une en ajoutant l'entrée suivante dans l'en-tête _Front Matter_ de l'article:
+Cet article n'a pas de date ! Essayez d’en définir une en ajoutant l’entrée suivante dans l’en-tête _Front Matter_ de l’article:
 
     date: "YYYY-MM-DDTHH:MM:SS-00:00"
 
@@ -122,11 +122,11 @@ _Remplacez_ `YYYY-MM-DDTHH:MM:SS-00:00` avec une date valide, comme… `2018-01-
 
 {{% /notice %}}
 
-Sauvegardez vos changements puis affichez l'article mis à jour dans votre navigateur à l'adresse [http://localhost:3000/](http://localhost:3000/). La date affichée devant le titre de l'article devrait avoir été mise à jour.
+Sauvegardez vos changements puis affichez l’article mis à jour dans votre navigateur à l’adresse [http://localhost:3000/](http://localhost:3000/). La date affichée devant le titre de l’article devrait avoir été mise à jour.
 
 ## Créer un nouvel article
 
-Maintenant essayons de créer un nouvel article. Nous utiliserons pour cela la commande fournie avec Hugo pour générer un nouvel article. Dans notre projet, Hugo est déclaré comme une dépendance NPM, nous pouvons donc l'utiliser avec la commande :
+Maintenant essayons de créer un nouvel article. Nous utiliserons pour cela la commande fournie avec Hugo pour générer un nouvel article. Dans notre projet, Hugo est déclaré comme une dépendance NPM, nous pouvons donc l’utiliser avec la commande :
 
     npm run hugo -- <command> --<param>
 
@@ -149,7 +149,7 @@ Ajoutez par exemple le contenu suivant dans le fichier et sauvegardez vos change
     ## Bienvenue
     Pratique ce modèle de projet *Hugo*. j'espère que vous appréciez ce guide !
 
-Vous pouvez voir l'article mis à jour dans votre navigateur à l'adresse  [http://localhost:3000/posts/mon-premier-article/](http://localhost:3000/posts/mon-premier-article/).
+Vous pouvez voir l’article mis à jour dans votre navigateur à l’adresse  [http://localhost:3000/posts/mon-premier-article/](http://localhost:3000/posts/mon-premier-article/).
 
 ## Utiliser un thème
 
@@ -159,7 +159,7 @@ Pour le moment votre nouveau site n'est pas très beau. Remédions à cela en aj
 
 Nous allons utiliser le thème [Casper](https://github.com/vjeantet/hugo-theme-casper) de [_@vjeantet_](https://github.com/vjeantet). Pour ce faire nous allons ajouter le thème dans le dossier `hugo/themes`, plus exactement dans le dossier `hugo/themes/hugo-theme-casper/`.
 
-Clonez ou [téléchargez le thème](https://github.com/vjeantet/hugo-theme-casper/archive/master.zip) et décompressez l'archive dans `hugo/themes/hugo-theme-casper/`.
+Clonez ou [téléchargez le thème](https://github.com/vjeantet/hugo-theme-casper/archive/master.zip) et décompressez l’archive dans `hugo/themes/hugo-theme-casper/`.
 
 Ensuite, mettez à jour la configuration du site aves les options de configuration spécifiques au thème.
 
@@ -175,7 +175,7 @@ Ouvrez le fichier `hugo/config.toml` dans votre éditeur de texte favori et remp
 
     [params]
       description = "Bien démarrrer avec Hugo"
-      metadescription = "Utilisé dans la balise meta 'description' pour l'accueil et les pages d'index, faute de quoi c'est l'entrée 'description' du front matter de la page qui sera utilisé."
+      metadescription = "Utilisé dans la balise meta 'description' pour l’accueil et les pages d’index, faute de quoi c'est l’entrée 'description' du front matter de la page qui sera utilisé."
       cover = ""
       author = "VOTRE_NOM"
       authorlocation = "Terre, Galaxie de la Voie Lactée"
@@ -201,30 +201,30 @@ Nous allons commencer par éditer les paramètres du site dans le fichier `hugo/
 
 * `title = "Hugo Boilerplate"`
 * `description = "Bien démarrer avec Hugo`
-*  `metadescription = "Utilisé dans la balise meta 'description' pour l'accueil et les pages d'index, faute de quoi c'est l'entrée 'description' du front matter de la page qui sera utilisé"`
+*  `metadescription = "Utilisé dans la balise meta 'description' pour l’accueil et les pages d’index, faute de quoi c'est l’entrée 'description' du front matter de la page qui sera utilisé"`
 * `author = "VOTRE_NOM"`
 
 ![](/assets/images/2018/03/casper-theme-default-config.png "La thème Casper avec du contenu et les styles par défaut")
 
-Bien, ajoutons maintenant une image de fond pour la bannière d'en-tête. Dans le fichier `hugo/config.toml`, vous trouverez une section `[params]`. Modifiez le paramètre `cover` pour qu'il ait la valeur `/img/darius-soodmand-116253.jpg`, sauvegardez vos changements.
+Bien, ajoutons maintenant une image de fond pour la bannière d’en-tête. Dans le fichier `hugo/config.toml`, vous trouverez une section `[params]`. Modifiez le paramètre `cover` pour qu'il ait la valeur `/img/darius-soodmand-116253.jpg`, sauvegardez vos changements.
 
-![](/assets/images/2018/03/casper-theme-cover.jpg "Ajout d'une image de fond")
+![](/assets/images/2018/03/casper-theme-cover.jpg "Ajout d’une image de fond")
 
-Retournons maintenant voir notre site dans le navigateur. C'est déjà mieux, mais il y a encore du travail.
+Retournons maintenant voir notre site dans le navigateur. C’est déjà mieux, mais il y a encore du travail.
 
 ## 4) Personnaliser votre thème
 
-Maintenant que vous avez adapté le site pour le personnaliser en peu, nous allons nous attarder sur l'aspect le plus puissant d'Hugo et de ce kit de démarrage: **un templating simple et puissant**.
+Maintenant que vous avez adapté le site pour le personnaliser en peu, nous allons nous attarder sur l’aspect le plus puissant d’Hugo et de ce kit de démarrage: **un templating simple et puissant**.
 
-Nous venons d'ajouter le thème Casper au site, ce qui permet à Hugo d'utiliser tous les gabarits HTML présents dans le dossier `hugo/themes/hugo-theme-casper/layouts/` lors de la génération du site.
+Nous venons d’ajouter le thème Casper au site, ce qui permet à Hugo d’utiliser tous les gabarits HTML présents dans le dossier `hugo/themes/hugo-theme-casper/layouts/` lors de la génération du site.
 
-Nous allons maintenant _étendre_ le thème grâce à **l'héritage de gabarits** d'Hugo.
+Nous allons maintenant _étendre_ le thème grâce à **l’héritage de gabarits** d’Hugo.
 
-Tous les fichiers de gabarits présents dans le dossier `hugo/layouts/` surchargeront n'importe quel gabarit du même nom présent dans le répertoire des gabarits du thème, nous permettant ainsi de personnaliser notre site sans toucher au thème d'origine.
+Tous les fichiers de gabarits présents dans le dossier `hugo/layouts/` surchargeront n'importe quel gabarit du même nom présent dans le répertoire des gabarits du thème, nous permettant ainsi de personnaliser notre site sans toucher au thème d’origine.
 
 ### CSS & Javascript personnalisé
 
-À côté d'_Hugo_, ce kit de démarrage fourni un serveur de développement qui va post-traiter automatiquement les fichiers CSS et JS pour le navigateur. Tous les fichiers CSS, JS, images présents dans le dossier `src/` seront traités automatiquement et déplacés dans le dossier `hugo/static/`.
+À côté d’_Hugo_, ce kit de démarrage fourni un serveur de développement qui va post-traiter automatiquement les fichiers CSS et JS pour le navigateur. Tous les fichiers CSS, JS, images présents dans le dossier `src/` seront traités automatiquement et déplacés dans le dossier `hugo/static/`.
 
 Ajoutons-les à notre thème de manière à pouvoir le personnaliser comme nous voulons. Nous allons copier des fichiers de gabarits du thème et ajouter les fichiers CSS et JS personnalisés de notre kit dans ces gabarits.
 
@@ -258,7 +258,7 @@ Ajoutez juste en dessous:
 
 Maintenant tout notre code CSS et JS personnalisé sera utilisé sur le site.
 
-Faisons un essai en augmentant la hauteur de l'en-tête principal. Ouvrez le fichier `src/css/styles.css` et ajoutez le code suivant à la fin du fichier :
+Faisons un essai en augmentant la hauteur de l’en-tête principal. Ouvrez le fichier `src/css/styles.css` et ajoutez le code suivant à la fin du fichier :
 
     .tag-head.main-header {
       height: 80vh;
@@ -283,7 +283,7 @@ Les fichiers des modèles de gabarits de page se trouvent dans le [_dépôt de n
 Pour en apprendre un peu plus sur Hugo, reportez-vous aux sections suivantes de la documentation officielle :
 
 * [L'organisation des contenus dans Hugo](http://gohugo.io/content-management/organization/)
-* [Introduction au langage de templating d'Hugo](http://gohugo.io/templates/introduction/)
-* [Les options de configuration d'Hugo](http://gohugo.io/getting-started/configuration/)
+* [Introduction au langage de templating d’Hugo](http://gohugo.io/templates/introduction/)
+* [Les options de configuration d’Hugo](http://gohugo.io/getting-started/configuration/)
 
-Nous verrons dans un prochain article comment configurer le versionnement avec Git pour faciliter l'intégration continue et le déploiement chez différents hébergeurs avec Forestry, un CMS pour les sites statiques générés avec Hugo ou Jekyll.
+Nous verrons dans un prochain article comment configurer le versionnement avec Git pour faciliter l’intégration continue et le déploiement chez différents hébergeurs avec Forestry, un CMS pour les sites statiques générés avec Hugo ou Jekyll.

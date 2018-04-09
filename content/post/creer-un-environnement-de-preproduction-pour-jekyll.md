@@ -15,23 +15,23 @@ categories:
 ---
 
 {{% intro %}}
-Dans son article, [Eduardo Boucas](https://eduardoboucas.com/) révèle comment il a mis simplement en place [un site de préproduction pour Jekyll grâce à Netlify](https://eduardoboucas.com/blog/2017/02/22/jekyll-staging-environment.html). Ce blog est également déployé et hébergé grâce à Netlify. La nouvelle version de leur interface d'administration propose nativement des fonctionnalités comme le fait d'associer un sous-domaine à une branche ou le fait de pouvoir bloquer le site de production à un certain commit. Vous n'avez donc pas besoin de créer deux sites dans Netlify pour bénéficier d'une prévisualisation sur une URL dédiée. L'article d'Eduardo aborde néanmoins l'utilisation des variables d'environnements et utilise Jekyll comme exemple, la technique reste bien entendu valable pour d'autres générateurs comme Hugo, Hexo et les autres.
+Dans son article, [Eduardo Boucas](https://eduardoboucas.com/) révèle comment il a mis simplement en place [un site de préproduction pour Jekyll grâce à Netlify](https://eduardoboucas.com/blog/2017/02/22/jekyll-staging-environment.html). Ce blog est également déployé et hébergé grâce à Netlify. La nouvelle version de leur interface d’administration propose nativement des fonctionnalités comme le fait d’associer un sous-domaine à une branche ou le fait de pouvoir bloquer le site de production à un certain commit. Vous n'avez donc pas besoin de créer deux sites dans Netlify pour bénéficier d’une prévisualisation sur une URL dédiée. L'article d’Eduardo aborde néanmoins l’utilisation des variables d’environnements et utilise Jekyll comme exemple, la technique reste bien entendu valable pour d’autres générateurs comme Hugo, Hexo et les autres.
 {{% /intro %}}
 
-Un environnement de préproduction ou de _staging_ est une infrastructure de test qui s'approche autant que possible de la configuration d'un site de production. Dans le cas d'un site statique, il peut servir à partager un nouvel article ou une nouvelle fonctionnalité avec un nombre de personnes restreintes avant de le rendre disponible publiquement. Dans cet article, je vais vous montrer comment j'ai fait pour en créer un et comment je m'en sers.
+Un environnement de préproduction ou de _staging_ est une infrastructure de test qui s'approche autant que possible de la configuration d’un site de production. Dans le cas d’un site statique, il peut servir à partager un nouvel article ou une nouvelle fonctionnalité avec un nombre de personnes restreintes avant de le rendre disponible publiquement. Dans cet article, je vais vous montrer comment j'ai fait pour en créer un et comment je m'en sers.
 
 ## Le workflow Git
 
-Mon site est hébergé sur GitHub et servi grâce à [GitHub Pages](https://pages.github.com/), ce qui signifie que tout ce que je pousse sur la branche `master` enclenche une regénération du site et est publié presque immédiatement. Si je visite l'URL de mon site quelques secondes plus tard, je peux voir les contenus mis à jour.
+Mon site est hébergé sur GitHub et servi grâce à [GitHub Pages](https://pages.github.com/), ce qui signifie que tout ce que je pousse sur la branche `master` enclenche une regénération du site et est publié presque immédiatement. Si je visite l’URL de mon site quelques secondes plus tard, je peux voir les contenus mis à jour.
 
 Pour notre environnement de préproduction, ce que nous voulons c'est faire une copie basique de cette infrastructure de manière à faire passer notre contenu par un site distinct, avec une URL distincte. La démarche ressemblerait à quelque chose comme ça :
 
 1. Pousser les changements sur GitHub
-1. Le site de préproduction est régénéré, l'URL de préproduction peut être utilisée pour prévisualiser le nouvel état
+1. Le site de préproduction est régénéré, l’URL de préproduction peut être utilisée pour prévisualiser le nouvel état
 1. Créer une pull request de la préproduction vers la production pour répercuter les changements
-1. Le site de production est régénéré, l'URL de production reflète le nouvel état du site
+1. Le site de production est régénéré, l’URL de production reflète le nouvel état du site
 
-Pour que notre système fonctionne uniquement avec GitHub Pages nous allons avoir besoin de deux dépôts, puisqu'on ne peut pas servir deux sites à partir d'un seul dépôt. Mais à moins qu'un dépôt ne soit le fork d'un autre, ce qui signifie avoir deux comptes GitHub ou utiliser un compte *organisation*, vous ne pouvez pas créer de pull request entre eux.
+Pour que notre système fonctionne uniquement avec GitHub Pages nous allons avoir besoin de deux dépôts, puisqu'on ne peut pas servir deux sites à partir d’un seul dépôt. Mais à moins qu'un dépôt ne soit le fork d’un autre, ce qui signifie avoir deux comptes GitHub ou utiliser un compte *organisation*, vous ne pouvez pas créer de pull request entre eux.
 
 J'utilise donc [Netlify](https://netlify.com) à la place pour servir mon site de préproduction à partir de la branche `dev` de mon dépôt existant - GitHub Pages sert `eduardoboucas.com` à partir de la branche `master` et Netlify sert  `dev.eduardoboucas.com` à partir de la branche `dev`.
 
@@ -47,11 +47,11 @@ git push origin dev
 
 ## Utilisation de Netlify
 
-Pour commencer à utiliser Netlify, rendez vous sur [leur site](https://netlify.com) et connectez vous avec votre compte GitHub (c'est [gratuit pour les projets open-source](https://netlify.com/pricing/)). Cliquez sur Àjoutez un nouveau projet`, sélectionnez GitHub et sélectionnez le dépôt qui dans lequel se trouve votre site.
+Pour commencer à utiliser Netlify, rendez-vous sur [leur site](https://netlify.com) et connectez vous avec votre compte GitHub (c'est [gratuit pour les projets open-source](https://netlify.com/pricing/)). Cliquez sur Àjoutez un nouveau projet`, sélectionnez GitHub et sélectionnez le dépôt qui dans lequel se trouve votre site.
 
 {{< figure src="https://eduardoboucas.com/assets/posts/2017-02-22-creating-a-staging-environment-for-jekyll/netlify1.png" caption="Netlify : Configuration du dépôt" >}}
 
-Dans l'onglet `Paramètres de base`, sélectionnez votre branche de préproduction (par exemple `dev`). Pour un site avec Jekyll, le dossier de publication par défaut est `_site` et la commande de build `jekyll build`. Dans l'onglet `Paramètres avancés`, ajouter une variable d'environnement nommée `JEKYLL_ENV` avec la valeur `stage` — cela va servir à dire à Jekyll dans quel environnement tourne le site .
+Dans l’onglet `Paramètres de base`, sélectionnez votre branche de préproduction (par exemple `dev`). Pour un site avec Jekyll, le dossier de publication par défaut est `_site` et la commande de build `jekyll build`. Dans l’onglet `Paramètres avancés`, ajouter une variable d’environnement nommée `JEKYLL_ENV` avec la valeur `stage` — cela va servir à dire à Jekyll dans quel environnement tourne le site .
 
 Ensuite, cliquez sur `Générer votre site` et attendez quelques secondes. Lorsque la génération du site est terminée, cliquez sur `Voir votre site` pour voir le résultat.
 
@@ -61,7 +61,7 @@ Un nom aléatoire vous sera attribué, comme `cartoonist-foreground-47121`, que 
 
 ## Configuration de Jekyll
 
-On peut accéder à la variable d'environnement que nous avons crée plus haut dans Jekyll, en utilisant la variable `jekyll.environment` dans n'importe quel modèle Liquid. Grâce à ça, nous pouvons effectuer quelques ajustements au site en fonction de l'environnement dans lequel il tourne.
+On peut accéder à la variable d’environnement que nous avons crée plus haut dans Jekyll, en utilisant la variable `jekyll.environment` dans n'importe quel modèle Liquid. Grâce à ça, nous pouvons effectuer quelques ajustements au site en fonction de l’environnement dans lequel il tourne.
 
 Par exemple, nous ne voulons pas que le site de préproduction soit indexé par les moteurs de recherche.
 

@@ -1,6 +1,6 @@
 ---
 title: Des bibliothèques de composants avec Shadow DOM en Markdown
-description: Apprenez à inclure facilement des démos de composants dans du Markdown, à l'aide des shortcodes de Hugo et de l'encapsulation Shadow DOM.
+description: Apprenez à inclure facilement des démos de composants dans du Markdown, à l’aide des shortcodes de Hugo et de l’encapsulation Shadow DOM.
 date: 2017-09-02
 source:
   author: Heydon Pickering
@@ -15,12 +15,12 @@ categories:
 {{% intro %}}
 S'il est un domaine où les générateurs de site statique se sont rapidement
 imposés c'est bien celui des sites de documentation. Avec la nécessaire
-rationalisation des interfaces multi-supports, beaucoup d'équipes en charge du
-front-end doivent aujourd'hui maintenir une bibliothèque de composants qui sert
-de référence à toutes les équipes et qui permet donc d'assurer la cohérence et
-l'évolutivité des composants dans les diverses sites et applications web de
-l'entreprise. Un composant comme un formulaire de recherche associe du code
-HTML, du CSS et du JavaScript et il n'est pas forcément aisé d'isoler le
+rationalisation des interfaces multi-supports, beaucoup d’équipes en charge du
+front-end doivent aujourd’hui maintenir une bibliothèque de composants qui sert
+de référence à toutes les équipes et qui permet donc d’assurer la cohérence et
+l’évolutivité des composants dans les diverses sites et applications web de
+l’entreprise. Un composant comme un formulaire de recherche associe du code
+HTML, du CSS et du JavaScript et il n'est pas forcément aisé d’isoler le
 comportement de vos composants quand vous les insérez en tant qu'exemples dans
 une documentation. Heydon Pickering, consultant UX et accessibilité chez
 Paciello Group et auteur du livre [Inclusive Design
@@ -28,11 +28,11 @@ Patterns](https://shop.smashingmagazine.com/products/inclusive-design-patterns)
 s'est dit qu'il pouvait tirer parti des fonctionnalités de templating et de
 modularisation du générateur Hugo pour mener à bien cette tâche, il nous
 explique tout cela en détail. Une bonne occasion pour découvrir les
-fonctionnalités liées aux snippets de code dans Hugo et d'apprendre à créer des
+fonctionnalités liées aux snippets de code dans Hugo et d’apprendre à créer des
 éléments Shadow DOM en JavaScript.
 {{% /intro %}}
 
-Il y a des gens qui détestent écrire de la documentation et d'autres qui
+Il y a des gens qui détestent écrire de la documentation et d’autres qui
 détestent écrire tout court. Il se trouve que j'aime écrire, sinon vous
 ne seriez pas en train de lire ceci. Ça tombe bien, car en tant que consultant
 en Design qui fournit un suivi professionnel, écrire représente une part
@@ -43,16 +43,16 @@ Mon workflow habituel de travail avec un traitement de texte ressemble un peu à
 ça :
 
 1. Sélectionner du texte que je veux copier dans une autre partie du document,
-2. S'apercevoir que l'application en a sélectionné un peu plus que ce que
+2. S'apercevoir que l’application en a sélectionné un peu plus que ce que
    je lui avais demandé,
 3. Essayer de nouveau,
 4. Laisser tomber et me résoudre à ajouter la partie manquante (ou supprimer
    la partie en trop) de la sélection visée plus tard,
 5. Copier-coller la sélection,
 6. S'apercevoir que le formatage du texte collé est quelque peu différent
-   de l'orignal,
-7. Tenter de trouver le style prédéfini qui correspond au texte d'origine,
-8. Essayer d'appliquer le style,
+   de l’orignal,
+7. Tenter de trouver le style prédéfini qui correspond au texte d’origine,
+8. Essayer d’appliquer le style,
 9. Laisser tomber et appliquer la police de caractère et la taille à la main,
 10. S'apercevoir qu'il y a un espace trop important au-dessus du texte collé,
     et appuyer sur “Backspace” pour le supprimer,
@@ -67,11 +67,11 @@ Idéalement je voudrais pouvoir écrire de manière à pouvoir inclure les
 composants que je documente dans le flux du texte, et cela n'est possible que si
 la documentation elle-même est écrite en HTML en CSS et en JavaScript. Dans cet
 article, je vais vous montrer comme inclure facilement des démos de code dans
-des documents Markdown avec l'aide de snippets et de l'encapsulation du Shadow
+des documents Markdown avec l’aide de snippets et de l’encapsulation du Shadow
 DOM.
 
 {{< figure src="/assets/images/2017/09/markdown-shadowdom.png"
-caption="Un M, une flèche qui pointe vers le bas et un détective caché dans l'obscurité pour symboliser Markdown et Shadow Dom" >}}
+caption="Un M, une flèche qui pointe vers le bas et un détective caché dans l’obscurité pour symboliser Markdown et Shadow Dom" >}}
 
 ### CSS et Markdown
 
@@ -84,43 +84,43 @@ définissez les [circonstances dans lesquelles les styles s'appliquent aux
 éléments](https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/))
 et ces règles sont respectées.
 
-Le seul problème avec CSS c'est que ça vous demande d'écrire du HTML en
+Le seul problème avec CSS c'est que ça vous demande d’écrire du HTML en
 contre-partie. Même les amoureux du HTML voudront bien concéder que c'est
-pénible lorsque vous souhaitez simplement écrire de la prose. C'est là où
+pénible lorsque vous souhaitez simplement écrire de la prose. C’est là où
 Markdown entre en jeu. Avec sa syntaxe concise et son jeu de fonctionnalités
-réduit à l'essentiel, il offre une façon d'écrire qui est simple à apprendre et
+réduit à l’essentiel, il offre une façon d’écrire qui est simple à apprendre et
 qui peut tirer parti — une fois converti automatiquement en HTML — des
 fonctionnalités de composition puissantes et prédictives de CSS. Ce n'est pas
 par hasard qu'il est devenu le format _de facto_ des générateurs de site
 statique et des plate-formes moderne de blog comme Ghost.
 
 Pour des besoins plus complexes, quand un balisage spécifique est requis, la
-majorité des parseurs Markdown vous permettent d'écrire directement du HTML.
+majorité des parseurs Markdown vous permettent d’écrire directement du HTML.
 Toutefois, plus il y a de balisages complexes, moins vote système de création
 est accessible aux personnes moins techniques, ou à ceux qui n'ont pas beaucoup
-de temps et de patience. C'est là où les snippets de code rentrent en jeu.
+de temps et de patience. C’est là où les snippets de code rentrent en jeu.
 
-### Les _shortcodes_ d'Hugo
+### Les _shortcodes_ d’Hugo
 
 [Hugo](https://gohugo.io)
 est un générateur de site statique écrit en Go — un langage polyvalent compilé
-développé par Google. Grâce à la parallélisation (et sans doute, à d'autres
+développé par Google. Grâce à la parallélisation (et sans doute, à d’autres
 fonctionnalités bas-niveau que je ne comprends pas vraiment), Go permet à Hugo
-d'être un générateur de contenu statique ultra-rapide. C'est l'une des
+d’être un générateur de contenu statique ultra-rapide. C’est l’une des
 nombreuses raisons pour lesquelles Hugo a été sélectionné pour la nouvelle
 version du site de Smashing Magazine.
 
 En dehors de la performance, il fonctionne de la même manière que les
 générateurs en Ruby ou en NodeJS avec lesquels vous êtes peut-être déjà
 familiers : du Markdown et des méta-données (en YAML, TOML ou JSON) transformés
-à l'aide de modèles. Sara Soueidan a écrit une
-[excellente introduction aux principales fonctionnalités d'Hugo]({{< relref "migration-de-jekyll-a-hugo.md" >}}).
+à l’aide de modèles. Sara Soueidan a écrit une
+[excellente introduction aux principales fonctionnalités d’Hugo]({{< relref "migration-de-jekyll-a-hugo.md" >}}).
 
 Pour moi la fonctionnalité qui tue dans Hugo c'est son [implémentation des snippets de code](https://gohugo.io/extras/shortcodes/).
 Les habitués de WordPress seront peut-être déjà familiers avec ce concept : un
 raccourci syntaxique destiné principalement à insérer des bouts de codes
 complexes ou issus de services tiers. Par example WordPress inclus un raccourci
-pour Vimeo qui prend juste l'ID de la vidéo Vimeo en question.
+pour Vimeo qui prend juste l’ID de la vidéo Vimeo en question.
 
 ``` html
 [vimeo 207263942]
@@ -129,7 +129,7 @@ pour Vimeo qui prend juste l'ID de la vidéo Vimeo en question.
 Les crochets indiquent que le contenu doit être traité et remplacé par le
 balisage HTML complet lorsque le contenu est parsé.
 
-À l'aide des fonctions de templating de Go, Hugo fourni une API très simple pour
+À l’aide des fonctions de templating de Go, Hugo fourni une API très simple pour
 créer des _shortcodes_ personnalisés. Par exemple, j’ai créé un _shortcode_
 CodePen très simple que peux inclure dans mon contenu en Markdown :
 
@@ -144,7 +144,7 @@ lobortis commodo vitae vel nulla sit amet ante hendrerit tempus.
 ```
 
 Hugo recherche automatiquement le modèle nommé  `codePen.html` dans le
-sous-dossier `shortcodes` pour pouvoir parser le _shortcode_ pendant l'étape de
+sous-dossier `shortcodes` pour pouvoir parser le _shortcode_ pendant l’étape de
 compilation. Mon implémentation ressemble à ça :
 
 ``` html
@@ -160,21 +160,21 @@ compilation. Mon implémentation ressemble à ça :
 ```
 
 Pour vous faire une meilleure idée de la manière dont fonctionne le langage de
-templating de Go, vous devrez consulter [l'introduction à Go
-Template](https://gohugo.io/templates/go-templates/) d'Hugo. En
+templating de Go, vous devrez consulter [l’introduction à Go
+Template](https://gohugo.io/templates/go-templates/) d’Hugo. En
 attendant, retenez simplement cela :
 
-* C'est pas super sexy mais c'est très puissant.
+* C’est pas super sexy mais c'est très puissant.
 * `{{ .Get 0 }}` sert à récupérer le premier (et dans cet
-  exemple le seul) argument fourni — l'ID du CodePen. Hugo supporte également
+  exemple le seul) argument fourni — l’ID du CodePen. Hugo supporte également
   les arguments nommés, qui sont déclarés comme des arguments HTML.
 * Le `.` référence le contexte actuel. Donc `.Get 0` signifie
   “Récupère le premier argument fourni pour le _shortcode_ courant.”
 
 Quoi qu'il en soit, je pense que les _shortcodes_ sont la meilleure chose qui
-existe depuis le pain de mie en tranches et l'implémentation d'Hugo pour écrire
+existe depuis le pain de mie en tranches et l’implémentation d’Hugo pour écrire
 des _shortcodes_ personnalisés est vraiment impressionnante. Je me dois aussi de
-mentionner qu'il est possible d'utiliser les [includes de Jekyll](https://jekyllrb.com/docs/includes/)
+mentionner qu'il est possible d’utiliser les [includes de Jekyll](https://jekyllrb.com/docs/includes/)
 pour parvenir à un résultat similaire, mais je les trouve moins souples et
 moins puissants.
 
@@ -185,17 +185,17 @@ du code), mais on se heurte à des problèmes inhérents à ces plate-formes
 lorsqu'on veut inclure ces extraits de code dans une bibliothèque
 de composants :
 
-* On dépend d'une API et il n'est pas toujours facile de faire fonctionner cela
+* On dépend d’une API et il n'est pas toujours facile de faire fonctionner cela
   efficacement en mode hors-ligne.
 * Cela ne représente pas un simple composant, c'est une interface complexe à
   part entière qui embarque les styles du service utilisé.
 * Cela crée du bruit et une distraction inutile alors que le focus devrait être
   sur le composant.
 
-Pendant un temps, j'ai tenté d'inclure mes démos de composants en utilisant mes
-propres iframes. Je faisais pointer l'iframe vers un fichier en local qui
+Pendant un temps, j'ai tenté d’inclure mes démos de composants en utilisant mes
+propres iframes. Je faisais pointer l’iframe vers un fichier en local qui
 contenait la page web de la démo. Grâce aux iframes, j'étais capable
-d'encapsuler les styles et le comportement des éléments sans me reposer sur une
+d’encapsuler les styles et le comportement des éléments sans me reposer sur une
 tierce partie.
 
 Malheureusement, les iframes sont difficiles à manier et à redimensionner
@@ -215,19 +215,19 @@ donc que je veuille utiliser un _shortcode_ `demo` de la façon suivante :
 
 ``` hugo
 {{</* demo */>}}
-  C'est le contenu !
+  C’est le contenu !
 {{</* /demo */>}}
 ```
 
 
-“C'est le contenu !” serait accessible via `{{ .Inner }}`
-dans le fichier de modèle `demo.html` qui va le parser. C'est un bon point de
+“C’est le contenu !” serait accessible via `{{ .Inner }}`
+dans le fichier de modèle `demo.html` qui va le parser. C’est un bon point de
 départ pour insérer des démos de code en ligne, mais il reste encore le problème
-de l'encapsulation.
+de l’encapsulation.
 
 #### Encapsulation du style
 
-Il y a trois choses dont il faut se soucier pour l'encapsulation des styles :
+Il y a trois choses dont il faut se soucier pour l’encapsulation des styles :
 
 * les styles hérités de la page parente par le composant,
 * les styles hérités du composant par la page parente,
@@ -239,10 +239,10 @@ voudrait dire utiliser des sélecteurs ésotériques pour chaque composant, et c
 n'est pas une possibilité que j'ai envie de considérer, alors que je pourrais
 écrire du code concis et lisible. Un des avantages des iframes est que les styles
 sont encapsulés par défaut, donc je pourrais écrire `button { background: blue }`
-et être sûr que ce ne sera appliqué qu'à l'intérieur de l'iframe.
+et être sûr que ce ne sera appliqué qu'à l’intérieur de l’iframe.
 
-Une manière plus simple d'empêcher l'héritage de styles entre composants dans la
-page est d'utiliser la propriété `all` avec la valeur `initial`  sur l'élément
+Une manière plus simple d’empêcher l’héritage de styles entre composants dans la
+page est d’utiliser la propriété `all` avec la valeur `initial`  sur l’élément
 parent de son choix. Je peux définir cet élément dans le fichier `demo.html` :
 
 
@@ -261,9 +261,9 @@ Ensuite, je dois appliquer la règle `all: initial` à toutes les instances de c
 ```
 
 Le comportement de `initial` est assez… particulier. En pratique, tous les
-éléments affectés sont censés retrouver les styles par défaut du user agent (comme  `display: block` pour les éléments `<h2>`). Toutefois, l'élément
+éléments affectés sont censés retrouver les styles par défaut du user agent (comme  `display: block` pour les éléments `<h2>`). Toutefois, l’élément
 auquel il est appliqué — `class="demo"` — a besoin qu'on redéfinisse
-explicitement certains des styles de l'agent utilisateur. Dans notre cas, c'est
+explicitement certains des styles de l’agent utilisateur. Dans notre cas, c'est
 juste `display: block`, puisque `class="demo"` est un `<div>`.
 
 ```css
@@ -274,7 +274,7 @@ juste `display: block`, puisque `class="demo"` est un `<div>`.
 ```
 
 **Remarque** :
-`all` n'est pour l'instant pas supporté par Microsoft Edge mais c'est en
+`all` n'est pour l’instant pas supporté par Microsoft Edge mais c'est en
 considération.
 À part ça le support est [assurément large](https://caniuse.com/#feat=css-all).
 Pour nos besoins, la valeur `revert` aurait été plus robuste et plus sûre, mais
@@ -283,21 +283,21 @@ elle n'est pas encore supportée.
 #### Faire du shortcode un ShadowDOM
 
 L'utilisation de `all: initial` ne met pas nos composants en ligne totalement à
-l'abri de toute influence externe (la spécificité s'applique toujours) mais nous
+l’abri de toute influence externe (la spécificité s'applique toujours) mais nous
 pouvons raisonnablement estimer que les styles sont désactivés puisque nous
 n'utilisons que la classe `demo`. Les styles hérités de sélecteurs génériques
 comme `html` et `body` seront généralement exclus.
 
-Toutefois, cela ne règle que le problème des styles issus de l'élément parent
+Toutefois, cela ne règle que le problème des styles issus de l’élément parent
 sur les composants. Pour empêcher les styles écrits pour les composants
-d'affecter d'autres parties de la page, nous allons avoir besoin de [shadow
+d’affecter d’autres parties de la page, nous allons avoir besoin de [shadow
 DOM](https://glazkov.com/2011/01/14/what-the-heck-is-shadow-dom/) afin de créer
 une sous-arborescence encapsulée.
 
 Imaginez que je veuille documenter un élément `<button>` stylé. J'aimerais
-pouvoir écrire quelque chose d'aussi simple que l'exemple qui suit, sans
-craindre que le sélecteur de l'élément `button` ne s'applique aussi aux éléments
-`button` de la bibliothèque de composants elle-même ou à d'autres composants
+pouvoir écrire quelque chose d’aussi simple que l’exemple qui suit, sans
+craindre que le sélecteur de l’élément `button` ne s'applique aussi aux éléments
+`button` de la bibliothèque de composants elle-même ou à d’autres composants
 présents sur la même page.
 
 
@@ -314,9 +314,9 @@ button {
 {{</* /demo */>}}
 ```
 
-L'astuce est d'utiliser la variable `{{ .Inner }}` du
-modèle de _shortcode_ et de l'inclure en tant qu'`innerHTML` d'un nouveau
-`ShadowRoot`. On pourrait l'implémenter de cette façon :
+L'astuce est d’utiliser la variable `{{ .Inner }}` du
+modèle de _shortcode_ et de l’inclure en tant qu'`innerHTML` d’un nouveau
+`ShadowRoot`. On pourrait l’implémenter de cette façon :
 
 
 ```html
@@ -335,7 +335,7 @@ modèle de _shortcode_ et de l'inclure en tant qu'`innerHTML` d'un nouveau
 * `$uniq` est une variable définie pour identifier le conteneur du composant.
 * Elle est passée à plusieurs fonctions de templating de Go pour créer une
 * chaîne de caractères unique… enfin espérons-le ! — ce n'est pas une méthode
-* infaillible, c'est simplement pour l'exemple. `root.attachShadow` fait du
+* infaillible, c'est simplement pour l’exemple. `root.attachShadow` fait du
 * conteneur du composant un hôte shadow DOM. Je peuple le `innerHTML` du
 * `ShadowRoot` avec `{{ .Inner }}`, qui inclus le CSS
 * maintenant encapsulé.
@@ -345,7 +345,7 @@ modèle de _shortcode_ et de l'inclure en tant qu'`innerHTML` d'un nouveau
 J'aimerais aussi inclure des comportements JavaScript dans mes composants.
 Au début je pensais que ce serait facile, malheureusement le code JavaScript
 inséré via `innerHTML` n'est ni parsé ni exécuté. On peut résoudre ce problème
-en important le contenu d'un élément `<template>`. J'ai corrigé
+en important le contenu d’un élément `<template>`. J'ai corrigé
 mon implémentation en conséquence.
 
 
@@ -366,7 +366,7 @@ mon implémentation en conséquence.
 ```
 
 
-Maintenant, je peux inclure la démo d'un bouton interrupteur par exemple:
+Maintenant, je peux inclure la démo d’un bouton interrupteur par exemple:
 
 
 ```html
@@ -387,29 +387,29 @@ button {
 var toggle = document.querySelector('[aria-pressed]');
 
 toggle.addEventListener('click', (e) => {
-  let pressed = e.target.getAttribute('aria-pressed') === 'true';
-  e.target.setAttribute('aria-pressed', !pressed);
+  let pressed = e.target.getAttribute('aria-pressed’) === 'true';
+  e.target.setAttribute('aria-pressed’, !pressed);
 });
 </script>
 {{</* /demo */>}}
 ```
 
 **Note** :
-J’ai écrit un article détaillé sur [l'accessibilité des
+J’ai écrit un article détaillé sur [l’accessibilité des
 interrupteurs](https://inclusive-components.design/toggle-button/) pour
 Inclusive Components.
 
 #### L'encapsulation de JavaScript
 
 JavaScript n'est pas, à ma grande surprise, [encapsulé
-automatiquement](http://robdodson.me/shadow-dom-javascript/) comme CSS l'est
+automatiquement](http://robdodson.me/shadow-dom-javascript/) comme CSS l’est
 dans shadow DOM. C’est-à-dire que, s’il y avait un autre bouton
-`[aria-pressed]` dans la page parente situé avant l'exemple de ce composant,
+`[aria-pressed]` dans la page parente situé avant l’exemple de ce composant,
 alors `document.querySelector` ciblerait plutôt celui-là.
 
-Ce dont j'ai besoin c'est d'un équivalent de `document` qui se limite à la
-sous-arborescence de l'élément `demo`.
-C'est possible à faire, mais de manière assez verbeuse :
+Ce dont j'ai besoin c'est d’un équivalent de `document` qui se limite à la
+sous-arborescence de l’élément `demo`.
+C’est possible à faire, mais de manière assez verbeuse :
 
 
 ```js
@@ -432,7 +432,7 @@ root.shadowRoot.appendChild(document.importNode(template.content, true));
 ```
 
 
-Grâce à cela, `demo` devient l'équivalent de `document` pour n'importe quel
+Grâce à cela, `demo` devient l’équivalent de `document` pour n'importe quel
 composant de la sous-arborescence et je peux utiliser `demo.querySelector` pour
 cibler facilement mon bouton interrupteur :
 
@@ -447,11 +447,11 @@ périmètre global. Comme ça `demo` peut être utilisé dans n'importe quel scr
 présent dans un _shortcode_ mais se réfèrera uniquement au _shortcode_ en cours.
 
 Lorsque ECMAScript6 est disponible, il est possible de parvenir à localiser la
-portée à l'aide du ["block
+portée à l’aide du ["block
 scoping"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block) ,
 en entourant les déclarations `let` ou `const` de simples accolades. Toutefois,
-toutes les autres définitions de variables à l'intérieur du block seraient
-obligées d'utiliser également `let` et `const` (et d'éviter `var`).
+toutes les autres définitions de variables à l’intérieur du block seraient
+obligées d’utiliser également `let` et `const` (et d’éviter `var`).
 
 ```js
 {
@@ -463,10 +463,10 @@ obligées d'utiliser également `let` et `const` (et d'éviter `var`).
 #### Support de Shadow DOM
 
 Bien tout ce qui précède n'est possible que si la version 1 de Shadow DOM est
-supportée. Tout a l'air de bien marcher dans Chrome, Safari, Opera et Android,
+supportée. Tout a l’air de bien marcher dans Chrome, Safari, Opera et Android,
 mais c'est plus problématique avec Firefox ou les navigateurs de Microsoft. On
 peut toujours détecter le support de cette fonctionnalité et fournir un message
-d'erreur lorsque `attachShadow` n'est pas disponible :
+d’erreur lorsque `attachShadow` n'est pas disponible :
 
 ```js
 if (document.head.attachShadow) {
@@ -476,7 +476,7 @@ if (document.head.attachShadow) {
 }
 ```
 
-Ou alors vous pouvez inclure Shady DOM et l'extension Shady CSS, ce qui veut
+Ou alors vous pouvez inclure Shady DOM et l’extension Shady CSS, ce qui veut
 dire ajouter une dépendance non négligeable (+60KB) et une API différente. Rob
 Dodson a été assez gentil pour me fournir une [démo
 basique](https://gist.github.com/robdodson/287030402bad4b496a0361314138f0f9),
@@ -487,8 +487,8 @@ que je suis ravi de vous partager pour vous aider à vous lancer.
 Maintenant que notre petite démo de base fonctionne, écrire des démos et les
 insérer dans la documentation est super simple, pour notre plus grand bonheur.
 Cela permet de nous poser des questions comme : "Et si je veux ajouter une
-légende pour identifier la démo ?" C'est parfaitement faisable puisque — comme
-nous l'avons déjà vu auparavant — le Markdown permet d'embarquer du code HTML.
+légende pour identifier la démo ?" C’est parfaitement faisable puisque — comme
+nous l’avons déjà vu auparavant — le Markdown permet d’embarquer du code HTML.
 
 ```html
 <figure role="group" aria-labelledby="legende-bouton">
@@ -510,7 +510,7 @@ Toutefois, la seule nouveauté apportée par cette modification est la formulati
 de la légende. Il serait préférable de fournir une interface de saisie simple,
 pour faire gagner du temps à mon futur moi — et à tous ceux qui utiliseront le
 _shortcode_ — et minimiser par la même occasion les possibles erreurs de saisie.
-C'est faisable en fournir un paramètre nommé au _shortcode_ — ici simplement
+C’est faisable en fournir un paramètre nommé au _shortcode_ — ici simplement
 appelé `legende` :
 
 ```html
@@ -519,9 +519,9 @@ appelé `legende` :
 {{</* /demo */>}}
 ```
 
-Il peut ensuite assez simple d'accéder au paramètre nommé dans le modèle en
+Il peut ensuite assez simple d’accéder au paramètre nommé dans le modèle en
 utilisant `{{ .Get "legende" }}`. Je peux rentre optionnel
-l'insertion des balises `<figure>` et `<figcaption>` en insérant une condition,
+l’insertion des balises `<figure>` et `<figcaption>` en insérant une condition,
 comme ça je n'affiche la légende que si elle est passée en argument du
 _shortcode_ :
 
@@ -567,8 +567,8 @@ très élégant, mais ça fait le job) :
 ```
 
 Une dernière remarque : si jamais je veux autoriser la syntaxe Markdown dans la
-légende, je peux la faire passer dans la fonction `markdownify` d'Hugo. De cette
-manière l'auteur peut s'il le souhaite insérer du Markdown (et du HTML).
+légende, je peux la faire passer dans la fonction `markdownify` d’Hugo. De cette
+manière l’auteur peut s'il le souhaite insérer du Markdown (et du HTML).
 
 ```go
 {{ .Get "legende" | markdownify }}
@@ -577,34 +577,34 @@ manière l'auteur peut s'il le souhaite insérer du Markdown (et du HTML).
 ### Conclusion
 
 De par ses performances et son lot de super fonctionnalités, je trouve qu'Hugo
-est parfait pour la génération de site statique. Et l'insertion de _shortcodes_
+est parfait pour la génération de site statique. Et l’insertion de _shortcodes_
 est ce que je préfère. Ici j'ai été capable de répondre à un besoin pour de la
 documentation, que j'avais depuis un bon moment.
 
 De même qu'avec les web components, une bonne partie de la complexité du
 balisage (souvent pour rendre le code accessible) peut être masquée à
-l'utilisateur grâce aux _shortcodes_. Ici je pense notamment à l'inclusion de
+l’utilisateur grâce aux _shortcodes_. Ici je pense notamment à l’inclusion de
 `role="group"` et de la relation `aria-labelledby`, qui fournit un meilleur
 support pour "group label" à la balise `<figure>` — le genre de choses que
-personne ne prend plaisir à coder plus d'une fois, surtout quand il faut créer
-des valeurs d'attribut uniques pour chaque instance.
+personne ne prend plaisir à coder plus d’une fois, surtout quand il faut créer
+des valeurs d’attribut uniques pour chaque instance.
 
-Je crois que les _shortcodes_ d'Hugo sont à Markdown et au contenu ce que les
+Je crois que les _shortcodes_ d’Hugo sont à Markdown et au contenu ce que les
 web composants sont à HTML et à la fonctionnalité : une manière de rendre
-l'écriture plus facile, plus sûre et plus consistante. Il me tarde de voir
+l’écriture plus facile, plus sûre et plus consistante. Il me tarde de voir
 comment ce curieux petit coin du Web va évoluer.
 
 #### Ressources
 
-* [La documentation d'Hugo](https://gohugo.io/overview/introduction/)
+* [La documentation d’Hugo](https://gohugo.io/overview/introduction/)
 * [Package Template du langage Go](https://golang.org/pkg/text/template/)
-* [Les _shortcodes_ d'Hugo](https://gohugo.io/extras/shortcodes)
+* [Les _shortcodes_ d’Hugo](https://gohugo.io/extras/shortcodes)
 * [all (propriété CSS)](https://developer.mozilla.org/en/docs/Web/CSS/all),
   Mozilla Developer Network
 * [initial (CSS)](https://developer.mozilla.org/en-US/docs/Web/CSS/initial), sur
   le Mozilla Developer Network
 * [Shadow DOM v1 : Self-Contained Web Components](https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom),
   Eric Bidelman, Web Fundamentals, Google Developers
-* [Introduction à l'élément template](https://www.webcomponents.org/community/articles/introduction-to-template-element)
+* [Introduction à l’élément template](https://www.webcomponents.org/community/articles/introduction-to-template-element)
   Eiji Kitamura, WebComponents.org
 * [Les includes de Jekyll](https://jekyllrb.com/docs/includes/)

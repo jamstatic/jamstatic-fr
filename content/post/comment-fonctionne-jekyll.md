@@ -14,7 +14,7 @@ categories:
 ---
 
 {{% intro %}}
-Si vous suivez ce blog, vous savez déjà que Jekyll est un générateur de site statique développé en Ruby. Jack Phelan a décidé d'aller jeter un œil dans le moteur de Jekyll histoire de mieux comprendre comment sont traités les différents types de fichiers qui sont passés en entrée. Nous traduisons [son article](https://www.bytesandwich.com/jekyll/software/blogging/2016/09/14/how-does-jekyll-work.html) afin de vous inciter à plonger un peu dans le code de Jekyll et prendre connaissance des concepts fondamentaux de ce générateur. Nous espérons que cela vous permettra de mieux appréhender la philosophie de Jekyll ou que cela vous sera utile si vous songez à développer un plugin.
+Si vous suivez ce blog, vous savez déjà que Jekyll est un générateur de site statique développé en Ruby. Jack Phelan a décidé d’aller jeter un œil dans le moteur de Jekyll histoire de mieux comprendre comment sont traités les différents types de fichiers qui sont passés en entrée. Nous traduisons [son article](https://www.bytesandwich.com/jekyll/software/blogging/2016/09/14/how-does-jekyll-work.html) afin de vous inciter à plonger un peu dans le code de Jekyll et prendre connaissance des concepts fondamentaux de ce générateur. Nous espérons que cela vous permettra de mieux appréhender la philosophie de Jekyll ou que cela vous sera utile si vous songez à développer un plugin.
 {{% /intro %}}
 
 <style type="text/css">
@@ -75,8 +75,8 @@ th, tr td:first-child {
         var $tabAreas = $tabs.find('.tab-content')
         var $toShow = $tabAreas.eq(index);
 
-        $tabs.find('.tab-selected').removeClass('tab-selected');
-        $(tab).addClass('tab-selected');
+        $tabs.find('.tab-selected’).removeClass('tab-selected’);
+        $(tab).addClass('tab-selected’);
 
         $tabAreas.hide()
         $toShow.show()
@@ -91,14 +91,14 @@ th, tr td:first-child {
 
 Jekyll va soit copier, soit omettre, soit transformer les fichiers du répertoire source dans le répertoire de destination[^1]. Lorsque Jekyll transforme vos fichiers, c'est toujours de cette manière, si ce n'est que la deuxième étape peut être potentiellement sautée.[^2]
 
-Si un fichier commence par une entête [YAML FrontMatter](https://jekyllrb.com/docs/frontmatter/) Jekyll va appliquer les transformations suivante au fichier:
+Si un fichier commence par une entête [YAML Front Matter](https://jekyllrb.com/docs/frontmatter/) Jekyll va appliquer les transformations suivante au fichier:
 
-1. **Interprétation du code Liquid** : Le contenu du fichier est d'abord parcouru par le parser de [Liquid](http://shopify.github.io/liquid/), les variables comme `site` ou `page` auxquelles le modèle Liquid veut accéder sont alors interprétées.
-1. **Conversion du contenu** : en fonction de l'extension de fichier, Jekyll fait appel à un convertisseur dédié, par example Kramdown pour les fichiers `.md` ou `.markdown`, qui est chargé de convertir le résultat obtenu après l'étape 1.
-1. **Parsing du modèle**: Le résultat de cette conversion est alors transmis dans la variable `{{content}}`, soit au modèle de page par défaut, soit à celui qui est spécifié dans l'entête YAML FrontMatter.
+1. **Interprétation du code Liquid** : Le contenu du fichier est d’abord parcouru par le parser de [Liquid](http://shopify.github.io/liquid/), les variables comme `site` ou `page` auxquelles le modèle Liquid veut accéder sont alors interprétées.
+1. **Conversion du contenu** : en fonction de l’extension de fichier, Jekyll fait appel à un convertisseur dédié, par example Kramdown pour les fichiers `.md` ou `.markdown`, qui est chargé de convertir le résultat obtenu après l’étape 1.
+1. **Parsing du modèle**: Le résultat de cette conversion est alors transmis dans la variable `{{content}}`, soit au modèle de page par défaut, soit à celui qui est spécifié dans l’entête YAML Front Matter.
 1. Le résultat de cette dernière conversion du modèle de page, généralement un fichier HTML, est écrit dans votre répertoire de destination.
 
-J'aimerais maintenant vous montrer un exemple où Jekyll applique cette transformation. Ensuite, lors d'un [test complet](#test-exhaustif-dune-génération) de génération de site, nous irons étudier la structure générale de l'algorithme au [cœur de Jekyll](#le-cœur-de-jekyll) pour voir quels traitements sont effectués sur les différents types de fichiers.
+J'aimerais maintenant vous montrer un exemple où Jekyll applique cette transformation. Ensuite, lors d’un [test complet](#test-exhaustif-dune-génération) de génération de site, nous irons étudier la structure générale de l’algorithme au [cœur de Jekyll](#le-cœur-de-jekyll) pour voir quels traitements sont effectués sur les différents types de fichiers.
 
 ## La transformation de Jekyll
 
@@ -110,7 +110,7 @@ after_markdown = convert(after_liquid) # line 66
 place_in_layout(after_markdown) # line 71
 ```
 
-Donc si nous transformons l'article présent dans le thème par défaut de Jekyll :
+Donc si nous transformons l’article présent dans le thème par défaut de Jekyll :
 
 ```markdown
 
@@ -258,13 +258,13 @@ Puis vient la dernière étape où nous mettons tout cela dans la variable `{{co
   </div>
 </div>
 
-Ceci est juste un exemple de conversion avec kramdown pour le markdown et d'insertion du résultat dans un modèle. Jekyll intègre d'autres convertisseurs comme [smartypants](https://github.com/jekyll/jekyll/blob/2b15b0b3251d35c290dc96eb07e18fa31a58bcc6/lib/jekyll/converters/smartypants.rb). Jekyll inclut aussi par défaut un [convertisseur pour Sass](https://github.com/jekyll/jekyll-sass-converter) dans le [fichier de spécification de sa gem Ruby](https://github.com/jekyll/jekyll/blob/499b83236c0289471118991bd5fe743effe9b348/jekyll.gemspec), qui n'est pas un convertisseur intégré, mais vous comprendrez quand vous lancerez la commande `jekyll new`. Vous pouvez installer d'autres convertisseurs à l'aide de plugins. Les modèles sont des fichiers qui sont soit stockés dans votre dossier `_layouts`, soit dans celui empaqueté dans la gem du thème utilisé par votre fichier de configuration.
+Ceci est juste un exemple de conversion avec kramdown pour le markdown et d’insertion du résultat dans un modèle. Jekyll intègre d’autres convertisseurs comme [smartypants](https://github.com/jekyll/jekyll/blob/2b15b0b3251d35c290dc96eb07e18fa31a58bcc6/lib/jekyll/converters/smartypants.rb). Jekyll inclut aussi par défaut un [convertisseur pour Sass](https://github.com/jekyll/jekyll-sass-converter) dans le [fichier de spécification de sa gem Ruby](https://github.com/jekyll/jekyll/blob/499b83236c0289471118991bd5fe743effe9b348/jekyll.gemspec), qui n'est pas un convertisseur intégré, mais vous comprendrez quand vous lancerez la commande `jekyll new`. Vous pouvez installer d’autres convertisseurs à l’aide de plugins. Les modèles sont des fichiers qui sont soit stockés dans votre dossier `_layouts`, soit dans celui empaqueté dans la gem du thème utilisé par votre fichier de configuration.
 
 ## Le cœur de Jekyll
 
-Maintenant que vous comprenez l'étape de transformation de Jekyll, regardons comme elle s'intègre dans un processus de génération de site plus global à partir de fichiers en entrée.
+Maintenant que vous comprenez l’étape de transformation de Jekyll, regardons comme elle s'intègre dans un processus de génération de site plus global à partir de fichiers en entrée.
 
-Si nous pitons le code exécuté lors de l'invocation de la commande `jekyll build`, nous nous apercevons que [`site.process`](https://github.com/jekyll/jekyll/blob/2b15b0b3251d35c290dc96eb07e18fa31a58bcc6/lib/jekyll/site.rb#L65) représente le cœur de Jekyll. Vous trouverez les parties importantes un peu plus bas accompagnées de mes commentaires explicatifs. Reportez vous à [la partie sur le debug](#debug) si vous souhaitez vous baladez à votre tour dans l'appel de la méthode.
+Si nous pitons le code exécuté lors de l’invocation de la commande `jekyll build`, nous nous apercevons que [`site.process`](https://github.com/jekyll/jekyll/blob/2b15b0b3251d35c290dc96eb07e18fa31a58bcc6/lib/jekyll/site.rb#L65) représente le cœur de Jekyll. Vous trouverez les parties importantes un peu plus bas accompagnées de mes commentaires explicatifs. Reportez vous à [la partie sur le debug](#debug) si vous souhaitez vous baladez à votre tour dans l’appel de la méthode.
 
 ```ruby
 # Public: Lit, processe et écrit le Site dans la destination.
@@ -273,22 +273,22 @@ Si nous pitons le code exécuté lors de l'invocation de la commande `jekyll bui
 def process
   reset # vide tous les layouts/pages/static_file/data/collections du site.
   read # lit les fichiers de votre répértoire et les stocke dans un objet Site, les classer dépend
-  # d'où ils se trouvent, ce qu'ils contiennent et de votre fichier de configuration.
+  # d’où ils se trouvent, ce qu'ils contiennent et de votre fichier de configuration.
   generate # Vous donne la chance de lancer des générateurs pour ajouter plus de choses au site..
   render # c'est la méthode chargée de la conversion.
-  cleanup # se débarasse de tous les fichiers qui auraient pu restés d'une génération précédente ou qui traitent des metadonnées.
+  cleanup # se débarasse de tous les fichiers qui auraient pu restés d’une génération précédente ou qui traitent des metadonnées.
   write # écrit les fichiers dans votre dossier de destination.
   print_stats
 end
 ```
 
-`render`  applique la transformation de Jekyll aux fichiers qui possèdent une entête [YAML FrontMatter](https://jekyllrb.com/docs/frontmatter/). Les documents sont créés à partir des fichiers de collection qui possèdent des entêtes YAML FrontMatter et les pages sont d'autres documents avec des entêtes YAML. Vous devez déclarer les collections dans votre fichier `_config.yml`, comme ça vous saurez que vous en avez. Vous devez également savoir que [les posts et les brouillons de posts sont simplement des collections spéciales](https://jekyllrb.com/docs/frontmatter/), ce sont donc aussi des documents.
+`render`  applique la transformation de Jekyll aux fichiers qui possèdent une entête [YAML Front Matter](https://jekyllrb.com/docs/frontmatter/). Les documents sont créés à partir des fichiers de collection qui possèdent des entêtes YAML Front Matter et les pages sont d’autres documents avec des entêtes YAML. Vous devez déclarer les collections dans votre fichier `_config.yml`, comme ça vous saurez que vous en avez. Vous devez également savoir que [les posts et les brouillons de posts sont simplement des collections spéciales](https://jekyllrb.com/docs/frontmatter/), ce sont donc aussi des documents.
 
 ```ruby
 def render
     …
-    render_docs(payload) # cette fonction s'occupe du rendu des fichiers de collections qui possèdent des entêtes FrontMatter, y compris le dossier _posts (les brouillons sont ajoutés aux posts avec l'option --drafts)
-    render_pages(payload) # cette fonction s'occupe du rendu des fichiers qui n'appartiennent pas à des collections mais qui ont des entêtes FrontMatter
+    render_docs(payload) # cette fonction s'occupe du rendu des fichiers de collections qui possèdent des entêtes Front Matter, y compris le dossier _posts (les brouillons sont ajoutés aux posts avec l’option --drafts)
+    render_pages(payload) # cette fonction s'occupe du rendu des fichiers qui n'appartiennent pas à des collections mais qui ont des entêtes Front Matter
     # cela peut être vos fichiers `feed.xml`, `index.html`, `main.scss`, etc.
     …
 end
@@ -315,9 +315,9 @@ def render_pages(payload)
 end
 ```
 
-## Test exhaustif d'une génération
+## Test exhaustif d’une génération
 
-Regardons à présent ce que nous obtenons lors d'un exemple de génération à partir de quelques types de fichiers dans différents répertoires, avec et sans l'option `--drafts` (active ou non la génération des brouillons). Le conteneur Docker de ce test est dispos sur [bytesandwich/jekyll-outcomes](https://github.com/bytesandwich/jekyll-outcomes).
+Regardons à présent ce que nous obtenons lors d’un exemple de génération à partir de quelques types de fichiers dans différents répertoires, avec et sans l’option `--drafts` (active ou non la génération des brouillons). Le conteneur Docker de ce test est dispos sur [bytesandwich/jekyll-outcomes](https://github.com/bytesandwich/jekyll-outcomes).
 
 Il recopie ces fichiers :
 
@@ -339,16 +339,16 @@ Il recopie ces fichiers :
 - **/_underscore_dir**
 - **/regular_dir**
 
-Sauf que pour chaque association de fichier et de répertoire, le nom du répertoire de destination est ajouté à la fin du fichier de manière à ce que nous puissions mieux appréhender les corresponsances entre les fichiers d'entrée et les fichiers de sortie. Vous retrouvez un aperçu du résultat de la commande `tree` après les deux tableaux.
+Sauf que pour chaque association de fichier et de répertoire, le nom du répertoire de destination est ajouté à la fin du fichier de manière à ce que nous puissions mieux appréhender les corresponsances entre les fichiers d’entrée et les fichiers de sortie. Vous retrouvez un aperçu du résultat de la commande `tree` après les deux tableaux.
 
-J'ai fait un tableau avec une ligne par répertoire et une colonne par fichier, la cellule contient l'opération effectuée sur le fichier, qui peut être :
+J'ai fait un tableau avec une ligne par répertoire et une colonne par fichier, la cellule contient l’opération effectuée sur le fichier, qui peut être :
 
 -   *copié* sans altération
 -   *omis*
 -   *transformé* et placé dans le répertoire correspondant
--   *post transformé*, qui est ensuite placé dans une arborescence de dossiers, crées d'après la date du post.
+-   *post transformé*, qui est ensuite placé dans une arborescence de dossiers, crées d’après la date du post.
 
-## Génération des fichiers sans l'option brouillons
+## Génération des fichiers sans l’option brouillons
 
 <table>
   <thead>
@@ -438,7 +438,7 @@ J'ai fait un tableau avec une ligne par répertoire et une colonne par fichier, 
   </tbody>
 </table>
 
-## Génération des fichiers avec l'option brouillon
+## Génération des fichiers avec l’option brouillon
 
 <table>
   <thead>
@@ -710,11 +710,11 @@ _site
 
 ## Les objets de Jekyll : Posts, Drafts, Pages, Data, Collections, Layouts et Includes
 
-Le meilleur endroit pour continuer à apprendre est d'aller voir [la structure des répertoires de Jekyll](https://jekyllrb.com/docs/structure/), où vous pourrez trouver des descriptions plus détaillées des types de fichiers dans ces répertoires.
+Le meilleur endroit pour continuer à apprendre est d’aller voir [la structure des répertoires de Jekyll](https://jekyllrb.com/docs/structure/), où vous pourrez trouver des descriptions plus détaillées des types de fichiers dans ces répertoires.
 
 ## Déboguer Jekyll {#debug}
 
-Sous macOS, avec `rbenv`, en ligne de commande l'exécutable de Jekyll est un script situé dans une Gem Ruby qui appelle `~/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/jekyll-3.3.1`[^3] où nous pouvons commencer à  débugguer à l'aide de `pry-byebug` si nous ajoutons deux lignes (la 8 et la 10 dans l'extrait ci-dessous) :
+Sous macOS, avec `rbenv`, en ligne de commande l’exécutable de Jekyll est un script situé dans une Gem Ruby qui appelle `~/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/jekyll-3.3.1`[^3] où nous pouvons commencer à  débugguer à l’aide de `pry-byebug` si nous ajoutons deux lignes (la 8 et la 10 dans l’extrait ci-dessous) :
 
 Le fichier ~/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/jekyll-3.3.1 /exe/jekyll @ line 12 :
 
@@ -732,7 +732,7 @@ Le fichier ~/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/jekyll-3.3.1 /exe/je
     17:   p.version Jekyll::VERSION
 ```
 
-Une fois les modifications effectuées, lors du lancement d'un build, le debug est désormais actif :
+Une fois les modifications effectuées, lors du lancement d’un build, le debug est désormais actif :
 
 ```sh
 $ bundle exec jekyll build
@@ -740,7 +740,7 @@ $ bundle exec jekyll build
 ```
 
 Jekyll embarque sa propre interface de ligne de commande, Mercenary, qui
-va appeler la méthode `build(site, options)` dans `build.process` qui appelle à son tour `process_site`, qui va charger la configuration par défaut et définir les posts comme des collections, comme nous l'avons vu plus haut.
+va appeler la méthode `build(site, options)` dans `build.process` qui appelle à son tour `process_site`, qui va charger la configuration par défaut et définir les posts comme des collections, comme nous l’avons vu plus haut.
 
 ```ruby
 Mercenary.program(:jekyll) do |p|
@@ -756,8 +756,8 @@ Mercenary.program(:jekyll) do |p|
 
 Voilà, maintenant vous en savez un peu plus sur les mécanismes internes de Jekyll !
 
-[^1]: Lorsque Jekyll omet un fichier, il se peut qu'il lise le fichier comme une donnée à laquelle vous pouvez accéder à l'aide de variables Liquid dans d'autres fichiers de modèles Liquid.
+[^1]: Lorsque Jekyll omet un fichier, il se peut qu'il lise le fichier comme une donnée à laquelle vous pouvez accéder à l’aide de variables Liquid dans d’autres fichiers de modèles Liquid.
 
-[^2]: Il se peut très bien dans ce cas que vous ayez omis les entêtes YAML FrontMatter.
+[^2]: Il se peut très bien dans ce cas que vous ayez omis les entêtes YAML Front Matter.
 
-[^3]: Pour savoir où se trouve l'exécutable de Jekyll, lancez la commande `bundle show jekyll`.
+[^3]: Pour savoir où se trouve l’exécutable de Jekyll, lancez la commande `bundle show jekyll`.
