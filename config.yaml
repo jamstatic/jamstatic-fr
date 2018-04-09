@@ -22,6 +22,7 @@ mediaTypes:
 
 disableKinds:
   - section
+  - taxonomyTerm
 
 taxonomies:
   category: categories
@@ -33,8 +34,6 @@ outputs:
     - jsonfeed
     - HEADERS
     - algolia
-  page:
-    - html
 
 outputFormats:
   algolia:
