@@ -11,20 +11,24 @@ categories:
 ---
 
 {{% intro %}}
-[Hugo](https://gohugo.io) est rapidement devenu l’un des gestionnaires de sites
-statiques les plus populaires comme en attestent ses bientôt [20&nbsp;000 étoiles sur
-GitHub](https://github.com/gohugoio/hugo). C’est dû en partie à sa vitesse de
-génération : en effet il ne lui faut qu'une petite milliseconde pour générer une
-page. Oui, cela fait 1000 pages à la seconde et c'est plutôt impressionnant je
-trouve. Mais ce n'est pas la seule raison qui devrait vous faire adopter Hugo.
 
-Heureusement ce <abbr aria-label="Générateur de sites statiques">GSS</abbr> propose
-aussi tout un tas de fonctionnalités comme les contenus imbriqués, les fichiers
-partiels, les shortcodes, la gestion de l’<abbr aria-label="internationalisation">i18n</abbr>, les exports personnalisés (JSON,
-AMP, epub, Atom, etc.) et bien d’autres… Les nouvelles versions et les
-nouveautés se succèdent à un rythme soutenu. Depuis la v0.14, [Bjørn Erik
-Pedersen](https://github.com/bep) dirige les développements, il a gentiment
-accepté de répondre à nos questions.
+[Hugo](https://gohugo.io) est rapidement devenu l’un des
+gestionnaires de sites statiques les plus populaires comme en attestent ses
+bientôt [20&nbsp;000 étoiles sur GitHub](https://github.com/gohugoio/hugo).
+C’est dû en partie à sa vitesse de génération : en effet il ne lui faut qu'une
+petite milliseconde pour générer une page. Oui, cela fait 1000 pages à la
+seconde et c'est plutôt impressionnant je trouve. Mais ce n'est pas la seule
+raison qui devrait vous faire adopter Hugo.
+
+Heureusement ce <abbr aria-label="Générateur de sites statiques">GSS</abbr>
+propose aussi tout un tas de fonctionnalités comme les contenus imbriqués, les
+fichiers partiels, les shortcodes, la gestion de
+l’<abbr aria-label="internationalisation">i18n</abbr>, les exports personnalisés
+(JSON, AMP, epub, Atom, etc.) et bien d’autres… Les nouvelles versions et les
+nouveautés se succèdent à un rythme soutenu. Depuis la v0.14,
+[Bjørn Erik Pedersen](https://github.com/bep) dirige les développements, il a
+gentiment accepté de répondre à nos questions.
+
 {{% /intro %}}
 
 {{< figure src="/assets/images/hugo/hugo-bjorn-erik-pedersen.jpg"
@@ -32,10 +36,10 @@ attr="Bjørn Erik Pedersen" attrlink="https://github.com/bep" >}}
 
 ## Bonjour Bjørn Erik, comment t'es-tu retrouvé impliqué dans Hugo ?
 
-J'ai passé un dimanche à migrer mon [blog](http://bepsays.com/en/) de WordPress à
-[Jekyll](https://jekyllrb.com), et quand j'ai eu fini je me suis dit "OK, et
-maintenant je fais quoi ?" . J'espérais que cela me pousserait à écrire davantage
-sur mon blog. Au cours de ce même après-midi je cherchais déjà des
+J'ai passé un dimanche à migrer mon [blog](http://bepsays.com/en/) de WordPress
+à [Jekyll](https://jekyllrb.com), et quand j'ai eu fini je me suis dit "OK, et
+maintenant je fais quoi ?" . J'espérais que cela me pousserait à écrire
+davantage sur mon blog. Au cours de ce même après-midi je cherchais déjà des
 alternatives à Jekyll sur le net et je suis tombé sur Hugo.
 
 J'ai vu des choses que je souhaitais améliorer. Je suis un développeur très
@@ -43,9 +47,10 @@ expérimenté mais mes premières lignes de Go avaient pour but d’améliorer l
 façon de gérer le livereload des CSS, du JavaScript et des images dans Hugo. Je
 crois que ce patch a survécu à tous mes autres changements ultérieurs. À partir
 de là j'ai continué à soumettre des _Pull Requests_, motivé en partie par
-l’apprentissage d’un nouveau langage mais également encouragé par [Steve
-Francia](https://stevefrancia.com/), qui a crée les premières versions d’Hugo.
-Il est très bon pour motiver les gens à contribuer à un projet open source.
+l’apprentissage d’un nouveau langage mais également encouragé par
+[Steve Francia](https://stevefrancia.com/), qui a crée les premières versions
+d’Hugo. Il est très bon pour motiver les gens à contribuer à un projet open
+source.
 
 ## Quels problèmes résout Hugo ?
 
@@ -77,10 +82,10 @@ versions, il y a donc d’autres facteurs. Le mot "rapide" figure dans le slogan
 d’Hugo depuis le premier jour, donc nous devons faire très attention à cela.
 
 J'essaie de m'amuser à ne pas ajouter de temps supplémentaire lors de l’ajout de
-nouvelles fonctionnalités :  Le temps de traitement ajouté par la nouvelle
+nouvelles fonctionnalités : Le temps de traitement ajouté par la nouvelle
 fonctionnalité doit être compensé par des améliorations dans les fonctionnalités
-existantes, et Go joue un rôle vital à ce niveau. C’est mieux et ça va plus vite à
-chaque nouvelle version, mais ce n'est pas simplement que c'est un langage de
+existantes, et Go joue un rôle vital à ce niveau. C’est mieux et ça va plus vite
+à chaque nouvelle version, mais ce n'est pas simplement que c'est un langage de
 programmation compilé avec un modèle de concurrence simple et une bibliothèque
 standard très robuste. C’est aussi grâce à tous les excellents outils fournis
 pour créer rapidement des applications performantes : un compilateur rapide, le
@@ -106,13 +111,15 @@ Parmi les sites que je connais et que j'aime bien il y a
 [1password.com](https://1password.com/), [borisfx.com](http://borisfx.com/),
 [Urban Airship Documentation](https://docs.urbanairship.com/).
 
-Il y en a plein d’autres qui arrivent. Par exemple, [Smashing
-Magazine](https://www.smashingmagazine.com) a annoncé qu'ils étaient en train de
-travailler sur une [refonte entièrement basée sur Hugo]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}}).
+Il y en a plein d’autres qui arrivent. Par exemple,
+[Smashing Magazine](https://www.smashingmagazine.com) a annoncé qu'ils étaient
+en train de travailler sur une [refonte entièrement basée sur Hugo]({{< relref
+"smashing-mag-va-dix-fois-plus-vite.md" >}}).
 
 {{< figure
 src="https://thenewdynamic.imgix.net/screenshot-smashing-mag-hugo.jpg?w=700"
-attrlink="https://next.smashingmagazine.com" attr="La nouvelle version de Smashing Magazine" >}}
+attrlink="https://next.smashingmagazine.com"
+attr="La nouvelle version de Smashing Magazine" >}}
 
 ## Comment se porte le projet actuellement ?
 
@@ -122,8 +129,8 @@ un titre et une note de version à partir des nouveautés, soit environ toutes l
 cinq semaines. Et Hugo est très utilisé, c'est difficile à mesurer parce qu'il
 peut être installé à partir de différentes sources, mais j'ai été surpris
 d’apprendre qu'il y avait plus de 8000 installations mensuelles rien qu'avec
-`brew` sous macOS.
-Et le site [gohugo.io](https://gohugo.io/) encaisse un trafic élevé.
+`brew` sous macOS. Et le site [gohugo.io](https://gohugo.io/) encaisse un trafic
+élevé.
 
 ## Hugo est open source. Comment se passe la gestion du projet ?
 
@@ -159,11 +166,10 @@ La version 1.0 d’Hugo ne _devrait_ pas tarder. Il manque encore quelques trucs
 qui sont inscrits dans ma feuille de route mentale, mais rien qui ne demande
 trop de temps. La fonctionnalité la plus importante et la plus intéressante qui
 arrivera peut-être dans la prochaine version, et sur laquelle je travaille
-encore, ce sont les ["pages
-bundles"](https://github.com/gohugoio/hugo/issues/3651)  : la possibilité
+encore, ce sont les
+["pages bundles"](https://github.com/gohugoio/hugo/issues/3651) : la possibilité
 d’associer des contenus comme une page et des images par exemple.
 
 J'ai encore plein d’autres idées. Je testerai peut-être si Hugo est adapté pour
-de très très gros sites avec des millions de pages, mais j'ai peur que la
-tâche soit un peu trop ardue par rapport au temps libre que je peux y
-consacrer.
+de très très gros sites avec des millions de pages, mais j'ai peur que la tâche
+soit un peu trop ardue par rapport au temps libre que je peux y consacrer.

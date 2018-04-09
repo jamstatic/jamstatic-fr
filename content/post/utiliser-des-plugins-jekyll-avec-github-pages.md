@@ -9,15 +9,13 @@ categories:
   - jekyll
 ---
 
-{{% intro %}}
-La popularité de Jekyll est en partie due à son support natif par GitHub Pages.
-Si cette solution gratuite est bien pratique, elle n’en reste pas moins limitée
-en termes de support de plugins Jekyll et ce pour des raisons de sécurité. Si
-vous voulez utiliser des plugins comme [jekyll-cloudinary]({{< relref
-"gestion-images-responsive-avec-jekyll-cloudinary.md" >}}) ou
+{{% intro %}} La popularité de Jekyll est en partie due à son support natif par
+GitHub Pages. Si cette solution gratuite est bien pratique, elle n’en reste pas
+moins limitée en termes de support de plugins Jekyll et ce pour des raisons de
+sécurité. Si vous voulez utiliser des plugins comme [jekyll-cloudinary]({{<
+relref "gestion-images-responsive-avec-jekyll-cloudinary.md" >}}) ou
 [jekyll-assets](https://github.com/jekyll/jekyll-assets), il vous faudra générer
-le site en local et le publier sur Github.
-{{% /intro %}}
+le site en local et le publier sur Github. {{% /intro %}}
 
 Nous allons voir que cette opération est facilement automatisable à l’aide d’un
 fichier `Rakefile`, la manière la plus courante en Ruby de créer des tâches.
@@ -25,8 +23,8 @@ fichier `Rakefile`, la manière la plus courante en Ruby de créer des tâches.
 ## Pré-requis
 
 Nous partons du principe que vous avez déjà un site qui tourne avec Jekyll sur
-GitHub, si ce n’est pas le cas, reportez-vous à la [documentation
-officielle](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/).
+GitHub, si ce n’est pas le cas, reportez-vous à la
+[documentation officielle](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/).
 
 Comme nous allons utiliser `rake` pour écrire une tâche automatisée, il vous
 faut ajoutez la dépendance à votre fichier `Gemfile`, si elle n'est pas déjà
@@ -96,19 +94,23 @@ apporter quelques petites modifications au fichier `Rakefile` :
 
 Vous pouvez maintenant lancer `rake site:publish` pour générer votre site et le
 publier sur GitHub. Jetez également un coup d’œil au [fichier Rakefile de
-Jekyll][jekyll-rakefile] pour une implémentation alternation de la tâche `rake
-site:publish`.
+Jekyll][jekyll-rakefile] pour une implémentation alternation de la tâche
+`rake site:publish`.
 
 [jekyll-rakefile]: https://github.com/jekyll/jekyll/blob/master/rake/site.rake#L55
 
 {{< figure src="/assets/images/octojekyll.png" >}}
 
-Enfin, sachez qu'il existe d’autres solutions d’hébergement comme [GitLab
-Pages](https://pages.gitlab.io/), [Netlify](https://www.netlify.com),
+Enfin, sachez qu'il existe d’autres solutions d’hébergement comme
+[GitLab Pages](https://pages.gitlab.io/), [Netlify](https://www.netlify.com),
 [Cloudcannon](http://cloudcannon.com), [Siteleaf](https://www.siteleaf.com/) ou
 [Forestry.io](https://forestry.io/) qui vous permettent d’utiliser les plugins
 de votre choix, sans avoir recours à ce genre de hack.
 
 ### Notes
 
-[^1]: Les tâches utilisées dans ce billet ont été écrites par [Ixti](http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html), le créateur du plugin `jekyll-assets`.
+[^1]:
+
+  Les tâches utilisées dans ce billet ont été écrites par
+  [Ixti](http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html),
+  le créateur du plugin `jekyll-assets`.

@@ -14,7 +14,9 @@ source:
   lang: en
 ---
 
-{{< figure src="https://cdn.netlify.com/a3dc6515430891d6df896d718dd7e54f6941d647/99084/uploads/parker-moore-jekyll.jpg" caption="Parker Moore">}}
+{{< figure
+src="https://cdn.netlify.com/a3dc6515430891d6df896d718dd7e54f6941d647/99084/uploads/parker-moore-jekyll.jpg"
+caption="Parker Moore">}}
 
 Alors que nous constatons une augmentation constante du nombre d’outils
 permettant de générer des sites statiques à destination des développeurs,
@@ -26,12 +28,12 @@ par un des cofondateurs de GitHub et que c'est le moteur qui fait tourner GitHub
 pages.
 
 Il y a quelques temps, nous avons pu assister au lancement de Jekyll 3.0, avec
-la [publication en direct du commit
-final](https://youtu.be/sPZK8w55cBQ?t=37m58s) pendant une présentation de Parker
-Moore, actuellement en charge de la maintenance de Jekyll, lors du Meetup Static
-Web à San Francisco. Après sa présentation, Moore a pris quelques minutes pour
-parler avec nous de Jekyll, de son développement et du future des sites web
-statiques.
+la
+[publication en direct du commit final](https://youtu.be/sPZK8w55cBQ?t=37m58s)
+pendant une présentation de Parker Moore, actuellement en charge de la
+maintenance de Jekyll, lors du Meetup Static Web à San Francisco. Après sa
+présentation, Moore a pris quelques minutes pour parler avec nous de Jekyll, de
+son développement et du future des sites web statiques.
 
 **Qu'est ce que vous faites quand vous ne travaillez pas sur Jekyll ?**
 
@@ -39,7 +41,9 @@ Je suis ingénieur logiciel chez Github, entreprise dans laquelle j'aide au
 développement du service Github Pages. Mon travail consiste aussi à maintenir
 Jekyll et à faire grandir la communauté autour du projet.
 
-**Peux tu nous dire comment tu as été amené à t'impliquer dans Jekyll et ce qui s'est passé depuis pour aboutir à la mise en ligne de la version 3.0 de Jekyll ?**
+**Peux tu nous dire comment tu as été amené à t'impliquer dans Jekyll et ce qui
+s'est passé depuis pour aboutir à la mise en ligne de la version 3.0 de Jekyll
+?**
 
 Le parcours était intéressant. J'ai été améné à utiliser Jekyll pour un job
 d’été à l’université de Cornell. Il s'agissait de la refonte du site
@@ -56,7 +60,7 @@ peu Jekyll à cette période et ça m'a beaucoup plu.
 J'ai regardé les bugs majeurs, il y en avait tellement : plus de 800 sur le
 dépôt, ce qui est énorme. Beaucoup trop pour un projet Open Source majeur, selon
 moi. J'ai perçu un besoin, j'ai pensé que j'avais suffisamment de temps libre -
-même si ce n'était pas le cas -  pour aider la communauté sur ces corrections.
+même si ce n'était pas le cas - pour aider la communauté sur ces corrections.
 Peu avant, j'étais parti travailler en Allemagne pour une société du nom de 6
 Wunderkinder — l’éditeur de Wunderlist — j'ai bombardé Tom — NdT: Prester-Werner
 le créateur de Jekyll — de mails, sans cesse. Au final, j'ai publié une lettre
@@ -88,7 +92,8 @@ eu un cours de 30 minutes sur HTML. J'ai adoré. Je n'arrêtais pas d’en écri
 encore et encore. Je changeais la couleur de fond avec un attribut… je faisais
 tous ces trucs bêtes et ordinaires.
 
-**Quel fut ta première rencontre avec les générateurs de site statique modernes ?**
+**Quel fut ta première rencontre avec les générateurs de site statique modernes
+?**
 
 Je ne me souviens pas plus loin que de mon expérience avec Jekyll à Cornell. Je
 savais que les générateurs de site statique marcheraient car j'avais codé du
@@ -98,14 +103,15 @@ plus d’étoiles sur Github et avait l’air d’être le plus populaire. Les g
 écrivaient dessus et l’utilisaient. GitHub Pages existait déjà. Du coup j'ai
 emprunté cette direction.
 
-**C'était donc une question de masse critique ? Il y avait pas mal de gens donc tu savais que c'était vivant et actif.**
+**C'était donc une question de masse critique ? Il y avait pas mal de gens donc
+tu savais que c'était vivant et actif.**
 
 Tu sors dans les endroits branchés en général non ? Je me suis dit qu'il y
 aurait des contributeurs. Un projet open-source a besoin de gens plus que de
 tout autre chose, parce qu'il y a besoin de code.
 
 **La pire chose à faire sur un forum est de poser une question et de retourner
-**voir tous les jours s'il y a une réponse, mais toujours rien.**
+**voir tous les jours s'il y a une réponse, mais toujours rien.\*\*
 
 Personne n'a répondu !
 
@@ -113,11 +119,11 @@ Personne n'a répondu !
 
 Qu'ils soient mieux compris. Je les comprend et tu les comprends, mais je rêve
 d’un monde où ce serait le cas pour tout le monde… et j'imagine que cela
-arrivera, car   l’informatique s'apprend de plus en plus tôt, la création de
-sites web est un bon moyen pour commencer à apprendre le code. Mon plus grand
-souhait c'est qu'ils soient mieux compris de tous et perçus comme une vraie
-solution, honnête et prête pour la production, pour les sociétés intéressées
-dans la réalisation de sites web.
+arrivera, car l’informatique s'apprend de plus en plus tôt, la création de sites
+web est un bon moyen pour commencer à apprendre le code. Mon plus grand souhait
+c'est qu'ils soient mieux compris de tous et perçus comme une vraie solution,
+honnête et prête pour la production, pour les sociétés intéressées dans la
+réalisation de sites web.
 
 **Comment est-il possible de faire cela ?**
 
@@ -148,13 +154,15 @@ Oui, il faut véhiculer une vision claire, accessible et s'outiller d’un meill
 lexique. Quelque chose qui explique tout ça très bien, sans utiliser de mots qui
 font peur.
 
-**En tant que mainteneur de Jekyll, qu'aimerais-tu dire, communiquer à ceux qui s'intéressent aux technos autour du web statique moderne ? La tribune est à toi.**
+**En tant que mainteneur de Jekyll, qu'aimerais-tu dire, communiquer à ceux qui
+s'intéressent aux technos autour du web statique moderne ? La tribune est à
+toi.**
 
-Si j'avais une tribune, je dirais "N'abandonnez pas". Prenez  vous la tête
-dessus un petit moment. Si cela ne marche pas au bout d’une heure, d’un jour,
-allez demander de l’aide. Je dirai que ne pas abandonner et se prendre la tête
-sur quelque chose est la meilleure façon d’apprendre, d’affronter les problèmes.
-De manière générale, ma génération n'est vraiment pas douée quand il s'agit de
+Si j'avais une tribune, je dirais "N'abandonnez pas". Prenez vous la tête dessus
+un petit moment. Si cela ne marche pas au bout d’une heure, d’un jour, allez
+demander de l’aide. Je dirai que ne pas abandonner et se prendre la tête sur
+quelque chose est la meilleure façon d’apprendre, d’affronter les problèmes. De
+manière générale, ma génération n'est vraiment pas douée quand il s'agit de
 perséverer…que ce soit travailler quelque part plus d’un an ou affronter une
 grande difficulté pendant plus de 15 minutes. C’est comme si tout était éphémère
 de nos jours, contrairement à ce que j'ai pu apprendre à travers les livres
@@ -163,6 +171,7 @@ Ne pas abandonner, c'est avoir confiance dans la technologie du web statique,
 c'est avoir confiance dans les personnes qui développent tout ça, qui font des
 sites web et qui apprennent de ça, c'est avoir confiance dans notre futur.
 
-**Et lorsqu'on n'abandonne pas, on a plus de chance de faire partie de la solution, car on s'est investi dedans.**
+**Et lorsqu'on n'abandonne pas, on a plus de chance de faire partie de la
+solution, car on s'est investi dedans.**
 
 Oui, c'est exactement ça.
