@@ -25,7 +25,7 @@ votre connaissance sur le sujet.
 
 {{% /intro %}}
 
-Que ce soit pour un mettre en place un blog, configurer un site de e-commerce ou
+Que ce soit pour mettre en place un blog, configurer un site de e-commerce ou
 développer une single page application en JavaScript, le temps où on se
 rabattait par défaut sur WordPress pour tout ou presque est révolu. Les
 générateurs de site statique et les réseaux de CDN ultra-rapides propulsent une
@@ -39,7 +39,7 @@ _quoi_ on parle.
 
 Le terme **JAMstack** désigne la stack JavaScript, APIs et Markup et une manière
 de construire des sites Web statiques sans base de données. Ce concept est
-_vraiment tout bête_ - le mot "statique" sous-entend de la simplicité ou un
+_vraiment tout bête_ — le mot "statique" sous-entend de la simplicité ou un
 manque d’interactivité, mais c'est loin d’être le cas. Quand on parle de sites
 statiques, on fait surtout référence aux technologies utilisées pour les
 générer, les mettre en ligne et les héberger.
@@ -71,7 +71,7 @@ sécurité) pour créer un simple blog ? Maintenant que les navigateurs sont
 devenus des systèmes d’exploitation, capable d’interagir avec un nombre
 incalculable d’APIs et de faire tourner des applications complexes côté client,
 et que le développement front-end est dominé par JavaScript et les
-automatisations à l’aide de `npm`, n'avons nous pas déjà dépassé ce modèle ?
+automatisations à l’aide de `npm`, n'avons-nous pas déjà dépassé ce modèle ?
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346591/diagram-ssg.png"
 caption="Un site Web statique développé à l’aide d’un processus basé sur la JAMstack" >}}
@@ -95,7 +95,7 @@ juste valeur.
 
 Premièrement, la simplification des URLs et de l’architecture du site est
 souvent plus simple avec la JAMstack qu'avec un site dynamique et un CMS. Plutôt
-que de se reposer sur des régles de réecritures complexes d’URLs côté serveur
+que de se reposer sur des règles de réécritures complexes d’URLs côté serveur
 pour que votre contenu soit accessible via des URLS lisibles
 (`example.com/?p=12345` → `example.com/clair-et-net/`), vos URLs sont ce que
 vous voulez qu'elles soient : elles reflètent simplement l’emplacement des
@@ -109,7 +109,7 @@ par date alors que vous n'en avez peut-être pas besoin. Généralement des
 directives `noindex` et des URLS canoniques sont ajoutées à l’aide de plugins
 supplémentaires pour gérer tout ça. Les générateurs de site statique à l’inverse
 vous permettent de créer des pages finement et de mettre en place la taxonomie
-qui correspond à _votre_ contenu. Si besoin, beaucoup de générateurs embarque
+qui correspond à _votre_ contenu. Si besoin, beaucoup de générateurs embarquent
 des fonctions et une bonne logique pour créer, filtrer et paginer des pages
 d’archives.
 
@@ -120,14 +120,14 @@ servir des versions pré-rendues de votre HTML aux moteurs s'en retrouve
 nettement simplifié. Certains hébergeurs spécialisés dans les sites statiques
 comme Netlify
 [offrent même le pré-rendu](https://www.netlify.com/docs/prerendering/) de base
-grâce à l’utilisation d’`_escaped_fragment_`, ça s'installe _litérallement_ en
+grâce à l’utilisation d’`_escaped_fragment_`, ça s'installe _littéralement_ en
 un clic. Les personnes intéressées par ce sujet feraient bien d’aller lire
 l’étude de cas de Phil Hawksworth sur le
 [rendu isomorphique avec les sites statiques](https://www.hawksworx.com/blog/isomorphic-rendering-on-the-jam-stack/).
 
 ## 2. Performance
 
-La performance est étroitement liée au référencement car elle joue un rôle
+La performance est étroitement liée au référencement, car elle joue un rôle
 prépondérant en termes d’expérience utilisateur.
 
 Les avantages des sites statiques en termes de performance peuvent être
@@ -156,8 +156,8 @@ les commentaires ou [FormKeep](https://formkeep.com/) pour les formulaires.
 
 ## 3. Securité
 
-On va pouvoir passer rapidement sur ce point car les sites Web statiques sont de
-véritables **forteresses**.
+On va pouvoir passer rapidement sur ce point, car les sites Web statiques sont
+de véritables **forteresses**.
 
 Sans bases de données, sans plugins, sans logiciel dynamique qui tourne sur
 votre serveur, la possibilité d’injection de code et de hacks est fortement
@@ -167,18 +167,18 @@ et le JavaScript côté client, on élimine ainsi le besoin de se reposer sur de
 plugins de CMS. Bien qu'il soit tout à fait possible qu'une API externe chargée
 de traiter des données persistantes expose une vulnérabilité, le fait d’éliminer
 votre CMS entraîne la suppression de nombreux points de défaillance et de
-multiples vecteurs d’attaque. Pour les les blogs statiques, il n'est pas exagéré
+multiples vecteurs d’attaque. Pour les blogs statiques, il n'est pas exagéré
 d’affirmer que la sécurité devient essentiellement un **faux problème**, du
 moins comparé à une installation typique de WordPress.
 
 Les certificats SSL sont également faciles à installer et sont disponibles
-gratuitement grâce à des autorités de certications automatisées comme
+gratuitement grâce à des autorités de certification automatisées comme
 [LetsEncrypt](https://letsencrypt.org/).
 
 ## 4. Déploiement & Workflow
 
-Une fois que vous avez travaillé sur un site Web avec la JAMstack - que vous
-avez déployé des mises à jour et publié des contenus régulièrement - vous
+Une fois que vous avez travaillé sur un site Web avec la JAMstack — que vous
+avez déployé des mises à jour et publié des contenus régulièrement — vous
 commencez à ressentir le potentiel disruptif de cette manière de développer. Ça
 évolue rapidement et on peut parfois se sentir un peu comme dans le Far West,
 avec tous ces nouveaux outils et ces nouveaux services qui arrivent tous les
@@ -188,11 +188,11 @@ stade de la maturité.
 Un des principes de base du développement avec la JAMstack c'est que tout vit
 dans un dépôt Git, que ce soit les composants de notre site statique, les
 fichiers de configuration de notre générateur, nos fichiers CSS et JS, nos
-contenus écrits (sauvegardés sour forme de documents Markdown en texte brut).
+contenus écrits (sauvegardés sous forme de documents Markdown en texte brut).
 Avec votre service de déploiement et d’hébergement configuré pour refléter en
 permanence l’état de la branche de votre dépôt, appliquer une modification est
 aussi simple que de pousser un commit sur un dépôt GitHub. L'ensemble de votre
-site Web - le code et le contenu - vit dans un endroit centralisé, protégé par
+site Web — le code et le contenu — vit dans un endroit centralisé, protégé par
 un versionnement robuste et peut être configuré pour être déployé en continu.
 
 **Oui mais et les clients dans tout ça ?** Quid des utilisateurs non techniques
@@ -204,8 +204,8 @@ solutions réjouissantes commencent à apparaître. Certaines sont
 extraodinairement simples. Si les éditeurs de vos contenus sont déjà familiers
 avec
 [les bases de Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) -
-C’est-à-dire `# titre`, `**gras**`, `*italique*` - alors il n'y a aucune raison
-qu'il ne puissent éditer le dépôt sous-jacent. Des outils comme
+C’est-à-dire `# titre`, `**gras**`, `*italique*` — alors il n'y a aucune raison
+qu'ils ne puissent éditer le dépôt sous-jacent. Des outils comme
 [Prose.io](http://prose.io/) s'intègrent à GitHub pour proposer une interface
 utilisateur plus adaptée pour les auteurs non techniques. Créez une branche pour
 les éditeurs de contenu puis fusionnez simplement leurs modifications pour
@@ -234,14 +234,14 @@ sur Smashing Magazine.
 La popularité grandissante du développement de site statique a donné naissance à
 quelques nouveaux services assez incroyables.
 
-Prenez le e-commerce par exemple. Pour les petits vendeurs - ceux qui se
-reposeraient typiquement sur WordPress et WooCommerce - un site statique est
+Prenez le e-commerce par exemple. Pour les petits vendeurs — ceux qui se
+reposeraient typiquement sur WordPress et WooCommerce — un site statique est
 désormais une option parfaitement valable. [Snipcart](https://snipcart.com/) est
 un système de panier et de paiement basé sur JavaScript qui permet aux
 développeurs d’ajouter des fonctionnalités de e-commerce sur n'imporque quel
 site Web. L'inventaire des produits et des ventes est géré via le tableau de
 bord de Snipcart et son API permet l’intégration de systèmes de gestion
-d’inventaires, de livreurs, etc. Il existent d’autres solutions comme
+d’inventaires, de livreurs, etc. Il existe d’autres solutions comme
 [Foxycart](http://www.foxycart.com/) et le
 [bouton d’achat Shopify](https://www.shopify.co.uk/buy-button).
 
@@ -252,7 +252,7 @@ annuaires de thèmes pour [Hugo](http://themes.gohugo.io/) et
 connaissances techniques sont requises pour être opérationnel avec ces
 générateurs statiques.
 
-Ces annuaires ne sont pas encore prêts de devenir des places de marché de thèmes
+Ces annuaires ne sont pas encore près de devenir des places de marché de thèmes
 prospères en tant que telles, mais en un sens c'est une bonne chose : les thèmes
 bourrés de plugins inutiles et d’outils de construction de pages ne sont pas un
 problème ici !
@@ -284,7 +284,7 @@ plus répandue de ces outils, de ces plate-formes et de ces services va les
 pousser à s'étoffer.
 
 **Alors est-ce que c'est fait pour vous ?** Si vous êtes vaguement familier avec
-le développement Web et que vous n'avez pas encore tester un générateur de site
+le développement Web et que vous n'avez pas encore testé un générateur de site
 statique moderne, c'est le moment idéal pour le faire et de répondre vous-même à
 cette question. Prenez connaissance des ressources ci-dessous, regardez
 [le talk de Mathias Biilmann](https://vimeo.com/163522126) lors de la
