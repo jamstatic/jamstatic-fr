@@ -278,7 +278,7 @@ pour le moment :
 
 Vous avez fait attention à la façon dont nous avons utilisé le filtre natif
 `url_encode` fourni par le moteur de rendu Liquid ? Maintenant que nous avons
-crée le nôtre, ajoutons un appel à notre petit filtre maison, comme ceci :
+créé le nôtre, ajoutons un appel à notre petit filtre maison, comme ceci :
 
 ```html
 <ul>

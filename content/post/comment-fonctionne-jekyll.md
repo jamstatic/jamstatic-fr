@@ -338,7 +338,7 @@ Si nous pitons le code exécuté lors de l’invocation de la commande
 `jekyll build`, nous nous apercevons que
 [`site.process`](https://github.com/jekyll/jekyll/blob/2b15b0b3251d35c290dc96eb07e18fa31a58bcc6/lib/jekyll/site.rb#L65)
 représente le cœur de Jekyll. Vous trouverez les parties importantes un peu plus
-bas accompagnées de mes commentaires explicatifs. Reportez vous à
+bas accompagnées de mes commentaires explicatifs. Reportez-vous à
 [la partie sur le debug](#debug) si vous souhaitez vous baladez à votre tour
 dans l’appel de la méthode.
 

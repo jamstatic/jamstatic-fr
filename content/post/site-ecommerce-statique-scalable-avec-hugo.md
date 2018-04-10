@@ -452,7 +452,7 @@ stocks dans les entrepôts. Ici nous nous sommes penchés seulement sur le premi
 cas de figure, je n'ai pas encore réfléchi à comment nous pourrions gérer le
 second.
 
-### Aperçu et pré-production
+### Aperçu et préproduction
 
 Cela pourrait s'avérer problématique si des développeurs, des contributeurs et
 des processus automatisés mettent tous le code à jour.

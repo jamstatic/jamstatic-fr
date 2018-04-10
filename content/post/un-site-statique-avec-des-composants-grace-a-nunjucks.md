@@ -1,7 +1,7 @@
 ---
 title: "Un site statique avec des composants à l’aide de Nunjucks"
 date: 2018-03-13T20:21:48+01:00
-description: "Apprenez à construire un site statique avec des composants à l’aide d’un pré-processeur HTML."
+description: "Apprenez à construire un site statique avec des composants à l’aide d’un préprocesseur HTML."
 images:
   - /assets/images/2018/03/static-site-nunjucks-image1.jpg
 source:
@@ -38,7 +38,7 @@ assemblons le site avec ces composants.
 Des frameworks JavaScript comme React ou Vue reposent en grande partie sur ce
 principe. Mais ce n'est pas parce que vous n'utilisez pas de JavaScript côté
 client pour développer votre site que vous devez renoncer à l’idée d’utiliser
-des composants. En utilisant un pré-processeur HTML, nous pouvons monter un site
+des composants. En utilisant un préprocesseur HTML, nous pouvons monter un site
 statique et bénéficier également de le possibilité d’abstraire notre site et son
 contenu sous forme de composants réutilisables.
 

@@ -4,25 +4,28 @@ description: Le web au secours de la modernisation du procéde de publication de
 author: Antoine Fauchié
 date: 2017-01-23 15:37:00
 images:
-  - https://blogs.getty.edu/iris/files/2016/05/eric_ruth_greg_1009_1200.jpg
+  - https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523364540/eric_ruth_greg_1009_1200.jpg
 source:
   url: https://www.thenewdynamic.org/article/2017/01/26/interview-with-eric-gardner-getty/
   title:  Interview with Eric Gardner, Getty Publications
+  lang: en
 ---
 
-{{% intro %}} Suite à la parution du
-[procédé de publication numérique basé sur Git et Middleman](http://blogs.getty.edu/iris/an-editors-view-of-digital-publishing/)
+{{% intro %}}
+
+Suite à la parution du [procédé de publication numérique basé sur Git et Middleman](http://blogs.getty.edu/iris/an-editors-view-of-digital-publishing/)
 d’un éditeur, [Antoine Fauchié](https://www.quaternum.net/) est allé poser
 quelques questions à [Eric Gardner](http://egardner.github.io/), développeur et
-designer au sein de l’équipe d’édition numérique de
-[The Getty](https://getty.edu/), un campus culturel et de recherche situé à Los
-Angeles. {{% /intro %}}
+designer au sein de l’équipe d’édition numérique de [The Getty](https://getty.edu/), 
+un campus culturel et de recherche situé à Los Angeles.
+
+{{% /intro %}}
 
 {{< figure
-src="https://thenewdynamic.imgix.net/getty-museum-ancient-terracottas-1600.jpg?w=785"
-caption="" attr="" attrlink="" >}}
+src="https://thenewdynamic.imgix.net/getty-museum-ancient-terracottas-1600.jpg?w=1024"
+alt="" caption="" attr="" attrlink="" >}}
 
-### Comment et pourquoi en êtes vous arrivés à choisir un générateur de site statique comme clé de voûte de votre processus de publication aux éditions The Getty ? Pourquoi ne pas avoir opté pour un développement natif&nbsp;?
+### Comment et pourquoi en êtes-vous arrivés à choisir un générateur de site statique comme clé de voûte de votre processus de publication aux éditions The Getty ? Pourquoi ne pas avoir opté pour un développement natif&nbsp;?
 
 Lorsque j'ai commencé à travailler chez The Getty, le programme de publication
 numérique était assez récent. Il y avait eu précédemment plusieurs
@@ -48,7 +51,7 @@ de fichiers texte lisibles par des humains dans un dépôt Git.
 Notre deuxième préoccupation était la dépendance à des logiciels propriétaires.
 Des sociétés comme Adobe ou Apple ont créé des outils très bien faits, mais qui
 possède vraiment vos contenus à la fin de la journée ? Si un produit cesse
-d’être maintenu, vous ne pouvez pas faire grand chose en tant qu'éditeur – vos
+d’être maintenu, vous ne pouvez pas faire grand-chose en tant qu'éditeur – vos
 travaux seront perdus. Une plate-forme open source semble être l’unique solution
 pour assurer à vos auteurs et à vos éditeurs le contrôle de leurs documents.
 
@@ -58,7 +61,7 @@ imprimés que The Getty publie sont vraiment beaux, et je veux faire perdurer
 autant que possible cette tradition sur le web. Cela tombe bien, un site
 "statique" n'a pas besoin d’être ennuyeux – les applications statiques HTML, CSS
 et JavaScript peuvent proposer tout un tas de fonctionnalités interactives ainsi
-q'un design et une typographie de grande qualité.
+qu’un design et une typographie de grande qualité.
 
 ### Comment votre équipe s'est appropriée ce nouveau workflow ? L'appropriation a-t-elle été facile ?
 
@@ -79,17 +82,17 @@ outils pour aider à simplifier ce procédé pour les gens.
 Je pense qu'on s'en rapproche (et je frémis à l’idée d’essayer d’obtenir un
 texte propre à partir d’un jeu de fichiers InDesign…). Mais nos outils ont
 encore du chemin à parcourir ; J’ai écrit
-[un article là dessus](http://blogs.getty.edu/iris/digital-publishing-needs-new-tools/)
+[un article là-dessus](http://blogs.getty.edu/iris/digital-publishing-needs-new-tools/)
 sur le blog de The Getty il y a un petit moment. Les gens utilisent Word et
 InDesign parce qu'ils sont intuitifs et bien pensés, notre workflow est encore
 un peu rude en comparaison. Toutefois le monde du texte brut possède des outils
 vraiment puissants lui aussi : une véritable gestion des versions (bien mieux
 que le système de révisions), des éditeurs étonnamment puissants comme Vim ou
-Emacs[^1], la possibilité de spécifier ce qu'on veut dire vraiment avec des
-languages de balisage simples comme
+Emacs[^1], la possibilité de spécifier ce qu'on veut dire vraiment avec des 
+langages de balisage simples comme
 [Markdown](https://learnxinyminutes.com/docs/fr-fr/markdown/) ou
 [Asciidoc](https://learnxinyminutes.com/docs/asciidoc/), etc. Je pense que
-l’équivalence visuelle exacte n'est plus l’objectif à atteindre ici. A
+l’équivalence visuelle exacte n'est plus l’objectif à atteindre ici. À
 contrario, des outils intuitifs et fiables, qui essaient avant tout d’aider les
 gens à exprimer du _sens_ et ce dans plus d’un contexte de présentation, c'est
 plutôt ça la voie à suivre.
@@ -98,7 +101,7 @@ plutôt ça la voie à suivre.
 
 Haha, j'ai l’impression que la barre est déjà assez haute donc je veux déjà
 produire un travail de qualité équivalente à nos livres papier. Mais l’édition
-numérique peut vous permettre de faire des choses qui ne seraient pas possible
+numérique peut vous permettre de faire des choses qui ne seraient pas possibles
 dans l’édition papier et j'ai espoir que ces nouvelles affordances du médium
 aideront à faire progresser la recherche de façon singulière. Nous travaillons
 actuellement sur un livre numérique dans lequel figure par exemple beaucoup de
@@ -106,7 +109,7 @@ partitions musicales, pouvoir avoir des annotations, des discussions ainsi que
 de la lecture audio et vidéo dans un même document, c'est quelque chose de
 véritablement passionnant.
 
-### Est-ce que ce nouveau workflow vous fait gagner du temps et de l’argent ? Y'a-t-il une différence de prix de revient pour les livres, y compris pour les livres papier ?
+### Est-ce que ce nouveau workflow vous fait gagner du temps et de l’argent ? Y’a t-il une différence de prix de revient pour les livres, y compris pour les livres papier ?
 
 Cela varie en fonction des maisons d’édition, mais globalement je dirais que
 non. Des publications de qualité, cela demande beaucoup de travail de la part de
@@ -137,14 +140,11 @@ l’installation de librairies[^2].
 ### Est-ce que tu penses que d’autres maisons d’édition vont adopter à leur tour cette stratégie avec des générateurs de site statique (pas de WYSIWYG, un balisage léger, pas de base de données, des métadonnées YAML, versionnement avec Git, etc.) ? Est-ce qu'un courant pourrait se former autour de ce concept ?
 
 Des collègues qui travaillent pour d’autres musées m'ont fait part de leur
-interêt. Pour le moment, je ne pense pas que quelqu'un ait publié un livre à
+intérêt. Pour le moment, je ne pense pas que quelqu'un ait publié un livre à
 l’aide de ce procédé, mais j'espère bien que ça changera bientôt. Une fois que
 nous aurons un peu affiné notre procédé, je prévois de faire un peu plus
 d’"évangélisation" 😉
 
-[^1]:
-
-  NdT: Des éditeurs comme Sublime ou Atom sont aussi puissants et encore plus
-  accessibles.
+[^1]: NdT: Des éditeurs comme Sublime ou Atom sont aussi puissants et encore plus accessibles.
 
 [^2]: NdT: Le projet [GitBook](https://www.gitbook.com) adopte cette démarche.

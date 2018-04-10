@@ -484,11 +484,6 @@ moi. Créer et redesigner votre portfolio devrait être fun et enrichissant, alo
 src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*qKtPxbGF11Ekq_B9hFRmhg/RS/w704.png?&ssl=1"
 caption="" >}}
 
-[^1]:
+[^1]: [Installez Ruby et Jekyll à l’aide d’Homebrew sous Mac](https://gist.github.com/DirtyF/5d2bde5c682101b7b5d90708ad333bf3).
 
-  [Installez Ruby et Jekyll à l’aide d’Homebrew sous Mac](https://gist.github.com/DirtyF/5d2bde5c682101b7b5d90708ad333bf3).
-
-[^2]:
-
-  Le plugin [jekyll-atom](https://github.com/Arcath/jekyll-atom/) facilite la
-  création de posts en respectant cette convention.
+[^2]: Le plugin [jekyll-atom](https://github.com/Arcath/jekyll-atom/) facilite la création de posts en respectant cette convention.

@@ -48,7 +48,7 @@ façon de gérer le livereload des CSS, du JavaScript et des images dans Hugo. J
 crois que ce patch a survécu à tous mes autres changements ultérieurs. À partir
 de là j'ai continué à soumettre des _Pull Requests_, motivé en partie par
 l’apprentissage d’un nouveau langage mais également encouragé par
-[Steve Francia](https://stevefrancia.com/), qui a crée les premières versions
+[Steve Francia](https://stevefrancia.com/), qui a créé les premières versions
 d’Hugo. Il est très bon pour motiver les gens à contribuer à un projet open
 source.
 

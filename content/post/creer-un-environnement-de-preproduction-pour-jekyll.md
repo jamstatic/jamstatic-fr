@@ -1,7 +1,7 @@
 ---
 
 title: Créer un environnement de préproduction pour Jekyll
-description: Netlify vous permet de créer simplement un environnement de pré-production
+description: Netlify vous permet de créer simplement un environnement de préproduction
   pour votre site statique.
 date: 2017-02-23
 source:
@@ -9,14 +9,15 @@ source:
   title: Creating a staging environment for Jekyll
   url: https://eduardoboucas.com/blog/2017/02/22/jekyll-staging-environment.html
 images:
-  - https://eduardoboucas.com/assets/posts/2017-02-22-creating-a-staging-environment-for-jekyll/netlify1.png
+  - https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523360891/configure-netlify.png
 categories:
   - jekyll
 ---
 
-{{% intro %}} Dans son article, [Eduardo Boucas](https://eduardoboucas.com/)
-révèle comment il a mis simplement en place
-[un site de préproduction pour Jekyll grâce à Netlify](https://eduardoboucas.com/blog/2017/02/22/jekyll-staging-environment.html).
+{{% intro %}}
+
+Dans son article, [Eduardo Boucas](https://eduardoboucas.com/) révèle comment il
+a mis simplement en place [un site de préproduction pour Jekyll grâce à Netlify](https://eduardoboucas.com/blog/2017/02/22/jekyll-staging-environment.html).
 Ce blog est également déployé et hébergé grâce à Netlify. La nouvelle version de
 leur interface d’administration propose nativement des fonctionnalités comme le
 fait d’associer un sous-domaine à une branche ou le fait de pouvoir bloquer le
@@ -24,8 +25,9 @@ site de production à un certain commit. Vous n'avez donc pas besoin de créer
 deux sites dans Netlify pour bénéficier d’une prévisualisation sur une URL
 dédiée. L'article d’Eduardo aborde néanmoins l’utilisation des variables
 d’environnements et utilise Jekyll comme exemple, la technique reste bien
-entendu valable pour d’autres générateurs comme Hugo, Hexo et les autres. {{%
-/intro %}}
+entendu valable pour d’autres générateurs comme Hugo, Hexo et les autres.
+
+{{% /intro %}}
 
 Un environnement de préproduction ou de _staging_ est une infrastructure de test
 qui s'approche autant que possible de la configuration d’un site de production.
@@ -38,14 +40,14 @@ j'ai fait pour en créer un et comment je m'en sers.
 
 Mon site est hébergé sur GitHub et servi grâce à
 [GitHub Pages](https://pages.github.com/), ce qui signifie que tout ce que je
-pousse sur la branche `master` enclenche une regénération du site et est publié
+pousse sur la branche `master` déclenche une régénération du site et est publié
 presque immédiatement. Si je visite l’URL de mon site quelques secondes plus
 tard, je peux voir les contenus mis à jour.
 
 Pour notre environnement de préproduction, ce que nous voulons c'est faire une
 copie basique de cette infrastructure de manière à faire passer notre contenu
 par un site distinct, avec une URL distincte. La démarche ressemblerait à
-quelque chose comme ça :
+quelque chose comme :
 
 1.  Pousser les changements sur GitHub
 1.  Le site de préproduction est régénéré, l’URL de préproduction peut être
@@ -79,13 +81,13 @@ git push origin dev
 ## Utilisation de Netlify
 
 Pour commencer à utiliser Netlify, rendez-vous sur
-[leur site](https://netlify.com) et connectez vous avec votre compte GitHub
+[leur site](https://netlify.com) et connectez-vous avec votre compte GitHub
 (c'est [gratuit pour les projets open-source](https://netlify.com/pricing/)).
-Cliquez sur Àjoutez un nouveau projet`, sélectionnez GitHub et sélectionnez le
+Cliquez sur `Ajoutez un nouveau projet`, sélectionnez GitHub et sélectionnez le
 dépôt qui dans lequel se trouve votre site.
 
 {{< figure
-src="https://eduardoboucas.com/assets/posts/2017-02-22-creating-a-staging-environment-for-jekyll/netlify1.png"
+src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523360891/configure-netlify.png"
 caption="Netlify : Configuration du dépôt" >}}
 
 Dans l’onglet `Paramètres de base`, sélectionnez votre branche de préproduction
@@ -93,7 +95,7 @@ Dans l’onglet `Paramètres de base`, sélectionnez votre branche de préproduc
 défaut est `_site` et la commande de build `jekyll build`. Dans l’onglet
 `Paramètres avancés`, ajouter une variable d’environnement nommée `JEKYLL_ENV`
 avec la valeur `stage` — cela va servir à dire à Jekyll dans quel environnement
-tourne le site .
+tourne le site.
 
 Ensuite, cliquez sur `Générer votre site` et attendez quelques secondes. Lorsque
 la génération du site est terminée, cliquez sur `Voir votre site` pour voir le
@@ -101,17 +103,17 @@ résultat.
 
 Un nom aléatoire vous sera attribué, comme `cartoonist-foreground-47121`, que
 vous pourrez ensuite modifier dans les paramètres. Vous pouvez également définir
-un nom de domaine personalisé pour ce site, pour cela vous devrez configurer
+un nom de domaine personnalisé pour ce site, pour cela vous devrez configurer
 votre DNS. Si vous avez choisi `dev-example-com` comme nom pour votre site, il
 vous faudra un CNAME qui pointe vers `dev-example-com.netlify.com`.
 
 {{< figure
-src="https://eduardoboucas.com/assets/posts/2017-02-22-creating-a-staging-environment-for-jekyll/netlify2.png"
+src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523361029/config-panel-netlify.png"
 caption="Netlify: le panneau de configuration" >}}
 
 ## Configuration de Jekyll
 
-On peut accéder à la variable d’environnement que nous avons crée plus haut dans
+On peut accéder à la variable d’environnement que nous avons créé plus haut dans
 Jekyll, en utilisant la variable `jekyll.environment` dans n'importe quel modèle
 Liquid. Grâce à ça, nous pouvons effectuer quelques ajustements au site en
 fonction de l’environnement dans lequel il tourne.
@@ -150,5 +152,5 @@ environnements de production et de préproduction (ce que je risque de faire
 bientôt pour des raisons que je dévoilerai dans un prochain article)
 
 Et voilà, vous avez maintenant un environnement de préproduction simple avec
-intégration continue pour un site statique et tout ça gratuitement. Pas mal, non
-?
+intégration continue pour un site statique et tout ça gratuitement. Pas mal,
+non&nbsp;?

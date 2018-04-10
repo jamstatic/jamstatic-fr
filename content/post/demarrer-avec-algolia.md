@@ -141,7 +141,7 @@ function dataToAlgoliaObject(data_points) {
 }
 ```
 
-_Deuxième étape :_ Maintenant que nous avons crée nos objets, ils sont prêts à
+_Deuxième étape :_ Maintenant que nous avons créé nos objets, ils sont prêts à
 être envoyés à Algolia !
 
 Changeons quelques trucs dans notre fonction `indexData`. Nous pouvons chaîner

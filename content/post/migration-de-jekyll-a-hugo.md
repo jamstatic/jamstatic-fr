@@ -310,7 +310,7 @@ Faites comme bon vous semble.
 Pour chaque type de contenu dont vous avez besoin, que ce soit une page, un
 billet de blog, un index de vos articles, de vos études de cas, etc. vous allez
 devoir créer un fichier Markdown (`.md`) dans le dossier `/content/`. C’est là
-où sont stockés _tous_ les contenus. Après avoir crée le contenu dans son
+où sont stockés _tous_ les contenus. Après avoir créé le contenu dans son
 répertoire spécifique, vous allez créer ou réutiliser un modèle de mise en page
 stocké dans le dossier `/layouts/`.
 
@@ -763,7 +763,7 @@ autre type de contenu que nous avons défini à l’aide de notre arborescence d
 dossiers et nous donnons à ce répertoire le même nom que celui du dossier
 présent dans le dossier `content`.
 
-Ou si vous préférez : de la même manière que nous avons crée un dossier dans le
+Ou si vous préférez : de la même manière que nous avons créé un dossier dans le
 répertoire `layouts/` du même nom que le `type` de contenu, nous créons un
 dossier pour chaque section de contenu (`blog`, `ateliers`, `etudes-de-cas`,
 etc.) de manière à obtenir une structure de dossiers similaire dans `layouts` à

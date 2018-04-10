@@ -186,7 +186,7 @@ Fantastique.
 
 Non seulement vous pouvez déployer différentes branches, mais vous pouvez aussi
 personnaliser le contenu et les environnements de vos déploiements en fonction
-de différents contextes comme la pré-production, la qualification et la
+de différents contextes comme la préproduction, la qualification et la
 production.
 
 Il fut un temps où c'était compliqué de mettre en place différents

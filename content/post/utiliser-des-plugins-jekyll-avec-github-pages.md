@@ -64,7 +64,7 @@ $ git checkout -b source master
 $ git push -u origin source
 ```
 
-Maintenant que vous avez crée la branche `source`, vous pouvez en faire la
+Maintenant que vous avez créé la branche `source`, vous pouvez en faire la
 branche par _défaut_ dans GitHub :
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346483/default-branch-github.png" alt="Paramètrage des branches dans GitHub" >}}

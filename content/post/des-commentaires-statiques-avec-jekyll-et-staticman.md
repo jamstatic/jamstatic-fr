@@ -9,7 +9,7 @@ source:
   url: https://mademistakes.com/articles/improving-jekyll-static-comments/
   lang: en
 images:
-  - https://mademistakes.com/assets/images/improving-jekyll-static-comments-feature.jpg
+  - https://res.cloudinary.com/jamstatic/image/upload/c_scale,q_auto,w_1200/v1523364658/improving-jekyll-static-comments-feature.jpg
 categories:
   - jekyll
 ---
@@ -18,8 +18,8 @@ categories:
 
 [Michael Rose](https://github.com/mmistakes), l’auteur du
 [thème Jekyll Minimal Mistakes](https://mademistakes.com/work/minimal-mistakes-jekyll-theme/),
-revient sur les détails de l’implémentation de commentaires statiques - les
-commentaires sont versionnés au format YAML dans le dépôt GitHub - à l’aide de
+revient sur les détails de l’implémentation de commentaires statiques — les
+commentaires sont versionnés au format YAML dans le dépôt GitHub — à l’aide de
 [Staticman](https://eduardoboucas.com/blog/2016/08/10/staticman.html), un
 service open-source développé par [Eduardo Bouças](https://eduardoboucas.com),
 qui permet d’insérer des contenus générés par les utilisateurs sur un site plus
@@ -29,7 +29,7 @@ si statique que ça, proposant ainsi une alternative à Disqus au même titre qu
 {{% /intro %}}
 
 {{< figure
-src="https://mademistakes.com/assets/images/improving-jekyll-static-comments-feature.jpg"
+src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,q_auto,w_1024/v1523364658/improving-jekyll-static-comments-feature.jpg"
 attr="Photo Gabriel Santiago" attrlink="https://unsplash.com/@gabrielssantiago" >}}
 
 Depuis que j'ai quitté Disqus pour
@@ -51,11 +51,7 @@ fichier `staticman.yml` [^staticman-yml]. Comme il n'y a eu aucun changement
 dans les paramètres, la transition vers la version 2 était grandement
 simplifiée.
 
-[^staticman-yml]:
-
-  Un des avantages du nouveau fichier de configuration c'est qu'on peut utiliser
-  Staticman avec d’autres générateurs de site statique. La `v2` ne vous oblige
-  plus à utiliser un fichier `_config.yml` spécifique à Jekyll.
+[^staticman-yml]: Un des avantages du nouveau fichier de configuration c'est qu'on peut utiliser Staticman avec d’autres générateurs de site statique. La `v2` ne vous oblige plus à utiliser un fichier `_config.yml` spécifique à Jekyll.
 
 ```yaml
 comments:
@@ -82,9 +78,9 @@ Assurez-vous de jeter un œil au
 [modèle de fichier de configuration](https://github.com/eduardoboucas/staticman/blob/master/staticman.sample.yml)
 et à la
 [liste complète des paramètres](https://staticman.net/docs/configuration) pour
-vous faire une idées des possibilités de configuration.
+vous faire une idée des possibilités de configuration.
 
-Par exemple vous pouvez configurer plusieurs propriétés (commentaires, avis et
+Par exemple, vous pouvez configurer plusieurs propriétés (commentaires, avis et
 autres types de contenus générés par les utilisateurs), modifier le message de
 commit et le corps de texte de la pull request, activer les notifications par
 mail et bien plus à partir du fichier `staticman.yml`.
@@ -121,11 +117,7 @@ puis suffixer avec `/comments`[^property] et le tour était joué pour moi.
 <form id="comment-form" class="page__form js-form form" method="post" action="https://api.staticman.net/v2/entry/{{ site.repository }}/{{ site.staticman.branch }}/comments">
 ```
 
-[^property]:
-
-  Les propriétés de site sont optionnelles. Se reporter à la documentation de
-  Staticman pour plus de détails sur comment
-  [connecter vos formulaires](https://staticman.net/docs/#step-3-hook-up-your-forms).
+[^property]: Les propriétés de site sont optionnelles. Se reporter à la documentation de Staticman pour plus de détails sur comment [connecter vos formulaires](https://staticman.net/docs/#step-3-hook-up-your-forms).
 
 ## Ajout du support des fils de commentaires
 
@@ -226,8 +218,8 @@ Malheureusement, le code suivant n'a pas marché :
 </article>
 ```
 
-Hmmm… j'imagine qu'il était temps d’ajouter des filtres `inspect` à mes tableaux
-pour voir ce que se passait.
+Hmm… j'imagine qu'il était temps d’ajouter des filtres `inspect` à mes tableaux
+pour voir ce qui se passait.
 
 ```liquid
 {{ site.data.comments[page.slug] | inspect }}
@@ -305,7 +297,7 @@ chacun des noms des propriétés.
 ```
 
 {{< figure
-src="https://mademistakes.com/assets/images/staticman-parent-comments-only.png"
+src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523364804/staticman-parent-comments-only.png"
 alt="Seulement des commentaires parents"
 caption="Ça marche, nous avons des commentaires parents.">}}
 
@@ -313,7 +305,7 @@ caption="Ça marche, nous avons des commentaires parents.">}}
 
 Je suis tombé sur des comportements étranges et des erreurs dus à l’utilisation
 du filtre de tri `sort` avec les filtres de recherche `where` et `where_exp`.
-J'en suis arrivé à la conclusion que ce n'était pas nécessaire car les éléments
+J'en suis arrivé à la conclusion que ce n'était pas nécessaire, car les éléments
 étaient déjà classés par ordre alphabétique en fonction de leurs noms de fichier
 et j'ai donc supprimé les filtres.
 
@@ -365,12 +357,9 @@ plus, obligeant Jekyll à générer l’erreur suivante :
 Après avoir brièvement songé un moment au film **Inception**, j'ai appliqué un
 filtre `inspect` pour m'aider à m'en sortir avec la boucle `replies`. J'en ai
 conclu que la condition `where_exp` échouait[^integer-string] parce que je
-tentais de comparer un entier avec une chaîne de caractères :flushed:.
+tentais de comparer un entier avec une chaîne de caractères 😳.
 
-[^integer-string]:
-
-  `15` n'est pas la même chose que `'15'`. Ces guillemets simples font toute la
-  différence…
+[^integer-string]: `15` n'est pas la même chose que `'15'`. Ces guillemets simples font toute la différence…
 
 Pour résoudre cela, j'ai placé une balise `capture` autour de la variable
 d’index pour la convertir en chaîne de caractères. Puis j'ai modifié la
@@ -452,7 +441,7 @@ suite.
           <button type="submit" id="comment-form-submit" class="btn btn--large">Soumettre mon commentaire</button>
           <label for="comment-form-reply">
             <input type="checkbox" id="comment-form-reply" name="options[subscribe]" value="email">
-            M'informer des nouveaux commentaires par mail.
+            M’informer des nouveaux commentaires par mail.
           </label>
         </fieldset>
       </form>
@@ -551,7 +540,7 @@ pour m'en tenir à ça.
 ```
 
 {{< figure
-src="https://mademistakes.com/assets/images/staticman-nested-comments.png"
+src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523364852/staticman-nested-comments.png"
 alt="Commentaires imbriqués"
 caption="Commentaires imbriqués sur un seul niveau de profondeur." >}}
 
@@ -569,7 +558,7 @@ J'ai juste eu à modifier quelques noms de variables dans le script
 mon formulaire.
 
 {{< figure
-src="https://mademistakes.com/assets/images/comment-reply-animation.gif"
+src="https://res.cloudinary.com/jamstatic/image/upload/v1523364901/comment-reply-animation.gif"
 alt="Les réponses aux commentaires en action"
 caption= "Appuyer sur le **bouton répondre** déplace le formulaire du commentaire dans la vue et remplit le champ `<input type=\"hidden\" id=\"comment-parent\" name=\"options[parent]\" value=\"\">` avec la bonne `value` du _parent_. Alors qu'appuyer sur **Annuler réponse** remet le formulaire dans son état d’origine." >}}
 
@@ -603,7 +592,7 @@ L'instance publique de Static man utilise un compte
 [**Mailgun**](http://www.mailgun.com/) limité à 10&nbsp;000 emails par mois. Je
 vous encourage à créer un compte et à ajouter votre propre
 [API et domaine Mailgun](https://staticman.net/docs/configuration#notifications.enabled)
-dans le fichier `staticman.yml`. Assurez vous de bien chiffrer les deux en
+dans le fichier `staticman.yml`. Assurez-vous de bien chiffrer les deux en
 utilisant le chemin suivant :
 `https://api.staticman.net/v2/encrypt/{TEXTE À CHIFFRER}`.
 
@@ -633,19 +622,15 @@ par mail.
 Rien de bien surprenant ici, `name=options[subscribe]` and `value="email"` sont
 ajoutés au champ pour associer les données d’abonnement avec l’adresse mail.
 
-[^origin]:
-
-  Cette URL sera ajoutée dans la notification par mail envoyée aux abonnés pour
-  leur permettre d’ouvrir directement la page.
+[^origin]: Cette URL sera ajoutée dans la notification par mail envoyée aux abonnés pour leur permettre d’ouvrir directement la page.
 
 Si tout est correctement configuré, l’utilisateur devrait recevoir un mail dès
 qu'un nouveau commentaire est posté sur le billet ou la page auxquels il s'est
 abonné.
 
-<figure>
-  <img src="https://mademistakes.com/assets/images/staticman-email-notification.png" alt="Staticman reply email notification">
-  <figcaption>Exemple d’un mail de notification "Nouvelle réponse" de Staticman.</figcaption>
-</figure>
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1024/v1523365018/staticman-email-notification.png"
+alt="Staticman reply email notification"
+caption="Exemple d’un mail de notification "Nouvelle réponse" de Staticman." >}}
 
 Voilà, vous avez mis en place un système de commentaires basé sur des fichiers
 statiques dans Jekyll et qui gère les commentaires imbriqués et les

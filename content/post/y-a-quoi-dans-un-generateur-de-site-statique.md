@@ -1,5 +1,5 @@
 ---
-title: Qui y’a t-il dans un générateur de site statique ?
+title: Qu’y a-t-il dans un générateur de site statique ?
 description: Jetons un coup d’œil au fonctionnement interne de Harp, un générateur de site statique écrit en JavaScript
 date: 2017-02-09T15:21:52Z
 source:
@@ -23,17 +23,17 @@ JavaScript, qui résume bien le périmètre fonctionnel de ces outils.
 
 {{% /intro %}}
 
-Je parle beaucoup des générateurs de site statique mais je parle toujours de
+Je parle beaucoup des générateurs de site statique, mais je parle toujours de
 comment _utiliser_ des générateurs de site statique. Ils sont souvent perçus
 comme une boîte noire. Je crée un modèle, j'écris un peu de Markdown et hop
 j'obtiens une page entièrement formatée en HTML. C’est magique !
 
-Mais qu'est-ce vraiment un générateur de site statique ? Qu'y-a-t-il dans cette
+Mais qu'est-ce vraiment un générateur de site statique ? Qu’y a-t-il dans cette
 boîte noire ? De quelle magie Vaudou s'agit-il ?
 
 Dans cet article, nous allons examiner les différentes parties qui constituent
 un générateur de site statique. Premièrement, nous parlerons des généralités et
-ensuite nous regarderons de plus prêt un vrai bout de code source en plongeant
+ensuite nous regarderons de plus près un vrai bout de code source en plongeant
 au plus profond d’[HarpJS](https://harpjs.com/). Alors, enfilez votre casquette
 d’aventurier et partons en exploration.
 
@@ -50,7 +50,7 @@ très bien Ruby.
 En vérité, un générateur de site statique c'est un concept très simple. Les
 ingrédients clefs d’un générateur de site statique sont typiquement :
 
-* Un ou des langage(s) de gabarit pour créer les modèles de pages/articles,
+* Un (ou des) langage(s) de gabarit pour créer les modèles de pages/articles,
 * Un langage de balisage léger (en général Markdown) pour rédiger le contenu,
 * Un langage de balisage structurel (souvent YAML) pour définir la configuration
   et les métadonnées (par exemple
@@ -61,10 +61,10 @@ ingrédients clefs d’un générateur de site statique sont typiquement :
   tiret bas(`_`) signifie qu'il ne sera pas recopié avec les fichiers du site
   final ou encore tous les articles vont dans un dossier `posts`),
 * Un moyen de compiler les modèles et le balisage en HTML (le support pour des
-  pré-processeurs CSS ou JavaScript est également fréquemment inclus),
-* Un server local pour tester.
+  préprocesseurs CSS ou JavaScript est également fréquemment inclus),
+* Un serveur local pour tester.
 
-C’est tout. Si vous vous dites "Hé… mais je pourrais en développer un!" vous
+C’est tout. Si vous vous dites "Hé… mais je pourrais en développer un&nbsp;!" vous
 avez sûrement raison. Les choses se compliquent quand vous commencez à ajouter
 des fonctionnalités, comme la plupart des générateurs de site statique le font.
 
@@ -82,17 +82,17 @@ Premièrement, parlons des rudiments de Harp.
 
 Harp supporte [Jade](https://pugjs.org) et [EJS](http://www.embeddedjs.com/)
 (pour les modèles) et Markdown comme langage de balisage léger (pour le
-contenu). Remarquez que bien que Jade d’appelle maintenant Pug, Harp n'est pas
+contenu). Remarquez que bien que Jade s’appelle maintenant Pug, Harp n'a pas
 officiellement mis à jour sa documentation ou son code, donc nous parlerons
 encore de Jade dans cet article. Harp offre aussi le support pour d’autres
-pré-processeurs comme Less, Sass et Stylus pour CSS et CoffeeScript pour
+préprocesseurs comme Less, Sass et Stylus pour CSS et CoffeeScript pour
 JavaScript.
 
 Par défaut, Harp n'a pas trop besoin de configuration ou de métadonnées. Il tend
 à favoriser
 [une convention plutôt que de la configuration](https://harpjs.com/docs/development/rules).
 Toutefois, il permet de configurer ou d’ajouter des métadonnées à l’aide de
-fichiers JSON. Il se distingue de beaucoup d’autres générateurs de site statique
+fichiers JSON. Il se distingue de beaucoup d’autres générateurs de site statique,
 car le fichier de métadonnées est stocké en dehors du fichier le concernant dans
 un fichier `_data.json`.
 
@@ -282,7 +282,7 @@ exports.compile = function(projectPath, outputPath, callback) {
 La première portion de code définit le chemin de destination passé en argument
 de l’appel à `harp compile` via la ligne de commande
 ([le source est ici](https://github.com/sintaxi/harp/blob/master/bin/harp)). Par
-défault, comme vous pouvez le voir c'est `www`. `callback` est une fonction de
+défaut, comme vous pouvez le voir c'est `www`. `callback` est une fonction de
 callback passée en argument de la ligne de commande qui n'est pas configurable.
 
 La portion suivante commence par appeler la fonction `setup` du
@@ -294,9 +294,9 @@ d’aller regarder par vous-même), mais en gros ça lit la configuration du sit
 Vous aurez peut-être remarqué un appel à un truc qui s'appelle `terraform`. Cela
 revient ensuite de nouveau au sein de cette fonction.
 [Terraform](https://github.com/sintaxi/terraform) est en fait projet séparé dont
-Harp dépend pour la gestion de la
-[pipeline des assets](https://launchschool.com/blog/rails-asset-pipeline-best-practices).
-C’est dans le pipeline des assets qu'est fait tout le difficile travail de
+Harp dépend pour la gestion du
+[traitement des assets](https://launchschool.com/blog/rails-asset-pipeline-best-practices).
+C’est lors du traitement des assets qu'est fait tout le difficile travail de
 compilation et de génération du site final (nous irons jeter un œil au code de
 Terraform sous peu).
 
@@ -324,7 +324,7 @@ src="https://cdn.css-tricks.com/wp-content/uploads/2017/02/terraform-1.jpg" >}}
 
 Dans chacun de ces dossiers se trouve un dossier `processors` qui renferme le
 code pour chacun des processeurs spécifiques que Terraform (C’est-à-dire Harp)
-supporte. Par exemple, dans le dossiers des modèles se trouvent les fichiers qui
+supporte. Par exemple, dans le dossier des modèles se trouvent les fichiers qui
 permettent de compiler les fichiers EJS, Jade, and Markdown.
 
 {{< figure
@@ -454,14 +454,14 @@ faisons cela". C’est ça le code dans la vraie vie!)
 La grande partie du code dans la fonction `render` s'occupe de la gestion des
 modèles. Des trucs comme CoffeeScript et Sass génèrent fondamentalement un seul
 fichier. Par exemple, `style.scss` donnera un fichier `style.css`. Même s'il y a
-des includes c'est géré par le pré-processeur. La toute fin de la fonction
+des includes c'est géré par le préprocesseur. La toute fin de la fonction
 `render` s'occupe de ces types de fichiers.
 
 [Les modèles dans Harp](https://harpjs.com/docs/development/layout), à l’opposé,
 sont imbriqués les uns dans les autres de différentes manières qui peuvent aussi
 dépendre de la configuration. Par exemple, le fichier `about.md` peut être rendu
 par le modèle `_layout.jade` (ce qui, pour être précis, est défini par
-l’utilisation de `!= yield` à l’intérieur du modèle ). Toutefois, `_layout.jade`
+l’utilisation de `!= yield` à l’intérieur du modèle). Toutefois, `_layout.jade`
 pourrait également lui-même faire appel à plusieurs autres modèles en son sein
 grâce au support des fichiers
 [partiels](https://harpjs.com/docs/development/partial) dans Harp.
@@ -469,23 +469,23 @@ grâce au support des fichiers
 Les fichiers partiels sont une façon de découper un modèle en plusieurs
 fichiers. Ils sont particulièrement utiles pour réutiliser du code. Par exemple,
 j'aurais pu mettre l’entête du site dans un fichier partiel. Les fichiers
-partiels sont importants pour rendre la gestion des modèles plus maintenable
-mais ils ajoutent aussi un bon degrés de complexité dans la compilation des
-modèles. Cette complexité est gérer à l’intérieur de la fonction `partial` du
+partiels sont importants pour rendre la gestion des modèles plus maintenable,
+mais ils ajoutent aussi un bon degré de complexité dans la compilation des
+modèles. Cette complexité est gérée à l’intérieur de la fonction `partial` du
 [traitement des modèles](https://github.com/sintaxi/terraform/blob/master/lib/template/index.js).
 
 Enfin, nous pourrions écraser le modèle par défaut en définissant un modèle
 spécifique ou pas de modèle du tout pour un fichier particulier à l’intérieur du
-fichier de configuration `_data.json`. Tous ces scénarios sont gérés( et même
+fichier de configuration `_data.json`. Tous ces scénarios sont gérés (et même
 numérotés) dans la logique de la fonction `render`.
 
 ## C’est pas si compliqué, non ?
 
 Pour rendre tout cela digeste, j'ai fait l’impasse sur pas mal de détails. À la
 base, chaque générateur de site statique que j'ai utilisé (et j'en ai utilisé
-[un paquet](https://github.com/remotesynth/Static-Site-Samples))fonctionne de
+[un paquet](https://github.com/remotesynth/Static-Site-Samples)) fonctionne de
 manière similaire : un ensemble de règles, de conventions et de configuration
-qui est traité à travers des compilateurs de langages supportés variés. C’est
+qui sont traitées à travers des compilateurs de langages variés. C’est
 peut-être pour ça qu'il y a un
 [nombre ridicule](https://staticsitegenerators.net/) de générateurs de site
 statique dans la nature.
@@ -495,17 +495,17 @@ Ceci étant dit, je ne me lancerais pas dans le développement du mien!
 ## Mon rapport et mon livre
 
 Si vous voulez apprendre comment faire des sites à l’aide d’un générateur de
-site statique, J’ai écrit un rapport et co-écrit un livre pour O'Reilly qui
+site statique, J’ai écrit un rapport et coécrit un livre pour O'Reilly qui
 pourrait vous intéresser. Mon rapport, simplement intitulé
 [Les générateurs de site statique ](http://www.oreilly.com/web-platform/free/static-site-generators.csp)
 est gratuit et essaie d’aborder l’historique, le paysage actuel et les
 fondamentaux des générateurs de site statique.
 
 {{< figure
-src="https://cdn.css-tricks.com/wp-content/uploads/2017/02/books-1.jpg" >}}
+src="https://cdn.css-tricks.com/wp-content/uploads/2017/02/books-1.jpg" alt="" >}}
 
-Le livre que j'ai co-écrit avec
+Le livre que j'ai coécrit avec
 [Raymond Camden](https://twitter.com/raymondcamden) s'appelle
 [Travailler avec les sites statiques](http://shop.oreilly.com/product/0636920051879.do)
-et est disponible en pré-publication, mais devrait bientôt être disponible en
+et est disponible en prépublication, mais devrait bientôt être disponible en
 version papier.

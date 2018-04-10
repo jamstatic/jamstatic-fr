@@ -96,7 +96,7 @@ exemple, Martyn a utilisé le plugin
 temps chez Algolia.
 
 Dans un premier temps, on va déclarer le plugin dans Jekyll, puis après avoir
-crée un compte sur le site d’Algolia ainsi qu'un premier projet, on va récupérer
+créé un compte sur le site d’Algolia ainsi qu'un premier projet, on va récupérer
 une clef d’API et un nom d’index de recherche qu'on va reporter dans les
 paramètres de configuration du plugin. On est sur du _Copier-Coller driven
 development_.
