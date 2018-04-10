@@ -628,9 +628,8 @@ Si tout est correctement configuré, l’utilisateur devrait recevoir un mail d�
 qu'un nouveau commentaire est posté sur le billet ou la page auxquels il s'est
 abonné.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1024/v1523365018/staticman-email-notification.png"
-alt="Staticman reply email notification"
-caption="Exemple d’un mail de notification "Nouvelle réponse" de Staticman." >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1024/v1523365018/staticman-email-notification.png" alt="Staticman reply email notification"
+caption="Exemple d’un mail de notification \"Nouvelle réponse\" de Staticman." >}}
 
 Voilà, vous avez mis en place un système de commentaires basé sur des fichiers
 statiques dans Jekyll et qui gère les commentaires imbriqués et les
