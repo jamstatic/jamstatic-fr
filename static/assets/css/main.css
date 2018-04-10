@@ -356,6 +356,7 @@ body { display: flex; flex-direction: column; min-height: 100vh; -webkit-font-sm
 .notice.update { background-color: #7fb842; color: white; border-color: #5c8530; }
 .notice h4 { font-size: 1em; margin-top: 0; margin-bottom: 0.75em; }
 .notice p a { color: #1a5891; }
+.notice p:last-child { margin-bottom: 0; }
 .notice code { background-color: #bdd6ec; }
 
 figure { display: block; margin: 1.44em 0; }

@@ -300,6 +300,9 @@ body {
     a {
       color: #1a5891;
     }
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   code {

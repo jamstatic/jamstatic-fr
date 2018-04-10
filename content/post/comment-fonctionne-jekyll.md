@@ -197,7 +197,7 @@ works.
 Jekyll also offers powerful support for code snippets:
 
     def print_hi(name)
-      puts \"Hi, \#{name}\"
+      puts "Hi, #{name}"
     end
     print_hi('Tom')
     #=> prints 'Hi, Tom' to STDOUT.
@@ -229,7 +229,8 @@ Jekyll also offers powerful support for code snippets:
   <span class=\"nb\">puts</span> <span class=\"s2\">\"Hi, </span><span class=\"si\">\#{</span><span class=\"nb\">name</span><span class=\"si\">}</span><span class=\"s2\">\"</span>
 <span class=\"k\">end</span>
 <span class=\"n\">print_hi</span><span class=\"p\">(</span><span class=\"s1\">'Tom'</span><span class=\"p\">)</span>
-<span class=\"c1\">#=> prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<span class=\"c1\">
+ #=> prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most
 out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub
@@ -862,18 +863,8 @@ Mercenary.program(:jekyll) do |p|
 Voilà, maintenant vous en savez un peu plus sur les mécanismes internes de
 Jekyll !
 
-[^1]:
+[^1]: Lorsque Jekyll omet un fichier, il se peut qu'il lise le fichier comme une donnée à laquelle vous pouvez accéder à l’aide de variables Liquid dans d’autres fichiers de modèles Liquid.
 
-  Lorsque Jekyll omet un fichier, il se peut qu'il lise le fichier comme une
-  donnée à laquelle vous pouvez accéder à l’aide de variables Liquid dans
-  d’autres fichiers de modèles Liquid.
+[^2]: Il se peut très bien dans ce cas que vous ayez omis les entêtes YAML Front Matter.
 
-[^2]:
-
-  Il se peut très bien dans ce cas que vous ayez omis les entêtes YAML Front
-  Matter.
-
-[^3]:
-
-  Pour savoir où se trouve l’exécutable de Jekyll, lancez la commande
-  `bundle show jekyll`.
+[^3]: Pour savoir où se trouve l’exécutable de Jekyll, lancez la commande `bundle show jekyll`.
