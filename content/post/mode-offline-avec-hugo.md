@@ -7,18 +7,21 @@ source:
   url: https://gohugohq.com/howto/go-offline-with-service-worker/
   lang: en
 images:
-  - assets/images/service-worker.png
+  - https://res.cloudinary.com/jamstatic/image/upload/v1523346493/service-worker.png
 categories:
   - hugo
 ---
 
-{{% intro %}} La majorité des articles publiés jusqu'ici se référaient à Jekyll,
+{{% intro %}}
+
+La majorité des articles publiés jusqu'ici se référaient à Jekyll,
 cette fois place à [Hugo](http://gohugo.io/). Hugo est un générateur de site
 statique populaire très performant et beaucoup plus performant pour vos
 visiteurs si vous lui adjoignez les services d’un Service Worker pour gérer le
 mode déconnecté de votre site web. Notez que les explications fournies ici sont
-valables et facilement adaptables pour tout autre générateur statique. {{%
-/intro %}}
+valables et facilement adaptables pour tout autre générateur statique.
+
+{{% /intro %}}
 
 Après le _mobile first_, place maintenant au _offline first_ et
 [_aux progressive web apps (PWA)_](https://frank.taillandier.me/2016/06/28/que-sont-les-progressive-web-apps/)
@@ -40,11 +43,11 @@ en savoir plus sur le sujet, merci de consulter les liens suivants&nbsp;:
   publié sur MDN Mozilla Developer Network
 * **[Service Worker Revolution](https://ponyfoo.com/articles/serviceworker-revolution)**
   publié chez Ponyfoo
-* **[Tout ce que vous devez savoir pour créer vos premières application hors-ligne](https://github.com/pazguille/offline-first)**
+* **[Tout ce que vous devez savoir pour créer vos premières applications hors-ligne](https://github.com/pazguille/offline-first)**
   sur Github
 
-Maintenant que vous avez lu tout ça - ou du moins que vous avez compris de quoi
-il en retourne - voici ce que nous allons faire&nbsp;:
+Maintenant que vous avez lu tout ça — ou du moins que vous avez compris de quoi
+il en retourne — voici ce que nous allons faire&nbsp;:
 
 * **Installer un Service Worker** à partir d’un exemple dans Hugo.
 * **Afficher une page hors-connexion personnalisée** en cas de panne de réseau
@@ -58,8 +61,8 @@ il en retourne - voici ce que nous allons faire&nbsp;:
 
 ### Créer une page `hors-connexion`
 
-Assurez vous de créer une page hors-connexion personnalisée pour afficher à vos
-visiteurs quand ils déconnectés du réseau.
+Assurez-vous de créer une page hors-connexion personnalisée pour afficher à vos
+visiteurs quand ils sont déconnectés du réseau.
 
 Par exemple vous pouvez créer les fichiers suivants&nbsp;:
 
@@ -192,10 +195,10 @@ se trouver à la racine comme ceci&nbsp;:
 ```
 
 Vous pouvez recopier ce fichier à la main ou utiliser la commande suivante si
-vous travaillez dans un environnement GNU Linux ou MacOS&nbsp;:
+vous travaillez dans un environnement GNU Linux ou macOS&nbsp;:
 
 ```sh
-# à partir du dossier raçine de Hugo
+# à partir du dossier racine d’Hugo
 cd static
 wget https://raw.githubusercontent.com/wildhaber/offline-first-sw/master/manifest.js
 ```
@@ -269,7 +272,7 @@ comme ceci&nbsp;:
 ```
 
 Là encore soit vous recopiez le fichier à la main, soit vous utilisez la
-commande suivante dans un environnement GNU Linux ou MacOS&nbsp;:
+commande suivante dans un environnement GNU Linux ou macOS&nbsp;:
 
 ```sh
 # à partir du dossier racine d’Hugo
@@ -293,17 +296,17 @@ const BASE_CACHE_FILES = [
 const OFFLINE_CACHE_FILES = [
   '/style.css',
   '/script.js',
-  '/offline/index.html’,
+  '/offline/index.html',
 ];
 
 const NOT_FOUND_CACHE_FILES = [
   '/style.css',
   '/script.js',
-  '/404.html’,
+  '/404.html',
 ];
 
-const OFFLINE_PAGE = '/offline/index.html’;
-const NOT_FOUND_PAGE = '/404.html’;
+const OFFLINE_PAGE = '/offline/index.html';
+const NOT_FOUND_PAGE = '/404.html';
 
 const CACHE_VERSIONS = {
   assets: 'assets-v' + CACHE_VERSION,
@@ -465,7 +468,7 @@ function cleanupLegacyCache() {
 
 
 self.addEventListener(
-  'install’, event => {
+  'install', event => {
     event.waitUntil(installServiceWorker());
   }
 );
@@ -636,7 +639,7 @@ défaut
 const OFFLINE_CACHE_FILES = [
     '/style.css',
     '/script.js',
-    '/offline/index.html’,
+    '/offline/index.html',
 ];
 ```
 
@@ -649,7 +652,7 @@ Listez dans ce tableau les fichiers nécessaires pour l’affichage de votre pag
 const NOT_FOUND_CACHE_FILES = [
     '/style.css',
     '/script.js',
-    '/404.html’,
+    '/404.html',
 ];
 ```
 
@@ -659,7 +662,7 @@ d’erreur 404.
 #### Page hors-connexion
 
 ```js
-const OFFLINE_PAGE = '/offline/index.html’;
+const OFFLINE_PAGE = '/offline/index.html';
 ```
 
 C’est la page qui sera affichée quand le visiteur sera déconnecté du réseau ou
@@ -668,7 +671,7 @@ que la page n'est pas déjà en cache.
 #### Page d’erreur
 
 ```js
-const NOT_FOUND_PAGE = '/404.html’;
+const NOT_FOUND_PAGE = '/404.html';
 ```
 
 Le chemin de la page qui sera affichée en cas d’erreur de type 4xx.
@@ -708,8 +711,8 @@ jour du cache par le Service Worker.
 const CACHE_BLACKLIST = [
     (str) => {
         // str = URL de la ressource
-        // Appliquer cette régle lorsque vous ne voulez pas mettre des fichiers externes en cache
-        return !str.startsWith('https://votresiteweb.tld’);
+        // Appliquez cette règle lorsque vous ne voulez pas mettre des fichiers externes en cache
+        return !str.startsWith('https://votresiteweb.tld');
     },
 ];
 ```
@@ -718,7 +721,7 @@ Ajustez ces paramètres au contexte de votre site ou de votre application.
 
 ### Enregistrement du Service Worker
 
-Ajoutez le script suivant avant la fermeture de la balise `<body>` ou placez le
+Ajoutez le script suivant avant la fermeture de la balise `<body>` ou placez-le
 dans votre fichier JavaScript généré&nbsp;:
 
 ```html
@@ -744,16 +747,16 @@ Ce code JS va enregistrer, installer et activer votre Service Worker.
 Vous en avez à présent terminé avec toutes les étapes nécessaires. Vous disposez
 maintenant d’un site Hugo ultra-rapide.&nbsp;:)
 
-### déboguer votre Service Worker
+### Déboguer votre Service Worker
 
 Pour déboguer un Service Worker avec Google Chrome, il vous suffit d’ouvrir la
 console et d’aller dans l’onglet `Application`. C’est là que vous trouverez
 votre Service Worker et vos caches.
 
 Vous en apprendrez davantage sur le
-[déboggage de Service Workers](https://developers.google.com/web/fundamentals/getting-started/codelabs/debugging-service-workers/)
+[débogage de Service Workers](https://developers.google.com/web/fundamentals/getting-started/codelabs/debugging-service-workers/)
 sur le site pour les développeurs de Google.
 
 Si votre navigateur préféré est Firefox vous en saurez plus sur
-[le déboggage des Service Workers et Push à l’aide des outils de développement pour Firefox](https://hacks.mozilla.org/2016/03/debugging-service-workers-and-push-with-firefox-devtools/)
+[le débogage des Service Workers et Push à l’aide des outils de développement pour Firefox](https://hacks.mozilla.org/2016/03/debugging-service-workers-and-push-with-firefox-devtools/)
 sur hacks.mozilla.org.

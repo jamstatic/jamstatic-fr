@@ -226,7 +226,7 @@ chose pour le processus de développement et le versionnement des fichiers aveec
 Git.
 
 Jekyll doit donc être installé sur votre machine à l’aide de Ruby. Si vous êtes
-sous MacOS High Sierra livré avec Ruby 2.3 vous ne devriez avoir qu'à taper une
+sous macOS High Sierra livré avec Ruby 2.3 vous ne devriez avoir qu'à taper une
 ligne de commande :
 
 ```sh
