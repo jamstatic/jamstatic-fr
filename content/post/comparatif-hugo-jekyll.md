@@ -31,7 +31,7 @@ Créé par Tom Preston-Werner, le fondateur de GitHub, Jekyll est à l’origine
 
 Commencé en 2008, Jekyll est présenté comme un "générateur de site statique simple, prêt-à-bloguer".
 
-C’est le GSS (générateur de site statique) le plus populaire à l’heure actuelle avec plus de 33&npsp;000 étoiles sur GitHub ce qui est largement dû à son intégration dans [GitHub Pages](https://pages.github.com/).
+C’est le GSS (générateur de site statique) le plus populaire à l’heure actuelle avec plus de 33&nbsp;000 étoiles sur GitHub ce qui est largement dû à son intégration dans [GitHub Pages](https://pages.github.com/).
 
 La valeur ajoutée de Jekyll c'est qu'il vous permet de prendre le HTML statique de n'importe quel site web et de le transformer rapidement en site statique fonctionnel grâce à [Liquid](https://shopify.github.io/liquid/), un langage simple utilisé pour définir les gabarits de page.
 
