@@ -198,16 +198,14 @@ blockquote { border-left: 0.5rem solid #00c7b7; padding-left: 15.552px; font-siz
 blockquote > :last-child { margin-bottom: 0; }
 
 /** Code formatting */
-pre, code { font-family: 'Roboto Mono',monospace; font-size: 0.8333333333em; border-radius: 3px; background-color: #eef; }
+:not(pre) > code { background-color: #eef; border-radius: 3px; display: inline-block; padding: 1px 5px; }
 
 pre { margin: 31.104px 0; }
 
-code { padding: 1px 5px; }
+code { font-family: 'Roboto Mono',monospace; font-size: 0.8333333333em; }
 
 pre { padding: 15.552px; overflow-x: auto; }
 pre > code { border: 0; padding-right: 0; padding-left: 0; }
-
-:not(pre) > code { background-color: #eef; }
 
 /** Wrapper */
 .wrapper { margin-right: auto; margin-left: auto; max-width: calc(66.247rem - (31.104px / 2)); padding-right: 31.104px; padding-left: 31.104px; }

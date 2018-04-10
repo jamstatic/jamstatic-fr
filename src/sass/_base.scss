@@ -146,12 +146,12 @@ blockquote {
 /**
  * Code formatting
  */
-pre,
-code {
-  font-family: 'Roboto Mono',monospace;
-  font-size: $small;
-  border-radius: 3px;
+
+:not(pre)>code  {
   background-color: #eef;
+  border-radius: 3px;
+  display:inline-block;
+  padding: 1px 5px;
 }
 
 pre {
@@ -159,7 +159,8 @@ pre {
 }
 
 code {
-  padding: 1px 5px;
+  font-family: 'Roboto Mono',monospace;
+  font-size: $small;
 }
 
 pre {
@@ -173,9 +174,6 @@ pre {
   }
 }
 
-:not(pre)>code {
-  background-color: #eef;
-}
 /**
  * Wrapper
  */
