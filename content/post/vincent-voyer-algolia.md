@@ -3,7 +3,7 @@ title: Entretien avec Vincent Voyer, fullstack engineer chez Algolia
 description: Présentation d’Algolia, un service de recherche personnalisé pour votre site web.
 date: 2017-07-05 12:34:00 +02:00
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/v1523347081/algolia-smashing.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347081/algolia-smashing.png
 categories:
   - algolia
 ---
@@ -21,7 +21,7 @@ API et des bibliothèques qui vont faciliter l’intégration d’une recherche 
 qualité.
 
 Avec une [formule community gratuite](https://www.algolia.com/pricing) qui
-autorise 10&nbsp;000 enregistrements et 100&nbsp;000 opérations par mois, c'est
+autorise 10 000 enregistrements et 100 000 opérations par mois, c'est
 une solution intéressante à tester pour des sites statiques à trafic modeste. En
 proposant une personnalisation et une expérience utilisateur poussée, on peut
 dire qu'Algolia est ce qui se fait de mieux en la matière.
@@ -35,7 +35,7 @@ des développeurs web.
 
 ### Bonjour Vincent, on va peut-être commencer par te présenter ?
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/v1523346898/vincent-voyer.jpg"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346898/vincent-voyer.jpg"
 caption="Vincent Voyer, développeur JS chez Algolia" >}}
 
 **Vincent Voyer** : Donc moi je suis Vincent Voyer, sur Twitter j'étais zeroload
@@ -67,7 +67,7 @@ Algolia. Ils me disent qu'ils recrutent. Je me dis je pourrais faire un petit
 test avec Algolia pour faire un moteur de recherche de paquets npm.
 
 Du coup j'ai fait ça, en fin d’année 2014, un petit test de recherche de paquets
-npm : j'ai pris 300&nbsp;000 paquets npm, j’ai créé un index de recherche
+npm : j'ai pris 300 000 paquets npm, j’ai créé un index de recherche
 Algolia avec. J'ai commencé à faire les premières requêtes, ça prenait 4
 millisecondes.
 
@@ -86,7 +86,7 @@ me plaisait pas en tant que développeur JavaScript…
 [Algolia](https://www.algolia.com/doc/guides/getting-started/what-is-algolia/)
 c'est un moteur de recherche en Saas (Software as a Service), en gros c'est une
 API qui permet de créer un index de recherche pour son propre site web. Par
-exemple si vous avez un site web e-commerce avec 100&nbsp;000 produits. Pour
+exemple si vous avez un site web e-commerce avec 100 000 produits. Pour
 faire votre moteur de recherche : soit vous le faites vous-même, ou vous prenez
 ElasticSearch, etc. Du coup, vous devez gérer l’infrastructure, etc. Soit vous
 optez pour une solution Saas comme Algolia, qui vous permet de mettre tous vos
@@ -318,7 +318,7 @@ de site statique pour Algolia.
 
 ### Dans le monde des sites statiques, on a beaucoup parlé de [la refonte de Smashing Magazine]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}}) dernièrement dont la recherche a été développée avec Algolia, ça marche très bien. Le site est généré avec Hugo, un générateur écrit en Go, or, il n'y a pas de plugin natif Algolia pour Hugo, même si vous fournissez un client pour votre API en Go
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/v1523347081/algolia-smashing.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347081/algolia-smashing.png"
 caption="La recherche de la nouvelle version de Smashing Magazine avec Algolia" >}}
 
 **Vincent Voyer** : Oui, on a des gens spécialisés en Go ici. En fait c'est

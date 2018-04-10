@@ -14,12 +14,14 @@ categories:
 ---
 
 {{% intro %}}
+
 [The Design Portfolio Workflow](https://medium.com/@katfukui/the-design-portfolio-workflow-a94030d0b39e#.uut2a0ulw)
 de @katmeister, s'adresse aux webdesigners curieux de se frotter un peu à la
 ligne de commande et à Jekyll. Nous espérons qu'il vous permettra de faire vos
 premiers pas avec Jekyll, d’apprécier la liberté et la souplesse qu'il procure
 et qui sait de pouvoir ensuite
-[développer des thèmes pour Jekyll](/2016/10/29/creer-un-theme-pour-jekyll/). 😊
+[développer des thèmes pour Jekyll]({{< relref "creer-un-theme-pour-jekyll.md" >}}). 😊
+
 {{% /intro %}}
 
 ## Un guide complet pour coder et déployer un site, tout en ligne de commande.
@@ -89,7 +91,7 @@ Par défaut, le terminal s'ouvre dans votre dossier utilisateur. Vous pouvez voi
 les fichiers et les dossiers du répertoire courant en entrant `ls`. Ça me va
 très bien de créer mon nouveau portfolio à cet endroit, donc je vais taper :
 
-```shell
+```sh
 jekyll new mon-site
 cd mon-site
 jekyll serve
@@ -123,7 +125,7 @@ Pour ce guide, je vais utiliser [Atom](http://atom.io/). Vous remarquerez le
 panneau avec l’arborescence de fichier sur la gauche. Laissez-moi vous la
 détailler :
 
-```shell
+```sh
 mon-site/
 |
 |-- _config.yml    # Configuration de votre site
@@ -148,7 +150,7 @@ icônes, vos vignettes, vos fichiers JavaScript, etc. Ils seront copiés dans le
 site généré tels quels. Organisez-vous comme bon vous semble, voici quelques
 exemples de dossiers :
 
-```shell
+```sh
 assets/        # images du projet
 images/        # fichiers SVG, images diverses
 js/            # fichiers Javascript, les vôtres et ceux des différentes bibliothèques utilisées.
@@ -231,7 +233,7 @@ Si vous ouvrez le fichier `post.html` dans le dossier `_layouts`, nous pouvons
 le voir en action.
 
 {{< figure
-src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523348258/default-layout.png"
+src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523348258/default-layout.png"
 caption="" >}}
 
 En préfixant nos variables avec `page`, Liquid va rechercher dans votre page les
@@ -243,7 +245,7 @@ HTML. Cool, non ?
 Et si nous ajoutons encore quelques variables à nous dans le front matter pour
 épicer un peu nos articles :
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/v1523347068/post-front-matter.png" caption="" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347068/post-front-matter.png" caption="" >}}
 
 Maintenant que nous disposons de toutes ces super variables, comment pouvons
 nous les utiliser ? Modifions notre modèle de mise en page `post.html` en

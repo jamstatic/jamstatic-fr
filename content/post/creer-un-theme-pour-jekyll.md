@@ -4,18 +4,22 @@ description: Jekyll permet de publier des thèmes sous forme de gem, afin de fac
   l’installation et les mises à jour.
 date: 2016-10-29T15:18:59+02:00
 images:
-  - https://jekyllrb.com/img/octojekyll.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346531/octojekyll.png
 categories:
   - jekyll
 ---
 
-{{% intro %}} Depuis la version 3.2, les webdesigners ont la possibilité de
+{{% intro %}}
+
+Depuis la version 3.2, les webdesigners ont la possibilité de
 créer des thèmes pour Jekyll. Le support des thèmes sous forme de gem est encore
 récent mais les premiers thèmes commencent à arriver. Nous allons voir dans cet
 article que l’opération est assez triviale si vous êtes déjà familiarisé avec
 Jekyll et Git. Packager un thème se fait en quelques minutes grâce à
 l’utilisation de `bundler`. Voyons ensemble à quoi ressemble le workflow de
-création de thème pour Jekyll. {{% /intro %}}
+création de thème pour Jekyll.
+
+{{% /intro %}}
 
 ## Pré-requis
 
@@ -28,7 +32,7 @@ les concepteurs de thèmes Shopify, pour accéder à nos données.
 
 Nous ne nous étendrons donc pas pas sur cette partie, qui consiste à préparer
 vos différents modèles de pages, ce sont les conventions par défaut de Jekyll
-qui s'appliquent : les feuilles de styles sont stockées dans le dossier `_sass`,
+qui s'appliquent : les feuilles de styles sont stockées dans le dossier `_sass`,
 les modèles de pages dans le dossier `_layouts`, les composants réutilisables
 dans `_includes`. Enfin tous les assets (CSS, JS, images, fonts) sont regroupés
 dans un dossier `assets` (et non `_assets` pour éviter les conflits avec le
@@ -52,16 +56,16 @@ Vous avez donc un site statique sous Jekyll et vous souhaitez le partager avec
 la communauté sous forme de thème. Il y a deux façons de faire, selon vos
 préférences. L'une d’elle consiste à utiliser la commande `new-theme` pour
 générer une structure de base dans laquelle vous allez pouvoir ajouter vos
-fichiers :
+fichiers :
 
-```shell
+```sh
 bundle exec jekyll new-theme mon-super-theme
 ```
 
 Cette commande va créer un dossier dans le répertoire courant, qui portera le
 même nom que celui que vous avez fourni en argument, étonnant non ?
 
-Ce dossier comprend tous les dossiers évoqués plus haut : `_includes`,
+Ce dossier comprend tous les dossiers évoqués plus haut : `_includes`,
 `_layouts`, `_sass` et `assets` ainsi qu'un fichier `Gemfile` et un fichier
 `mon-super-theme.gempsec` qui contient les informations sur votre thème.
 
@@ -69,9 +73,9 @@ Vous pouvez maintenant recopier les fichiers de votre thème dans cette structur
 d’exemple.
 
 L'autre manière de faire, c'est de partir de votre site fonctionnel et d’adapter
-sa structure de manière à vous retrouver avec quelque chose qui ressemble à ça :
+sa structure de manière à vous retrouver avec quelque chose qui ressemble à ça :
 
-```shell
+```sh
 ├── .gitignore
 ├── Gemfile
 ├── LICENSE.md
@@ -116,7 +120,7 @@ selon).
 
 Si on regarde le contenu du fichier `Gemfile` d’une gem, il est différent de
 ceux que vous avez l’habitude d’utiliser. Il fait simplement référence au
-fichier de spécification de la gem :
+fichier de spécification de la gem :
 
 ```ruby
 source "https://rubygems.org"
@@ -124,12 +128,12 @@ gemspec
 ```
 
 En effet, c'est le fichier `gemspec` qui va contenir toutes les infos sur notre
-thème : le numéro de version, sa description, ses dépendances, etc. Pour savoir
+thème : le numéro de version, sa description, ses dépendances, etc. Pour savoir
 tout ce que peut contenir ce type de fichier, je vous invite à consulter la
 [documentation de référence des spécifications d’une gem](http://guides.rubygems.org/specification-reference/).
 
 Lorsque vous utilisez la commande `new-theme` de Jekyll, par défaut, le fichier
-de spécification de votre gem ressemble à ça :
+de spécification de votre gem ressemble à ça :
 
 ```
 # coding: utf-8
@@ -156,7 +160,7 @@ Outre les méta-données à renseigner, il est intéressant de noter qu'une
 expression régulière basée sur une commande Git liste les fichiers à inclure
 dans la gem, cela implique donc que vos fichiers soient versionnés avec Git. Le
 minimum étant d’avoir initialisé votre dépôt, d’avoir ajouté tous les fichiers
-qui vont bien et d’avoir enregistré le tout :
+qui vont bien et d’avoir enregistré le tout :
 `git init && git add . && git commit -m "Initial commit"`.
 
 On peut voir aussi à la fin du fichier que la version 3.3 ou supérieure de
@@ -209,14 +213,14 @@ et d’y stocker des contenus destinés à présenter aux utilisateurs le rendu 
 votre thème.
 
 En plus des fichiers générés par la commande `new-theme`, nous ajouterons dans
-ce dossier `demo` tout ce qu'il faut pour faire tourner un site sous Jekyll : un
+ce dossier `demo` tout ce qu'il faut pour faire tourner un site sous Jekyll : un
 fichier `_config.yml`, un fichier `Gemfile` ainsi que des pages et des posts
 bien entendu. Vous pouvez également ajouter des exemples de données dans le
 dossier `_data` voire des collections, comme vous le feriez dans n'importe quel
 site.
 
 Le fichier `demo/Gemfile` ressemble à quelques détails près à celui que vous
-utiliseriez pour n'importe quel site :
+utiliseriez pour n'importe quel site :
 
 ```ruby
 source "https://rubygems.org"
@@ -240,7 +244,7 @@ votre gem, pour que bundler aille télécharger la dernière version sur Rubygem
 Nous listons également les plugins utilisés dans notre thème.
 
 Maintenant, pour que Jekyll utilise notre thème, nous allons devoir le lui
-indiquer dans le fichier `demo/_config.yml` en ajoutant la ligne :
+indiquer dans le fichier `demo/_config.yml` en ajoutant la ligne :
 
 ```yaml
 theme: mon-super-theme
@@ -248,7 +252,7 @@ theme: mon-super-theme
 
 Là encore, le nom utilisé doit être le même que celui de votre fichier
 `gemspec`. Nous indiquons également dans ce fichier de configuration que nous
-utilisons les plugins suivants :
+utilisons les plugins suivants :
 
 ```yaml
 gems:
@@ -265,9 +269,9 @@ d’ajouter le répertoire de destination - `_site` par défaut - à votre fichi
 
 Vérifiez le rendu sur différents navigateurs et appareils, aidez vous
 d’[html-proofer](https://github.com/gjtorikian/html-proofer) si vous souhaitez
-vous assurer que tous les liens internes fonctionnent :
+vous assurer que tous les liens internes fonctionnent :
 
-```shell
+```sh
 bundle exec htmlproofer ./demo/_site --disable-external
 ```
 
@@ -288,9 +292,9 @@ publication. Cette étape est déjà
 nous nous contenterons simplement ici de rappeler qu'elle se fait en deux temps.
 
 La première commande va créer la gem à proprement parlée à partir du fichier de
-spécification :
+spécification :
 
-```shell
+```sh
 gem build mon-super-theme.gemspec
   Successfully built RubyGem
   Name: mon-super-theme
@@ -301,25 +305,25 @@ gem build mon-super-theme.gemspec
 Comme il est inutile de versionner la gem générée (mais cela ne vous dispense
 pas d’utiliser les tags git pour vous rappeler du moment où vous l’avez
 générée), pensez donc à ajouter la ligne suivante dans votre fichier
-`.gitignore` :
+`.gitignore` :
 
 ```
 *.gem
 ```
 
 Vous pouvez en profiter pour vérifier que l’installation de votre gem se déroule
-sans encombres :
+sans encombres :
 
-```shell
+```sh
 gem install mon-super-theme-0.0.1.gem
 Successfully installed mon-super-theme-0.0.1
 1 gem installed
 ```
 
 Si tout est OK, il ne vous reste maintenant plus qu'à publier votre thème sur
-[Rubygems](https://rubygems.org/) :
+[Rubygems](https://rubygems.org/) :
 
-```shell
+```sh
 gem push mon-super-theme-0.0.1.gem
 Pushing gem to https://rubygems.org…
 ```
@@ -329,10 +333,10 @@ encore de site officiel qui répertorie tous les thèmes installables via des ge
 pour Jekyll, c'est donc à vous de communiquer sur la disponibilité de votre
 thème, par exemple sur
 [le forum de Jekyll](https://talk.jekyllrb.com/t/gem-based-themes/3089/), sur
-Twitter avec le hashtag `#jekyllrb` ou en commentaire de ce billet :).
+Twitter avec le hashtag `#jekyllrb` ou en commentaire de ce billet 😄.
 
 Si vous cherchez des références, vous pouvez toujours prendre exemple sur des
-structures de thèmes accessibles sur Github, notamment :
+structures de thèmes accessibles sur Github, notamment :
 
 * [Minima](https://github.com/jekyll/minima), le thème par défaut de Jekyll,
   idéal pour se familiariser avec la structure que nous venons de voir,

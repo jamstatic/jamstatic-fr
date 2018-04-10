@@ -5,7 +5,7 @@ date: 2017-12-13T13:10:36+01:00
 categories:
   - hugo
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346937/cart.jpg
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346937/cart.jpg
 source:
   author: "Chris Marshall"
   title: "Scalable Static Ecommerce with Hugo"
@@ -18,7 +18,7 @@ aliases:
 > Les générateurs de site statique sont-ils une solution viable pour les sites
 > de vente en ligne qui encaissent de fortes charges de trafic ?
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346937/cart.jpg"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346937/cart.jpg"
 alt="" >}}
 
 Les générateurs de site statique (GSS) attirent l’attention depuis quelques
@@ -169,7 +169,7 @@ Afficher les informations d’un produit se fait très simplement :
 Ajouter la logique dans les blocs inclus dynamiquement demande un peu plus
 d’effort, mais même un piètre développeur comme moi peut y arriver sans peine :
 
-```go
+```go-html-template
 {{ $f1path := (print "shoefeatures/" $.Params.feature1 ".html") }}
 {{ partial $f1path}}
 {{ $f2path := (print "shoefeatures/" $.Params.feature2 ".html") }}
@@ -290,22 +290,24 @@ fichiers pour l’inventaire. Ces fichiers peuvent être générés et exportés
 logiciel ERP. J'ai créé un fichier d’inventaire très simple au format JSON qui
 contient les niveaux de stock des différentes références produit :
 
-```
+```json
 {
  "stock": {
-  "9000-1": {
-   "allocation": 3
-  },
-  "9000-2": {
-   "allocation": 9
-  },
-  "9000-3": {
-   "allocation": 3
-  },
-  "9000-4": {
-   "allocation": 1
-  },
-  …
+    "9000-1": {
+     "allocation": 3
+    },
+    "9000-2": {
+     "allocation": 9
+    },
+    "9000-3": {
+     "allocation": 3
+    },
+    "9000-4": {
+     "allocation": 1
+    },
+    …
+  }
+}
 ```
 
 J'ai 6000 enregistrements en tout, puisqu'il y a six tailles de disponibles pour
@@ -316,7 +318,7 @@ données sont censés être stockés dans le répertoire `data`).
 Dans le gabarit de la page produit, je peux accéder à la valeur de la variable
 `allocation` de cette manière :
 
-```go
+```go-html-template
 <ul>
     {{ range .Params.variants }}
         <li>{{ .sku }}, {{ (index $.Site.Data.inventory.gb.stock .sku).allocation  }}</li>
@@ -333,7 +335,7 @@ Nous voilà donc avec 6000 données additionnelles à prendre en compte et à
 afficher dans les gabarits de page. Cela devrait pas mal augmenter le temps de
 génération non ? C’est effectivement le cas :
 
-```
+```sh
 Built site for language fr:
 0 draft content
 0 future content
@@ -402,7 +404,7 @@ génération avec Hugo comme prévu, en identifiant les fichiers modifiés et en
 mettant à jour que ceux-ci. L'opération a pris une vingtaine de secondes en
 tout.
 
-```
+```sh
 Built site for language fr:
 0 draft content
 0 future content

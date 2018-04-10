@@ -160,7 +160,7 @@ depuis la version 3.2.0 de Jekyll.
 
 Si le champ caché `options[parent]` que j'ai ajouté au formulaire fonctionne
 correctement, je devrais obtenir des fichiers de données de commentaires
-similaires à ceux-ci :
+similaires à ceux-ci :
 
 #### Exemple de commentaire parent
 
@@ -186,7 +186,7 @@ Comme vous pouvez le voir ci-dessus, le commentaire "enfant" a une donnée
 Sachant cela, j'ai tenté d’utiliser `where_exp:"item","item._parent == nil"`
 pour créer un tableau ne contenant que les commentaires "parents".
 
-Malheureusement, le code suivant n'a pas marché :
+Malheureusement, le code suivant n'a pas marché :
 
 ```liquid
 {% assign comments = site.data.comments[page.slug] | where_exp:"item","item._parent == nil" %}
@@ -201,7 +201,7 @@ Malheureusement, le code suivant n'a pas marché :
 {% endfor %}
 ```
 
-À la place, j'ai eu tout un tas de commentaires vides avec le balisage suivant :
+À la place, j'ai eu tout un tas de commentaires vides avec le balisage suivant :
 
 ```html
 <article id="comment-1" class="js-comment comment">
@@ -297,11 +297,11 @@ chacun des noms des propriétés.
 ```
 
 {{< figure
-src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523364804/staticman-parent-comments-only.png"
+src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523364804/staticman-parent-comments-only.png"
 alt="Seulement des commentaires parents"
 caption="Ça marche, nous avons des commentaires parents.">}}
 
-#### Note : `sort` et les filtres `where` ne font pas bon ménage
+#### Note : `sort` et les filtres `where` ne font pas bon ménage
 
 Je suis tombé sur des comportements étranges et des erreurs dus à l’utilisation
 du filtre de tri `sort` avec les filtres de recherche `where` et `where_exp`.
@@ -309,13 +309,13 @@ J'en suis arrivé à la conclusion que ce n'était pas nécessaire, car les él�
 étaient déjà classés par ordre alphabétique en fonction de leurs noms de fichier
 et j'ai donc supprimé les filtres.
 
-J'utilise le format suivant : `filename: \"comment-{@timestamp}\"`. Tout dépend
+J'utilise le format suivant : `filename: \"comment-{@timestamp}\"`. Tout dépend
 donc de comment vous nommez vos fichiers de commentaires.
 
 #### Afficher les commentaires imbriqués
 
 Voici ce que je cherchais à accomplir… avant que le mal de tête ne commence
-:anguished: :gun:
+😧 🔫
 
 * Déclarer une boucle et, à chaque itération, créer un nouveau tableau nommé
   `replies` ne contenant que les réponses aux commentaires.
@@ -351,7 +351,7 @@ l’intérieur d’elle-même --- pour faire fonction de boucle "enfant" ou `rep
 ```
 
 Malheureusement le filtre `where_exp` s'est révélé problématique une fois de
-plus, obligeant Jekyll à générer l’erreur suivante :
+plus, obligeant Jekyll à générer l’erreur suivante :
 `Liquid Exception: Liquid error (line 47): Nesting too deep in /_layouts/page.html`.
 
 Après avoir brièvement songé un moment au film **Inception**, j'ai appliqué un
@@ -540,7 +540,7 @@ pour m'en tenir à ça.
 ```
 
 {{< figure
-src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523364852/staticman-nested-comments.png"
+src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523364852/staticman-nested-comments.png"
 alt="Commentaires imbriqués"
 caption="Commentaires imbriqués sur un seul niveau de profondeur." >}}
 
@@ -558,7 +558,7 @@ J'ai juste eu à modifier quelques noms de variables dans le script
 mon formulaire.
 
 {{< figure
-src="https://res.cloudinary.com/jamstatic/image/upload/v1523364901/comment-reply-animation.gif"
+src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523364901/comment-reply-animation.gif"
 alt="Les réponses aux commentaires en action"
 caption= "Appuyer sur le **bouton répondre** déplace le formulaire du commentaire dans la vue et remplit le champ `<input type=\"hidden\" id=\"comment-parent\" name=\"options[parent]\" value=\"\">` avec la bonne `value` du _parent_. Alors qu'appuyer sur **Annuler réponse** remet le formulaire dans son état d’origine." >}}
 
@@ -573,7 +573,7 @@ Pour s'assurer que les liens dans les mails de notifications sont sûrs et ne
 proviennent que de domaines de confiance, définissez `allowedOrigins` en
 fonction.
 
-**Exemple :**
+**Exemple :**
 
 ```yaml
 allowedOrigins: ["mademistakes.com"]
@@ -586,14 +586,14 @@ l’opération échouera.
 
 {{% notice tip %}}
 
-#### ProTip : Utilisez votre propre compte Mailgun
+#### ProTip : Utilisez votre propre compte Mailgun
 
 L'instance publique de Static man utilise un compte
-[**Mailgun**](http://www.mailgun.com/) limité à 10&nbsp;000 emails par mois. Je
+[**Mailgun**](http://www.mailgun.com/) limité à 10 000 emails par mois. Je
 vous encourage à créer un compte et à ajouter votre propre
 [API et domaine Mailgun](https://staticman.net/docs/configuration#notifications.enabled)
 dans le fichier `staticman.yml`. Assurez-vous de bien chiffrer les deux en
-utilisant le chemin suivant :
+utilisant le chemin suivant :
 `https://api.staticman.net/v2/encrypt/{TEXTE À CHIFFRER}`.
 
 {{% /notice %}}

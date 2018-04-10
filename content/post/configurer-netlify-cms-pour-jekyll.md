@@ -74,7 +74,7 @@ Maintenant que l’authentification est configurée nous pouvons ajouter un doss
 `admin` à la racine de notre dépôt qui contiendra deux fichiers : `index.html`
 et `config.yml`.
 
-Le contenu du fichier `index.html` est le suivant :
+Le contenu du fichier `index.html` est le suivant :
 
 {{< gist DirtyF efa029c00cccf7c45300d5f10b0afd7c "index.html" >}}
 
@@ -83,7 +83,7 @@ CSS distants, le fait d’utiliser `@latest` vous permet de bénéficier
 automatiquement de la dernière version, il n'y aura donc aucune mise à jour à
 faire 😃.
 
-Notre fichier de configuration ressemble à ça :
+Notre fichier de configuration ressemble à ça :
 
 {{< gist DirtyF efa029c00cccf7c45300d5f10b0afd7c "config.yml" >}}
 
@@ -92,7 +92,7 @@ figure), ici l’option `editorial_workflow` est activée mais vous pouvez
 commenter la ligne si vous n'en avez pas l’utilité.
 
 {{< figure
-src="/assets/images/2017/05/netlify-cms/editorial-workflow-netlify-cms.png"
+src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346696/editorial-workflow-netlify-cms.png"
 caption="Aperçu du workflow de publication de Netlify CMS" >}}
 
 Vous pouvez préciser le dossier dans lequel vous sauvegardez vos images, ici
@@ -149,7 +149,7 @@ et ajoutez autant de collaborateurs que vous le souhaitez.
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346691/access-netlify.png"
 caption="Configuration de l’accès au site Netlify" >}}
 
-## Et voilà !
+## Et voilà !
 
 Félicitations, vous venez d’ajouter une interface d’administration pour la
 gestion de vos contenus gérés à l’aide d’un générateur de site statique. Vos
@@ -159,7 +159,7 @@ automatisé ! Vous bénéficiez d’un workflow de publication de type Kanban si
 le désirez et Netlify va jusqu'à générer une
 [URL unique de prévisualisation](https://www.youtube.com/watch?v=s_4UL9oAcVE)
 accessible depuis GitHub pour chaque pull-request créée. Elle est pas belle la
-vie ?
+vie ?
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346656/pull-request-netlify-cms.png"
 caption="Lors de la sauvegarde d’un nouvel article, une pull request est créée sur GitHub avec un lien vers une URL de prévisualisation" >}}

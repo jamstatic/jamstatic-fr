@@ -10,12 +10,16 @@ source:
   url: https://regisphilibert.com/blog/2017/04/hugo-scratch-explained-variable/
 ---
 
-{{% intro %}}Si vous avez aimé l’article de
+{{% intro %}}
+
+Si vous avez aimé l’article de
 [Régis Philibert](https://regisphilibert.com/) à propos de [la gestion du
 contexte]({{< relref "hugo-le-point-sur-le-contexte.md" >}}) dans les fichiers
 de gabarits de page pour Hugo, vous devriez tout autant apprécier cette
 explication par l’exemple du surchargement de variables à l’aide de la fonction
-`.Scratch`. Ça vous démange ? Voyons tout cela en détail. {{% /intro %}}
+`.Scratch`. Ça vous démange ? Voyons tout cela en détail.
+
+{{% /intro %}}
 
 Manipuler des variables dans Hugo peut s'avérer compliqué si vous ne connaissez
 que des langages de programmation classiques.
@@ -34,7 +38,7 @@ $salutations = $ciel == "sombre" ? "Bonjour : Bonsoir";
 
 Avec Go Template, on serait donc tenté d’écrire:
 
-```go
+```go-html-template
 {{ $salutations := "Bonjour" }}
 {{ if eq $ciel "sombre" }}
     {{ $salutations = "Bonsoir" }}
@@ -73,7 +77,7 @@ simplement une valeur par la suite.
 Pour reprendre notre exemple précédent en PHP, nous pouvons écrire quelque chose
 comme :
 
-```go
+```go-html-template
 {{ .Scratch.Set "salutations" "Bonjour" }}
 {{ if eq $ciel "sombre" }}
     {{ .Scratch.Set "salutations" "Bonsoir" }}
@@ -87,7 +91,7 @@ comme :
 Cette méthode s'occupe d’ajouter ou de pousser des valeurs multiples dans une
 variable ou une clef.
 
-```go
+```go-html-template
 // Pour les chaînes de caractères
 {{ .Scratch.Add "salutations" "Bonjour" }}
 {{ .Scratch.Add "salutations" "Bonsoir" }}
@@ -99,7 +103,7 @@ variable ou une clef.
 Utilisée avec `slice`, elle permet d’ajouter une ou plusieurs valeurs à un
 tableau.
 
-```
+```go-html-template
 {{ .Scratch.Add "salutations" (slice "Bonjour") }}
 {{ .Scratch.Add "salutations" (slice "Bonsoir") }}
 {{ .Scratch.Add "salutations" (slice "Aloha" "Buenos dias") }}
@@ -109,7 +113,7 @@ tableau.
 
 Maintenant récupérons tout ça.
 
-```go
+```go-html-template
 // Avec la fonction range
 {{ range .Scratch.Get "salutations" }}
 <ol>
@@ -140,7 +144,7 @@ Si vous ne connaissez pas [dict](https://gohugo.io/functions/dict/#readout) je
 vous explique tout ça
 [dans cet article](https://regisphilibert.com/blog/2017/04/hugo-go-template-translator-explained-understanding/#associative-arrays)
 
-```go
+```go-html-template
 {{ .Scratch.Add "salutations" (dict "english" "Hello" "french" "Bonjour") }}
 
 {{ .Scratch.SetInMap "salutations" "english" "Howdy 🤠" }}
@@ -185,7 +189,7 @@ Comme faire pour créer cette liste, la modifier si je suis sur la page d’accu
 et la stocker dans mon objet `.Page` pour pouvoir la réutiliser par la suite ?
 Pour bien faire, nous allons stocker nos classes dans un tableau.
 
-```go
+```go-html-template
 // Avant la balise body, je peux stocker mon unique et première classe universelle.
 {{ .Scratch.Add "classes" (slice "rp-body") }}
 
@@ -205,7 +209,7 @@ Pour bien faire, nous allons stocker nos classes dans un tableau.
 Nous pourrions faire bien plus de vérifications et de contorsions, mais en fin
 de compte, nous n'avons plus qu'à écrire dans notre fichier de gabarit ce joli :
 
-```go
+```go-html-template
 <body class='{{ delimit (.Scratch.Get "classes") " " }}'>
 ```
 
@@ -228,7 +232,7 @@ généralement passé en tant que contexte ([le fameux point]({{< relref
 `partial`.Déplaçons le bout de code qui stocke nos classes dans un fichier
 partiel pour gagner en lisibilité :
 
-```go
+```go-html-template
 // partials/scratching/body_classes.html
 {{ .Scratch.Add "classes" (slice "rp-body") }}
 [… ici le code vu précédemment  …]
@@ -236,7 +240,7 @@ partiel pour gagner en lisibilité :
 
 Dans mon fichier de gabarit, je peux maintenant écrire :
 
-```
+```go-html-template
 {{ partial "scratching/body_classes.html" . }}
 <body class='{{ delimit (.Scratch.Get "classes") " " }}'>
 […]
@@ -254,20 +258,22 @@ pouvez pas lui passer le contexte en paramètre comme on peut le faire avec la
 fonction `partial`, le contexte que vous manipulez est celui de la boucle, c'est
 bien ce que vous souhaitez.
 
-```go
-    {{ .Scratch.Set "section_color" }}
-    {{ range where .Data.Pages}}
-        <h2>{{ .Title }}</h2>
-        <div class="Child Child--{{ $.Scratch.Get section_color}}">
-        […]
-        <div>
-    {{ end }}
-    // Affichera le contenu de section_color.
- // Alors que…
- {{ range where .Data.Pages }}
-        {{ partial "enfant.html" . }}
-    {{ end }}
-    // Le fichier partiel enfant.html ne saura pas récupérer le contenu de la fonction .Scratch de la page, même si nous lui passons le contexte en paramètre…
+```go-html-template
+{{ .Scratch.Set "section_color" }}
+{{ range where .Data.Pages}}
+   <h2>{{ .Title }}</h2>
+     <div class="Child Child--{{ $.Scratch.Get section_color}}">
+     […]
+     <div>
+{{ end }}
+// Affichera le contenu de section_color.
+
+// Alors que…
+{{ range where .Data.Pages }}
+      {{ partial "enfant.html" . }}
+{{ end }}
+
+// Le fichier partiel enfant.html ne saura pas récupérer le contenu de la fonction .Scratch de la page, même si nous lui passons le contexte en paramètre…
 ```
 
 C’est parce que le contexte que nous passons en paramètre de la fonction
@@ -281,37 +287,37 @@ Eh bien, vous pouvez toujours stocker ce qui est retourné par la fonction
 `.Scratch` de la page dans une variable, pour la passer ensuite en paramètre de
 votre fichier partiel :
 
-```go
- {{ $indexScratch := .Scratch }}
-    {{ range where .Data.Pages }}
-        {{ partial "child.html" $indexScratch }}
-    {{ end }}
+```go-html-template
+{{ $indexScratch := .Scratch }}
+  {{ range where .Data.Pages }}
+      {{ partial "child.html" $indexScratch }}
+  {{ end }}
 ```
 
 Dans le fichier partiel on écrira alors :
 
-```go
-    <div class="Child Child--{{ .Get "section_color" }}">
-    […]
-    <div>
+```go-html-template
+<div class="Child Child--{{ .Get "section_color" }}">
+[…]
+<div>
 ```
 
 Si vous avez également besoin de l’ensemble du contexte de la page que vous êtes
 en train de parcourir dans la boucle, utilisez alors la fonction `dict` :
 
-```go
-  {{ $indexScratch := .Scratch }}
-    {{ range where .Data.Pages }}
-        {{ partial "child.html" (dict "indexScratch" $indexScratch "page" . }}
-    {{ end }}
+```go-html-template
+{{ $indexScratch := .Scratch }}
+  {{ range where .Data.Pages }}
+      {{ partial "child.html" (dict "indexScratch" $indexScratch "page" . }}
+  {{ end }}
 ```
 
 Dans le fichier partiel vous pourrez alors écrire :
 
-```
-    <div class="Child Child--{{ .indexScratch.Get section_color}}">
-        {{ .page.Content }}
-    <div>
+```go-html-template
+<div class="Child Child--{{ .indexScratch.Get section_color}}">
+    {{ .page.Content }}
+<div>
 ```
 
 ## `.Scratch` après Go 1.11
@@ -320,7 +326,7 @@ Le jour où l’équipe chargée de développer le langage Go publiera cette ré
 nous pourrons surcharger naturellement les variables dans nos fichiers de
 gabarits :
 
-```go
+```go-html-template
 // Enfin !
 {{ $salutations := "Bonjour" }}
 {{ if eq $ciel "sombre" }}
@@ -335,7 +341,7 @@ sac de nœuds à gérer.
 
 ### Sans `.Scratch` après Go v1.11
 
-```
+```go-html-template
 {{ $humeur := "Joyeux" }}
 {{ if $pluie }}
     {{ $humeur = "Grincheux" }}
@@ -345,7 +351,7 @@ sac de nœuds à gérer.
 
 ### Avec `.Scratch` (actuellement)
 
-```
+```go-html-template
 {{ .Scratch.Set "humeur" "Joyeux" }}
 {{ if $pluie }}
     {{ .Scratch.Set "humeur" "Grincheux" }}

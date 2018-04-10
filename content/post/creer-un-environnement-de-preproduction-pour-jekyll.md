@@ -9,7 +9,7 @@ source:
   title: Creating a staging environment for Jekyll
   url: https://eduardoboucas.com/blog/2017/02/22/jekyll-staging-environment.html
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523360891/configure-netlify.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523360891/configure-netlify.png
 categories:
   - jekyll
 ---
@@ -87,7 +87,7 @@ Cliquez sur `Ajoutez un nouveau projet`, sélectionnez GitHub et sélectionnez l
 dépôt qui dans lequel se trouve votre site.
 
 {{< figure
-src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523360891/configure-netlify.png"
+src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523360891/configure-netlify.png"
 caption="Netlify : Configuration du dépôt" >}}
 
 Dans l’onglet `Paramètres de base`, sélectionnez votre branche de préproduction
@@ -108,7 +108,7 @@ votre DNS. Si vous avez choisi `dev-example-com` comme nom pour votre site, il
 vous faudra un CNAME qui pointe vers `dev-example-com.netlify.com`.
 
 {{< figure
-src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523361029/config-panel-netlify.png"
+src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523361029/config-panel-netlify.png"
 caption="Netlify: le panneau de configuration" >}}
 
 ## Configuration de Jekyll
@@ -121,7 +121,7 @@ fonction de l’environnement dans lequel il tourne.
 Par exemple, nous ne voulons pas que le site de préproduction soit indexé par
 les moteurs de recherche.
 
-```liquid
+```
 {% if jekyll.environment == 'stage' %}
   <meta name="robots" content="noindex">
 {% endif %}
@@ -130,7 +130,7 @@ les moteurs de recherche.
 Vous pouvez même ajouter une bannière en haut de chaque page, pour avertir les
 visiteurs qu'ils consultent la version de développement de votre site.
 
-```liquid
+```
 {% if jekyll.environment == 'stage' %}
   <p class="banner">
     <a href="https://eduardoboucas.com">
@@ -153,4 +153,4 @@ bientôt pour des raisons que je dévoilerai dans un prochain article)
 
 Et voilà, vous avez maintenant un environnement de préproduction simple avec
 intégration continue pour un site statique et tout ça gratuitement. Pas mal,
-non&nbsp;?
+non ?

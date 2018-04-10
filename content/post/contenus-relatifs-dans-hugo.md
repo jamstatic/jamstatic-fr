@@ -1,8 +1,6 @@
 ---
 title: "Entretenir de bonnes relations avec Hugo"
 date: 2018-04-04T22:25:16+02:00
-lastmod:
-draft: false
 description: "Définissez des relations entre vos différents types de contenus dans Hugo de façon performante."
 categories:
   - hugo
@@ -45,7 +43,7 @@ commence à coder.
 
 Copier-coller la biographie de tous mes personnages dans WordPress m'a pris pas
 mal de temps, mais je me retrouve maintenant avec le projet idéal pour tester de
-nouveaux outils : l’API Rest de WordPress, AngularJS et plus récemment Hugo !
+nouveaux outils : l’API Rest de WordPress, AngularJS et plus récemment Hugo !
 
 Avec un millier d’entrées qui partagent des relations saines, c'est le projet
 parfait pour tester une nouvelle manière de gérer nos relations.
@@ -86,7 +84,7 @@ donc mieux déclarer les **quelques** romans dans lesquels ils apparaissent
 plutôt que de lister les **nombreux** personnages pour chaque roman.
 
 Par exemple pour le personnage d’_Eugène Rougon_, qui figure dans 4 romans, cela
-donne :
+donne :
 
 ```yaml
 title: Rougon (Eugène)
@@ -98,8 +96,8 @@ novel:
 ```
 
 Maintenant dans le Front Matter du roman, nous avons juste à ajouter une clef
-d’identifiant. Pour le roman « Son Excellence Eugène Rougon » dans lequel
-apparaît ce bon vieil Eugène nous ajoutons :
+d’identifiant. Pour le roman « Son Excellence Eugène Rougon » dans lequel
+apparaît ce bon vieil Eugène nous ajoutons :
 
 ```yaml
 title: Son excellence Eugène Rougon
@@ -118,17 +116,17 @@ fichier, mais je préfère un identifiant unique, facile à lire et à écrire.
 Sur
 [la page d’Eugène](http://rougon-macquart.com/personnage/2010-03-15-rougon-eugene/)
 nous voulons afficher les romans dans lesquels il apparaît. Nous pouvons
-utiliser `intersect` pour construire notre liste :
+utiliser `intersect` pour construire notre liste :
 
-```go
-{{ $characters := where .Site.Pages.ByTitle ".Params.novel" "intersect" (slice .Params.id)}}
+```go-html-template
+{{ $characters := where .Site.Pages.ByTitle ".Params.novel" "intersect" (slice .Params.id) }}
 ```
 
 Pour afficher la liste des personnages du roman sur la page
 [Son Excellence Eugène Rougon](http://rougon-macquart.com/roman/1876-son-excellence-eugene-rougon/),
 nous utilisons l’opérateur `in` avec `where`:
 
-```go
+```go-html-template
 {{ $novels := where .Site.Pages.ByTitle ".Params.id" "in" .Params.novel }}
 ```
 
@@ -137,8 +135,8 @@ plusieurs comme si nous étions en 2016 !
 
 Car cela a le mérite de fonctionner mais…
 
-1.  `interesect` ? `where "in"` ? N'en faisons-nous pas un peu trop ?
-2.  🐌 Le temps de génération est **7 fois** supérieur à la moyenne : ~7
+1.  `interesect` ? `where "in"` ? N’en faisons-nous pas un peu trop ?
+2.  🐌 Le temps de génération est **7 fois** supérieur à la moyenne : ~7
     secondes pour 1300 pages.
 3.  💩 C’est moche.
 
@@ -151,8 +149,8 @@ Rien… enfin jusqu'à la version 0.27 d’Hugo.
 [Les contenus relatifs natifs](https://gohugo.io/content-management/related/)
 ont fait leur apparition dans Hugo 0.27 en novembre 2017.
 
-Ils ont été conçus pour aider à ajouter facilement une section **« Vous aimerez
-aussi : »** dans les thèmes et les projets tout en gardant un maximum de
+Ils ont été conçus pour aider à ajouter facilement une section **« Vous aimerez
+aussi : »** dans les thèmes et les projets tout en gardant un maximum de
 contrôle sur l’algorithme de pondération. Vous pouvez définir plusieurs facteurs
 ou index en leur affectant leur propre niveau d’importance. Les tags, le mois de
 publication, les auteurs, tout ce qui peut vous aider à construire une liste de
@@ -195,7 +193,7 @@ liste déjà les romans à l’aide d’une clef qui correspond au nom de notre 
 
 Par contre, nos romans utilisent `id` pour s'identifier, il faut changer ça car
 ils doivent également utiliser le même nom d’index. Donc l’entête Front Matter
-de notre roman devient :
+de notre roman devient :
 
 ```yaml
 title: Son Excellence Eugène Rougon
@@ -203,7 +201,7 @@ novel: excellence # 'id’ précédemment
 ```
 
 Bien, nos romans et nos personnages partagent maintenant un `.Page.Param` commun
-qui utilise le nom de notre index nouvellement déclaré : `novel`.
+qui utilise le nom de notre index nouvellement déclaré : `novel`.
 
 #### _Related Content_ dans les gabarits de page
 
@@ -214,7 +212,7 @@ si vous souhaitez en apprendre davantage.
 
 **.Related** _permet de récupérer toutes les pages relatives d’une page donnée
 en fonction des index et du poids déclarés dans le fichier de configuration.
-Elle prend un seul paramètre en argument : la page donnée._
+Elle prend un seul paramètre en argument : la page donnée._
 
 **.RelatedIndices** _permet de récupérer toutes les pages qui comportent un ou
 plusieurs index donnés. Le premier paramètre est la page donnée, les autres
@@ -227,10 +225,10 @@ index comme des tags ou un auteur viennent interférer dans notre relation
 existante.
 
 Dans le gabarit de page de détail d’un roman comme "Son Excellence Eugène
-Rougon", nous pouvons lister tous ses « characters », en anglais dans le texte,
-de la façon suivante :
+Rougon", nous pouvons lister tous ses « characters », en anglais dans le texte,
+de la façon suivante :
 
-```go
+```go-html-template
 {{ $characters := where (.Site.RegularPages.RelatedIndices . "novel" ) "Type" "personnage" }}
 ```
 
@@ -238,9 +236,9 @@ _Le premier paramètre c'est le contexte de notre page, le second c'est notre
 fameux index._
 
 Et pour la page de présentation d’un personnage comme Eugène, pour récupérer
-toutes ses « novels » :
+toutes ses « novels » :
 
-```go
+```go-html-template
 {{ $novels := where (.Site.RegularPages.RelatedIndices . "novel" ) "Type" "roman" }}
 ```
 

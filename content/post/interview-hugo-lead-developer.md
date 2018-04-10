@@ -5,7 +5,7 @@ description: >
   statiques ultra-rapide.
 date: "2017-10-03 13:45:36 +0200"
 images:
-  - /assets/images/hugo/hugo-bjorn-erik-pedersen.jpg
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346509/hugo-bjorn-erik-pedersen.jpg
 categories:
   - hugo
 ---
@@ -14,7 +14,7 @@ categories:
 
 [Hugo](https://gohugo.io) est rapidement devenu l’un des
 gestionnaires de sites statiques les plus populaires comme en attestent ses
-bientôt [20&nbsp;000 étoiles sur GitHub](https://github.com/gohugoio/hugo).
+bientôt [20 000 étoiles sur GitHub](https://github.com/gohugoio/hugo).
 C’est dû en partie à sa vitesse de génération : en effet il ne lui faut qu'une
 petite milliseconde pour générer une page. Oui, cela fait 1000 pages à la
 seconde et c'est plutôt impressionnant je trouve. Mais ce n'est pas la seule
@@ -31,7 +31,7 @@ gentiment accepté de répondre à nos questions.
 
 {{% /intro %}}
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346509/hugo-bjorn-erik-pedersen.jpg"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346509/hugo-bjorn-erik-pedersen.jpg"
 attr="Bjørn Erik Pedersen" attrlink="https://github.com/bep" >}}
 
 ## Bonjour Bjørn Erik, comment t'es-tu retrouvé impliqué dans Hugo ?
@@ -97,7 +97,7 @@ sont dus à une succession de petits changements au fil du temps. Et la vitesse
 compte. Essayez le serveur d’Hugo avec le Livereload et vous verrez par
 vous-même.
 
-## Quels sont les sites les plus visibles qui utilisent Hugo&nbsp;?
+## Quels sont les sites les plus visibles qui utilisent Hugo ?
 
 {{< figure
 src="https://thenewdynamic.imgix.net/showcase/labs-us-gov-hugo.jpg?w=700"

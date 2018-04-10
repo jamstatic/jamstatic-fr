@@ -1,5 +1,5 @@
 ---
-title: "Hugo ou Jekyll ? Six points à prendre en compte"
+title: "Hugo ou Jekyll ? Six points à prendre en compte"
 date: 2018-04-06T20:10:03+02:00
 title: "Hugo ou Jekyll ? Six critères de comparaison"
 description: "Jekyll et Hugo sont les deux générateurs de site statiques les plus populaires. Quel est celui qu'il vous faut ?"
@@ -25,7 +25,7 @@ une performance de feu et une réduction des coûts d’hébergement.
 
 Quand il est question de générer des sites statiques, les deux solutions qui
 dominent actuellement le marché sont Jekyll et Hugo. La vraie question est de
-savoir quel est celui qui est le mieux pour vous&nbsp;?
+savoir quel est celui qui est le mieux pour vous ?
 
 Pour répondre à cette question, nous allons examiner ensemble les
 fonctionnalités, la rapidité et l’extensibilité de chacun d’entre eux, peser les
@@ -49,7 +49,7 @@ Commencé en 2008, Jekyll est présenté comme un "générateur de site statique
 simple, prêt-à-bloguer".
 
 C’est le GSS (générateur de site statique) le plus populaire à l’heure actuelle
-avec plus de 33&nbsp;000 étoiles sur GitHub ce qui est largement dû à son
+avec plus de 33 000 étoiles sur GitHub ce qui est largement dû à son
 intégration dans [GitHub Pages](https://pages.github.com/).
 
 La valeur ajoutée de Jekyll c'est qu'il vous permet de prendre le HTML statique
@@ -188,7 +188,7 @@ une bonne partie des choses qu'on pourrait attendre d’un site web moderne comm
 
 [^core-plugin]: NdT: L'équipe de Jekyll maintient des plugins qui permettent de [générer un sitemap XML](https://github.com/jekyll/jekyll-sitemap), générer [un flux ATOM pour les articles](https://github.com/jekyll/jekyll-feed), les [balises-meta pour le SEO](https://github.com/jekyll/jekyll-seo-tag). La plupart des thèmes comme [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) supportent l’insertion de scripts Google Analytics ou Disqus et la gestion des menus via des fichiers YAML.
 
-Pour cela il faudra utiliser des plugins Jekyll tiers, qui sont de cinq types :
+Pour cela il faudra utiliser des plugins Jekyll tiers, qui sont de cinq types :
 
 * les **générateurs**, qui permettent de compléter et de modifier le processus
   de génération de Jekyll,
@@ -224,7 +224,7 @@ vous ayez une équipe qui fasse une centaine de modifications par semaine sur
 votre site, votre blog ou votre documentation…
 
 Cela représente potentiellement plus de 10 heures de perdues lors de la
-génération chaque année !
+génération chaque année !
 
 ### Jekyll en résumé
 
@@ -265,12 +265,12 @@ pour apprendre à développer un site avec Jekyll et le connecter au CMS Forestr
 
 Hugo est le générateur de site statique créé[^hugo] par Steve Francia, un des
 principaux contributeurs au langage de programmation Go de Google. Hugo est bien
-entendu développé en Go !
+entendu développé en Go !
 
 [^hugo]: Hugo a été depuis principalement développé par [Bjørn Erik Pedersen]({{< relref "interview-hugo-lead-developer.md" >}}).
 
 Apparu en 2013, Hugo est rapidement devenu le deuxième GSS le plus populaire
-derrière Jekyll et compte à ce jour plus de 24&nbsp;000 étoiles sur GitHub.
+derrière Jekyll et compte à ce jour plus de 24 000 étoiles sur GitHub.
 
 Hugo possède un avantage énorme sur tous les autres GSS. Il est **rapide**.
 
@@ -400,7 +400,7 @@ Par exemple avec la fonctionnalité d’exports personnalisés, vous pouvez gén
 en même temps : votre site statique, sa version alternative pour Google AMP,
 ainsi que des fichiers JSON prêts à être consommés par une application mobile.
 
-Parmi les fonctionnalités bien pratiques d’Hugo on peut citer :
+Parmi les fonctionnalités bien pratiques d’Hugo on peut citer :
 
 * La gestion des menus,
 * La génération de Sitemap XML,
@@ -428,7 +428,7 @@ plus vite que Jekyll, la génération de la plupart de ces sites a pris moins
 d’une seconde.
 
 Lors d’un test, @darinpope un utilisateur d’Hugo a réussi à
-[générer 600&nbsp;000 pages en moins de 5 minutes](https://discourse.gohugo.io/t/page-generation-performance-expectations/1335/12)
+[générer 600 000 pages en moins de 5 minutes](https://discourse.gohugo.io/t/page-generation-performance-expectations/1335/12)
 !.
 
 ### Hugo en résumé
@@ -478,8 +478,8 @@ d’exemples de gros projets qui les utilisent comme
 Jekyll, et le nouveau site de [Smashing Magazine](https://smashingmagazine.com/)
 développé avec Hugo.
 
-Maintenant c'est l’heure de faire votre choix ! Voici un petit récapitulatif
-pour vous aider :
+Maintenant c'est l’heure de faire votre choix ! Voici un petit récapitulatif
+pour vous aider :
 
 * **Jekyll** est un excellent choix, si vous êtes familier avec l’écosystème de
   Ruby ou si vous êtes débutant, grâce à son moteur de templating très simple et

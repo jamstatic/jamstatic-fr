@@ -7,7 +7,7 @@ source:
   title: Building Pattern Libraries With Shadow DOM In Markdown
   url: "https://www.smashingmagazine.com/2017/07/pattern-libraries-in-markdown/"
 images:
-  - /assets/images/2017/09/markdown-shadowdom.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346913/markdown-shadowdom.png
 categories:
   - hugo
 ---
@@ -72,14 +72,14 @@ Dans cet article, je vais vous montrer comme inclure facilement des démos de
 code dans des documents Markdown avec l’aide de snippets et de l’encapsulation
 du Shadow DOM.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346913/markdown-shadowdom.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346913/markdown-shadowdom.png"
 caption="Un M, une flèche qui pointe vers le bas et un détective caché dans l’obscurité pour symboliser Markdown et Shadow Dom" >}}
 
 ### CSS et Markdown
 
 On pourra dire ce qu'on veut sur CSS, c'est un outil de composition certainement
 plus consistent et plus sûr qu'un éditeur WYSIWYG ou qu'un traitement de texte.
-Pourquoi ? Parce qu'il n'y a pas de boîte noire renfermant des algorithmes de
+Pourquoi ? Parce qu'il n'y a pas de boîte noire renfermant des algorithmes de
 haut-niveau qui essaient de deviner où les styles doivent _vraiment_
 s'appliquer. Au contraire, c'est beaucoup plus explicite : vous définissez les
 [circonstances dans lesquelles les styles s'appliquent aux éléments](https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/))
@@ -213,7 +213,7 @@ entre des balises de _shortcode_ ouvrantes et fermantes. Ce contenu est
 disponible dans le fichier _shortcode_ en utilisant `{{ .Inner }}`. Imaginons
 donc que je veuille utiliser un _shortcode_ `demo` de la façon suivante :
 
-```hugo
+```go-html-template
 {{</* demo */>}}
   C’est le contenu !
 {{</* /demo */>}}
@@ -244,7 +244,7 @@ Une manière plus simple d’empêcher l’héritage de styles entre composants 
 page est d’utiliser la propriété `all` avec la valeur `initial` sur l’élément
 parent de son choix. Je peux définir cet élément dans le fichier `demo.html` :
 
-```html
+```go-html-template
 <div class="demo">
     {{ .Inner }}
 </div>
@@ -299,7 +299,7 @@ craindre que le sélecteur de l’élément `button` ne s'applique aussi aux él
 `button` de la bibliothèque de composants elle-même ou à d’autres composants
 présents sur la même page.
 
-```html
+```go-html-template
 {{</* demo */>}}
 <button>Mon bouton</button>
 <style>
@@ -316,7 +316,7 @@ L'astuce est d’utiliser la variable `{{ .Inner }}` du modèle de _shortcode_ e
 de l’inclure en tant qu'`innerHTML` d’un nouveau `ShadowRoot`. On pourrait
 l’implémenter de cette façon :
 
-```html
+```go-html-template
 {{ $uniq := .Inner | htmlEscape | base64Encode | truncate 15 "" }}
 <div class="demo" id="demo-{{ $uniq }}"></div>
 <script>
@@ -344,7 +344,7 @@ via `innerHTML` n'est ni parsé ni exécuté. On peut résoudre ce problème en
 important le contenu d’un élément `<template>`. J'ai corrigé mon implémentation
 en conséquence.
 
-```html
+```go-html-template
 {{ $uniq := .Inner | htmlEscape | base64Encode | truncate 15 "" }}
 <div class="demo" id="demo-{{ $uniq }}"></div>
 <template id="template-{{ $uniq }}">
@@ -362,7 +362,7 @@ en conséquence.
 
 Maintenant, je peux inclure la démo d’un bouton interrupteur par exemple:
 
-```html
+```go-html-template
 {{</* demo */>}}
 <button>Mon bouton</button>
 <style>
@@ -478,10 +478,10 @@ que je suis ravi de vous partager pour vous aider à vous lancer.
 Maintenant que notre petite démo de base fonctionne, écrire des démos et les
 insérer dans la documentation est super simple, pour notre plus grand bonheur.
 Cela permet de nous poser des questions comme : "Et si je veux ajouter une
-légende pour identifier la démo ?" C’est parfaitement faisable puisque — comme
+légende pour identifier la démo ?" C’est parfaitement faisable puisque — comme
 nous l’avons déjà vu auparavant — le Markdown permet d’embarquer du code HTML.
 
-```html
+```go-html-template
 <figure role="group" aria-labelledby="legende-bouton">
     {{</* demo */>}}
     <button>Mon bouton</button>
@@ -504,7 +504,7 @@ _shortcode_ — et minimiser par la même occasion les possibles erreurs de sais
 C’est faisable en fournir un paramètre nommé au _shortcode_ — ici simplement
 appelé `legende` :
 
-```html
+```go-html-template
 {{</* demo legende="Un bouton standard" */>}}
     … le contenu de la démo …
 {{</* /demo */>}}
@@ -515,7 +515,7 @@ utilisant `{{ .Get "legende" }}`. Je peux rentre optionnel l’insertion des
 balises `<figure>` et `<figcaption>` en insérant une condition, comme ça je
 n'affiche la légende que si elle est passée en argument du _shortcode_ :
 
-```html
+```go-html-template
 {{ if .Get "legende" }}
     <figcaption>{{ .Get "legende" }}</figcaption>
 {{ end }}
@@ -524,7 +524,7 @@ n'affiche la légende que si elle est passée en argument du _shortcode_ :
 Voici maintenant à quoi ressemble notre modèle `demo.html` (le code n'est pas
 très élégant, mais ça fait le job) :
 
-```html
+```go-html-template
 {{ $uniq := .Inner | htmlEscape | base64Encode | truncate 15 "" }}
 {{ if .Get "legende" }}
 <figure role="group" aria-labelledby="legende-{{ $uniq }}">
@@ -557,7 +557,7 @@ Une dernière remarque : si jamais je veux autoriser la syntaxe Markdown dans la
 légende, je peux la faire passer dans la fonction `markdownify` d’Hugo. De cette
 manière l’auteur peut s'il le souhaite insérer du Markdown (et du HTML).
 
-```go
+```go-html-template
 {{ .Get "legende" | markdownify }}
 ```
 

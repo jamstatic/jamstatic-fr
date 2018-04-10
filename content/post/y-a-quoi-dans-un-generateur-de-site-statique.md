@@ -64,7 +64,7 @@ ingrédients clefs d’un générateur de site statique sont typiquement :
   préprocesseurs CSS ou JavaScript est également fréquemment inclus),
 * Un serveur local pour tester.
 
-C’est tout. Si vous vous dites "Hé… mais je pourrais en développer un&nbsp;!" vous
+C’est tout. Si vous vous dites "Hé… mais je pourrais en développer un !" vous
 avez sûrement raison. Les choses se compliquent quand vous commencez à ajouter
 des fonctionnalités, comme la plupart des générateurs de site statique le font.
 

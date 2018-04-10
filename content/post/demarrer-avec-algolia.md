@@ -12,10 +12,14 @@ source:
   url: "https://dev.to/algolia/getting-started-with-algolia-4lnp"
 ---
 
-{{% intro %}} Algolia fait tout pour faciliter l’ajout d’une recherche
+{{% intro %}}
+
+Algolia fait tout pour faciliter l’ajout d’une recherche
 performante sur votre site. Jessica West le prouve une fois de plus en nous
 décrivant pas-à-pas les étapes nécessaires pour y parvenir, ici en vanilla JS
-avec InstantSearch. {{% /intro %}}
+avec InstantSearch.
+
+{{% /intro %}}
 
 Salut 👋 ! Ça vous est déjà arrivé de développer entièrement un moteur de
 recherche ? Avez-vous déjà redouté que votre Product Manager vous dise "tu sais
@@ -55,7 +59,7 @@ Et récupérez ensuite vos identifiants dans votre
 Une fois que c'est fait, ajoutez-les dans ce que vous utilisez pour stocker vos
 variables d’environnement (un fichier `.env` par exemple) de manière à ce que
 votre application sache comment se connecter à votre application Algolia et à
-son index. Et voilà ! Le plus dur est fait !
+son index. Et voilà ! Le plus dur est fait !
 
 ## Connecter votre source de données
 
@@ -142,7 +146,7 @@ function dataToAlgoliaObject(data_points) {
 ```
 
 _Deuxième étape :_ Maintenant que nous avons créé nos objets, ils sont prêts à
-être envoyés à Algolia !
+être envoyés à Algolia !
 
 Changeons quelques trucs dans notre fonction `indexData`. Nous pouvons chaîner
 notre appel avec un `.then` grâce la structure de notre promesse axios et
@@ -201,7 +205,7 @@ Nous avons des données dans notre index ! Maintenant, nous voulons dire à
 Algolia comment nous voulons que ces données soient utilisées. Nous pouvons
 faire cela dans l’interface d’administration ou avec du code. Je préfère la
 deuxième méthode, voyons ensemble comment faire cela. Nous avons _beaucoup_
-d’options mais tenons nous en pour le moment aux options de base :
+d’options mais tenons nous en pour le moment aux options de base :
 
 * _searchableAttributes_: listez ce que vous voulez pouvoir rechercher dans
   l’objet Algolia que vous avez crée
@@ -274,7 +278,7 @@ $(document).ready(function() {
   // création d’une instance d’instantsearch
   // avec notre identifiant d’application et notre clef d’API
     var search = instantsearch({
-      appId: Cookies.get('app_id’),
+      appId: Cookies.get('app_id'),
       apiKey: Cookies.get('search_api_key'),
       indexName: Cookies.get('index_name'),
       urlSync: true,
@@ -361,4 +365,4 @@ moins de 5 minutes.
 src="https://cdn.glitch.com/45e6d35c-2e10-4020-8ad3-d5f1b9d3aae6%2Fezgif.com-gif-maker.gif?1514128983358"
 caption="" attr="" attrlink="" >}}
 
-😉 J'espère que cette lecture vous a plu et vous aura été utile !
+😉 J'espère que cette lecture vous a plu et vous aura été utile !

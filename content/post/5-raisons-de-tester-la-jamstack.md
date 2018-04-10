@@ -8,7 +8,7 @@ source:
   title: "Go static: 5 reasons to try JAMstack on your next project"
   url: https://builtvisible.com/go-static-try-jamstack/
 images:
-  - /assets/images/2017/03/go_static.jpg
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346582/go_static.jpg
 categories:
   - jamstack
   - headless
@@ -52,7 +52,7 @@ constamment côté serveur pour générer le HTML final affiché par le navigate
 l’utilisateur. Prenons l’exemple (très schématique) d’un site typique qui
 fonctionne sous WordPress.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346597/diagram.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346597/diagram.png"
 caption="Génération de page HTML à l’aide de PHP et d’un serveur MySQL" >}}
 
 Quand l’utilisateur demande à afficher une page, votre serveur fait une requête
@@ -65,15 +65,15 @@ main : séparer les contenus en composants réutilisables et automatiser leur
 assemblage fait sens.
 
 Mais pourquoi donc cette opération de templating a besoin de se passer côté
-serveur ? Avons-nous vraiment besoin de bases de données et de logiciels côté
+serveur ? Avons-nous vraiment besoin de bases de données et de logiciels côté
 serveur (qui nous exposent par la même occasion à des douzaines de failles de
-sécurité) pour créer un simple blog ? Maintenant que les navigateurs sont
+sécurité) pour créer un simple blog ? Maintenant que les navigateurs sont
 devenus des systèmes d’exploitation, capable d’interagir avec un nombre
 incalculable d’APIs et de faire tourner des applications complexes côté client,
 et que le développement front-end est dominé par JavaScript et les
-automatisations à l’aide de `npm`, n'avons-nous pas déjà dépassé ce modèle ?
+automatisations à l’aide de `npm`, n'avons-nous pas déjà dépassé ce modèle ?
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346591/diagram-ssg.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346591/diagram-ssg.png"
 caption="Un site Web statique développé à l’aide d’un processus basé sur la JAMstack" >}}
 
 Les générateurs de site statique comme Jekyll et Hugo permettent de rendre cela
@@ -195,9 +195,9 @@ aussi simple que de pousser un commit sur un dépôt GitHub. L'ensemble de votre
 site Web — le code et le contenu — vit dans un endroit centralisé, protégé par
 un versionnement robuste et peut être configuré pour être déployé en continu.
 
-**Oui mais et les clients dans tout ça ?** Quid des utilisateurs non techniques
+**Oui mais et les clients dans tout ça ?** Quid des utilisateurs non techniques
 ? Les experts de la production de contenu qui sont à l’aise avec des éditeurs
-comme celui de WordPress mais qui ne connaissent pas Markdown et GitHub ?
+comme celui de WordPress mais qui ne connaissent pas Markdown et GitHub ?
 
 Le problème a été identifié il y a maintenant plusieurs années et beaucoup de
 solutions réjouissantes commencent à apparaître. Certaines sont
@@ -255,7 +255,7 @@ générateurs statiques.
 Ces annuaires ne sont pas encore près de devenir des places de marché de thèmes
 prospères en tant que telles, mais en un sens c'est une bonne chose : les thèmes
 bourrés de plugins inutiles et d’outils de construction de pages ne sont pas un
-problème ici !
+problème ici !
 
 Il y a aussi des **fournisseurs d’hébergement** spécialisés dans les sites Web
 statique. [Netlify](https://www.netlify.com/features/) est le plus connu et à
@@ -267,7 +267,7 @@ typiquement sur votre serveur, comme les redirections, les pages d’erreur
 personnalisées, la protection par mot de passe, la proxyfication, etc. (oui ça
 veut dire **fini les htaccess**).
 
-## Est-ce que c'est fait pour moi ?
+## Est-ce que c'est fait pour moi ?
 
 Bien entendu, il y a plein de sites Web pour lesquels le développement avec la
 JAMstack n'est pas approprié. Il y a également des problèmes légitimes et
@@ -283,7 +283,7 @@ développement statique surpassent maintenant les inconvénients. Une utilisatio
 plus répandue de ces outils, de ces plate-formes et de ces services va les
 pousser à s'étoffer.
 
-**Alors est-ce que c'est fait pour vous ?** Si vous êtes vaguement familier avec
+**Alors est-ce que c'est fait pour vous ?** Si vous êtes vaguement familier avec
 le développement Web et que vous n'avez pas encore testé un générateur de site
 statique moderne, c'est le moment idéal pour le faire et de répondre vous-même à
 cette question. Prenez connaissance des ressources ci-dessous, regardez
@@ -306,7 +306,7 @@ leur apparition un peu plus chaque jour.
   [Snipcart](https://snipcart.com/blog/jamstack-clients-static-site-cms)
 * Passez au statique sans perdre votre serveur –
   [Netlify](https://www.netlify.com/blog/2016/03/10/go-static-without-losing-your-server/)
-* C’est quoi un CMS headless ? –
+* C’est quoi un CMS headless ? –
   [CSS-Tricks](https://css-tricks.com/what-is-a-headless-cms/)
 * Gestionnaires de contenus pour sites statiques –
   [headlesscms.org](https://headlesscms.org/)

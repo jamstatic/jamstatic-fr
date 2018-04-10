@@ -15,7 +15,7 @@ categories:
   - jekyll
 ---
 
-{{% intro %}} 
+{{% intro %}}
 
 Si vous êtes designer web, que vous savez écrire des pages HTML,
 les mettre en forme avec CSS, voire les enrichir avec du JavaScript, vous
@@ -26,7 +26,7 @@ demande de respecter quelques conventions et de se familiariser avec la gestion
 des gems Ruby, rien de bien sorcier. Dans cet article,
 [David Darnes](https://darn.es/), développeur du thème
 [Alembic](https://alembic.darn.es), explique comment utiliser une 💎 gem de
-thème pour Jekyll, puis comment développer la vôtre. 
+thème pour Jekyll, puis comment développer la vôtre.
 
 {{% /intro %}}
 
@@ -86,7 +86,7 @@ que vous utilisez pour votre site:
 gem "jekyll" "~> 3.7"
 
 # La gem du thème que vous souhaitez utiliser
-gem "alembic-jekyll-thème", "~> 2.2"
+gem "alembic-jekyll-theme", "~> 2.2"
 
 # Les plugins que vous utilisez
 group :jekyll_plugins do
@@ -111,7 +111,7 @@ theme: alembic-jekyll-thème
 Une fois que vous avez modifié ces deux fichiers, il va falloir utiliser
 [Bundler](http://bundler.io/) pour installer notre nouveau thème et pouvoir
 générer et prévisualiser notre site. Dans votre terminal tapez la commande
-suivante :
+suivante :
 
 ```sh
 bundle
@@ -139,7 +139,7 @@ thèmes pour Jekyll, mais ils recensent également les anciens types de thèmes
 recherchez plutôt
 ['jekyll-theme' sur rubygems.org](https://rubygems.org/search?query=jekyll+theme).
 
-Pour ma part j'en ai développé deux :
+Pour ma part j'en ai développé deux :
 
 * [**Alembic**](https://alembic.darn.es) - un thème prêt à l’emploi, qui peut
   aussi servir de point de départ pour votre projet,
@@ -177,7 +177,7 @@ avec vous ce que mon expérience m'a enseigné.
 
 Voici quelques trucs à garder en tête quand on développe son propre thème,
 surtout que vous souhaitez qu'il soit utilisé par d’autres utilisateurs de
-Jekyll (et de Sitelaf) :
+Jekyll (et de Sitelaf) :
 
 1.  **Testez votre thème :** Vous ne testerez jamais assez. Le meilleur moyen
     est encore de suivre votre propre documentation et de repartir de zéro.
@@ -227,7 +227,7 @@ Git.
 
 Jekyll doit donc être installé sur votre machine à l’aide de Ruby. Si vous êtes
 sous macOS High Sierra livré avec Ruby 2.3 vous ne devriez avoir qu'à taper une
-ligne de commande :
+ligne de commande :
 
 ```sh
 gem install bundler jekyll
@@ -249,7 +249,7 @@ aurez besoin d’un compte sur [RubyGems.org](https://rubygems.org/).
 ## C’est parti
 
 Nous allons commencer par créer une base pour notre thème à l’aide de la
-commande `new-theme` de Jekyll :
+commande `new-theme` de Jekyll :
 
 ```sh
 jekyll new-theme mon-theme
@@ -258,13 +258,13 @@ jekyll new-theme mon-theme
 Cette commande va générer les fichiers nécessaires pour commencer à développer
 notre thème avec le nom que vous aurez choisi, ici je l’ai appelé `mon-theme`.
 
-Nous devons ajouter quelques informations à notre thème avant de continuer : une
+Nous devons ajouter quelques informations à notre thème avant de continuer : une
 courte description et une URL pour donner plus d’informations sur notre thème,
 généralement c'est l’URL du dépôt GitHub du thème — ou celle du site web du
 thème si vous en générez un. Pour cela nous éditons le fichier `.gemspec` qui
-porte le nom de votre thème. Les deux champs à renseigner sont :
+porte le nom de votre thème. Les deux champs à renseigner sont :
 
-```rb
+```ruby
 spec.summary       = "Une brève description de mon thème"
 spec.homepage      = "http://url-de-mon-theme.com"
 ```
@@ -275,10 +275,10 @@ pouvons installer les gems dont dépend notre thème.
 Vous remarquerez que plus bas dans le fichier `.gemspec`, il y a des lignes qui
 commencent par `spec.add_runtime_dependency` et
 `spec.add_development_dependency`. C’est ici que nous allons pouvoir spécifier
-les gems dont notre thème aura besoin pour fonctionner : _runtime_ quand le
+les gems dont notre thème aura besoin pour fonctionner : _runtime_ quand le
 thème est utilisé et comme son nom l’indique _development_ pour le développement
 du thème à proprement parlé. L'installation des dites gems se fait ensuite via
-la commande :
+la commande :
 
 ```sh
 bundle
@@ -286,7 +286,7 @@ bundle
 
 Pour prévisualiser votre thème et vous assurer qu'il fonctionne bien, vous devez
 avoir un fichier `index.html` à la racine de votre répertoire avec quelque chose
-comme :
+comme :
 
 ```md
 ---
@@ -299,7 +299,7 @@ layout: home
 
 Ce fichier va vous permettre de prévisualiser votre thème localement, comme vous
 le feriez avec n'importe quel site Jekyll. Pour lancer la génération et la
-prévisualisation dans votre navigateur, utilisez la commande suivante :
+prévisualisation dans votre navigateur, utilisez la commande suivante :
 
 ```sh
 bundle exec jekyll serve
@@ -313,9 +313,9 @@ automatiquement la page après modifications des fichiers.
 
 {{% /notice %}}
 
-La sortie sur la console devrait ressembler à ça :
+La sortie sur la console devrait ressembler à ça :
 
-```
+```sh
 $ bundle exec jekyll serve --livereload
 Configuration file: none
             Source: /Users/frank/code/jekyll/themes/mon-super-theme
@@ -338,9 +338,9 @@ dans la même configuration que les futurs utilisateurs de notre thème.
 
 ## La structure de fichiers
 
-Pour le moment nous avons donc la structure suivante :
+Pour le moment nous avons donc la structure suivante :
 
-```
+```sh
 ├── _includes
 ├── _layouts
 │   ├── default.html
@@ -361,15 +361,15 @@ Pour le moment nous avons donc la structure suivante :
 ├── README.md
 ```
 
-Voyons à quoi servent les différents dossiers et fichiers présents :
+Voyons à quoi servent les différents dossiers et fichiers présents :
 
 * `_includes` : vide pour le moment, il sert à stocker les fichiers de gabarits
   partiels,
-* `_layouts` : contient pour le moment trois exemples de gabarits :
+* `_layouts` : contient pour le moment trois exemples de gabarits :
   `default.html`, `post.html` and `page.html`,
 * `_sass` : vide pour le moment, destiné à stocker vos fichiers Sass,
 * `assets` : également vide pour le moment, ce dossier contiendra tous les
-  fichiers statiques dont vous aurez besoin pour votre site : CSS, JS, polices
+  fichiers statiques dont vous aurez besoin pour votre site : CSS, JS, polices
   de caractères, images, etc. C’est dans ce dossier que nous placerons le
   fichier de styles principal `styles.scss` qui génèrera un fichier `styles.css`
   auquel nous ferons référence dans notre modèle de page,
@@ -403,7 +403,7 @@ vous affranchir de cette limitation, même chose chez
 
 ## Ajouter des contenus d’exemple
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1028/v1523346121/Sample_20content.png" 
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1028/v1523346121/Sample_20content.png"
 alt="Exemple de contenu du thème Alembic" >}}
 
 Nous venons d’ajouter un fichier `index.html` pour vérifier que la génération
@@ -432,7 +432,7 @@ Le fichier `.gem` va empaqueter tous vos modèles de page, vos styles dans un
 seul fichier. Il faudra ensuite publier ce fichier sur le
 [RubyGems.org](https://rubygems.org).
 
-Pour générer votre gem, il vous suffit d’utiliser cette commande :
+Pour générer votre gem, il vous suffit d’utiliser cette commande :
 
 ```sh
 gem build mon-super-theme.gemspec
@@ -468,7 +468,7 @@ L'installation d’un thème distant demande l’utilisation du plugin
 donc autorisé sur GitHub Page. Pour l’installer il vous faut déclarer le plugin
 dans votre fichier `_config.yml` et utiliser une clé spécifique `remote_theme`
 dont la valeur correspond au nom d’utilisation GitHub suivi du nom du dépôt de
-votre thème. Dans mon cas ça donne :
+votre thème. Dans mon cas ça donne :
 
 ```yaml
 plugins:
@@ -486,7 +486,7 @@ correctement.
 Le plugin jekyll-remote-theme vous permet de pointer vers des numéros de
 releases ou des branches particulières. Générer une release GitHub est un bon
 moyen pour les gens de pouvoir s'en tenir à une version définie de votre thème,
-comme ceci :
+comme ceci :
 
 ```yaml
 remote_theme: daviddarnes/alembic@2.3.1

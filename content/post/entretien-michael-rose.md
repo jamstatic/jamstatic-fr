@@ -5,7 +5,7 @@ author: Frank Taillandier
 description: >
   Michael Rose, webdesigner très actif dans la communauté Jekyll, partage son retour d’expérience sur les générateurs de site statique
 images:
-  - /assets/images/michael-rose.jpg
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347062/michael-rose.jpg
 source:
   lang: en
   url: https://www.thenewdynamic.org/article/interview-michael-rose/
@@ -23,7 +23,7 @@ expérience et son point de vue de designer qui travaille avec des générateurs
 site statique comme Jekyll, Gatsby ou Hugo. Aucun logiciel n'est parfait et il y
 a toujours de la place pour des améliorations selon lui.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523347062/michael-rose.jpg" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347062/michael-rose.jpg" >}}
 
 ## Bonjour Michael, comment te présenter ?
 
@@ -180,7 +180,7 @@ lequel j'évolue ;)
 Il est possible que beaucoup pensent que c'est juste pour faire de petits sites
 perso. Avec tous les services qui arrivent comme [Netlify](https://netlify.com)
 et les lancements de site visibles comme
-[Smashing Magazine avec Hugo](/2017/03/17/smashing-mag-va-dix-fois-plus-vite/),
+[Smashing Magazine avec Hugo]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}}),
 je ne pense pas que ça soit le cas. Donc c'est peut-être qu'il faut juste
 continuer de faire passer le mot que les générateurs de site statique sont un
 ensemble d’outils puissants qui permettent de monter en charge.

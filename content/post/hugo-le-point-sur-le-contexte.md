@@ -69,9 +69,9 @@ Si par exemple dans mon gabarit de page j'ai :
 
 ### With
 
-```go
+```go-html-template
 {{ with .Title }}
-    {{/* Maintenant le point c'est .Title */}}
+    {{/* Maintenant le point c’est .Title */}}
     <h1>{{ . }}</h1>
 {{ end }}
 ```
@@ -86,21 +86,21 @@ Même chose ici, une fois que vous avez commencé à itérer avec `range`, le
 contexte est l’élément actuellement parcouru. Vous perdez le contexte de page au
 profit du contexte de la fonction `range`.
 
-```go
+```go-html-template
 {{ range .Data.Pages }}
     {{/* Ici le point est celui de la page 'en cours'. */}}
     {{ .Permalink }}
 {{ end }}
 ```
 
-```go
+```go-html-template
 {{ range .Resources.Match "gallery/*" }}
     {{/* Ici le point designe une des images. */}}
     {{ .Permalink }}
 // {{ end }}
 ```
 
-```go
+```go-html-template
 {{ range (slice "Hello" "Bonjour" "Gutten Tag") }}
     {{/* Ici le point désigne cette chaîne de caractères. */}}
     {{ . }}
@@ -115,7 +115,7 @@ pouvez toujours récupérer le contexte du plus haut niveau de la page.
 
 #### Un niveau d’imbrication
 
-```go
+```go-html-template
 {{ with .Title }}
     {{/* Le point désigne .Title */}}
     <h1>{{ . }}</h1>
@@ -126,7 +126,7 @@ pouvez toujours récupérer le contexte du plus haut niveau de la page.
 
 #### Trois niveaux d’imbrication
 
-```go
+```go-html-template
 {{/* 1. Le point désigne le plus haut niveau de la page (de liste) */}}
 <h1>{{ .Title }}</h1>
 {{ range .Data.Pages }}
@@ -156,7 +156,7 @@ du point.
 Donc pour des fichiers partiels simples, vous n'aurez besoin que du contexte de
 page. Le **point** de votre page.
 
-```go
+```go-html-template
     {{ partial "page/head" . }}
 ```
 
@@ -164,7 +164,7 @@ Ici la fonction `partial` a pour paramètre votre contexte, à priori celui de
 votre page si vous n'êtes pas dans une boucle `range` ou dans une condition
 `with` ou bien dans un autre fichier partiel.
 
-```go
+```go-html-template
     <h1>
         {{ .Title }}
     </h1>
@@ -175,13 +175,13 @@ Maintenant, imaginons que vous écriviez un fichier partiel pour le rendu de
 votre image fantaisiste encadrée, vous n'avez besoin que de son chemin, qui
 devient donc votre contexte.
 
-```go
+```go-html-template
 {{ partial "img" $path }}
 ```
 
 Dans le fichier `partials/img.html`, on aura donc :
 
-```go
+```go-html-template
 <figure class="Figure Figure--framed">
     <img src="{{ . }}" alt="">
 </figure>
@@ -200,14 +200,14 @@ associatif.\
 Reportez-vous à la [documentation de cette fonction](https://gohugo.io/functions/dict)
 ou à mon propre article [sur le sujet](https://regisphilibert.com/blog/2017/04/hugo-go-template-translator-explained-understanding/#associative-arrays).
 
-```go
+```go-html-template
 {{ partial "img" dict("path" $path "alt" "Nice blue sky") }}
 ```
 
 Le point va contenir cet objet à l’intérieur du fichier partiel, donc nous
 pouvons préfixer nos clefs avec `.`
 
-```go
+```go-html-template
 <figure class="Figure Figure--framed">
     <img src="{{ .path }}" alt="{{ .alt }}">
 </figure>
@@ -229,7 +229,7 @@ Vous pouvez appeler cette clef importante comme vous voulez, beaucoup de gens
 utilisent "Page" pour pouvoir écrire `Page.Title`. Comme ça vous chante, du
 moment que vous êtes consistent dans votre nomenclature.
 
-```go
+```go-html-template
 {{ partial "img" dict("Page" . "path" $path "alt" "Nice blue sky") }}
 ```
 

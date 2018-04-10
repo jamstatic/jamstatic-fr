@@ -3,7 +3,7 @@ title: "Meetup JAMstack Toulouse #1"
 date: 2018-03-17T09:24:53+01:00
 description: "Deux très bonnes présentations de Netlify et Algolia au premier meetup JAMStack français."
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523347003/thefrontisback.jpg
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347003/thefrontisback.jpg
 ---
 
 {{% intro %}}
@@ -18,7 +18,7 @@ ces deux services de qualité.
 
 {{% /intro %}}
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523347003/thefrontisback.jpg"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347003/thefrontisback.jpg"
 caption="The Front is back !" attr="Photo : Nicolas Manaud"
 attrlink="https://twitter.com/nmanaud/status/974957331279695872" >}}
 
@@ -40,7 +40,7 @@ stressantes de projets, où faute de workflow automatisé et prédictible, les
 sueur perlera sur le front de la personne chargée d’appuyer sur le bouton rouge.
 Personne ne souhaite vivre de telles expériences.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346988/phil-meetup-jamstack.jpg"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346988/phil-meetup-jamstack.jpg"
 caption="Phil Hawksworth" attr="Photo : Nicolas Manaud"
 attrlink="https://twitter.com/nmanaud/status/974957331279695872" >}}
 
@@ -64,7 +64,7 @@ fichiers, Netlify propose la même chose mais sous forme visuelle, vous pouvez
 consulter n'importe quelle version du site sur une URL unique basée sur le hash
 du commit.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346982/netlify-prototype.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346982/netlify-prototype.png"
 caption="Les premiers prototypes du site de Netlify sont encore accessibles en ligne"
 >}}
 
@@ -101,7 +101,7 @@ une clef d’API et un nom d’index de recherche qu'on va reporter dans les
 paramètres de configuration du plugin. On est sur du _Copier-Coller driven
 development_.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346978/martyn-meetup-jamstack.jpg"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346978/martyn-meetup-jamstack.jpg"
 caption="Martyn Davies" attr="Photo : Nicolas Manaud"
 attrlink="https://twitter.com/nmanaud/status/974957331279695872" >}}
 

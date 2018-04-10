@@ -678,7 +678,7 @@ défaut les valeurs de ces variables seront vierges, prêtes à être renseigné
 La capture d’écran suivante montre les variables front matter que j'ai définis
 pour l’archétype `etudes-de-cas` :
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346514/archetype-hugo.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346514/archetype-hugo.png"
 caption="Les variables définies pour l’archétype des études de cas. À chaque fois que je demande à Hugo de créer une nouvelle étude de cas pour moi, il va automatiquement ajouter ces variables front matter. Ces variables sont ensuite utilisées par le modèle HTML de la page d’études de cas." >}}
 
 Notez aussi que les autres archétypes que j'ai définis dans le répertoire

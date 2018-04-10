@@ -55,7 +55,7 @@ des fonctionnalités qui rendent WordPress si populaire. Mais cela a énormémen
 des fonctionnalités matures comme l’imbrication de templates ou les contenus
 relatifs, et les nouvelles fonctionnalités continuent d’affluer en permanence.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346880/home-page-templating-example.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346880/home-page-templating-example.png"
 caption="Édition d’un modèle de page pour Hugo" >}}
 
 ## Fondamentaux des templates Hugo
@@ -86,7 +86,7 @@ d’une page, vous écrivez cette ligne dans un modèle:
 
 Dans Hugo c'est :
 
-```go
+```go-html-template
 {{ .Content }}
 ```
 
@@ -113,7 +113,7 @@ Hugo, de son côté, utilise une variable nommée
 [`.Site`](https://gohugo.io/variables/site/#site-variables-list) avec une
 propriété appelée `.Title`. Le même code dans Hugo s'écrit ainsi:
 
-```go
+```go-html-template
 <a href="/">{{ .Site.Title }}</a>
 ```
 
@@ -142,7 +142,7 @@ WordPress utilise une boucle PHP `while`, qu'on retrouve dans beaucoup de
 langages de programmation. Hugo utilise une simple fonction appelée `range` qui
 a le même objectif:
 
-```go
+```go-html-template
 <ul>
     {{ range .Data.Pages }}
         <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
@@ -185,7 +185,7 @@ insérer le contenu d’un fichier dans un autre.
 
 Voilà comment ça marche :
 
-```go
+```go-html-template
 {{ partial "footer.html" . }}
 ```
 
@@ -203,13 +203,13 @@ C’est le bon moment pour vous présenter une des différences majeures entre
 WordPress et Hugo concernant les modèles. Dans WordPress, la localisation des
 éléments est en général cachée, la plupart des choses se trouvent dans une base
 de données
-([comme on peut le voir sur cette image](https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346826/php_scheme.png)).
+([comme on peut le voir sur cette image](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346826/php_scheme.png)).
 
 Alors que les sites statiques sont simplement **des copies de fichiers sur votre
 ordinateur**, ce qui vous permet de visualiser et de manipuler la structure de
 votre site.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346873/layouts.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346873/layouts.png"
 caption="Un exemple typique du dossier `layouts` d’Hugo." >}}
 
 C’est un peu comme les systèmes d’exploitation ordinateur et mobile. Sur les
@@ -235,10 +235,10 @@ WordPress, Hugo est beaucoup moins normatif quant à l’organisation de votre
 site. Alors que WordPress utilise un modèle rigide d’articles et de pages, Hugo
 est façonné à l’aide de "contenu" générique et de répertoires.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346891/pages-wordpress.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346891/pages-wordpress.png"
 caption="Articles et pages dans WordPress" >}}
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346845/hugo-content-folder.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346845/hugo-content-folder.png"
 caption="Répertoires de contenu dans Hugo" >}}
 
 L'hypothèse de base que fait Hugo à propos de votre contenu est que vous l’avez
@@ -277,7 +277,7 @@ Pour voir à quoi cela ressemble en pratique, jetons un œil à la structure du
 [site de support de Balsamiq](https://support.balsamiq.com/) qui possède, entre
 autres, des sections appelées “plugins”, “tutorials”, “sales”.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346838/sbc-content.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346838/sbc-content.png"
 attr="Le dossier content du site de support de Balsamiq"
 attrlink="https://github.com/balsamiq/support.balsamiq.com/tree/master/content" >}}
 
@@ -285,7 +285,7 @@ Dans le dossier `section`, il y a des fichiers de modèles pour quelques-unes
 d’entre elles, nommées en fonction du dossier de contenu (par exemple
 "plugins.html").
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346854/sbc-section.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346854/sbc-section.png"
 attrlink="https://github.com/balsamiq/support.balsamiq.com/tree/master/themes/support-balsamiq-com/layouts/section"
 attr="Le dossier section du site de support de Balsamiq" >}}
 
@@ -312,7 +312,7 @@ passant des paramètres comme ceci:
 Cela fonctionne presque de la même manière dans Hugo, la syntaxe diffère un peu.
 On écrira le même shortcode ainsi dans Hugo :
 
-```go
+```go-html-template
 {{ <gallery id="123" size="medium"> }}
 ```
 
@@ -335,7 +335,7 @@ Sur [le site de documentation de Balsamiq](https://docs.balsamiq.com/), nous
 utilisons par exemple les shortcodes pour les messages d’alerte et
 d’information, comme on peut le voir ici :
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/v1523216717/alerts.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523216717/alerts.png"
 attrlink="https://docs.balsamiq.com"
 attr="Les messages d’information et d’alerte dans la documentation de Balsamiq" >}}
 

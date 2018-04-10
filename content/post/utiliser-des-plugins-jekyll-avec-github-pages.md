@@ -4,7 +4,7 @@ description: Automatiser la publication du site généré sur GitHub Pages pour 
   utiliser les plugins Jekyll sans restriction.
 date: 2016-09-18T13:51:13+02:00
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346531/octojekyll.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346531/octojekyll.png
 categories:
   - jekyll
 ---
@@ -67,7 +67,7 @@ $ git push -u origin source
 Maintenant que vous avez créé la branche `source`, vous pouvez en faire la
 branche par _défaut_ dans GitHub :
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346483/default-branch-github.png" alt="Paramètrage des branches dans GitHub" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346483/default-branch-github.png" alt="Paramètrage des branches dans GitHub" >}}
 
 ### Publication automatique
 
@@ -105,7 +105,7 @@ Jekyll][jekyll-rakefile] pour une implémentation alternation de la tâche
 
 [jekyll-rakefile]: https://github.com/jekyll/jekyll/blob/master/rake/site.rake#L55
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346531/octojekyll.png" alt="OctoJekyll" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346531/octojekyll.png" alt="OctoJekyll" >}}
 
 Enfin, sachez qu'il existe d’autres solutions d’hébergement comme
 [GitLab Pages](https://pages.gitlab.io/), [Netlify](https://www.netlify.com),

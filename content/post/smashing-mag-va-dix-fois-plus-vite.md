@@ -118,7 +118,7 @@ caption="Mathias Biilmann : Smashing avait besoin d’un générateur, d’un CM
 
 Cela signifie que Smashing avait beaucoup de besoins. Il fallait créer un outil
 de build pour le magazine, un gestionnaire de contenus pour les milliers
-d’articles, un moteur de commentaires (avec plus de 200&nbsp;000 commentaires
+d’articles, un moteur de commentaires (avec plus de 200 000 commentaires
 !), une plate-forme de e-commerce pour les ventes, un service d’abonnement et un
 compte utilisateur.
 

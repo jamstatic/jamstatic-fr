@@ -7,7 +7,7 @@ source:
   url: https://gohugohq.com/howto/go-offline-with-service-worker/
   lang: en
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/v1523346493/service-worker.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346493/service-worker.png
 categories:
   - hugo
 ---
@@ -35,7 +35,7 @@ de le rendre ultra-performant.
 ## De quoi parle-t-on ?
 
 Si vous n'avez pas encore entendu parler des Service Workers et que vous voulez
-en savoir plus sur le sujet, merci de consulter les liens suivants&nbsp;:
+en savoir plus sur le sujet, merci de consulter les liens suivants :
 
 * **[Votre première Progressive Web App](https://developers.google.com/web/fundamentals/getting-started/codelabs/your-first-pwapp/)**
   publié sur Google Developers
@@ -47,7 +47,7 @@ en savoir plus sur le sujet, merci de consulter les liens suivants&nbsp;:
   sur Github
 
 Maintenant que vous avez lu tout ça — ou du moins que vous avez compris de quoi
-il en retourne — voici ce que nous allons faire&nbsp;:
+il en retourne — voici ce que nous allons faire :
 
 * **Installer un Service Worker** à partir d’un exemple dans Hugo.
 * **Afficher une page hors-connexion personnalisée** en cas de panne de réseau
@@ -64,7 +64,7 @@ il en retourne — voici ce que nous allons faire&nbsp;:
 Assurez-vous de créer une page hors-connexion personnalisée pour afficher à vos
 visiteurs quand ils sont déconnectés du réseau.
 
-Par exemple vous pouvez créer les fichiers suivants&nbsp;:
+Par exemple vous pouvez créer les fichiers suivants :
 
 ```sh
 ├── content
@@ -73,7 +73,7 @@ Par exemple vous pouvez créer les fichiers suivants&nbsp;:
 │   ├── offline/single.html
 ```
 
-Contenu du fichier **content/offline.md**&nbsp;:
+Contenu du fichier **content/offline.md** :
 
 ```md
 +++
@@ -86,7 +86,7 @@ type = "offline"
 Essayez de vous connecter à Internet pour naviguer sur le site.
 ```
 
-Le fichier **layouts/offline/single.html**&nbsp;:
+Le fichier **layouts/offline/single.html** :
 
 ```liquid
 <html>
@@ -113,7 +113,7 @@ vous référer à
 [la documentation d’Hugo pour créer une page 404](https://gohugo.io/templates/404/)
 ou vous contenter de suivre les quelques instructions de base ci-dessous.
 
-Pour cela, vous aurez besoin des fichiers suivants&nbsp;:
+Pour cela, vous aurez besoin des fichiers suivants :
 
 ```sh
 ├──content
@@ -122,7 +122,7 @@ Pour cela, vous aurez besoin des fichiers suivants&nbsp;:
 │   ├── 404.html
 ```
 
-Le fichier **content/404.md**&nbsp;:
+Le fichier **content/404.md** :
 
 ```md
 +++
@@ -134,7 +134,7 @@ title = "Zut… Page non trouvée."
 Vous devriez aller voir ailleurs.
 ```
 
-Le fichier **layouts/404.html**&nbsp;:
+Le fichier **layouts/404.html** :
 
 ```html
 <html>
@@ -153,7 +153,7 @@ Le fichier **layouts/404.html**&nbsp;:
 Les icônes des applications sont juste des favicons qu'on affiche sur un écran
 de démarrage au chargement du site depuis l’écran d’accueil.
 
-Les tailles suivantes sont recommandées&nbsp;:
+Les tailles suivantes sont recommandées :
 
 * 128px × 128px
 * 144px × 144px
@@ -165,7 +165,7 @@ Pour les générer rapidement, vous pouvez utiliser un service comme
 [favicomatic.com](http://www.favicomatic.com/).
 
 Ensuite placez les fichiers PNG dans votre dossier `/static` folder. Par
-exemple&nbsp;:
+exemple :
 
 ```sh
 ├── static
@@ -187,7 +187,7 @@ Nous allons utiliser pour cela un
 existant tiré du dépôt `offline-first-sw`.
 
 Placez ce fichier également dans le dossier `static/`, il doit obligatoirement
-se trouver à la racine comme ceci&nbsp;:
+se trouver à la racine comme ceci :
 
 ```sh
 ├── static
@@ -195,7 +195,7 @@ se trouver à la racine comme ceci&nbsp;:
 ```
 
 Vous pouvez recopier ce fichier à la main ou utiliser la commande suivante si
-vous travaillez dans un environnement GNU Linux ou macOS&nbsp;:
+vous travaillez dans un environnement GNU Linux ou macOS :
 
 ```sh
 # à partir du dossier racine d’Hugo
@@ -204,7 +204,7 @@ wget https://raw.githubusercontent.com/wildhaber/offline-first-sw/master/manifes
 ```
 
 Vous devriez maintenant avoir un fichier qui ressemble à cela dans votre dossier
-`static`&nbsp;:
+`static` :
 
 ```json
 {
@@ -250,7 +250,7 @@ Ajustez les valeurs à votre guise.
 ### Ajoutez un lien vers `manifest.json` dans votre modèle
 
 Pour que le navigateur soit en mesure de détecter votre `manifest.json`, ajoutez
-le bout du code suivant dans le `<head>` de vos modèles&nbsp;:
+le bout du code suivant dans le `<head>` de vos modèles :
 
 ```html
 <link rel="manifest" href="/manifest.json">
@@ -264,7 +264,7 @@ fourni dans le dépôt
 [`offline-first-sw`](https://github.com/wildhaber/offline-first-sw).
 
 Le fichier `sw.js` doit également se trouver à la racine du dossier `static`
-comme ceci&nbsp;:
+comme ceci :
 
 ```sh
 ├── static
@@ -272,7 +272,7 @@ comme ceci&nbsp;:
 ```
 
 Là encore soit vous recopiez le fichier à la main, soit vous utilisez la
-commande suivante dans un environnement GNU Linux ou macOS&nbsp;:
+commande suivante dans un environnement GNU Linux ou macOS :
 
 ```sh
 # à partir du dossier racine d’Hugo
@@ -280,7 +280,7 @@ cd static
 wget https://raw.githubusercontent.com/wildhaber/offline-first-sw/master/sw.js
 ```
 
-Vous devez vous retrouver avec le fichier suivant à la racine&nbsp;:
+Vous devez vous retrouver avec le fichier suivant à la racine :
 
 ```js
 const CACHE_VERSION = 1;
@@ -616,7 +616,7 @@ self.addEventListener(
 ```
 
 Maintenant vous pouvez définir le comportement souhaité pour votre Service
-Worker&nbsp;:
+Worker :
 
 #### Fichiers à mettre en cache par défaut
 
@@ -722,7 +722,7 @@ Ajustez ces paramètres au contexte de votre site ou de votre application.
 ### Enregistrement du Service Worker
 
 Ajoutez le script suivant avant la fermeture de la balise `<body>` ou placez-le
-dans votre fichier JavaScript généré&nbsp;:
+dans votre fichier JavaScript généré :
 
 ```html
 <script>
@@ -745,7 +745,7 @@ dans votre fichier JavaScript généré&nbsp;:
 Ce code JS va enregistrer, installer et activer votre Service Worker.
 
 Vous en avez à présent terminé avec toutes les étapes nécessaires. Vous disposez
-maintenant d’un site Hugo ultra-rapide.&nbsp;:)
+maintenant d’un site Hugo ultra-rapide. :)
 
 ### Déboguer votre Service Worker
 

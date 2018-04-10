@@ -14,13 +14,16 @@ categories:
   - hugo
 ---
 
-{{% intro %}} C’est fou tout ce qu'on peut faire avec un générateur de site, des
-APis et du JavaScript. Et rien de mieux qu'un exemple parlant de mise en place
-d’une boutique de e-commerce pour illustrer les possibilités qui vous sont
-offertes. Dans cet exemple nous utiliserons le service
-[Snipcart](https://snipcart.com/) pour la gestion du panier d’achat et
-[Hugo](https://gohugo.io/) pour générer le site à la vitesse de l’éclair. {{%
-/intro %}}
+{{% intro %}}
+
+C’est fou tout ce qu'on peut faire avec un générateur de site, des APis et du
+JavaScript. Et rien de mieux qu'un exemple parlant de mise en place d’une
+boutique de e-commerce pour illustrer les possibilités qui vous sont offertes.
+Dans cet exemple nous utiliserons le service [Snipcart](https://snipcart.com/)
+pour la gestion du panier d’achat et [Hugo](https://gohugo.io/) pour générer le
+site à la vitesse de l’éclair.
+
+{{% /intro %}}
 
 > Pressé ? Passez directement au [tutoriel](#tutoriel) ou
 > [à la démo et au code dispo sur GitHub](#demo-repo).
@@ -206,10 +209,13 @@ Nous allons aussi créer un modèle principal dans lequel nous bouclerons sur no
 produits pour en afficher une courte description et où nous ajouterons un bouton
 Snipcart "Ajouter au panier".
 
-{{% notice info %}}**Remarque**: les produits Snipcart sont définis directement
-dans le code HTML à l’aide de simples attributs data.
-[Plus de détails ici](https://docs.snipcart.com/configuration/product-definition).{{%
-/notice %}}
+{{% notice info %}}
+
+**Remarque**: les produits Snipcart sont définis directement dans le code HTML 
+à l’aide de simples attributs data. 
+[Plus de détails ici](https://docs.snipcart.com/configuration/product-definition).
+
+{{% /notice %}}
 
 Dans le répertoire `layouts` nous allons ajouter un nouveau modèle
 **index.html**. Ce fichier sera celui utilisé par défaut et sera le premier à
@@ -217,7 +223,7 @@ Dans le répertoire `layouts` nous allons ajouter un nouveau modèle
 
 #### layouts/index.html
 
-```go
+```go-html-template
 {{ partial "header.html" . }}
 
 {{ $products := getJSON "/data/products.json" }}
@@ -451,7 +457,7 @@ le déploiement sur Netlify.
 
 C’est toujours agréable de voir à quel point un service de panier d’achat en
 HTML/JS comme Snipcart s'intègre parfaitement avec des générateurs statiques
-modernes. :smile:
+modernes. 😀
 
 Il est maintenant temps d’arrêter de lire ce blog et d’aller fabriquer quelque
 chose de génial.

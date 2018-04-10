@@ -3,7 +3,7 @@ title: "Un site statique avec des composants à l’aide de Nunjucks"
 date: 2018-03-13T20:21:48+01:00
 description: "Apprenez à construire un site statique avec des composants à l’aide d’un préprocesseur HTML."
 images:
-  - /assets/images/2018/03/static-site-nunjucks-image1.jpg
+  - https://res.cloudinary.com/indysigner/image/fetch/f_auto,q_auto/w_1600/https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/e2990832-ae6d-4aab-9603-561a8c623003/static-site-nunjucks-image1.jpg
 source:
   author: "Chris Coyier"
   title: "Building A Static Site With Components Using Nunjucks"
@@ -127,7 +127,7 @@ fichier `index.html` dans CodePen project à chaque enregistrement.
 Voici ce que nous pourrions écrirer dans le fichier `index.njk` pour appliquer
 le gabarit de page et ajouter du contenu dans le bloc principal :
 
-```html
+```liquid
 {% extends "_layout.njk" %}
 
 {% block content %}

@@ -4,7 +4,7 @@ description: Le web au secours de la modernisation du procéde de publication de
 author: Antoine Fauchié
 date: 2017-01-23 15:37:00
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523364540/eric_ruth_greg_1009_1200.jpg
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523364540/eric_ruth_greg_1009_1200.jpg
 source:
   url: https://www.thenewdynamic.org/article/2017/01/26/interview-with-eric-gardner-getty/
   title:  Interview with Eric Gardner, Getty Publications
@@ -25,7 +25,7 @@ un campus culturel et de recherche situé à Los Angeles.
 src="https://thenewdynamic.imgix.net/getty-museum-ancient-terracottas-1600.jpg?w=1024"
 alt="" caption="" attr="" attrlink="" >}}
 
-### Comment et pourquoi en êtes-vous arrivés à choisir un générateur de site statique comme clé de voûte de votre processus de publication aux éditions The Getty ? Pourquoi ne pas avoir opté pour un développement natif&nbsp;?
+### Comment et pourquoi en êtes-vous arrivés à choisir un générateur de site statique comme clé de voûte de votre processus de publication aux éditions The Getty ? Pourquoi ne pas avoir opté pour un développement natif ?
 
 Lorsque j'ai commencé à travailler chez The Getty, le programme de publication
 numérique était assez récent. Il y avait eu précédemment plusieurs

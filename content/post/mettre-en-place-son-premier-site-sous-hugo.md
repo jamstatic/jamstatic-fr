@@ -9,7 +9,7 @@ source:
   title: "Up & Running With Hugo Part I: Building Your First Site"
   url: https://forestry.io/blog/up-and-running-with-hugo/
 images:
-- "/assets/images/2018/03/up_running_w_hugo_I_1.jpg"
+- https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346998/up_running_w_hugo_I_1.jpg
 ---
 
 {{% intro %}}
@@ -26,7 +26,7 @@ pour créer votre premier site en moins de 30 minutes.
 
 [Hugo](https://gohugo.io), le générateur de site statique écrit en Go, a pris la
 communauté de vitesse. Il présente tous les avantages d’un générateur de site
-statique — 100% flexible, sécurisé et rapide — mais il vole également la vedette
+statique — 100% flexible, sécurisé et rapide — mais il vole également la vedette
 quand on
 [compare ses performances avec celles de Jekyll](https://forestry.io/blog/hugo-vs-jekyll-benchmark/).
 Le site de [Forestry.io](https://forestry.io) est d’ailleurs développé avec
@@ -62,8 +62,8 @@ Vous bénéficiez ainsi automatiquement d’une structure de départ pour Hugo. 
 notre kit, elle est stockée dans le dossier `hugo`. À l’intérieur se trouvent
 divers dossiers qui abritent le contenu de votre site, les gabarits de page et
 les fichiers CSS, JS, images, etc. L'arborescence de la structure de base
-ressemble à ceci — j'ai laissé quelques fichiers et dossiers de côté de façon à
-ce que ce soit plus clair :
+ressemble à ceci — j'ai laissé quelques fichiers et dossiers de côté de façon à
+ce que ce soit plus clair :
 
     .
     ├── hugo/                  // Le site Hugo, avec les fichiers de contenu, de données, statiques.
@@ -93,7 +93,7 @@ Installez ensuite toutes les dépendances du projet en lançant :
     npm install
 
 Pour lancer le serveur de développement et ouvrir le site dans votre navigateur,
-lancez simplement :
+lancez simplement :
 
     npm start
 
@@ -167,11 +167,11 @@ affichée devant le titre de l’article devrait avoir été mise à jour.
 Maintenant essayons de créer un nouvel article. Nous utiliserons pour cela la
 commande fournie avec Hugo pour générer un nouvel article. Dans notre projet,
 Hugo est déclaré comme une dépendance NPM, nous pouvons donc l’utiliser avec la
-commande :
+commande :
 
     npm run hugo -- <command> --<param>
 
-Créez votre premier article en lançant :
+Créez votre premier article en lançant :
 
     npm run hugo -- new posts/mon-premier-article.md
 
@@ -190,7 +190,7 @@ relatives à la page) dont on peut tirer parti dans les gabarits de page. Sous l
 _front matter_, nous pouvons ajouter du contenu au format markdown :
 
 Ajoutez par exemple le contenu suivant dans le fichier et sauvegardez vos
-changements :
+changements :
 
     ## Bienvenue
     Pratique ce modèle de projet *Hugo*. j'espère que vous appréciez ce guide !
@@ -205,7 +205,7 @@ ajoutant un thème issu de
 [la galerie de thèmes de Hugo](https://themes.gohugo.io/), développé par un des
 meilleurs contributeurs de la communauté.
 
-![](/assets/images/2018/03/up_running_w_hugo_I_1.jpg "Le thème Casper de @vjeantet")
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346998/up_running_w_hugo_I_1.jpg" alt="" caption="Le thème Casper de @vjeantet" >}}
 
 Nous allons utiliser le thème
 [Casper](https://github.com/vjeantet/hugo-theme-casper) de
@@ -221,34 +221,36 @@ Ensuite, mettez à jour la configuration du site aves les options de
 configuration spécifiques au thème.
 
 Ouvrez le fichier `hugo/config.toml` dans votre éditeur de texte favori et
-remplacer son contenu par celui-ci :
+remplacer son contenu par celui-ci :
 
-    baseURL= "/"
-    languageCode= "fr"
-    title= "Hugo Boilerplate"
-    paginate = 5
-    copyright = "Tous droits réservés - 2018"
-    theme = "hugo-theme-casper"
-    disableKinds = ["taxonomy", "taxonomyTerm"]
+```toml
+baseURL= "/"
+languageCode= "fr"
+title= "Hugo Boilerplate"
+paginate = 5
+copyright = "Tous droits réservés - 2018"
+theme = "hugo-theme-casper"
+disableKinds = ["taxonomy", "taxonomyTerm"]
 
-    [params]
-      description = "Bien démarrrer avec Hugo"
-      metadescription = "Utilisé dans la balise meta 'description' pour l’accueil et les pages d’index, faute de quoi c'est l’entrée 'description' du front matter de la page qui sera utilisé."
-      cover = ""
-      author = "VOTRE_NOM"
-      authorlocation = "Terre, Galaxie de la Voie Lactée"
-      authorwebsite = ""
-      authorbio= ""
-      logo = ""
-      hjsStyle = "default"
-      paginatedsections = ["posts"]
+[params]
+  description = "Bien démarrrer avec Hugo"
+  metadescription = "Utilisé dans la balise meta 'description' pour l’accueil et les pages d’index, faute de quoi c'est l’entrée 'description' du front matter de la page qui sera utilisé."
+  cover = ""
+  author = "VOTRE_NOM"
+  authorlocation = "Terre, Galaxie de la Voie Lactée"
+  authorwebsite = ""
+  authorbio= ""
+  logo = ""
+  hjsStyle = "default"
+  paginatedsections = ["posts"]
+```
 
 _Reportez-vous à la
 [documentation du thème](https://github.com/vjeantet/hugo-theme-casper#configuration)
 pour prendre connaissance de toutes les options de configuration disponibles._
 
 Pour finir, supprimez les exemples de gabarits de page fournis avec notre modèle
-de départ. Pour cela lancez la commande :
+de départ. Pour cela lancez la commande :
 
     rm -r hugo/layouts/
 
@@ -268,14 +270,14 @@ Nous allons commencer par éditer les paramètres du site dans le fichier
 * `metadescription = "Utilisé dans la balise meta 'description' pour l’accueil et les pages d’index, faute de quoi c'est l’entrée 'description' du front matter de la page qui sera utilisé"`
 * `author = "VOTRE_NOM"`
 
-![](/assets/images/2018/03/casper-theme-default-config.png "La thème Casper avec du contenu et les styles par défaut")
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346962/casper-theme-default-config.png" alt="" caption="Le thème Casper avec du contenu et les styles par défaut" >}}
 
 Bien, ajoutons maintenant une image de fond pour la bannière d’en-tête. Dans le
 fichier `hugo/config.toml`, vous trouverez une section `[params]`. Modifiez le
 paramètre `cover` pour qu'il ait la valeur `/img/darius-soodmand-116253.jpg`,
 sauvegardez vos changements.
 
-![](/assets/images/2018/03/casper-theme-cover.jpg "Ajout d’une image de fond")
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347009/casper-theme-cover.jpg" alt="" caption="Ajout d’une image de fond" >}}
 
 Retournons maintenant voir notre site dans le navigateur. C’est déjà mieux, mais
 il y a encore du travail.
@@ -351,13 +353,13 @@ fichier `src/css/styles.css` et ajoutez le code suivant à la fin du fichier :
       height: 80vh;
     }
 
-![](/assets/images/2018/03/capser-theme-final.jpg "Le résultat final")
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346973/capser-theme-final.jpg" alt="" caption="Le résultat final" >}}
 
-Admirez le résultat final dans votre navigateur !
+Admirez le résultat final dans votre navigateur !
 
 ## 5) Prochaine étape
 
-Vous êtes maintenant prêt·e à commencer à créer un site statique avec Hugo !
+Vous êtes maintenant prêt·e à commencer à créer un site statique avec Hugo !
 
 Vous pouvez continuer à utiliser le thème Casper ou repartir du début en
 utilisant les modèles du répertoire `hugo/layouts/`.
@@ -371,7 +373,7 @@ si vous souhaitez repartir de zéro.
 {{% /notice %}}
 
 Pour en apprendre un peu plus sur Hugo, reportez-vous aux sections suivantes de
-la documentation officielle :
+la documentation officielle :
 
 * [L'organisation des contenus dans Hugo](http://gohugo.io/content-management/organization/)
 * [Introduction au langage de templating d’Hugo](http://gohugo.io/templates/introduction/)
