@@ -4,18 +4,22 @@ description: Automatiser la publication du site généré sur GitHub Pages pour 
   utiliser les plugins Jekyll sans restriction.
 date: 2016-09-18T13:51:13+02:00
 images:
-  - /assets/images/octojekyll.png
+  - https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346531/octojekyll.png
 categories:
   - jekyll
 ---
 
-{{% intro %}} La popularité de Jekyll est en partie due à son support natif par
-GitHub Pages. Si cette solution gratuite est bien pratique, elle n’en reste pas
-moins limitée en termes de support de plugins Jekyll et ce pour des raisons de
-sécurité. Si vous voulez utiliser des plugins comme [jekyll-cloudinary]({{<
-relref "gestion-images-responsive-avec-jekyll-cloudinary.md" >}}) ou
+{{% intro %}}
+
+La popularité de Jekyll est en partie due à son support natif par GitHub Pages.
+Si cette solution gratuite est bien pratique, elle n’en reste pas moins limitée
+en termes de support de plugins Jekyll et ce pour des raisons de sécurité. Si
+vous voulez utiliser des plugins comme [jekyll-cloudinary]({{< relref
+"gestion-images-responsive-avec-jekyll-cloudinary.md" >}}) ou
 [jekyll-assets](https://github.com/jekyll/jekyll-assets), il vous faudra générer
-le site en local et le publier sur Github. {{% /intro %}}
+le site en local et le publier sur Github.
+
+{{% /intro %}}
 
 Nous allons voir que cette opération est facilement automatisable à l’aide d’un
 fichier `Rakefile`, la manière la plus courante en Ruby de créer des tâches.
@@ -63,7 +67,7 @@ $ git push -u origin source
 Maintenant que vous avez crée la branche `source`, vous pouvez en faire la
 branche par _défaut_ dans GitHub :
 
-![Paramètrage des branches dans GitHub](/assets/images/default-branch-github.png)
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346483/default-branch-github.png" alt="Paramètrage des branches dans GitHub" >}}
 
 ### Publication automatique
 
@@ -72,6 +76,8 @@ les fichiers générés sur la branche `master`. Mais plutôt que de s'embêter 
 faire ça manuellement, créons un simple tâche `rake`. Créez (si vous n'en avez
 pas déjà un) un fichier `Rakefile` à la racine de votre site et ajoutez le
 contenu suivant [^1] :
+
+[^1]: Les tâches utilisées dans ce billet ont été écrites par [Ixti](http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html), le créateur du plugin `jekyll-assets`.
 
 {{< gist DirtyF 24cb9c96b64173ecd85578f38bcc940d >}}
 
@@ -99,18 +105,10 @@ Jekyll][jekyll-rakefile] pour une implémentation alternation de la tâche
 
 [jekyll-rakefile]: https://github.com/jekyll/jekyll/blob/master/rake/site.rake#L55
 
-{{< figure src="/assets/images/octojekyll.png" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346531/octojekyll.png" alt="OctoJekyll" >}}
 
 Enfin, sachez qu'il existe d’autres solutions d’hébergement comme
 [GitLab Pages](https://pages.gitlab.io/), [Netlify](https://www.netlify.com),
 [Cloudcannon](http://cloudcannon.com), [Siteleaf](https://www.siteleaf.com/) ou
 [Forestry.io](https://forestry.io/) qui vous permettent d’utiliser les plugins
 de votre choix, sans avoir recours à ce genre de hack.
-
-### Notes
-
-[^1]:
-
-  Les tâches utilisées dans ce billet ont été écrites par
-  [Ixti](http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html),
-  le créateur du plugin `jekyll-assets`.

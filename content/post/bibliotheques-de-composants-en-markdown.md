@@ -72,7 +72,7 @@ Dans cet article, je vais vous montrer comme inclure facilement des démos de
 code dans des documents Markdown avec l’aide de snippets et de l’encapsulation
 du Shadow DOM.
 
-{{< figure src="/assets/images/2017/09/markdown-shadowdom.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346913/markdown-shadowdom.png"
 caption="Un M, une flèche qui pointe vers le bas et un détective caché dans l’obscurité pour symboliser Markdown et Shadow Dom" >}}
 
 ### CSS et Markdown

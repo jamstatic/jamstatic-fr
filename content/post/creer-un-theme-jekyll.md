@@ -15,7 +15,9 @@ categories:
   - jekyll
 ---
 
-{{% intro %}} Si vous êtes designer web, que vous savez écrire des pages HTML,
+{{% intro %}} 
+
+Si vous êtes designer web, que vous savez écrire des pages HTML,
 les mettre en forme avec CSS, voire les enrichir avec du JavaScript, vous
 n'aurez aucun mal à développer des thèmes pour Jekyll. Le langage de templating
 [Liquid](https://shopify.github.io/liquid/) a été conçu par Shopify pour les web
@@ -24,9 +26,11 @@ demande de respecter quelques conventions et de se familiariser avec la gestion
 des gems Ruby, rien de bien sorcier. Dans cet article,
 [David Darnes](https://darn.es/), développeur du thème
 [Alembic](https://alembic.darn.es), explique comment utiliser une 💎 gem de
-thème pour Jekyll, puis comment développer la vôtre. {{% /intro %}}
+thème pour Jekyll, puis comment développer la vôtre. 
 
-![](https://www.siteleaf.com/uploads/making-jekyll-theme-intro.jpg)
+{{% /intro %}}
+
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,q_auto,w_1028/v1523345884/making-jekyll-theme-intro.jpg" alt="" >}}
 
 Tout site correctement structuré permet de présenter facilement ses contenus à
 l’aide d’un thème, à l’image de ce que souhaite son propriétaire ou son
@@ -162,21 +166,14 @@ possible de contourner cette limitation en utilisant par exemple la formule
 et
 [n'importe quel plugin](https://learn.siteleaf.com/themes/jekyll-plugins/#third-party-plugins).[^custom-plugins]
 
-[^custom-plugins]:
-
-  NdT: D'autres solutions d’hébergement gratuites comme
-  [Netlify](https://netlify.com) ou
-  [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/) permettent
-  d’utiliser les gems de votre choix. Il est également possible de
-  [passer par Travis CI pour générer votre site](https://ayastreb.me/deploy-jekyll-to-github-pages-with-travis-ci/)
-  avant de pousser le résultat sur GitHub Pages.
+[^custom-plugins]: NdT: D'autres solutions d’hébergement gratuites comme [Netlify](https://netlify.com) ou [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages/) permettent d’utiliser les gems de votre choix. Il est également possible de [passer par Travis CI pour générer votre site](https://ayastreb.me/deploy-jekyll-to-github-pages-with-travis-ci/) avant de pousser le résultat sur GitHub Pages.
 
 ## Trucs et astuces pour créer un super thème
 
 Si vous avez envie de développer votre propre thème, permettez-moi de partager
 avec vous ce que mon expérience m'a enseigné.
 
-![making-jekyll-theme-checklist.jpg](https://www.siteleaf.com/uploads/making-jekyll-theme-checklist.jpg)
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,q_auto,w_1024/v1523346069/making-jekyll-theme-checklist.jpg" alt="checklist d’un thème jekyll">}}
 
 Voici quelques trucs à garder en tête quand on développe son propre thème,
 surtout que vous souhaitez qu'il soit utilisé par d’autres utilisateurs de
@@ -308,9 +305,13 @@ prévisualisation dans votre navigateur, utilisez la commande suivante :
 bundle exec jekyll serve
 ```
 
-{{% notice tip %}}Si vous utilisez Jekyll v3.7.0, vous pouvez passer l’option
+{{% notice tip %}}
+
+Si vous utilisez Jekyll v3.7.0, vous pouvez passer l’option
 `--livereload` en paramètre pour que votre navigateur rafraîchisse
-automatiquement la page après modifications des fichiers.{{% /notice %}}
+automatiquement la page après modifications des fichiers.
+
+{{% /notice %}}
 
 La sortie sur la console devrait ressembler à ça :
 
@@ -402,7 +403,8 @@ vous affranchir de cette limitation, même chose chez
 
 ## Ajouter des contenus d’exemple
 
-![Exemple de contenu du thème Alembic](https://www.siteleaf.com/uploads/Sample%20content.png)
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1028/v1523346121/Sample_20content.png" 
+alt="Exemple de contenu du thème Alembic" >}}
 
 Nous venons d’ajouter un fichier `index.html` pour vérifier que la génération
 fonctionne comme prévu. On pourrait aussi s'en servir pour tester des contenus
@@ -451,7 +453,8 @@ connexion à RubyGems.org. Une fois connecté, votre gem est mise en ligne et
 rendue publique ! Et voilà, vous venez de publier votre première gem de thème
 pour Jekyll. Elle dispose maintenant de sa propre URL.
 
-![Exemple de page Rubygems](https://siteleaf.com/uploads/Sample%20rubygems%20page.png)
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1028/v1523346185/Sample_20rubygems_20page.png"
+alt="Exemple de page Rubygems" >}}
 
 ## Les thèmes distants sur GitHub Pages
 

@@ -21,7 +21,7 @@ de l’écosystème de la JAMstack sur
 à l’origine du récent redesign du [site d’Hugo](https://gohugo.io/). Il a
 gentiment accepté de répondre à nos questions.
 
-{{< figure src="https://github.com/budparr.png" caption="Bud Parr" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346302/bud_parr.jpg" caption="Bud Parr" >}}
 
 ## Bonjour Bud, tu es un observateur et un défenseur de ce que beaucoup désignent encore comme de simples sites statiques. Comment les choses ont-elles évolué depuis quelques années ?
 

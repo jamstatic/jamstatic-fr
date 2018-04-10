@@ -4,7 +4,7 @@ date: 2017-07-11 10:00:00 +02:00
 description: Entretien avec Kyle Mathews, le créateur de Gatsby, un générateur de
   site statique basé sur React
 images:
-  - "/assets/images/gatsby/architecture.png"
+  - https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346952/architecture-gatsby.png
 source:
   title: Q&A with Kyle Mathews, Creator of React-Based Static Site Generator Gatsby
   url: https://www.infoq.com/news/2017/07/gatsby-kyle-mathews-interview
@@ -13,7 +13,9 @@ categories:
   - gatsby
 ---
 
-{{% intro %}} Après deux ans de développement, Gatsby vient de passer en version
+{{% intro %}}
+
+Après deux ans de développement, Gatsby vient de passer en version
 1.0. Ce générateur intègre beaucoup d’outils notamment React et GraphQL et
 permet déjà d’interagir avec les versions headless des CMS WordPress et Drupal.
 InfoQ vient de publier une interview de son créateur, Kyle Mathews, plus motivé
@@ -21,7 +23,9 @@ que jamais pour continuer à faire évoluer ce générateur, qui devrait connaî
 une popularité grandissante. Nous en publions ici la retranscription en
 français, car nous pensons que Gatsby devrait séduire la communauté JavaScript
 et devenir un des outils phares pour développer des applications Web très
-performantes. {{% /intro %}}
+performantes.
+
+{{% /intro %}}
 
 Après avoir travaillé pour différentes startups, Kyle Mathews a démissionné pour
 se consacrer à l’un de ses projets personnels
@@ -52,7 +56,7 @@ Mathews.
 > remarque que cliquer sur des liens sur un site fait avec Gatsby, c'est comme
 > naviguer sur un site en local
 
-{{< figure src="/assets/images/gatsby/architecture.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346952/architecture-gatsby.png"
 caption="Vue d’ensemble de Gatsby" >}}
 
 Dans une interview à InfoQ, Mathews parle des motivations pour lesquelles il

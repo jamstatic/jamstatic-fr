@@ -6,7 +6,7 @@ categories:
   - cms
   - headless
 images:
-  - /assets/images/2017/12/headless-cms-logos.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346947/headless-cms-logos.png
 ---
 
 Dans les architectures [JAMstack]({{< relref
@@ -57,7 +57,7 @@ pour vous permettre de consommer ensuite ces contenus où vous voulez, comme bon
 vous semble. C’est la seule chose dont va se préoccuper le CMS headless, le
 reste est de votre ressort.
 
-{{< figure src="/assets/images/2017/12/headless-cms-schema.png" caption=""
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346944/headless-cms-schema.png" caption=""
 attr="Aperçu d’une architecture de CMS découplée"
 attrlink="https://www.storyblok.com/tp/headless-cms-explained" >}}
 

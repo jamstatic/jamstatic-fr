@@ -5,7 +5,7 @@ date: 2018-01-07T21:05:43+01:00
 categories:
   - netlify
 images:
-  - /assets/images/2018/01/paperplane.png
+  - https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523347058/paperplane.png
 source:
   author: Phil Hawksworth
   title: "10 Netlify features to surprise and delight"
@@ -39,7 +39,7 @@ fonctionnalités disponibles quelle que soit
 [la formule utilisée](https://www.netlify.com/pricing/), même celle entièrement
 gratuite.
 
-![](/assets/images/2018/01/paperplane.png)
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523347058/paperplane.png" alt="" >}}
 
 ## Mais d’abord, comment démarrer simplement
 
@@ -129,7 +129,7 @@ Netlify vous permet de garder le contrôle sur la façon dont vous déployez. Vo
 pouvez choisir de déployer uniquement la branche de production, toutes vos
 branches, ou seulement certaines branches.
 
-{{< figure src="/assets/images/2018/01/controle-deploiement-continu.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523347027/controle-deploiement-continu.png"
 caption="Paramètres du déploiement continu" >}}
 
 Une fois déployée, chaque branche sera accessible depuis un sous-domaine généré
@@ -152,7 +152,7 @@ trafic de votre site entre les différentes branches de votre choix.
 Vous pouvez partager le trafic de votre site en autant de branches que vous le
 souhaitez et définir le pourcentage de trafic attribué à chacune des branches.
 
-{{< figure src="/assets/images/2018/01/split-testing.png" 
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523347053/split-testing.png" 
 caption="La configuration du split testing chez Netlify" >}}
 
 Cette fonctionnalité me bluffe. Elle rend les différents types de tests A/B
@@ -244,7 +244,7 @@ La configuration se fait en un clic (bon ok peut-être trois, mais ça m'a pris
 moins d’une minute). En plus le certificat est renouvelé automatiquement, pour
 que vous n'ayez pas à le faire tous les ans.
 
-{{< figure src="/assets/images/2018/01/ssl-config.png" 
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523347047/ssl-config.png" 
 caption="La configuration de SSL chez Netlify avec renouvellement automatique des certificats grâce à Let’s Encrypt" >}}
 
 ### 7. Lancer des tests avec l’intégration continue de Netlify

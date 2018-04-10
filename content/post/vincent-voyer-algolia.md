@@ -3,7 +3,7 @@ title: Entretien avec Vincent Voyer, fullstack engineer chez Algolia
 description: Présentation d’Algolia, un service de recherche personnalisé pour votre site web.
 date: 2017-07-05 12:34:00 +02:00
 images:
-  - /assets/images/algolia-smashing.png
+  - https://res.cloudinary.com/jamstatic/image/upload/v1523347081/algolia-smashing.png
 categories:
   - algolia
 ---
@@ -35,7 +35,7 @@ des développeurs web.
 
 ### Bonjour Vincent, on va peut-être commencer par te présenter ?
 
-{{< figure src="/assets/images/2017/07/vincent-voyer.jpg"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/v1523346898/vincent-voyer.jpg"
 caption="Vincent Voyer, développeur JS chez Algolia" >}}
 
 **Vincent Voyer** : Donc moi je suis Vincent Voyer, sur Twitter j'étais zeroload
@@ -318,7 +318,7 @@ de site statique pour Algolia.
 
 ### Dans le monde des sites statiques, on a beaucoup parlé de [la refonte de Smashing Magazine]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}}) dernièrement dont la recherche a été développée avec Algolia, ça marche très bien. Le site est généré avec Hugo, un générateur écrit en Go, or, il n'y a pas de plugin natif Algolia pour Hugo, même si vous fournissez un client pour votre API en Go
 
-{{< figure src="/assets/images/algolia-smashing.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/v1523347081/algolia-smashing.png"
 caption="La recherche de la nouvelle version de Smashing Magazine avec Algolia" >}}
 
 **Vincent Voyer** : Oui, on a des gens spécialisés en Go ici. En fait c'est

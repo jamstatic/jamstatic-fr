@@ -23,7 +23,7 @@ expérience et son point de vue de designer qui travaille avec des générateurs
 site statique comme Jekyll, Gatsby ou Hugo. Aucun logiciel n'est parfait et il y
 a toujours de la place pour des améliorations selon lui.
 
-{{< figure src="/assets/images/michael-rose.jpg" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523347062/michael-rose.jpg" >}}
 
 ## Bonjour Michael, comment te présenter ?
 

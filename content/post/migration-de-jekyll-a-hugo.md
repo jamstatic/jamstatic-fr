@@ -14,7 +14,9 @@ categories:
   - hugo
 ---
 
-{{% intro %}} Si vous faites du développement front-end, du CSS, du SVG et
+{{% intro %}}
+
+Si vous faites du développement front-end, du CSS, du SVG et
 autres joyeusetés, vous connaissez sans doute déjà la talentueuse
 [Sara Soueidan](http://www.sarasoueidan.com/). Il se trouve que Sara a travaillé
 récemment sur la refonte de Smashing Magazine et [la migration de WordPress à
@@ -30,7 +32,9 @@ proposées par Hugo, le générateur statique ultra-rapide et ultra-souple écri
 Go. Elle nous livre ici en détails le récit de cette migration qu'elle est bien
 contente d’avoir menée à bien. Puisse le partage de son périple vous épargner de
 subir les mêmes écueils et vous aider à commencer à vous familiariser avec les
-concepts d’Hugo. {{% /intro %}}
+concepts d’Hugo.
+
+{{% /intro %}}
 
 Ces derniers mois, travailler sur mon site web s'est révélé être de plus en plus
 pénible, que ce soit pour continuer à le développer, itérer sur son design,
@@ -55,13 +59,7 @@ j'effectuais beaucoup de changements d’affilée, le ventilateur de mon Macbook
 commençait à s'emballer comme un fou, l’ordinateur chauffait et faisait le bruit
 d’un avion sur le point de décoller. [^1]
 
-[^1]:
-
-  NdT: Il est vrai que le temps de compilation de Jekyll peut excéder plusieurs
-  minutes quand vous compilez des centaines de pages, cela dépend des plugins
-  que vous utilisez et de l’optimisation de vos templates Liquid. À titre de
-  comparaison, pour ce blog, il n'excède pas les 10 secondes par défaut et à
-  peine plus d’une seconde avec l’option `incremental` activée.
+[^1]: NdT: Il est vrai que le temps de compilation de Jekyll peut excéder plusieurs minutes quand vous compilez des centaines de pages, cela dépend des plugins que vous utilisez et de l’optimisation de vos templates Liquid. À titre de comparaison, pour ce blog, il n'excède pas les 10 secondes par défaut et à peine plus d’une seconde avec l’option `incremental` activée.
 
 Je dirais que mon site est de taille modeste. J'ai moins d’une centaine de
 billets de blog, même moins de 60 à l’heure où j'écris cet article, et seulement
@@ -129,8 +127,7 @@ Mais ce qui m'a fait adopté Hugo plus que toute autre option, c'est de voir
 comparé à Jekyll. Non seulement chaque billet de blog que j'ai pu lire y est
 allé d’une comparaison qui atteste ce fait, mais j'ai aussi pu faire
 l’expérience de cette vitesse pour la première fois lorsque j'ai travaillé sur
-la [refonte de Smashing Magazine]({{< relref
-"smashing-mag-va-dix-fois-plus-vite.md" >}}).
+la [refonte de Smashing Magazine]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}}).
 
 La nouvelle version de Smashing Magazine (actuellement accessible via
 [next.smashingmagazine.com](https://next.smashingmagazine.com)) utilise Hugo
@@ -141,7 +138,9 @@ site est bien plus petit que Smashing Magazine, je savais que je n'avais aucun
 souci à me faire. Si Smashing Magazine pouvait être compilé aussi rapidement,
 pourquoi pas mon blog ?
 
-{{% notice info %}}Veuillez prendre note que cet article n'est en aucun cas
+{{% notice info %}}
+
+Veuillez prendre note que cet article n'est en aucun cas
 destiné à constituer un guide exhaustif sur Hugo. Il me reste encore beaucoup de
 choses à comprendre, je suis donc mal placée pour écrire un tel guide. Vous
 verrez que vous devrez vous reporter à la documentation d’Hugo pour en savoir
@@ -151,7 +150,9 @@ certaines thématiques particulières propres à Hugo. Et ce n'est en fin de com
 pas une comparaison entre Hugo et Jekyll. C’est davantage une introduction à
 Hugo qui comporte quelques astuces. Si vous envisagez d’adopter Hugo comme
 nouveau générateur de site statique, j'espère que vous trouverez quelques trucs
-utiles pour avoir un système fonctionnel.{{% /notice %}}
+utiles pour avoir un système fonctionnel.
+
+{{% /notice %}}
 
 ### Configurer Hugo
 
@@ -207,7 +208,9 @@ les cheveux pas mal de fois. Mais croyez-moi, le résultat final prouve que ça
 valait **vraiment** le coup. Au passage, j'ai beaucoup appris. C’est ce que je
 vais partager avec vous dans la prochaine section.
 
-{{% notice tip %}}**Astuce** : Vous appartenez peut-être à une autre catégorie
+{{% notice tip %}}
+
+**Astuce** : Vous appartenez peut-être à une autre catégorie
 de développeur fainéant, vous préférez peut-être partir d’un modèle standard qui
 vous fournit la configuration dont vous avez besoin et qui est prêt pour que
 vous puissiez ajouter du contenu sur le champ, surtout si vous démarrez un
@@ -216,7 +219,9 @@ nouveau blog. Dans ce cas je vous recommande chaudement le
 contient tout ce qu'il faut, il y a même Webpack et Gulp de correctement
 configurés pour pouvoir faire tourner votre site. La structure de ce thème
 standard est légèrement différente de ce que je vais vous montrer, mais pas tant
-que ça.{{% /notice %}}
+que ça.
+
+{{% /notice %}}
 
 ### Se plonger dans Hugo : quelques détails techniques
 
@@ -239,14 +244,18 @@ j'ai trouvé et qui m'ont également bien aidé. Prenez cet article comme un
 pense-bête, un ensemble de rappels, une note à mon futur moi à laquelle je
 devrai revenir si jamais j'ai besoin de revoir les bases.
 
-{{% notice info %}}Notez bien que vous finirez sûrement par ne pas utiliser le
+{{% notice info %}}
+
+Notez bien que vous finirez sûrement par ne pas utiliser le
 même processus ou la même arborescence de fichiers que moi. Il est en effet peu
 probable que vous ayez exactement les mêmes types de contenus que moi. Il se
 peut aussi que vous trouviez une meilleure façon de faire que celle que
 j'utilise actuellement, et c'est tant mieux. Et si vous êtes déjà un pro de Hugo
 et que vous repérez des choses qui pourraient être réalisées d’une meilleure
 façon, ne vous gênez pas pour partager vos manières de faire avec le reste
-d’entre nous pour que nous puissions tous apprendre de vous.{{% /notice %}}
+d’entre nous pour que nous puissions tous apprendre de vous.
+
+{{% /notice %}}
 
 #### La structure des dossiers d’Hugo
 
@@ -280,7 +289,9 @@ Le dossier `static` est destiné à héberger les contenus statiques comme les
 images, les fichiers CSS et JS mais aussi les fichiers audio, vidéo, les slides
 de présentations, etc. Je passe pas mal de temps à travailler dans ce dossier.
 
-{{% notice info %}}Après être intervenue sur le redesign de Smashing Magazine,
+{{% notice info %}}
+
+Après être intervenue sur le redesign de Smashing Magazine,
 j'ai appris que votre structure peut-être différente de celle présentée plus
 haut. C’est à peu près la même chose mais si vous utilisez un modèle comme
 Victor Hugo de Netlify, votre configuration sera légèrement différente, mais
@@ -290,7 +301,9 @@ dans votre workflow. En ce qui me concerne je n'ai pas vraiment besoin de
 Webpack sur mon site vu le peu de JS que j'utilise, mais si vous en avez
 l’utilité, je vous recommande d’utiliser leur template pour Hugo. Et perso, je
 préfère commencer de zéro pour apprendre et comprendre comment tout ça marche.
-Faites comme bon vous semble.{{% /notice %}}
+Faites comme bon vous semble.
+
+{{% /notice %}}
 
 #### Créer et mettre en page du contenu
 
@@ -309,21 +322,18 @@ le format que j'ai utilisé. Jekyll utilise `yaml`.[^2]
 
 [front-matter]: https://gohugo.io/content/front-matter/
 
-[^2]:
+[^2]: NdT: Pour la petite histoire c'est Tom Preston-Werner, le créateur de Jekyll qui est à l’origine de [TOML](https://github.com/toml-lang/toml) (d’où son nom). Vous pouvez [apprendre TOML en quelques minutes](https://learnxinyminutes.com/docs/toml/), [même chose pour YAML](https://learnxinyminutes.com/docs/fr-fr/yaml-fr/)
 
-  NdT: Pour la petite histoire c'est Tom Preston-Werner, le créateur de Jekyll
-  qui est à l’origine de [TOML](https://github.com/toml-lang/toml) (d’où son
-  nom). Vous pouvez
-  [apprendre TOML en quelques minutes](https://learnxinyminutes.com/docs/toml/),
-  [même chose pour YAML](https://learnxinyminutes.com/docs/fr-fr/yaml-fr/)
+{{% notice info %}}
 
-{{% notice info %}}Je ne rentrerai pas ici sur les différences entre les deux
+Je ne rentrerai pas ici sur les différences entre les deux
 formats, la documentation d’Hugo et Google sont vos amis. Personnellement ça m'a
 pris un peu de temps pour apprendre à utiliser toutes ces nouvelles syntaxes
 (TOML, les modèles de template en Go, etc.) avant de me sentir à l’aise.
 Néanmoins la courbe d’apprentissage est assez rapide, ne vous laissez donc pas
-intimider par ces nouvelles syntaxes si tout cela est nouveau pour vous.{{%
-/notice %}}
+intimider par ces nouvelles syntaxes si tout cela est nouveau pour vous.
+
+{{% /notice %}}
 
 ##### Définir (ou déclarer) les types de contenu
 
@@ -351,18 +361,19 @@ _statique_ (pour les pages comme "À propos" et "Travailler avec moi"), _blog_
 _études de cas_ et _bureau_ (un nouveau type d’articles à paraître bientôt). Je
 peux créer autant de types de contenu que je veux.
 
-{{% notice update %}}Il est possible de créer des sous-sections de contenu
+{{% notice update %}}
+
+Il est possible de créer des sous-sections de contenu
 depuis la version 0.24 d’Hugo ! Cela vous permet par exemple de créer des
 sous-sections _design_ et _développement_ dans la section _articles_ et bien
-plus. C’est une fonctionnalité intéressante.{{% /notice %}}
+plus. C’est une fonctionnalité intéressante.
+
+{{% /notice %}}
 
 C’est une des choses que j'aime chez Hugo comparativement à Jekyll qui, _à ma
 connaissance_, n'offre pas de fonctionnalité similaire.[^3]
 
-[^3]:
-
-  NdT: C’est inexact, Jekyll offre la possibilité de créer ses propres types de
-  contenu avec les [collections](https://jekyllrb.com/docs/collections/).
+[^3]: NdT: C’est inexact, Jekyll offre la possibilité de créer ses propres types de contenu avec les [collections](https://jekyllrb.com/docs/collections/).
 
 La capture d’écran ci-contre montre à quoi ressemble mon dossier `/content/` en
 ce moment :
@@ -548,18 +559,22 @@ utilisent ce type pour les pages statiques.
 La variable `page` indique à Hugo quel modèle de mise en page présent dans le
 répertoire `/layouts/` utiliser.
 
-{{% notice info %}}Il est bon de noter également que Hugo utilisera
-automatiquement ce modèle même si je ne lui dis pas. Je me rappelle tout de même
-avoir eu quelques prises de tête au début quand j'essayais de comprendre comment
-utiliser les modèles pour les différentes pages. Je ne savais pas quel modèle
-allait être utilisé. Même en ayant lu la documentation, je me suis retrouvée à
-faire et défaire pas mal de choses pour m'apercevoir que les choses marchaient
-comme par magie, ou pas du tout. Au début, Hugo ressemblait à une boîte noire
-pour moi et il m'a fallu quelques jours pour en comprendre assez et pour oser
-écrire à son sujet. Quand ça a fini par fonctionner, j'ai décidé de ne plus
-toucher au front matter, car j'avais peur de casser une fois de plus ma mise en
-page. Mais maintenant que j'en sais davantage, il est bon de signaler que vous
-n'avez pas vraiment besoin de la variable `page` ici.{{% /notice %}}
+{{% notice info %}}
+
+Il est bon de noter également que Hugo utilisera automatiquement ce modèle même
+si je ne lui dis pas. Je me rappelle tout de même avoir eu quelques prises de
+tête au début quand j'essayais de comprendre comment utiliser les modèles pour
+les différentes pages. Je ne savais pas quel modèle allait être utilisé. Même en
+ayant lu la documentation, je me suis retrouvée à faire et défaire pas mal de
+choses pour m'apercevoir que les choses marchaient comme par magie, ou pas du
+tout. Au début, Hugo ressemblait à une boîte noire pour moi et il m'a fallu
+quelques jours pour en comprendre assez et pour oser écrire à son sujet. Quand
+ça a fini par fonctionner, j'ai décidé de ne plus toucher au front matter, car
+j'avais peur de casser une fois de plus ma mise en page. Mais maintenant que
+j'en sais davantage, il est bon de signaler que vous n'avez pas vraiment besoin
+de la variable `page` ici.
+
+{{% /notice %}}
 
 Le `title` est utilisé comme intitulé de lien dans le menu. (Sur mon site le
 menu situé en haut de page contient une entrée "About & Interviews").
@@ -624,8 +639,7 @@ dossier nommé `/archetypes/` à la racine de mon site. Ce dossier est lui aussi
 lié aux types de contenu que vous créez. Mais il a un but bien précis.
 
 Pour expliquer à quoi sert ce répertoire, je vais commencer par citer
-[la page correspondante de la documentation d’Hugo](https://hugodocs.info/content-management/archetypes/)
-:
+[la page correspondante de la documentation d’Hugo](https://hugodocs.info/content-management/archetypes/) :
 
 > Les archétypes vous permettent de créer de nouvelles instances de types de
 > contenu et de définir des paramètres par défaut à partir de la ligne de
@@ -664,7 +678,7 @@ défaut les valeurs de ces variables seront vierges, prêtes à être renseigné
 La capture d’écran suivante montre les variables front matter que j'ai définis
 pour l’archétype `etudes-de-cas` :
 
-{{< figure src="/assets/images/archetype-hugo.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346514/archetype-hugo.png"
 caption="Les variables définies pour l’archétype des études de cas. À chaque fois que je demande à Hugo de créer une nouvelle étude de cas pour moi, il va automatiquement ajouter ces variables front matter. Ces variables sont ensuite utilisées par le modèle HTML de la page d’études de cas." >}}
 
 Notez aussi que les autres archétypes que j'ai définis dans le répertoire

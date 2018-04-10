@@ -31,7 +31,7 @@ gentiment accepté de répondre à nos questions.
 
 {{% /intro %}}
 
-{{< figure src="/assets/images/hugo/hugo-bjorn-erik-pedersen.jpg"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346509/hugo-bjorn-erik-pedersen.jpg"
 attr="Bjørn Erik Pedersen" attrlink="https://github.com/bep" >}}
 
 ## Bonjour Bjørn Erik, comment t'es-tu retrouvé impliqué dans Hugo ?
@@ -118,7 +118,7 @@ en train de travailler sur une [refonte entièrement basée sur Hugo]({{< relref
 
 {{< figure
 src="https://thenewdynamic.imgix.net/screenshot-smashing-mag-hugo.jpg?w=700"
-attrlink="https://next.smashingmagazine.com"
+attrlink="https://www.smashingmagazine.com"
 attr="La nouvelle version de Smashing Magazine" >}}
 
 ## Comment se porte le projet actuellement ?

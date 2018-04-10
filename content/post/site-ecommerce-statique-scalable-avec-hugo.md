@@ -5,7 +5,7 @@ date: 2017-12-13T13:10:36+01:00
 categories:
   - hugo
 images:
-  - /assets/images/2017/12/cart.jpg
+  - https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346937/cart.jpg
 source:
   author: "Chris Marshall"
   title: "Scalable Static Ecommerce with Hugo"
@@ -18,7 +18,8 @@ aliases:
 > Les générateurs de site statique sont-ils une solution viable pour les sites
 > de vente en ligne qui encaissent de fortes charges de trafic ?
 
-{{< figure src="/assets/images/2017/12/cart.jpg" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346937/cart.jpg"
+alt="" >}}
 
 Les générateurs de site statique (GSS) attirent l’attention depuis quelques
 années déjà. Pour quelqu'un comme moi qui a commencé par développer des sites à
@@ -168,7 +169,7 @@ Afficher les informations d’un produit se fait très simplement :
 Ajouter la logique dans les blocs inclus dynamiquement demande un peu plus
 d’effort, mais même un piètre développeur comme moi peut y arriver sans peine :
 
-```
+```go
 {{ $f1path := (print "shoefeatures/" $.Params.feature1 ".html") }}
 {{ partial $f1path}}
 {{ $f2path := (print "shoefeatures/" $.Params.feature2 ".html") }}
@@ -261,7 +262,7 @@ Ici mes produits sont des chaussures. Dans les données _front matter_ de chaque
 produit, j'ai entré les détails relatifs aux différentes variantes de taille de
 la façon suivante :
 
-```
+```json
 "variants": [
       {
         "title": "6",
@@ -304,7 +305,7 @@ contient les niveaux de stock des différentes références produit :
   "9000-4": {
    "allocation": 1
   },
-…
+  …
 ```
 
 J'ai 6000 enregistrements en tout, puisqu'il y a six tailles de disponibles pour

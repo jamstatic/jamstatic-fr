@@ -14,12 +14,16 @@ categories:
   - headless
 ---
 
-{{% intro %}} Adopter une stack de développement Web moderne pour pouvoir
+{{% intro %}}
+
+Adopter une stack de développement Web moderne pour pouvoir
 générer des sites statiques présente bien des avantages et Tom Bennet en a listé
 cinq des principaux. Si vous n'aviez encore jamais entendu parlé de la JAMstack,
 cet article donne un aperçu global du processus et de l’écosystème actuel ainsi
 que des gains engendrés. Vous trouverez également des lectures pour approfondir
-votre connaissance sur le sujet. {{% /intro %}}
+votre connaissance sur le sujet.
+
+{{% /intro %}}
 
 Que ce soit pour un mettre en place un blog, configurer un site de e-commerce ou
 développer une single page application en JavaScript, le temps où on se
@@ -48,7 +52,7 @@ constamment côté serveur pour générer le HTML final affiché par le navigate
 l’utilisateur. Prenons l’exemple (très schématique) d’un site typique qui
 fonctionne sous WordPress.
 
-{{< figure src="/assets/images/2017/03/diagram.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346597/diagram.png"
 caption="Génération de page HTML à l’aide de PHP et d’un serveur MySQL" >}}
 
 Quand l’utilisateur demande à afficher une page, votre serveur fait une requête
@@ -69,7 +73,7 @@ incalculable d’APIs et de faire tourner des applications complexes côté clie
 et que le développement front-end est dominé par JavaScript et les
 automatisations à l’aide de `npm`, n'avons nous pas déjà dépassé ce modèle ?
 
-{{< figure src="/assets/images/2017/03/diagram-ssg.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346591/diagram-ssg.png"
 caption="Un site Web statique développé à l’aide d’un processus basé sur la JAMstack" >}}
 
 Les générateurs de site statique comme Jekyll et Hugo permettent de rendre cela

@@ -231,7 +231,7 @@ Si vous ouvrez le fichier `post.html` dans le dossier `_layouts`, nous pouvons
 le voir en action.
 
 {{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*FYILLFGGLdTohX7sJZjSIw/RS/w704.png?&ssl=1"
+src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523348258/default-layout.png"
 caption="" >}}
 
 En préfixant nos variables avec `page`, Liquid va rechercher dans votre page les
@@ -243,7 +243,7 @@ HTML. Cool, non ?
 Et si nous ajoutons encore quelques variables à nous dans le front matter pour
 épicer un peu nos articles :
 
-{{< figure src="/assets/images/design-portfolio/704.png" caption="" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/v1523347068/post-front-matter.png" caption="" >}}
 
 Maintenant que nous disposons de toutes ces super variables, comment pouvons
 nous les utiliser ? Modifions notre modèle de mise en page `post.html` en

@@ -9,23 +9,26 @@ source:
   url: https://medium.com/tmw-interactive/creating-dynamic-layouts-with-jekyll-3bbb7fc57d1f#.iac16fjec
   lang: en
 images:
-  - assets/images/2017/02/canon-unleashprint.jpg
+  - http://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346708/canon-unleashprint-full.jpg
 categories:
   - jekyll
 ---
 
-{{% intro %}} Dans
+{{% intro %}}
+
+Dans
 [son article publié sur Medium](https://medium.com/tmw-interactive/creating-dynamic-layouts-with-jekyll-3bbb7fc57d1f#.iac16fjec),
 Zander Martineau partage les secrets de fabrication du portfolio client de son
 agence. Zander a du faire preuve d’ingéniosité et de créativité afin de pouvoir
-varier les mises en pages des différentes études de cas à l’aide de Jekyll. {{%
-/intro %}}
+varier les mises en pages des différentes études de cas à l’aide de Jekyll.
+
+{{% /intro %}}
 
 > Voici comment nous avons tiré profit du YAML front-matter pour pouvoir
 > effectuer de nombreux changements au sein d’un même modèle pour différents
 > articles sur le nouveau site de notre agence.
 
-{{< figure src="/assets/images/2017/02/canon-unleashprint-full.jpg"
+{{< figure src="http://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346708/canon-unleashprint-full.jpg"
 attr="Extrait de la campagne Canon #unleashprint"
 attrlink="http://www.tmwunlimited.com/work/canon-unleashprint" >}}
 
@@ -116,15 +119,15 @@ page et qui modifie certains aspects de la présentation de la page.
 Grâce à tout cela, nous avons pu ajouter pas mal de personnalisation à notre
 nouveau site web, ci-dessous une sélection d’ études de cas :
 
-{{< figure src="/assets/images/2017/02/canon-unleashprint-fullpage.jpg" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346747/canon-unleashprint-fullpage.jpg" >}}
 
-{{< figure src="/assets/images/2017/02/dogs-trust-fullpage.jpg"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346723/dogs-trust-fullpage.jpg"
 attr="http://www.tmwunlimited.com/work/"
 attrlink="http://www.tmwunlimited.com/work/" >}}
 
-{{< figure src="/assets/images/2017/02/lynx-fullpage.jpg" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346706/lynx-fullpage.jpg" >}}
 
-{{< figure src="/assets/images/2017/02/lynx-calm-fullpage.jpg" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346792/lynx-calm-fullpage.jpg" >}}
 
 ### 👋
 

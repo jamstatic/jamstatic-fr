@@ -16,8 +16,7 @@ source:
 ---
 
 {{< figure
-src="https://res.cloudinary.com/forestry-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://forestry.io/uploads/2018/02/hugo-jekyll-compared-1.png"
-caption="" attr="" attrlink="" >}}
+src="https://res.cloudinary.com/forestry-demo/image/fetch/c_limit,dpr_auto,f_auto,q_80,w_auto/https://forestry.io/uploads/2018/02/hugo-jekyll-compared-1.png" >}}
 
 Choisir les bons outils pour bâtir un site web n'est pas chose aisée de nos
 jours. Il y a tellement d’options ! Générer un site statique est une de ces
@@ -50,7 +49,7 @@ Commencé en 2008, Jekyll est présenté comme un "générateur de site statique
 simple, prêt-à-bloguer".
 
 C’est le GSS (générateur de site statique) le plus populaire à l’heure actuelle
-avec plus de 33&npsp;000 étoiles sur GitHub ce qui est largement dû à son
+avec plus de 33&nbsp;000 étoiles sur GitHub ce qui est largement dû à son
 intégration dans [GitHub Pages](https://pages.github.com/).
 
 La valeur ajoutée de Jekyll c'est qu'il vous permet de prendre le HTML statique

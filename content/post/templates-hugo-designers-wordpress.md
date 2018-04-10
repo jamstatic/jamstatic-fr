@@ -8,12 +8,14 @@ source:
   url: http://blog.teamtreehouse.com/hugo-templates-wordpress-designers
   lang: en
 images:
-  - /assets/images/hugo/header.jpg
+  - https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1200/v1523346505/hugo-header.jpg
 categories:
   - hugo
 ---
 
-{{% intro %}} Loin de réinventer la roue, les gestionnaires de site statique
+{{% intro %}}
+
+Loin de réinventer la roue, les gestionnaires de site statique
 comme Hugo s'appuient sur des conventions existantes. On retrouve beaucoup de
 fonctionnalités similaires entre un GSS comme Hugo et un CMS comme WordPress.
 Suite à la refonte du
@@ -22,8 +24,9 @@ Suite à la refonte du
 pour pointer les similitudes des deux systèmes. Outre la concision de la syntaxe
 d’Hugo, c'est l’occasion pour les designers WordPress d’apprécier la souplesse
 apportée par la gestion de la structuration des contenus sous forme de dossiers
-et de fichiers, ainsi que l’importance de la convention de nommage adoptée. {{%
-/intro %}}
+et de fichiers, ainsi que l’importance de la convention de nommage adoptée.
+
+{{% /intro %}}
 
 L'année dernière j'avais écris un article générique
 d’[introduction aux concepts qui se cachent derrière les gestionnaires de site statique](http://blog.teamtreehouse.com/getting-started-static-sites).
@@ -52,7 +55,7 @@ des fonctionnalités qui rendent WordPress si populaire. Mais cela a énormémen
 des fonctionnalités matures comme l’imbrication de templates ou les contenus
 relatifs, et les nouvelles fonctionnalités continuent d’affluer en permanence.
 
-{{< figure src="/assets/images/2017/10/home-page-templating-example-952x480.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346880/home-page-templating-example.png"
 caption="Édition d’un modèle de page pour Hugo" >}}
 
 ## Fondamentaux des templates Hugo
@@ -186,8 +189,11 @@ Voilà comment ça marche :
 {{ partial "footer.html" . }}
 ```
 
-{{% notice tip %}}N'oubliez pas le point (`.`) à la fin, il désigne le
-contexte.{{% /notice %}}
+{{% notice tip %}}
+
+N'oubliez pas le point (`.`) à la fin, il désigne le contexte.
+
+{{% /notice %}}
 
 Notez que le nom du fichier partiel doit se trouver dans le répertoire
 `partials`, un des sous-dossiers du dossier `layouts` où sont stockés les
@@ -197,13 +203,13 @@ C’est le bon moment pour vous présenter une des différences majeures entre
 WordPress et Hugo concernant les modèles. Dans WordPress, la localisation des
 éléments est en général cachée, la plupart des choses se trouvent dans une base
 de données
-([comme on peut le voir sur cette image](/assets/images/2017/10/31-02_php_scheme.png)).
+([comme on peut le voir sur cette image](https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346826/php_scheme.png)).
 
 Alors que les sites statiques sont simplement **des copies de fichiers sur votre
 ordinateur**, ce qui vous permet de visualiser et de manipuler la structure de
 votre site.
 
-{{< figure src="/assets/images/2017/10/layouts.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346873/layouts.png"
 caption="Un exemple typique du dossier `layouts` d’Hugo." >}}
 
 C’est un peu comme les systèmes d’exploitation ordinateur et mobile. Sur les
@@ -229,10 +235,10 @@ WordPress, Hugo est beaucoup moins normatif quant à l’organisation de votre
 site. Alors que WordPress utilise un modèle rigide d’articles et de pages, Hugo
 est façonné à l’aide de "contenu" générique et de répertoires.
 
-{{< figure src="/assets/images/2017/10/pages.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346891/pages-wordpress.png"
 caption="Articles et pages dans WordPress" >}}
 
-{{< figure src="/assets/images/2017/10/content-folder.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346845/hugo-content-folder.png"
 caption="Répertoires de contenu dans Hugo" >}}
 
 L'hypothèse de base que fait Hugo à propos de votre contenu est que vous l’avez
@@ -271,7 +277,7 @@ Pour voir à quoi cela ressemble en pratique, jetons un œil à la structure du
 [site de support de Balsamiq](https://support.balsamiq.com/) qui possède, entre
 autres, des sections appelées “plugins”, “tutorials”, “sales”.
 
-{{< figure src="/assets/images/2017/10/sbc-content.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346838/sbc-content.png"
 attr="Le dossier content du site de support de Balsamiq"
 attrlink="https://github.com/balsamiq/support.balsamiq.com/tree/master/content" >}}
 
@@ -279,7 +285,7 @@ Dans le dossier `section`, il y a des fichiers de modèles pour quelques-unes
 d’entre elles, nommées en fonction du dossier de contenu (par exemple
 "plugins.html").
 
-{{< figure src="/assets/images/2017/10/sbc-section.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1523346854/sbc-section.png"
 attrlink="https://github.com/balsamiq/support.balsamiq.com/tree/master/themes/support-balsamiq-com/layouts/section"
 attr="Le dossier section du site de support de Balsamiq" >}}
 
@@ -329,7 +335,7 @@ Sur [le site de documentation de Balsamiq](https://docs.balsamiq.com/), nous
 utilisons par exemple les shortcodes pour les messages d’alerte et
 d’information, comme on peut le voir ici :
 
-{{< figure src="/assets/images/2017/10/alerts.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/v1523216717/alerts.png"
 attrlink="https://docs.balsamiq.com"
 attr="Les messages d’information et d’alerte dans la documentation de Balsamiq" >}}
 

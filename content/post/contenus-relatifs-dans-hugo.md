@@ -12,11 +12,14 @@ source:
   url: "https://regisphilibert.com/blog/2018/04/hugo-optmized-relashionships-with-related-content/"
 ---
 
-{{% intro %}} Même s'il est le plus rapide des générateurs de site statiques,
+{{% intro %}}
+
+Même s'il est le plus rapide des générateurs de site statiques,
 Hugo continue de s'améliorer et de proposer de nouvelles fonctionnalités pour
 nous simplifier la vie. [Régis Philibert](https://regisphilibert.com/) a testé
-pour vous la gestion des contenus relatifs apparus dans la version `0.27`. {{%
-/intro %}}
+pour vous la gestion des contenus relatifs apparus dans la version `0.27`.
+
+{{% /intro %}}
 
 Je me suis enfin décidé à améliorer la façon dont je gère les relations entre
 les contenus dans mes projets en utilisant la fonctionnalité dédiée aux contenus
@@ -25,11 +28,7 @@ relatifs proposée par Hugo.[^1]
 **En faisant cela, j'ai diminué le temps de génération du site d’environ 70%**
 ⏱️ 👀!
 
-[^1]:
-
-  Merci à [@budparr](https://twitter.com/budparr) pour m'avoir initialement
-  suggéré de regarder du côté de cette fonctionnalité pour la gestion des
-  relations entre contenus dans Hugo.
+[^1]: Merci à [@budparr](https://twitter.com/budparr) pour m'avoir initialement suggéré de regarder du côté de cette fonctionnalité pour la gestion des relations entre contenus dans Hugo.
 
 Dans cet article, nous allons voir comme l’implémentation de relations entre vos
 contenus est facile à ajouter sur un projet existant et comment cela va changer
@@ -107,9 +106,12 @@ title: Son excellence Eugène Rougon
 id: excellence
 ```
 
-{{< notice >}} Nous pourrions choisir un identifiant existant comme le nom de
-fichier, mais je préfère un identifiant unique, facile à lire et à écrire. {{</
-notice >}}
+{{< notice >}}
+
+Nous pourrions choisir un identifiant existant comme le nom de
+fichier, mais je préfère un identifiant unique, facile à lire et à écrire.
+
+{{</notice >}}
 
 #### Les relations dans nos gabarits de page
 
@@ -135,10 +137,10 @@ plusieurs comme si nous étions en 2016 !
 
 Car cela a le mérite de fonctionner mais…
 
-2.  `interesect` ? `where "in"` ? N'en faisons-nous pas un peu trop ?
-3.  🐌 Le temps de génération est **7 fois** supérieur à la moyenne : ~7
+1.  `interesect` ? `where "in"` ? N'en faisons-nous pas un peu trop ?
+2.  🐌 Le temps de génération est **7 fois** supérieur à la moyenne : ~7
     secondes pour 1300 pages.
-4.  💩 C’est moche.
+3.  💩 C’est moche.
 
 OK… mais que pouvons-nous y faire ? 🤷‍♂️
 
@@ -251,12 +253,16 @@ Et qu'avons-nous gagné outre un code plus propre ?
 
 Le temps de génération n'excède maintenant pas les 1.5s. Dans le mille Émile !
 
-{{% notice %}} Si vous êtes curieux, vous pouvez cloner le
+{{% notice %}}
+
+Si vous êtes curieux, vous pouvez cloner le
 [repo](https://github.com/regisphilibert/rougon) et vous en donner à cœur joie
 avec la commande `hugo --templateMetrics`. Vous pouvez même passer sur la
 branche
 [`oldRelationship`](https://github.com/regisphilibert/rougon/tree/oldRelationships)
-et comparer avec l’implémentation précédente des relations. {{%/ notice %}}
+et comparer avec l’implémentation précédente des relations.
+
+{{%/ notice %}}
 
 ## Conclusion
 
