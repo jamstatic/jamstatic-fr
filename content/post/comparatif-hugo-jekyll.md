@@ -83,13 +83,15 @@ Des champs [Front Matter](https://jekyllrb.com/docs/frontmatter/) peuvent être
 ajoutés à ces fichiers, ils vous permettent de définir les données qui peuvent
 être utilisées dans vos gabarits.
 
-    ---
-    title: Accueil
-    date: 2017-01-30
-    tags: [bonjour, monde]
-    ---
-    ## Bonjour monde
-    C’est le contenu de ma page !
+```md
+---
+title: Accueil
+date: 2017-01-30
+tags: [bonjour, monde]
+---
+## Bonjour monde
+C’est le contenu de ma page !
+```
 
 Jekyll supporte les contenus chronologiques (comme des articles de blog) qui
 sont stockés dans le dossier `_posts` et qui respectent la nomenclature
@@ -112,17 +114,19 @@ Liquid** de Shopify. Liquid est un moteur de templating sécurisé conçu pour
 faire tourner du code tiers sur leurs serveurs. Liquid est conçu pour vous aider
 à faire ce que vous voulez sans qu'il y ait besoin d’ajouter de code Ruby natif.
 
-    <div class=“container”>
-    {% for post in site.posts %}
-        <div class="article">
-        <h2>{{ post.title }}</h2>
-        <p>{{ post.content }}</p>
-        {% for tag in post.tags %}
-            <span>{{ tag }}</span>
-        {% endfor %}
-        </div>
+```html
+<div class=“container”>
+{% for post in site.posts %}
+    <div class="article">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.content }}</p>
+    {% for tag in post.tags %}
+        <span>{{ tag }}</span>
     {% endfor %}
     </div>
+{% endfor %}
+</div>
+```
 
 C’est génial pour les débutants et les développeurs qui veulent créer des
 modèles fonctionnels, propres et simples.
@@ -154,9 +158,11 @@ Tous les fichiers `.scss`, `.sass` ou `.coffee` qui possèdent des délimiteurs
 Front Matter seront traités par Jekyll et transformés en fichiers `.css` et
 `.js`.
 
-    ---
-    ---
-    alert "Hello world!
+```js
+---
+---
+alert "Hello world!"
+```
 
 Le fait de devoir ajouter du Front Matter à chaque fichier fait que beaucoup de
 sites importants qui tournent en production sous Jekyll, optent pour des outils
@@ -306,13 +312,15 @@ and **reStructuredText**[^extensions].
 Hugo supporte aussi **TOML, YAML, et JSON** pour le Front Matter, alors que
 Jekyll ne supporte que le YAML.
 
-    +++
-    title = "Accueil"
-    date = "2017-01-30"
-    tags = ["bonjour", "monde"]
-    +++
-    ## Bonjour Monde
-    Ceci est un exemple de Front Matter en TOML
+```toml
++++
+title = "Accueil"
+date = "2017-01-30"
+tags = ["bonjour", "monde"]
++++
+## Bonjour Monde
+Ceci est un exemple de Front Matter en TOML
+```
 
 Hugo supporte également les données externes, qui peuvent être stockées dans le
 répertoire `/data` de votre projet ou bien récupérées depuis des sources de
@@ -332,17 +340,19 @@ Hugo utilise le [package de template](https://golang.org/pkg/html/template/) de
 Go par défaut. Tout comme avec Liquid, il est possible d’ajouter un peu logique
 dans vos gabarits.
 
-    <div class=“container”>
-    {{ range .Site.Pages}
-        <div class="article">
-        <h2>{{ .Title }}</h2>
-        <p>{{ .Content }}</p>
-        {{ range .Tags }}
-            <span>{{ . }}</span>
-        {{ end }}
-        </div>
+```go-html-template
+<div class=“container”>
+{{ range .Site.Pages}
+    <div class="article">
+    <h2>{{ .Title }}</h2>
+    <p>{{ .Content }}</p>
+    {{ range .Tags }}
+        <span>{{ . }}</span>
     {{ end }}
     </div>
+{{ end }}
+</div>
+```
 
 Une fois de plus, c'est très bien pour les débutants mais vous allez devoir
 étendre les possibilités du moteur de template à l’aide de _shortcodes_ pour
