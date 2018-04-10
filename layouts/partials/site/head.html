@@ -9,6 +9,7 @@
 <link rel="preload" href="{{ "assets/fonts/roboto-v18-latin-900italic.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{ "assets/fonts/roboto-mono-v5-latin-regular.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{ "assets/fonts/roboto-mono-v5-latin-700.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ "assets/css/chroma.css" | relURL }}">
 {{ end -}}
 <title>{{ block "title" . }}{{ if .IsHome }}{{ .Site.Params.Description }} · {{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} · {{ end }}{{ .Site.Title }}{{ end }}{{ end }}</title>
 {{ .Hugo.Generator }}

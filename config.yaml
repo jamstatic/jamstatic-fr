@@ -15,6 +15,9 @@ blackfriday:
   angledQuotes: true
   smartypantsQuotesNBSP: true
 
+pygmentsCodefences: true
+pygmentsUseClasses: true
+
 mediaTypes:
   "text/netlify":
     suffix: ""
