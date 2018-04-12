@@ -9,7 +9,7 @@ source:
   url: https://mademistakes.com/articles/improving-jekyll-static-comments/
   lang: en
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/c_scale,q_auto,w_1200/v1523364658/improving-jekyll-static-comments-feature.jpg
+  - https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1200/v1523364658/improving-jekyll-static-comments-feature.jpg
 categories:
   - jekyll
 ---
@@ -29,7 +29,7 @@ si statique que ça, proposant ainsi une alternative à Disqus au même titre qu
 {{% /intro %}}
 
 {{< figure
-src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,q_auto,w_1024/v1523364658/improving-jekyll-static-comments-feature.jpg"
+src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1024/v1523364658/improving-jekyll-static-comments-feature.jpg"
 attr="Photo Gabriel Santiago" attrlink="https://unsplash.com/@gabrielssantiago" >}}
 
 Depuis que j'ai quitté Disqus pour

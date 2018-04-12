@@ -8,15 +8,19 @@ source:
   url: http://cloudinary.com/blog/how_i_used_cloudinary_to_solve_responsive_image_needs_in_my_jekyll_website_and_shared_the_magic_in_a_plugin
   title: How I used Cloudinary to solve responsive image needs in my Jekyll website, and shared the magic in a plugin
 images:
-  - http://res-1.cloudinary.com/cloudinary/image/upload/c_fill,w_560/dpr_1.0/jekyll_cloudinary_plugin.png
+  - http://res-1.cloudinary.com/cloudinary/image/upload/c_fill,q_auto,f_auto,w_560/dpr_1.0/jekyll_cloudinary_plugin.png
 categories:
   - jekyll
 ---
 
-{{% intro %}} J'ai récemment mis à jour
+{{% intro %}}
+
+J'ai récemment mis à jour
 [mon site perso](https://nicolas-hoizey.com) avec
 [la version 3.0 de Jekyll](https://jekyllrb.com/news/2015/10/26/jekyll-3-0-released/)
-et j'en ai profité pour changer quelques outils. {{% /intro %}}
+et j'en ai profité pour changer quelques outils.
+
+{{% /intro %}}
 
 Les plugins que j'utilisais ne répondaient pas à mes exigences pour les images
 reponsive, j'ai donc décidé de trouver d’autres moyens de satisfaire ces
