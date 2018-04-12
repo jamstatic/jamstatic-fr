@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/jamstatic/jamstatic-fr#readme",
   "dependencies": {
-    "atomic-algolia": "^0.3.12"
+    "atomic-algolia": "^0.3.15"
   }
 }
