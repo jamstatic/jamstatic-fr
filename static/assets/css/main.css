@@ -310,8 +310,8 @@ body { display: flex; flex-direction: column; min-height: 100vh; -webkit-font-sm
 
 /** Page content */
 .page-content { margin-bottom: 1.44em; }
-.page-content li { margin-bottom: 0.75; }
-.page-content li img { margin: 0.75 0; }
+.page-content li { margin-bottom: 0.72em; }
+.page-content li img { margin: 0.72em 0; }
 .page-content .hr::after { content: ""; display: block; position: absolute; width: 100%; }
 .page-content hr, .page-content .hr::after { background-image: linear-gradient(90deg, rgba(14, 30, 37, 0) 0, #0e1e25 30%, #0e1e25 70%, rgba(14, 30, 37, 0) 100%); border: none; height: 1.728px; margin: 1.44em auto; opacity: 0.12; }
 
@@ -526,5 +526,3 @@ table th, table td { padding: 15.552px; border-bottom: 0.0134em solid #8b8b8b; }
 .icon--rss { color: #e3702d; }
 
 .icon--meetup { color: #f64060; }
-
-/*# sourceMappingURL=main.css.map */
