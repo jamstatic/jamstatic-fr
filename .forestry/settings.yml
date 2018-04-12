@@ -1,7 +1,7 @@
 ---
-upload_path: "/static/uploads/:year:/:month:/:day:"
-frontmatter_file_url_template: "/uploads/:year:/:month:/:day:"
-body_file_url_template: "/uploads/:year:/:month:/:day:"
+upload_path: "/static/images/:year:/:month:/"
+frontmatter_file_url_template: "/images/:year:/:month:/"
+body_file_url_template: "/images/:year:/:month:/"
 new_page_extension: md
 auto_deploy: false
 admin_path: 
@@ -9,4 +9,4 @@ webhook_url:
 sections:
   post:
     default_front_matter_template: post
-version: 0.31.1
+version: 0.38.1
