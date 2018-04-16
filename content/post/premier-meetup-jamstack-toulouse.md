@@ -40,9 +40,10 @@ stressantes de projets, où faute de workflow automatisé et prédictible, les
 sueur perlera sur le front de la personne chargée d’appuyer sur le bouton rouge.
 Personne ne souhaite vivre de telles expériences.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346988/phil-meetup-jamstack.jpg"
-caption="Phil Hawksworth" attr="Photo : Nicolas Manaud"
-attrlink="https://twitter.com/nmanaud/status/974957331279695872" >}}
+<figure>
+{{< youtube dphhk_7eqGw >}}
+<figcaption><p>Phil Hawksworth - Deploy early, deploy often</p></figcaption>
+</figure>
 
 Pour s'éviter de tels tracas, autant commencer par s'assurer que le déploiement
 automatique fonctionne comme il faut en début de projet. Mieux encore, en
@@ -80,6 +81,11 @@ déploiement continu à ceux dont c'est le métier.
 
 ## Ajouter une recherche sur un site statique
 
+<figure>
+{{< youtube mnySRW94NL4 >}}
+<figcaption><p>Martyn davies - Adding search to your stack</p></figcaption>
+</figure>
+
 [Martyn Davies](https://twitter.com/martynd), nouvellement arrivé chez
 [Algolia](https://algolia.com), est venu nous montrer comment ajouter une
 recherche performante sur un site généré en statique. Pari réussi puisqu'à la
@@ -100,10 +106,6 @@ créé un compte sur le site d’Algolia ainsi qu'un premier projet, on va récu
 une clef d’API et un nom d’index de recherche qu'on va reporter dans les
 paramètres de configuration du plugin. On est sur du _Copier-Coller driven
 development_.
-
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346978/martyn-meetup-jamstack.jpg"
-caption="Martyn Davies" attr="Photo : Nicolas Manaud"
-attrlink="https://twitter.com/nmanaud/status/974957331279695872" >}}
 
 Une fois que c'est fait, on va créer un modèle de page pour la recherche, qui
 fera appel à un script JS et à une feuille de style hébergés par Algolia sur un
