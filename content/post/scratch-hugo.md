@@ -115,7 +115,7 @@ Maintenant récupérons tout ça.
 
 ```go-html-template
 // Avec la fonction range
-{{ range .Scratch.Get "salutations" }}
+{{ range where .Scratch.Get "salutations" }}
 <ol>
     <li>
         {{ . }}
