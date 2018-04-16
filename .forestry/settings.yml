@@ -4,9 +4,9 @@ frontmatter_file_url_template: "/images/:year:/:month:/"
 body_file_url_template: "/images/:year:/:month:/"
 new_page_extension: md
 auto_deploy: false
-admin_path: 
-webhook_url: 
+admin_path:
+webhook_url:
 sections:
   post:
     default_front_matter_template: post
-version: 0.38.1
+version: 0.39
