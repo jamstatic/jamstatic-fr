@@ -40,7 +40,7 @@ body {
   margin: 0 auto;
   padding: 0 0.5em;
   font-family: $title-font-family;
-  font-size: $title1 * $ratio;
+  font-size: $title1 * ($ratio*$ratio);
   font-weight: 900;
   letter-spacing: $title-letter-spacing;
   line-height: 1;
