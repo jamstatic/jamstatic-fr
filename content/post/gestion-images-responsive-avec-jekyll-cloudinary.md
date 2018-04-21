@@ -23,13 +23,13 @@ et j'en ai profité pour changer quelques outils.
 {{% /intro %}}
 
 Les plugins que j'utilisais ne répondaient pas à mes exigences pour les images
-reponsive, j'ai donc décidé de trouver d’autres moyens de satisfaire ces
+responsive, j'ai donc décidé de trouver d’autres moyens de satisfaire ces
 besoins.
 
 Pour générer le code HTML des images responsive (dois-je vous vraiment vous
 rappeler qu'utiliser les
-[images responsive natives](http://responsiveimages.org/) devrait ête un réflexe
-de nos jours ?), j'ai resté le plugin
+[images responsive natives](http://responsiveimages.org/) devrait être un réflexe
+de nos jours ?), j'ai testé le plugin
 [Jekyll Responsive Image](https://github.com/wildlyinaccurate/jekyll-responsive-image).
 Il est vraiment sympa, il vous laisse définir vos propres gabarits de balisage
 d’image, vous pouvez donc utiliser `srcset` ou `<picture>` selon votre envie.
@@ -38,7 +38,7 @@ Mais il ne répondait à tous mes besoins :
 * Lors de la première génération d’un site statique Jekyll avec ce plugin vous
   devez générer toutes les variantes à partir des images originales. J'ai
   actuellement environ 750 images sur mon blog et cela entraîne des temps de
-  compilation extrêment longs,
+  compilation extrêmement longs,
 * Envoyer toutes ces variantes au serveur prend également du temps, car je n'ai
   pas un accès très rapide chez moi,
 * Et bien entendu toutes ces images sont servies sur le même serveur que les
@@ -47,7 +47,7 @@ Mais il ne répondait à tous mes besoins :
 Je voulais revenir à un workflow plus simple et plus rapide et qui génère moins
 de charge côté serveur.
 
-La plupart des sites web responsive que ma société développe pour ses client
+La plupart des sites web responsive que ma société développe pour ses clients
 utilisent des solutions ad hoc pour les images responsive, mais j'avais
 connaissance de quelques solutions SaaS d’images responsive. J'ai donc décidé de
 voir si l’une d’entre elles pouvait répondre à mes besoins.
@@ -79,7 +79,7 @@ Les fonctions principales que je cherchais et que fournit Cloudinary sont :
   :** Si je publie des images JPEG dans mes billets, Cloudinary peut envoyer des
   images au format WebP aux visiteurs s'il est supporté par leur navigateur. Le
   mois dernier, deux tiers des images servies par Cloudinary à mes visiteurs
-  étaient au format WebP, que Cloudinary génére et sert pour moi
+  étaient au format WebP, que Cloudinary génère et sert pour moi
   automatiquement. C’est un gain énorme à la fois pour la performance et les
   forfaits de données de mes visiteurs et également pour mon quota de bande
   passante chez Cloudinary.
@@ -89,14 +89,14 @@ Les fonctions principales que je cherchais et que fournit Cloudinary sont :
   visuel.
 
 Persuadé que Cloudinary répondait à toutes mes attentes, il me fallait encore
-développer un plugin Jekyll qui puisse utliser ces fonctionalités.
+développer un plugin Jekyll qui puisse utiliser ces fonctionnalités.
 
 Après réflexion, j'ai décidé de partir avec une
 [balise Liquid](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers)
 `{% cloudinary %}` qui simplifierait la publication d’image avec Cloudinary et
 qui était relativement simple à développer. Je me suis inspiré d’autres plugins,
 j'ai trouvé de l’aide sur StackOverflow quand j'en avais besoin et j'ai fini par
-publier la premier version du
+publier la première version du
 [plugin Jekyll Cloudinary](https://nhoizey.github.io/jekyll-cloudinary/) en
 juillet 2016.
 
@@ -147,7 +147,7 @@ Vous avez entièrement la main sur le nombre d’images générées, leurs réso
 et les attributs `sizes` (qui aident le navigateur à décider quelle image
 télécharger). Cela se fait à partir des options de configuration à votre
 disposition dans votre fichier `_config.yml`. Voici l’extrait de mon fichier de
-configuration où je définis les régles pour les logos :
+configuration où je définis les règles pour les logos :
 
 ```yaml
 cloudinary:
@@ -185,7 +185,7 @@ cloudinary:
   j'utilise dans mon CSS pour m'assurer que le logo ne prenne pas plus d’un
   quart de la largeur de son conteneur et le fait flotter à droite.
 
-Vous pouvez définir toutes ces régles pour autant de préréglages dont vous aurez
+Vous pouvez définir toutes ces règles pour autant de préréglages dont vous aurez
 besoin.
 
 Avec ce plugin et mon compte Cloudinary, **le temps de génération de mon site a
@@ -205,12 +205,12 @@ hooks Jekyll à l’avenir.
 
 Au final, cela a était un bon moyen d’apprendre un peu de Ruby, de comprendre
 les rouages internes de Jekyll, comment fonctionnent les plugins et comment
-publier une Gem… J'ai tellement appris en peu de temps grâce à ce petit projet
+publier une gem… J'ai tellement appris en peu de temps grâce à ce petit projet
 si utile et important à mes yeux.
 
 Bien entendu, toute aide est la bienvenue pour aider à améliorer le plugin. Il y
 a déjà
 [quelques anomalies et demandes de fonctionnalités ouvertes](https://github.com/nhoizey/jekyll-cloudinary/issues).
-N'hésitez pas à me signaler tout problème ou à partager vos idées, voire même à
+N'hésitez pas à me signaler tout problème ou à partager vos idées, voire à
 contribuer via des
 [pull requests](https://github.com/nhoizey/jekyll-cloudinary/pulls) !

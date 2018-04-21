@@ -30,7 +30,7 @@ c'est très accessible, c'est du HTML auquel on va ajouter un peu de
 [Liquid](http://shopify.github.io/liquid/), le langage de templating conçu pour
 les concepteurs de thèmes Shopify, pour accéder à nos données.
 
-Nous ne nous étendrons donc pas pas sur cette partie, qui consiste à préparer
+Nous ne nous étendrons donc pas sur cette partie, qui consiste à préparer
 vos différents modèles de pages, ce sont les conventions par défaut de Jekyll
 qui s'appliquent : les feuilles de styles sont stockées dans le dossier `_sass`,
 les modèles de pages dans le dossier `_layouts`, les composants réutilisables
@@ -176,7 +176,7 @@ si vous souhaitez utiliser des plugins dans votre thème. Dans notre exemple,
 nous voulons ajouter la gestion d’un flux RSS, la génération d’un sitemap et des
 méta-données pour le SEO.
 
-Nous ajoutons donc les dépendances ainsi que les version minimales requises,
+Nous ajoutons donc les dépendances ainsi que les versions minimales requises,
 comme nous le ferions dans un fichier `Gemfile` à l’aide de
 [`spec.add_runtime_dependency`](http://guides.rubygems.org/specification-reference/#add_runtime_dependency)
 :
@@ -267,7 +267,7 @@ Nous pouvons maintenant tester notre thème en exécutant la commande
 d’ajouter le répertoire de destination - `_site` par défaut - à votre fichier
 `.gitignore`.
 
-Vérifiez le rendu sur différents navigateurs et appareils, aidez vous
+Vérifiez le rendu sur différents navigateurs et appareils, aidez-vous
 d’[html-proofer](https://github.com/gjtorikian/html-proofer) si vous souhaitez
 vous assurer que tous les liens internes fonctionnent :
 
@@ -291,7 +291,7 @@ publication. Cette étape est déjà
 [documentée sur le site de Jekyll](https://jekyllrb.com/docs/themes/#publishing-your-theme),
 nous nous contenterons simplement ici de rappeler qu'elle se fait en deux temps.
 
-La première commande va créer la gem à proprement parlée à partir du fichier de
+La première commande va créer la gem à proprement parlé à partir du fichier de
 spécification :
 
 ```sh

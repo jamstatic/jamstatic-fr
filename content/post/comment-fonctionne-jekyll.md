@@ -99,7 +99,7 @@ th, tr td:first-child {
 </script>
 
 [Jekyll](https://jekyllrb.com) peut paraître un peu déroutant au début. En effet
-Jekyll ne fait pas grand chose à vos fichiers, si ce n'est qu'il les classifie
+Jekyll ne fait pas grand-chose à vos fichiers, si ce n'est qu'il les classifie
 de différentes façons.
 
 Jekyll va soit copier, soit omettre, soit transformer les fichiers du répertoire

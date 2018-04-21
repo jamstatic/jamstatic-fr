@@ -157,7 +157,7 @@ caption="La configuration du split testing chez Netlify" >}}
 
 Cette fonctionnalité me bluffe. Elle rend les différents types de tests A/B
 vraiment trivial à mettre en place. Si vous tirez déjà parti du déploiement de
-branches, il n'y a pas grand chose à faire de plus.
+branches, il n'y a pas grand-chose à faire de plus.
 
 Vous me direz que beaucoup d’entreprises peuvent vous vendre des services de
 tests A/B pour votre site. J'ai été un grand adepte de ces services. Mais la

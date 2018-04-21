@@ -33,7 +33,7 @@ problématiques, que ce soit générer de la documentation, tester ses CSS,
 prototyper ses sites web, travailler sa stratégie de contenu voire faire des
 choses beaucoup moins conventionnelles comme c’est le cas chez Mapbox.
 
-Les témoignages de Stack Overflow et quelques unes des meilleures agences seront
+Les témoignages de Stack Overflow et quelques-unes des meilleures agences seront
 surement riches en enseignements. CloudCannon nous montrera comment les
 utilisateurs finaux peuvent éditer des sites sous Jekyll.
 
@@ -42,5 +42,5 @@ techniques comme les différentes manières de déployer Jekyll : sur Amazon,
 déploiement continu avec Docker… d’implémenter une solution de recherche comme
 Algolia ou Elasticsearch ou comment gérer les images responsive.
 
-**Mise à jour** : Toutes les conférences sont diponibles sur
+**Mise à jour** : Toutes les conférences sont disponibles sur
 [https://jekyllrb.com/community/](https://jekyllrb.com/community/).

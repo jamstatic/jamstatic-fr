@@ -1,6 +1,6 @@
 ---
 title: Les nouveautés de Jekyll 3.3
-description: Cettte version intègre le support des assets dans les thèmes, de nouveaux
+description: Jekyll 3.3 intègre le support des assets dans les thèmes, de nouveaux
   filtres pour les URLs et bien plus encore.
 date: 2016-10-07
 images:
@@ -9,11 +9,14 @@ categories:
   - jekyll
 ---
 
-{{% intro %}} Plein de nouveautés pour vous simplifier la vie dans la version
-3.3 de Jekyll. On retiendra trois fonctionnalités à tester en priorite. {{%
-/intro %}}
+{{% intro %}}
 
-## Les themes peuvent désormais fournir des assets statiques et dynamiques dans le dossier `/assets`
+Plein de nouveautés pour vous simplifier la vie dans la version
+3.3 de Jekyll. On retiendra trois fonctionnalités à tester en priorité.
+
+{{% /intro %}}
+
+## Les thèmes peuvent désormais fournir des assets statiques et dynamiques dans le dossier `/assets`
 
 Depuis Jekyll 3.2, il est possible de packager un thème sous forme de
 [gem](http://guides.rubygems.org/), il était déjà possible d’embarquer des
@@ -50,7 +53,7 @@ dans vos templates. Fini de vous emmêler les pinceaux avec `baseurl` et `url`.
 Lorsque vous développez en local, si vous définissez la valeur de `baseurl` afin
 qu'elle corresponde à votre environnement de développement, mettons par exemple
 `baseurl: "/mondossier"`, le filtre `relative_url` se chargera de préfixer cette
-valeur pour toutes les URLs que vous appelerez :
+valeur pour toutes les URLs que vous appellerez :
 
 ```liquid
 {{ "/docs/assets/" | relative_url }} => /mondossier/docs/assets
@@ -88,7 +91,7 @@ vous développez en local, la valeur de `site.url` sera donc remplacée par
 `http://localhost:4000`.
 
 C’est le comportement par défaut lorsque vous exécutez Jekyll en local. Ce ne
-sera pas le cas si vous exécutez `jekyll serve` si vous prévisez un
+sera pas le cas si vous exécutez `jekyll serve` si vous précisez un
 environnement de production avec `JEKYLL_ENV=production`. Si la variable
 d’environnement `JEKYLL_ENV` possède une autre valeur que `development` (sa
 valeur par défaut), Jekyll n'écrasera pas la valeur du paramètre `url` définie

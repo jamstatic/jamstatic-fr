@@ -67,7 +67,7 @@ $ git push -u origin source
 Maintenant que vous avez créé la branche `source`, vous pouvez en faire la
 branche par _défaut_ dans GitHub :
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346483/default-branch-github.png" alt="Paramètrage des branches dans GitHub" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346483/default-branch-github.png" alt="Paramétrage des branches dans GitHub" >}}
 
 ### Publication automatique
 
@@ -100,7 +100,7 @@ apporter quelques petites modifications au fichier `Rakefile` :
 
 Vous pouvez maintenant lancer `rake site:publish` pour générer votre site et le
 publier sur GitHub. Jetez également un coup d’œil au [fichier Rakefile de
-Jekyll][jekyll-rakefile] pour une implémentation alternation de la tâche
+Jekyll][jekyll-rakefile] pour une implémentation alternative de la tâche
 `rake site:publish`.
 
 [jekyll-rakefile]: https://github.com/jekyll/jekyll/blob/master/rake/site.rake#L55
