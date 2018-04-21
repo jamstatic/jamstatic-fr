@@ -516,7 +516,7 @@ fonctionne.
 
 Habitué à la manière dont [**WordPress**](https://wordpress.org/) gère les
 formulaires de réponse, j'y ai pioché de l’inspiration. En mettant le nez dans
-le code JavaScriptqui se trouve dans
+le code JavaScript qui se trouve dans
 [`wp-includes/js/comment-reply.js`](https://core.svn.wordpress.org/trunk/wp-includes/js/comment-reply.js)
 j'ai trouvé tout ce dont j'avais besoin:
 
