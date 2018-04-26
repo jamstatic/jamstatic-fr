@@ -2,9 +2,11 @@
 title: Construire un blog statique avec Gatsby et Strapi
 description: Découvrez comment facilement développer un blog en utilisant Gatsby et Strapi.
 date: 2018-04-26
+author: pierreburgy
+images:
+ - https://blog.strapi.io/content/images/2018/04/strapi-plus-gatsby-love.jpg
 categories:
  - gatsby
- - strapi
  - cms
  - headless
 ---
@@ -13,31 +15,31 @@ categories:
 
 ## Introduction
 
-Un site statique est un site dont le contenu est fixe. Techniquement, il est composé d'une simple liste de fichiers HTML, qui affiche les même informations quelque soit le visiteur. Contrairement aux sites dynamiques, il ne requiert ni programmation back-end ni base de données. Publier un site static est simple : il suffit d'uploader les fichiers sur un service de stockage et le tour est joué. Les deux principaux avantages d'un site web sont la sécurité et la vitesse : étant donné qu'il n'y a pas de base de données le site ne peut pas se faire hacker, et puisqu'il n'y a pas de génération de page à chaque requête, la navigation pour l'utilisateur est plus fluide.
+Un site statique est un site dont le contenu est fixe. Techniquement, il est composé d'une simple liste de fichiers HTML, qui affiche les mêmes informations quel que soit le visiteur. Contrairement aux sites dynamiques, il ne requiert ni programmation back-end ni base de données. Publier un site statique est simple : il suffit d'uploader les fichiers sur un service de stockage et le tour est joué. Les deux principaux avantages d'un site web sont la sécurité et la vitesse : étant donné qu'il n'y a pas de base de données le site ne peut pas se faire hacker, et puisqu'il n'y a pas de génération de page à chaque requête, la navigation pour l'utilisateur est plus fluide.
 
-Pour faciliter leur création, de nombreux générateurs de sites statiques sont disponibles: [Jekyll](https://jekyllrb.com/), [Hugo](https://gohugo.io/), [Hexo](https://hexo.io/), etc. La plupart du temps, le contenu est géré via des fichiers (idéalement en format Markdown) statiques ou via une API de contenu. Ensuite, le générateur requête le contenu, l'injecte dans les templates définis par le développeur et génère un ensemble de fichiers HTML, CSS et JavaScript.
+Pour faciliter leur création, de nombreux générateurs de sites statiques sont disponibles: [Jekyll](https://jekyllrb.com/), [Hugo](https://gohugo.io/), [Hexo](https://hexo.io/), etc. La plupart du temps, le contenu est géré via des fichiers (idéalement en format Markdown) statiques ou via une API de contenu. Ensuite, le générateur requête le contenu, l'injecte dans les templates définis par le développeur et génère un ensemble de fichiers HTML, CSS et JavaScript.
 
-Les Progressive Web Apps (PWA) sont des applications web, reposant fortement sur l'utilisation de JavaScript, qui se veulent être [fiables, rapides et engageantes](https://developers.google.com/web/progressive-web-apps). Étant donné qu'elle rendent la navigation plus rapide et qu'elles offrent une expérience utilisateur bien meilleure, les PWA sont devenues la manière par défaut de construire des interfaces web. Pour cette raison, de nombreux frameworks front-end ont fait leur apparition au cours des dernières années : Angular, Vue et plus récemment, React.
+Les Progressive Web Apps (PWA) sont des applications web, reposant fortement sur l'utilisation de JavaScript, qui se veulent être [fiables, rapides et engageantes](https://developers.google.com/web/progressive-web-apps). Étant donné qu'elles rendent la navigation plus rapide et qu'elles offrent une expérience utilisateur bien meilleure, les PWA sont devenues la manière par défaut de construire des interfaces web. Pour cette raison, de nombreux frameworks front-end ont fait leur apparition au cours des dernières années : Angular, React, et plus récemment, Vue.
 
 > Gatsby : quand les sites statiques rencontrent les Progressive Web Apps.
 
-Les sites Web statiques et PWA ont tous les deux de solides avantages, ce qui nous incite à trouver un moyen de les utiliser tous les deux dans le même projet. Heureusement, quelques outils ont réussi à faire le pont entre les deux, notamment celui dont on entend le plus parler depuis quelques mois : [Gatsby](https://www.gatsbyjs.org/). Nous avons donc décidé de vous donner un exemple complet pour vous apprendre à commencer facilement à l'utiliser. Un site statique a besoin d'une source de contenu : dans cet exemple, nous allons le délivrer grâce à une API créée avec Strapi.
+Les sites Web statiques et PWA ont tous les deux de solides avantages, ce qui nous incite à trouver un moyen de les utiliser tous les deux dans le même projet. Heureusement, quelques outils ont réussi à faire le pont entre les deux, notamment celui dont on entend le plus parler depuis quelques mois : [Gatsby](https://www.gatsbyjs.org/). Nous avons donc décidé de vous donner un exemple complet pour vous apprendre à commencer à l'utiliser facilement. Un site statique a besoin d'une source de contenu : dans cet exemple, nous allons le délivrer grâce à une API créée avec Strapi.
 
 ### Qu'est-ce que Gatsby ?
 
-D'après ses créateurs, [Gatsby](https://www.gatsbyjs.org) est un "*blazing-fast **website framework** for React*". Il permet aux développeurs de créer des site construits avec React en quelques minutes. Que vous vouliez développer un blog ou un site vitrine, Gatsby devrait correspondre à vos besoins.
+D'après ses créateurs, [Gatsby](https://www.gatsbyjs.org) est un "*blazing-fast website framework for React*". Il permet aux développeurs de créer des sites construits avec React en quelques minutes. Que vous vouliez développer un blog ou un site vitrine, Gatsby devrait correspondre à vos besoins.
 
-<a href="https://www.gatsbyjs.org"><img style="width:50%" alt="Gatsby logo" src="https://blog.strapi.io/content/images/2018/04/gatsby-logo.jpg"></a>
+{{<figure src="https://blog.strapi.io/content/images/2018/04/gatsby-logo.jpg" width="50%" link="https://www.gatsbyjs.org">}}
 
 Étant donné que Gatsby utilise React, les pages générées ne sont jamais rechargées, ce qui rend le site extrêmement rapide. De nombreux plugins sont disponibles pour permettre aux développeurs de gagner du temps et de récupérer la donnée depuis n'importe quelle source (fichiers Markdown, CMS, etc.). Gatsby est fortement basé sur le concept de la ["node" interface](https://www.gatsbyjs.org/docs/node-interface/), qui est le centre du système de données de Gatsby.
 
-Créé par [Kyle Mathews](https://twitter.com/kylemathews), le projet a été officiellement [publié en juillet 2017](https://www.gatsbyjs.org/blog/gatsby-v1/) et est dors et déjà [utilisé par des dizaines d'entreprises](https://github.com/gatsbyjs/gatsby#showcase).
+Créé par [Kyle Mathews](https://twitter.com/kylemathews), le projet a été officiellement [publié en juillet 2017](https://www.gatsbyjs.org/blog/gatsby-v1/) et est d'ores et déjà [utilisé par des dizaines d'entreprises](https://github.com/gatsbyjs/gatsby#showcase).
 
 ### Qu'est-ce que Strapi?
 
 [Strapi](https://strapi.io) est le Content Management Framework le plus avancé sur la technologie Node.js. À mi-chemin entre un famework Nodejs et un Headless CMS (API-first), il permet d'économiser des semaines de développement.
 
-<a href="https://strapi.io"><img style="width:50%" src="https://blog.strapi.io/content/images/2018/04/strapi-logo.jpg"></a>
+{{< figure src="https://blog.strapi.io/content/images/2018/04/strapi-logo.jpg" link="https://strapi.io" width="50%">}}
 
 Grâce à son système extensible de plugin, il propose de nombreuses fonctionnalités : panel d'administration, authentification et gestion des permissions, gestion de contenu, générateur d'API, etc.
 
@@ -94,7 +96,7 @@ Démarrez le serveur Node.js :
 $ strapi start
 ```
 
-À partir de maintenant, vous devriez être à même de voir le panel d'administration de votre projet : http://localhost:1337/admin.
+À partir de maintenant, vous devriez être à même de voir le panel d'administration de votre projet : [http://localhost:1337/admin](http://localhost:1337/admin).
 
 ### Création du premier utilisateur
 
@@ -167,7 +169,7 @@ Démarrez le serveur :
 $ gatsby develop
 ```
 
-À partir de ce moment, votre site Gatsby devrait être disponible à l'adresse suivante : http://localhost:8000.
+À partir de ce moment, votre site Gatsby devrait être disponible à l'adresse suivante : [http://localhost:8000](http://localhost:8000).
 
 ### Installation du plugin source Strapi
 
@@ -272,7 +274,7 @@ Gastby inclue l'excellente interface GraphiQL. Cela facilite grandement la créa
 
 ### Vue article
 
-Notre site commence à ressembler à un blog. C'est une bonne nouvelle ! Cependant, un partie important est encore manquante : la page article.
+Notre site commence à ressembler à un blog. C'est une bonne nouvelle ! Cependant, une partie importante est encore manquante : la page article.
 
 Commençons par créer le template contenant la requête GraphQL et définissant le contenu affiché :
 
@@ -509,4 +511,4 @@ Lorsque votre projet sera terminé, vous voudrez probablement le déployer. Le s
 
 Le [code source de ce tutoriel est disponible sur GitHub](https://github.com/strapi/strapi-examples/tree/master/gatsby-strapi-tutorial). Pour le tester, clonez le repository et suivez les instructions présentes dans le Readme.
 
-Nous espérons que vous avez apprécié ce tutoriel. N'hésitez pas à le commentez, le partager, et indiquer quelle est votre manière favorite de créer des sites avec React et d'en gérer le contenu.
+Nous espérons que vous avez apprécié ce tutoriel. N'hésitez pas à le commenter, le partager, et indiquer quelle est votre manière favorite de créer des sites avec React et d'en gérer le contenu.
