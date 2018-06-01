@@ -79,9 +79,9 @@ faire passer le message aux développeurs, des gens comme Matt Biilmann, le
 créateur et le CEO de [Netlify](http://netlify.com/), ont diffusé le concept de
 la JAMstack: une approche différente, _serverless_ pour développer des sites web
 modernes et performants. JAM signifie JavaScript, APIs et Markup et l'idée
-centrale est de ne plus à avoir à gérer ses propres serveurs, d'héberger le code
+centrale est de ne plus avoir à gérer ses propres serveurs, d'héberger le code
 sur des CDNs rapides, fiables et sécurisés et de faire interagir les navigateurs
-avec les APIs qui peuvent s'occuper des composants "dynamiques". La JAMstack
+avec les APIs qui peuvent s'occuper des composants « dynamiques ». La JAMstack
 personnifie toutes les tendances soulignées plus haut. 
 
 ## Le paysage de la JAMstack
@@ -114,19 +114,19 @@ précédente et   identifier l'origine des anomalies.
 
 ## Et ensuite ?
 
-Permetttre **une meilleure collaboration** entre toutes les parties prenantes du
+Permettre **une meilleure collaboration** entre toutes les parties prenantes du
 frontend — les créateurs de contenus, les gens du marketing, du design et du
-développement. _"Les développeurs détestent avoir à créer et éditer du texte,
+développement. _« Les développeurs détestent avoir à créer et éditer du texte,
 les créateurs de contenu détestent devoir passer par les développeurs pour
-apporter des modifications simples"_ — Scott Moss, CEO de
+apporter des modifications simples »_ — Scott Moss, CEO de
 [Tipe](http://tipe.io/). 
 
 La **conception d'interface basée sur des composants** est en pleine expansion,
 l'utilisation de [Storybook](https://storybook.js.org/) décolle (10% des
 téléchargements React) et les composants réutilisables vont accélérer la vitesse
-de développement, en particulier celle des équipes. "L'adoption de React, Vue et
+de développement, en particulier celle des équipes. « L'adoption de React, Vue et
 Angular s'accompagne d'un changement de paradigme vers le développement basé sur
-des composants et Storybook est au cœur de ce mouvement" — Zoltan Olah, CEO de
+des composants et Storybook est au cœur de ce mouvement » — Zoltan Olah, CEO de
 [Chroma](https://www.chromaticqa.com/).
 
 **Des services pour le frontend** : des plate-formes comme [Zeit](https://zeit.co/) 
@@ -148,5 +148,5 @@ résulte est très prometteur pour l'écosystème des startups et des
 capital-risqueurs. [CRV](https://www.crv.com/) aime prendre des risques au plus
 tôt, et a déjà investi dans 6 startups qui font partie du paysage de la JAMstack
 (dont 3 qui seront annoncées publiquement très bientôt). Si vous êtes un
-créateur de startup lié à cet ecosystème, un investisseur ou que vous voulez
+créateur de startup lié à cet écosystème, un investisseur ou que vous voulez
 simplement papoter, écrivez à reid@crv.com. 
