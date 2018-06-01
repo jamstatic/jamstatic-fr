@@ -1,7 +1,7 @@
 ---
 title: "Les startups de l’écosystème JAMstack"
 date: 2018-05-31T20:21:08+02:00
-description: ""
+description: "Les capital risqueurs de la Silicon Valley misent sur les startups autour de la JAMstack"
 categories:
   - jamstack
 images:
