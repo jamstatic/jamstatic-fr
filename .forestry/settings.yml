@@ -6,9 +6,9 @@ webhook_url:
 sections:
   content/post:
     default_front_matter_template: post
-upload_dir: static/images
-public_path: "/images"
+upload_dir: ''
+public_path: ''
 front_matter_path: ''
-use_front_matter_path: false
-file_template: ":year:/:month:/:filename:"
+use_front_matter_path: 
+file_template: ":filename:"
 version: 0.42.1
