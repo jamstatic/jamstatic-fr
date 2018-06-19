@@ -1,12 +1,14 @@
 ---
-upload_path: "/static/images/:year:/:month:/"
-frontmatter_file_url_template: "/images/:year:/:month:/"
-body_file_url_template: "/images/:year:/:month:/"
 new_page_extension: md
 auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
-  post:
+  content/post:
     default_front_matter_template: post
-version: 0.38.1
+upload_dir: static/images
+public_path: "/images"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":year:/:month:/:filename:"
+version: 0.42.1
