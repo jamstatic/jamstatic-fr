@@ -179,39 +179,42 @@ de génération plus modernes comme Gulp ou
 Ces outils vous donnent plus de contrôle sur vos fichiers CSS, JS, vos images et
 votre HTML et permettent la minification et l’optimisation. Ces outils vous
 donnent aussi accès à BrowerSync ou LiveReload, qui facilitent le
-développement\[^livereload\].
+développement[^livereload].
 
-\[^livereload\]: NdT: Les versions récentes de Jekyll [intègrent LiveReload](https://jekyllrb.com/news/2018/01/02/jekyll-3-7-0-released/).
+[^livereload]: NdT: Les versions récentes de Jekyll [intègrent LiveReload](https://jekyllrb.com/news/2018/01/02/jekyll-3-7-0-released/).
 
 ### Fonctionnalités utiles
 
-Le cœur de Jekyll propose des fonctionnalités minimales\[^core\] et n'intègre pas
-une bonne partie des choses qu'on pourrait attendre d’un site web moderne comme
-\:
+Le cœur de Jekyll propose des fonctionnalités minimales[^core] et n'intègre pas
+une bonne partie des choses qu'on pourrait attendre d’un site web moderne comme:
 
-\[^core\]: NdT: La philosophie de Jekyll est de garder un cœur [réduit et extensible](https://jekyllrb.com/philosophy#5-small--extensible)
+[^core]: NdT: La philosophie de Jekyll est de garder un cœur [réduit et extensible](https://jekyllrb.com/philosophy#5-small--extensible)
 
-* la gestion des menus,
-* la génération de sitemap XML\[^core-plugin\],
-* la génération d’un flux RSS/Atom\[^core-plugin\],
-* la gestion des scripts Analytics,
-* la gestion des commentaires,
-* la gestion multilingue/i18n,
-* et bien plus…
+-  la gestion des menus,
+-  la génération de sitemap XML[^core-plugin],
+-  la génération d’un flux RSS/Atom[^core-plugin],
+-  la gestion des scripts Analytics,
+-  la gestion des commentaires,
+-  la gestion multilingue/i18n,
+-  et bien plus…
 
-\[^core-plugin\]: NdT: L'équipe de Jekyll maintient des plugins qui permettent de [générer un sitemap XML](https://github.com/jekyll/jekyll-sitemap), générer [un flux ATOM pour les articles](https://github.com/jekyll/jekyll-feed), les [balises-meta pour le SEO](https://github.com/jekyll/jekyll-seo-tag). La plupart des thèmes comme [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) supportent l’insertion de scripts Google Analytics ou Disqus et la gestion des menus via des fichiers YAML.
+[^core-plugin]: NdT: L'équipe de Jekyll maintient des plugins qui permettent de [générer un sitemap XML](https://github.com/jekyll/jekyll-sitemap), générer [un flux ATOM pour les articles](https://github.com/jekyll/jekyll-feed), les [balises-meta pour le SEO](https://github.com/jekyll/jekyll-seo-tag). La plupart des thèmes comme [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) supportent l’insertion de scripts Google Analytics ou Disqus et la gestion des menus via des fichiers YAML.
 
 Pour cela il faudra utiliser des plugins Jekyll tiers, qui sont de cinq types :
 
-* les **générateurs**, qui permettent de compléter et de modifier le processus
-  de génération de Jekyll,
-* les **convertisseurs**, qui permettent d’ajouter le support de nouveaux
-  formats de fichiers,
-* les **commandes**, qui permettent d’étendre les options de la ligne de
-  commande de Jekyll,
-* les **tags**, qui permettent d’ajouter de nouvelles balises Liquid,
-* les **filtres**, qui permettent de modifier le rendu des balises Liquid et des
-  variables.
+-  les **générateurs**, qui permettent de compléter et de modifier le processus
+   de génération de Jekyll,
+
+-  les **convertisseurs**, qui permettent d’ajouter le support de nouveaux
+   formats de fichiers,
+
+-  les **commandes**, qui permettent d’étendre les options de la ligne de
+   commande de Jekyll,
+
+-  les **tags**, qui permettent d’ajouter de nouvelles balises Liquid,
+
+-  les **filtres**, qui permettent de modifier le rendu des balises Liquid et des
+   variables.
 
 Par exemple, Forestry a dévelopé le
 [plugin jekyll-menus](https://github.com/forestryio/jekyll-menus) qui permet de
@@ -262,9 +265,9 @@ statique en pesant les pour et les contre.
   problème. Mais les sites plus importants pourraient voir les temps de
   génération augmenter.
 * Un **manque de fonctionnalités natives.** Les fonctionnalités de premier ordre
-  sont mieux supportées et intégrées. Ce point fait défaut à Jekyll.\[^plugins\]
+  sont mieux supportées et intégrées. Ce point fait défaut à Jekyll.[^plugins]
 
-\[^plugins\]: NdT: Les plugins de génération de Sitemap XML, de génération de Flux RSS/Atom ou de génération des balises meta pour le SEO sont développés par la core team et sont parfaitement bien intégrés à Jekyll.
+[^plugins]: NdT: Les plugins de génération de Sitemap XML, de génération de Flux RSS/Atom ou de génération des balises meta pour le SEO sont développés par la core team et sont parfaitement bien intégrés à Jekyll.
 
 {{% notice tip %}}
 
@@ -276,11 +279,11 @@ pour apprendre à développer un site avec Jekyll et le connecter au CMS Forestr
 
 ## Hugo
 
-Hugo est le générateur de site statique créé\[^hugo\] par Steve Francia, un des
+Hugo est le générateur de site statique créé[^hugo] par Steve Francia, un des
 principaux contributeurs au langage de programmation Go de Google. Hugo est bien
 entendu développé en Go !
 
-\[^hugo\]: Hugo a été depuis principalement développé par \[Bjørn Erik Pedersen\]({{< relref "interview-hugo-lead-developer.md" >}}).
+[^hugo]: Hugo a été depuis principalement développé par [Bjørn Erik Pedersen]({{< relref "interview-hugo-lead-developer.md" >}}).
 
 Apparu en 2013, Hugo est rapidement devenu le deuxième GSS le plus populaire
 derrière Jekyll et compte à ce jour plus de 24 000 étoiles sur GitHub.
@@ -312,9 +315,9 @@ Dans Hugo, dans les contenus destinés à être générés sont stockés dans le
 dossier `content` de votre projet. Vous pouvez utiliser différents formats:
 **Markdown, Mark,** et **HTML** sont supportés par défaut, et il existe des
 extensions tierces pour supporter **Asciidoc**
-and **reStructuredText**\[^extensions\].
+and **reStructuredText**[^extensions].
 
-\[^extensions\]: NdT: à l’heure actuelle comme ces extensions ne reposent pas sur des librairies natives en Go, vous perdrez donc le gain de performance apporté par Hugo.
+[^extensions]: NdT: à l’heure actuelle comme ces extensions ne reposent pas sur des librairies natives en Go, vous perdrez donc le gain de performance apporté par Hugo.
 
 Hugo supporte aussi **TOML, YAML, et JSON** pour le Front Matter, alors que
 Jekyll ne supporte que le YAML.
