@@ -388,19 +388,7 @@ automatiquement le site dans votre navigateur.
 
 #### Gestion des assets
 
-Hugo ne procède à aucune transformation de vos assets (CSS, JS, SVG, etc.), il
-se contente de recopier tous les fichiers qui se trouvent dans le répertoire
-`/static` de votre projet.
-
-Si vous avez l’habitude d’utiliser Sass, CoffeeScript ou n'importe quel autre
-préprocesseur ou gestionnaire d’assets, il vous faudra regarder du côté d’outils
-comme Gulp ou Webpack. Cela signifie que vous allez devoir inclure Hugo dans
-votre processus de génération externalisé, ce qui peut s'avérer ennuyeux pour
-les débutants.
-
-Une gestion plus avancée des assets est
-[en cours de développement](https://github.com/gohugoio/hugo/issues/4446), mais
-à l’heure actuelle, elle n'a pas encore été intégrée dans le cœur d’Hugo.
+Jusqu'à la version 0.43, Hugo ne procèdait à aucune transformation de vos assets (CSS, JS, SVG, etc.), il se contentait de recopier tous les fichiers qui se trouvent dans le répertoire `/static` de votre projet. Maintenant vous n'avez plus besoin d'externaliser votre processus de génération à Webpack ou Gulp pour [compiler vos fichiers Sass ou minifier vos CSS et votre JS](https://gohugo.io/news/0.43-relnotes/).
 
 ### Fonctionnalités utiles
 
