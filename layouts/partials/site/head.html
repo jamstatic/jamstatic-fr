@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
 {{ else }}
 {{$cssOpts := (dict "targetPath" "assets/css/main.css" ) }}
-{{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts | minify }}
+{{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
 {{ end }}
 <link rel="alternate" href="{{ .Site.RSSLink | relURL }}" title="{{ .Site.Title }}" type="application/atom+xml">
