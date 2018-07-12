@@ -45,15 +45,13 @@ L'exemple que je vais couvrir ici est [le site de documentation][rollcalldocs]
 pour le principal logiciel édité par notre entreprise. Le site regroupe beaucoup
 de contenus avec des centaines d’articles.
 
-[rollcalldocs]: http://rollcalldocs.netlify.com/ "Version beta"
-
 La liste de pré-requis pour ce site est la suivante :
 
-* Vitesse — autant pour le développement que pour la performance du site
-* Facilité d’utilisation — autant pour le développeur que pour le contributeur
-* Recherche — c'est un site de documentation après tout
-* Hébergement pas cher — maximisation de la valeur (qui ne la recherche pas ?)
-* Déploiement en continu automatisé
+-  Vitesse — autant pour le développement que pour la performance du site
+-  Facilité d’utilisation — autant pour le développeur que pour le contributeur
+-  Recherche — c'est un site de documentation après tout
+-  Hébergement pas cher — maximisation de la valeur (qui ne la recherche pas ?)
+-  Déploiement en continu automatisé
 
 Voici donc un retour d’expérience global sur l’utilisation de
 [Gatsby](https://www.gatsbyjs.org) avec
@@ -125,9 +123,9 @@ fantastique. C’est comme avoir une interface comme WordPress, sauf que vous ê
 entièrement responsable de la couche client. La beauté de Contentful est triple
 :
 
-* Une interface utilisateur attractive et intuitive,
-* Un modèle de contenu simple,
-* [Une formule gratuite](https://www.contentful.com/pricing/).
+-  Une interface utilisateur attractive et intuitive,
+-  Un modèle de contenu simple,
+-  [Une formule gratuite](https://www.contentful.com/pricing/).
 
 L'utilisation de l’interface d’administration de Contentful est intéressante et
 la modélisation du contenu est bien plus avancée comparé à ce que proposent
@@ -320,15 +318,22 @@ améliorer ce qui était déjà un hébergement au top vu le prix. Je suis oblig
 lister dans cette partie toutes les raisons qui font que Netlify est tellement
 extra :
 
-* Formule gratuite dans le cadre de projets personnels ou commerciaux (c'est
+-  Formule gratuite dans le cadre de projets personnels ou commerciaux (c'est
   vraiment une super offre gratuite),
-* activation du HTTPS en un clic grâce à Let's Encrypt,
-* réseau de CDN ultra-rapide,
-* support des noms de domaines personnalisés,
-* déploiements automatiques
-* un moteur de génération intégré super cool,
-* [et bien plus…](https://www.netlify.com/features/)
-* Et si je vous dis que tout ça est GRATUIT ?
+
+-  activation du HTTPS en un clic grâce à Let's Encrypt,
+
+-  réseau de CDN ultra-rapide,
+
+-  support des noms de domaines personnalisés,
+
+-  déploiements automatiques
+
+-  un moteur de génération intégré super cool,
+
+-  [et bien plus…](https://www.netlify.com/features/)
+
+-  Et si je vous dis que tout ça est GRATUIT ?
 
 Voyons maintenant son utilisation avec Gatsby.
 
@@ -380,3 +385,5 @@ marche, tout simplement. Il vous suffit de cliquer sur quelques boutons et vous
 vous retrouvez à vous demander "Non, mais c'est vraiment aussi simple que ça ?".
 
 Maintenant, j'espère que nos clients partageront ce sentiment avec notre site.
+
+[rollcalldocs]: http://rollcalldocs.netlify.com/ "Version beta"

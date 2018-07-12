@@ -43,6 +43,7 @@ que votre site dure 10 ans, pas 10 mois.**
     [installez node.js et npm](https://docs.npmjs.com/getting-started/installing-node)
     (ils sont dispos sous la forme d’un seul et unique paquet). Eleventy ne
     fonctionne qu’à partir de `node --version` 8.0.0 ou plus.
+
 2.  Ensuite, installez l’utilitaire en ligne de commande, disponible sur
     [npm](https://www.npmjs.com/package/@11ty/eleventy) :
     `npm install -g @11ty/eleventy`
@@ -57,11 +58,10 @@ propre domaine [bukk.it](https://bukk.it/). Appelons ça _Giffleball_.
 
 #### Création des fichiers
 
-Créons un dossier pour notre tout nouveau site web. (`~ $` ne fait pas partie de
-la commande à lancer)
+Créons un dossier pour notre tout nouveau site web.
 
-```
-~ $ mkdir giffleball
+```sh
+mkdir giffleball
 ```
 
 Ajoutons quelques images à notre site. Voici une sélection d’images d’oiseaux
@@ -125,7 +125,7 @@ générer notre site. Nous passerons en option les extensions de fichier que nou
 voulons voir `eleventy` traiter :
 
 ```sh
-~ $ cd giffleball
+~ cd giffleball
 ~/giffleball $ eleventy --formats=html,gif,jpg
 Writing _site/index.html from ./index.html.
 Wrote 1 file in 0.07 seconds
@@ -187,7 +187,7 @@ disponibles lorsque vous utilisez une extension de fichier spécifique. Par
 exemple notre fichier `index.html` aurait pu s'appeler `index.liquid` et le
 fonctionnement aurait été le même :
 
-```
+```sh
 ~/giffleball $ mv index.html index.liquid
 ~/giffleball $ eleventy --formats=liquid,html,jpg,gif
 Writing _site/index.html from ./index.liquid.
@@ -204,12 +204,14 @@ L'utilisation d’un moteur de rendu présente plusieurs avantages :
     n'avons besoin de le modifier qu'à un seul endroit (le front matter) au lieu
     de deux. Pour ajouter ou supprimer des images nous n'avons pas à toucher au
     modèle de code HTML.
+
 2.  Modifier le balisage des liens vers nos images en une fois. Admettons que
     nous souhaitions modifier le code HTML de notre liste d’images. Comme nous
     nous basons sur des données, nous pouvons modifier le modèle de code HTML
     dans notre boucle plutôt que de devoir modifier chaque `<li>`
     individuellement. Trois passent encore mais vous imaginez si notre site
     listait 300 images ?
+
 3.  Les caractères spéciaux contenus dans les noms de fichier. Quand je regarde
     dans mon navigateur, on dirait que mon serveur web n'aime pas trop des noms
     tels que `???.jpg`. Le fichier ne s'affiche pas correctement. Que se
@@ -381,14 +383,14 @@ Jekyll ou Hugo, c'est l’accès à tout l’écosystème de NPM. Il y a telleme
 d’excellents modules. Si vous êtes assez courageux pour jouer avec `npm`, lancez
 cette commande pour générer un fichier `package.json` pour notre projet :
 
-```
+```sh
 ~/giffleball $ npm init -f
 ```
 
 Nous pouvons maintenant installer des modules cools à notre projet, comme
 [file-size pour des tailles de fichiers plus lisibles](https://www.npmjs.com/package/file-size).
 
-```
+```sh
 ~/giffleball $ npm install --save file-size
 + file-size@1.0.0
 added 1 package in 1.491s

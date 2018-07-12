@@ -207,13 +207,16 @@ faire cela dans l’interface d’administration ou avec du code. Je préfère l
 deuxième méthode, voyons ensemble comment faire cela. Nous avons _beaucoup_
 d’options mais tenons nous en pour le moment aux options de base :
 
-* _searchableAttributes_: listez ce que vous voulez pouvoir rechercher dans
-  l’objet Algolia que vous avez crée
-* _attributesToHighlight_: mettre en surbrillance le champ recherché
-* _customRanking_: choisissez la façon donc vous voulez afficher vos données,
-  `desc()` ou `asc()`
-* _attributesToRetrieve_: les attributs à afficher dans les résultats de
-  recherche
+-  _searchableAttributes_: listez ce que vous voulez pouvoir rechercher dans
+   l’objet Algolia que vous avez crée
+
+-  _attributesToHighlight_: mettre en surbrillance le champ recherché
+
+-  _customRanking_: choisissez la façon donc vous voulez afficher vos données,
+   `desc()` ou `asc()`
+
+-  _attributesToRetrieve_: les attributs à afficher dans les résultats de
+   recherche
 
 ```javascript
 async function configureAlgoliaIndex() {

@@ -12,7 +12,7 @@ source:
   url: "https://medium.com/netlify/10-netlify-features-to-surprise-and-delight-225e846b7b21"
 ---
 
-{{% intro %}} 
+{{% intro %}}
 
 En l’espace de quelques années [Netlify](https://www.netlify.com/)
 est devenu un acteur incontournable de l’écosystème JAMstack - ils sont
@@ -29,7 +29,7 @@ d’être un devops confirmé. Ce n'est pas simplement une solution pour héberg
 vos sites statiques à moindre frais, [le passage de Smashing Magazine à une
 architecture JAMstack]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}})
 hébergée par Netlify a montré que ça pouvait aller bien au delà en faisant appel
-à différentes APIs et microservices. 
+à différentes APIs et microservices.
 
 {{% /intro %}}
 
@@ -63,7 +63,7 @@ prefère vous renvoyer à [la documentation](https://www.netlify.com/docs) pour
 plus dans ma liste. Bon OK, c'est ce que je faisais, vous m'avez démasqué.
 Passons maintenant à la liste à proprement parler.
 
-## 1. Déploiements atomiques avec publication et retour en arrière immédiats.
+## 1. Déploiements atomiques avec publication et retour en arrière immédiats
 
 Si vous avez déjà rencontré des problèmes de mise en production ou de
 déploiement sur des projets de développement web, vous apprécierez grandement
@@ -152,7 +152,7 @@ trafic de votre site entre les différentes branches de votre choix.
 Vous pouvez partager le trafic de votre site en autant de branches que vous le
 souhaitez et définir le pourcentage de trafic attribué à chacune des branches.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347053/split-testing.png" 
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347053/split-testing.png"
 caption="La configuration du split testing chez Netlify" >}}
 
 Cette fonctionnalité me bluffe. Elle rend les différents types de tests A/B
@@ -244,7 +244,7 @@ La configuration se fait en un clic (bon ok peut-être trois, mais ça m'a pris
 moins d’une minute). En plus le certificat est renouvelé automatiquement, pour
 que vous n'ayez pas à le faire tous les ans.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347047/ssl-config.png" 
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347047/ssl-config.png"
 caption="La configuration de SSL chez Netlify avec renouvellement automatique des certificats grâce à Let’s Encrypt" >}}
 
 ### 7. Lancer des tests avec l’intégration continue de Netlify

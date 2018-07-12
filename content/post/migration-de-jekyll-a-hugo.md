@@ -59,8 +59,6 @@ j'effectuais beaucoup de changements d’affilée, le ventilateur de mon Macbook
 commençait à s'emballer comme un fou, l’ordinateur chauffait et faisait le bruit
 d’un avion sur le point de décoller. [^1]
 
-[^1]: NdT: Il est vrai que le temps de compilation de Jekyll peut excéder plusieurs minutes quand vous compilez des centaines de pages, cela dépend des plugins que vous utilisez et de l’optimisation de vos templates Liquid. À titre de comparaison, pour ce blog, il n'excède pas les 10 secondes par défaut et à peine plus d’une seconde avec l’option `incremental` activée.
-
 Je dirais que mon site est de taille modeste. J'ai moins d’une centaine de
 billets de blog, même moins de 60 à l’heure où j'écris cet article, et seulement
 quelques pages statiques. Je ne me repose pas beaucoup sur JavaScript. En fait,
@@ -167,7 +165,7 @@ puisque c'est ma principale machine de travail.
 J'ai utilisé `brew` pour installer Hugo :
 
 ```sh
-$ brew install hugo
+brew install hugo
 ```
 
 J'ai suivi les instructions présentes sur la page d’installation, mis à jour
@@ -320,10 +318,6 @@ Puisque je voulais m'imprégner d’un nouvel environnement et que la plupart de
 documentation et des ressources dédiées à Hugo utilisent le format `toml`, c'est
 le format que j'ai utilisé. Jekyll utilise `yaml`.[^2]
 
-[front-matter]: https://gohugo.io/content/front-matter/
-
-[^2]: NdT: Pour la petite histoire c'est Tom Preston-Werner, le créateur de Jekyll qui est à l’origine de [TOML](https://github.com/toml-lang/toml) (d’où son nom). Vous pouvez [apprendre TOML en quelques minutes](https://learnxinyminutes.com/docs/toml/), [même chose pour YAML](https://learnxinyminutes.com/docs/fr-fr/yaml-fr/)
-
 {{% notice info %}}
 
 Je ne rentrerai pas ici sur les différences entre les deux
@@ -372,8 +366,6 @@ plus. C’est une fonctionnalité intéressante.
 
 C’est une des choses que j'aime chez Hugo comparativement à Jekyll qui, _à ma
 connaissance_, n'offre pas de fonctionnalité similaire.[^3]
-
-[^3]: NdT: C’est inexact, Jekyll offre la possibilité de créer ses propres types de contenu avec les [collections](https://jekyllrb.com/docs/collections/).
 
 La capture d’écran ci-contre montre à quoi ressemble mon dossier `/content/` en
 ce moment :
@@ -613,7 +605,7 @@ utiliser pour chaque page créée dans le dossier `/content/`. Nous en reparlero
 dans la section dédiée aux modèles juste après. Donc si nous n'avions pas défini
 le fichier `/layouts/static/single.html` comme étant le modèle à utiliser, Hugo
 aurait utilisé un modèle par défaut stocké dans `/layouts/`. Nous y
-reviendrons.**
+reviendrons**.
 
 Enfin, comme pour la page d’accueil, le contenu HTML de la page _À propos_ se
 trouve dans le fichier `about.md` puis il est ensuite inséré dans le modèle
@@ -1005,17 +997,22 @@ Un hébergement gratuit et rapide ! Woohoo !
 
 La configuration de votre site se fait en quelques clics :
 
-* Créer un compte sur [netlify.com](https://netlify.com)
-* Relier son compte Netlify à son dépôt de code. Le mien est hébergé sur GitHub,
+-  Créer un compte sur [netlify.com](https://netlify.com)
+
+-  Relier son compte Netlify à son dépôt de code. Le mien est hébergé sur GitHub,
   j'ai pu le connecter depuis l’interface de Netlify.
-* Spécifier le dossier de destination ainsi que la commande de build,
+
+-  Spécifier le dossier de destination ainsi que la commande de build,
   respectivement `public` et `hugo` dans mon cas. (Voir les captures d’écrans
   ci-dessous)
-* Configuration de votre nom de domaine. Cela demande de faire quelques
+
+-  Configuration de votre nom de domaine. Cela demande de faire quelques
   changements de DNS.
-* Cela m'a demandé seulement 3 clics pour bénéficier d’un certificat SSL
+
+-  Cela m'a demandé seulement 3 clics pour bénéficier d’un certificat SSL
   renouvelé automatiquement et d’une connexion HTTPS pour mon site.
-* Et… c'est tout.
+
+-  Et… c'est tout.
 
 Je devrais probablement mentionner le fait que j'ai rencontré quelques
 difficultés lorsque j'ai fait la bascule, mais ce n'était pas de la faute de
@@ -1026,12 +1023,13 @@ site soit en ligne avec mon nom de domaine personnalisé.
 
 Quelques bons trucs à savoir :
 
-* Ajouter votre dossier `/public/` à votre fichier `.gitignore`. Netlify va
+-  Ajouter votre dossier `/public/` à votre fichier `.gitignore`. Netlify va
   lancer la génération de votre site sur ses serveurs. Pour éviter de possibles
   conflits, ne versionnez pas votre dossier de destination dans votre dépôt. Le
   mien n'est présent que sur ma machine. Je rencontrais des problèmes de rendus
   avec certains templates quand je le versionnais auparavant.
-* Vérifiez bien la version d’Hugo que vous utilisez (`hugo version`) et celle
+
+-  Vérifiez bien la version d’Hugo que vous utilisez (`hugo version`) et celle
   utilisée par Netlify. Au début j'ai eu droit à des erreurs de build qui
   empêchaient le déploiement, car ma version était plus récente que celle de
   Netlify. Si c'est le cas
@@ -1057,10 +1055,10 @@ auparavant. J'ai encore du travail de ce côté-là.
 
 ### Résumé de ma configuration actuelle
 
-* Le code source du site web est hébergé sur GitHub,
-* J'utilise Hugo comme générateur de site statique,
-* Déploiement automatiquement à chaque `push` sur le dépôt grâce à Netlify,
-* Hébergée gratuitement chez Netlify avec le plan Open Source.
+-  Le code source du site web est hébergé sur GitHub,
+-  J'utilise Hugo comme générateur de site statique,
+-  Déploiement automatiquement à chaque `push` sur le dépôt grâce à Netlify,
+-  Hébergée gratuitement chez Netlify avec le plan Open Source.
 
 Il est également utile de mentionner que désormais la compilation complète de
 mon site après chaque changement, sans avoir à filtrer de vieux contenus, prend
@@ -1074,17 +1072,22 @@ On retrouve ici quelques-unes des choses qui figurent sur ma TODO liste depuis
 quelques années et que j'avais jusqu'ici remis à plus tard, en partie à cause de
 la situation dans laquelle je me trouvais précédemment avec Jekyll :
 
-* **Lancer une mailing-list.** C’est prévu d’ici la fin du mois.
-* Une nouvelle section pour les articles qui ne rentrent pas dans la section des
+-  **Lancer une mailing-list.** C’est prévu d’ici la fin du mois.
+
+-  Une nouvelle section pour les articles qui ne rentrent pas dans la section des
   articles techniques.
-* Améliorer la qualité du code du site pour ne plus être embarrassée et rendre
+
+-  Améliorer la qualité du code du site pour ne plus être embarrassée et rendre
   le dépôt public sur Github.
-* **Rendre le site disponible en mode offline.** Et le rendre encore plus
+
+-  **Rendre le site disponible en mode offline.** Et le rendre encore plus
   _rapide_.
-* Il y aura une **FAQ** mais pas au format des AMA (Ask Me Anything) qu'on
+
+-  Il y aura une **FAQ** mais pas au format des AMA (Ask Me Anything) qu'on
   trouve sur GitHub. Il y a des aspects que je n'aime pas dans ce format. Plus
   d’informations et de détails dès que la lettre d’information paraîtra.
-* **Écrire plus régulièrement.** Je laisse beaucoup trop d’idées de côté que je
+
+-  **Écrire plus régulièrement.** Je laisse beaucoup trop d’idées de côté que je
   devrais transformer en articles de blog. Je me suis promise d’écrire plus
   souvent, même si ces idées d’articles ne sont pas aussi poussées que
   d’habitude. Cet article est un début.
@@ -1105,3 +1108,11 @@ plaisir à écrire des articles de blog, ce qui veut dire que vous pouvez vous
 attendre à de prochaines publications dans les semaines à venir.
 
 Merci de m'avoir lue jusqu'ici.
+
+[^1]: NdT: Il est vrai que le temps de compilation de Jekyll peut excéder plusieurs minutes quand vous compilez des centaines de pages, cela dépend des plugins que vous utilisez et de l’optimisation de vos templates Liquid. À titre de comparaison, pour ce blog, il n'excède pas les 10 secondes par défaut et à peine plus d’une seconde avec l’option `incremental` activée.
+
+[^2]: NdT: Pour la petite histoire c'est Tom Preston-Werner, le créateur de Jekyll qui est à l’origine de [TOML](https://github.com/toml-lang/toml) (d’où son nom). Vous pouvez [apprendre TOML en quelques minutes](https://learnxinyminutes.com/docs/toml/), [même chose pour YAML](https://learnxinyminutes.com/docs/fr-fr/yaml-fr/)
+
+[^3]: NdT: C’est inexact, Jekyll offre la possibilité de créer ses propres types de contenu avec les [collections](https://jekyllrb.com/docs/collections/).
+
+[front-matter]: https://gohugo.io/content/front-matter/

@@ -135,8 +135,8 @@ tout ce que peut contenir ce type de fichier, je vous invite à consulter la
 Lorsque vous utilisez la commande `new-theme` de Jekyll, par défaut, le fichier
 de spécification de votre gem ressemble à ça :
 
-```
-# coding: utf-8
+```ruby
+# frozen-string-literal: true
 
 Gem::Specification.new do |spec|
   spec.name          = "mon-super-theme"
@@ -307,7 +307,7 @@ pas d’utiliser les tags git pour vous rappeler du moment où vous l’avez
 générée), pensez donc à ajouter la ligne suivante dans votre fichier
 `.gitignore` :
 
-```
+```txt
 *.gem
 ```
 
@@ -338,11 +338,13 @@ Twitter avec le hashtag `#jekyllrb` ou en commentaire de ce billet 😄.
 Si vous cherchez des références, vous pouvez toujours prendre exemple sur des
 structures de thèmes accessibles sur Github, notamment :
 
-* [Minima](https://github.com/jekyll/minima), le thème par défaut de Jekyll,
+- [Minima](https://github.com/jekyll/minima), le thème par défaut de Jekyll,
   idéal pour se familiariser avec la structure que nous venons de voir,
-* [Alembic](https://github.com/daviddarnes/alembic/) un bon point de départ un
+
+- [Alembic](https://github.com/daviddarnes/alembic/) un bon point de départ un
   plus complet proposé par David Darnes
-* [Minimal mistakes](https://github.com/mmistakes/minimal-mistakes/), le thème
+
+- [Minimal mistakes](https://github.com/mmistakes/minimal-mistakes/), le thème
   très complet de Michael Rose, qui utilise des collections et tout un tas
   d’autres fonctionnalités plus avancées de Jekyll.
 

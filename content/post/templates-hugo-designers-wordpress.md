@@ -372,17 +372,23 @@ Enfin, voici une liste d’excellentes ressources en anglais sur Hugo pour vous
 aider dans votre périple. Si vous m'avez lu jusqu'ici c'est que vous avez au
 moins envie d’en savoir un peu plus.
 
-* [La documentation officielle d’Hugo](https://gohugo.io/documentation/).
-* [Le forum officiel d’Hugo](https://discourse.gohugo.io/) – un bon endroit pour
+- [La documentation officielle d’Hugo](https://gohugo.io/documentation/).
+
+- [Le forum officiel d’Hugo](https://discourse.gohugo.io/) – un bon endroit pour
   trouver des réponses à vos questions et déboguer votre code.
-* [Les tutoriels vidéo de Giraffe Academy sur YouTube](https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3)
-  * 23 vidéos !
-* [Le thème “Learn” pour Hugo](https://themes.gohugo.io/theme/hugo-theme-learn/en)
-  * Un bon endroit pour commencer à jouer.
-* [D'autres thèmes pour Hugo](https://themes.gohugo.io/)
-  * pour que vous n'ayez pas à commencer de zéro.
-* [Un des nombreux billets de blog sur le passage de WordPress à Hugo](https://blog.philipphauer.de/moving-wordpress-hugo/).
-* [Bien démarrer avec les sites statiques](http://blog.teamtreehouse.com/getting-started-static-sites)
-  * mon article précédent sur les sites statiques.
+
+- [Les tutoriels vidéo de Giraffe Academy sur YouTube](https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3)
+  - 23 vidéos !
+
+- [Le thème “Learn” pour Hugo](https://themes.gohugo.io/theme/hugo-theme-learn/en)
+  - Un bon endroit pour commencer à jouer.
+
+- [D'autres thèmes pour Hugo](https://themes.gohugo.io/)
+  - pour que vous n'ayez pas à commencer de zéro.
+
+- [Un des nombreux billets de blog sur le passage de WordPress à Hugo](https://blog.philipphauer.de/moving-wordpress-hugo/).
+
+- [Bien démarrer avec les sites statiques](http://blog.teamtreehouse.com/getting-started-static-sites)
+  - mon article précédent sur les sites statiques.
 
 Merci de m'avoir lu. Bonne génération de site !

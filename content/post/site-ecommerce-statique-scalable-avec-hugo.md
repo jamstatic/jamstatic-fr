@@ -40,16 +40,18 @@ des sites importants les plus en vue à être passé au statique.
 Les avantages des sites statiques sont clairement documentés, et s'il fallait
 résumer :
 
-* **Performance** : pas d’application, pas de base de données, tout le HTML est
+- **Performance** : pas d’application, pas de base de données, tout le HTML est
   pré-rendu. Le temps pour télécharger le premier byte (TTFB) est réduit au
   minimum  —  les sites statiques sont en réalité un bon gros cache, stocké au
   chaud sur un <abbr title="Content Delivery Network">CDN</abbr>.
-* **Montée en charge** : par conséquence, la charge du serveur est très réduite,
+
+- **Montée en charge** : par conséquence, la charge du serveur est très réduite,
   la possibilité de servir le site entier depuis un CDN implique que les pics de
   trafic peuvent être aisément absorbés. Moins de temps de consommation CPU, pas
   de ralentissement dus aux bases de données, une infrastructure simplifiée et
   bien moins onéreuse.
-* **Sécurité** : Tout est dans le code source des pages HTML.
+
+- **Sécurité** : Tout est dans le code source des pages HTML.
 
 Ce sont de très bonnes raisons d’utiliser un
 <abbr title="Générateur de Site Statique">GSS</abbr> pour des sites de contenu.
@@ -133,11 +135,12 @@ précédemment ?
 Pour y parvenir, notre architecture extensible ecommerce statique doit répondre
 à plusieurs critères :
 
-* **Vitesse** : elle doit être capable de générer le site rapidement. Même si
+- **Vitesse** : elle doit être capable de générer le site rapidement. Même si
   les changements de fichiers ne sont pas si fréquents, lorsqu'ils se
   produisent, les changements doivent être répercutés sur le site de production
   aussi vite que possible pour éviter de frustrer le client.
-* **Données** : le modèle de données doit être suffisamment flexible pour
+
+- **Données** : le modèle de données doit être suffisamment flexible pour
   pouvoir gérer les informations liées aux produits : description, niveau de
   stock, prix, mais aussi pages de contenu, articles de blog et systèmes de
   navigation.
@@ -199,7 +202,7 @@ au format XML.
 Quand je lance la commande `hugo` pour générer le site, la tâche prend moins
 d’une seconde — en moyenne 720ms sur un MacBook Pro pour être précis :
 
-```
+```sh
 Built site for language fr:
 0 draft content
 0 future content
@@ -216,13 +219,14 @@ total in 724 ms
 Je trouve cela très impressionnant. Il y a tout de même quelques points à
 prendre en compte :
 
-* **La complexité** : bien que ces gabarits de page présentent quelques
+- **La complexité** : bien que ces gabarits de page présentent quelques
   difficultés, le code HTML généré est encore très basique et ne saurait suffire
   à proposer une interface similaire à celle montrée en exemple. Cela dit j'ai
   par la suite augmenté la complexité du HTML petit à petit lors de mes tests et
   je n'ai pas remarqué d’impact significatif sur la performance suite à mes
   différents changements.
-* **La gestion des assets** : contrairement à d’autres générateurs, Hugo ne
+
+- **La gestion des assets** : contrairement à d’autres générateurs, Hugo ne
   s'occupe pas de compiler et d’optimiser les fichiers CSS et JS. Vous pouvez
   toujours décider de faire appel à des outils comme Gulp, Grunt ou équivalent
   pour cela. Ce n'est pas gênant en ce qui nous concerne, car les déploiements
@@ -361,20 +365,20 @@ simplifiée de notre système pourrait ressembler à ça :
 {{< figure
 src="https://cdn-images-1.medium.com/max/800/1*n0-iGP2oqbfhiHZOstrLgg.png" >}}
 
-* **ERP** : chargé de l’enregistrement des commandes, de la gestion du stock et
+- **ERP** : chargé de l’enregistrement des commandes, de la gestion du stock et
   des prix. Ces données sont transmises à la plate-forme de Ecommerce et
   également à Hugo.
 
-* **CMS** : Drupal ou si possible une solution _headless_ comme
+- **CMS** : Drupal ou si possible une solution _headless_ comme
   [Contentful](https://www.contentful.com/) ou
   [Directus](https://getdirectus.com/). Son rôle est de fournir une interface
   conviviale pour l’édition de contenus ainsi que pour l’enregistrement des
   données de produits enrichis, les contenus éditoriaux et le contenu statique.
 
-* **Hugo** : éventuellement combiné à Gulp, Grunt ou équivalent pour la gestion
+- **Hugo** : éventuellement combiné à Gulp, Grunt ou équivalent pour la gestion
   des assets.
 
-* **Plate-forme Ecommerce** : le workflow précis dépend des possibilités
+- **Plate-forme Ecommerce** : le workflow précis dépend des possibilités
   offertes par la plate-forme. Si elle permet de déclencher une génération des
   prix et du stock à chaque modification, l’ERP n'aurait sûrement même pas
   besoin de communiquer avec Hugo.
@@ -470,17 +474,17 @@ et des fiches produits potentiellement complexes en termes de contenus.
 En plus des aspects liés à la sécurité, à la performance et à la montée en
 charge déjà cités, j'aimerais aussi ajouter :
 
-* **Gestion de contenu** : Hugo est capable de gérer différents types de contenu
+- **Gestion de contenu** : Hugo est capable de gérer différents types de contenu
   contrairement aux plates-formes de Ecommerce qui ne brillent généralement pas
   dans ce domaine. À une époque où les vendeurs et les marques doivent mettre de
   plus en plus du contenu intégré en avant, c'est un vrai plus.
 
-* **Flexibilité** : les modèles de données dans Hugo sont très flexibles et
+- **Flexibilité** : les modèles de données dans Hugo sont très flexibles et
   [le langage de gabarits de pages](https://gohugo.io/templates/) suffisamment
   puissants pour gérer les différents scénarios possibles — je n'ai fait
   qu'effleurer ce qu'il est possible de faire dans cet article.
 
-* **Simplicité** : les gérants de boutiques sont souvent tributaires des
+- **Simplicité** : les gérants de boutiques sont souvent tributaires des
   développeurs quant à la connaissance des arcanes des plates-formes de
   Ecommerce utilisées. Ce type de configuration est beaucoup plus accessible —
   vous avez surtout à vous familiariser avec la modélisation des données et

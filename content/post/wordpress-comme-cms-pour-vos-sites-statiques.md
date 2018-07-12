@@ -83,9 +83,7 @@ récupérer tous. Malheureusement ce ne sera peut-être pas possible en une seul
 requête. Vous pouvez maximiser le nombre d’articles retournés à 100 en ajoutant
 le paramètre supplémentaire `per_page` :
 
-```
-https://url-vers-votre-blog/wp-json/wp/v2/posts?_embed&per_page=100
-```
+`https://url-vers-votre-blog/wp-json/wp/v2/posts?_embed&per_page=100`
 
 Ensuite, il va falloir récupérer les informations de pagination. Il existe un
 paramètre `page` qui permet de sélectionner la page que vous souhaitez
@@ -123,13 +121,18 @@ fetch(url) /* 1 */
 1.  Nous téléchargeons les 100 premiers articles de notre blog. Si notre blog
     WordPress contient moins de 100 articles, nous n'avons plus rien à
     télécharger.
+
 2.  L'entête `X-WP-TotalPages` nous indique combien il nous reste de pages à
     télécharger.
+
 3.  Nous créons un tableau de promesses pour les pages à télécharger, nous
     commençons à la page 2 (la page 1 a déjà été téléchargée)
+
 4.  `Promise.all` nous permet de passer le premier résultat et tous les suivants
     issus de notre tableau `pagesToFetch`.
+
 5.  Appel de promesse suivant : convertir tous les résultats en JSON.
+
 6.  Et enfin nous convertissons tous nos résultats dans un seul et unique
     tableau qui contient toutes les données des articles de notre blog.
 
@@ -186,6 +189,7 @@ const wordpress = (url) => (files, smith, done) => { /* 1 */
     troisième paramètre est une fonction de callback. C’est particulièrement
     utile pour les opérations asynchrones. Appelez `done` lorsque votre plugin a
     fini son travail.
+
 2.  Une fois que nous avons tous les articles à partir des appels à l’API (voir
     ci-dessus), nous avons transformé quelque peu les données. D'abord, nous
     devons modifier les permaliens de WordPress pour que Metalsmith puisse s'y
@@ -195,13 +199,16 @@ const wordpress = (url) => (files, smith, done) => { /* 1 */
     `index.html`. De cette manière nous créons tout un tas de dossiers avec un
     seul fichier HTML dedans. Nous obtenons ainsi de belles URLs pour nos sites
     statiques.
+
 3.  Ensuite, nous créons des paires clé-valeur pour l’objet fichier. Chaque
     valeur correspond à une entrée dans le tableau `post` que nous avons
     récupéré plus tôt. Nous précisons ensuite le gabarit à utiliser et indiquons
     le contenu (le plugin `metalsmith-layouts` a besoin de ces deux valeurs pour
     fonctionner).
+
 4.  Après ça, nous stockons cette valeur dans le chemin relatif que nous avons
     défini plus tôt.
+
 5.  Une fois qu'on a fait ça pour tous les articles, nous appelons la fonction
     de callback `done` pour indiquer la fin du traitement par nos plugins.
 

@@ -99,8 +99,10 @@ billet.
 1.  Révoquez les droits de collaboration de Staticman `v1` dans les paramètres
     de votre dépôt GitHub.
     ![Supprimer staticmanapp en tant que collaborator](https://mademistakes.com/assets/images/staticman-remove-collaborator.png)
+
 2.  Ajoutez de nouveau Staticman en tant que
     [collaborateur](https://mademistakes.com/articles/jekyll-static-comments/#setting-up-staticman).
+
 3.  Faites un appel sur ce endpoint de la version 2 de l’API
     `https://api.staticman.net/v2/connect/{votre nom d’utilisateur GitHub}/{nom de votre dépôt}`
     pour accepter l’invitation de collaboration.
@@ -317,13 +319,17 @@ donc de comment vous nommez vos fichiers de commentaires.
 Voici ce que je cherchais à accomplir… avant que le mal de tête ne commence
 😧 🔫
 
-* Déclarer une boucle et, à chaque itération, créer un nouveau tableau nommé
+- Déclarer une boucle et, à chaque itération, créer un nouveau tableau nommé
   `replies` ne contenant que les réponses aux commentaires.
-* Évaluer la valeur de `_parent` pour ces réponses.
-* Si `_parent` est égal à l’index de la boucle parente alors il doit être traité
+
+- Évaluer la valeur de `_parent` pour ces réponses.
+
+- Si `_parent` est égal à l’index de la boucle parente alors il doit être traité
   comme un commentaire "enfant".
-* Sinon, on passe à l’entrée suivante du tableau
-* Et ainsi de suite.
+
+- Sinon, on passe à l’entrée suivante du tableau
+
+- Et ainsi de suite.
 
 J'ai déterminé que la manière la plus simple d’assigner un identifiant unique à
 chaque commentaire parent était de le faire à l’aide d’une séquence.
@@ -520,10 +526,12 @@ le code JavaScript qui se trouve dans
 [`wp-includes/js/comment-reply.js`](https://core.svn.wordpress.org/trunk/wp-includes/js/comment-reply.js)
 j'ai trouvé tout ce dont j'avais besoin:
 
-* une fonction `respond` pour déplacer le formulaire dans la vue,
-* une fonction `cancel` pour supprimer un formulaire de réponse et le
+- une fonction `respond` pour déplacer le formulaire dans la vue,
+
+- une fonction `cancel` pour supprimer un formulaire de réponse et le
   repositionner à son état d’origine,
-* passer l’identifiant unique du parent à `options[parent]` lors de la
+
+- passer l’identifiant unique du parent à `options[parent]` lors de la
   soumission du formulaire.
 
 J'ai commencé par utiliser une condition `unless` pour n'afficher que les liens

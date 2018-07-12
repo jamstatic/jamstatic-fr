@@ -59,9 +59,9 @@ branche `source` avec les sources de notre site.
 La préparation du dépôt se résume à créer la branche `source` en ligne de
 commande :
 
-```
-$ git checkout -b source master
-$ git push -u origin source
+```sh
+git checkout -b source master
+git push -u origin source
 ```
 
 Maintenant que vous avez créé la branche `source`, vous pouvez en faire la
@@ -103,8 +103,6 @@ publier sur GitHub. Jetez également un coup d’œil au [fichier Rakefile de
 Jekyll][jekyll-rakefile] pour une implémentation alternative de la tâche
 `rake site:publish`.
 
-[jekyll-rakefile]: https://github.com/jekyll/jekyll/blob/master/rake/site.rake#L55
-
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346531/octojekyll.png" alt="OctoJekyll" >}}
 
 Enfin, sachez qu'il existe d’autres solutions d’hébergement comme
@@ -112,3 +110,5 @@ Enfin, sachez qu'il existe d’autres solutions d’hébergement comme
 [Cloudcannon](http://cloudcannon.com), [Siteleaf](https://www.siteleaf.com/) ou
 [Forestry.io](https://forestry.io/) qui vous permettent d’utiliser les plugins
 de votre choix, sans avoir recours à ce genre de hack.
+
+[jekyll-rakefile]: https://github.com/jekyll/jekyll/blob/master/rake/site.rake#L55

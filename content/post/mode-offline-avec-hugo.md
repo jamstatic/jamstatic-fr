@@ -37,24 +37,29 @@ de le rendre ultra-performant.
 Si vous n'avez pas encore entendu parler des Service Workers et que vous voulez
 en savoir plus sur le sujet, merci de consulter les liens suivants :
 
-* **[Votre première Progressive Web App](https://developers.google.com/web/fundamentals/getting-started/codelabs/your-first-pwapp/)**
+-  **[Votre première Progressive Web App](https://developers.google.com/web/fundamentals/getting-started/codelabs/your-first-pwapp/)**
   publié sur Google Developers
-* **[L'API Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)**
+
+-  **[L'API Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)**
   publié sur MDN Mozilla Developer Network
-* **[Service Worker Revolution](https://ponyfoo.com/articles/serviceworker-revolution)**
+
+-  **[Service Worker Revolution](https://ponyfoo.com/articles/serviceworker-revolution)**
   publié chez Ponyfoo
-* **[Tout ce que vous devez savoir pour créer vos premières applications hors-ligne](https://github.com/pazguille/offline-first)**
-  sur Github
+
+-  **[Tout ce que vous devez savoir pour créer vos premières applications hors-ligne](https://github.com/pazguille/offline-first)** sur Github
 
 Maintenant que vous avez lu tout ça — ou du moins que vous avez compris de quoi
 il en retourne — voici ce que nous allons faire :
 
-* **Installer un Service Worker** à partir d’un exemple dans Hugo.
-* **Afficher une page hors-connexion personnalisée** en cas de panne de réseau
+-  **Installer un Service Worker** à partir d’un exemple dans Hugo.
+
+-  **Afficher une page hors-connexion personnalisée** en cas de panne de réseau
   ou si la page n'est pas en cache
-* **Afficher une page d’erreur 404 personnalisée** en cas de requêtes HHTP
+
+-  **Afficher une page d’erreur 404 personnalisée** en cas de requêtes HHTP
   retournant une erreur client de type 4xx
-* **Ajouter un fichier `manifest.json`** pour définir l’apparence de
+
+-  **Ajouter un fichier `manifest.json`** pour définir l’apparence de
   l’application Web sur mobile.
 
 ## Pré-requis
@@ -155,11 +160,11 @@ de démarrage au chargement du site depuis l’écran d’accueil.
 
 Les tailles suivantes sont recommandées :
 
-* 128px × 128px
-* 144px × 144px
-* 152px × 152px
-* 192px × 192px
-* 256px × 256px
+-  128px × 128px
+-  144px × 144px
+-  152px × 152px
+-  192px × 192px
+-  256px × 256px
 
 Pour les générer rapidement, vous pouvez utiliser un service comme
 [favicomatic.com](http://www.favicomatic.com/).

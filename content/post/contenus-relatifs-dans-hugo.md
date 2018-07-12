@@ -48,10 +48,11 @@ nouveaux outils : l’API Rest de WordPress, AngularJS et plus récemment Hugo 
 Avec un millier d’entrées qui partagent des relations saines, c'est le projet
 parfait pour tester une nouvelle manière de gérer nos relations.
 
-* Chacun des quelque 1300 personnages apparaît dans quelques romans. La liste
-  des romans où il apparaît est affichée sur la page de chaque personnage.
-* Dans chacun des 20 romans apparaissent de nombreux personnages. Sur la page de
-  chaque roman figure tous les personnages qui y apparaissent.
+-  Chacun des quelque 1300 personnages apparaît dans quelques romans. La liste
+   des romans où il apparaît est affichée sur la page de chaque personnage.
+
+-  Dans chacun des 20 romans apparaissent de nombreux personnages. Sur la page de
+   chaque roman figure tous les personnages qui y apparaissent.
 
 ## Statut des relations avant _Related Content_: c'est compliqué
 
@@ -136,8 +137,10 @@ plusieurs comme si nous étions en 2016 !
 Car cela a le mérite de fonctionner mais…
 
 1.  `interesect` ? `where "in"` ? N’en faisons-nous pas un peu trop ?
+
 2.  🐌 Le temps de génération est **7 fois** supérieur à la moyenne : ~7
     secondes pour 1300 pages.
+
 3.  💩 C’est moche.
 
 OK… mais que pouvons-nous y faire ? 🤷‍♂️
@@ -233,7 +236,7 @@ de la façon suivante :
 ```
 
 _Le premier paramètre c'est le contexte de notre page, le second c'est notre
-fameux index._
+fameux index_.
 
 Et pour la page de présentation d’un personnage comme Eugène, pour récupérer
 toutes ses « novels » :
