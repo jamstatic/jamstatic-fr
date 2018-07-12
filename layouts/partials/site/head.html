@@ -13,7 +13,15 @@
 {{ end -}}
 <title>{{ block "title" . }}{{ if .IsHome }}{{ .Site.Params.Description }} · {{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} · {{ end }}{{ .Site.Title }}{{ end }}{{ end }}</title>
 {{ .Hugo.Generator }}
-<link rel="stylesheet" href="{{ "assets/css/main.css" | relURL }}">
+{{ if .Site.IsServer }}
+{{ $cssOpts := (dict "targetPath" "assets/css/main.css" "enableSourceMap" true ) }}
+{{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts }}
+<link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+{{ else }}
+{{$cssOpts := (dict "targetPath" "assets/css/main.css" ) }}
+{{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts | postCSS | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+{{ end }}
 <link rel="alternate" href="{{ .Site.RSSLink | relURL }}" title="{{ .Site.Title }}" type="application/atom+xml">
 <link rel="alternate" href="{{ "feed.json" | relURL }}" title="{{ .Site.Title }}" type="application/json">
 <link rel="canonical" href="{{ .Permalink }}">
