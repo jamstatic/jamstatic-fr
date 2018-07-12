@@ -297,21 +297,29 @@ leur apparition un peu plus chaque jour.
 
 ### Ressources
 
-* Critiques de générateurs de site statique : Jekyll, Middleman, Roots, Hugo –
+- Critiques de générateurs de site statique : Jekyll, Middleman, Roots, Hugo –
   [Smashing Magazine](https://www.smashingmagazine.com/2015/11/static-website-generators-jekyll-middleman-roots-hugo-review/)
-* Utilisation d’un générateur de site statique à grande échelle : leçons
+
+- Utilisation d’un générateur de site statique à grande échelle : leçons
   apprises –
   [Smashing Magazine](https://www.smashingmagazine.com/2016/08/using-a-static-site-generator-at-scale-lessons-learned/)
-* JAMstack pour les clients : bénéfices, CMS pour site statique et limitations –
+
+- JAMstack pour les clients : bénéfices, CMS pour site statique et limitations –
   [Snipcart](https://snipcart.com/blog/jamstack-clients-static-site-cms)
-* Passez au statique sans perdre votre serveur –
+
+- Passez au statique sans perdre votre serveur –
   [Netlify](https://www.netlify.com/blog/2016/03/10/go-static-without-losing-your-server/)
-* C’est quoi un CMS headless ? –
+
+- C’est quoi un CMS headless ? –
   [CSS-Tricks](https://css-tricks.com/what-is-a-headless-cms/)
-* Gestionnaires de contenus pour sites statiques –
+
+- Gestionnaires de contenus pour sites statiques –
   [headlesscms.org](https://headlesscms.org/)
-* JAMstack | JavaScript, APIs et Markup – [jamstack.org](https://jamstack.org/)
-* Générateurs de site statique open-source –
+
+- JAMstack | JavaScript, APIs et Markup – [jamstack.org](https://jamstack.org/)
+
+- Générateurs de site statique open-source –
   [staticgen.com](https://www.staticgen.com/)
-* {static is} The New Dynamic –
+
+- {static is} The New Dynamic –
   [thenewdynamic.org](https://www.thenewdynamic.org/)

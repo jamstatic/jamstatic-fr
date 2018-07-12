@@ -1,0 +1,33 @@
+{
+  "plugins": [
+    "preset-lint-recommended",
+		"preset-lint-consistent",
+		"preset-lint-markdown-style-guide",
+		"frontmatter",
+		["remark-lint-no-leading-spaces", true],
+		["lint-maximum-line-length", false],
+		["lint-no-file-name-irregular-characters", false],
+    ["lint-no-literal-urls", false],
+		["lint-emphasis-marker", "_"],
+    ["lint-list-item-indent", false],
+    ["lint-unordered-list-marker-style", "-"],
+    ["lint-no-duplicate-headings", false],
+		["lint-no-emphasis-as-heading", false],
+		["lint-no-file-name-articles", false],
+		["lint-no-file-name-consecutive-dashes", false],
+    ["lint-no-shortcut-reference-link", false],
+    ["lint-no-undefined-references", false],
+		["lint-ordered-list-marker-value", "ordered"],
+		["lint-maximum-heading-length", false]
+  ],
+  "settings": {
+    "gfm": true,
+    "yaml": true,
+		"footnotes": true,
+    "rule": "-",
+    "ruleSpaces": false,
+    "ruleRepetition": 3,
+    "listItemIndent": "1",
+    "spacedTable": false
+  }
+}
