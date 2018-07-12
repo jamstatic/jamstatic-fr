@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "Jamstatic website",
   "scripts": {
-    "algolia": "atomic-algolia"
+    "algolia": "atomic-algolia",
+    "lint-md": "remark -q content/post"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,20 @@
   "homepage": "https://github.com/jamstatic/jamstatic-fr#readme",
   "dependencies": {
     "atomic-algolia": "^0.3.15"
+  },
+  "devDependencies": {
+    "remark-cli": "^5.0.0",
+    "remark-frontmatter": "^1.2.0",
+    "remark-inline-links": "^3.1.0",
+    "remark-lint-code": "^2.0.0",
+    "remark-lint-first-heading-level": "^1.1.2",
+    "remark-lint-maximum-line-length": "^1.0.2",
+    "remark-lint-no-consecutive-blank-lines": "^1.0.1",
+    "remark-lint-no-empty-sections": "^2.0.0",
+    "remark-lint-no-leading-spaces": "^1.0.0",
+    "remark-preset-lint-consistent": "^2.0.1",
+    "remark-preset-lint-markdown-style-guide": "^2.1.1",
+    "remark-preset-lint-recommended": "^3.0.1",
+    "remark-squeeze-paragraphs": "^3.0.1"
   }
 }
