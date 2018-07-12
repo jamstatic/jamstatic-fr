@@ -50,11 +50,14 @@ par un site distinct, avec une URL distincte. La démarche ressemblerait à
 quelque chose comme :
 
 1.  Pousser les changements sur GitHub
-1.  Le site de préproduction est régénéré, l’URL de préproduction peut être
+
+2.  Le site de préproduction est régénéré, l’URL de préproduction peut être
     utilisée pour prévisualiser le nouvel état
-1.  Créer une pull request de la préproduction vers la production pour
+
+3.  Créer une pull request de la préproduction vers la production pour
     répercuter les changements
-1.  Le site de production est régénéré, l’URL de production reflète le nouvel
+
+4.  Le site de production est régénéré, l’URL de production reflète le nouvel
     état du site
 
 Pour que notre système fonctionne uniquement avec GitHub Pages nous allons avoir
@@ -121,7 +124,7 @@ fonction de l’environnement dans lequel il tourne.
 Par exemple, nous ne voulons pas que le site de préproduction soit indexé par
 les moteurs de recherche.
 
-```
+```liquid
 {% if jekyll.environment == 'stage' %}
   <meta name="robots" content="noindex">
 {% endif %}
@@ -130,7 +133,7 @@ les moteurs de recherche.
 Vous pouvez même ajouter une bannière en haut de chaque page, pour avertir les
 visiteurs qu'ils consultent la version de développement de votre site.
 
-```
+```liquid
 {% if jekyll.environment == 'stage' %}
   <p class="banner">
     <a href="https://eduardoboucas.com">

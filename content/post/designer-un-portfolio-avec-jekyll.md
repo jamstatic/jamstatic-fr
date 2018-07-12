@@ -24,7 +24,7 @@ et qui sait de pouvoir ensuite
 
 {{% /intro %}}
 
-## Un guide complet pour coder et déployer un site, tout en ligne de commande.
+## Un guide complet pour coder et déployer un site, tout en ligne de commande
 
 Donc j'étais en train de mettre à jour mon
 [portfolio](http://www.katfukui.com/), j'éditais quelques liens dans le pied de
@@ -378,6 +378,7 @@ dépôt distant sur GitHub.
 
 1.  [Créez-vous un compte](https://github.com/join), si vous n'en possédez pas
     encore.
+
 2.  Créez un [nouveau dépôt](https://github.com/new).
 
 {{< figure
@@ -478,9 +479,9 @@ J'espère que vous avez aimé construire un portfolio pour _Food Right Meow_ ave
 moi. Créer et redesigner votre portfolio devrait être fun et enrichissant, alors
 à vos claviers et à vos lignes de commande !
 
-### [Téléchargez ou forkez le dépôt de démo](https://github.com/katmeister/my-site).
+### [Téléchargez ou forkez le dépôt de démo](https://github.com/katmeister/my-site)
 
-### [Voir la démo en action](http://katfukui.com/my-site/).
+### [Voir la démo en action](http://katfukui.com/my-site/)
 
 {{< figure
 src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*qKtPxbGF11Ekq_B9hFRmhg/RS/w704.png?&ssl=1"

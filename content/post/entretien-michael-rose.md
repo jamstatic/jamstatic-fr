@@ -74,10 +74,12 @@ Il y a trois chose que j'aime bien quand je travaille avec des
 1.  Leur **simplicité**. Des fichiers faciles d’accès, faciles à éditer, à
     modifier et à transformer en HTML. Il n'y a rien de magique dans le
     processus et on peut adopter le workflow que l’on souhaite.
+
 2.  Leur **interopérabilité**. La plupart des
     <abbr aria-label="Générateur de Site Statique">GSS</abbr> utilisent des
     fichiers Markdown pour _stocker_ les contenus, ce qui rend les migrations
     vers d’autres générateurs beaucoup plus simples.
+
 3.  Leur **performance**. Comme ils ne se reposent pas sur une connexion à une
     base de données, les pages peuvent être facilement optimisées et mises en
     cache pour que ça aille plus vite. C’est quelque chose qu'il n'est pas aussi

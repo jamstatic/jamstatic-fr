@@ -115,14 +115,17 @@ les transformations suivante au fichier:
     parcouru par le parser de [Liquid](http://shopify.github.io/liquid/), les
     variables comme `site` ou `page` auxquelles le modèle Liquid veut accéder
     sont alors interprétées.
-1.  **Conversion du contenu** : en fonction de l’extension de fichier, Jekyll
+
+2.  **Conversion du contenu** : en fonction de l’extension de fichier, Jekyll
     fait appel à un convertisseur dédié, par example Kramdown pour les fichiers
     `.md` ou `.markdown`, qui est chargé de convertir le résultat obtenu après
     l’étape 1.
-1.  **Parsing du modèle**: Le résultat de cette conversion est alors transmis
+
+3.  **Parsing du modèle**: Le résultat de cette conversion est alors transmis
     dans la variable `{{content}}`, soit au modèle de page par défaut, soit à
     celui qui est spécifié dans l’entête YAML Front Matter.
-1.  Le résultat de cette dernière conversion du modèle de page, généralement un
+
+4.  Le résultat de cette dernière conversion du modèle de page, généralement un
     fichier HTML, est écrit dans votre répertoire de destination.
 
 J'aimerais maintenant vous montrer un exemple où Jekyll applique cette
@@ -408,25 +411,30 @@ Docker de ce test est dispos sur
 
 Il recopie ces fichiers :
 
-* **2016-05-05-post-normal.md** _# un post normal avec une date passée_
-* **2016-05-05-post-without-frontmatter.md** _# un post sans frontmatter, avec
+- **2016-05-05-post-normal.md** _# un post normal avec une date passée_
+
+- **2016-05-05-post-without-frontmatter.md** _# un post sans frontmatter, avec
   une date passée_
-* **2020-02-02-post-future.md** _# un post standard, daté dans le futur_
-* **frontmatter-not-post.md** _# un fichier avec du frontmatter qui n'est pas un
+
+- **2020-02-02-post-future.md** _# un post standard, daté dans le futur_
+
+- **frontmatter-not-post.md** _# un fichier avec du frontmatter qui n'est pas un
   post_
-* **text.txt** _# un fichier texte normal_
-* **yaml.yml** _# un fichier YAML normal_
+
+- **text.txt** _# un fichier texte normal_
+
+- **yaml.yml** _# un fichier YAML normal_
 
 … dans chacun de ces répertoires :
 
-* **/**
-* **/\_posts**
-* **/\_drafts**
-* **/\_data**
-* **/\_my_output_collection**
-* **/\_my_non_output_collection**
-* **/\_underscore_dir**
-* **/regular_dir**
+- **/**
+- **/\_posts**
+- **/\_drafts**
+- **/\_data**
+- **/\_my_output_collection**
+- **/\_my_non_output_collection**
+- **/\_underscore_dir**
+- **/regular_dir**
 
 Sauf que pour chaque association de fichier et de répertoire, le nom du
 répertoire de destination est ajouté à la fin du fichier de manière à ce que
@@ -437,10 +445,13 @@ et les fichiers de sortie. Vous retrouvez un aperçu du résultat de la commande
 J'ai fait un tableau avec une ligne par répertoire et une colonne par fichier,
 la cellule contient l’opération effectuée sur le fichier, qui peut être :
 
-* _copié_ sans altération
-* _omis_
-* _transformé_ et placé dans le répertoire correspondant
-* _post transformé_, qui est ensuite placé dans une arborescence de dossiers,
+- _copié_ sans altération
+
+- _omis_
+
+- _transformé_ et placé dans le répertoire correspondant
+
+- _post transformé_, qui est ensuite placé dans une arborescence de dossiers,
   crées d’après la date du post.
 
 ## Génération des fichiers sans l’option brouillons

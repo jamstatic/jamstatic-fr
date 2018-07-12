@@ -65,37 +65,39 @@ les fichiers CSS, JS, images, etc. L'arborescence de la structure de base
 ressemble à ceci — j'ai laissé quelques fichiers et dossiers de côté de façon à
 ce que ce soit plus clair :
 
-    .
-    ├── hugo/                  // Le site Hugo, avec les fichiers de contenu, de données, statiques.
-    |   ├── .forestry/         // rassemble les fichiers de configuration pour Forestry.io
-    |   ├── content/           // Tout le contenu du site est stocké ici
-    |   ├── data/              // Les fichiers de données du site au format TOML, YAML ou JSON
-    |   ├── layouts/           // Vos modèles de page
-    |   |   ├── partials/      // Les fichiers partiels réutilisables de votre site
-    |   |   ├── shortcodes/    // Les fichiers shortcodes de votre site
-    |   ├── static/            // Les fichiers statiques de votre site
-    |   |   ├── css/           // Les fichiers CSS compilés
-    |   |   ├── img/           // Les images du site.
-    |   |   ├── js/            // Les fichiers JS compilés
-    |   |   └── svg/           // Les fichiers SVG vont ici
-    |   └── config.toml        // Le fichier de configuration d’Hugo
-    └─── src/
-         ├── css               // Les fichiers source CSS/SCSS à compiler vers /css/
-         └── js                // Les fichiers source JS à compiler vers /js/
+```sh
+.
+├── hugo/                  // Le site Hugo, avec les fichiers de contenu, de données, statiques.
+|   ├── .forestry/         // rassemble les fichiers de configuration pour Forestry.io
+|   ├── content/           // Tout le contenu du site est stocké ici
+|   ├── data/              // Les fichiers de données du site au format TOML, YAML ou JSON
+|   ├── layouts/           // Vos modèles de page
+|   |   ├── partials/      // Les fichiers partiels réutilisables de votre site
+|   |   ├── shortcodes/    // Les fichiers shortcodes de votre site
+|   ├── static/            // Les fichiers statiques de votre site
+|   |   ├── css/           // Les fichiers CSS compilés
+|   |   ├── img/           // Les images du site.
+|   |   ├── js/            // Les fichiers JS compilés
+|   |   └── svg/           // Les fichiers SVG vont ici
+|   └── config.toml        // Le fichier de configuration d’Hugo
+└─── src/
+     ├── css               // Les fichiers source CSS/SCSS à compiler vers /css/
+     └── js                // Les fichiers source JS à compiler vers /js/
+```
 
 Pour démarrer le projet, ouvrez une fenêtre de terminal et positionnez-vous dans
 le dossier qui contient la structure de départ (`hugo-boilerplate` par défaut) :
 
-    cd chemin/vers/hugo-boilerplate/
+`cd chemin/vers/hugo-boilerplate/`
 
 Installez ensuite toutes les dépendances du projet en lançant :
 
-    npm install
+`npm install`
 
 Pour lancer le serveur de développement et ouvrir le site dans votre navigateur,
 lancez simplement :
 
-    npm start
+`npm start`
 
 ## 2) Configurer votre site
 
@@ -110,18 +112,19 @@ départ. Ouvrez le fichier `hugo/content/posts/example.md` dans votre éditeur d
 texte. Il est composé d’un en-tête _front matter_ avec un champ titre et d’un
 texte d’exemple au format markdown.
 
-    ---
-    title:  "Bienvenue dans Hugo !"
-    ---
+```markdown
+---
+title:  "Bienvenue dans Hugo !"
+---
 
-    Vous trouverez la source de cet article dans le répertoire `content/posts`.
+Vous trouverez la source de cet article dans le répertoire `content/posts`.
 
-    Pour ajouter un nouvel article, placez un nouveau fichier dans le dossier
-    `content/posts` en respectant la nomenclature `titre-de-l-article.md` et
-    ajoutez les métadonnées nécessaires dans l’en-tête de page Front Matter.
-    Jetez un œil au fichier source de cet article pour voir comment ça marche.
-    <!--more-->
-    Hugo also offers powerful support for code snippets:
+Pour ajouter un nouvel article, placez un nouveau fichier dans le dossier
+`content/posts` en respectant la nomenclature `titre-de-l-article.md` et
+ajoutez les métadonnées nécessaires dans l’en-tête de page Front Matter.
+Jetez un œil au fichier source de cet article pour voir comment ça marche.
+<!--more-->
+Hugo also offers powerful support for code snippets:
 
     ```go
     package main
@@ -136,19 +139,20 @@ texte d’exemple au format markdown.
     //=> prints 'Hi, Tom' to STDOUT.
     ```
 
-    Check out the [Hugo docs][hugo-docs] for more info on how to get the most
-    out of Hugo. File all bugs/feature requests at [Hugo’s GitHub
-    repo][hugo-gh]. If you have questions, you can ask them on [Hugo
-    Community][hugo-community].
+Check out the [Hugo docs][hugo-docs] for more info on how to get the most
+out of Hugo. File all bugs/feature requests at [Hugo’s GitHub
+repo][hugo-gh]. If you have questions, you can ask them on [Hugo
+Community][hugo-community].
 
-    [hugo-docs]: https://gohugo.io/documentation/
-    [hugo-gh]:   https://github.com/gohugoio/hugo
-    [hugo-community]: https://discourse.gohugo.io/
+[hugo-docs]: https://gohugo.io/documentation/
+[hugo-gh]:   https://github.com/gohugoio/hugo
+[hugo-community]: https://discourse.gohugo.io/
+```
 
 Cet article n'a pas de date ! Essayez d’en définir une en ajoutant l’entrée
 suivante dans l’en-tête _Front Matter_ de l’article:
 
-    date: "YYYY-MM-DDTHH:MM:SS-00:00"
+`date: "YYYY-MM-DDTHH:MM:SS-00:00"`
 
 {{% notice tip %}}
 
@@ -169,21 +173,23 @@ commande fournie avec Hugo pour générer un nouvel article. Dans notre projet,
 Hugo est déclaré comme une dépendance NPM, nous pouvons donc l’utiliser avec la
 commande :
 
-    npm run hugo -- <command> --<param>
+`npm run hugo -- <command> --<param>`
 
 Créez votre premier article en lançant :
 
-    npm run hugo -- new posts/mon-premier-article.md
+`npm run hugo -- new posts/mon-premier-article.md`
 
 Cela va créer un nouvel article au format markdown dans
 `hugo/content/posts/mon-premier-article.md`. Ouvrez ce fichier dans votre
 éditeur de texte favori.
 
-    ---
-    title: "Mon Premier Article"
-    date: "2018-03-09T14:24:17-04:00"
-    draft: true
-    ---
+```yaml
+---
+title: "Mon Premier Article"
+date: "2018-03-09T14:24:17-04:00"
+draft: true
+---
+```
 
 Ce fichier comporte un en-tête Front Matter (des métadonnées structurées
 relatives à la page) dont on peut tirer parti dans les gabarits de page. Sous le
@@ -192,8 +198,10 @@ _front matter_, nous pouvons ajouter du contenu au format markdown :
 Ajoutez par exemple le contenu suivant dans le fichier et sauvegardez vos
 changements :
 
-    ## Bienvenue
-    Pratique ce modèle de projet *Hugo*. j'espère que vous appréciez ce guide !
+```md
+## Bienvenue
+Pratique ce modèle de projet *Hugo*. j'espère que vous appréciez ce guide !
+```
 
 Vous pouvez voir l’article mis à jour dans votre navigateur à l’adresse
 [http://localhost:3000/posts/mon-premier-article/](http://localhost:3000/posts/mon-premier-article/).
@@ -245,14 +253,16 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
   paginatedsections = ["posts"]
 ```
 
-_Reportez-vous à la
+Reportez-vous à la
 [documentation du thème](https://github.com/vjeantet/hugo-theme-casper#configuration)
-pour prendre connaissance de toutes les options de configuration disponibles._
+pour prendre connaissance de toutes les options de configuration disponibles.
 
 Pour finir, supprimez les exemples de gabarits de page fournis avec notre modèle
 de départ. Pour cela lancez la commande :
 
-    rm -r hugo/layouts/
+```sh
+rm -r hugo/layouts/
+```
 
 Regardez maintenant dans votre navigateur et vérifiez que votre site a bien été
 mis à jour !
@@ -265,10 +275,10 @@ avez probablement envie de le personnaliser.
 Nous allons commencer par éditer les paramètres du site dans le fichier
 `hugo/config.toml`. Mettez à jour les valeurs suivantes comme bon vous semble :
 
-* `title = "Hugo Boilerplate"`
-* `description = "Bien démarrer avec Hugo`
-* `metadescription = "Utilisé dans la balise meta 'description' pour l’accueil et les pages d’index, faute de quoi c'est l’entrée 'description' du front matter de la page qui sera utilisé"`
-* `author = "VOTRE_NOM"`
+-  `title = "Hugo Boilerplate"`
+-  `description = "Bien démarrer avec Hugo`
+-  `metadescription = "Utilisé dans la balise meta 'description' pour l’accueil et les pages d’index, faute de quoi c'est l’entrée 'description' du front matter de la page qui sera utilisé"`
+-  `author = "VOTRE_NOM"`
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346962/casper-theme-default-config.png" alt="" caption="Le thème Casper avec du contenu et les styles par défaut" >}}
 
@@ -314,44 +324,58 @@ fichiers CSS et JS personnalisés de notre kit dans ces gabarits.
 Premièrement, nous allons copier le fichier partiel _header.html_ du thème dans
 le dossier `hugo/layouts/partials/` :
 
-    mkdir -p hugo/layouts/partials/
-    cp hugo/themes/hugo-theme-casper/layouts/partials/header.html hugo/layouts/partials/header.html
+```sh
+mkdir -p hugo/layouts/partials/
+cp hugo/themes/hugo-theme-casper/layouts/partials/header.html hugo/layouts/partials/header.html
+```
 
 Ouvrez le fichier `hugo/layouts/partials/header.html` dans votre éditeur de
 texte et repérez les lignes suivantes :
 
-    <link rel="stylesheet" type="text/css" href="{{ "css/screen.css" | relURL}}" />
-    <link rel="stylesheet" type="text/css" href="{{ "css/nav.css" | relURL}}" />
+```html
+<link rel="stylesheet" type="text/css" href="{{ "css/screen.css" | relURL}}" />
+<link rel="stylesheet" type="text/css" href="{{ "css/nav.css" | relURL}}" />
+```
 
 Ajoutez en dessous la ligne suivante :
 
-    <link rel="stylesheet" type="text/css" href="{{ "css/styles.min.css" | relURL}}" />
+```html
+<link rel="stylesheet" type="text/css" href="{{ "css/styles.min.css" | relURL}}" />
+```
 
 Ensuite, recopions le fichier partiel `footer.html` dans le dossier
 `hugo/layouts/partials/` de manière à pouvoir ajouter notre fichier JS
 personnalisé :
 
-    cp hugo/themes/hugo-theme-casper/layouts/partials/footer.html hugo/layouts/partials/footer.html
+```sh
+cp hugo/themes/hugo-theme-casper/layouts/partials/footer.html hugo/layouts/partials/footer.html
+```
 
 Ouvrez maintenant le fichier `hugo/layouts/partials/footer.html` et repérez les
 lignes suivantes :
 
-    <script type="text/javascript" src="{{"js/jquery.js" | relURL}}"></script>
-    <script type="text/javascript" src="{{"js/jquery.fitvids.js" | relURL}}"></script>
-    <script type="text/javascript" src="{{"js/index.js" | relURL}}"></script>
+```html
+<script type="text/javascript" src="{{"js/jquery.js" | relURL}}"></script>
+<script type="text/javascript" src="{{"js/jquery.fitvids.js" | relURL}}"></script>
+<script type="text/javascript" src="{{"js/index.js" | relURL}}"></script>
+```
 
 Ajoutez juste en dessous:
 
-    <script type="text/javascript" src="{{"js/scripts.min.js" | relURL}}"></script>
+```html
+<script type="text/javascript" src="{{"js/scripts.min.js" | relURL}}"></script>
+```
 
 Maintenant tout notre code CSS et JS personnalisé sera utilisé sur le site.
 
 Faisons un essai en augmentant la hauteur de l’en-tête principal. Ouvrez le
 fichier `src/css/styles.css` et ajoutez le code suivant à la fin du fichier :
 
-    .tag-head.main-header {
-      height: 80vh;
-    }
+```css
+.tag-head.main-header {
+  height: 80vh;
+}
+```
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346973/capser-theme-final.jpg" alt="" caption="Le résultat final" >}}
 
@@ -375,9 +399,9 @@ si vous souhaitez repartir de zéro.
 Pour en apprendre un peu plus sur Hugo, reportez-vous aux sections suivantes de
 la documentation officielle :
 
-* [L'organisation des contenus dans Hugo](http://gohugo.io/content-management/organization/)
-* [Introduction au langage de templating d’Hugo](http://gohugo.io/templates/introduction/)
-* [Les options de configuration d’Hugo](http://gohugo.io/getting-started/configuration/)
+-  [L'organisation des contenus dans Hugo](http://gohugo.io/content-management/organization/)
+-  [Introduction au langage de templating d’Hugo](http://gohugo.io/templates/introduction/)
+-  [Les options de configuration d’Hugo](http://gohugo.io/getting-started/configuration/)
 
 Nous verrons dans un prochain article comment configurer le versionnement avec
 Git pour faciliter l’intégration continue et le déploiement chez différents

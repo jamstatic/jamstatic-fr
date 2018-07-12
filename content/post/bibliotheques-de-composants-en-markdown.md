@@ -45,21 +45,32 @@ Mon workflow habituel de travail avec un traitement de texte ressemble un peu à
 ça :
 
 1.  Sélectionner du texte que je veux copier dans une autre partie du document,
+
 2.  S'apercevoir que l’application en a sélectionné un peu plus que ce que je
     lui avais demandé,
+
 3.  Essayer de nouveau,
+
 4.  Laisser tomber et me résoudre à ajouter la partie manquante (ou supprimer la
     partie en trop) de la sélection visée plus tard,
+
 5.  Copier-coller la sélection,
+
 6.  S'apercevoir que le formatage du texte collé est quelque peu différent de
     l’orignal,
+
 7.  Tenter de trouver le style prédéfini qui correspond au texte d’origine,
+
 8.  Essayer d’appliquer le style,
+
 9.  Laisser tomber et appliquer la police de caractère et la taille à la main,
+
 10. S'apercevoir qu'il y a un espace trop important au-dessus du texte collé, et
     appuyer sur “Backspace” pour le supprimer,
+
 11. S'apercevoir que la taille du texte a brusquement changé, car il a été
     associé au titre qui le précède et a hérité de ses propriétés,
+
 12. Réfléchir au sens de la vie.
 
 Lorsque vous devez écrire de la documentation pour le web (comprenez
@@ -165,11 +176,13 @@ templating de Go, vous devrez consulter
 [l’introduction à Go Template](https://gohugo.io/templates/go-templates/)
 d’Hugo. En attendant, retenez simplement cela :
 
-* C’est pas super sexy mais c'est très puissant.
-* `{{ .Get 0 }}` sert à récupérer le premier (et dans cet exemple le seul)
+- C’est pas super sexy mais c'est très puissant.
+
+- `{{ .Get 0 }}` sert à récupérer le premier (et dans cet exemple le seul)
   argument fourni — l’ID du CodePen. Hugo supporte également les arguments
   nommés, qui sont déclarés comme des arguments HTML.
-* Le `.` référence le contexte actuel. Donc `.Get 0` signifie “Récupère le
+
+- Le `.` référence le contexte actuel. Donc `.Get 0` signifie “Récupère le
   premier argument fourni pour le _shortcode_ courant.”
 
 Quoi qu'il en soit, je pense que les _shortcodes_ sont la meilleure chose qui
@@ -186,11 +199,13 @@ du code), mais on se heurte à des problèmes inhérents à ces plate-formes
 lorsqu'on veut inclure ces extraits de code dans une bibliothèque de composants
 :
 
-* On dépend d’une API et il n'est pas toujours facile de faire fonctionner cela
+- On dépend d’une API et il n'est pas toujours facile de faire fonctionner cela
   efficacement en mode hors-ligne.
-* Cela ne représente pas un simple composant, c'est une interface complexe à
+
+- Cela ne représente pas un simple composant, c'est une interface complexe à
   part entière qui embarque les styles du service utilisé.
-* Cela crée du bruit et une distraction inutile alors que le focus devrait être
+
+- Cela crée du bruit et une distraction inutile alors que le focus devrait être
   sur le composant.
 
 Pendant un temps, j'ai tenté d’inclure mes démos de composants en utilisant mes
@@ -227,9 +242,9 @@ des démos de code en ligne, mais il reste encore le problème de l’encapsulat
 
 Il y a trois choses dont il faut se soucier pour l’encapsulation des styles :
 
-* les styles hérités de la page parente par le composant,
-* les styles hérités du composant par la page parente,
-* les styles partagés involontairement entre les composants.
+- les styles hérités de la page parente par le composant,
+- les styles hérités du composant par la page parente,
+- les styles partagés involontairement entre les composants.
 
 Une solution consiste à bien cibler les sélecteurs CSS de manière à ce qu'ils ne
 s'appliquent à différents composants ou aux composants et aux pages. Cela
@@ -328,13 +343,15 @@ l’implémenter de cette façon :
 </script>
 ```
 
-* `$uniq` est une variable définie pour identifier le conteneur du composant.
-* Elle est passée à plusieurs fonctions de templating de Go pour créer une
-* chaîne de caractères unique… enfin espérons-le ! — ce n'est pas une méthode
-* infaillible, c'est simplement pour l’exemple. `root.attachShadow` fait du
-* conteneur du composant un hôte shadow DOM. Je peuple le `innerHTML` du
-* `ShadowRoot` avec `{{ .Inner }}`, qui inclus le CSS
-* maintenant encapsulé.
+- `$uniq` est une variable définie pour identifier le conteneur du composant. Elle
+est passée à plusieurs fonctions de templating de Go pour créer une chaîne de
+caractères unique… enfin espérons-le ! — ce n'est pas une méthode infaillible,
+c'est simplement pour l’exemple.
+
+- `root.attachShadow` fait du conteneur du composant un hôte shadow DOM.
+
+- Je peuple le `innerHTML` du `ShadowRoot` avec `{{ .Inner }}`, qui inclus le CSS
+maintenant encapsulé.
 
 #### Autoriser le comportement avec JavaScript
 
@@ -583,15 +600,20 @@ comment ce curieux petit coin du Web va évoluer.
 
 #### Ressources
 
-* [La documentation d’Hugo](https://gohugo.io/overview/introduction/)
-* [Package Template du langage Go](https://golang.org/pkg/text/template/)
-* [Les _shortcodes_ d’Hugo](https://gohugo.io/extras/shortcodes)
-* [all (propriété CSS)](https://developer.mozilla.org/en/docs/Web/CSS/all),
+- [La documentation d’Hugo](https://gohugo.io/overview/introduction/)
+
+- [Package Template du langage Go](https://golang.org/pkg/text/template/)
+
+- [Les _shortcodes_ d’Hugo](https://gohugo.io/extras/shortcodes)
+
+- [all (propriété CSS)](https://developer.mozilla.org/en/docs/Web/CSS/all),
   Mozilla Developer Network
-* [initial (CSS)](https://developer.mozilla.org/en-US/docs/Web/CSS/initial), sur
+
+- [initial (CSS)](https://developer.mozilla.org/en-US/docs/Web/CSS/initial), sur
   le Mozilla Developer Network
-* [Shadow DOM v1 : Self-Contained Web Components](https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom),
-  Eric Bidelman, Web Fundamentals, Google Developers
-* [Introduction à l’élément template](https://www.webcomponents.org/community/articles/introduction-to-template-element)
-  Eiji Kitamura, WebComponents.org
-* [Les includes de Jekyll](https://jekyllrb.com/docs/includes/)
+
+- [Shadow DOM v1 : Self-Contained Web Components](https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom), Eric Bidelman, Web Fundamentals, Google Developers
+
+- [Introduction à l’élément template](https://www.webcomponents.org/community/articles/introduction-to-template-element) Eiji Kitamura, WebComponents.org
+
+- [Les includes de Jekyll](https://jekyllrb.com/docs/includes/)

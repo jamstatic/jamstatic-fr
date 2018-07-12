@@ -250,21 +250,25 @@ statique en pesant les pour et les contre.
 
 **Pour :**
 
-* Un **moteur de gabarits simple.** Les gabarits de page de Jekyll sont très
+- Un **moteur de gabarits simple.** Les gabarits de page de Jekyll sont très
   semblables à la syntaxe qu'on trouve dans WordPress ou Craft.
-* Un **large choix de thèmes.** Il existe plein de thèmes prêt à l’emploi pour
+
+- Un **large choix de thèmes.** Il existe plein de thèmes prêt à l’emploi pour
   Jekyll.
-* Un **large choix de plugins.** Il existe des dizaines de plugins pour ajouter
+
+- Un **large choix de plugins.** Il existe des dizaines de plugins pour ajouter
   les fonctionnalités dont vous avez besoin.
-* **Intégration dans GitHub Pages.** Installer un site avec Jekyll et GitHub
+
+- **Intégration dans GitHub Pages.** Installer un site avec Jekyll et GitHub
   Pages est un jeu d’enfant.
 
 **Contre :**
 
-* Une **génération lente.** Si vous développez un petit site, ce n'est pas un
+- Une **génération lente.** Si vous développez un petit site, ce n'est pas un
   problème. Mais les sites plus importants pourraient voir les temps de
   génération augmenter.
-* Un **manque de fonctionnalités natives.** Les fonctionnalités de premier ordre
+
+- Un **manque de fonctionnalités natives.** Les fonctionnalités de premier ordre
   sont mieux supportées et intégrées. Ce point fait défaut à Jekyll.[^plugins]
 
 [^plugins]: NdT: Les plugins de génération de Sitemap XML, de génération de Flux RSS/Atom ou de génération des balises meta pour le SEO sont développés par la core team et sont parfaitement bien intégrés à Jekyll.
@@ -282,8 +286,6 @@ pour apprendre à développer un site avec Jekyll et le connecter au CMS Forestr
 Hugo est le générateur de site statique créé[^hugo] par Steve Francia, un des
 principaux contributeurs au langage de programmation Go de Google. Hugo est bien
 entendu développé en Go !
-
-[^hugo]: Hugo a été depuis principalement développé par [Bjørn Erik Pedersen]({{< relref "interview-hugo-lead-developer.md" >}}).
 
 Apparu en 2013, Hugo est rapidement devenu le deuxième GSS le plus populaire
 derrière Jekyll et compte à ce jour plus de 24 000 étoiles sur GitHub.
@@ -316,8 +318,6 @@ dossier `content` de votre projet. Vous pouvez utiliser différents formats:
 **Markdown, Mark,** et **HTML** sont supportés par défaut, et il existe des
 extensions tierces pour supporter **Asciidoc**
 and **reStructuredText**[^extensions].
-
-[^extensions]: NdT: à l’heure actuelle comme ces extensions ne reposent pas sur des librairies natives en Go, vous perdrez donc le gain de performance apporté par Hugo.
 
 Hugo supporte aussi **TOML, YAML, et JSON** pour le Front Matter, alors que
 Jekyll ne supporte que le YAML.
@@ -410,13 +410,13 @@ ainsi que des fichiers JSON prêts à être consommés par une application mobil
 
 Parmi les fonctionnalités bien pratiques d’Hugo on peut citer :
 
-* La gestion des menus,
-* La génération de Sitemap XML,
-* La génération de flux RSS/Atom,
-* L'intégration d’Analytics (via Google Analytics)
-* L'intégration de commentaires (via Disqus)
-* La gestion du multilingue/i18n
-* Les formats d’export personnalisés
+- La gestion des menus,
+- La génération de Sitemap XML,
+- La génération de flux RSS/Atom,
+- L'intégration d’Analytics (via Google Analytics)
+- L'intégration de commentaires (via Disqus)
+- La gestion du multilingue/i18n
+- Les formats d’export personnalisés
 
 {{% notice tip %}}
 
@@ -447,19 +447,23 @@ statique en pesant le pour et le contre.
 
 **Pour :**
 
-* **Extrêmement rapide.** Des temps de génération de l’ordre de la seconde.
-* **Extrêmement versatile.** Plein de fonctionnalités par défaut pour des sites
+- **Extrêmement rapide.** Des temps de génération de l’ordre de la seconde.
+
+- **Extrêmement versatile.** Plein de fonctionnalités par défaut pour des sites
   web d’entreprises.
-* **Paré pour l’entreprise** Avec le support des exports multiples et des sites
+
+- **Paré pour l’entreprise** Avec le support des exports multiples et des sites
   multilingues, vous êtes opérationnel !
-* **Une communauté florissante.** Il est facile d’avoir de l’aide. Posez une
+
+- **Une communauté florissante.** Il est facile d’avoir de l’aide. Posez une
   question sur le forum et vous _aurez_ une réponse.
 
 **Contre :**
 
-* **Pas d’extensions.** Hugo ne prend pas les plugins en charge, il n'est donc
+- **Pas d’extensions.** Hugo ne prend pas les plugins en charge, il n'est donc
   pas possible d’ajouter des fonctionnalités personnalisées.
-* **Une syntaxe de gabarit compliquée.** Bien que le moteur de gabarits d’Hugo
+
+- **Une syntaxe de gabarit compliquée.** Bien que le moteur de gabarits d’Hugo
   soit versatile, il est assez peu intuitif et compliqué pour les débutants.
 
 {{% notice tip %}}
@@ -487,9 +491,14 @@ développé avec Hugo.
 Maintenant c'est l’heure de faire votre choix ! Voici un petit récapitulatif
 pour vous aider :
 
-* **Jekyll** est un excellent choix, si vous êtes familier avec l’écosystème de
+- **Jekyll** est un excellent choix, si vous êtes familier avec l’écosystème de
   Ruby ou si vous êtes débutant, grâce à son moteur de templating très simple et
   à ses nombreux plugins.
-* **Hugo** est génial pour les sites web avec beaucoup de contenus. Il comble
+
+- **Hugo** est génial pour les sites web avec beaucoup de contenus. Il comble
   son manque d’extensibilité par un lot de fonctionnalités embarquées et une
   vitesse inégalée par aucun autre générateur de site statique.
+
+[^hugo]: Hugo a été depuis principalement développé par [Bjørn Erik Pedersen]({{< relref "interview-hugo-lead-developer.md" >}}).
+
+[^extensions]: NdT: à l’heure actuelle comme ces extensions ne reposent pas sur des librairies natives en Go, vous perdrez donc le gain de performance apporté par Hugo.

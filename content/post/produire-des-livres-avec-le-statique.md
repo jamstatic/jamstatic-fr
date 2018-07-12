@@ -16,13 +16,13 @@ source:
 Suite à la parution du [procédé de publication numérique basé sur Git et Middleman](http://blogs.getty.edu/iris/an-editors-view-of-digital-publishing/)
 d’un éditeur, [Antoine Fauchié](https://www.quaternum.net/) est allé poser
 quelques questions à [Eric Gardner](http://egardner.github.io/), développeur et
-designer au sein de l’équipe d’édition numérique de [The Getty](https://getty.edu/), 
+designer au sein de l’équipe d’édition numérique de [The Getty](https://getty.edu/),
 un campus culturel et de recherche situé à Los Angeles.
 
 {{% /intro %}}
 
 {{< figure
-src="https://thenewdynamic.imgix.net/getty-museum-ancient-terracottas-1600.jpg?w=1024"
+src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1531412780/getty-museum-ancient-terracottas.jpg"
 alt="" caption="" attr="" attrlink="" >}}
 
 ### Comment et pourquoi en êtes-vous arrivés à choisir un générateur de site statique comme clé de voûte de votre processus de publication aux éditions The Getty ? Pourquoi ne pas avoir opté pour un développement natif ?
@@ -63,7 +63,7 @@ autant que possible cette tradition sur le web. Cela tombe bien, un site
 et JavaScript peuvent proposer tout un tas de fonctionnalités interactives ainsi
 qu’un design et une typographie de grande qualité.
 
-### Comment votre équipe s'est appropriée ce nouveau workflow ? L'appropriation a-t-elle été facile ?
+### Comment votre équipe s'est appropriée ce nouveau workflow ? L'appropriation a-t-elle été facile ?
 
 Il est vrai que publier de cette façon signifie que pas mal de choses vont
 changer. Heureusement j'ai de super collègues qui étaient prêts à se
@@ -75,9 +75,9 @@ procédé moins pénible – configurer l’environnement de développement pour
 prévisualiser son travail peut encore intimider. J'aimerais développer des
 outils pour aider à simplifier ce procédé pour les gens.
 
-![Digital Publishing at the Getty](https://blogs.getty.edu/iris/files/2016/05/eric_ruth_greg_1009_1200.jpg)
+![Digital Publishing at the Getty](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523364540/eric_ruth_greg_1009_1200.jpg)
 
-### Est-ce que tu penses qu'un process à base de technologies web peut remplacer le couple démoniaque Word et InDesign ? Particulièrement en ce qui concerne la facilité d’écriture et de structuration des contenus (WYSIWYG) ainsi que la mise en page (InDesign) ?
+### Est-ce que tu penses qu'un process à base de technologies web peut remplacer le couple démoniaque Word et InDesign ? Particulièrement en ce qui concerne la facilité d’écriture et de structuration des contenus (WYSIWYG) ainsi que la mise en page (InDesign) ?
 
 Je pense qu'on s'en rapproche (et je frémis à l’idée d’essayer d’obtenir un
 texte propre à partir d’un jeu de fichiers InDesign…). Mais nos outils ont
@@ -88,7 +88,7 @@ InDesign parce qu'ils sont intuitifs et bien pensés, notre workflow est encore
 un peu rude en comparaison. Toutefois le monde du texte brut possède des outils
 vraiment puissants lui aussi : une véritable gestion des versions (bien mieux
 que le système de révisions), des éditeurs étonnamment puissants comme Vim ou
-Emacs[^1], la possibilité de spécifier ce qu'on veut dire vraiment avec des 
+Emacs[^1], la possibilité de spécifier ce qu'on veut dire vraiment avec des
 langages de balisage simples comme
 [Markdown](https://learnxinyminutes.com/docs/fr-fr/markdown/) ou
 [Asciidoc](https://learnxinyminutes.com/docs/asciidoc/), etc. Je pense que

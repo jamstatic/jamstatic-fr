@@ -56,11 +56,13 @@ client, des APIs réutilisables et du Markup pré-généré.
 La JAMstack intègre des pratiques qui la rendent idéale pour le développement
 Web moderne :
 
-* Les sites basés sur la JAMstack tirent partie de la puissance des CDN pour
+- Les sites basés sur la JAMstack tirent partie de la puissance des CDN pour
   bénéficier d’une vitesse et d’une performance impossibles à battre.
-* Tout est versionné dans Git, pas besoin de bases de données à répliquer, pas
+
+- Tout est versionné dans Git, pas besoin de bases de données à répliquer, pas
   d’installation compliquée.
-* Le code est pré-généré avec la JAMstack, les régénérations sont automatisées,
+
+- Le code est pré-généré avec la JAMstack, les régénérations sont automatisées,
   les modifications ne seront pas en production avant la prochaine régénération…
   pour ne citer que quelques exemples.
 
@@ -94,13 +96,13 @@ src="https://cdn.netlify.com/3e5d615c43e682e4601dcfcd7eb8ee15357be6d9/63741/img/
 **Si** Netlify voulait relever le défi, il fallait bien comprendre les priorités
 cruciales pour Smashing :
 
-* L'accès à une **plate-forme unifiée** — un endroit qui regroupe les différents
+- L'accès à une **plate-forme unifiée** — un endroit qui regroupe les différents
   outils techniques utilisés pour la gestion du site,
 
-* La liberté de produire **un design** qu'ils aiment sans avoir à subir les
+- La liberté de produire **un design** qu'ils aiment sans avoir à subir les
   contraintes imposées par WordPress et les autres outils,
 
-* Le site le **plus performant** possible en se focalisant sur la fiabilité et
+- Le site le **plus performant** possible en se focalisant sur la fiabilité et
   la rapidité.
 
 …le tout en l’espace de **quelques mois**[^1].
@@ -140,13 +142,16 @@ que tout ce que nous avons développé pour Smashing est **open source**.
 En partant des besoins de Smashing, le début de notre périple technique a
 consisté à développer les APIS open source suivantes :
 
-* **GoTell** — une API et un outil de build pour la gestion d’un grand nombre de
+- **GoTell** — une API et un outil de build pour la gestion d’un grand nombre de
   commentaires,
-* **GoCommerce** — une petite API en Go pour les sites e-commerce pour la
+
+- **GoCommerce** — une petite API en Go pour les sites e-commerce pour la
   gestion des commandes et des paiements,
-* **GoJoin** — une API qui intègre les abonnements Stripe pour les Single Page
+
+- **GoJoin** — une API qui intègre les abonnements Stripe pour les Single Page
   Apps et les sites,
-* **GoTrue** — une petite API open-source écrite en Go qui peut agir comme une
+
+- **GoTrue** — une petite API open-source écrite en Go qui peut agir comme une
   API de service indépendante pour la gestion des inscriptions et des
   authentifications. Elle est basée sur OAuth2 et JWT et peut gérer les
   inscriptions, les connexions et les données personnelles des utilisateurs.
@@ -173,7 +178,7 @@ toutes les plate-formes et fonctionne avec (presque) tous les générateurs de
 site statique compatibles avec GitHub. C’est rapide, simple, souple et nous
 sommes très fiers du résultat.
 
-_Spéciale dédicace à toutes les technologies utilisées :_
+_Spéciale dédicace à toutes les technologies utilisées_ :
 
 [Algolia](https://www.algolia.com/), un service de recherche super rapide en
 temps réel, [Hugo](http://gohugo.io/), combiné à une gestion moderne des assets

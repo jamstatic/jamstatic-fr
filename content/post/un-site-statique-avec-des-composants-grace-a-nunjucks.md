@@ -200,7 +200,7 @@ body.services .nav-services a {
 _Oh, c'est quoi ces icônes ?_ Ce sont simplement des fichiers `.svg` déposés
 dans un dossier et inclus de la sorte :
 
-```
+```liquid
 {% include "../icons/cloud.svg" %}
 ```
 
@@ -275,7 +275,9 @@ des bénéfices concrets et assez clairs :
 
 1.  Si nous devons changer le HTML, nous pouvons le faire dans la macro et le
     changement sera reporté partout où la macro est utilisée.
+
 2.  La donnée n'est pas mélangée avec le balisage
+
 3.  La donnée pourrait venir de n'importe où ! Nous pouvons passer la donnée
     directement lors de l’appel comme nous l’avons fait ci-dessus. Ou bien nous
     pouvons référencer des données en JSON et boucler dessus. Je suis sûr qu'on
@@ -332,16 +334,19 @@ dans cet article est qu'au final nous obtenons quelques fichiers statiques.
 Faciles à héberger, performants et sécurisés. Pourtant, nous avons pu travailler
 de manière sympa et efficace. Ce site sera simple à mettre à jour par la suite…
 
-* Le projet final est un microsite nommé _Le pouvoir du Serverless pour les
+- Le projet final est un microsite nommé _Le pouvoir du Serverless pour les
   développeurs Front-End_ (<https://thepowerofserverless.info/>).
-* L'hébergement de fichier statique fait partie selon moi du mouvement
+
+- L'hébergement de fichier statique fait partie selon moi du mouvement
   serverless.
-* Tout le code est visible (et vous pouvez même en faire une copie pour vous)
+
+- Tout le code est visible (et vous pouvez même en faire une copie pour vous)
   [directement dans CodePen](https://codepen.io/chriscoyier/project/editor/ZepgLg).
   Il est maintenu, généré et
   [hébergé](https://blog.codepen.io/projects/custom-domains/) entièrement sur
   CodePen à l’aide de [CodePen Projects](https://codepen.io/pro/projects).
-* CodePen Projects s'occupe de toute la partie
+
+- CodePen Projects s'occupe de toute la partie
   [Nunjucks](https://mozilla.github.io/nunjucks/) dont nous avons parlé ici,
   ainsi que de la compilation Sass et de l’hébergement des images, que j'ai
   utilisé pour le site. Vous pourriez faire la même chose avec par exemple un

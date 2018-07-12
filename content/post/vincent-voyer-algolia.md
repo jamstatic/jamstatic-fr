@@ -33,7 +33,7 @@ des développeurs web.
 
 {{% /intro %}}
 
-### Bonjour Vincent, on va peut-être commencer par te présenter ?
+Frank: **Bonjour Vincent, on va peut-être commencer par te présenter ?**
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346898/vincent-voyer.jpg"
 caption="Vincent Voyer, développeur JS chez Algolia" >}}
@@ -51,7 +51,7 @@ J'aime le basket, j'essaie d’inviter des co-workers toutes les semaines, c'est
 cool, ce soir on y va, on est trois plus le reste de l’équipe. J'ai 32 ans, une
 femme et un enfant. Voilà.
 
-### T'as l’air de bien t'éclater, qu'est-ce qui te plaît chez Algolia ?
+Frank: **T'as l’air de bien t'éclater, qu'est-ce qui te plaît chez Algolia ?**
 
 **Vincent Voyer** : J'ai une petite anecdote à ce sujet. Quand j'étais
 développeur freelance, je suis allé à DotJS, il y avait un stand Algolia, je
@@ -80,7 +80,7 @@ Voilà, ma première rencontre avec Algolia c'était ça. Et très vite après j
 été en contact avec eux, car je voulais refaire leur client JavaScript, qui ne
 me plaisait pas en tant que développeur JavaScript…
 
-### Comment définirais-tu l’activité d’Algolia ?
+Frank: **Comment définirais-tu l’activité d’Algolia ?**
 
 **Vincent Voyer** :
 [Algolia](https://www.algolia.com/doc/guides/getting-started/what-is-algolia/)
@@ -97,7 +97,7 @@ Aujourd’hui les gros clients d’Algolia dont on peut parler c'est Stripe, Str
 8tracks, CrunchBase, Periscope, Twitch, etc. Donc c'est des gros noms, ça marche
 plutôt bien. Algolia existe depuis cinq ans maintenant.
 
-### Pourquoi est-ce que le moteur de recherche d’Algolia est aussi rapide aujourd’hui ?
+Frank: **Pourquoi est-ce que le moteur de recherche d’Algolia est aussi rapide aujourd’hui ?**
 
 **Vincent Voyer** : C’est parce qu'au début c'était un SDK pour développeurs
 d’applications mobiles, pour les aider à mettre un champ de recherche dans leur
@@ -112,7 +112,7 @@ faut faire en fait, c'est une API Web". Ils ont fait ça et ça a fonctionné et
 aujourd’hui c'est notre principal produit, l’API et le moteur de recherche
 d’Algolia.
 
-### Google ne s'est jamais trop positionné sur les moteurs de recherche internes, d’ailleurs ils ont annoncé arrêter leur produit Google Site Search. Votre positionnement c'est de vous cantonner à la recherche sur site ?
+Frank: **Google ne s'est jamais trop positionné sur les moteurs de recherche internes, d’ailleurs ils ont annoncé arrêter leur produit Google Site Search. Votre positionnement c'est de vous cantonner à la recherche sur site ?**
 
 **Vincent Voyer** : Oui c'est ça. Généralement votre site de e-commerce, il a
 une base de données avec des produits structurés. Beaucoup de gens passent par
@@ -142,7 +142,7 @@ coques d’iPhone, des livres sur l’iPhone, etc. Nous ce qu'on propose c'est d
 objets structurés qui permettent ensuite aux développeurs de site web de créer
 des menus, des sliders pour filtrer, etc.
 
-### La recherche à facettes ça existe déjà sur les sites de e-commerce, même s'il est vrai que l’expérience de recherche n'est pas toujours géniale. Je me rappelle que quand j'ai découvert [Algolia pour Magento](https://community.algolia.com/magento/), j'étais content de voir arriver un nouvel acteur qui décide de proposer une expérience de recherche au top
+**Frank** : La recherche à facettes ça existe déjà sur les sites de e-commerce, même s'il est vrai que l’expérience de recherche n'est pas toujours géniale. Je me rappelle que quand j'ai découvert [Algolia pour Magento](https://community.algolia.com/magento/), j'étais content de voir arriver un nouvel acteur qui décide de proposer une expérience de recherche au top
 
 **Vincent Voyer** : Les gens s'attendent aujourd’hui à avoir la meilleure
 expérience de recherche, qui est celle de Google. Et Google ils ont fait un truc
@@ -174,7 +174,7 @@ Algolia propose donc toutes ces fonctionnalités, performance, typo tolérance,
 faceting et recherche avancés, que ne proposent pas forcément les autres moteurs
 de recherche.
 
-### OK, revenons un peu au statique. Vous êtes présents sur beaucoup de sites de documentation ou de [recherche de paquets comme yarn](https://yarnpkg.com/lang/fr/). Ces sites sont générés à l’aide de différents outils. Comment avez-vous implémenté tout ça ?
+Frank: **OK, revenons un peu au statique. Vous êtes présents sur beaucoup de sites de documentation ou de [recherche de paquets comme yarn](https://yarnpkg.com/lang/fr/). Ces sites sont générés à l’aide de différents outils. Comment avez-vous implémenté tout ça ?**
 
 **Vincent Voyer** : La stratégie d’Algolia c'est d’avoir une super bonne
 _Developer Experience_ et d’essayer de capter un maximum de développeurs sur
@@ -199,7 +199,7 @@ sites ce sont dit : "Hé, je veux la même recherche, c'est super !"
 
 Donc on a construit au fur et à mesure ces différents projets.
 
-### Comment ça fonctionne ?
+Frank: **Comment ça fonctionne ?**
 
 **Vincent Voyer** : DocSearch c'est un crawler de site web avec des
 configurations par site. Pour chaque site on va dire : le nom d’une méthode dans
@@ -244,7 +244,7 @@ d’[InstantSearch](https://community.algolia.com/instantsearch.js/v2/), qui est
 un projet qui englobe des sous-projets. InstantSearch c'est un ensemble de
 bibliothèques haut-niveau pour implémenter de la recherche avec Algolia.
 
-### C’est complémentaire avec DocSearch dont tu parlais tout à l’heure ?
+Frank: **C’est complémentaire avec DocSearch dont tu parlais tout à l’heure ?**
 
 **Vincent Voyer** : Non, ce sont deux produits différents, on a plein de
 produits qu'on essaie de regrouper au fur et à mesure. InstantSearch c'est
@@ -264,7 +264,7 @@ complète, web et application native, et même bientôt server-side rendering av
 une seule bibliothèque, sans avoir à mettre beaucoup de code entre les
 différents éléments de connexion. Pour l’utilisateur c'est super simplifié.
 
-### Ça inclut React Native ?
+Frank: **Ça inclut React Native ?**
 
 **Vincent Voyer** : Oui, même si on n'a pas encore des widgets tout faits pour
 React Native, on ne les a que pour le web, par contre on est capable de
@@ -304,7 +304,7 @@ l’écrire c'est assez simple. Le flow de MetalSmith, il prend un répertoire
 de ce répertoire `source`, donc on peut faire vraiment ce qu'on veut à partir du
 moment où on sait écrire du JavaScript, c'est assez cool.
 
-### Aujourd’hui dans l’écosystème JS, beaucoup utilisent Hexo comme générateur, on voit aussi apparaître des générateurs qui embarquent React comme Gatsby ou Phenomic. Du coup on pourrait imaginer pouvoir avoir des composants Algolia. Vous seriez intéressés par des solutions aussi packagées ?
+Frank: **Aujourd’hui dans l’écosystème JS, beaucoup utilisent Hexo comme générateur, on voit aussi apparaître des générateurs qui embarquent React comme Gatsby ou Phenomic. Du coup on pourrait imaginer pouvoir avoir des composants Algolia. Vous seriez intéressés par des solutions aussi packagées ?**
 
 **Vincent Voyer** : Nous on fait des sites super custom où on modifie vraiment
 beaucoup la source, on n'a pas pris ces solutions là, on a peut-être loupé
@@ -316,7 +316,7 @@ live-reload, c'est à nous de le faire. Ce qui est possible aussi c'est qu'avec
 notre expérience avec MetalSmith, on se fasse nous-mêmes notre propre générateur
 de site statique pour Algolia.
 
-### Dans le monde des sites statiques, on a beaucoup parlé de [la refonte de Smashing Magazine]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}}) dernièrement dont la recherche a été développée avec Algolia, ça marche très bien. Le site est généré avec Hugo, un générateur écrit en Go, or, il n'y a pas de plugin natif Algolia pour Hugo, même si vous fournissez un client pour votre API en Go
+Frank: **Dans le monde des sites statiques, on a beaucoup parlé de [la refonte de Smashing Magazine]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}}) dernièrement dont la recherche a été développée avec Algolia, ça marche très bien. Le site est généré avec Hugo, un générateur écrit en Go, or, il n'y a pas de plugin natif Algolia pour Hugo, même si vous fournissez un client pour votre API en Go**
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347081/algolia-smashing.png"
 caption="La recherche de la nouvelle version de Smashing Magazine avec Algolia" >}}
@@ -340,11 +340,11 @@ avoir à faire de plugins pour chaque générateur. Maintenant s'il y a quelqu'u
 qui veut un plugin Hugo ou Phenomic, du coup il faudra venir nous en parler et
 on pourra faire.
 
-### Pour info Hugo et Gatsby sont les deux générateurs qui ont la cote en ce moment, ce sont deux projets très actifs
+Frank: **Pour info Hugo et Gatsby sont les deux générateurs qui ont la cote en ce moment, ce sont deux projets très actifs**
 
 **Vincent Voyer** : OK, je me le note.
 
-### Algolia a levé 53 millions de dollars récemment, vous recrutez pas mal de gens, c'est quoi les prochaines priorités pour vous ?
+Frank: **Algolia a levé 53 millions de dollars récemment, vous recrutez pas mal de gens, c'est quoi les prochaines priorités pour vous ?**
 
 **Vincent Voyer** : Notre ambition est d’être un acteur principal du monde de la
 recherche, aujourd’hui il y a ElasticSearch qui est aussi un énorme acteur. Et
@@ -386,7 +386,7 @@ données donc on est en train de travailler sur ça. C’est important pour pouv
 passer de 100 millions d’objets — ce qui est déjà énorme — à 800 millions ou 1
 milliard.
 
-### Toujours sur des données structurées ? Si j'ai des données non structurées, est-ce qu'Algolia peut faire quelque chose ?
+Frank: **Toujours sur des données structurées ? Si j'ai des données non structurées, est-ce qu'Algolia peut faire quelque chose ?**
 
 **Vincent Voyer** : On travaille sur des outils qui vous nous permettre d’aller
 chercher des clients qui n'ont pas forcément des données structurées, mais dans
@@ -404,7 +404,7 @@ car il y a toujours de la structure. Un article de blog, une page qui liste des
 fonctionnalités, tout ça a une structure, c'est simplement qu'il faut la
 trouver.
 
-### Et pour les données enfermées dans des tableurs, des fichiers PDF ?
+Frank: **Et pour les données enfermées dans des tableurs, des fichiers PDF ?**
 
 **Vincent Voyer** : Même chose, ce sont des outils qui vont être capables
 d’aller chercher de la donnée et de l’indexer pour Algolia.

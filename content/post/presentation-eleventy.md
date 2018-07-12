@@ -35,9 +35,9 @@ Encore un générateur de site statique ? Oui. Mais pourquoi ? Bonne question.
 
 Eleventy a été créé pour trois raisons :
 
-* Flexibilité
-* Parier sur JavaScript
-* Ce n'est pas un framework JavaScript
+-  Flexibilité
+-  Parier sur JavaScript
+-  Ce n'est pas un framework JavaScript
 
 ## Flexibilité
 
@@ -64,16 +64,16 @@ Eleventy sait gérer les deux côte-à-côte. Bien joué Linda._
 
 Eleventy supporte actuellement :
 
-* HTML
-* [Markdown](https://github.com/markdown-it/markdown-it)
-* [Liquid](https://www.npmjs.com/package/liquidjs) (used by Jekyll)
-* [Nunjucks](https://mozilla.github.io/nunjucks/)
-* [Handlebars](https://github.com/wycats/handlebars.js)
-* [Mustache](https://github.com/janl/mustache.js/)
-* [EJS](https://www.npmjs.com/package/ejs)
-* [Haml](https://github.com/tj/haml.js)
-* [Pug](https://github.com/pugjs/pug)
-* JavaScript Template Literals (ES2015)
+-  HTML
+-  [Markdown](https://github.com/markdown-it/markdown-it)
+-  [Liquid](https://www.npmjs.com/package/liquidjs) (used by Jekyll)
+-  [Nunjucks](https://mozilla.github.io/nunjucks/)
+-  [Handlebars](https://github.com/wycats/handlebars.js)
+-  [Mustache](https://github.com/janl/mustache.js/)
+-  [EJS](https://www.npmjs.com/package/ejs)
+-  [Haml](https://github.com/tj/haml.js)
+-  [Pug](https://github.com/pugjs/pug)
+-  JavaScript Template Literals (ES2015)
 
 ### Flexibilité de l’arborescence de répertoires
 
@@ -166,7 +166,7 @@ pages.
 
 J'espère que vous donnerez sa chance à Eleventy ! Installez-le !
 
-```
+```sh
 npm install -g @11ty/eleventy
 ```
 

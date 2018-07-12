@@ -14,7 +14,7 @@ Jamstatic. Si vous souhaitez vous aussi répondre à ces questions, merci de
 [soumettre une pull request sur Github](https://github.com/{{ site.repository
 }}/pulls). {{% /intro %}}
 
-**Bonjour, pourrais-tu te présenter ?**
+### Bonjour, pourrais-tu te présenter ?
 
 Bonjour, je m’appelle Frank, je m’intéresse au développement web front-end
 depuis de nombreuses années. J’ai travaillé successivement dans le public, puis
@@ -26,7 +26,7 @@ pour
 [m’intéresser aux gestionnaires de site statique](http://frank.taillandier.me/2016/03/08/les-gestionnaires-de-contenu-statique/)
 et à Jekyll en particulier.
 
-**Pourquoi utilises-tu Jekyll ?**
+### Pourquoi utilises-tu Jekyll ?
 
 J’aime la philosophie des gestionnaires de site statique, leur simplicité, et le
 fait de pouvoir adapter la courbe d’apprentissage à son propre rythme. Jekyll
@@ -60,7 +60,7 @@ page d’accueil peut-être générée en statique tandis que d’autres parties
 plus d’interactions utilisateurs continuent d’être gérées avec du dynamique.
 Tout est possible.
 
-**Comment voudrais-tu voir Jekyll évoluer ?**
+### Comment voudrais-tu voir Jekyll évoluer ?
 
 J’aimerais déjà voir les
 [propositions faites dans le cadre du Summer of Code](https://github.com/github/mentorships/issues?q=is%3Aissue+is%3Aopen+label%3A%22project%3A+Jekyll%22)

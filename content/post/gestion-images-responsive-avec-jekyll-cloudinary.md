@@ -35,14 +35,16 @@ Il est vraiment sympa, il vous laisse définir vos propres gabarits de balisage
 d’image, vous pouvez donc utiliser `srcset` ou `<picture>` selon votre envie.
 Mais il ne répondait à tous mes besoins :
 
-* Lors de la première génération d’un site statique Jekyll avec ce plugin vous
-  devez générer toutes les variantes à partir des images originales. J'ai
-  actuellement environ 750 images sur mon blog et cela entraîne des temps de
-  compilation extrêmement longs,
-* Envoyer toutes ces variantes au serveur prend également du temps, car je n'ai
-  pas un accès très rapide chez moi,
-* Et bien entendu toutes ces images sont servies sur le même serveur que les
-  pages, dans mon cas sur un hébergement mutualisé sympa et bon marché.
+-  Lors de la première génération d’un site statique Jekyll avec ce plugin vous
+   devez générer toutes les variantes à partir des images originales. J'ai
+   actuellement environ 750 images sur mon blog et cela entraîne des temps de
+   compilation extrêmement longs,
+
+-  Envoyer toutes ces variantes au serveur prend également du temps, car je n'ai
+   pas un accès très rapide chez moi,
+
+-  Et bien entendu toutes ces images sont servies sur le même serveur que les
+   pages, dans mon cas sur un hébergement mutualisé sympa et bon marché.
 
 Je voulais revenir à un workflow plus simple et plus rapide et qui génère moins
 de charge côté serveur.
@@ -62,7 +64,7 @@ fonctionnalités et décider si je continuais ou si j'allais voir ailleurs.
 
 Les fonctions principales que je cherchais et que fournit Cloudinary sont :
 
-* **[La possibilité d’utiliser le service comme un proxy](http://cloudinary.com/documentation/upload_images#auto_fetching_remote_images)
+- **[La possibilité d’utiliser le service comme un proxy](http://cloudinary.com/documentation/upload_images#auto_fetching_remote_images)
   :** les images originales sont stockées sur mon serveur, mais toutes les
   images servies à mes visiteurs le sont depuis Cloudinary, générées à la volée
   à partir des originales. Encore mieux, je n'ai pas besoin d’uploader les
@@ -70,12 +72,14 @@ Les fonctions principales que je cherchais et que fournit Cloudinary sont :
   versions publiées en local. Entre d’autres termes, le seul "client" pour mes
   images d’origine c'est Cloudinary. Du coup, je consomme très peu de bande
   passante pour mes images chez mon hébergeur.
-* **Recadrage et options de redimensionnement des images :** actuellement, je ne
+
+- **Recadrage et options de redimensionnement des images :** actuellement, je ne
   fais que retailler mes images à partir des originaux en large résolution pour
   les adapter aux mises en page responsive. Je me penche sérieusement sur la
   possibilité de faire de la direction artistique avancée à l’aide des
   [fonctionnalités de recadrage automagiques de Cloudinary](http://cloudinary.com/blog/introducing_smart_cropping_intelligent_quality_selection_and_automated_responsive_images).
-* **[Optimisation du format des images](http://cloudinary.com/documentation/image_transformations#automatic_format_selection)
+
+- **[Optimisation du format des images](http://cloudinary.com/documentation/image_transformations#automatic_format_selection)
   :** Si je publie des images JPEG dans mes billets, Cloudinary peut envoyer des
   images au format WebP aux visiteurs s'il est supporté par leur navigateur. Le
   mois dernier, deux tiers des images servies par Cloudinary à mes visiteurs
@@ -83,7 +87,8 @@ Les fonctions principales que je cherchais et que fournit Cloudinary sont :
   automatiquement. C’est un gain énorme à la fois pour la performance et les
   forfaits de données de mes visiteurs et également pour mon quota de bande
   passante chez Cloudinary.
-* **[Optimisation de la compression d’image](http://cloudinary.com/documentation/image_transformations#automatic_quality_and_encoding_settings):**
+
+- **[Optimisation de la compression d’image](http://cloudinary.com/documentation/image_transformations#automatic_quality_and_encoding_settings):**
   Cloudinary est capable de calculer le meilleur niveau de compression pour
   réduire le poids de chaque image, sans pour autant dégrader la qualité du
   visuel.
@@ -164,24 +169,34 @@ cloudinary:
         class: logo
 ```
 
-* `cloud_name: …` votre ID personnel Cloudinary
-* `presets:` englobe la liste des préréglages que vous définissez pour vote site
-* `logo:` est le nom d’un des préréglages, que j'utilise dans le tag Liquid
+- `cloud_name: …` votre ID personnel Cloudinary
+
+- `presets:` englobe la liste des préréglages que vous définissez pour vote site
+
+- `logo:` est le nom d’un des préréglages, que j'utilise dans le tag Liquid
   avant le nom du fichier image
-* `min_width: 80` définit la largeur minimum d’image générée
-* `max_width: 400` définit la largeur maximale d’image générée
-* `fallback_max_width: 200` définit la largeur de l’image de la solution de
+
+- `min_width: 80` définit la largeur minimum d’image générée
+
+- `max_width: 400` définit la largeur maximale d’image générée
+
+- `fallback_max_width: 200` définit la largeur de l’image de la solution de
   repli (`src`)
-* `steps: 3` définit le nombre d’images à générer
-* `sizes: '(min-width: 50rem) 13rem, (min-width: 40rem) 25vw, 45vw'` définit
+
+- `steps: 3` définit le nombre d’images à générer
+
+- `sizes: '(min-width: 50rem) 13rem, (min-width: 40rem) 25vw, 45vw'` définit
   l’attribut `sizes` de l’image responsive, qui dépend du design et des
   breakpoints
-* `figure: never` empêche la génération d’un bloc
+
+- `figure: never` empêche la génération d’un bloc
   `<figure>`/`<img>`/`<figcaption>` (Je n'en veux généralement pas sur les
   logos)
-* `attributes:` englobe la liste d’attributs à toujours ajouter aux éléments
+
+- `attributes:` englobe la liste d’attributs à toujours ajouter aux éléments
   `<figure>` et/ou `<img>`
-* `class: logo` ajoute l’attribut `class` ayant pour valeur `logo`, que
+
+- `class: logo` ajoute l’attribut `class` ayant pour valeur `logo`, que
   j'utilise dans mon CSS pour m'assurer que le logo ne prenne pas plus d’un
   quart de la largeur de son conteneur et le fait flotter à droite.
 

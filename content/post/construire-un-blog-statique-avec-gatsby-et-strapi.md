@@ -27,7 +27,7 @@ Les sites Web statiques et PWA ont tous les deux de solides avantages, ce qui no
 
 ### Qu'est-ce que Gatsby ?
 
-D'après ses créateurs, [Gatsby](https://www.gatsbyjs.org) est un "*blazing-fast website framework for React*". Il permet aux développeurs de créer des sites construits avec React en quelques minutes. Que vous vouliez développer un blog ou un site vitrine, Gatsby devrait correspondre à vos besoins.
+D'après ses créateurs, [Gatsby](https://www.gatsbyjs.org) est un "_blazing-fast website framework for React_". Il permet aux développeurs de créer des sites construits avec React en quelques minutes. Que vous vouliez développer un blog ou un site vitrine, Gatsby devrait correspondre à vos besoins.
 
 {{<figure src="https://blog.strapi.io/content/images/2018/04/gatsby-logo.jpg" width="50%" link="https://www.gatsbyjs.org">}}
 
@@ -45,9 +45,9 @@ Grâce à son système extensible de plugin, il propose de nombreuses fonctionna
 
 Contrairement aux CMS en ligne, **Strapi est 100% open-source**, ce qui veut dire que :
 
- - **Strapi est totalement gratuit**
- - Vous pouvez l'**héberger sur vos propres serveurs**. Vous êtes donc propriétaire de votre donnée.
- - Il est entièrement **personnalisable et extensible**, grâce au système de plugins.
+-  **Strapi est totalement gratuit**
+-  Vous pouvez l'**héberger sur vos propres serveurs**. Vous êtes donc propriétaire de votre donnée.
+-  Il est entièrement **personnalisable et extensible**, grâce au système de plugins.
 
 ## Installation de l'API
 
@@ -57,29 +57,29 @@ Tout d'abord, nous allons commencer par créer une API avec Strapi et ajouter du
 
 #### Installation de Strapi
 
-*Pré-requis: vérifiez que [Node 8](https://nodejs.org/en/download/) (ou plus) et [MongoDB](https://docs.mongodb.com/manual/installation/) sont installés et démarrés sur votre machine.*
+_Pré-requis_: vérifiez que [Node 8](https://nodejs.org/en/download/) (ou plus) et [MongoDB](https://docs.mongodb.com/manual/installation/) sont installés et démarrés sur votre machine.
 
 Installez Strapi via npm :
 
 ```bash
-$ npm i strapi@alpha -g
+npm i strapi@alpha -g
 ```
 
-*Note : Strapi v3 est encore en version alpha, mais cela ne posera aucun problème pour la réalisation de ce tutoriel.*
+_Note_ : Strapi v3 est encore en version alpha, mais cela ne posera aucun problème pour la réalisation de ce tutoriel.
 
 #### Création d'un projet Strapi
 
 Créez un dossier nommé `gatsby-strapi-tutorial` :
 
 ```bash
-$ mkdir gatsby-strapi-tutorial
+mkdir gatsby-strapi-tutorial
 ```
 
 Générez l'API au sein de ce nouveau dossier :
 
 ```bash
-$ cd gatsby-strapi-tutorial
-$ strapi new api
+cd gatsby-strapi-tutorial
+strapi new api
 ```
 
 #### Démarrage du serveur
@@ -87,13 +87,13 @@ $ strapi new api
 Entrez à l'intérieur du projet généré :
 
 ```bash
-$ cd api
+cd api
 ```
 
 Démarrez le serveur Node.js :
 
 ```bash
-$ strapi start
+strapi start
 ```
 
 À partir de maintenant, vous devriez être à même de voir le panel d'administration de votre projet : [http://localhost:1337/admin](http://localhost:1337/admin).
@@ -118,16 +118,16 @@ Créez un Content Type nommé `article` contenant trois champs : `title` (type `
 
 Ajoutez quelques articles en base de données. Pour cela, suivez les étapes suivantes :
 
- 1. Visitez la [page listant les articles](http://localhost:1337/admin/plugins/content-type-builder/models/article).
- 2. Cliquer sur `Add New Article`.
- 3. Renseignez un titre et un contenu, liez l'article à un auteur, puis valider.
- 4. Ajouter deux autres articles.
+1. Visitez la [page listant les articles](http://localhost:1337/admin/plugins/content-type-builder/models/article).
+2. Cliquer sur `Add New Article`.
+3. Renseignez un titre et un contenu, liez l'article à un auteur, puis valider.
+4. Ajouter deux autres articles.
 
 ![Tutorial](https://blog.strapi.io/content/images/2018/01/Screen-Shot-2018-01-17-at-21.14.36.png)
 
 ### Autorisation d'accès
 
-Pour des raisons de sécurité, l'[accès à l'API](http://localhost:1337/article) est, par défaut, restreint. 
+Pour des raisons de sécurité, l'[accès à l'API](http://localhost:1337/article) est, par défaut, restreint.
 
 Pour autoriser l'accès, visitez la [section Auth & Permissions du rôle Guest](http://localhost:1337/admin/plugins/users-permissions/roles/edit/1), sélectionnez l'action `Article - find` et sauvegardez. À partir de ce moment, vous devriez être à même de [requêter la liste d'articles](http://localhost:1337/article).
 
@@ -144,7 +144,7 @@ Bien joué, votre API est prête à l'utilisation ! Nous allons maintenant comme
 Commençez par installer Gatsby :
 
 ```bash
-$ npm install --global gatsby-cli
+npm install --global gatsby-cli
 ```
 
 ### Création d'un projet Gatsby
@@ -152,7 +152,7 @@ $ npm install --global gatsby-cli
 Dans le dossier `gatsby-strapi-tutorial` que vous avez précédemment créé, générez votre tout nouveau blog :
 
 ```bash
-$ gatsby new blog
+gatsby new blog
 ```
 
 ### Démarrage en mode développement
@@ -160,13 +160,13 @@ $ gatsby new blog
 Entrez dans le dossier du projet :
 
 ```bash
-$ cd blog
+cd blog
 ```
 
 Démarrez le serveur :
 
 ```bash
-$ gatsby develop
+gatsby develop
 ```
 
 À partir de ce moment, votre site Gatsby devrait être disponible à l'adresse suivante : [http://localhost:8000](http://localhost:8000).
@@ -184,12 +184,12 @@ Dans cet exemple nous utilisons Strapi. Nous allons donc évidemment avoir besoi
 Installons-le :
 
 ```bash
-$ npm install --save gatsby-source-strapi
+npm install --save gatsby-source-strapi
 ```
 
 Le plugin a besoin d'être configuré. Remplacez le contenu du fichier `gatsby-config.js` avec :
 
-*Path: `gatsby-config.js`*
+_Path_ : `gatsby-config.js`
 
 ```jsx
 module.exports = {
@@ -218,7 +218,7 @@ Ensuite, redémarrez le serveur afin que Gatsby prenne en compte ces changements
 
 Dans un premier temps, nous voulons afficher la liste d'articles. Pour cela, remplacez le contenu de la page d'accueil par le suivant :
 
-*Path: `src/pages/index.js`*
+_Path_ : `src/pages/index.js`
 
 ```jsx
 import React from 'react'
@@ -278,7 +278,7 @@ Notre site commence à ressembler à un blog. C'est une bonne nouvelle ! Cependa
 
 Commençons par créer le template contenant la requête GraphQL et définissant le contenu affiché :
 
-*Path: `src/templates/article.js`*
+_Path_ : `src/templates/article.js`
 
 ```jsx
 import React from 'react'
@@ -311,7 +311,7 @@ Tout semble prêt, mais en réalité, Gatsby ne sait pas quand ce template devra
 
 Tout d'abord, nous allons déclarer une nouvelle fonction nommée `makeRequest` afin d'exécuter la requête GraphQL. Ensuite, nous exportons une fonction nommée `createPages` dans laquelle nous récupérons la liste d'articles et créons une page pour chacun d'entre eux. Voici le résultat :
 
-*Path: `gatsby-node.js`*
+_Path_ : `gatsby-node.js`
 
 ```jsx
 const path = require(`path`);
@@ -374,7 +374,7 @@ Les articles sont rédigés par des auteurs. Eux-aussi méritent une page dédi�
 
 La création de la page auteur est très similaire à celle de la page article. Premièrement, nous créons le template :
 
-*Path: `src/templates/user.js`*
+_Path_ : `src/templates/user.js`
 
 ```jsx
 import React from 'react'
@@ -415,7 +415,7 @@ export const query = graphql`
 
 Ensuite, nous mettons à jour le fichier `gatsby-node.js` pour créer les URLs :
 
-*Path: `gatsby-node.js`*
+_Path_ : `gatsby-node.js`
 
 ```jsx
 const path = require(`path`);
@@ -503,12 +503,12 @@ Félicitations ! Vous avez créé un blog super rapide et facile à maintenir�
 
 Étant donné que le contenu est géré dans Strapi, les auteurs peuvent écrire leurs articles depuis une vraie interface et vous, en tant que développeur, n'avez qu'à recompiler le site pour mettre à jour le contenu.
 
-***Que faire à partir d'ici ?***
+### Que faire ensuite ?
 
 N'hésitez pas à continuer le projet pour découvrir plus en profondeur les avantages de Gatsby et de Strapi. Voici une liste de fonctionnalités que vous pourriez ajouter à votre projet : liste des auteurs, catégories d'articles, système de commentaire avec l'API Strapi ou Disqus, etc. Vous pouvez aussi créer tout type de site (boutique e-commerce, site vitrine, etc.).
 
 Lorsque votre projet sera terminé, vous voudrez probablement le déployer. Le site statique généré par Gatsby peut [facilement être publiée sur des services de stockage](https://www.gatsbyjs.org/docs/deploy-gatsby/) tels que Netlify, S3/Cloudfront, GitHub pages, GitLab, Heroku, etc. L'API Strapi n'est rien d'autre qu'une application Node.js. Elle peut donc être mise en ligne sur Heroku ou sur n'importe quelle instance Linux ayant Node.js installé dessus.
 
-Le [code source de ce tutoriel est disponible sur GitHub](https://github.com/strapi/strapi-examples/tree/master/gatsby-strapi-tutorial). Pour le tester, clonez le repository et suivez les instructions présentes dans le Readme.
+Le [code source de ce tutoriel est disponible sur GitHub](https://github.com/strapi/strapi-examples/tree/master/gatsby-strapi-tutorial). Pour le tester, clonez-le repository et suivez les instructions présentes dans le Readme.
 
 Nous espérons que vous avez apprécié ce tutoriel. N'hésitez pas à le commenter, le partager, et indiquer quelle est votre manière favorite de créer des sites avec React et d'en gérer le contenu.

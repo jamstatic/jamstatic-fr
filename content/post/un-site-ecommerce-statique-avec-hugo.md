@@ -44,10 +44,12 @@ complet pour [Hugo](https://gohugo.io/).
 
 Dans ce tutoriel nous verrons :
 
-1.  Comment générer votre site statique avec le générateur de site Hugo,
-2.  Comment y intégrer ensuite facilement le panier d’achat de la plate-forme
-    Snipcart,
-3.  Comment déployer votre site e-commerce sur Netlify.
+1. Comment générer votre site statique avec le générateur de site Hugo,
+
+2. Comment y intégrer ensuite facilement le panier d’achat de la plate-forme
+   Snipcart,
+
+3. Comment déployer votre site e-commerce sur Netlify.
 
 Mais d’abord un petit mot sur l’outil central que nous allons utiliser pour
 faire ceci.
@@ -415,8 +417,8 @@ Bon, il est temps de vous monter notre chef-d’œuvre :
 Alors c'est classe non ? Maintenant allez voir le site et le code source par
 vous-même :
 
-* Voir [Demo Snipcart + Hugo](http://snipcart-hugo.netlify.com)
-* Voir [Dépot GitHub](https://github.com/snipcart/snipcart-hugo-integration)
+- Voir [Demo Snipcart + Hugo](http://snipcart-hugo.netlify.com)
+- Voir [Dépot GitHub](https://github.com/snipcart/snipcart-hugo-integration)
 
 ## Conclusion et ressources supplémentaires
 
@@ -440,10 +442,10 @@ ne va pas être possible pour vos clients ? Il existe des outils bien pratiques
 pour gérer le contenu d’un site Hugo. Nous vous invitons à ajouter un des CMS
 statiques suivants :
 
-* [Forestry.io](https://forestry.io/)
-* [DatoCMS](https://www.datocms.com/)
-* [Netlify CMS](https://www.netlifycms.org/)
-* [Appernatic](https://appernetic.io/)
+- [Forestry.io](https://forestry.io/)
+- [DatoCMS](https://www.datocms.com/)
+- [Netlify CMS](https://www.netlifycms.org/)
+- [Appernatic](https://appernetic.io/)
 
 Pour une revue plus détaillée des outils à destination des clients, des limites
 et des bénéfices, reportez-vous à ce

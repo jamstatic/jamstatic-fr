@@ -35,15 +35,15 @@ maintenance de Jekyll, lors du Meetup Static Web à San Francisco. Après sa
 présentation, Moore a pris quelques minutes pour parler avec nous de Jekyll, de
 son développement et du futur des sites web statiques.
 
-**Qu'est-ce que vous faites quand vous ne travaillez pas sur Jekyll ?**
+### Qu'est-ce que vous faites quand vous ne travaillez pas sur Jekyll ?
 
 Je suis ingénieur logiciel chez Github, entreprise dans laquelle j'aide au
 développement du service Github Pages. Mon travail consiste aussi à maintenir
 Jekyll et à faire grandir la communauté autour du projet.
 
-**Peux-tu nous dire comment tu as été amené à t'impliquer dans Jekyll et ce qui
+### Peux-tu nous dire comment tu as été amené à t'impliquer dans Jekyll et ce qui
 s'est passé depuis pour aboutir à la mise en ligne de la version 3.0 de Jekyll
-?**
+?
 
 Le parcours était intéressant. J'ai été amené à utiliser Jekyll pour un job
 d’été à l’université de Cornell. Il s'agissait de la refonte du site
@@ -77,14 +77,14 @@ rencontré Tom au siège de GitHub pour parler de Jekyll pendant une heure. Il m
 donné les accès, j'ai corrigé quelques bugs et j'ai commencé à travailler sur
 Jekyll 1.
 
-**Tu as débuté avec la 0.12.1 ?**
+### Tu as débuté avec la 0.12.1 ?
 
 Effectivement, je l’utilisais, et il y avait tant de choses qui ne
 fonctionnaient pas. Je savais que je pouvais corriger tout ça ; je connaissais
 Ruby, j'avais fait un peu de Ruby on Rails avant, et j'avais beaucoup appris sur
 le développement web à cette occasion.
 
-**Quelle fut ta première expérience de programmation ?**
+### Quelle fut ta première expérience de programmation ?
 
 À la Rochester Institute of Technology, je m'étais rendu avec des camarades
 d’écoles à des journées de codes pour élèves de collège. J'avais 13 ans. Il y a
@@ -92,8 +92,8 @@ eu un cours de 30 minutes sur HTML. J'ai adoré. Je n'arrêtais pas d’en écri
 encore et encore. Je changeais la couleur de fond avec un attribut… je faisais
 tous ces trucs bêtes et ordinaires.
 
-**Quelle fut ta première rencontre avec les générateurs de site statique modernes
-?**
+### Quelle fut ta première rencontre avec les générateurs de site statique modernes
+?
 
 Je ne me souviens pas plus loin que de mon expérience avec Jekyll à Cornell. Je
 savais que les générateurs de site statique marcheraient, car j'avais codé du
@@ -103,18 +103,19 @@ plus d’étoiles sur Github et avait l’air d’être le plus populaire. Les g
 écrivaient dessus et l’utilisaient. GitHub Pages existait déjà. Du coup j'ai
 emprunté cette direction.
 
-**C'était donc une question de masse critique ? Il y avait pas mal de gens, donc
-tu savais que c'était vivant et actif.**
+### C'était donc une question de masse critique ? Il y avait pas mal de gens, donc
+tu savais que c'était vivant et actif.
 
 Tu sors dans les endroits branchés en général non ? Je me suis dit qu'il y
 aurait des contributeurs. Un projet open source a besoin de gens plus que de
 tout autre chose, parce qu'il y a besoin de code.
 
-**La pire chose à faire sur un forum est de poser une question et de retourner voir tous les jours s'il y a une réponse, mais toujours rien.**
+La pire chose à faire sur un forum est de poser une question et de retourner
+voir tous les jours s'il y a une réponse, mais toujours rien.
 
 Personne n'a répondu !
 
-**Que souhaites-tu aux générateurs de site statique ?**
+### Que souhaites-tu aux générateurs de site statique ?
 
 Qu'ils soient mieux compris. Je les comprends et tu les comprends, mais je rêve
 d’un monde où ce serait le cas pour tout le monde… et j'imagine que cela
@@ -124,14 +125,14 @@ c'est qu'ils soient mieux compris de tous et perçus comme une vraie solution,
 honnête et prête pour la production, pour les sociétés intéressées dans la
 réalisation de sites web.
 
-**Comment est-il possible de faire cela ?**
+### Comment est-il possible de faire cela ?
 
 Un truc dont j'ai parlé avec Christian et Matt, les fondateurs de Netlify (NdT :
 Service d’hébergement et de déploiement de sites statiques) ; c'est que les
 sites statiques, les générateurs de sites statiques, les générateurs statiques,
 le site statique, tout ça a l’air plutôt ennuyeux, ça sonne très technique…
 
-**Le dynamique a l’air bien plus intéressant !**
+### Le dynamique a l’air bien plus intéressant !
 
 C’est ça ! Drupal et WordPress sont basés sur le principe de "l’installation en
 1 clic". Sur wordpress.com, il est possible d’avoir un site gratuitement avec un
@@ -147,15 +148,15 @@ la différence entre le statique et le dynamique… qui n'est pas un terme que l
 gens emploient tous les jours. Quelle est la dernière fois où vous avez utilisé
 le mot statique en dehors du cadre professionnel ?
 
-**Oui statique ça fait un peu péjoratif dans ce contexte**
+### Oui statique ça fait un peu péjoratif dans ce contexte
 
 Oui, il faut véhiculer une vision claire, accessible et s'outiller d’un meilleur
 lexique. Quelque chose qui explique tout ça très bien, sans utiliser de mots qui
 font peur.
 
-**En tant que mainteneur de Jekyll, qu'aimerais-tu dire, communiquer à ceux qui
+### En tant que mainteneur de Jekyll, qu'aimerais-tu dire, communiquer à ceux qui
 s'intéressent aux technologies autour du web statique moderne ? La tribune est à
-toi.**
+toi.
 
 Si j'avais une tribune, je dirais "N'abandonnez pas". Prenez-vous la tête dessus
 un petit moment. Si cela ne marche pas au bout d’une heure, d’un jour, allez
@@ -171,6 +172,6 @@ c'est avoir confiance dans les personnes qui développent tout ça, qui font des
 sites web et qui apprennent de ça, c'est avoir confiance dans notre futur.
 
 **Et lorsqu'on n'abandonne pas, on a plus de chance de faire partie de la
-solution, car on s'est investi dedans.**
+solution, car on s'est investi dedans**.
 
 Oui, c'est exactement ça.

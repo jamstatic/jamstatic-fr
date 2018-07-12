@@ -66,8 +66,7 @@ consulter n'importe quelle version du site sur une URL unique basée sur le hash
 du commit.
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346982/netlify-prototype.png"
-caption="Les premiers prototypes du site de Netlify sont encore accessibles en ligne"
->}}
+caption="Les premiers prototypes du site de Netlify sont encore accessibles en ligne" >}}
 
 Un webdesigner pourra dès alors présenter une nouvelle itération sur le design
 du site en ouvrant une pull request sur GitHub et en retour toutes les parties

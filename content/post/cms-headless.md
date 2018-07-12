@@ -113,14 +113,14 @@ publication.
 
 Quelques articles en anglais pour approfondir le sujet :
 
-* [Le guide ultime du CMS headless de Kentico (PDF, Epub)](https://kenticocloud.com/headless-cms-guide)
-* [Les bénéfices d’un CMS headless (Forbes)](https://www.forbes.com/sites/forbestechcouncil/2017/11/22/the-benefits-of-a-headless-cms/#3447e5422d85)
-* [C’est quoi un CMS headless ? (CSS Tricks)](https://css-tricks.com/what-is-a-headless-cms/)
-* [CMS headless découplé (Contentful)](https://www.contentful.com/r/knowledgebase/headless-and-decoupled-cms/)
-* [headless CMS en 5 minutes (StoryBlok)](https://www.storyblok.com/tp/headless-cms-explained)
-* [Livre blanc sur l’API REST de WordPress (PDF)](https://humanmade.com/wordpress-rest-api-white-paper/)
+- [Le guide ultime du CMS headless de Kentico (PDF, Epub)](https://kenticocloud.com/headless-cms-guide)
+- [Les bénéfices d’un CMS headless (Forbes)](https://www.forbes.com/sites/forbestechcouncil/2017/11/22/the-benefits-of-a-headless-cms/#3447e5422d85)
+- [C’est quoi un CMS headless ? (CSS Tricks)](https://css-tricks.com/what-is-a-headless-cms/)
+- [CMS headless découplé (Contentful)](https://www.contentful.com/r/knowledgebase/headless-and-decoupled-cms/)
+- [headless CMS en 5 minutes (StoryBlok)](https://www.storyblok.com/tp/headless-cms-explained)
+- [Livre blanc sur l’API REST de WordPress (PDF)](https://humanmade.com/wordpress-rest-api-white-paper/)
 
 Listes de CMS headless :
 
-* [https://headlesscms.org/](https://headlesscms.org/)
-* [Tools: headless CMS (The New Dynamic)](https://www.thenewdynamic.org/tools/content-management/headless-cms/)
+- <https://headlesscms.org/>
+- [Tools: headless CMS (The New Dynamic)](https://www.thenewdynamic.org/tools/content-management/headless-cms/)
