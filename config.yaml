@@ -29,13 +29,18 @@ disableKinds:
 taxonomies:
   category: categories
 
+theme: "json-api"
+
 outputs:
   home:
     - html
     - rss
-    - jsonfeed
+    - json
     - HEADERS
     - algolia
+  page:
+    - html
+    - json
 
 outputFormats:
   algolia:

@@ -1,0 +1,3 @@
+[submodule "themes/json-api"]
+	path = themes/json-api
+	url = https://github.com/dwalkr/hugo-json-api-component
