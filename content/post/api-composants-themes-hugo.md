@@ -12,8 +12,9 @@ source:
   url: "https://forestry.io/blog/add-functionality-to-your-hugo-site-with-theme-components/"
 ---
 
+{{% intro %}}Hugo continue de s'enrichir de fonctionnalités au fil des versions, parmi les dernières notables le support de modules de thèmes ou composants de thèmes. Il est désormais possible de venir enrichir un thème existant en fonctionnalités en ajoutant quelques fichiers de mise en forme. On peut par exemple ajouter des modèles pour afficher des vues au format JSON, voire même fournir un fichier YAML de configuration pour pouvoir personnaliser les champs à afficher. C'est ce que nous montre ici DJ Walker de chez Forestry.io, l'occasion de réviser au passage les fonctions de bases offertes par le langage de templating de Go.{{% /intro %}}
 
-Les composants de thème sont arrivés sont apparus dans la version 0.41 d'Hugo.
+Les composants de thème sont apparus dans la version 0.41 d'Hugo.
 Quand Hugo cherche certains fichiers (comme des données ou des
 fichiers de mise en page), il regarde d'abord à la racine de votre projet, puis
 dans le sous-répertoire `themes/` qui correspond à ce que vous avez spécifié
