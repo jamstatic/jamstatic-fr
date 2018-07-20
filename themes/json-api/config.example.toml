@@ -1,0 +1,5 @@
+theme = ["json-api"]
+
+[outputs]
+  page = ["json"]
+  section = ["json"]

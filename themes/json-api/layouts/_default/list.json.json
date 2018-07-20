@@ -1,0 +1,7 @@
+{{- .Scratch.Set "items" slice -}}
+{{- range .Pages -}}
+    {{- partial "schema_item.tmpl" (dict "currentPage" . "Root" $ "SchemaType" "list") -}}
+    {{- $.Scratch.Add "items" ($.Scratch.Get "item") -}}
+    {{- $.Scratch.Delete "item" -}}
+{{- end -}}
+{{- .Scratch.Get "items" | jsonify -}}

@@ -1,0 +1,21 @@
+# Override this file in your project to define custom schema for your content.
+# You can define custom schema for other content sections
+
+# Special fields
+#   $PAGECONTENT - the HTML content of the page
+
+default:
+  list:
+    fields:
+    - key: title
+      field: title
+    - key: date
+      field: date
+  single:
+    fields:
+    - key: title
+      field: title
+    - key: date
+      field: date
+    - key: content
+      field: $PAGECONTENT

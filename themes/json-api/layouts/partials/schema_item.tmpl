@@ -1,0 +1,13 @@
+{{- if and (isset $.Root.Site.Data.json_schema .currentPage.Section) (isset (index $.Root.Site.Data.json_schema .currentPage.Section) .SchemaType) -}}
+    {{- $.Root.Scratch.Set "schema" (index (index $.Root.Site.Data.json_schema .currentPage.Section) .SchemaType) -}}
+{{- else -}}
+    {{- $.Root.Scratch.Set "schema" (index $.Root.Site.Data.json_schema.default .SchemaType) -}}
+{{- end -}}
+{{- $.Root.Scratch.SetInMap "item" "uri" ($.currentPage.OutputFormats.Get "json").Permalink -}}
+{{- range ($.Root.Scratch.Get "schema").fields -}}
+    {{- if eq .field "$PAGECONTENT" -}}
+    {{- $.Root.Scratch.SetInMap "item" (default "content" .key) (index $.currentPage.Content) -}}
+    {{- else -}}
+        {{- $.Root.Scratch.SetInMap "item" (default .field .key) (index $.currentPage.Params .field) -}}
+    {{- end -}}
+{{- end -}}
