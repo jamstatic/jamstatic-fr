@@ -36,7 +36,7 @@ Maintenant vous pourriez argumenter que pendant le développement, vous n'avez p
 
 Prenons donc un exemple un peu plus réaliste :
 
-```
+```go-html-template
 {{ if .Site.IsServer }}
   {{ $cssOpts := (dict "targetPath" "assets/css/main.css" "enableSourceMap" true) }}
   {{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts }}
@@ -61,14 +61,14 @@ Pour le JS, sachez qu'il existe une [fonction pour la concaténation](https://go
 
 Je vous recommande chaudement de lire [l'article de Régis Philibert qui détaille l'utilisation des différentes fonctions offertes par Hugo pour la gestion des assets](https://regisphilibert.com/blog/2018/07/hugo-pipes-and-asset-processing-pipeline/) et bien entendu de vous référer à [la documentation officielle](https://gohugo.io/hugo-pipes/) qui est toujours à jour.
 
-Mine de rien, non seulement ces ajouts vont vous permettre de supprimer des dépendances à vos projets Hugo mais en plus ils permettent de bénéficier d'une meilleure expérience de développement. Non parce que lancer Webpack pour démarrer Hugo, c'est lourd.
+Mine de rien, non seulement ces ajouts vont vous permettre de supprimer des dépendances à vos projets Hugo mais en plus ils permettent de bénéficier d'une meilleure expérience de développement. Non parce que lancer Webpack pour démarrer le serveur d'Hugo, c'est lourd.
 
 On notera qu'il existe maintenant deux versions des binaires d'Hugo, celui avec le support de la gestion des assets c'est la version `extended`.
 
 Si comme moi vous utilisez Netlify pour générer automatiquement votre site à chaque commit, sachez que la version _extended_ n'est pas encore disponible à l'heure où j'écris ces lignes, mais c'est en cours.
 
-Maintenant la génération des fichiers CSS et des fichiers JS n'est pas quelque chose que vous avez besoin de lancer à _chaque_ build, ou à chaque fois qu'un contributeur édite un fichier Markdown dans votre headless CMS, le plus simple est donc encore de _commiter_ les fichiers générés par Hugo dans le répertoire `resources` après avoir fait vos modifications et de mettre à jour vôtre dépot Git.
+Maintenant la génération des fichiers CSS et des fichiers JS n'est pas quelque chose que vous avez besoin de lancer à _chaque_ build, ou à chaque fois qu'un contributeur édite un fichier Markdown dans votre [headless CMS]({{< relref "cms-headless.md" >}}) le plus simple est donc encore de _commiter_ les fichiers générés par Hugo dans le répertoire `resources` après avoir fait vos modifications et de mettre à jour vôtre dépot Git.
 
 ## Conclusion
 
-Hugo continue de se tailler une bonne place dans le monde des générateurs de site statique et mérite plus que jamais que vous tentiez l'expérience. Il se définit désormais comme un véritable _framework_ de développement, si l'on en croit [sa baseline officielle](https://gohugo.io/). Néanmoins Hugo n'en reste pas pour autant une application monolithique comparée aux autres SSG de l'écosystème `npm` comme Gatsby ou Next, à vous de voir si l'ensemble de fonctionnalités dont il dispose maintenant suffit pour votre projet.
+Hugo continue de se tailler une bonne place dans le monde des générateurs de site statique et mérite plus que jamais que vous tentiez l'expérience. Il se définit désormais comme un véritable _framework_ de développement, si l'on en croit [sa baseline officielle](https://gohugo.io/). Hugo n'en reste pas moins une application monolithique comparée aux autres SSG de l'écosystème `npm` comme Gatsby ou Next, à vous de voir si l'ensemble de fonctionnalités dont il dispose maintenant suffit pour votre projet.
