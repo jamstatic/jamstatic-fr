@@ -5,7 +5,7 @@ description: "Hugo offre une gestion des assets: Sass, minification, support de 
 categories:
   - hugo
 images:
-  - http://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1532283632/pipes.jpg
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1532283632/pipes.jpg
 ---
 
 {{% intro %}}
@@ -18,7 +18,7 @@ Hugo est surtout apprécié pour sa performance et son modèle de structuration 
 
 ## Traitement des assets
 
-{{< figure src="http://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1532283632/pipes.jpg" caption="" attr="Photo de Neil Cooper sur Unsplash" attrlink="https://unsplash.com/photos/KX2fCzuQoaQ" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1532283632/pipes.jpg" caption="" attr="Photo de Neil Cooper sur Unsplash" attrlink="https://unsplash.com/photos/KX2fCzuQoaQ" >}}
 
 Le principe est simple : tout ce qui se trouve dans le dossier `/assets` (que ce soit dans un thème ou pas) pourra être ensuite traité par des fonctions spécifiques aux assets. Pour les plus exigeants, ce chemin par défaut est bien entendu paramétrable via la directive `assetDir` dans votre fichier de configuration.
 
