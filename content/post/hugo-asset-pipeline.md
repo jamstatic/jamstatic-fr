@@ -55,7 +55,7 @@ Les options de la fonction `toCSS` sont légèrement différentes si c'est pour 
 
 ## Et ensuite ?
 
-Vous pouvez aller jeter un œil au dépôt d'exemple de [l'utilisation de Sass avec Hugo](https://github.com/bep/hugo-sass-test) sur GitHub pour un exemple plus complet, qui montre notamment comment surcharger des variables Sass depuis le fichier de configuration d'Hugo.
+Vous pouvez aller jeter un œil au dépôt d'exemple de [l'utilisation de Sass avec Hugo](https://github.com/bep/hugo-sass-test) sur GitHub pour un exemple plus complet, qui montre notamment comment surcharger des variables Sass depuis le fichier de configuration d'Hugo. Bud Parr a également publié un [exemple de configuration avec PostCSS, TailwindCSS, PurgeCSS et autoprefixer](https://github.com/budparr/hugopipes-tailwindcss). 
 
 Pour le JS, sachez qu'il existe une [fonction pour la concaténation](https://gohugo.io/hugo-pipes/bundling/), qui vous permettra de faire vos bundle en fonction des fichiers dont vous avez besoin dans vos layouts.
 
