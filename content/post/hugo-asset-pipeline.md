@@ -20,7 +20,7 @@ Hugo est surtout apprécié pour sa performance et son modèle de structuration 
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1532283632/pipes.jpg" caption="" attr="Photo de Neil Cooper sur Unsplash" attrlink="https://unsplash.com/photos/KX2fCzuQoaQ" >}}
 
-Le principe est simple : tout ce qui se trouve dans le dossier `/assets` (que ce soit dans un thème ou pas) pourra être ensuite traité par des fonctions spécifiques aux assets. Pour les plus exigeants, ce chemin par défaut est bien entendu paramétrable via la directive `assetDir` dans votre fichier de configuration.
+Le principe est simple : tout ce qui se trouve dans le dossier `/assets` (que ce soit dans un thème ou pas) pourra être ensuite traité par des fonctions spécifiques aux assets. Pour les plus exigeants, ce chemin par défaut est paramétrable via la directive `assetDir` dans votre fichier de configuration.
 
 On peut donc par exemple écrire ceci dans un fichier de layout :
 
@@ -55,19 +55,28 @@ Les options de la fonction `toCSS` sont légèrement différentes si c'est pour 
 
 ## Et ensuite ?
 
-Vous pouvez aller jeter un œil au dépôt d'exemple de [l'utilisation de Sass avec Hugo](https://github.com/bep/hugo-sass-test) sur GitHub pour un exemple plus complet, qui montre notamment comment surcharger des variables Sass depuis le fichier de configuration d'Hugo. Bud Parr a également publié un [exemple de configuration avec PostCSS, TailwindCSS, PurgeCSS et autoprefixer](https://github.com/budparr/hugopipes-tailwindcss). 
+Vous pouvez aller jeter un œil au dépôt d'exemple de [l'utilisation de Sass avec Hugo](https://github.com/bep/hugo-sass-test) sur GitHub pour un exemple plus complet, qui montre notamment comment surcharger des variables Sass depuis le fichier de configuration d'Hugo. Bud Parr a également publié un [exemple de configuration avec PostCSS, TailwindCSS, PurgeCSS et autoprefixer](https://github.com/budparr/hugopipes-tailwindcss).
+
+Vous pouvez également placer des images dans le répertoire `assets` et procéder à des transformations comme c'était déjà possible au niveau des ressources d'une page.
 
 Pour le JS, sachez qu'il existe une [fonction pour la concaténation](https://gohugo.io/hugo-pipes/bundling/), qui vous permettra de faire vos bundle en fonction des fichiers dont vous avez besoin dans vos layouts.
 
 Je vous recommande chaudement de lire [l'article de Régis Philibert qui détaille l'utilisation des différentes fonctions offertes par Hugo pour la gestion des assets](https://regisphilibert.com/blog/2018/07/hugo-pipes-and-asset-processing-pipeline/) et bien entendu de vous référer à [la documentation officielle](https://gohugo.io/hugo-pipes/) qui est toujours à jour.
 
-Mine de rien, non seulement ces ajouts vont vous permettre de supprimer des dépendances à vos projets Hugo mais en plus ils permettent de bénéficier d'une meilleure expérience de développement. Non parce que lancer Webpack pour démarrer le serveur d'Hugo, c'est lourd.
+Mine de rien, non seulement ces ajouts vont vous permettre de supprimer des dépendances à vos projets Hugo mais en plus ils permettent de bénéficier d'une meilleure expérience de développement. Non parce que lancer Webpack pour démarrer le serveur d'Hugo, c'est… lourd.
 
-On notera qu'il existe maintenant deux versions des binaires d'Hugo, celui avec le support de la gestion des assets c'est la version `extended`.
+On notera qu'il existe maintenant deux versions des binaires d'Hugo, celle avec le support de la gestion des assets c'est la version `extended`.
 
-Si comme moi vous utilisez Netlify pour générer automatiquement votre site à chaque commit, sachez que la version _extended_ n'est pas encore disponible à l'heure où j'écris ces lignes, mais c'est en cours.
+Si vous utilisez Netlify pour générer automatiquement votre site à chaque commit, sachez que la version _extended_ n'est pas encore disponible à l'heure où j'écris ces lignes.
 
-Maintenant la génération des fichiers CSS et des fichiers JS n'est pas quelque chose que vous avez besoin de lancer à _chaque_ build, ou à chaque fois qu'un contributeur édite un fichier Markdown dans votre [headless CMS]({{< relref "cms-headless.md" >}}) le plus simple est donc encore de _commiter_ les fichiers générés par Hugo dans le répertoire `resources` après avoir fait vos modifications et de mettre à jour vôtre dépot Git.
+La génération des fichiers CSS et des fichiers JS n'est pas quelque chose que vous avez forcément besoin de lancer à _chaque_ build, ou à chaque fois qu'un contributeur édite un fichier Markdown dans votre [headless CMS]({{< relref "cms-headless.md" >}}).
+
+En fonction de votre contexte vous pouvez choisir de :
+
+- générer les assets localement avec `hugo` et _commiter_ les fichiers générés dans le répertoire `resources` à chaque fois que vous modifiez le contenu du dossier `assets`,
+- recopier et commiter la version étendue du ficher binaire d'Hugo dans le répertoire `bin` de votre dépôt et modifier la commande de build en `./bin/hugo` au lieu de `hugo`.
+
+En combinant ces fonctions aux conventions existantes d'Hugo , les développeurs de thèmes peuvent maintenant fournir des fichiers de configuration pour toujours plus de personnalisation.
 
 ## Conclusion
 
