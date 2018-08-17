@@ -184,7 +184,7 @@ Grâce à cette clé de traduction, en l'absence de nomenclature commune, Hugo s
 
 ### Ajouter des liens vers les traductions dans les modèles de page
 
-Maintenant que nos contenus dans différentes langues sont reliés entre eux, comment en tirer partie dans les gabarits de page ?
+Maintenant que nos contenus dans différentes langues sont reliés entre eux, comment en tirer parti dans les gabarits de page ?
 
 Hugo stocke les traductions liées dans deux variables de page :
 
@@ -223,7 +223,7 @@ L'objet `.Language` est disponible pour toutes les pages. En plus des paramètre
 
 ## Les bundles de page
 
-Hugo vous permet de partager des ressource entre traductions et vous laisse aussi la possibilité de traduire une ressource !
+Hugo vous permet de partager des ressources entre traductions et vous laisse aussi la possibilité de traduire une ressource !
 
 Revenons à nos pages `about` et transformons les en bundles (un dossier qui permet de stocker un contenu et ses ressources associées : images, etc.). Afin que ce soit plus clair, nous opterons pour la gestion par dossiers :
 
@@ -278,9 +278,9 @@ content
 			└── index.md
 ```
 
-C'est tout, Hugo prendra en compte qu'une ressourcé dédiée pour la version espagnole de notre page `about`.
+C'est tout, Hugo prendra en compte qu'une ressource dédiée pour la version espagnole de notre page `about`.
 
-Et pour la version française ? Quelle image va-t-elle utiliser ? Celle de la version espagnole ou celle de la version anglais ?
+Et pour la version française ? Quelle image va-t-elle utiliser ? Celle de la version espagnole ou celle de la version anglaise ?
 
 Dans ce cas Hugo va se baser sur la langue qui a le plus de poids et retourner la version correspondante. Comme dans notre configuration des langues, l'anglais a un indice de poids de 1, la version française héritera de la version de la ressource en anglais.
 
@@ -312,7 +312,7 @@ Donc pour un site en anglais par défaut, les URLs de la page `about` et de ses 
 - `fr/about/index.html` 🇫🇷
 - `es/about/index.html` 🇪🇸
 
-C'est pas mal mais je doute que l'équipe chargée du référencement soit super fan. Pour nous assurer que les URLs des pages correspondent à leur titre, il nous faut encore mettre à la jour le slug des pages traduites :
+C'est pas mal, mais je doute que l'équipe chargée du référencement soit vraiment satisfaite. Pour nous assurer que les URLs des pages correspondent à leur titre, il nous faut encore mettre à jour le slug des pages traduites :
 
 ```yaml
 # about.fr.md
