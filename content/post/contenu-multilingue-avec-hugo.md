@@ -312,6 +312,25 @@ Donc pour un site en anglais par défaut, les URLs de la page `about` et de ses 
 - `fr/about/index.html` 🇫🇷
 - `es/about/index.html` 🇪🇸
 
+C'est pas mal mais je doute que l'équipe chargée du référencement soit super fan. Pour nous assurer que les URLs des pages correspondent à leur titre, il nous faut encore mettre à la jour le slug des pages traduites :
+
+```yaml
+# about.fr.md
+title: À Propos
+slug: a-propos
+```
+
+```yaml
+# acerda.es.md
+title: Acerda
+slug: acerda
+```
+
+Ce qui a pour effet d'avoir des URLs traduites :
+
+- `fr/a-propos/index.html` 🇫🇷 👌
+- `es/acerda/index.html` 🇪🇸 👌
+
 Nous pourrions décider de stocker les pages en anglais dans un répertoire dédié simplement en définissant le paramètre `defaultContentLanguageInSubdir` à `true` dans notre fichier `config.yaml`
 
 ## Conclusion
