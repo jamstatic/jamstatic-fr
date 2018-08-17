@@ -30,40 +30,40 @@ Nous ajoutons donc les paramètres suivants dans notre fichier de configuration 
 # config.yaml
 languages:
   en:
-	languageName: English
-	weight: 1
+    languageName: English
+    weight: 1
   fr:
-	languageName: Français
-	weight: 2
+    languageName: Français
+    weight: 2
   es:
-	languageName: Español
-	weight: 3
+    languageName: Español
+    weight: 3
 ```
 
-Ces langues sont dorénavant accessibles via .Site.Languages`, triées par le poids indiqué, la valeur la plus petite sera la plus importante.
+Ces langues sont dorénavant accessibles via `.Site.Languages`, triées par le poids indiqué, la valeur la plus petite sera la plus importante.
 
 Il est possible de personnaliser des paramètres globaux déjà définis dans `.Site.Params` ou `.Param`. Aucun souci à se faire donc pour le paramètre à appeler.
 
 ```yaml
 # config.yaml
 params:
-	description: Everything you need to know about the three languages.
-	twitter_handle: 3Languages
+  description: Everything you need to know about the three languages.
+  twitter_handle: 3Languages
 
 languages:
   en:
-	languageName: English
-	weight: 1
+    languageName: English
+    weight: 1
   fr:
-	languageName: Français
-	weight: 2
-	description: Tous ce que vous avez toujours voulu savoir sur les trois langues.
-	twitter_handle: 3Languages_france
+    languageName: Français
+    weight: 2
+    description: Tous ce que vous avez toujours voulu savoir sur les trois langues.
+    twitter_handle: 3Languages_france
   es:
-	languageName: Español
-	weight: 3
-	description: Todo lo que necesitas saber sobre los tres idiomas.
-	twitter_handle: 3Languages_espana
+    languageName: Español
+    weight: 3
+    description: Todo lo que necesitas saber sobre los tres idiomas.
+    twitter_handle: 3Languages_espana
 
 ```
 
@@ -89,11 +89,11 @@ Nous allons voir en détail comment s'assurer de deux choses, quelle que soit la
 
 Voici à quoi ressemble notre page `about` et ses traductions :
 
-```
+```sh
 content
-	├── about.md
-	├── about.es.md
-	└── about.fr.md
+├── about.md
+├── about.es.md
+└── about.fr.md
 ```
 
 Hugo assigne ici le français au fichier `about.fr.md` et la version espagnole au fichier `about.es.md`. C'est très intuitif.
@@ -133,14 +133,14 @@ Vous pouvez spécifier un chemin relatif à votre projet ou un chemin absolu. L'
 
 En reprenant l'exemple précédent, notre arborescence de contenus ressemble maintenant à quelque chose comme :
 
-```
+```sh
 content
-  ├── english
-  │   └── about.md
-	├── french
-	│   └── about.md
-	└── spanish
-	    └── about.md
+├── english
+│   └── about.md
+├── french
+│   └── about.md
+└── spanish
+    └── about.md
 ```
 
 Hugo peut désormais assigner une langue à chacune des pages en fonction du dossier dans lequelle elles se trouvent.
@@ -227,33 +227,33 @@ Hugo vous permet de partager des ressources entre traductions et vous laisse aus
 
 Revenons à nos pages `about` et transformons les en bundles (un dossier qui permet de stocker un contenu et ses ressources associées : images, etc.). Afin que ce soit plus clair, nous opterons pour la gestion par dossiers :
 
-```
+```sh
 content
-  ├── english
-  │   └── about
-  │       ├── index.md
-	│		└── header.jpg
-	├── español
-	│	└── about
-	│		└── index.md
-	└── french
-	    └── about
-	        └── index.md
+├── english
+│   └── about
+│       ├── index.md
+│   └── header.jpg
+├── español
+│   └── about
+│       └── index.md
+└── french
+    └── about
+        └── index.md
 ```
 
 
-```
+```sh
 content
-    ├── english
-    │   └── about
-    │       ├── index.md
-	│		└── header.jpg
-	├── spanish
-	│	└── about
-	│		└── index.md
-	└── french
-	    └── about
-	        └── index.md
+├── english
+│   └── about
+│       ├── index.md
+│   └── header.jpg
+├── spanish
+│   └── about
+│       └── index.md
+└── french
+    └── about
+        └── index.md
 ```
 
 Dans cette configuration, toutes les traductions utilisent la ressource de la langue anglaise `header.jpg`. Hugo nous évite des duplications inutiles en partageant les ressources avec toutes les traductions d'une même page. On peut donc utiliser cette image quelque que soit la langue utilisée à l'aide de la fonction `.Resources`, en écrivant par exemple ici `.Resources.GetMatch "header.jpg"`. Vous n'êtes pas obligé de stocker la ressource dans le dossier de la langue par défaut, ça marchera aussi si la ressource se trouve dans un autre dossier de langue.
@@ -263,19 +263,19 @@ Mais que se passe-t-il si nous devons localiser cette image pour notre audience 
 
 Il suffit de déposer notre image dans le dossier de la langue espagnole :
 
-```
+```sh
 content
-  ├── english
-  │   └── about
-  │       ├── index.md
-	│		└── header.jpg
-	├── spanish
-	│   └── about
-	│       ├── index.md
-	│		└── header.jpg ✨
-	└── french
-		└── about
-			└── index.md
+├── english
+│   └── about
+│       ├── index.md
+│   └── header.jpg
+├── spanish
+│   └── about
+│       ├── index.md
+│   └── header.jpg ✨
+└── french
+    └── about
+        └── index.md
 ```
 
 C'est tout, Hugo prendra en compte qu'une ressource dédiée pour la version espagnole de notre page `about`.
@@ -288,12 +288,12 @@ Sachez qu'il est possible de renommer n'importe quel fichier pour lui affecter u
 
 ```sh
 content
-	└── about
-		├── index.md
-		├── index.es.md
-		├── index.fr.md
-		├── header.jpg
-		└── header.es.jpg
+└── about
+    ├── index.md
+    ├── index.es.md
+    ├── index.fr.md
+    ├── header.jpg
+    └── header.es.jpg
 ```
 
 {{< notice tip >}}
