@@ -12,13 +12,13 @@ source:
   url: "https://regisphilibert.com/blog/2018/08/hugo-multilingual-part-1-managing-content-translation/"
 ---
 
-Hugo gère parfaitement le multilingue par défaut et permet ainsi de facilement traduire les contenus et les chaînes de caractères pour la localisation. Tout est pensé pour que la gestion de langues suppléméntaires soit aussi simple que possible pour les développeurs et les contributeurs, ils peuvent ainsi se focaliser sur l'essentiel.
+Hugo gère parfaitement le multilingue par défaut et permet ainsi de facilement traduire les contenus et les chaînes de caractères pour la localisation. Tout est pensé pour que la gestion de langues supplémentaires soit aussi simple que possible pour les développeurs et les contributeurs, ils peuvent ainsi se focaliser sur l'essentiel.
 
 Voyons ensemble comment configurer un projet Hugo multilingue et traduire votre contenu.
 
 ## Configurer les langues
 
-La première chose à faire sur un projet multilingue est d'indiquer à Hugo les langues à prendre en compte. Dans notre exemple nous en aurons trois : e’ll have three:
+La première chose à faire sur un projet multilingue est d'indiquer à Hugo les langues à prendre en compte. Dans notre exemple nous en aurons trois :
 
 1. Anglais 🇬🇧
 2. Français 🇫🇷
@@ -131,7 +131,7 @@ languages:
 
 Vous pouvez spécifier un chemin relatif à votre projet ou un chemin absolu. L'utilisation d'un chemin absolu signifie que vos dossiers de traduction ne se trouvent pas forcément dans votre projet, mais ailleurs sur votre ordinateur.
 
-En reprenant l'exemple précédent, notre arboresence de contenus ressemble maintenant à quelque chose comme :
+En reprenant l'exemple précédent, notre arborescence de contenus ressemble maintenant à quelque chose comme :
 
 ```
 content
@@ -153,9 +153,7 @@ En régle générale, nous allons vouloir indiquer à nos visiteurs les traducti
 
 Nous avons vu qu'Hugo sait assigner une langue à une page, mais qu'en est-il de la possibilité de lier des traductions entre elles ?
 
-Dans les deux cas, Hugo va se baser sur le nom de fichier et sa localisation par rapport au dossier `content`. En fonction du système utilisé, on  :
-
-For both systems, Hugo will look at the filename and its location relative to its content directory. So depending on your translation management system, we can check those linkings:
+Dans les deux cas, Hugo va se baser sur le nom de fichier et sa localisation par rapport au dossier `content`. En fonction du système utilisé, on peut utiliser les nomenclatures suivantes :
 
 Par nom de fichier | | 
 :---|---|---
@@ -184,9 +182,9 @@ translationKey: about
 
 Grâce à cette clé de traduction, en l'absence de nomenclature commune, Hugo se fera un plaisir de relier ces pages entre elles.
 
-### Using linked translations in your template.
+### Ajouter des liens vers les traductions dans les modèles de page
 
-Maintenant que nos contenus dans différentes langues sont reliés entre eux, comment en tirer partie dans les gabarits ?
+Maintenant que nos contenus dans différentes langues sont reliés entre eux, comment en tirer partie dans les gabarits de page ?
 
 Hugo stocke les traductions liées dans deux variables de page :
 
@@ -220,21 +218,22 @@ On peut utiliser la même logique pour ajouter un sélecteur de langue qui ne s'
 ```
 
 {{< notice tip >}}
-L'objet `.Language` est disponible pour toutes les pages. En plus des paramètres principaux de langues, il contient les valeurs personnalisées définir dans la configuration des langues comme la description et le peudo twitter dans notre exemple.
+L'objet `.Language` est disponible pour toutes les pages. En plus des paramètres principaux de langues, il contient les valeurs personnalisées définir dans la configuration des langues comme la description et le pseudo twitter dans notre exemple.
 {{< /notice >}}
-## Page Bundles
 
-Not only does Hugo make it possible to share resources among translations, it also lets you localize a resource!
+## Les bundles de page
 
-Let’s go back to our about pages and turn them into Bundles. For clarity we’ll use the "_By Directory_" management system.
+Hugo vous permet de partager des ressource entre traductions et vous laisse aussi la possibilité de traduire une ressource !
+
+Revenons à nos pages `about` et transformons les en bundles (un dossier qui permet de stocker un contenu et ses ressources associées : images, etc.). Afin que ce soit plus clair, nous opterons pour la gestion par dossiers :
 
 ```
 content
-    ├── english
-    │   └── about
-    │       ├── index.md
+  ├── english
+  │   └── about
+  │       ├── index.md
 	│		└── header.jpg
-	├── spanish
+	├── español
 	│	└── about
 	│		└── index.md
 	└── french
@@ -257,21 +256,18 @@ content
 	        └── index.md
 ```
 
-For now, every pages share the same `header.jpg`, the one in the English translation. This has nothing to do with it being the default language though.
+Dans cette configuration, toutes les traductions utilisent la ressource de la langue anglaise `header.jpg`. Hugo nous évite des duplications inutiles en partageant les ressources avec toutes les traductions d'une même page. On peut donc utiliser cette image quelque que soit la langue utilisée à l'aide de la fonction `.Resources`, en écrivant par exemple ici `.Resources.GetMatch "header.jpg"`. Vous n'êtes pas obligé de stocker la ressource dans le dossier de la langue par défaut, ça marchera aussi si la ressource se trouve dans un autre dossier de langue.
 
-Hugo help save on duplicates here by making any ressource available to every linked translations. Meaning we can access this header image regardless of the current language using our favorite `.Resources` method, say `.Resources.GetMatch "headers.jpg"`
+C'est bien pratique.
+Mais que se passe-t-il si nous devons localiser cette image pour notre audience espagnole ? Comment ajouter une image spécifique pour la page espagnole ?
 
-This is very convenient.
-But what if we want a header image better aligned with our Spanish audience.
-How to add a dedicated `header.jpg` for the Spanish page?
-
-By doing exactly that!
+Il suffit de déposer notre image dans le dossier de la langue espagnole :
 
 ```
 content
-    ├── english
-    │   └── about
-    │       ├── index.md
+  ├── english
+  │   └── about
+  │       ├── index.md
 	│		└── header.jpg
 	├── spanish
 	│   └── about
@@ -282,15 +278,15 @@ content
 			└── index.md
 ```
 
-That’s it, when building the Spanish translation of the about page our `.Resources` method will return the Spanish bundle’s very own `header.jpg`.
+C'est tout, Hugo prendra en compte qu'une ressourcé dédiée pour la version espagnole de notre page `about`.
 
-Now what about the French?
-There is no `header.jpg` in that bundle, so which header will be returned for the french translation? The Spanish one? The English one?
+Et pour la version française ? Quelle image va-t-elle utiliser ? Celle de la version espagnole ou celle de la version anglais ?
 
-Well here, Hugo will look at the languages respective `Weight` and return the winners’s file. If we look at our initial configuration file, the French should get the English header.
+Dans ce cas Hugo va se baser sur la langue qui a le plus de poids et retourner la version correspondante. Comme dans notre configuration des langues, l'anglais a un indice de poids de 1, la version française héritera de la version de la ressource en anglais.
 
-You should know that any file, content or not, can be renamed to match a language. For this Page Bundle localization, we chose to manage our translations by __content directory__ but had we chosen to manage them by __filename__, this is how our About page's Bundle would have looked like:
-```
+Sachez qu'il est possible de renommer n'importe quel fichier pour lui affecter une langue. Si nous avions choisi ici de nous baser sur la méthode qui repose sur la nomenclature des fichiers, notre bundle pour la page `about` ressemblerait à ceci :
+
+```sh
 content
 	└── about
 		├── index.md
@@ -299,8 +295,9 @@ content
 		├── header.jpg
 		└── header.es.jpg
 ```
-{{< notice >}}
-Because `.GetMatch` tests on a Resource’s `.Title` which defaults to its filename (language included), always try, with a _By Filemane_ bundle, to make your resource call _language-agnostic_, like so: `.Resources.GetMatch "header*.jpg"`
+
+{{< notice tip >}}
+Comme la fonction `.GetMatch` teste la valeur `.Title` d'une ressource, qui correspond par défaut à son nom de fichier (langue incluse), faites bien attention si vous vous basez sur les nomenclatures de fichier de bien englober toutes les ressources quelle que soit leur langue, comme ceci : `.Resources.GetMatch "header*.jpg"`
 {{< /notice >}}
 
 ## Configurer nos URLs
