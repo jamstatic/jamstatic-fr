@@ -143,7 +143,7 @@ visiteurs qu'ils consultent la version de développement de votre site.
 {% endif %}
 ```
 
-Et voilà mon [site de préproduction](http://dev.eduardoboucas.com) est
+Et voilà mon [site de préproduction](https://dev.eduardoboucas.com) est
 configuré. Lorsque je veux demander à quelqu'un de relire un article avant qu'il
 ne soit publié, je le pousse sur la branche `dev` pour le publier sur le site de
 préproduction, pour le publier en production, j'ai juste à le fusionner dans la

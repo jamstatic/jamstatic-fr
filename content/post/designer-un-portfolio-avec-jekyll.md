@@ -31,7 +31,7 @@ Donc j'étais en train de mettre à jour mon
 page sur toutes les pages et j'ai pensé… putain mais que suis-je en train de
 faire de ma vie ? N'y aurait-il pas un moyen plus intelligent de faire ? J'étais
 dans l’expectative quand [James](https://medium.com/u/57b87df79e32) m'a suggéré
-de tester [Jekyll](http://jekyllrb.com/). Mon épopée commence donc ici.
+de tester [Jekyll](https://jekyllrb.com/). Mon épopée commence donc ici.
 
 Je partage ce guide pas-à-pas, car je pense que ce workflow pour un portfolio
 peut avoir de la valeur aux yeux de ceux qui souhaitent bénéficier de méthodes
@@ -110,7 +110,7 @@ caption="Le thème par défaut de Jekyll" >}}
 
 Regardons à quoi ressemble l’arborescence de notre site Jekyll en ouvrant le
 dossier `mon-site` dans notre éditeur de texte préféré. J'ai utilisé Sublime
-Text pendant des années mais récemment je suis passé à [Atom](http://atom.io/).
+Text pendant des années mais récemment je suis passé à [Atom](https://atom.io/).
 C’est bien documenté et les paquets de la communauté sont assez mortels -
 [pigments](https://atom.io/packages/pigments),
 [Emmet](https://atom.io/packages/emmet) et
@@ -121,7 +121,7 @@ citer que quelques-uns.
 src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*18hVdarzmkx6KkSvty5Uaw/RS/w704.png?&ssl=1"
 caption="Le dossier mon-site ouvert dans Atom" >}}
 
-Pour ce guide, je vais utiliser [Atom](http://atom.io/). Vous remarquerez le
+Pour ce guide, je vais utiliser [Atom](https://atom.io/). Vous remarquerez le
 panneau avec l’arborescence de fichier sur la gauche. Laissez-moi vous la
 détailler :
 
@@ -240,7 +240,7 @@ En préfixant nos variables avec `page`, Liquid va rechercher dans votre page le
 entrées front matter correspondantes entre les triples tirets. Si elles
 existent, nous pouvons écrire le texte stocké dans ces variables dans notre
 HTML. Cool, non ?
-[Plus de détails sur les variables par ici](http://jekyllrb.com/docs/variables/).
+[Plus de détails sur les variables par ici](https://jekyllrb.com/docs/variables/).
 
 Et si nous ajoutons encore quelques variables à nous dans le front matter pour
 épicer un peu nos articles :
@@ -315,7 +315,7 @@ caption="" >}}
 
 Vous avez probablement remarqué que les projets Jekyll sont livrés avec des
 fichiers Sass (avec une extension `.scss`). Bien que vous n'ayez pas besoin de
-connaître [Sass](http://sass-lang.com/) pour pouvoir utiliser Jekyll, c'est un
+connaître [Sass](https://sass-lang.com/) pour pouvoir utiliser Jekyll, c'est un
 outil apprécié et recommandé dans le processus de développement CSS. Sérieusement,
 votre CSS sera bien mieux organisé et cohérent une fois que vous l’aurez adopté.
 Ces [guides pour débutant](http://thesassway.com/beginner) m'ont beaucoup aidé
@@ -335,7 +335,7 @@ intervenants du projet.
 
 ## Configurer Git
 
-[Téléchargez et installez Git](http://git-scm.com/downloads). De retour dans
+[Téléchargez et installez Git](https://git-scm.com/downloads). De retour dans
 votre terminal, entrez ces commandes (et ajoutez vos propres infos entre les
 guillemets) :
 

@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">{{ .Title }}</h1>
       <p class="post-meta">
@@ -12,7 +12,7 @@
         • {{ range $index, $category := .Params.categories }}{{ if $index }}, {{ end }}<a href="{{ "categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
         {{ end }}
         • <span aria-label="Temps de lecture">{{ .ReadingTime }} min</span>
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        • <span itemprop="author" itemscope itemtype="https://schema.org/Person">
             <span itemprop="name">
               <a class="post-author" rel="author" href="https://github.com/{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Params.Author.GitHub }}{{ end }}
 ">{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Params.Author.Name }}{{ end }}</a>

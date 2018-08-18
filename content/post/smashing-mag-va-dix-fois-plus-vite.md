@@ -181,7 +181,7 @@ sommes très fiers du résultat.
 _Spéciale dédicace à toutes les technologies utilisées_ :
 
 [Algolia](https://www.algolia.com/), un service de recherche super rapide en
-temps réel, [Hugo](http://gohugo.io/), combiné à une gestion moderne des assets
+temps réel, [Hugo](https://gohugo.io/), combiné à une gestion moderne des assets
 avec Gulp et Webpack, le tout basé sur le modèle open-source
 [Victor Hugo](https://github.com/netlify/victor-hugo).
 

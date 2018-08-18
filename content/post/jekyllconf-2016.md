@@ -9,7 +9,7 @@ categories:
   - jekyll
 ---
 
-{{% intro %}} [JekyllConf](http://jekyllconf.com/) est la première conférence
+{{% intro %}} [JekyllConf](https://jekyllconf.com/) est la première conférence
 entièrement consacrée à Jekyll. C’est une conférence en ligne, gratuite et
 ouverte à tous, preuve de la volonté de partage qui anime la communauté. Elle
 aura lieu le samedi 7 mai 2016 à partir de 19h heure française, les vidéos
@@ -21,10 +21,10 @@ OctoPress et GitHub Pages ; outre une vision des futures améliorations possible
 pour les générateurs de sites statiques, il y avait eu quelques retours
 d’expérience plus pratiques comme la création de _styleguide_. Nous ne pouvons
 que vous inviter à aller regarder les
-[vidéos de l’édition de 2015](http://jekyllconf.com/2015/) si vous vous
+[vidéos de l’édition de 2015](https://jekyllconf.com/2015/) si vous vous
 intéressez à Jekyll et aux générateurs de site statique.
 
-Le [programme](http://jekyllconf.com/) de cette deuxième édition s’annonce tout
+Le [programme](https://jekyllconf.com/) de cette deuxième édition s’annonce tout
 aussi intéressant et met encore plus l’accent sur des retours d’expérience ainsi
 que différents cas d’utilisation avancée de Jekyll.
 

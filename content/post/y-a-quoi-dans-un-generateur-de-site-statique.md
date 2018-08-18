@@ -41,7 +41,7 @@ Pourquoi Harp ? Pour deux raisons. La première est qu'HarpJS est, de par sa
 conception, un générateur de site statique très simple. Il ne possède pas
 beaucoup de fonctionnalités qui feraient que nous nous perdrions en route en
 voulant explorer un générateur de site statique plus complet (comme
-[Jekyll](http://jekyllrb.com/) par exemple). La deuxième raison à cela, bien
+[Jekyll](https://jekyllrb.com/) par exemple). La deuxième raison à cela, bien
 plus pragmatique, est que je connais bien JavaScript alors que je ne connais pas
 très bien Ruby.
 

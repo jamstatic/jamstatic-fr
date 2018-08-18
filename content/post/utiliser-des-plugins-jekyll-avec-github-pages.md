@@ -107,7 +107,7 @@ Jekyll][jekyll-rakefile] pour une implémentation alternative de la tâche
 
 Enfin, sachez qu'il existe d’autres solutions d’hébergement comme
 [GitLab Pages](https://pages.gitlab.io/), [Netlify](https://www.netlify.com),
-[Cloudcannon](http://cloudcannon.com), [Siteleaf](https://www.siteleaf.com/) ou
+[Cloudcannon](https://cloudcannon.com), [Siteleaf](https://www.siteleaf.com/) ou
 [Forestry.io](https://forestry.io/) qui vous permettent d’utiliser les plugins
 de votre choix, sans avoir recours à ce genre de hack.
 

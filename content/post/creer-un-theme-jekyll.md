@@ -48,7 +48,7 @@ maintenant comme les plugins à l’aide de bundler.
 
 Les thèmes pour Jekyll permettent de packager tous les modèles et les fichiers
 relatifs à la présentation dans une
-[`gem` Ruby](http://guides.rubygems.org/what-is-a-gem/), exactement comme
+[`gem` Ruby](https://guides.rubygems.org/what-is-a-gem/), exactement comme
 c'était déjà le cas pour les plugins. Cela signifie qu'un design peut
 s'appliquer simplement à un ou plusieurs sites, sans que la couche de
 présentation ne vienne semer la pagaille dans les fichiers de votre site.
@@ -98,7 +98,7 @@ end
 
 Le code ci-dessous est un exemple de fichier `Gemfile`. Ce fichier `Gemfile`
 sert à gérer les gems de votre projet avec l’aide de
-[Bundler](http://bundler.io/). Ici j'utilise le thème `alembic-jekyll-theme`,
+[Bundler](https://bundler.io/). Ici j'utilise le thème `alembic-jekyll-theme`,
 ainsi que d’autres plugins pour Jekyll.
 
 Ensuite, il faut déclarer l’utilisation du thème dans votre fichier de
@@ -109,7 +109,7 @@ theme: alembic-jekyll-thème
 ```
 
 Une fois que vous avez modifié ces deux fichiers, il va falloir utiliser
-[Bundler](http://bundler.io/) pour installer notre nouveau thème et pouvoir
+[Bundler](https://bundler.io/) pour installer notre nouveau thème et pouvoir
 générer et prévisualiser notre site. Dans votre terminal tapez la commande
 suivante :
 
@@ -239,7 +239,7 @@ gem install bundler jekyll
 ```
 
 La documentation officielle propose une méthode pour
-[installer Jekyll sur une machine Windows](http://jekyllrb.com/docs/windows/).
+[installer Jekyll sur une machine Windows](https://jekyllrb.com/docs/windows/).
 
 Si vous préférez utiliser
 [la gem de GitHub en vue d’utiliser GitHub Pages](https://github.com/github/pages-gem),
@@ -510,7 +510,7 @@ Une fois votre thème en ligne, assurez-vous une dernière fois qu'il fonctionne
 Notez les difficultés qu'un utilisateur pourrait rencontrer.
 
 Si vous devez publier des corrections ou des mises à jour, vous allez devoir
-[incrémenter le numéro de version de façon appropriée](http://guides.rubygems.org/patterns/#semantic-versioning)
+[incrémenter le numéro de version de façon appropriée](https://guides.rubygems.org/patterns/#semantic-versioning)
 dans votre fichier `.gemspec`, générer une nouvelle version de votre gem et la
 publier sur Rubygems.org.
 

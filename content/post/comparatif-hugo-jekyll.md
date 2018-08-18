@@ -221,7 +221,7 @@ Par exemple, Forestry a dévelopé le
 gérer les menus dans le CMS Forestry.
 
 Une autre fonctionnalité bien pratique de Jekyll est
-[l’import de contenus depuis WordPress](http://import.jekyllrb.com/docs/wordpress/).
+[l’import de contenus depuis WordPress](https://import.jekyllrb.com/docs/wordpress/).
 Avec 30% de l’Internet enfermé dans WordPress, il est bon de savoir que de
 migrer vers une stack moderne est aisé.
 

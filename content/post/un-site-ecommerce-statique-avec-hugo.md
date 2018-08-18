@@ -156,7 +156,7 @@ y jeter un œil. Il explique aussi plus en détail la création basique de site
 avec Hugo (Hello World, Blog, Galerie Photo, etc.).
 
 Vous pouvez aussi aller parcourir l’annuaire officiel de
-[quelques-uns des meilleurs thèmes pour Hugo](http://themes.gohugo.io/).
+[quelques-uns des meilleurs thèmes pour Hugo](https://themes.gohugo.io/).
 
 ### 2. Créer un fichier JSON statique pour les produits de notre boutique
 
@@ -213,8 +213,8 @@ Snipcart "Ajouter au panier".
 
 {{% notice info %}}
 
-**Remarque**: les produits Snipcart sont définis directement dans le code HTML 
-à l’aide de simples attributs data. 
+**Remarque**: les produits Snipcart sont définis directement dans le code HTML
+à l’aide de simples attributs data.
 [Plus de détails ici](https://docs.snipcart.com/configuration/product-definition).
 
 {{% /notice %}}

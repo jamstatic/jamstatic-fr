@@ -597,7 +597,7 @@ l’opération échouera.
 #### ProTip : Utilisez votre propre compte Mailgun
 
 L'instance publique de Static man utilise un compte
-[**Mailgun**](http://www.mailgun.com/) limité à 10 000 emails par mois. Je
+[**Mailgun**](https://www.mailgun.com/) limité à 10 000 emails par mois. Je
 vous encourage à créer un compte et à ajouter votre propre
 [API et domaine Mailgun](https://staticman.net/docs/configuration#notifications.enabled)
 dans le fichier `staticman.yml`. Assurez-vous de bien chiffrer les deux en

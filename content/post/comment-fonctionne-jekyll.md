@@ -112,7 +112,7 @@ Si un fichier commence par une entête
 les transformations suivante au fichier:
 
 1.  **Interprétation du code Liquid** : Le contenu du fichier est d’abord
-    parcouru par le parser de [Liquid](http://shopify.github.io/liquid/), les
+    parcouru par le parser de [Liquid](https://shopify.github.io/liquid/), les
     variables comme `site` ou `page` auxquelles le modèle Liquid veut accéder
     sont alors interprétées.
 
@@ -181,7 +181,7 @@ out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub
 repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll
 Talk][jekyll-talk].
 
-[jekyll-docs]: http://jekyllrb.com/docs/home
+[jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]: https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
 ```
@@ -214,7 +214,7 @@ out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub
 repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll
 Talk][jekyll-talk].
 
-[jekyll-docs]: http://jekyllrb.com/docs/home
+[jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]: https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
 
@@ -243,7 +243,7 @@ out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub
 repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll
 Talk][jekyll-talk].
 
-[jekyll-docs]: http://jekyllrb.com/docs/home
+[jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]: https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
 
@@ -259,7 +259,7 @@ Talk][jekyll-talk].
 <span class="k">end</span>
 <span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
 <span class="c1">#=> prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
-<p>Check out the <a href="http://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
 </code></pre>
 </div>
 </div>
@@ -271,11 +271,11 @@ Puis vient la dernière étape où nous mettons tout cela dans la variable
   <div class="tab">Modèle</div>
   <div class="tab">3. Résultat final</div>
   <div class="tab-content"><pre><code class="language-markdown">
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post" itemscope itemtype="https://schema.org/BlogPosting">
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
@@ -286,7 +286,7 @@ Puis vient la dernière étape où nous mettons tout cela dans la variable
     </code></pre></div>
 <div class="tab-content">
 <pre><code class="language-markdown">
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post" itemscope itemtype="https://schema.org/BlogPosting">
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">Welcome to Jekyll!</h1>
@@ -308,7 +308,7 @@ Puis vient la dernière étape où nous mettons tout cela dans la variable
     <span class="c1">#=> prints 'Hi, Tom' to STDOUT.</span></code></pre>
     </figure>
 
-    <p>Check out the <a href="http://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+    <p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
 
   </div>
 

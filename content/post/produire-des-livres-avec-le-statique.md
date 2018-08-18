@@ -15,7 +15,7 @@ source:
 
 Suite à la parution du [procédé de publication numérique basé sur Git et Middleman](http://blogs.getty.edu/iris/an-editors-view-of-digital-publishing/)
 d’un éditeur, [Antoine Fauchié](https://www.quaternum.net/) est allé poser
-quelques questions à [Eric Gardner](http://egardner.github.io/), développeur et
+quelques questions à [Eric Gardner](https://egardner.github.io/), développeur et
 designer au sein de l’équipe d’édition numérique de [The Getty](https://getty.edu/),
 un campus culturel et de recherche situé à Los Angeles.
 

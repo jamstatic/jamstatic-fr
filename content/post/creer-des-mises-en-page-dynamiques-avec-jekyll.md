@@ -9,7 +9,7 @@ source:
   url: https://medium.com/tmw-interactive/creating-dynamic-layouts-with-jekyll-3bbb7fc57d1f#.iac16fjec
   lang: en
 images:
-  - http://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346708/canon-unleashprint-full.jpg
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346708/canon-unleashprint-full.jpg
 categories:
   - jekyll
 ---
@@ -27,19 +27,19 @@ varier les mises en pages des différentes études de cas à l’aide de Jekyll.
 > effectuer de nombreux changements au sein d’un même modèle pour différents
 > articles sur le nouveau site de notre agence.
 
-{{< figure src="http://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346708/canon-unleashprint-full.jpg"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346708/canon-unleashprint-full.jpg"
 attr="Extrait de la campagne Canon #unleashprint"
-attrlink="http://www.tmwunlimited.com/work/canon-unleashprint" >}}
+attrlink="https://www.tmwunlimited.com/work/canon-unleashprint" >}}
 
-Les sites web créés avec [Jekyll](http://jekyllrb.com/) sont généralement
+Les sites web créés avec [Jekyll](https://jekyllrb.com/) sont généralement
 simples et leurs mises en page prévisible. J'aimerais vous montrer comme j’ai
 créé une mise en page pseudo-dynamique pour des études de cas sur
-[le nouveau site de TMW](http://www.tmwunlimited.com), en utilisant du YAML
+[le nouveau site de TMW](https://www.tmwunlimited.com), en utilisant du YAML
 front matter et un peu de magie[^1]…
 
 Chez TMW, nous travaillons sur des projets de toutes sortes et de toutes
 tailles. Des modèles de page classiques ne suffiraient pas, car nous faisons un
-travail extrêment varié et les mises en page doivent refléter cela. Nous avons
+travail extrêmement varié et les mises en page doivent refléter cela. Nous avons
 décidé, au tout début de la refonte de notre site, que chaque étude de cas
 devrait changer en fonction du projet et des types de contenu spécifiques. Cela
 constituait un défi intéressant à relever car Jekyll n'offre pas cette
@@ -62,7 +62,7 @@ correspond au `name` du partial/module qui sera utilisé.
 
 {{< gist mrmartineau ee7cd73fcfdef19b45afd01c4d6b3b9f >}}
 
-<figcaption>Extrait de <a href="http://www.tmwunlimited.com/work/canon-unleashprint/">l’étude de cas Canon. Unleashing Print.</a>
+<figcaption>Extrait de <a href="https://www.tmwunlimited.com/work/canon-unleashprint/">l’étude de cas Canon. Unleashing Print.</a>
 </figcaption>
 
 ### La boucle `for`
@@ -98,7 +98,7 @@ plus singulier. Avec par exemple l’ajout optionnel d’images dans le module
 `section-image` à une colonne égale à la largeur de l’élément `.l-container` ou
 à une version un peu plus large via l’utilisation de la classe
 `.l-container--wide`. Cette technique a été utilisé avec le plus bel effet sur
-[l’étude de case de Lynx Bigger Issues](http://www.tmwunlimited.com/work/unilever-lynx-bigger-issues/).
+[l’étude de case de Lynx Bigger Issues](https://www.tmwunlimited.com/work/unilever-lynx-bigger-issues/).
 
 {{< gist mrmartineau 8919159d58818c8530d516d118c3b838 >}}
 
@@ -121,8 +121,8 @@ nouveau site web, ci-dessous une sélection d’études de cas :
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346747/canon-unleashprint-fullpage.jpg" >}}
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346723/dogs-trust-fullpage.jpg"
-attr="http://www.tmwunlimited.com/work/"
-attrlink="http://www.tmwunlimited.com/work/" >}}
+attr="https://www.tmwunlimited.com/work/"
+attrlink="https://www.tmwunlimited.com/work/" >}}
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346706/lynx-fullpage.jpg" >}}
 

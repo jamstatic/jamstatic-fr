@@ -206,7 +206,7 @@ avec
 [les bases de Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) -
 C’est-à-dire `# titre`, `**gras**`, `*italique*` — alors il n'y a aucune raison
 qu'ils ne puissent éditer le dépôt sous-jacent. Des outils comme
-[Prose.io](http://prose.io/) s'intègrent à GitHub pour proposer une interface
+[Prose.io](https://prose.io/) s'intègrent à GitHub pour proposer une interface
 utilisateur plus adaptée pour les auteurs non techniques. Créez une branche pour
 les éditeurs de contenu puis fusionnez simplement leurs modifications pour
 publier de nouveaux contenus.
@@ -242,12 +242,12 @@ développeurs d’ajouter des fonctionnalités de e-commerce sur n'imporque quel
 site Web. L'inventaire des produits et des ventes est géré via le tableau de
 bord de Snipcart et son API permet l’intégration de systèmes de gestion
 d’inventaires, de livreurs, etc. Il existe d’autres solutions comme
-[Foxycart](http://www.foxycart.com/) et le
+[Foxy](https://www.foxy.io/) et le
 [bouton d’achat Shopify](https://www.shopify.co.uk/buy-button).
 
 Pour les **blogueurs** qui voudraient utiliser un thème tout fait pour leur
 site, il en existe maintenant des centaines — allez faire un tour sur les
-annuaires de thèmes pour [Hugo](http://themes.gohugo.io/) et
+annuaires de thèmes pour [Hugo](https://themes.gohugo.io/) et
 [Hexo](https://hexo.io/themes/). Il convient de mentionner que certaines
 connaissances techniques sont requises pour être opérationnel avec ces
 générateurs statiques.

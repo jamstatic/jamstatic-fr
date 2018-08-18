@@ -37,7 +37,7 @@ contenus est facile à ajouter sur un projet existant et comment cela va changer
 ## Le Projet
 
 J'ai créé et commencé à maintenir un site web open source en français sur la
-saga des [Rougon-Macquart](http://rougon-macquart.com)
+saga des [Rougon-Macquart](https://rougon-macquart.com)
 d’[Émile Zola](https://fr.wikipedia.org/wiki/%C3%89mile_Zola) bien avant que je
 commence à coder.
 
@@ -115,7 +115,7 @@ fichier, mais je préfère un identifiant unique, facile à lire et à écrire.
 #### Les relations dans nos gabarits de page
 
 Sur
-[la page d’Eugène](http://rougon-macquart.com/personnage/2010-03-15-rougon-eugene/)
+[la page d’Eugène](https://rougon-macquart.com/personnage/2010-03-15-rougon-eugene/)
 nous voulons afficher les romans dans lesquels il apparaît. Nous pouvons
 utiliser `intersect` pour construire notre liste :
 
@@ -124,7 +124,7 @@ utiliser `intersect` pour construire notre liste :
 ```
 
 Pour afficher la liste des personnages du roman sur la page
-[Son Excellence Eugène Rougon](http://rougon-macquart.com/roman/1876-son-excellence-eugene-rougon/),
+[Son Excellence Eugène Rougon](https://rougon-macquart.com/roman/1876-son-excellence-eugene-rougon/),
 nous utilisons l’opérateur `in` avec `where`:
 
 ```go-html-template

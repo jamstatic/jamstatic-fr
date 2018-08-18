@@ -15,7 +15,7 @@ categories:
 {{% intro %}}
 
 La majorité des articles publiés jusqu'ici se référaient à Jekyll,
-cette fois place à [Hugo](http://gohugo.io/). Hugo est un générateur de site
+cette fois place à [Hugo](https://gohugo.io/). Hugo est un générateur de site
 statique populaire très performant et beaucoup plus performant pour vos
 visiteurs si vous lui adjoignez les services d’un Service Worker pour gérer le
 mode déconnecté de votre site web. Notez que les explications fournies ici sont
@@ -29,7 +29,7 @@ tous deux très tendances en ce moment. Les Service Workers jouent un rôle maje
 dans tous les cas de figure. Un Service Worker en gros c'est un script qui va
 jouer le rôle d’un proxy entre le navigateur web et le réseau Internet. Vous
 trouverez dans cet article un exemple simple qui vous permettra d’installer un
-Service Worker sur un site statique généré avec [Hugo](http://gohugo.io/) afin
+Service Worker sur un site statique généré avec [Hugo](https://gohugo.io/) afin
 de le rendre ultra-performant.
 
 ## De quoi parle-t-on ?

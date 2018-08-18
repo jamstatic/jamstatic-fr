@@ -25,9 +25,9 @@ création de thème pour Jekyll.
 
 Nous allons supposer que vous connaissez déjà Jekyll, que vous savez créer des
 modèles de pages, si ce n'est pas le cas, commencez par lire
-[la documentation officielle,](http://jekyllrb.com/docs/templates/) vous verrez
+[la documentation officielle,](https://jekyllrb.com/docs/templates/) vous verrez
 c'est très accessible, c'est du HTML auquel on va ajouter un peu de
-[Liquid](http://shopify.github.io/liquid/), le langage de templating conçu pour
+[Liquid](https://shopify.github.io/liquid/), le langage de templating conçu pour
 les concepteurs de thèmes Shopify, pour accéder à nos données.
 
 Nous ne nous étendrons donc pas sur cette partie, qui consiste à préparer
@@ -43,7 +43,7 @@ le thème, nous verrons comment y ajouter des contenus et des exemples un peu
 plus bas.
 
 Les thèmes seront téléchargés sous forme de gem, vous devez donc avoir installé
-[bundler](http://bundler.io/) avec la commande `gem install bundler`, ce qui est
+[bundler](https://bundler.io/) avec la commande `gem install bundler`, ce qui est
 généralement le cas puisque Jekyll encourage son utilisation pour la gestion des
 dépendances. Enfin, il vous faut
 [créer un compte sur Rubygems](https://rubygems.org/sign_up) pour publier votre
@@ -130,7 +130,7 @@ gemspec
 En effet, c'est le fichier `gemspec` qui va contenir toutes les infos sur notre
 thème : le numéro de version, sa description, ses dépendances, etc. Pour savoir
 tout ce que peut contenir ce type de fichier, je vous invite à consulter la
-[documentation de référence des spécifications d’une gem](http://guides.rubygems.org/specification-reference/).
+[documentation de référence des spécifications d’une gem](https://guides.rubygems.org/specification-reference/).
 
 Lorsque vous utilisez la commande `new-theme` de Jekyll, par défaut, le fichier
 de spécification de votre gem ressemble à ça :
@@ -178,7 +178,7 @@ méta-données pour le SEO.
 
 Nous ajoutons donc les dépendances ainsi que les versions minimales requises,
 comme nous le ferions dans un fichier `Gemfile` à l’aide de
-[`spec.add_runtime_dependency`](http://guides.rubygems.org/specification-reference/#add_runtime_dependency)
+[`spec.add_runtime_dependency`](https://guides.rubygems.org/specification-reference/#add_runtime_dependency)
 :
 
 ```ruby

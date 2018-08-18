@@ -399,9 +399,9 @@ si vous souhaitez repartir de zéro.
 Pour en apprendre un peu plus sur Hugo, reportez-vous aux sections suivantes de
 la documentation officielle :
 
--  [L'organisation des contenus dans Hugo](http://gohugo.io/content-management/organization/)
--  [Introduction au langage de templating d’Hugo](http://gohugo.io/templates/introduction/)
--  [Les options de configuration d’Hugo](http://gohugo.io/getting-started/configuration/)
+-  [L'organisation des contenus dans Hugo](https://gohugo.io/content-management/organization/)
+-  [Introduction au langage de templating d’Hugo](https://gohugo.io/templates/introduction/)
+-  [Les options de configuration d’Hugo](https://gohugo.io/getting-started/configuration/)
 
 Nous verrons dans un prochain article comment configurer le versionnement avec
 Git pour faciliter l’intégration continue et le déploiement chez différents

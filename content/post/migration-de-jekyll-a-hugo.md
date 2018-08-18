@@ -4,7 +4,7 @@ date: 2017-06-07
 description: Le détail de la migration du blog de Sara Soueidan de Jekyll à Hugo et
   son passage de GitHub Pages à Netlify.
 source:
-  url: http://www.sarasoueidan.com/blog/jekyll-ghpages-to-hugo-netlify/
+  url: https://www.sarasoueidan.com/blog/jekyll-ghpages-to-hugo-netlify/
   title: Migrating from Jekyll+Github Pages to Hugo+Netlify
   author: Sara Soueidan
   lang: en
@@ -18,7 +18,7 @@ categories:
 
 Si vous faites du développement front-end, du CSS, du SVG et
 autres joyeusetés, vous connaissez sans doute déjà la talentueuse
-[Sara Soueidan](http://www.sarasoueidan.com/). Il se trouve que Sara a travaillé
+[Sara Soueidan](https://www.sarasoueidan.com/). Il se trouve que Sara a travaillé
 récemment sur la refonte de Smashing Magazine et [la migration de WordPress à
 Hugo]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}}). Cette mission lui
 a permis de se familiariser avec Hugo et de découvrir au passage le service
@@ -502,7 +502,7 @@ regarder s'il existe un fichier partiel dans le dossier `partials` situé dans l
 répertoire `layouts`.{{% /marker %}}
 
 Reportez-vous à
-[la documentation d’Hugo sur les fichiers partiels](http://gohugo.io/templates/partials/)
+[la documentation d’Hugo sur les fichiers partiels](https://gohugo.io/templates/partials/)
 pour savoir ce que veut dire le point à la fin, ce qu'il fait et comment on peut
 personnaliser les appels à des fichiers partiels.
 

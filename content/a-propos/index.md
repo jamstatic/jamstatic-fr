@@ -20,4 +20,4 @@ Tous les billets sont publiés en sous licence
 [Creative Commons Attribution Share Alike](https://creativecommons.org/licenses/by-sa/4.0/)
 
 Le code source est disponible sur
-[GitHub](http://github.com/jamstatic/jamstatic-fr)
+[GitHub](https://github.com/jamstatic/jamstatic-fr)

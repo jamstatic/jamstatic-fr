@@ -411,7 +411,7 @@ pour Inclusive Components.
 #### L'encapsulation de JavaScript
 
 JavaScript n'est pas, à ma grande surprise,
-[encapsulé automatiquement](http://robdodson.me/shadow-dom-javascript/) comme
+[encapsulé automatiquement](https://robdodson.me/shadow-dom-javascript/) comme
 CSS l’est dans shadow DOM. C’est-à-dire que, s’il y avait un autre bouton
 `[aria-pressed]` dans la page parente situé avant l’exemple de ce composant,
 alors `document.querySelector` ciblerait plutôt celui-là.

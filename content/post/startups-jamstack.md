@@ -20,8 +20,8 @@ Valley misent assez tôt sur les startups issus de cet écosystème : Netlify,
 Algolia, Contentful et plus récemment Gatsby ont tous levé quelques millions de
 dollars pour les aider dans leur développement. Et ce n'est que le début, les
 annonces de financement devraient se poursuivre dans les prochains mois.
- 
-{{% /intro %}} 
+
+{{% /intro %}}
 
 Dans cet article [CRV](https://www.crv.com/) montre une vue d'ensemble du
 résultat de plusieurs tendances qui ont permis l'émergence d'une nouvelle
@@ -36,26 +36,26 @@ du développement d'applications.
 
 ## Pourquoi maintenant ?
 
-**L'explosion de JavaScript** : 
+**L'explosion de JavaScript** :
 JS est devenu tellement puissant, avec un haut niveau d'abstraction il permet le
 développement d'applications plus interactives, plus rapides et l'amélioration
 de l'expérience de l'utilisateur final.
 
-**La prolifération des APIs** : 
+**La prolifération des APIs** :
 des microservices pour le backend à la popularité grandissante de
 [GraphQL](https://graphql.org/) et aux frontends librement couplés, les APIs
 sont un élément central du changement architectural auquel nous assistons.
 
-**Davantage de développeurs** : 
+**Davantage de développeurs** :
 le nombre grandissant de développeurs et la réduction du niveau de compétences
 moyen dans l'industrie. Tout cela fait qu'il y a beaucoup plus de développeurs
 qui ont envie d'apprendre et de se former à de nouveaux outils.
 
-**L'essor de Git** : 
+**L'essor de Git** :
 les processus basés sur Git sont désormais au cœur de la collaboration entre
 développeurs et du versionnement de projet.
 
-**Les progrès des infrastructures du Cloud** : 
+**Les progrès des infrastructures du Cloud** :
 la réduction des coûts de fonctionnement, les architectures _serverless_ et un
 outillage plus complet permettent aux développeurs de se concentrer sur le
 design et le développement de l'interface client et de bâtir de façon plus
@@ -76,19 +76,19 @@ enfin à maturité, l'interactivité d'HTML5 couplé à JavaScript et à des API
 comme [Disqus](https://disqus.com/) ou [Algolia](https://www.algolia.com/), nous
 avons l'opportunité de revenir à la simplicité des sites web statiques. Pour
 faire passer le message aux développeurs, des gens comme Matt Biilmann, le
-créateur et le CEO de [Netlify](http://netlify.com/), ont diffusé le concept de
+créateur et le CEO de [Netlify](https://netlify.com/), ont diffusé le concept de
 la JAMstack: une approche différente, _serverless_ pour développer des sites web
 modernes et performants. JAM signifie JavaScript, APIs et Markup et l'idée
 centrale est de ne plus avoir à gérer ses propres serveurs, d'héberger le code
 sur des CDNs rapides, fiables et sécurisés et de faire interagir les navigateurs
 avec les APIs qui peuvent s'occuper des composants « dynamiques ». La JAMstack
-personnifie toutes les tendances soulignées plus haut. 
+personnifie toutes les tendances soulignées plus haut.
 
 ## Le paysage de la JAMstack
 
 Cette image illustre le paysage florissant des startups avec quelques projets
 open source et des membres clés de la communauté, qui profitent des tendances
-mentionnées plus haut. 
+mentionnées plus haut.
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1527850625/jamstack-landscape.png" >}}
 
@@ -106,7 +106,7 @@ Le découplage de la partie client de la partie serveur permet également aux
 développeurs de se connecter aux meilleures APIs tierces comme celle d'Algolia
 pour la recherche par exemple. La partie CMS reste critique et des CMS headless
 (ou API-first comme [Contentful](https://www.contentful.com/) or
-[Tipe](http://tipe.io/)) permettent plus de collaboration entre le design, le
+[Tipe](https://tipe.io/)) permettent plus de collaboration entre le design, le
 marketing et les développeurs. Avec un process de travail basé sur Git, il est
 bien plus simple de mettre à jour un site ou une application, on peut déployer à
 partir de GitHub, s'assurer que le contenu est à jour, revenir à une version
@@ -119,7 +119,7 @@ frontend — les créateurs de contenus, les gens du marketing, du design et du
 développement. _« Les développeurs détestent avoir à créer et éditer du texte,
 les créateurs de contenu détestent devoir passer par les développeurs pour
 apporter des modifications simples »_ — Scott Moss, CEO de
-[Tipe](http://tipe.io/). 
+[Tipe](https://tipe.io/).
 
 La **conception d'interface basée sur des composants** est en pleine expansion,
 l'utilisation de [Storybook](https://storybook.js.org/) décolle (10% des
@@ -129,7 +129,7 @@ Angular s'accompagne d'un changement de paradigme vers le développement basé s
 des composants et Storybook est au cœur de ce mouvement » — Zoltan Olah, CEO de
 [Chroma](https://www.chromaticqa.com/).
 
-**Des services pour le frontend** : des plate-formes comme [Zeit](https://zeit.co/) 
+**Des services pour le frontend** : des plate-formes comme [Zeit](https://zeit.co/)
 et Netlify sont en train d'émerger, elles permettent de s'affranchir du temps et
 de la difficulté des différents processus de génération de site, de compilation
 des assets, de déploiement et de publication continue sur les serveurs
@@ -149,4 +149,4 @@ capital-risqueurs. [CRV](https://www.crv.com/) aime prendre des risques au plus
 tôt, et a déjà investi dans 6 startups qui font partie du paysage de la JAMstack
 (dont 3 qui seront annoncées publiquement très bientôt). Si vous êtes un
 créateur de startup lié à cet écosystème, un investisseur ou que vous voulez
-simplement papoter, écrivez à reid@crv.com. 
+simplement papoter, écrivez à reid@crv.com.
