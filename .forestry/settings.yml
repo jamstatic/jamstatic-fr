@@ -4,21 +4,28 @@ auto_deploy: false
 admin_path: 
 webhook_url: ''
 sections:
-- path: content/a-propos
+- type: directory
+  path: content/a-propos
   label: A propos
   create: none
+  match: "**/*"
   hidden: true
-- path: content/post
+- type: directory
+  path: content/post
   label: Articles
   create: all
-  default_front_matter_template: post
-- path: content
+  match: "**/*"
+  templates:
+  - post
+- type: directory
+  path: content
   label: Pages
   create: none
+  match: "*"
   hidden: true
 upload_dir: ''
 public_path: ''
 front_matter_path: ''
 use_front_matter_path: 
 file_template: ":filename:"
-version: 0.42.1
+version: 0.47.1
