@@ -708,10 +708,9 @@ body {
   align-content: center;
   flex-direction: column;
   padding: 1.44em 0;
-  min-height: 18vw;
   color: rgba(255, 255, 255, 0.9);
-  position: relative;
-  overflow: hidden; }
+  -webkit-clip-path: polygon(0 0, 99% 0, 100% 100%, 0 90%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%); }
   .site-header::before {
     content: "";
     position: absolute;
@@ -721,8 +720,7 @@ body {
     left: -50%;
     z-index: -1;
     background-color: #00c7b7;
-    background-image: linear-gradient(45deg, #4d9abf 0, #00c7b7 100%);
-    transform: rotate(1deg); }
+    background-image: linear-gradient(45deg, #4d9abf 0, #00c7b7 100%); }
 
 .site-title {
   display: block;
