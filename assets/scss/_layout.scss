@@ -15,18 +15,8 @@ body {
   color: rgba(255, 255, 255, 0.9);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-
-  &::before{
-    content: "";
-    position: absolute;
-    width: 151%;
-    height: 141%;
-    top: -50%;
-    left: -50%;
-    z-index: -1;
-    background-color: #00c7b7;
-    background-image: linear-gradient(45deg, #4d9abf 0, #00c7b7 100%);
-  }
+  background-color: #00c7b7;
+  background-image: linear-gradient(45deg, #4d9abf 0, #00c7b7 100%);
 }
 
 .site-title {
