@@ -12,6 +12,8 @@ source:
   author: "DJ Walker"
   title: "In Search of the Best Continuous Deployment Service"
   url: "https://forestry.io/blog/5-options-for-automating-your-software-deployments/"
+aliases:
+  - /2018/08/26/recherche-plate-forme-de-developpement-continu-parfaite/
 ---
 
 {{% intro %}}L'automatisation est une des composantes qui permet de bien travailler en versionnant son projet et en configurant une publication automatique. Cette bonne pratique issue du développement permet de s'assurer que tout le monde peut contribuer et que les changements seront bien publiés. DJ Walker a pris le temps de passer en revue différents services pour vous, c'est parti pour la visite guidée.
