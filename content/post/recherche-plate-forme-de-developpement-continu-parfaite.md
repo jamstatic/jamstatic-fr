@@ -26,12 +26,12 @@ Nous vous avons déjà parlé des [avantages du déploiement automatique,](https
 
 Lors de l'évaluation de l'utilité d'un outil de CI/CD, je veux d'abord connaître la réponse à deux questions :
 
-**Quel niveau contrôle ai-je sur l'environnement de build ?** Pouvoir configurer l'environnement dans lequel vous allez lancer vos étapes de build est essentiel. J'ai tendance à préférer lancer les étapes de build dans un conteneur Docker avec une image définie par mes soins. Les conteneurs sont devenus le moyen idéal pour faire tourner du code dans un environnement reproductible et isolé.
+**Quel niveau de contrôle ai-je sur l'environnement qui va générer une nouvelle version de mon application ?** Pouvoir configurer l'environnement dans lequel vous allez lancer vos étapes de build est essentiel. J'ai tendance à préférer lancer les étapes de build dans un conteneur Docker avec une image définie par mes soins. Les conteneurs sont devenus le moyen idéal pour faire tourner du code dans un environnement reproductible et isolé.
 
 **Comment se configurent les étapes de build ?**
-Vous pourriez simplement lancer vos tâches à l'aide d'un gros script shell ou d'un outil robuste comme `make`. Ces scripts peuvent toutefois devenir rapidement complexes et difficiles à déboguer. Idéalement, l'enchaînement des tâches est configuré à l'aide d'un langage de configuration qui offre des abstractions plus commodes pour éviter d'avoir à écrire de multiples scripts réutilisables. Bien qu'une syntaxe de configuration intuitive et facile à comprendre soit utile, quel que soit l'outil utilisé vous devrez en apprendre les rudiments, attendez-vous donc à lire leur documentation pour comprendre comment pour comprendre comment les utiliser.
+Vous pourriez simplement lancer vos tâches à l'aide d'un gros script shell ou d'un outil robuste comme `make`. Ces scripts peuvent toutefois devenir rapidement complexes et difficiles à déboguer. Idéalement, l'enchaînement des tâches est configuré à l'aide d'un langage de configuration qui offre des abstractions plus commodes pour éviter d'avoir à écrire de multiples scripts réutilisables. Bien qu'une syntaxe de configuration intuitive et facile à comprendre soit utile, quel que soit l'outil utilisé vous devrez en apprendre les rudiments, attendez-vous donc à lire leur documentation pour comprendre comment les utiliser.
 
-Peu importe comment fonctionne la configuration, l'important est d'opter pour des outils qui vous permettent de stocker et versionner votre configuration de build dans votre dépôt. Stocker votre configuration présente plusieurs avantages. Lancer un build de commit précédent se fera avec la configuration correspondante à cette même période. Vous pouvez travailler votre configuration sur une branche à part, et tirer parti de la portabilité qui découle de l'utilisation de la gestion de version.
+Peu importe comment fonctionne la configuration, l'important est d'opter pour des outils qui vous permettent de stocker et versionner votre configuration de build dans votre dépôt. Stocker votre configuration présente plusieurs avantages. Lancer le build d'un commit précédent se fera avec la configuration correspondante à cette même période. Vous pouvez travailler votre configuration sur une branche à part, et tirer parti de la portabilité qui découle de l'utilisation de la gestion de version.
 
 ## CircleCI
 
@@ -39,9 +39,9 @@ Peu importe comment fonctionne la configuration, l'important est d'opter pour de
 
 CircleCI est un service d'hébergement de CI/CD qui se connecte à votre dépôt et exécute vos étapes de build à chaque nouveau commit. CircleCI peut exécuter vos tâches dans une image Docker, une machine virtuelle Linux, ou une VM MacOS pour vos projets iOS.
 
-La configuration se fait à l'aide d'un fichier `.circleci/config.yml` dans votre dépôt. Ce fichier indique l'image Docker à utiliser pour votre environnement de build, ainsi que les commandes à exécuter afin de générer, tester et déployer votre application (ou votre site).
+La configuration se fait à l'aide d'un fichier `.circleci/config.yml` dans votre dépôt. Ce fichier indique l'image Docker à utiliser pour votre environnement de build, ainsi que les commandes à exécuter afin de générer, tester et déployer votre application.
 
-CircleCI est le service utilisé par Forestry pour lancer les tests et déployer le code. Il s'intègre sans problème avec GitHub et Bitbucket.
+CircleCI est le service utilisé par Forestry pour lancer ses tests et déployer son code. Il s'intègre sans problème avec GitHub et Bitbucket.
 
 ### On aime :
 
@@ -93,7 +93,7 @@ Drone est un arrivant relativement récent, et sa documentation aurait besoin d'
 
 ![](https://about.gitlab.com/images/ci/ci-cd-test-deploy-illustration_2x.png)
 
-Si vous utilisez GitLab pour héberger votre code, vous avez déjà accès aux outils d'intégration continue de GitLab. Tout ce que vous avez à faire est d'ajouter un pipeline de CI à votre projet avec un fichier `.gitlab-ci.yml`. J'aime le fait de ne pas à avoir à parcourir une interface graphique pour configurer l'intégration continue d'un projet — si vous avez plein de projets et que vous souhaitez gérer leur intégration continue par lots, cette option vous permettra plus d'automatisation.
+Si vous utilisez GitLab pour héberger votre code, vous avez déjà accès aux outils d'intégration continue de GitLab. Tout ce que vous avez à faire est d'ajouter un pipeline de CI à votre projet avec un fichier `.gitlab-ci.yml`. J'aime le fait de ne pas à avoir à parcourir une interface graphique pour configurer l'intégration continue d'un projet — si vous avez plein de projets et que vous souhaitez gérer leur intégration continue par lots, cette option vous donne des possibilités d'automatisation.
 
 ### On aime :
 
@@ -117,7 +117,7 @@ Jenkins est écrit en Java et est compatible avec les principaux systèmes d'exp
 
 ### On aime :
 
-Jenkins est totalement libre d'utilisation et open source. Jenkins supporte les plugins et dispose d'une [bibliothèque très fournie](https://plugins.jenkins.io/) de par sa longévité relative dans le domaine de l'intégration continue.
+Jenkins est totalement libre d'utilisation et open source. Jenkins supporte les plugins et dispose d'une [bibliothèque très fournie](https://plugins.jenkins.io/) de par sa relative longévité dans le domaine de l'intégration continue.
 
 Le fait de pouvoir faire tourner ses builds sur n'importe quel système d'exploitation, y compris Windows ou Mac OS, car Jenkins est écrit en Java.
 
