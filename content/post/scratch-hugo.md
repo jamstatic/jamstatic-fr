@@ -32,9 +32,9 @@ Avec la fonction __.Scratch__ d'Hugo,  n'importe quelle [Page](https://gohugo.io
 
 Scratch a été ajouté à l'origine pour contourner une [limitation](https://github.com/golang/go/issues/10608) du langage de templating de Go, qui empêchait d'écraser des variables. Elle s'est rapidement enrichie d'autres méthodes et constitue désormais une fonctionnalité d'Hugo à part entière.
 
-{{< notice >}}
+{{% notice info %}}
 À des fins de lisibilité, les extraits de code qui suivent ont des commentaires incompatibles avec le langage de template de Go. Reportez vous à la [doc](http://gohugo.io/templates/introduction/#comments) pour comment commenter dans Hugo.
-{{</ notice >}}
+{{% /notice %}}
 
 
 ### `.Scratch.Set`
@@ -356,5 +356,5 @@ En plus, je ne pense pas que s'amuser à dénouer des maps complexes soit aussi
 pratique que ce que nous permet de faire actuellement `.Scratch.SetInMap` !
 
 
-[^1]: Since [Hugo 0.38](https://gohugo.io/news/0.38-relnotes/)
-[^2]: Since [Hugo 0.43](https://gohugo.io/news/0.43-relnotes/)
+[^1]: Depuis [Hugo 0.38](https://gohugo.io/news/0.38-relnotes/)
+[^2]: Depuis [Hugo 0.43](https://gohugo.io/news/0.43-relnotes/)
