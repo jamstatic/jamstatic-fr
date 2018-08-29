@@ -1,6 +1,8 @@
 ---
 title: "La fonction .Scratch d’Hugo"
+description: Pendant longtemps, la fonction Scratch a été le seul moyen d'écraser des variables en Go Templating. Elle reste toujours le meilleur moyen d'enrichir votre contexte de page ou de shortcode dans Hugo.
 date: 2018-02-09T20:50:50+01:00
+lastmod: 2018-08-29T10:09:47-05:00
 draft: false
 categories:
   - hugo
@@ -15,67 +17,30 @@ source:
 Si vous avez aimé l’article de
 [Régis Philibert](https://regisphilibert.com/) à propos de [la gestion du
 contexte]({{< relref "hugo-le-point-sur-le-contexte.md" >}}) dans les fichiers
-de gabarits de page pour Hugo, vous devriez tout autant apprécier cette
-explication par l’exemple du surchargement de variables à l’aide de la fonction
-`.Scratch`. Ça vous démange ? Voyons tout cela en détail.
+de gabarits de page, vous devriez tout autant apprécier cette
+explication par l’exemple de la fonction `.Scratch` du langage de templating d'Hugo. Ça vous démange ? Voyons tout cela en détail.
 
 {{% /intro %}}
 
-Manipuler des variables dans Hugo peut s'avérer compliqué si vous ne connaissez
-que des langages de programmation classiques.
+{{% notice %}} Vous êtes ici pour apprendre à écraser une variable dans un gabarit de page ? Bonne nouvelle, vous n'avez plus besoin de la fonction `.Scratch` pour celà depuis la version 0.48 d'Hugo. Malgré cela, `.Scratch` reste encore utile pour plein d'autres choses ! {{% /notice %}}
 
-Généralement on écrit quelque chose comme :
+Le contexte de Page d'Hugo n'est pas seulement la source d'information la plus importante pour vos pages, c'est aussi la source de données principale de tous vos templates. Plus souvent qu'il n'y paraît, vous aurez à ajouter vos propres variables personnalisées en plus de celles définies par défaut.
 
-```php
-<?php
-$salutations = "Bonjour";
-if($ciel == "sombre"){
-    $salutations = "Bonsoir";
-}
-// En une ligne avec un opérateur ternaire :
-$salutations = $ciel == "sombre" ? "Bonjour : Bonsoir";
-```
+Avec la fonction __.Scratch__ d'Hugo,  n'importe quelle [Page](https://gohugo.io/variables/page/#readout) ou [Shortcode](https://gohugo.io/variables/shortcodes/#readout) peut être enrichi avec autant de variables que nécessaire en plus de celles par défaut.
 
-Avec Go Template, on serait donc tenté d’écrire:
+## C'est quoi Scratch ?
 
-```go-html-template
-{{ $salutations := "Bonjour" }}
-{{ if eq $ciel "sombre" }}
-    {{ $salutations = "Bonsoir" }}
-{{ end }}
-{{ $salutations }}
-```
+Scratch a été ajouté à l'origine pour contourner une [limitation](https://github.com/golang/go/issues/10608) du langage de templating de Go, qui empêchait d'écraser des variables. Elle s'est rapidement enrichi d'autres méthodes et constitue désormais une fonctionnalité d'Hugo à part entière.
 
-Malheureusement ça ne fonctionnera pas 😞
+{{< notice >}}
+À des fins de lisibilité, les extraits de code qui suivent ont des commentaires incompatibles avec le langage de template de Go. Reportez vous à la [doc](http://gohugo.io/templates/introduction/#comments) pour comment commenter dans Hugo.
+{{</ notice >}}
 
-Vous aurez besoin de l’aide de `.Scratch` pour cela et c'est ce que nous allons
-voir ensemble !
-
-Du moins tant que
-[cette anomalie du langage Go](https://github.com/golang/go/issues/10608) n'aura
-pas été résolue dans la version 1.11 annoncée actuellement pour la fin juillet,
-la seule manière de surcharger des variables ou d’ajouter n'importe quel type de
-valeur personnalisée à un objet `.Page`, c'est d’utiliser la fonction
-`.Scratch`.
-
-`.Scratch` est super pratique mais
-[sa documentation est un peu légère](https://gohugo.io/extras/scratch/) si comme
-moi vous n'êtes pas super à l’aise avec le langage Go.
-
-## `.Scratch` à la rescousse !
-
-Au départ la fonction `.Scratch` a été ajoutée pour palier à la limitation de Go
-Template mentionnée plus haut et s'est mise à rendre bien d’autres services par
-la suite.\
-Cette fonction dispose de plusieurs méthodes.
 
 ### `.Scratch.Set`
 
-`Set` est utilisé pour mémoriser une valeur voire pour pouvoir surcharger
-simplement une valeur par la suite.
+`Set` est utilisé pour mémoriser une valeur voire pour pouvoir surcharger simplement une valeur par la suite.
 
-Pour reprendre notre exemple précédent en PHP, nous pouvons écrire quelque chose
-comme :
 
 ```go-html-template
 {{ .Scratch.Set "salutations" "Bonjour" }}
@@ -122,18 +87,36 @@ Maintenant récupérons tout ça.
     </li>
 </ol>
 {{ end }}
-// Affichera une liste ordonnée avec nos 4 salutations.
+// ☝️ Affichera une liste ordonnée avec nos 4 salutations.
 
 // Ou avec la fonction delimit
-// Affichera Bonjour, Bonsoir, Aloha, Buenos dias
 {{ delimit (.Scratch.Get "salutations"), ", " }}
+// ☝️ Affichera Bonjour, Bonsoir, Aloha, Buenos dias
+```
+
+### .Scratch.Delete[^1]
+
+Supprime la paire clé/valeur du contexte.
+Lors de l'utilisation de `.Scratch.Add` dans une boucle, `.Scratch.Delete` est pratique pour réinitialiser une valeur.
+
+```go-html-template
+{{ .Scratch.Delete "salutations" }}
+```
+
+### newScratch[^2]
+
+Ce n'est pas une méthode issue de Scratch, mais une fonction qui permet la création d'une instance locale de Scratch dans un template.
+
+```go-html-template
+{{ $headerScratch := newScratch }}
+{{ $headerScratch.Add "brand_image" .Params.image }}
 ```
 
 ## Manipuler des tableaux et des maps
 
 ### .Scratch.SetInMap
 
-Cette fonction-là permet de cible la clef d’un tableau et de lui assigner une
+Cette fonction-là permet de cibler la clef d’un tableau et de lui assigner une
 nouvelle valeur.
 
 Elle prend comme premier paramètre votre clef `.Scratch`, comme second paramètre
@@ -169,10 +152,10 @@ vous guettent avec l’utilisation de `.Scratch` et du contexte.
 ### Un exemple classe avec `.Scratch`
 
 Je trouve ça bien pratique d’affecter des classes à mon élément `body` (comme le
-fait WordPress) pour pouvoir faires des ajustements CSS/JavaScript en fonction
+fait WordPress) pour pouvoir faire des ajustements CSS/JavaScript en fonction
 de la page sur laquelle on se trouve.
 
-Je trouvais ça très fastideux à faire avec Hugo, jusqu'à ce que je comprenne
+Je trouvais ça très fastidieux à faire avec Hugo, jusqu'à ce que je comprenne
 comment utiliser `.Scratch`.
 
 Je veux ajouter une classe CSS `rp-body` à toutes mes pages ainsi que la valeur
@@ -320,26 +303,34 @@ Dans le fichier partiel vous pourrez alors écrire :
 <div>
 ```
 
-## `.Scratch` après Go 1.11
+### *.Scratch* dans un fichier partiel sans contexte de page
 
-Le jour où l’équipe chargée de développer le langage Go publiera cette révision,
-nous pourrons surcharger naturellement les variables dans nos fichiers de
-gabarits :
+Tout ce qui figure ci-dessus est important si vous devez accéder à une instance Scratch liée à votre contexte de page, mais avec l'ajout de `newScratch`[^2], vous pouvez utiliser désormais utiliser Scratch n'importe où, y compris dans un fichier partiel sans contexte de Page.
+
+Appelons un fichier partiel. Notez que nous ne passons aucun contexte de Page, juste une map issue du Front Matter qui contient `class`, `alt` et une potentielle `image_src` pour remplacer celle par défaut.
 
 ```go-html-template
-// Enfin !
-{{ $salutations := "Bonjour" }}
-{{ if eq $ciel "sombre" }}
-    {{ $salutations = "Bonsoir" }}
-{{ end }}
-{{ $salutations }}
+{{ partial "brand" .Params.brand }}
 ```
 
-Mais `.Scratch` aura toujours besoin de passer les paires clef-valeur au
-contexte de page ou de shortcode. Sans cela, vous allez vous retrouver avec un
-sac de nœuds à gérer.
+Dans notre fichier partiel nous pouvons toujours faire appel à Scratch :
 
-### Sans `.Scratch` après Go v1.11
+```go-html-template
+{{ $brandScratch := newScratch }}
+{{ $brandScratch.Set "brand_image" "default.jpg" }}
+{{ with .image_src }}
+	{{ $brandScratch.Set "brand_image" "." }}
+{{ end }}
+<div class="brand {{ .class }}">
+	<img src="{{ $brandScratch.Get "brand_image" }}" alt="{{ .alt }}" />
+</div>
+```
+
+## `.Scratch` après Go 1.11
+
+Oui, avec la version 11 de Golang nous pouvons maintenant nativement écraser les variables dans les templates Go mais …
+
+Dans beaucoup de cas, je trouve que stocker une valeur dans le contexte de Page plus utile qu'autre chose. Par exemple, si un fichier partiel a besoin d'accéder à des variables de Page et à d'autres informations, si vous vous passiez de Scratch, vous vous retrouveriez avec un contexte sous la forme d'un long `dict`…
 
 ```go-html-template
 {{ $humeur := "Joyeux" }}
@@ -349,7 +340,9 @@ sac de nœuds à gérer.
 {{ partial "blancheneige/nain.html" (dict "humeur" $humeur "page" . ) }}
 ```
 
-### Avec `.Scratch` (actuellement)
+Utiliser Scratch pour stocker vos variables dans l'objet de Page vous garantie un code propre et réutilisable.
+
+### Avec `.Scratch`
 
 ```go-html-template
 {{ .Scratch.Set "humeur" "Joyeux" }}
@@ -361,3 +354,7 @@ sac de nœuds à gérer.
 
 En plus, je ne pense pas que s'amuser à dénouer des maps complexes soit aussi
 pratique que ce que nous permet de faire actuellement `.Scratch.SetInMap` !
+
+
+[^1]: Since [Hugo 0.38](https://gohugo.io/news/0.38-relnotes/)
+[^2]: Since [Hugo 0.43](https://gohugo.io/news/0.43-relnotes/)
