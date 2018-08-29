@@ -26,11 +26,11 @@ explication par l’exemple de la fonction `.Scratch` du langage de templating d
 
 Le contexte de Page d'Hugo n'est pas seulement la source d'information la plus importante pour vos pages, c'est aussi la source de données principale de tous vos templates. Plus souvent qu'il n'y paraît, vous aurez à ajouter vos propres variables personnalisées en plus de celles définies par défaut.
 
-Avec la fonction __.Scratch__ d'Hugo,  n'importe quelle [Page](https://gohugo.io/variables/page/#readout) ou [Shortcode](https://gohugo.io/variables/shortcodes/#readout) peut être enrichi avec autant de variables que nécessaire en plus de celles par défaut.
+Avec la fonction __.Scratch__ d'Hugo,  n'importe quelle [Page](https://gohugo.io/variables/page/#readout) ou [Shortcode](https://gohugo.io/variables/shortcodes/#readout) peut être enrichie avec autant de variables que nécessaire en plus de celles par défaut.
 
 ## C'est quoi Scratch ?
 
-Scratch a été ajouté à l'origine pour contourner une [limitation](https://github.com/golang/go/issues/10608) du langage de templating de Go, qui empêchait d'écraser des variables. Elle s'est rapidement enrichi d'autres méthodes et constitue désormais une fonctionnalité d'Hugo à part entière.
+Scratch a été ajouté à l'origine pour contourner une [limitation](https://github.com/golang/go/issues/10608) du langage de templating de Go, qui empêchait d'écraser des variables. Elle s'est rapidement enrichie d'autres méthodes et constitue désormais une fonctionnalité d'Hugo à part entière.
 
 {{< notice >}}
 À des fins de lisibilité, les extraits de code qui suivent ont des commentaires incompatibles avec le langage de template de Go. Reportez vous à la [doc](http://gohugo.io/templates/introduction/#comments) pour comment commenter dans Hugo.
@@ -340,7 +340,7 @@ Dans beaucoup de cas, je trouve que stocker une valeur dans le contexte de Page 
 {{ partial "blancheneige/nain.html" (dict "humeur" $humeur "page" . ) }}
 ```
 
-Utiliser Scratch pour stocker vos variables dans l'objet de Page vous garantie un code propre et réutilisable.
+Utiliser Scratch pour stocker vos variables dans l'objet de Page vous garantit un code propre et réutilisable.
 
 ### Avec `.Scratch`
 
