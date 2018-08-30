@@ -110,7 +110,7 @@ profit du contexte de la fonction `range`.
 ### Le contexte du plus haut niveau de la page 💲
 
 Heureusement pour nous, Hugo stocke le contexte de page dans un `$` donc cela ne
-fait rien si vous vous trouvez au fin fond d’un `width` ou d’un `range`, vous
+fait rien si vous vous trouvez au fin fond d’un `with` ou d’un `range`, vous
 pouvez toujours récupérer le contexte du plus haut niveau de la page.
 
 #### Un niveau d’imbrication
