@@ -506,7 +506,7 @@ Comme [expliqué plus bas](#traduction-des-chaînes-avec-le-système-de-fichier-
 
 ### Inclusion du contexte dans la traduction
 
-Vous pouvez également passer en seconde paramètre un contexte à la fonction `i18n` plutôt qu'un entier.
+Vous pouvez également passer en second paramètre un contexte à la fonction `i18n` plutôt qu'un entier.
 Là encore cela peut nous éviter de découper nos phrases en plusieurs chaînes de traduction, quand nous avons besoin de plus que de `.Count`.
 
 ```yaml
@@ -571,7 +571,7 @@ Maintenant, d'autres langues comme le Russe ont des pluriels spécifiques pour `
 
 Si nous pouvons deviner sans mal le nombre correspondant au pluriel de `zero` ou `two`, connaître le nombre exact d'éléments correspondants à `few` ou `many` en Russe ressemble davantage à un casse-tête.
 
-Heureusement, nous pouvons nous reposer sur Hugo et [go-i18n](https://github.com/nicksnyder/go-i18n) de [Nick Snyder](https://github.com/nicksnyder) pour nous aider à assembler les pièces du puzzle.
+Heureusement, nous pouvons nous reposer sur Hugo et [go-i18n](https://github.com/nicksnyder/go-i18n) de [Nick Snyder](https://github.com/nicksnyder) pour nous aider à assembler toutes les pièces du puzzle.
 
 {{% notice info %}}
 Voici tous les pluriels supportés pour l'ensemble des langues :
@@ -582,7 +582,7 @@ Mais, cela ne veut pas dire pour autant que vous pouvez les utiliser en anglais.
 
 Si la langue courante est l'anglais, que votre total de souris est nul, et que vous précisez que le pluriel pour `zero` est `This story has no mouse`, vous vous retrouverez quand même avec la valeur utilisée pour `other` : `This story has 0 Mice.`
 
-La valeur `zero` n'est prise en compte que si la langue courante est l'arabe ou si langue supporte un pluriel pour `zero`.
+La valeur `zero` n'est prise en compte que si la langue courante est l'arabe ou si cette langue supporte un pluriel pour `zero`.
 
 ## Conclusion 🏁
 
