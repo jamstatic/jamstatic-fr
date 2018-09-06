@@ -2,15 +2,25 @@
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   Content-Security-Policy-Report-Only: default-src 'self'; object-src 'self'; img-src 'self' https://gravatar.com data:; script-src 'unsafe-inline' *.cloudfront.net www.google-analytics.com *.disqus.com; style-src 'self' 'unsafe-inline' *.cloudfront.net; font-src 'self' fonts.googleapis.com;
-/assets/*
-  Cache-Control: public, max-age=360000
-
-  /*
-    X-Frame-Options: DENY
-    X-XSS-Protection: 1; mode=block
-    X-Content-Type-Options: nosniff
-    Referrer-Policy: origin-when-cross-origin
-  */
-    Link: <{{ "assets/js/anchor.min.js" | relURL }}>; rel=preload; as=script
-    Link: <{{ "assets/css/main.css" | relURL }}>; rel=preload; as=style
+  Referrer-Policy: origin-when-cross-origin
+  Link: <{{ "assets/js/anchor.min.js" | relURL }}>; rel=preload; as=script
+  Access-Control-Allow-Origin: "*"
+  Cache-Control: max-age=86400, private
+/assets/css/*.css
+  Cache-Control: max-age=86400, private
+/assets/js/*.js
+  Cache-Control: max-age=86400, private
+/assets/images/*.jpg
+  Cache-Control: max-age=86400, private
+/assets/images/*.jpeg
+  Cache-Control: max-age=86400, private
+/assets/images/*.png
+  Cache-Control: max-age=86400, private
+/assets/images/*.gif
+  Cache-Control: max-age=86400, private
+/assets/svg/*.svg
+  Cache-Control: max-age=86400, private
+/*.ico
+  Cache-Control: max-age=86400, private
