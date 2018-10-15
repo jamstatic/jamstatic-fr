@@ -3,7 +3,7 @@
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  Content-Security-Policy-Report-Only: default-src 'self'; object-src 'self'; img-src 'self' https://gravatar.com data:; script-src 'unsafe-inline' *.cloudfront.net www.google-analytics.com *.disqus.com; style-src 'self' 'unsafe-inline' *.cloudfront.net; font-src 'self' fonts.googleapis.com;
+  Content-Security-Policy-Report-Only: default-src 'self'; object-src 'self'; img-src 'self' https://gravatar.com data:; script-src 'unsafe-eval' 'unsafe-inline' d33wubrfki0l68.cloudfront.net cdn.jsdeliver.net cdnjs.cloudflare.com identity.netlify.com www.google-analytics.com; style-src 'self' 'unsafe-inline' *.cloudfront.net; font-src 'self' data:; report-uri https://franktaillandierme.report-uri.com/r/d/csp/reportOnly;
   Referrer-Policy: origin-when-cross-origin
   Link: <{{ "assets/js/anchor.min.js" | relURL }}>; rel=preload; as=script
   Access-Control-Allow-Origin: "*"
