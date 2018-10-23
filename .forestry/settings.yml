@@ -12,15 +12,9 @@ sections:
   templates:
   - post
 - type: document
-  path: _data/authors.yml
+  path: data/authors.yml
   label: Authors
   read_only: true
-- type: directory
-  path: content
-  label: Pages
-  create: none
-  match: "*"
-  hidden: true
 upload_dir: ''
 public_path: ''
 front_matter_path: ''
