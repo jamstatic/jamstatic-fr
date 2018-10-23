@@ -97,15 +97,16 @@ fields:
   hidden: false
   default: true
 pages:
+- content/post/netlify-en-10-fonctionnalites.md
+- content/post/migration-de-jekyll-a-hugo.md
+- content/post/des-commentaires-statiques-avec-jekyll-et-staticman.md
 - content/post/creer-un-theme-jekyll.md
 - content/post/creer-des-mises-en-page-dynamiques-avec-jekyll.md
-- content/post/des-commentaires-statiques-avec-jekyll-et-staticman.md
 - content/post/bibliotheques-de-composants-en-markdown.md
 - content/post/creer-un-theme-pour-jekyll.md
 - content/post/jekyll-3-3-est-dispo.md
 - content/post/gestion-images-responsive-avec-jekyll-cloudinary.md
 - content/post/gatsby-contentful-netlify-algolia.md
-- content/post/migration-de-jekyll-a-hugo.md
 - content/post/mettre-en-place-son-premier-site-sous-hugo.md
 - content/post/comment-fonctionne-jekyll.md
 - content/post/hugo-le-point-sur-le-contexte.md
@@ -126,7 +127,6 @@ pages:
 - content/post/eleventy-generateur-statique-simple.md
 - content/post/contenus-relatifs-dans-hugo.md
 - content/post/templates-hugo-designers-wordpress.md
-- content/post/netlify-en-10-fonctionnalites.md
 - content/post/smashing-mag-va-dix-fois-plus-vite.md
 - content/post/entretien-avec-parker-moore.md
 - content/post/creer-un-environnement-de-preproduction-pour-jekyll.md

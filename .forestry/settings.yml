@@ -5,18 +5,17 @@ admin_path:
 webhook_url: ''
 sections:
 - type: directory
-  path: content/a-propos
-  label: A propos
-  create: none
-  match: "**/*"
-  hidden: true
-- type: directory
   path: content/post
   label: Articles
   create: all
   match: "**/*"
   templates:
   - post
+- type: document
+  path: _data/authors.yml
+  label: Authors
+  match: "**/*"
+  read_only: true
 - type: directory
   path: content
   label: Pages
