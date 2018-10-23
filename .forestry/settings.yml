@@ -14,7 +14,7 @@ sections:
 - type: document
   path: data/authors.yml
   label: Authors
-  read_only: true
+  read_only: false
 upload_dir: ''
 public_path: ''
 front_matter_path: ''
