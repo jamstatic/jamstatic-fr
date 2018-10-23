@@ -14,7 +14,6 @@ sections:
 - type: document
   path: _data/authors.yml
   label: Authors
-  match: "**/*"
   read_only: true
 - type: directory
   path: content
