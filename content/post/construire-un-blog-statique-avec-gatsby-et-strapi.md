@@ -270,7 +270,7 @@ Ensuite, nous passons l'objet déstructuré `{ data }` comme paramètre de `Inde
 
 #### Astuce : générez vos requêtes GraphQL en quelques secondes !
 
-Gastby inclut l'excellente interface GraphQL. Cela facilite grandement la création de requêtes GraphQL. [Jetez-y un œil](http://localhost:8000/___graphql) et tentez de créer quelques requêtes.
+Gastby inclut l'excellente interface [GraphiQL](https://github.com/graphql/graphiql). Cela facilite grandement la création de requêtes GraphQL. [Jetez-y un œil](http://localhost:8000/___graphql) et tentez de créer quelques requêtes.
 
 ### Vue article
 
