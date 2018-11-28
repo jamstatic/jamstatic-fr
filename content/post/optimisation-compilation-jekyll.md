@@ -190,8 +190,6 @@ Voici les données brutes, si certains veulent jouer avec&nbsp;:
 | Test 10 	| 4 - Switch to CommonMark 	| 1332,547     	|
 | Test 10 	| 5 - Switch to master     	| 69,022       	|
 
-***
-
 [^parole]: Vous allez devoir me croire sur parole, parce que mon protocole d'expérimentation ne contenait pas de test avec et sans inclusions. Il s'agit donc d'une estimation personnelle.
 
 [^rake]: Rake est un orchestrateur similaire à make, mais en Ruby ([en savoir plus](https://rubygems.org/gems/rake/)).
