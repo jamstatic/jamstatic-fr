@@ -16,7 +16,7 @@ Il y a trois ans, fatigué par WordPress et de sa galaxie de plugins douteux, j'
 
 Trois ans plus tard, je commence à comprendre les forces et les faiblesses de la solution, mais je reste loin d'en maîtriser tous les mystères. Je l'ai bidouillée pour publier du contenu multilingue, j'ai développé mes propres plugins, j'ai intégré des éléments d'architecture piochés chez des amis… Disons que je suis désormais assez à l'aise.
 
-Par contre, à forcer de manipulations, mon Jekyll ressemblait moins au célèbre docteur qu'au monstre de Frankenstein&nbsp;: un assemblage de portions de code grossièrement liée entre elles par des liens fragiles, se déplaçant lentement en gémissant… En un mot comme en cent&nbsp;: mon <em lang="en">build</em> était lent.
+Par contre, à force de manipulations, mon Jekyll ressemblait moins au célèbre docteur qu'au monstre de Frankenstein&nbsp;: un assemblage de portions de code grossièrement liées entre elles par des liens fragiles, se déplaçant lentement en gémissant… En un mot comme en cent&nbsp;: mon <em lang="en">build</em> était lent.
 
 {{% /intro %}}
 
