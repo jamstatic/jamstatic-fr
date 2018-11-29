@@ -72,7 +72,7 @@ Et avec des commentaires Liquid (`{% comment %}This is a comment{% endcomment %}
 
 ## Faites confiance aux gemmes compilées en C
 
-Par défaut, Jekyll est basé sur un ensemble de gemmes écrites en Ruby. Récemment, de nouvelles gemmes sont apparues, partiellement écrites en C, ce qui améliore leur performance d'exécution. L'équipe Jekyll a eu la gentillesse d'ajouter des tests conditionnels dans le générateur pour utiliser ces gemmes si elles sont référencées dans votre Gemfile. Vous n'avez donc qu'à ajouter les gemmes à votre Gemfile pour tirer partie de ces améliorations.
+Par défaut, Jekyll est basé sur un ensemble de gemmes écrites en Ruby. Récemment, de nouvelles gemmes sont apparues, partiellement écrites en C, ce qui améliore leur performance d'exécution. L'équipe Jekyll a eu la gentillesse d'ajouter des tests conditionnels dans le générateur pour utiliser ces gemmes si elles sont référencées dans votre Gemfile. Vous n'avez donc qu'à ajouter les gemmes à votre Gemfile pour tirer parti de ces améliorations.
 
 Il en existe certainement d'autres, mais en voici au moins deux&nbsp;:
 
