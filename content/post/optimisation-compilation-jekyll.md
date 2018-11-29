@@ -66,7 +66,7 @@ Une façon de surmonter ce coût supplémentaire est de mettre en cache les bloc
 1. assurez-vous de passer toutes les données nécessaires à votre `{% include %}` en paramètres, car elles seront utilisées comme clés pour le cache&nbsp;;
 2. si vous le pouvez, n'utilisez des inclusions que pour générer des portions de code réutilisables. Si les paramètres de l'inclusion la rendent si spécifique qu'elle n'est pas réutilisable ailleurs, alors le cache relatif à cette inclusion aura été construit pour rien et n'apportera aucun gain de performance.
 
-Ces deux contraintes sont si fortes qu'elles m'ont obliger à réintégrer plus de la moitié de mes inclusions dans mes gabarits (_\_layouts_). Je ne suis pas entièrement satisfait de cette situation (car, en conséquence, je trouve que les capacités de maintenance sont dégradées) mais je dois avouer que j'ai gagné près de **10&nbsp;%** de temps de compilation[^parole] en sacrifiant ce petit confort.
+Ces deux contraintes sont si fortes qu'elles m'ont obligé à réintégrer plus de la moitié de mes inclusions dans mes gabarits (_\_layouts_). Je ne suis pas entièrement satisfait de cette situation (car, en conséquence, je trouve que les capacités de maintenance sont dégradées) mais je dois avouer que j'ai gagné près de **10&nbsp;%** de temps de compilation[^parole] en sacrifiant ce petit confort.
 
 Et avec des commentaires Liquid (`{% comment %}This is a comment{% endcomment %}}`), je peux toujours organiser efficacement mon code, même réintégré dans un seul fichier.
 
