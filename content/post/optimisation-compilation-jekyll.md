@@ -56,7 +56,7 @@ L'expérience m'a appris qu'il est souvent plus difficile de maintenir un projet
 
 Dans Jekyll, cela se fait avec des inclusions, via la balise `{% include %}`. Mais attention, une décomposition de code trop ambitieuse aura un coût sur votre temps de compilation, que vous pourrez visualiser avec le [profileur Liquid [EN]](https://jekyllrb.com/docs/configuration/options/#build-command-options).
 
-D'après [Pat Hawks](https://pathawks.com/)&nbsp;:
+D'après [Pat Hawks](https://github.com/pathawks/), membre de la <span lang="en">Core Team</span> Jekyll&nbsp;:
 
 > Chaque fois que vous utilisez une balise `{% include %}`, Jekyll doit ouvrir le fichier concerné, lire son contenu en mémoire, puis analyser le gabarit avec Liquid.  
 > Cela se produit à chaque `{% include %}`, et pas une seule fois par fichier&nbsp;! Donc l'utilisation d'une même inclusion sur 100 pages provoquera le chargement et l'analyse de cette inclusion 100 fois. Le problème s'aggrave très rapidement si vous commencez à faire des inclusions dans vos inclusions…
