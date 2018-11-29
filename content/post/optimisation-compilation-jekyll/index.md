@@ -1,6 +1,6 @@
 ---
 title: "Optimisation du temps de compilation de Jekyll"
-description:
+description: "Comment j'ai réussi à diviser par 15 le temps de génération de mon site avec Jekyll"
 date: 2018-11-28
 commments: true
 author: Boris Schapira
