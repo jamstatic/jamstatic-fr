@@ -118,7 +118,7 @@ Si vous ne deviez retenir, ou tester, qu'une seule optimisation, c'est celle-ci.
 
 ## Qu'en est-il de mon chantier multilingue&nbsp;?
 
-Avec toutes ces optimisations, ma compilation Jekyll est passées de plus de 15 minutes à environ une minute. C'est encore beaucoup, et je sais pourquoi&nbsp;: ma gestion "fait maison" de l'internationalisation, et plus particulièrement de la traduction de mes articles, est sous-optimale.
+Avec toutes ces optimisations, ma compilation Jekyll est passée de plus de 15 minutes à environ une minute. C'est encore beaucoup, et je sais pourquoi&nbsp;: ma gestion "fait maison" de l'internationalisation, et plus particulièrement de la traduction de mes articles, est sous-optimale.
 
 
 Elle est basée sur une clé front-matter `i18n-key` qui me permet de faire se correspondre mes articles et pages d'une langue à l'autre et sur un plugin qui, pour chaque contenu, scanne tous les autres contenus pour trouver ceux qui sont des traductions du contenu courant. Cette stratégie O(n²), bien que facile à mettre en œuvre, n'est pas efficace du tout et pénalise mes performances de compulation.
