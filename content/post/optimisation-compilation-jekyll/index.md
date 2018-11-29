@@ -1,15 +1,17 @@
 ---
-title: "Optimisation du temps de compilation de Jekyll"
-description: "Comment j'ai réussi à diviser par 15 le temps de génération de mon site avec Jekyll"
-date: 2018-11-28
+title: Optimisation du temps de compilation de Jekyll
+description: Comment j'ai réussi à diviser par 15 le temps de génération de mon site
+  avec Jekyll
+date: 2018-11-28 00:00:00 +0000
 commments: true
 author: Boris Schapira
 images:
-  - /2018/11/28/optimisation-compilation-jekyll/twitter-card.png
+- "/v1543499128/twitter-card.png"
+- "/2018/11/28/optimisation-compilation-jekyll/twitter-card.png"
 categories:
-  - jekyll
----
+- jekyll
 
+---
 {{% intro %}}
 
 Il y a trois ans, fatigué par WordPress et de sa galaxie de plugins douteux, j'ai décidé de migrer vers un générateur de site statique. Après quelques essais avec diverses solutions, j'ai opté pour Jekyll, dont la communauté me semblait plus mature.
