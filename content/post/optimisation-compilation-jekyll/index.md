@@ -1,11 +1,11 @@
 ---
 title: "Optimisation du temps de compilation de Jekyll"
-description: 
+description:
 date: 2018-11-28
 commments: true
 author: Boris Schapira
 images:
-  - 
+  - /2018/11/28/optimisation-compilation-jekyll/twitter-card.png
 categories:
   - jekyll
 ---
@@ -40,7 +40,7 @@ Il était temps d'agir.
 
 ***
 
-Un proverbe africain dit&nbsp;: 
+Un proverbe africain dit&nbsp;:
 
 > Seul, on va plus vite. Ensemble, on va plus loin.
 
@@ -58,7 +58,7 @@ Dans Jekyll, cela se fait avec des inclusions, via la balise `{% include %}`. Ma
 
 D'après [Pat Hawks](https://github.com/pathawks/), membre de la <span lang="en">Core Team</span> Jekyll&nbsp;:
 
-> Chaque fois que vous utilisez une balise `{% include %}`, Jekyll doit ouvrir le fichier concerné, lire son contenu en mémoire, puis analyser le gabarit avec Liquid.  
+> Chaque fois que vous utilisez une balise `{% include %}`, Jekyll doit ouvrir le fichier concerné, lire son contenu en mémoire, puis analyser le gabarit avec Liquid.
 > Cela se produit à chaque `{% include %}`, et pas une seule fois par fichier&nbsp;! Donc l'utilisation d'une même inclusion sur 100 pages provoquera le chargement et l'analyse de cette inclusion 100 fois. Le problème s'aggrave très rapidement si vous commencez à faire des inclusions dans vos inclusions…
 
 Une façon de surmonter ce coût supplémentaire est de mettre en cache les blocs compilés pendant l'interprétation de votre `{% include %}`. Il y a un plugin pour cela&nbsp;: le plugin [jekyll-include-cache](https://github.com/benbalter/jekyll-include-cache) de Ben Balter. Mais attention à deux choses très importantes&nbsp;:
@@ -93,7 +93,7 @@ Markdown est un langage à balisage léger vraiment sympa mais il lui manque une
 
 Par défaut, Jekyll utilise [kramdown](https://kramdown.gettalong.org/), un surensemble de Markdown développé en Ruby qui fait du très bon boulot. Pour le remplacer par CommonMark, j'ai voulu utiliser [commonmarker](https://github.com/gjtorikian/commonmarker) qui est, encore une fois, un wrapper Ruby pour une implémentation en C. Pour en tirer parti dans Jekyll, vous pouvez utiliser [le plugin jekyll-commonmark de Pat Hawks](https://github.com/jekyll/jekyll-commonmark).
 
-Attention, la transition n'est pas sans adaptations. kramdown et CommonMark sont assez différents&nbsp;: en passant de l'un à l'autre, j'ai dû sacrifier quelques sucres syntaxiques. 
+Attention, la transition n'est pas sans adaptations. kramdown et CommonMark sont assez différents&nbsp;: en passant de l'un à l'autre, j'ai dû sacrifier quelques sucres syntaxiques.
 
 Par exemple, CommonMark ne supporte pas les attributs de bloc tels que `{ :.myclass}` pour décorer un paragraphe de contenu. Vous aurez besoin d'utiliser de bonnes vieilles balises HTML. N'oubliez pas d'activer l'option `UNSAFE` dans votre configuration Jekyll (`_config.yml`) si vous ne voulez pas générer beaucoup de commentaires du type `<!-- raw HTML omitted -->`&nbsp;:
 
@@ -110,7 +110,7 @@ Un petit prix à payer pour gagner encore **9&nbsp;%** de temps de compilation.
 
 ## Faites confiance à la <em lang="en">Team</em> pour aller dans la bonne direction
 
-Enfin, l'une des dernières améliorations apportées a été le passage à la version `master` de Jekyll. Depuis la version 3.8.5 (ma version précédente), de nombreuses améliorations ont été apportées, et le gain de performance est vraiment considérable&nbsp;: **93&nbsp;%**&nbsp;! 
+Enfin, l'une des dernières améliorations apportées a été le passage à la version `master` de Jekyll. Depuis la version 3.8.5 (ma version précédente), de nombreuses améliorations ont été apportées, et le gain de performance est vraiment considérable&nbsp;: **93&nbsp;%**&nbsp;!
 
 Je n'arrivais tellement pas à y croire que j'ai temporairement versionné mon dossier `_site` et vérifié qu'il n'y avait rien de cassé en changeant de version. Et dans mon cas&nbsp;: rien à redire, tout est parfait.
 
@@ -199,4 +199,3 @@ Voici les données brutes, si certains veulent jouer avec&nbsp;:
 [^netlimit]: 15 minutes, comme confirmé par Chris McCraw dans son article "[How Our Build Bots Build Sites](https://www.netlify.com/blog/2016/10/18/how-our-build-bots-build-sites/)".
 
 [^analytics]: Parce que je n'ai pas besoin de ça pour connaître les personnes qui me lisent, car elles interagissent souvent avec moi dans les commentaires ou sur Twitter.
-
