@@ -89,7 +89,7 @@ Après une très rapide non-analyse des données analytiques dont je ne dispose 
 
 ## Markdown&nbsp;: choisissez la bonne variante
 
-Markdown est un langage à balisage léger vraiment sympa mais il lui manque une chose très importante&nbsp;: une standardisation. Il existe des douzaines de parseurs Markdown, chacun avec ses caractéristiques spécifiques. Depuis quelques temps, une initiative de standardisation émerge autour de [CommonMark](https://commonmark.org/), et les projets l'implémentant fleurissent.
+Markdown est un langage à balisage léger vraiment sympa mais il lui manque une chose très importante&nbsp;: une standardisation. Il existe des douzaines de parseurs Markdown, chacun avec ses caractéristiques spécifiques. Depuis quelque temps, une initiative de standardisation émerge autour de [CommonMark](https://commonmark.org/), et les projets l'implémentant fleurissent.
 
 Par défaut, Jekyll utilise [kramdown](https://kramdown.gettalong.org/), un surensemble de Markdown développé en Ruby qui fait du très bon boulot. Pour le remplacer par CommonMark, j'ai voulu utiliser [commonmarker](https://github.com/gjtorikian/commonmarker) qui est, encore une fois, un wrapper Ruby pour une implémentation en C. Pour en tirer partie dans Jekyll, vous pouvez utiliser [le plugin jekyll-commonmark de Pat Hawks](https://github.com/jekyll/jekyll-commonmark).
 
