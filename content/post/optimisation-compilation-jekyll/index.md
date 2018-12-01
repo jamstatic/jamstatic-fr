@@ -70,7 +70,7 @@ Une façon de surmonter ce coût supplémentaire est de mettre en cache les bloc
 
 Ces deux contraintes sont si fortes qu'elles m'ont obligé à réintégrer plus de la moitié de mes inclusions dans mes gabarits (_\_layouts_). Je ne suis pas entièrement satisfait de cette situation (car, en conséquence, je trouve que les capacités de maintenance sont dégradées) mais je dois avouer que j'ai gagné près de **10&nbsp;%** de temps de compilation[^parole] en sacrifiant ce petit confort.
 
-Et avec des commentaires Liquid (`{% comment %}This is a comment{% endcomment %}}`), je peux toujours organiser efficacement mon code, même réintégré dans un seul fichier.
+Et avec des commentaires Liquid (`{% comment %}This is a comment{% endcomment %}`), je peux toujours organiser efficacement mon code, même réintégré dans un seul fichier.
 
 ## Faites confiance aux gemmes compilées en C
 
