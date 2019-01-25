@@ -1,5 +1,5 @@
 ---
-title: "Oubliez Docker, le future c'est la JAMstack"
+title: "Oubliez Docker, le futur c'est la JAMstack"
 date: 2018-12-07T01:21:13+01:00
 lastmod:
 categories:
