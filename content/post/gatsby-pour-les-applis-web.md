@@ -40,9 +40,9 @@ Je pense plus particulièrement à deux exemples clé, qui sont pour moi les plu
 
 ## Gmail
 
-![](Untitled-e8155760-8318-40a9-84de-c5957dd970b2.png)
+![capture d'écran de Gmail](https://user-images.githubusercontent.com/2587348/51944473-6beeb100-241c-11e9-8cec-26c55275bb1f.png)
 
-Gmail pouvait être vu à l'époque comme un “proof of concept” qui a démontré deux choses très importantes :
+Gmail peut-être vu, avec le recul, comme un “proof of concept” qui a démontré deux choses très importantes :
 
 - Le JavaScript côté client peut offrir une expérience proche de celles des apps, et
 - une application JavaScript (qui s'exécute dans votre navigateur) soutient favorablement la comparaison avec une application native, que ce soit sur desktop ou mobile.
@@ -51,7 +51,7 @@ L'impact de ces bénéfices ne peut pas être souligné suffisamment. Gmail a *p
 
 ## Twitter (Progressive Web Application)
 
-![](Untitled-f005f0c1-af48-4fe2-aad3-b4668b20b3e6.png)
+![Capture d'écran de Twitter Lite](https://user-images.githubusercontent.com/2587348/51944520-888ae900-241c-11e9-9a60-833a5c5c9c1b.png)
 
 Twitter est un autre très bon exemple de mon modèle mental de ce qu'est (et ce que peut être !) une appli Web parce que :
 
@@ -61,84 +61,87 @@ Twitter est un autre très bon exemple de mon modèle mental de ce qu'est (et ce
 En particulier, les fonctionnalités suivantes sont des composantes clés pour un genre nouveau d'applications :
 
 - Le cache agressif des données et une navigation rapide grâce aux Service Workers
-- La mise en place du pattern PRPL (Push, Render, Pre-cache, Lazy-Loading)
-- L'illustration du pattern App Shell pour rendre encore plus rapide les visites subséquentes et afficher une page la plus complète possible, le plus rapidement possible
+- La mise en place du [pattern PRPL](https://developers.google.com/web/fundamentals/performance/prpl-pattern/) (Push, Render, Pre-cache, Lazy-Loading)
+- L'illustration du pattern Coquille Applicative ([_App Shell_](https://developers.google.com/web/fundamentals/architecture/app-shell)) pour rendre encore plus rapide les visites subséquentes et afficher une page la plus complète possible, le plus rapidement possible
 
-Ces concepts modernes, lorsque pris ensembles, sont un atout majeur dans l'approche que montre Twitter pour proposer une expérience proche d'une app. Les ingénieur•e•s de Twitter ont réussi à isoler le coeur de l'expérience Twitter et à la rendre disponible à travers une appli Web moderne ultra-rapide grâce à l'application de techniques d'ingénierie éprouvées; et certains parmi leurs utilisateurs la préfèrent même à l'expérience native. Pour en apprendre davantage sur ces techniques, vous pouvez parcourir cette excellente étude de cas de Addy Osmani chez Google.
+Ces concepts modernes, lorsque pris ensembles, sont un atout majeur dans l'approche que montre Twitter pour proposer une expérience proche d'une app. Les ingénieur•e•s de Twitter ont réussi à isoler le coeur de l'expérience Twitter et à la rendre disponible à travers une appli Web moderne ultra-rapide grâce à l'application de techniques d'ingénierie éprouvées; et certains parmi leurs utilisateurs la préfèrent même à l'expérience native. Pour en apprendre davantage sur ces techniques, vous pouvez parcourir cette excellente [étude de cas](https://developers.google.com/web/showcase/2017/twitter) par Addy Osmani de Google.
 
 Ces deux applis Web serviront de d'exemples à garder à l'esprit quand nous allons aborder l'utilisation de Gatsby pour les applis Web.
 
 ## Gatsby est taillé pour les applis Web
 
-![](Untitled-9dd530f5-0376-4f03-a5a6-749eff8be51d.png)
+![what if I told you](https://user-images.githubusercontent.com/2587348/51944611-c2f48600-241c-11e9-9c90-39e3db93d3b0.png)
 
 Et si je vous disais… que construire un site avec Gatsby autorisait toutes ces fonctionnalités, traditionnellement réservées à des applis Web, parce qu'un “site statique” Gatsby est en fait une application ?
 
 Aucune application Gatsby n'est en fait purement statique. Tout ce qui peut être rendu à l'aide de HTML statique dès le chargement de la page l'est. Cependant, le JavaScript côté client (via React !) prend le contrôle en tant que socle technique pour les fonctionnalités dynamiques des applis Web. Un petit tour d'horizon du système de build de Gatsby explique clairement le concept.
 
-1. Injecter la données dans les pages (depuis GraphQL ou même sans utiliser GraphQL)
+1. Injecter la données dans les pages (depuis [GraphQL](https://www.gatsbyjs.org/docs/querying-with-graphql/) ou même [sans utiliser GraphQL](https://www.gatsbyjs.org/docs/using-gatsby-without-graphql/))
 
-2. Utiliser la fonction d'API de rendu côté serveur `ReactDOMServer.renderToString` pour transformer les composants React en fichiers HTML
+2. Utiliser la fonction d'API de rendu côté serveur [`ReactDOMServer.renderToString`](https://reactjs.org/docs/react-dom-server.html#rendertostring) pour transformer les composants React en fichiers HTML
 
 3. Injecter le runtime et des additions (comme un routeur !) pour autoriser les features des applis Web
 
-- Gatsby offre une expérience similaire à create-react-app une fois que le runtime est fonctionnel
+- Gatsby offre une expérience similaire à [create-react-app](https://facebook.github.io/create-react-app/) une fois que le runtime est fonctionnel
 
 Pour illustrer le concept, commençons avec une exemple classique… Nous avons besoin de requêter  des points de donnée au runtime plutôt qu'au build-time.
 
-    // src/pages/messages.js
-    
-    import React from "react"
-    
-    import Layout from "../components/layout"
-    
-    class Messages extends React.Component {
-      constructor(props) {
-        super(props)
-    
-        this.state = {
-          messages: [],
-        }
-      }
-    
-      // note: this is a simplified example without error handling, authentication, etc.
-      async componentDidMount() {
-        const messages = await fetch(`/api/some-url-to-get-messages`).then(
-          response => response.json()
-        )
-    
-        this.setState({
-          messages,
-        })
-      }
-    
-      render() {
-        const { messages } = this.state
-        return (
-          <Layout>
-            {messages.length === 0 ? (
-              <p>Loading messages&hellip;</p>
-            ) : (
-              <ul>
-                {messages.map(message => (
-                  <li key={message.id}>{message.text}</li>
-                ))}
-              </ul>
-            )}
-          </Layout>
-        )
-      }
-    }
-    
-    export default Messages
+```jsx
+// src/pages/messages.js
 
-Tout ce que nous avons fait ci-dessus est d'implémenter la méthode du cycle de vie React `componentDidMount`, qui va déclencher une requête vers une API REST pour requêter des données (des messages !) depuis une API distante. Au runtime notre application requête donc des données dynamiquement. Ceci illustre l'efficacité du runtime Gatsby + React, ainsi que la manière dont une application Gatsby est en réalité proche d'un create-react-app déjà hydraté avec la donnée. Les méthodes du lifecycle React sont pleinement supportées et permettent donc d'implémenter n'importe quel type d'interaction nécessaire, comme, dans notre exemple, une requête sur une API distante.
+import React from "react"
+
+import Layout from "../components/layout"
+
+class Messages extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      messages: [],
+    }
+  }
+
+  // note: this is a simplified example without error handling, authentication, etc.
+  async componentDidMount() {
+    const messages = await fetch(`/api/some-url-to-get-messages`).then(
+      response => response.json()
+    )
+
+    this.setState({
+      messages,
+    })
+  }
+
+  render() {
+    const { messages } = this.state
+    return (
+      <Layout>
+        {messages.length === 0 ? (
+          <p>Loading messages&hellip;</p>
+        ) : (
+          <ul>
+            {messages.map(message => (
+              <li key={message.id}>{message.text}</li>
+            ))}
+          </ul>
+        )}
+      </Layout>
+    )
+  }
+}
+
+export default Messages
+```
+
+
+Tout ce que nous avons fait ci-dessus est d'implémenter la méthode du cycle de vie React [`componentDidMount`](https://reactjs.org/docs/react-component.html#componentdidmount), qui va déclencher une requête vers une API REST pour requêter des données (des messages !) depuis une API distante. Au runtime notre application requête donc des données dynamiquement. Ceci illustre l'efficacité du runtime Gatsby + React, ainsi que la manière dont une application Gatsby est en réalité proche d'un create-react-app déjà hydraté avec la donnée. [Les méthodes du lifecycle React](https://reactjs.org/docs/state-and-lifecycle.html) sont pleinement supportées et permettent donc d'implémenter n'importe quel type d'interaction nécessaire, comme, dans notre exemple, une requête sur une API distante.
 
 Considérons l'animation ci-dessous, qui représente l'expérience utilisateur. En réalité, nous avons généré statiquement les blocs non-dynamiques (le header, la sidebar…) et nous avons requêté dynamiquement le reste des données !
 
-![](Untitled-abb46879-7412-40e2-8c6d-0f19d95c8c2e.png)
+![illustration de la coquille applicative](https://user-images.githubusercontent.com/2587348/51944737-1f57a580-241d-11e9-9223-520f3ae8c04a.png)
 
-Cependant, notre example peut paraître simpliste — ou en tous cas assez éloigné d'une vraie appli Web. Que se passerait-il si l'API REST nécessitait une authentification ? Et si nous souhaitions des routes seulement côté client, par exemple pour avoir un lien direct vers un message spécifique ? Tout est possible ! Est-ce qu'on peut profiter de GraphQL lors du build *et* du runtime ? Bien sûr !
+Cependant, notre example peut paraître simpliste — ou en tous cas assez éloigné d'une vraie appli Web. Que se passerait-il si l'API REST [nécessitait une authentification](https://www.gatsbyjs.org/docs/authentication-tutorial/) ? Et si nous souhaitions des [routes gérées côté client](https://www.gatsbyjs.org/docs/building-apps-with-gatsby/#client-only-routes--user-authentication), par exemple pour avoir un lien direct vers un message spécifique ? Tout est possible ! Est-ce qu'on peut profiter de GraphQL lors du build *et* du runtime ? Bien sûr !
 
 L'idée principale que je tiens à clarifier dans cet article est que les fonctionnalités *typiques* d'une appli Web sont non seulement possibles avec Gatsby, mais aussi et surtout simples et intuitives à implémenter grâce au runtime dynamique disponible dans chaque application Gatsby. Ce n'est *que* du React.
 
@@ -152,36 +155,36 @@ Si l'on regarde les avantages que procure Gatsby, à minima :
 
 - Le rendu statique de composants React et des données associées en HTML statique
 - L'optimisation des données, des images, etc… pour obtenir des sites ultra-rapides
-- La présence de patterns liés à la performance et des bonnes pratiques comme le PRPL, la séparation de code par route, etc÷
+- La présence de patterns liés à la performance et des bonnes pratiques comme le [PRPL](https://developers.google.com/web/fundamentals/performance/prpl-pattern/), la séparation de code par route, etc÷
 
 Chacun de ces avantages mériteraient que l'on s'y attarde un peu plus, mais nous nous contenterons de dire que ce sont des *excellentes* fonctionnalités que vous souhaitez avoir dans vos sites *statiques*, mais aussi dans vos applis web.
 
-Ces optimisations de performances ne sont pas à activer — elles sont présentes par défaut. Quand de nouvelles techniques et de nouvelles optimisations apparaîtrons et gagneront en popularités, nous pourrons les y ajouter tout comme nous avons ajouté celles-ci. Ces optimisations peuvent alors être poussées à vos utilisateurs en mettant à jour votre version de Gatsby, un peu comme les améliorations d'outillage peuvent être obtenues en mettant à jour create-react-app.
+Ces optimisations de performances ne sont pas à activer — elles sont présentes par défaut. Quand de nouvelles techniques et de nouvelles optimisations apparaîtrons et gagneront en popularités, nous pourrons les y ajouter tout comme nous avons ajouté celles-ci. Ces optimisations peuvent alors être poussées à vos utilisateurs en mettant à jour votre version de Gatsby, un peu comme les améliorations d'outillage peuvent être obtenues en mettant à jour [create-react-app](https://facebook.github.io/create-react-app/).
 
 **Les plugins et l'écosystème Gatsby**
 
-Un des avantages principaux de Gatsby est son architecture modulaire. Vous avez besoin d'un plugin pour récupérer des données de Wordpress ? Bien sûr, cela semble raisonnable. Vous avez besoin de transformer des données YAML en objets JavaScript plus simples à manipuler ? Allez, pourquoi pas ? Une envie de se raccorder à une API GraphQL distante et d'injecter ses données au moment du build ? Ah, je vous qu'on a des goûts de luxe. Vous souhaitez afficher des images optimisées, adaptées à toutes les tailles et qui affichent un effet de flou lors du chargement ? C'est parti.
+Un des avantages principaux de Gatsby est son architecture modulaire. Vous avez besoin d'un plugin pour [récupérer des données de Wordpress](https://www.gatsbyjs.org/packages/gatsby-source-wordpress/) ? Bien sûr, cela semble raisonnable. Vous avez besoin de [transformer des données YAML](https://www.gatsbyjs.org/packages/gatsby-transformer-yaml/) en objets JavaScript plus simples à manipuler ? Allez, pourquoi pas ? Une envie de se [raccorder à une API GraphQL distante](https://www.gatsbyjs.org/packages/gatsby-source-graphql/) et d'injecter ses données au moment du build ? Ah, je vous qu'on a des goûts de luxe. Vous souhaitez afficher des images optimisées, adaptées à toutes les tailles et qui affichent un effet de flou lors du chargement ? C'est parti.
 
 Prenons le temps de regarder plus en détail ces fonctionnalités proposées par un de nos composants, gatsby-image.
 
 **`gatsby-image`**
 
-gatsby-image est certainement un de mes composants préférés parmi ceux que Gatsby fournit et maintient. Il offre un rendu excellent, et amène des optimisations rendues possibles par des plugins comme gatsby-plugin-sharp. Ces deux techniques, couplée avec l'API GraphQL disponible dans n'importe quelle application Gatsby, simplifie grandement le l'expérience de développement lorsque l'on souhaite afficher des images optimisées. Parmi les fonctionnalités disponibles, citons :
+gatsby-image est certainement un de mes composants préférés parmi ceux que Gatsby fournit et maintient. Il offre un rendu excellent, et amène des optimisations rendues possibles par des plugins comme [`gatsby-plugin-sharp`](https://www.gatsbyjs.org/packages/gatsby-plugin-sharp/). Ces deux techniques, couplée avec l'API GraphQL disponible dans n'importe quelle application Gatsby, simplifie grandement le l'expérience de développement lorsque l'on souhaite afficher des images optimisées. Parmi les fonctionnalités disponibles, citons :
 
 - L'adaptabilité de la taille des images pour en afficher une optimisée à celle de votre interface
     - Ce qui permet de reléguer la fameuse image de 5Mo en tête de page au fin fond des oubliettes
 - La génération de multiples images, adaptées aux appareils mobiles, en utilisant `srcset` pour ne télécharger que celle dont votre utilisateur a besoin
-- Le chargement asynchrone des images avec une technique de flou — ou même de SVG tracé
+- Le chargement asynchrone des images avec une technique de flou — ou même de [SVG tracé](https://using-gatsby-image.gatsbyjs.org/traced-svg/)
 
-`gatsby-image` est incroyable. Si vous n'avez pas encore pu tester ses fonctionnalités dans vos sites, je vous recommande chaudement de vous y mettre ! Vous pouvez vous inspirer de notre exemple, fraîchement redesigné, “Using Gatsby Image” (en anglais) pour en apprendre plus et le voir dans un cas d'utilisation réelle. En somme, utilisez `gatsby-image` et vos utilisateurs vous remercieront.
+`gatsby-image` est incroyable. Si vous n'avez pas encore pu tester ses fonctionnalités dans vos sites, je vous recommande chaudement de vous y mettre ! Vous pouvez vous inspirer de notre exemple, fraîchement redesigné, “[Using Gatsby Image](https://using-gatsby-image.gatsbyjs.org/)” (en anglais) pour en apprendre plus et le voir dans un cas d'utilisation réelle. En somme, utilisez `gatsby-image` et vos utilisateurs vous remercieront.
 
-Le potentiel de ces composants et de ces plugins est immense. De la même manière que les composants réutilisables ont été incroyablement importants dans le succès de l'écosystème React, les plugins ont une valeur immense pour les applications Gatsby. Pourquoi perdre du temps de développement à réimplémenter ces composants vous-même lorsque vous pouvez réutiliser et profiter du potentiel de l'écosystème Open Source ? Lorsque vous utilisez ces plugins et ces composants, vous pouvez passer davantage de temps à construire votre propre application Gatsby. Jetez un oeil à notre librairie de plugins si ce n'est pas déjà fait !
+Le potentiel de ces composants et de ces plugins est immense. De la même manière que les composants réutilisables ont été incroyablement importants dans le succès de l'écosystème React, les plugins ont une valeur immense pour les applications Gatsby. Pourquoi perdre du temps de développement à réimplémenter ces composants vous-même lorsque vous pouvez réutiliser et profiter du potentiel de l'écosystème Open Source ? Lorsque vous utilisez ces plugins et ces composants, vous pouvez passer davantage de temps à construire votre propre application Gatsby. Jetez un oeil à notre [librairie de plugins](https://www.gatsbyjs.org/plugins) si ce n'est pas déjà fait !
 
 Maintenant, la suite : nous allons comparer l'expérience utilisateur lorsque nous requêtons des données derrière une authentification entre une application Gatsby, et une application rendu côté serveur.
 
 ## La Coquille Applicative
 
-En ajoutant juste le plugin `gatsby-plugin-offline`, nous permettons une Progressive Web App complète, qui fonctionne hors ligne, et qui crée une “coquille applicative” en enregistrant un Service Worker. Une coquille applicative est en réalité une collection de composants de votre application (par exemple, l'en tête, le pied de page, la navigation latérale, etc…) qui sont rendus disponible immédiatement depuis le Service Worker pendant que le contenu dynamique est récupéré en tâche de fond. Cela permet de créer des expériences utilisateur immersives, car l'application apparaît instantanément à l'écran et le contenu dynamique se remplit progressivement.
+En ajoutant juste le plugin [`gatsby-plugin-offline`](https://www.gatsbyjs.org/packages/gatsby-plugin-offline/), nous permettons une Progressive Web App complète, qui fonctionne hors ligne, et qui crée une “coquille applicative” en enregistrant un Service Worker. Une coquille applicative est en réalité une collection de composants de votre application (par exemple, l'en tête, le pied de page, la navigation latérale, etc…) qui sont rendus disponible immédiatement depuis le Service Worker pendant que le contenu dynamique est récupéré en tâche de fond. Cela permet de créer des expériences utilisateur immersives, car l'application apparaît instantanément à l'écran et le contenu dynamique se remplit progressivement.
 
 Si nous regardons de plus près cette approche, elle se décompose comme suit:
 
@@ -192,7 +195,7 @@ Comparons cette méthode avec celle du rendu côté serveur. Pour cet exemple, n
 
 Pour illustrer cet exemple, nous pouvons nous appuyer sur l'animation suivante. Sur la gauche, on peut voir une application qui utilise un Service Worker et une coquille applicative — une application Gatsby par exemple. Sur la droite, c'est une application rendue côté serveur, qui doit donc attendre que l'appel API soit terminé avant de pouvoir proposer la page complète, d'un coup.
 
-![](Untitled-6e4f3c76-1469-471c-bd9c-4adb2a79e848.png)
+![comparaison coquille applicative vs rendu côté serveur](https://user-images.githubusercontent.com/2587348/51945020-b45a9e80-241d-11e9-8eb8-bca6ca1f4280.png)
 
 Nous voyons donc clairement les avantages de cette approche. Lorsque nous chargeons une coquille applicative, nous donnons à nos utilisateurs l'impression que la page se charge plus rapidement, bien que si nous comparons les deux approches, elles affichent toutes deux *toute la donnée* au même moment. Nous avons donc le meilleur des deux mondes… On donne la perception que le site est très rapide, tout en sachant qu'il *est* très rapide grâce aux optimisations que l'on obtient avec Gatsby, par défaut.
 
@@ -200,7 +203,8 @@ Afin de revenir sur tous ces concepts, j'ai préparé une application de démons
 
 ## Et voici… Gatsby Mail ! (Qui ne sert qu'à des fins de démonstration !)
 
-![](Untitled-8219ed5f-7d4e-4948-ad3f-f0e426483bb4.png)
+![gatsby mail](https://user-images.githubusercontent.com/2587348/51945048-cd634f80-241d-11e9-96e1-de0ffbd7d846.png)
+
 
 [Gatsby Mail](https://gatsby-mail.netlify.com/) reprend certains des concepts et des thèmes que j'ai abordés. Plus particulièrement :
 
@@ -213,12 +217,13 @@ De plus, Gatsby Mail fait la démonstration de fonctionnalités spécifiques aux
 - Du rendu statique couplé à des requêtes dynamiques grâce au *runtime* côté client
 - De l'authentification et des routes gérées côté client
 - Des routes non-authentifiées, comme une page d'accueil (qui utilise [l'API Context](https://reactjs.org/docs/context.html) de React)
-- L'utilisation de GraphQL au moment du build *et* *au runtime*, en s'appuyant sur une API GraphQL distante et sur `apollo-boost`
+- L'utilisation de GraphQL au moment du build *et* *au runtime*, en s'appuyant sur une API GraphQL distante et sur [`apollo-boost`](https://github.com/apollographql/apollo-client/tree/master/packages/apollo-boost)
 - Le chargement d'une coquille applicative grâce à gatsby-plugin-offline (essayez l'exemple en “3G rapide” ci-dessous !)
 
 et même des thèmes clairs/sombres, parce que pourquoi pas ! Vous pouvez voir ce que ce tout cela donne, et comment cela amène à une très bonne expérience utilisateur dans l'exemple ci-dessous, pour lequel j'ai simulé une connexion 3G rapide. La coquille applicative (l'en tête, le pied de page, etc…) s'affiche *instantanément* pendant que l'on va chercher le contenu dynamique (depuis notre API distante GraphQL) en tâche de fond.
 
-![](Untitled-9cca5b6e-fb4e-4a69-9906-d04c8747b8af.png)
+![animation de la coquille applicative sur Gatsby Mail](https://user-images.githubusercontent.com/2587348/51945102-f97ed080-241d-11e9-81c1-c52203060236.gif)
+
 
 Vous pouvez aller jeter un oeil au [repository GitHub](https://github.com/dschau/gatsby-mail) pour en savoir plus sur comment elle a été développée, et vous approprier quelques unes de ces techniques pour la prochaine **appli** Web que vous développerez en Gatsby ;)
 
