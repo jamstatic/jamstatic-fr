@@ -1,6 +1,6 @@
 # jamstatic.fr
 
-[![Build Status](https://travis-ci.org/jamstatic/jamstatic-fr.svg?branch=source)](https://travis-ci.org/jamstatic/jamstatic-fr)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5f02cf72-0ba6-4fd3-a606-29262d8d8606/deploy-status)](https://app.netlify.com/sites/jamstatic/deploys)
 [![Slack Channel](https://jamstatic.herokuapp.com/badge.svg)](https://jamstatic.herokuapp.com)
 [![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors)
 
