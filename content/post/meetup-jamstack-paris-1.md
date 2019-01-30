@@ -6,7 +6,7 @@ categories:
   - gatsby
   - meetup
 images:
-  - /assets/images/2019/01/
+  - https://i.ytimg.com/vi/xLQ4to7Ubn0/sddefault.jpg
 ---
 
 {{% intro %}}
