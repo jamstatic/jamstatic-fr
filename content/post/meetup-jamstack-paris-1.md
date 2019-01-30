@@ -2,6 +2,7 @@
 title: "Meetup JAMstack Paris #1"
 date: 2019-01-28T18:45:24+01:00
 description: "Résumé des deux présentations dédiées à Gatsby."
+draft: true
 categories:
   - gatsby
   - meetup
