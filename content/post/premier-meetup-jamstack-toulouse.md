@@ -2,6 +2,10 @@
 title: "Meetup JAMstack Toulouse #1"
 date: 2018-03-17T09:24:53+01:00
 description: "Deux très bonnes présentations de Netlify et Algolia au premier meetup JAMStack français."
+categories:
+  - meetup
+  - algolia
+  - netlify
 images:
   - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347003/thefrontisback.jpg
 ---
