@@ -1,7 +1,7 @@
 ---
 title: "Oubliez Docker, le futur c'est la JAMstack"
 date: 2018-12-07T01:21:13+01:00
-lastmod:
+lastmod: 2018-01-26T01:09:11+01:00
 categories:
   - jamstack
 images:
