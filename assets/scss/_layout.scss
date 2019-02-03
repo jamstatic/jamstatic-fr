@@ -48,24 +48,12 @@ body {
   }
 }
 
-.site-nav {
+.site-description {
   display: inline-block;
   padding: 0;
   width: 100%;
   text-align: center;
   text-shadow: 0 1px 1px rgba(27, 31, 35, 0.25), 0 1px 25px rgba(27, 31, 35, 0.75);
-
-  .menu-icon {
-    display: none;
-  }
-
-  .page-link {
-    color: #fff;
-
-    &:not(:last-child) {
-      margin-right: 20px;
-    }
-  }
 }
 
 .site-footer {
@@ -86,7 +74,6 @@ body {
   }
 }
 
-.contact-list,
 .social-media-list {
   list-style: none;
   margin-left: 0;
@@ -128,10 +115,6 @@ body {
     margin: $base-line auto;
     opacity: 0.12;
   }
-}
-
-.page-heading {
-  margin-top: 0;
 }
 
 .post-list {
