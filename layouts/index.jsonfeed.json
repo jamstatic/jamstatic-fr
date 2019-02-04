@@ -16,8 +16,8 @@
        "id": "{{ .Permalink }}",
        "title": "{{ .Title }}",
        "url": "{{ if isset .Params "redirect" }}{{ .Params.redirect }}{{ else }}{{ .Permalink }}{{ end }}",
-       "content_html": "{{ replace .Content "\n" "\\n" | replaceRE "\"" "\\\""}}{{ if isset .Params "redirect" }}<p><a href="{{ .Permalink }}">Lire sur le site</a></p>{{ end }}",
-       "summary": "{{ replace .Summary "\n" "\\n" | replaceRE "\"" "\\\"" }}",
+       "content_html": "{{ .Content | replaceRE "\r|\n|\r\n" "" | replaceRE "\"" "\\\""}}{{ if isset .Params "redirect" }}<p><a href="{{ .Permalink }}">Lire sur le site</a></p>{{ end }}",
+       "summary": "{{ .Summary | replaceRE "\r|\n|\r\n" "" | replaceRE "\"" "\\\"" }}",
        {{ if isset .Params "images" }}"image": "{{ .Params.images }}",{{ end }}
        "date_published": "{{ .Date.Format "2006-01-02T15:04:05+01:00" }}",
        "date_modified": "{{ .Lastmod.Format "2006-01-02T15:04:05+01:00" }}"

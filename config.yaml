@@ -38,6 +38,7 @@ outputs:
   home:
     - html
     - rss
+    - jsonfeed
     - json
     - HEADERS
     - REDIR
