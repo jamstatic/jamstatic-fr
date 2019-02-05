@@ -1,7 +1,7 @@
 ---
 title: "Les collections dans Eleventy"
 date: 2019-01-29T08:54:22+01:00
-description: Les collections sont un concept central dans Eleventy.
+description: Les deux manières de créer des collections de documents avec le générateur de site statique Eleventy.
 categories:
   - eleventy
 images:
@@ -14,7 +14,7 @@ source:
 
 {{% intro %}}Le générateur de site statique open source
 [Eleventy](/categories/eleventy) est à la différence d'autres générateurs —
-comme Jekyll ou Hugo — est beaucoup moins opiniâtre. Là où ces deux générateurs
+comme Jekyll ou Hugo — beaucoup moins opiniâtre. Là où ces deux générateurs
 vont imposer _la_ manière dont vous pouvez créer des collections de documents
 (appelées sections de contenu dans Hugo), Eleventy lui vous laisse le choix.{{%
 /intro %}}
