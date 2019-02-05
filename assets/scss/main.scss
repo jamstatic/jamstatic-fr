@@ -43,6 +43,26 @@ table {
   }
 }
 
+.table-caption {
+  font-size: $small;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  font-style: italic;
+  margin-bottom: 1em;
+  padding: 0;
+}
+
+.phony::before {
+  content: "exemple : ";
+  position: relative;
+  top: 0;
+}
+
+summary {
+  color: $brand-color;
+  cursor: pointer;
+}
+
 .icon:hover {
   color: $brand-color;
 }
