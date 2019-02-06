@@ -111,7 +111,7 @@ La clef de premier niveau représente la section à laquelle s'applique le sché
 Hugo procède à la **fusion** des fichiers de données qui portent le même nom quand il traite les composants de thème. Cela signifie que si un utilisateur de notre composant de thème ajoute un fichier `json_schema.yml` dans son projet, il n'aura pas forcément besoin de redéfinir le schéma par défaut : celui-ci sera toujours accessible dans le fichier `json_schema.yml` du thème !
 {{% /notice %}}
 
-### Rendu JSON avec *jsonify*
+### Rendu JSON avec jsonify
 
 Si vous avez lu [notre article sur la création d'une API JSON avec Hugo](https://forestry.io/blog/build-a-json-api-with-hugo/#/output-formats), vous savez qu'il nous faut créer deux fichiers de mises en forme: `list.json.json` et `single.json.json`. Ces deux fichiers exporteront du JSON, le premier pour les vues de liste d'un type de contenu et le second pour les vues d'un seul élément.
 
@@ -200,8 +200,10 @@ Nous avons juste besoin d'appeler le fichier partiel `schema_item.tmpl` et lui d
 Afin de tirer parti de ce composant sur un site existant, il nous suffit de suivre la marche suivante:
 
 1. Ajouter notre composant de thème dans le dossier `/themes/` en tant que submodule Git
+
 2. Mettre à jour le paramètre `theme` dans notre fichier de configuration `config.toml` (ou .yml) pour lui dire d'utiliser notre composant de thème
 Add our theme component to `themes/` as a submodules
+
 3. Configurer l'export JSON pour les pages et les sections
 
 Pour vous montrer comment faire, j'ai créé un site de démo qui utilise [le thème Paper](https://github.com/nanxiaobei/hugo-paper). Un site avec quelques articles de blog et trois pages à propos de différentes voitures. [La démo tourne chez Netlify](https://hardcore-knuth-fc0978.netlify.com/).
@@ -216,19 +218,19 @@ git submodule add https://github.com/dwalkr/hugo-json-api-component themes/json-
 
 Puis, ouvrez votre fichier de configuration `config.toml` et modifier les lignes suivantes :
 
-```
+```toml
 theme = "paper"
 ```
 
 pour obtenir :
 
-```
+```toml
 theme = ["paper","json-api"]
 ```
 
 Enfin, pour activer l'export au format JSON pour nos vues liste et nos vues unitaires, il nous faut le spécifier dans la section `outputs` de notre fichier de configuration :
 
-```
+```toml
 [outputs]
     page = ["html","json"]
     section = ["html","json"]

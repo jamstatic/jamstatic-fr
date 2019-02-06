@@ -114,8 +114,7 @@ module.exports = function(eleventyConfig) {
 Quelques choses bonnes à savoir :
 
 -   Alors que Jekyll vous permet de lister les fichiers et dossiers à exclure de la génération avec le paramètre `exclude`, [Eleventy recherche ses mêmes valeurs](https://www.11ty.io/docs/ignores/) dans un fichier nommé  `.eleventyignore` (en plus du `.gitignore`).
-
--   Par défaut, Eleventy utilise [markdown-it](https://github.com/markdown-it/markdown-it) pour parcourir le Markdown. Si vous utilisez des fonctionnalités avancées (comme les abréviations, les listes de définition et les notes de bas de page), vous devrez [déclarer votre propre instance de cette bibliothèque Markdown (ou d'une autre) à Eleventy ](https://www.11ty.io/docs/languages/markdown/)et la configurer avec les options et les plugins de votre choix.
+-   Par défaut, Eleventy utilise [markdown-it](https://github.com/markdown-it/markdown-it) pour parcourir le Markdown. Si vous utilisez des fonctionnalités avancées (comme les abréviations, les listes de définition et les notes de bas de page), vous devrez [déclarer votre propre instance de cette bibliothèque Markdown (ou d'une autre) à Eleventy](https://www.11ty.io/docs/languages/markdown/)et la configurer avec les options et les plugins de votre choix.
 
 ## Les gabarits de mise en forme
 

@@ -43,11 +43,11 @@ La configuration se fait à l'aide d'un fichier `.circleci/config.yml` dans votr
 
 CircleCI est le service utilisé par Forestry pour lancer ses tests et déployer son code. Il s'intègre sans problème avec GitHub et Bitbucket.
 
-### On aime :
+### On aime
 
 Le fait que ce soit à la fois hautement configurable et simple à intégrer avec les projets GitHub.
 
-### On est pas super fan :
+### On est pas super fan
 
 On ne peut pas connecter de projets GitLab à CircleCI pour le moment.
 
@@ -63,11 +63,11 @@ TravisCI est une solution de CI/CD hébergée qui s'intègre avec vos projets Gi
 
 Les scripts de build s'exécutent dans un environnement Ubuntu qui peut être configuré à l'aide de commandes shell pendant la phase d'installation de votre build. TravisCI fournit également des abstractions pour installer [différents langages de programmation](https://docs.travis-ci.com/user/languages/) dans votre environnement de build.
 
-### On aime :
+### On aime
 
 TravisCI promet d'être gratuit à vie pour les projets open source. TravisCI travaille de pair avec Github et peut lancer automatiquement les tests d'intégration [lorsqu'une pull request est ouverte](https://docs.travis-ci.com/user/pull-requests/).
 
-### On est pas super fan :
+### On est pas super fan
 
 Avec TravisCI, vos builds doivent tourner dans un environnement Ubuntu. Vous pouvez installer Docker dans cet environnement pour récupérer des images, mais c'est la solution la plus verbeuse de toutes. De plus, vous ne pouvez utiliser TravisCI que si vos projets sont hébergés sur GitHub.
 
@@ -79,11 +79,11 @@ Drone est un serveur de CI/CD écrit en Go. Pour le moment vous devez héberger 
 
 Configurer un build pour Drone se fait à l'aide d'un fichier `.drone.yml`. On notera que la syntaxe de configuration de Drone est dérivée de la configuration de `docker-compose`. Si vous connaissez déjà `docker-compose`, vous serez en terrain connu avec le langage de configuration de Drone.
 
-### On aime :
+### On aime
 
 Drone propose des [matrices de builds](http://docs.drone.io/matrix-builds/) pour permettre de tester simplement votre code dans de multiples configurations, par exemple différentes versions de vos dépendances.
 
-### On est pas super fan :
+### On est pas super fan
 
 Drone est un arrivant relativement récent, et sa documentation aurait besoin d'un peu d'amour.
 
@@ -95,11 +95,11 @@ Drone est un arrivant relativement récent, et sa documentation aurait besoin d'
 
 Si vous utilisez GitLab pour héberger votre code, vous avez déjà accès aux outils d'intégration continue de GitLab. Tout ce que vous avez à faire est d'ajouter un pipeline de CI à votre projet avec un fichier `.gitlab-ci.yml`. J'aime le fait de ne pas à avoir à parcourir une interface graphique pour configurer l'intégration continue d'un projet — si vous avez plein de projets et que vous souhaitez gérer leur intégration continue par lots, cette option vous donne des possibilités d'automatisation.
 
-### On aime :
+### On aime
 
 GitLab CI est compatible avec toutes les versions de GitLab : vous pouvez l'utiliser sur gitlab.com ou sur votre instance GitLab hébergée. Le composant d'intégration continue de GitLab est écrit en Go, il est donc facile à exécuter sur les systèmes d'exploitation majeurs, y compris Windows et MacOS. Vous pouvez même [lancer vos tests d'intégration en local sur votre machine](https://gitlab.com/gitlab-org/gitlab-runner/issues/312) !.
 
-### On est pas super fan :
+### On est pas super fan
 
 Forcément pour utiliser GitLab CI, vous devez héberger votre code source avec GitLab, le fait de pouvoir héberger vous-même votre suite logicielle devrait vous rassurer si vous avez peur d'être trop dépendant d'un service tiers.
 
@@ -115,13 +115,13 @@ Jenkins dispose d'une foule de plugins pour l'ajout de fonctionnalités à votre
 
 Jenkins est écrit en Java et est compatible avec les principaux systèmes d'exploitation. Les builds peuvent tourner sous environnement Linux, BSD, MacOS ou Windows.
 
-### On aime :
+### On aime
 
 Jenkins est totalement libre d'utilisation et open source. Jenkins supporte les plugins et dispose d'une [bibliothèque très fournie](https://plugins.jenkins.io/) de par sa relative longévité dans le domaine de l'intégration continue.
 
 Le fait de pouvoir faire tourner ses builds sur n'importe quel système d'exploitation, y compris Windows ou Mac OS, car Jenkins est écrit en Java.
 
-### On est pas super fan :
+### On est pas super fan
 
 Pas grand-chose à redire à ce niveau : Jenkins peut faire à peu près tout ce que vous voulez ! Toutefois, il se peut que les petites équipes n'aient peut-être pas envie de devoir se coltiner la maintenance et l'hébergement de leur propre serveur d'intégration continue.
 

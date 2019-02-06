@@ -22,15 +22,15 @@ Par contre, à force de manipulations, mon Jekyll ressemblait moins au célèbre
 
 {{% /intro %}}
 
-***
+---
 
 ## TL;DR
 
-* Constatant que ma compilation Jekyll était des plus lentes, j'ai contacté la communauté JAMstack francophone pour des conseils.
-* Plusieurs choses ont émergé, chaque conseil permettant d'optimiser le temps de compilation.
-* Le plus gros gain provient des évolutions de Jekyll lui-même, sur lequel l'équipe est en train de faire un énorme travail.
+- Constatant que ma compilation Jekyll était des plus lentes, j'ai contacté la communauté JAMstack francophone pour des conseils.
+- Plusieurs choses ont émergé, chaque conseil permettant d'optimiser le temps de compilation.
+- Le plus gros gain provient des évolutions de Jekyll lui-même, sur lequel l'équipe est en train de faire un énorme travail.
 
-***
+---
 
 Pour générer [mon site](https://borisschapira.com) ([source](https://github.com/borisschapira/borisschapira.com "Dépôt GitHub borisschapira.com")), j'ai développé un ensemble de commandes Rake[^rake] qui se chargent de nettoyer l'espace de travail, de déterminer l'environnement de destination et de configurer la compilation en conséquence, de vérifier l'intégrité des en-têtes front matter de mes articles, de générer le site avec Jekyll et, enfin, de contrôler ce qui est produit en utilisant [la gemme `html-proofer`](https://rubygems.org/gems/html-proofer/). Je n'exécute pas tout cela sur mon ordinateur&nbsp;: à la place, je délègue cette tâche à Netlify, branché sur mon dépôt GitHub pour compiler et déployer mes branches.
 
@@ -40,7 +40,7 @@ Il y a quelques jours, Netlify a complètement arrêté le déploiement du site 
 
 Il était temps d'agir.
 
-***
+---
 
 Un proverbe africain dit&nbsp;:
 
@@ -48,7 +48,7 @@ Un proverbe africain dit&nbsp;:
 
 Je ne pense pas que ce soit tout à fait vrai. Je crois que lorsque nous nous entourons des bonnes personnes, nous pouvons aller _ailleurs_, vers des possibilités que nous n'avions même pas envisagées.
 
-***
+---
 
 Quand j'ai pensé que j'atteignais la limite de mes compétences, j'ai demandé l'aide à la communauté que je connais le mieux&nbsp;: les membres de JAMstatic. Et parmi eux, un membre de la <span lang="en">Core Team</span> de Jekyll, [Frank](https://github.com/DirtyF). Il m'a beaucoup aidé (et continue de le faire) en me montrant des possibilités que je n'avais pas envisagées.
 
@@ -99,7 +99,7 @@ Attention, la transition n'est pas sans adaptations. kramdown et CommonMark sont
 
 Par exemple, CommonMark ne supporte pas les attributs de bloc tels que `{ :.myclass}` pour décorer un paragraphe de contenu. Vous aurez besoin d'utiliser de bonnes vieilles balises HTML. N'oubliez pas d'activer l'option `UNSAFE` dans votre configuration Jekyll (`_config.yml`) si vous ne voulez pas générer beaucoup de commentaires du type `<!-- raw HTML omitted -->`&nbsp;:
 
-```
+```yaml
 markdown: CommonMark
 commonmark:
   options: ["SMART", "FOOTNOTES", "UNSAFE", "HARDBREAKS"]
@@ -122,14 +122,13 @@ Si vous ne deviez retenir, ou tester, qu'une seule optimisation, c'est celle-ci.
 
 Avec toutes ces optimisations, ma compilation Jekyll est passée de plus de 15 minutes à environ une minute. C'est encore beaucoup, et je sais pourquoi&nbsp;: ma gestion "fait maison" de l'internationalisation, et plus particulièrement de la traduction de mes articles, est sous-optimale.
 
-
 Elle est basée sur une clé front matter `i18n-key` qui me permet de faire se correspondre mes articles et pages d'une langue à l'autre et sur un plugin qui, pour chaque contenu, scanne tous les autres contenus pour trouver ceux qui sont des traductions du contenu courant. Cette stratégie O(n²), bien que facile à mettre en œuvre, n'est pas efficace du tout et pénalise mes performances de compilation.
 
 [Ashwin Maroli](https://github.com/ashmaroli), l'un des membres de la <em lang="en">Jekyll Plugin Core Team</em>, travaille sur un plugin qui utilise une convention d'organisation des fichiers pour trouver les traductions, ce qui devrait considérablement améliorer les choses&nbsp;: [jekyll-locale](https://github.com/ashmaroli/jekyll-locale). J'ai essayé d'implémenter le plugin sur mon blog mais j'ai rencontré quelques impondérables lors de cette première tentative. J'y reviendrai plus tard, une fois que j'aurais simplifié mon organisation des contenus. J'aurais également besoin que certains autres plugins soit modifiés pour être compatibles, comme [jekyll-paginate-v2 de Sverrir Sigmundarson](https://github.com/sverrirs/jekyll-paginate-v2), qui me sert pour la pagination.
 
 Je ne manquerai pas d'en parler quand j'attaquerai à nouveau ce chantier
 
-***
+---
 
 ## Protocole expérimental
 

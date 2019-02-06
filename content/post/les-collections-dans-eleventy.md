@@ -22,7 +22,7 @@ vont imposer _la_ manière dont vous pouvez créer des collections de documents
 Dans Eleventy les `collections` permettent de grouper des articles selon divers
 critères. Une collection pourrait désigner une série d'articles. Un autre
 collection pourrait regrouper les articles à propos de livres. Une troisième
-collection pourrait rassembler dans les contenus d'un même répertoire.
+collection pourrait rassembler tous les contenus d'un même répertoire.
 
 Eleventy vous permet de créer des collections de deux manières :
 
@@ -69,9 +69,7 @@ chaque élément de la collection.
 {% endfor %}
 ```
 
-
-L'objet `collections` en lui même ressemble à ça :
-
+L'objet `collections` lui, ressemble à ça :
 
 ```json
 {
@@ -94,7 +92,10 @@ L'objet `collections` en lui même ressemble à ça :
 }
 ```
 
-Chaque propriété est un tableau d'[objets d'éléments de collection](https://www.11ty.io/docs/collections/#collection-item-data-structure) (également appelés [objets modèle](https://www.11ty.io/docs/collections/#return-values) dans la
+Chaque propriété est un tableau d'[objets d'éléments de
+collection](https://www.11ty.io/docs/collections/#collection-item-data-structure)
+(également appelés [objets
+modèle](https://www.11ty.io/docs/collections/#return-values) dans la
 documentation).
 
 La collection spéciale `all` représente un tableau de tous les objets page
@@ -103,17 +104,16 @@ générés par Eleventy.
 <div id="elements-collection"></div>
 <div class="table-caption">propriétés des éléments de collection</div>
 
-| Propriété         | Description           |
-| :---------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `inputPath`       | Chemin vers ce fichier incluant le répertoire source. <hr><code class="phony">./src/articles/finding-oz.md</code>                                                               |
-| `outputPath`      | Chemin du fichier généré. <hr><code class="phony">articles/finding-oz/index.html</code>                                                                                     |
-| `fileSlug`        | Version courte en fonction du nom et de l'emplacement du fichier. [En fonction des règles](https://www.11ty.io/docs/data/#fileslug). <hr><code class="phony">finding-oz</code>                      |
-| `data`            | Données du front matter de la page rendue. Les variables globales disponibles pour chaque page.                                                                               |
-| `date`            | La date du fichier au format UTC. [Voir les règles](https://www.11ty.io/docs/dates/). <hr><code class="phony">2019-01-27T13:52:12.000Z</code>                                   |
-| `url`             | Chemin vers le contenu. N'inclus pas le protocole et le nom d'hôte. <hr><code class="phony">/articles/finding-oz/</code>                                                                |
-| `templateContent` | Le contenu généré de la page, n'inclut pas les balises enveloppantes de mise en page.<hr><code class="phony">&lt;p&gt;Comme la plupart des livres ... à propos du Magicien d'Oz&lt;/li&gt;\n&lt;/ul&gt;\n</code>|
-| `template`        | Toutes sortes de données analysées par le modèle. Des choses comme la configuration d'Eleventy, la configuration du moteur de rendu pour le markdown, et beaucoup de choses sur lesquelles nous ne devrions probablement pas nous baser.               |
-
+| Propriété         | Description                                                                                                                                                                                                                              |
+| :---------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `inputPath`       | Chemin vers ce fichier incluant le répertoire source. <hr><code class="phony">./src/articles/finding-oz.md</code>                                                                                                                        |
+| `outputPath`      | Chemin du fichier généré. <hr><code class="phony">articles/finding-oz/index.html</code>                                                                                                                                                  |
+| `fileSlug`        | Version courte en fonction du nom et de l'emplacement du fichier. [En fonction des règles](https://www.11ty.io/docs/data/#fileslug). <hr><code class="phony">finding-oz</code>                                                           |
+| `data`            | Données du front matter de la page rendue. Les variables globales disponibles pour chaque page.                                                                                                                                          |
+| `date`            | La date du fichier au format UTC. [Voir les règles](https://www.11ty.io/docs/dates/). <hr><code class="phony">2019-01-27T13:52:12.000Z</code>                                                                                            |
+| `url`             | Chemin vers le contenu. N'inclus pas le protocole et le nom d'hôte. <hr><code class="phony">/articles/finding-oz/</code>                                                                                                                 |
+| `templateContent` | Le contenu généré de la page, n'inclut pas les balises enveloppantes de mise en page.<hr><code class="phony">&lt;p&gt;Comme la plupart des livres ... à propos du Magicien d'Oz&lt;/li&gt;\n&lt;/ul&gt;\n</code>                         |
+| `template`        | Toutes sortes de données analysées par le modèle. Des choses comme la configuration d'Eleventy, la configuration du moteur de rendu pour le markdown, et beaucoup de choses sur lesquelles nous ne devrions probablement pas nous baser. |
 
 <details style="margin-top: 1em">
 
@@ -148,8 +148,9 @@ l'endroit ou Eleventy génère les collections.
 
 ## Les collections sur mesure
 
-Outre les collections créées à partir de tags, vous pouvez utiliser la fonction `addCollection()` dans
-votre fichier de configuration `.eleventy.js` pour créer vos propres collections.
+Outre les collections créées à partir de tags, vous pouvez utiliser la fonction
+`addCollection()` dans votre fichier de configuration `.eleventy.js` pour créer
+vos propres collections.
 
 Par exemple, voici comment créer une collection nommée `articles` constituée de pages
 générées à partir de modèles présents dans le dossier `src/articles/` :
@@ -168,7 +169,10 @@ La fonction `addCollection()` prend deux paramètres[^addcollection] :
 - le nom de la collection (une chaîne de caractères)
 - une fonction qui prend une `collection` en paramètre.
 
-[^addcollection]: `addCollection()` ne fait rien d'autre qu'associer la fonction qui construit la collection au nom de la collection. La fonction qui contruit la collection est elle-même appelée plus tard dans [`getUserConfigCollectionsData()`](https://github.com/11ty/eleventy/blob/7cac4ac0b6b99dd79d07ab94d1a443c276fe73db/src/TemplateMap.js#L167-L191).
+[^addcollection]: `addCollection()` ne fait rien d'autre qu'associer la fonction
+qui construit la collection au nom de la collection.
+La fonction qui construit la collection est elle-même appelée plus tard dans
+[`getUserConfigCollectionsData()`](https://github.com/11ty/eleventy/blob/7cac4ac0b6b99dd79d07ab94d1a443c276fe73db/src/TemplateMap.js#L167-L191).
 
       ```js
       addCollection(name, callback) {
@@ -184,11 +188,10 @@ La fonction `addCollection()` prend deux paramètres[^addcollection] :
       }
       ```
 
-
 Vous pourriez penser que le paramètre collection est un tableau d'objets de
 modèle  comme l'objet `collections` basé sur les tags. Ce paramètre est en fait
 une instance  d'une [`TemplateCollection`][template-collection], qui dérive de
-[`Sortable`][sortableSrc], et ressemble à ceci :
+[`Sortable`][sortable-src], et ressemble à ceci :
 
 ```json
 {
@@ -205,21 +208,17 @@ une instance  d'une [`TemplateCollection`][template-collection], qui dérive de
 
 La propriété `items` est un tableau de tous les objets de modèle. C'est la même
 chose que `collections.all`. Vous ne voulez pas accéder aux éléments directement
-en écrivant : `collection.item[n]`. Utilisez plutôt les [méthodes suivantes][collection-methods] pour accéder aux éléments.
-
-[sortableSrc]: https://github.com/11ty/eleventy/blob/master/src/Util/Sortable.js
-[collection-methods]: https://www.11ty.io/docs/collections/#collection-api-methods
-[template-collection]: https://github.com/11ty/eleventy/blob/master/src/TemplateCollection.js
+en écrivant : `collection.item[n]`.
+Utilisez plutôt les [méthodes suivantes][collection-methods] pour accéder aux éléments.
 
 <div class="table-caption">collection api methods</div>
 
-| Méthode                     | Description                                                                |
-| :---------------------------| :------------------------------------------------------------------------- |
-| `getAll()`                  | Récupérer tous les éléments dans un ordre spécifique.                      |
-| `getAllSorted()`            | Récupérer tous les éléments dans l'ordre.                                  |
-| `getFilteredByTag(tagName)` | Récupérer tous les éléments qui possèdent un tag spécifique.               |
+| Méthode                     | Description                                                                                    |
+| :---------------------------| :--------------------------------------------------------------------------------------------- |
+| `getAll()`                  | Récupérer tous les éléments dans un ordre spécifique.                                          |
+| `getAllSorted()`            | Récupérer tous les éléments dans l'ordre.                                                      |
+| `getFilteredByTag(tagName)` | Récupérer tous les éléments qui possèdent un tag spécifique.                                   |
 | `getFilteredByGlob(glob)`   | Récupérer tous les éléments dont l' `inputPath` correspond à un ou plusieurs patterns globaux. |
-
 
 Les éléments sont _presque_ [les mêmes](#elements-collection) que ceux des
 collections basées sur des tags, à la différence près que dans les collections
@@ -228,9 +227,11 @@ collections créées avec la fonction `addCollection()`, les éléments ont une
 propriété `_pages`. Je ne saurais dire pourquoi.
 
 Vous pouvez utiliser `addCollection()` pour créer des collections de pages.
-Depuis Eleventy 0.5.3, vous pouvez l'utiliser pour créer des collections ou des objets de votre choix.
+Depuis Eleventy 0.5.3, vous pouvez l'utiliser pour créer des collections ou des
+objets de votre choix.
 
-Par exemple, voici comment vous créeriez une collection constituée d'un tableau de toutes les catégories :
+Par exemple, voici comment vous créeriez une collection constituée d'un tableau
+de toutes les catégories :
 
 ```js
 module.exports = function(collection) {
@@ -254,8 +255,7 @@ Implémentation : Comment sont construites les collections sur mesure
 [`getUserConfigCollectionsData()`](https://github.com/11ty/eleventy/blob/7cac4ac0b6b99dd79d07ab94d1a443c276fe73db/src/TemplateMap.js#L167-L191)
 est la fonction qui appelle ce qui est retourné par la fonction `addCollection()`.
 
-
-{{< highlight js "hl_lines=6">}}
+{{< highlight js "hl_lines=6" >}}
 async getUserConfigCollectionsData() {
   let collections = {};
   let configCollections =
@@ -284,4 +284,9 @@ async getUserConfigCollectionsData() {
 {{< /highlight >}}
 
 `getUserConfigCollectionsData()` est appelé dans `TemplateMap.cache()` qui est
-l'endroit où Eleventy construit les collections. </details>
+l'endroit où Eleventy construit les collections.
+</details>
+
+[sortable-src]: https://github.com/11ty/eleventy/blob/master/src/Util/Sortable.js
+[collection-methods]: https://www.11ty.io/docs/collections/#collection-api-methods
+[template-collection]: https://github.com/11ty/eleventy/blob/master/src/TemplateCollection.js

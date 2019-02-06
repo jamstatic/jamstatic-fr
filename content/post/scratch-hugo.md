@@ -26,7 +26,7 @@ explication par l’exemple de la fonction `.Scratch` du langage de templating d
 
 Le contexte de Page d'Hugo n'est pas seulement la source d'information la plus importante pour vos pages, c'est aussi la source de données principale de tous vos templates. Plus souvent qu'il n'y paraît, vous aurez à ajouter vos propres variables personnalisées en plus de celles définies par défaut.
 
-Avec la fonction __.Scratch__ d'Hugo,  n'importe quelle [Page](https://gohugo.io/variables/page/#readout) ou [Shortcode](https://gohugo.io/variables/shortcodes/#readout) peut être enrichie avec autant de variables que nécessaire en plus de celles par défaut.
+Avec la fonction **.Scratch** d'Hugo,  n'importe quelle [Page](https://gohugo.io/variables/page/#readout) ou [Shortcode](https://gohugo.io/variables/shortcodes/#readout) peut être enrichie avec autant de variables que nécessaire en plus de celles par défaut.
 
 ## C'est quoi Scratch ?
 
@@ -36,11 +36,9 @@ Scratch a été ajouté à l'origine pour contourner une [limitation](https://gi
 À des fins de lisibilité, les extraits de code qui suivent ont des commentaires incompatibles avec le langage de template de Go. Reportez vous à la [doc](http://gohugo.io/templates/introduction/#comments) pour comment commenter dans Hugo.
 {{% /notice %}}
 
-
 ### `.Scratch.Set`
 
 `Set` est utilisé pour mémoriser une valeur voire pour pouvoir surcharger simplement une valeur par la suite.
-
 
 ```go-html-template
 {{ .Scratch.Set "salutations" "Bonjour" }}
@@ -303,7 +301,7 @@ Dans le fichier partiel vous pourrez alors écrire :
 <div>
 ```
 
-### *.Scratch* dans un fichier partiel sans contexte de page
+### _.Scratch_ dans un fichier partiel sans contexte de page
 
 Tout ce qui figure ci-dessus est important si vous devez accéder à une instance Scratch liée à votre contexte de page, mais avec l'ajout de `newScratch`[^2], vous pouvez utiliser désormais utiliser Scratch n'importe où, y compris dans un fichier partiel sans contexte de Page.
 
@@ -355,6 +353,6 @@ Utiliser Scratch pour stocker vos variables dans l'objet de Page vous garantit u
 En plus, je ne pense pas que s'amuser à dénouer des maps complexes soit aussi
 pratique que ce que nous permet de faire actuellement `.Scratch.SetInMap` !
 
-
 [^1]: Depuis [Hugo 0.38](https://gohugo.io/news/0.38-relnotes/)
+
 [^2]: Depuis [Hugo 0.43](https://gohugo.io/news/0.43-relnotes/)

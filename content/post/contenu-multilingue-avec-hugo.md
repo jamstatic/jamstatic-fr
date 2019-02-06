@@ -155,21 +155,20 @@ Nous avons vu qu'Hugo sait assigner une langue à une page, mais qu'en est-il de
 
 Dans les deux cas, Hugo va se baser sur le nom de fichier et sa localisation par rapport au dossier `content`. En fonction du système utilisé, on peut utiliser les nomenclatures suivantes :
 
-Par nom de fichier | | 
-:---|---|---
-`content/about.md`|`content/about.fr.md`| ✅
-`content/about.fr.md`|`content/about.es.md`|✅
-`content/about/index.md`| `content/about/index.fr.md` |✅
-`content/about.md`|`content/a-propos.fr.md`|🚫
-`content/company/about.md`|`content/about.fr.md`|🚫
+| Par nom de fichier         |                             |     |
+| :------------------------- | --------------------------- | --- |
+| `content/about.md`         | `content/about.fr.md`       | ✅   |
+| `content/about.fr.md`      | `content/about.es.md`       | ✅   |
+| `content/about/index.md`   | `content/about/index.fr.md` | ✅   |
+| `content/about.md`         | `content/a-propos.fr.md`    | 🚫  |
+| `content/company/about.md` | `content/about.fr.md`       | 🚫  |
 
-Par dossier | | 
-:---|---|---
-`content/english/about.md`|`content/french/about.md`|✅
-`content/english/about/index.md`|`content/french/about/index.md`|✅
-`content/english/about.md`|`content/french/a-propos.md`|🚫
-`content/english/company/about.md`|`content/english/about.md`|🚫
-
+| Par dossier                        |                                 |    |
+| :--------------------------------- | ------------------------------- |--- |
+| `content/english/about.md`         | `content/french/about.md`       | ✅  |
+| `content/english/about/index.md`   | `content/french/about/index.md` | ✅  |
+| `content/english/about.md`         | `content/french/a-propos.md`    | 🚫 |
+| `content/english/company/about.md` | `content/english/about.md`      | 🚫 |
 
 Notez bien qu'on peut forcer la liaison si elle ne correspond pas à celle par défaut. Il suffit pour cela d'ajouter le paramètre `translationKey` dans le Front Matter aux pages qui partagent le même contenu.
 
@@ -188,8 +187,8 @@ Maintenant que nos contenus dans différentes langues sont reliés entre eux, co
 
 Hugo stocke les traductions liées dans deux variables de page :
 
-* `.Translations` pour les autres traductions liées à un contenu,
-* `.AllTranslations` pour toutes les traductions liées y compris celle en cours.
+- `.Translations` pour les autres traductions liées à un contenu,
+- `.AllTranslations` pour toutes les traductions liées y compris celle en cours.
 
 Les traductions sont ici également triées en fonction du paramètre `Weight` défini dans le fichier configuration.
 
@@ -240,7 +239,6 @@ content
     └── about
         └── index.md
 ```
-
 
 ```sh
 content
@@ -333,7 +331,6 @@ Ce qui a pour effet d'avoir des URLs traduites :
 
 Nous pourrions décider de stocker les pages en anglais dans un répertoire dédié simplement en définissant le paramètre `defaultContentLanguageInSubdir` à `true` dans notre fichier `config.yaml`
 
-
 ## Localisation des chaînes de caractères
 
 La convention pour la traduction des chaînes de caractères avec Hugo ressemble un peu à celle des fichiers `.po` de gettext. Les chaînes de chaque langue sont enregistrées dans un fichier nommé en fonction du code de la langue utilisée et stockées dans un dossier `i18n/`.
@@ -342,7 +339,6 @@ Ce dossier peut se trouver à la racine de votre projet ou d'un thème.
 
 -   `i18n/en.yaml` ✅
 -   `themes/academic/i18n/en.yaml` ✅
-
 
 Pour nos trois langues, ça ressemble à quelque chose comme :
 
@@ -552,7 +548,7 @@ Si une des traductions du thème que nous utilisons ne nous plaît pas, nous n'a
     other: Rodents
 ```
 
-C'est tout ! Pour les autres langues, Hugo se basera sur les *Souris* et les *Ratones* 🐁 déclarés dans `themes/miceandmen/i18n/`.
+C'est tout ! Pour les autres langues, Hugo se basera sur les _Souris_ et les _Ratones_ 🐁 déclarés dans `themes/miceandmen/i18n/`.
 
 ### Un dernier mot sur les singuliers et les pluriels
 

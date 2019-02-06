@@ -25,11 +25,11 @@ JAMstack c'est pour JavaScript, APis et Markup. C'est la merveilleuse union de
 technologies modernes, du logiciel _as a service_ et des langages au coeur des
 fondations du web. Cette stack procure :
 
- * une réduction des coûts,
- * une mise sur le marché plus rapide,
- * une sécurité accrue,
- * plus de fiabilité, de disponibilité, et une meilleure adaptation à la montée en charge,
- * une réduction de la dépendance à des technologies propriétaires.
+- une réduction des coûts,
+- une mise sur le marché plus rapide,
+- une sécurité accrue,
+- plus de fiabilité, de disponibilité, et une meilleure adaptation à la montée en charge,
+- une réduction de la dépendance à des technologies propriétaires.
 
 Les technologies comme Docker vont continuer à jouer un rôle primordial dans le
 futur du numérique, mais elles devraient devenir de plus en plus transparentes
@@ -168,11 +168,11 @@ Ici le terme commodité fait référence à [la technique de cartographie de War
 
 Avec la JAMstack, on tire parti des services du Cloud comme suit :
 
-* hébergement de fichiers statiques plutôt que des serveurs d'application,
-* intégration et déploiement dans le Cloud plutôt que chez soi en fonction de ses capacités,
-* partenaires Saas plutôt que des produits tiers hébergés en interne,
-* fonctions déclenchées à la demande dans le Cloud plutôt que sur des serveurs qui tournent en permanence,
-* des développeurs JavaScript full-stack plutôt que des compétences et des langages variés.
+- hébergement de fichiers statiques plutôt que des serveurs d'application,
+- intégration et déploiement dans le Cloud plutôt que chez soi en fonction de ses capacités,
+- partenaires Saas plutôt que des produits tiers hébergés en interne,
+- fonctions déclenchées à la demande dans le Cloud plutôt que sur des serveurs qui tournent en permanence,
+- des développeurs JavaScript full-stack plutôt que des compétences et des langages variés.
 
 ### En résumé
 

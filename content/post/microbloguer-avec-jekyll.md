@@ -6,14 +6,12 @@ description: " Un microblog est un blog qui publie des articles courts, le plus 
   publier vos notes pour ensuite les envoyer sur Twitter."
 categories:
 - jekyll
-images:
-- 
 source:
   author: Fiona Voss
   title: Microblogging in Jekyll
   url: http://fionavoss.blog/2018/04/01/microblogging-in-jekyll/
-
 ---
+
 {{% intro %}}
 Garder la main sur ses contenus est devenu une préoccupation pour beaucoup, on a pu le voir récemment avec l'annonce de Medium qui a décidé d'arrêter le support des noms de domaine personnalisés. Versionner ses contenus dans un format texte est la raison première de l'existence des générateurs comme Jekyll.
 Et si pour être un peu plus indépendant des plate-formes des réseaux sociaux qui se nourrissent de nos données, on commençait par publier sur son site, quitte à republier automatiquement ensuite sur Medium ou Twitter ? Fiona Voss a tenté l'expérience et ça marche très bien ! 🎉{{% /intro %}}
