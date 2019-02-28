@@ -95,7 +95,7 @@ Chaque déploiement est une photographie complète du site. Vous disposez ainsi 
 [En savoir plus](https://buddy.works/blog/introducing-atomic-deployments#what-are-atomic-deployments)
 
 **Invalidation du cache**<br/>
-Une fois votre site généré poussé en ligne, le CND va invalider son cache. Cela signifie que la nouvelle version est instantanément disponible partout.
+Une fois votre site généré poussé en ligne, le CDN va invalider son cache. Cela signifie que la nouvelle version est instantanément disponible partout.
 
 [En savoir plus](https://www.netlify.com/blog/2015/09/11/instant-cache-invalidation/)
 
