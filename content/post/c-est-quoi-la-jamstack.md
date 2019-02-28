@@ -57,7 +57,7 @@ JAM c'est pour : JavaScript, APIs & Markup.
 
 **JavaScript**<br> Les fonctionnalités dynamiques sont gérées par JavaScript. Vous êtes libres d'utiliser la bibliothèque ou le framework que vous voulez.
 
-**APIs**<br> Les opérations côté serveur sont abstraites sous forme d'APIs réutilisables, accessibles en HTTPS à l'aide de JavaScript. Ces opérations peuvent être déléguées à des services tierces ou bien à vos propres fonctions.
+**APIs**<br> Les opérations côté serveur sont abstraites sous forme d'APIs réutilisables, accessibles en HTTPS à l'aide de JavaScript. Ces opérations peuvent être déléguées à des services tiers ou bien à vos propres fonctions.
 
 **Markup**<br/> Les sites web sont servis sous forme de fichiers HTML statiques. Ces fichiers peuvent être générés à partir de fichiers source, comme du Markdown, à l'aide d'un générateur de site statique.
 
@@ -185,7 +185,7 @@ Un excellent moyen d'interagir avec votre audience
 **E-Commerce**<br/>
 Mettre en place une boutique en ligne sur un site JAMstack n'a jamais été aussi simple.
 
-**Recherche**<br/> 
+**Recherche**<br/>
 Reposez-vous sur des services tiers pour intégrer des fonctionnalités de recherche
 
 [Voir plus de services pour les sites statiques](https://github.com/agarrharr/awesome-static-website-services#e-commerce)
