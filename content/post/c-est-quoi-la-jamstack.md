@@ -14,7 +14,7 @@ source:
 {{% /intro %}}
 
 
-La JAMstack révolutionne notre manière de travailler en proposant une expérience de développement plus simple, de meilleures performances, des côuts bien moins élevés et une grande scalabilité.
+La JAMstack révolutionne notre manière de travailler en proposant une expérience de développement plus simple, de meilleures performances, des coûts bien moins élevés et une grande scalabilité.
 
 Vous vous demandez peut-être ; oui OK, mais comment ? pourquoi ? c'est quoi au juste ?
 
@@ -24,7 +24,7 @@ Le but de ce guide est de présenter de manière claire le concept de la JAMstac
 
 Le contenu ci-dessous est tiré du site ci-dessus 👆
 
-Asseyez-vous, mettez vous à l'aise et appréciez ✌️
+Asseyez-vous, mettez-vous à l'aise et appréciez ✌️
 
 *****
 
