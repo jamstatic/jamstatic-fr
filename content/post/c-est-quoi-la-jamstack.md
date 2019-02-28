@@ -18,7 +18,7 @@ La JAMstack révolutionne notre manière de travailler en proposant une expérie
 
 Vous vous demandez peut-être ; oui OK, mais comment ? pourquoi ? c'est quoi au juste ?
 
-C'est pour cette raison que j'ai crée [https://jamstack.wtf](https://jamstack.wtf/).
+C'est la raison d'être de cette page [https://jamstack.wtf](https://jamstack.wtf/).
 
 Le but de ce guide est de présenter de manière claire le concept de la JAMstack et d'inciter d'autres développeurs à adopter cette approche.
 
@@ -57,64 +57,54 @@ JAM c'est pour : JavaScript, APIs & Markup.
 
 **JavaScript**<br> Les fonctionnalités dynamiques sont gérées par JavaScript. Vous êtes libres d'utiliser la bibliothèque ou le framework que vous voulez.
 
-**APIs**<br> Les opérations côté serveurs sont abstraites sous forme d'APIs réutilisables, accessibles en HTTPS à l'aide de JavaScript. Ces opérations peuvent être déléguées à des services tierces ou bien à vos propres fonctions.
+**APIs**<br> Les opérations côté serveur sont abstraites sous forme d'APIs réutilisables, accessibles en HTTPS à l'aide de JavaScript. Ces opérations peuvent être déléguées à des services tierces ou bien à vos propres fonctions.
 
-**Markup** Les sites web sont servis sous forme de fichiers HTML statiques. Ces fichiers peuvent être générés à partir de fichiers source, comme du Markdown, à l'aide d'un générateur de site statique.
+**Markup**<br/> Les sites web sont servis sous forme de fichiers HTML statiques. Ces fichiers peuvent être générés à partir de fichiers source, comme du Markdown, à l'aide d'un générateur de site statique.
 
 ### Bénéfices
 
 Les principaux bénéfices apportés par la JAMstack sont :
 
-**Une performance accrue**  
-
+**Une performance accrue**<br/>
 Servir du code généré et des assets à partir d'un CDN
 
-**Une meilleure sécurité**
-
+**Une meilleure sécurité**<br/>
 Plus besoin de se soucier des vulnérabilités du serveur ou de la base de données
 
-**Un coût bien moindre**  
-
+**Un coût bien moindre**<br/>
 L'hébergement de fichiers statiques est moins cher [voire gratuit](https://netlify.com/)
 
-**Une meilleure expérience de développement**  
-
+**Une meilleure expérience de développement**<br/>
 Les développeurs front end peuvent se focaliser sur la partie client, sans être dépendants d'une architecture monolithique. Cela se traduit en général par un développement plus rapide et plus ciblé.
 
-**Redimensionnement à la volée**  
-
+**Redimensionnement à la volée**<br/>
 Si votre site devient viral ou est soumis à un pic d'activité, le CDN compensera sans problèmes.
 
 ### Bonnes pratiques
 
 Les astuces suivantes vous aideront à tirer le meilleur parti de la stack.
 
-**Réseau de distribution de contenu (CDN)**
-
+**Réseau de distribution de contenu (CDN)**<br/>
 Puisque tous les fichiers et les assets sont générés en amont, ils peuvent servis sur un CDN. Cela procure une meilleure performance et un redimensionnement à la volée.
 
 [En savoir plus](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/)
 
-**Déploiement atomique**
-
+**Déploiement atomique**<br/>
 Chaque déploiement est une photographie complète du site. Vous disposez ainsi d'une version consistante du site à l'échelle mondiale.
 
 [En savoir plus](https://buddy.works/blog/introducing-atomic-deployments#what-are-atomic-deployments)
 
-**Invalidation du cache**
-
+**Invalidation du cache**<br/>
 Une fois votre site généré poussé en ligne, le CND va invalider son cache. Cela signifie que la nouvelle version est instantanément disponible partout.
 
 [En savoir plus](https://www.netlify.com/blog/2015/09/11/instant-cache-invalidation/)
 
-**Tout est versionné**
-
+**Tout est versionné**<br/>
 Votre code vit dans un système de gestion de versions tel que Git. Les principaux avantages sont : l'historique des changements de chaque fichier et de chaque collaborateur ainsi que la traçabilité.
 
 [En savoir plus](https://www.atlassian.com/git/tutorials/what-is-version-control)
 
-**Générations automatiques**
-
+**Générations automatiques**<br/>
 Votre serveur est notifié lorsqu'une nouvelle génération est requise, typiquement à l'aide de webhooks. Le serveur génère le projet, met à jour les CDNs et le site est en ligne.
 
 [En savoir plus](https://www.agilealliance.org/glossary/automated-build)
@@ -127,20 +117,16 @@ Voici à quoi ressemblerait la chaîne de publication JAMstack idéale.
 
 ### Historique
 
-**2015**
-
+**2015**<br/>
 Les générateurs statiques sont de plus en plus en vogue, grâce à des générateurs populaires comme Jekyll.
 
-**2016**
-
+**2016**<br/>
 Quelques développeurs pensent que les sites statiques n'ont pas à être forcément statiques, le terme "JAMstack" fait son apparition.
 
-**2017**
-
+**2017**<br/>
 La révolution du web moderne commence à prioriser la performance, le redimensionnement à la volée et l'expérience de développement. Le terme JAMstack est adopté par un groupe de développeurs plus important et les premières entreprises commencent à annoncer des projets basés sur la JAMstack.
 
-**2018**
-
+**2018**<br/>
 Des outils comme Netlify, Gatsby et Contentful contribuent à promouvoir le terme et la communauté grandit vite. C'est aussi l'année de la première conférence JAMstack.
 
 [Source: SnipCart](https://snipcart.com/blog/jamstack)
@@ -153,12 +139,10 @@ C'est à vous de décider comment générer vos fichiers HTML. Les trois approch
 
 ### Développement
 
-**À la main**
-
+**À la main**<br/>
 Une méthode simple et efficace d'écrire du HTML, c'est idéal pour les pages super simples.
 
-**Générateurs de site statique**
-
+**Générateurs de site statique**<br/>
 La plupart des sites JAMstack sont propulsés par un générateur de site statique.
 Vous êtes libres de choisir votre GSS.
 
@@ -168,8 +152,7 @@ Vous êtes libres de choisir votre GSS.
 
 [Voir davantage de générateurs](https://www.staticgen.com/)
 
-**Framework frontend**
-
+**Framework frontend**<br/>
 La plupart des frameworks ne génèrent pas de fichiers HTML statiques par défaut, toutefois c'est possible si vous connaissez bien vos outils, cela demande plus d'expérience et de maintenance.
 
 * [React](http://reactjs.org/)
@@ -190,24 +173,19 @@ Vous devez héberger le résultat de la compilation de votre site. Il existe de 
 
 Les sites JAMstack n'ont pas à être entièrement statiques. Il existe des services formidables pour vous aider à insérer des parties dynamiques dans votre projet.
 
-**Fonctions personnalisées**
-
+**Fonctions personnalisées**<br/>
 Vous pouvez également abstraire vos propres fonctions pour en faire des APIs réutilisables. Pour cela vous pouvez utiliser [les fonctions AWS lambda](https://aws.amazon.com/lambda/features/) ou [les fonctions Netlify](https://functions.netlify.com/examples/)
 
-**Commentaires**
-
+**Commentaires**<br/>
 Beaucoup de sites JAMstack intègrent des sections pour les commantaires, principalement sur des blogs.
 
-**Formulaires**
-
+**Formulaires**<br/>
 Un excellent moyen d'interagir avec votre audience
 
-**E-Commerce**
-
+**E-Commerce**<br/>
 Mettre en place une boutique en ligne sur un site JAMstack n'a jamais été aussi simple.
 
-**Recherche**
-
+**Recherche**<br/> 
 Reposez-vous sur des services tiers pour intégrer des fonctionnalités de recherche
 
 [Voir plus de services pour les sites statiques](https://github.com/agarrharr/awesome-static-website-services#e-commerce)
