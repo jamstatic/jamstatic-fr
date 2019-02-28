@@ -57,7 +57,7 @@ JAM c'est pour : JavaScript, APIs & Markup.
 
 **JavaScript**<br> Les fonctionnalités dynamiques sont gérées par JavaScript. Vous êtes libres d'utiliser la bibliothèque ou le framework que vous voulez.
 
-**APIs**<br> Les opérations côté serveur sont abstraites sous forme d'APIs réutilisables, accessibles en HTTPS à l'aide de JavaScript. Ces opérations peuvent être déléguées à des services tierces ou bien à vos propres fonctions.
+**APIs**<br> Les opérations côté serveur sont abstraites sous forme d'APIs réutilisables, accessibles en HTTPS à l'aide de JavaScript. Ces opérations peuvent être déléguées à des services tiers ou bien à vos propres fonctions.
 
 **Markup**<br/> Les sites web sont servis sous forme de fichiers HTML statiques. Ces fichiers peuvent être générés à partir de fichiers source, comme du Markdown, à l'aide d'un générateur de site statique.
 
