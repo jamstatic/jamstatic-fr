@@ -95,7 +95,7 @@ Chaque déploiement est une photographie complète du site. Vous disposez ainsi 
 [En savoir plus](https://buddy.works/blog/introducing-atomic-deployments#what-are-atomic-deployments)
 
 **Invalidation du cache**<br/>
-Une fois votre site généré poussé en ligne, le CND va invalider son cache. Cela signifie que la nouvelle version est instantanément disponible partout.
+Une fois votre site généré poussé en ligne, le CDN va invalider son cache. Cela signifie que la nouvelle version est instantanément disponible partout.
 
 [En savoir plus](https://www.netlify.com/blog/2015/09/11/instant-cache-invalidation/)
 
@@ -177,7 +177,7 @@ Les sites JAMstack n'ont pas à être entièrement statiques. Il existe des serv
 Vous pouvez également abstraire vos propres fonctions pour en faire des APIs réutilisables. Pour cela vous pouvez utiliser [les fonctions AWS lambda](https://aws.amazon.com/lambda/features/) ou [les fonctions Netlify](https://functions.netlify.com/examples/)
 
 **Commentaires**<br/>
-Beaucoup de sites JAMstack intègrent des sections pour les commantaires, principalement sur des blogs.
+Beaucoup de sites JAMstack intègrent des sections pour les commentaires, principalement sur des blogs.
 
 **Formulaires**<br/>
 Un excellent moyen d'interagir avec votre audience
