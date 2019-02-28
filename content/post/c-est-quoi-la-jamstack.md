@@ -180,19 +180,19 @@ Vous pouvez également abstraire vos propres fonctions pour en faire des APIs r�
 Beaucoup de sites JAMstack intègrent des sections pour les commentaires, principalement sur des blogs.
 
 **Formulaires**<br/>
-Un excellent moyen d'interagir avec votre audience
+Un excellent moyen d'interagir avec votre audience.
 
 **E-Commerce**<br/>
 Mettre en place une boutique en ligne sur un site JAMstack n'a jamais été aussi simple.
 
 **Recherche**<br/> 
-Reposez-vous sur des services tiers pour intégrer des fonctionnalités de recherche
+Reposez-vous sur des services tiers pour intégrer des fonctionnalités de recherche.
 
 [Voir plus de services pour les sites statiques](https://github.com/agarrharr/awesome-static-website-services#e-commerce)
 
 ### CMS
 
-Les sites JAMstack peuvent aussi être gérés via un système de gestion de contenu, plus précisément  avec des CMS headless. Chaque changement effectué dans le CMS va entraîner une nouvelle génération du site, qui sera ensuite déployé sous forme de fichiers statiques.
+Les sites JAMstack peuvent aussi être gérés via un système de gestion de contenu, plus précisément avec des CMS headless. Chaque changement effectué dans le CMS va entraîner une nouvelle génération du site, qui sera ensuite déployé sous forme de fichiers statiques.
 
 * [Contentful](http://contentful.com/)
 * [Forestry](https://forestry.io/)
