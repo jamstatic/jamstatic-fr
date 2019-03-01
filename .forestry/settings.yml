@@ -12,9 +12,6 @@ sections:
   templates:
   - post
 - type: document
-  path: data/authors.yml
-  label: Authors
-- type: document
   path: config.yaml
   label: Configuration
 upload_dir: ''
