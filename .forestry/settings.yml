@@ -15,7 +15,7 @@ sections:
   path: data/authors.yml
   label: Authors
 - type: document
-  path: config.toml
+  path: config.yaml
   label: Configuration
 upload_dir: ''
 public_path: ''
