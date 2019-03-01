@@ -1,14 +1,17 @@
 ---
 title: C'est quoi la JAMstack au juste ?
-date: 2019-02-07T20:12:14+01:00
-lastmod: 2019-02-28T09:17:42+01:00
-description: "Un petit pense-bête pour expliquer les concepts de la JAMstack et encourager les développeurs à adopter cette approche."
+date: 2019-02-07 19:12:14 +0000
+lastmod: 2019-02-28 08:17:42 +0000
+description: Un petit pense-bête pour expliquer les concepts de la JAMstack et encourager
+  les développeurs à adopter cette approche.
 source:
-  author: "Pedro Duarte"
-  title: "WTF is JAMstack?"
-  url: "https://jamstack.wtf/"
----
+  author: Pedro Duarte
+  title: WTF is JAMstack?
+  url: https://jamstack.wtf/
+categories:
+- jamstack
 
+---
 {{% intro %}}
 [Pedro Duarte](https://twitter.com/peduarte) a lancé [https://jamstack.wtf](https://jamstack.wtf) un mini-site afin de donner une vue d'ensemble de la JAMstack. Nous vous proposons ici sa traduction en français afin de permettre à toujours plus de développeurs d'adopter cette façon de travailler.
 {{% /intro %}}
