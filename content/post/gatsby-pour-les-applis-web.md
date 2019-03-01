@@ -39,7 +39,7 @@ Je pense plus particulièrement à deux exemples clé, qui sont pour moi les plu
 
 ## Gmail
 
-![capture d'écran de Gmail](https://user-images.githubusercontent.com/2587348/51944473-6beeb100-241c-11e9-8cec-26c55275bb1f.png)
+![capture d'écran de Gmail](https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1200/v1551433893/gmail.png)
 
 Gmail peut-être vu, avec le recul, comme une “preuve de concept” qui a démontré deux choses très importantes :
 
@@ -50,7 +50,7 @@ Il ne faut pas sous-estimer l'impact de ces bénéfices. Gmail a *prouvé* qu'un
 
 ## Twitter (Progressive Web Application)
 
-![Capture d'écran de Twitter Lite](https://user-images.githubusercontent.com/2587348/51944520-888ae900-241c-11e9-9a60-833a5c5c9c1b.png)
+![Capture d'écran de Twitter Lite](https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1200/v1551434027/twitter-lite.png)
 
 Twitter est un autre très bon exemple de mon modèle mental de ce qu'est (et ce que peut être !) une appli Web parce que :
 
@@ -69,7 +69,7 @@ Ces deux applis Web serviront de d'exemples à garder à l'esprit quand nous all
 
 ## Gatsby est taillé pour les applis Web
 
-![what if I told you](https://user-images.githubusercontent.com/2587348/51944611-c2f48600-241c-11e9-9c90-39e3db93d3b0.png)
+![what if I told you](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1551434095/what-if-i-told-you.png)
 
 Et si je vous disais… que construire un site avec Gatsby autorisait toutes ces fonctionnalités, traditionnellement réservées à des applis Web, parce qu'un “site statique” Gatsby est en fait une appli Web ?
 
@@ -138,7 +138,7 @@ Tout ce que nous avons fait ci-dessus est d'implémenter la méthode du cycle de
 
 Considérons l'animation ci-dessous, qui représente l'expérience utilisateur. En réalité, nous avons généré statiquement les blocs non-dynamiques (le header, la sidebar…) et nous avons requêté dynamiquement le reste des données !
 
-![illustration de la coquille applicative](https://www.gatsbyjs.org/dynamic-data-fetching-08f9daf0084378e349bdc711fc56d25c.gif)
+![illustration de la coquille applicative](https://res.cloudinary.com/jamstatic/image/upload/v1551434167/dynamic-data-fetching.gif)
 
 Cependant, notre exemple peut paraître simpliste — ou en tous cas assez éloigné d'une vraie appli Web. Que se passerait-il si l'API REST [nécessitait une authentification](https://www.gatsbyjs.org/docs/authentication-tutorial/) ? Et si nous souhaitions des [routes gérées côté client](https://www.gatsbyjs.org/docs/building-apps-with-gatsby/#client-only-routes--user-authentication), par exemple pour avoir un lien direct vers un message spécifique ? Tout est possible ! Est-ce qu'on peut profiter de GraphQL lors du build *et* du runtime ? Bien sûr !
 
@@ -193,7 +193,7 @@ Comparons cette méthode avec celle du rendu côté serveur. Pour cet exemple, n
 
 Pour illustrer cet exemple, nous pouvons nous appuyer sur l'animation suivante. Sur la gauche, on peut voir une application qui utilise un Service Worker et une coquille applicative — une application Gatsby par exemple. Sur la droite, c'est une application rendue côté serveur, qui doit donc attendre que l'appel API soit terminé avant de pouvoir proposer la page complète, d'un coup.
 
-![comparaison coquille applicative vs rendu côté serveur](https://www.gatsbyjs.org/app-shell-web-apps-2cde9a7b00ea80c9e90542e3dd03b2fa.gif)
+![comparaison coquille applicative vs rendu côté serveur](https://res.cloudinary.com/jamstatic/image/upload/v1551434230/app-shell-web-apps.gif)
 
 Nous voyons donc clairement les avantages de cette approche. Lorsque nous chargeons une coquille applicative, nous donnons à nos utilisateurs l'impression que la page se charge plus rapidement, bien que si nous comparons les deux approches, elles affichent toutes deux *toute la donnée* au même moment. Nous avons donc le meilleur des deux mondes… On donne la perception que le site est très rapide, tout en sachant qu'il *est* très rapide grâce aux optimisations que l'on obtient avec Gatsby, par défaut.
 
@@ -201,7 +201,7 @@ Afin de revenir sur tous ces concepts, j'ai préparé une application de démons
 
 ## Et voici… Gatsby Mail ! (Qui ne sert qu'à des fins de démonstration !)
 
-![gatsby mail](https://user-images.githubusercontent.com/2587348/51945048-cd634f80-241d-11e9-96e1-de0ffbd7d846.png)
+![gatsby mail](https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1200/v1551434278/gatsby-mail.png)
 
 
 [Gatsby Mail](https://gatsby-mail.netlify.com/) reprend certains des concepts et des thèmes que j'ai abordés. Plus particulièrement :
@@ -220,7 +220,7 @@ De plus, Gatsby Mail fait la démonstration de fonctionnalités spécifiques aux
 
 et même des thèmes clairs/sombres, parce que pourquoi pas ! Vous pouvez voir ce que ce tout cela donne, et comment cela amène à une très bonne expérience utilisateur dans l'exemple ci-dessous, pour lequel j'ai simulé une connexion 3G rapide. La coquille applicative (l'en-tête, le pied de page, etc…) s'affiche *instantanément* pendant que l'on va chercher le contenu dynamique (depuis notre API distante GraphQL) en tâche de fond.
 
-![animation de la coquille applicative sur Gatsby Mail](https://user-images.githubusercontent.com/2587348/51945102-f97ed080-241d-11e9-81c1-c52203060236.gif)
+![animation de la coquille applicative sur Gatsby Mail](https://res.cloudinary.com/jamstatic/image/upload/v1551434347/app-shell-gatsby-mail.gif)
 
 
 Vous pouvez aller jeter un oeil au [repository GitHub](https://github.com/dschau/gatsby-mail) pour en savoir plus sur comment elle a été développée, et vous approprier quelques unes de ces techniques pour la prochaine **appli** Web que vous développerez en Gatsby ;)
