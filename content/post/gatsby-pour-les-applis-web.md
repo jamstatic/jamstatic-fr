@@ -9,7 +9,7 @@ source:
   title: Gatsby for Apps
   url: https://www.gatsbyjs.org/blog/2018-11-07-gatsby-for-apps/
 images:
-- https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346582/go_static.jpg
+- https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1200/v1551434278/gatsby-mail.png
 categories:
 - jamstack
 - gatsby
