@@ -14,6 +14,10 @@ sections:
 - type: document
   path: data/authors.yml
   label: Authors
+- type: document
+  path: config.toml
+  label: Configuration
+  match: "**/*"
 upload_dir: ''
 public_path: ''
 front_matter_path: https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1200
