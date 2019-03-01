@@ -1,5 +1,5 @@
 ---
-label: post
+label: Article
 hide_body: false
 is_partial: false
 fields:
@@ -30,11 +30,6 @@ fields:
   hidden: false
   default:
   - "/assets/images///"
-- name: type
-  label: Type
-  type: text
-  hidden: false
-  default: ''
 - name: source
   label: Source
   type: field_group
