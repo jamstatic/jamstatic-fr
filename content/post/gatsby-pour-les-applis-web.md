@@ -1,19 +1,20 @@
 ---
-title: "Gatsby pour les applis Web"
-description: Comment Gatsby permet d'allier les atouts du statique avec les possibilités du dynamique pour créer des applis Web riches en fonctionnalités
-date: 2018-11-07
+title: Gatsby pour les applis Web
+description: Comment Gatsby permet d'allier les atouts du statique avec les possibilités
+  du dynamique pour créer des applis Web riches en fonctionnalités
+date: 2019-03-01 11:00:00 +0100
 commments: true
 source:
   author: Dustin Schau
-  title: "Gatsby for Apps"
+  title: Gatsby for Apps
   url: https://www.gatsbyjs.org/blog/2018-11-07-gatsby-for-apps/
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346582/go_static.jpg
+- https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346582/go_static.jpg
 categories:
-  - jamstack
-  - gatsby
----
+- jamstack
+- gatsby
 
+---
 Gatsby est génial pour la génération des sites statiques. Vous le saviez probablement déjà ! Mais c'est en fait tout aussi bien pour les applis Web. Vous ne le saviez peut-être pas. Gatsby est fait pour construire des expériences qui profitent à la fois des bénéfices des sites dits statiques et des applis web. Vous n'avez pas à sacrifier les avantages des unes pour obtenir les bénéfices des autres.
 
 Dans cet article, nous allons voir certains cas d'usage d'une appli Web complexe, comme le fait d'aller requêter des données tierces dynamiques ou de s'authentifier, et nous allons vous révéler pourquoi Gatsby est un très bon choix pour construire des applis web.
