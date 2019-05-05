@@ -1,8 +1,7 @@
 ---
 title: "De WordPress à Hugo : adopter un nouvel état d'esprit"
 date: 2019-02-06T17:12:14+01:00
-lastmod: 2019-03-22T158:12:14+01:00
-draft: true
+lastmod: 2019-05-03T158:12:14+01:00
 description: "Comparons le fonctionnement de WordPress et de Hugo pour vous aider à vous familiariser avec ce nouvel environnement et vous imprégner de sa philosophie."
 categories:
   - hugo
