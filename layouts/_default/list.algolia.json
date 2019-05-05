@@ -7,12 +7,12 @@
   {{- $dot := . -}}
   {{- if or (and ($hit.IsDescendant $section) (and (not $hit.Draft) (not $hit.Params.private))) $section.IsHome -}}
     {{/* Set the hit objectID */}}
-    {{- .Scratch.SetInMap $hit.File.Path "objectID" $hit.UniqueID -}}
+    {{- .Scratch.SetInMap $hit.File.Path "objectID" $hit.File.UniqueID -}}
     {{/* Store built-in page variables in iterable object */}}
     {{- .Scratch.SetInMap "temp" "content" $hit.Plain -}}
     {{- .Scratch.SetInMap "temp" "date" $hit.Date.UTC.Unix -}}
     {{- .Scratch.SetInMap "temp" "description" $hit.Description -}}
-    {{- .Scratch.SetInMap "temp" "dir" $hit.Dir -}}
+    {{- .Scratch.SetInMap "temp" "dir" $hit.File.Dir -}}
     {{- .Scratch.SetInMap "temp" "path" "temp" -}}
     {{- .Scratch.SetInMap "temp" "expirydate" $hit.ExpiryDate.UTC.Unix -}}
     {{- .Scratch.SetInMap "temp" "path" "temp" -}}
