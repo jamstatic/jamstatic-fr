@@ -85,7 +85,7 @@ params:
   ghrepo: https://github.com/jamstatic/jamstatic-fr/
   branch: master
   images:
-    - "assets/images/twitter-card.jpg"
+    - "assets/images/twitter-card.png"
   algolia:
     vars:
       - title
