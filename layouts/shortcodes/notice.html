@@ -4,4 +4,4 @@
 	{{else}}
 	{{with .Get 0 }}{{.}}{{end}}"
 {{end}}
-role="alert">{{- .Inner -}}</div>
+role="alert">{{- .Inner | markdownify -}}</div>

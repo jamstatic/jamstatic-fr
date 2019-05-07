@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="{{ "assets/css/chroma.css" | relURL }}">
 {{ end -}}
 <title>{{ block "title" . }}{{ if .IsHome }}{{ .Site.Params.Description }} · {{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} · {{ end }}{{ .Site.Title }}{{ end }}{{ end }}</title>
-{{ .Hugo.Generator }}
+{{ hugo.Generator }}
 {{ if .Site.IsServer }}
 {{ $cssOpts := (dict "targetPath" "assets/css/main.css" "enableSourceMap" true ) }}
 {{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts }}
