@@ -88,7 +88,7 @@ Si votre site devient viral ou est soumis à un pic d'activité, le CDN compense
 Les astuces suivantes vous aideront à tirer le meilleur parti de la stack.
 
 **Réseau de distribution de contenu (CDN)**<br/>
-Puisque tous les fichiers et les assets sont générés en amont, ils peuvent servis sur un CDN. Cela procure une meilleure performance et un redimensionnement à la volée.
+Puisque tous les fichiers et les assets sont générés en amont, ils peuvent être servis sur un CDN. Cela procure une meilleure performance et un redimensionnement à la volée.
 
 [En savoir plus](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/)
 
