@@ -103,3 +103,38 @@ limitation in that only a single branch (usually master or gh-pages) can
 be deployed. This may not sound particularly exciting, but it enables a
 wonderful feature that we'll get back to in a bit.
 
+### Migrating from GitHub Pages to Netlify
+
+In general, publishing your site from Netlify is as easy as creating a
+Netlify account, signing in to your Git provider (GitHub, GitLab or
+Bitbucket) and selecting a repo. As soon as you provide a build command,
+Netlify can start deploying your site. Tasks like setting up SSL are
+explained by the [Netlify Docs](https://www.netlify.com/docs/) so we
+won't cover that here.
+
+If you were using the built-in Jekyll gems and build process that GitHub
+provided, you'll need a few additional things to get the build working.
+You'll need a Gemfile for your dependencies, and it's also a good idea
+to check your build command into source control as well:
+
+Gemfile
+
+```ruby
+source "https://rubygems.org"
+gem 'github-pages'
+```
+
+netlify.toml
+
+```toml
+[build]
+publish = "_site/"
+command = "jekyll build"
+```
+
+Once you're satisfied that everything looks good and is deploying
+correctly from Netlify, you can proceed to claim your domain name on
+Netlify and migrate DNS over to Netlify's name servers. After your DNS
+is fully cut over, you can safely turn off the GitHub Pages site from
+your repo.
+
