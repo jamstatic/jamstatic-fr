@@ -1,7 +1,6 @@
 ---
-title: Implémenter un headless CMS en 3 jours
-description: Retour sur l'implémentation de Netlify CMS sur un Jekyll
-author: Arnaud Ligny
+title: 'Mettre en place un CMS en 3 jours'
+description: 'Retour d’expérience sur la mise ne palce de Netlify CMS sur un site Jekyll.'
 categories:
 - headless
 images:
