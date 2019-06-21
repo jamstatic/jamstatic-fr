@@ -241,3 +241,8 @@ configuration on netlify.com, you should be able to log into the Netlify
 CMS admin for your site at
 [`https://yourdomain.com/admin`](https://yourdomain.com/admin).
 
+``` {#netlify.toml}
+[build]
+publish = "_site/"
+command = "jekyll build"
+```
