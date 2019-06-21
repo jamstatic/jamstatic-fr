@@ -3,7 +3,7 @@ title: Mettre en place un CMS en 3 jours
 date: 2019-06-21T10:34:38.000+00:00
 lastmod: 
 description: Retour d’expérience sur la mise ne palce de Netlify CMS sur un site Jekyll.
-author: Frank Taillandier
+author: Arnaud Ligny
 categories:
 - headless
 images:
