@@ -408,3 +408,39 @@ Here we're looping through each component on the page, and including another tem
 ```
 
 Because we passed along our block variable, everything is right where we need it. You'll also notice we took special care to translate our markdown into HTML with markdownify since that isn't being automatically done for us any more.
+
+Our Experience with Netlify + Netlify CMS
+-----------------------------------------
+
+Using these techniques, our engineers were able to integrate Netlify CMS into our existing Jekyll site for [Monetery](https://monetery.com/) and launch a working CMS within a matter of days (three, to be exact).  
+Content editors were able to onboard quickly and start publishing changes and new pages shortly after launch. During that time we also onboarded a new engineer who was able to start making meaningful contributions on their second day of work!
+
+That said, [we're never done](https://www.dwolla.com/about/core-beliefs/). We're constantly learning from our experiences and trying to improve. Let's take a balanced look at both the pros and cons of using Netlify + Netlify CMS:
+
+### Pros
+
+-   Hosting on Netlify is a breeze and we haven't experienced any issues with the site itself
+-   Netlify CMS was very easy to retrofit onto an existing Jekyll project and intuitive for new engineers to learn
+-   It's easy and very useful to get a copy of your entire project, including content, and run it locally using docker
+-   The Netlify CMS interface is simple and easy to learn for content editors
+-   Branch deploys and previews are amazing
+-   Netlify's free plans give you the freedom to evaluate the offering before committing
+-   There is an active and very helpful [community](https://gitter.im/netlify/NetlifyCMS) for Netlify CMS on Gitter
+-   Netlify CMS is open source and welcomes contributions
+
+### Cons
+
+-   Our content editors like the editorial workflow but don't like the multiple steps to save and publish
+-   Saving and publishing is relatively slow, sometimes up to a few seconds
+-   We experience occasional---but frustrating---errors when using the CMS admin
+-   Some widgets or functionality that you might be looking for, such as conditional logic for displaying fields in the admin UI, hasn't been implemented yet
+-   The CMS UI doesn't work to save content to your machine during local development, it will always commit back to your Git repository, so be careful
+-   You are better off hosting with Netlify instead of another provider if you want features like branch deploys and a hosted Git Gateway -- this may incur more cost to your business
+
+## The Community & Contributing Back
+
+The Netlify CMS community has been nothing short of wonderful to interact with, so we encourage you to reach out and give this technology a try. Dwolla also believes in linking our words with our actions, so we're committed to giving back to the open source community. We're happy to report that our first pull request contributing to Netlify CMS is already live!
+
+Check out the code on GitHub: <https://github.com/netlify/netlify-cms>
+
+Start building in our [sandbox](https://accounts-sandbox.dwolla.com/sign-up) for free, right now. Get a feel for how our API works before going live in production.
