@@ -622,14 +622,9 @@ balanced look at both the pros and cons of using Netlify + Netlify CMS:
 The Community & Contributing Back
 ---------------------------------
 
-The Netlify CMS community has been nothing short of wonderful to
-interact with, so we encourage you to reach out and give this technology
-a try. Dwolla also believes in linking our words with our actions, so
-we're committed to giving back to the open source community. We're happy
-to report that our first pull request contributing to Netlify CMS is
+The Netlify CMS community has been nothing short of wonderful to interact with, so we encourage you to reach out and give this technology a try. Dwolla also believes in linking our words with our actions, so we're committed to giving back to the open source community. We're happy to report that our first pull request contributing to Netlify CMS is
 already live!
 
 Check out the code on GitHub: <https://github.com/netlify/netlify-cms>
 
-Start building in our [sandbox](https://accounts-sandbox.dwolla.com/sign-up) for free, right
-now. Get a feel for how our API works before going live in production.
+Start building in our [sandbox](https://accounts-sandbox.dwolla.com/sign-up) for free, right now. Get a feel for how our API works before going live in production.
