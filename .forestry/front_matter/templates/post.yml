@@ -64,7 +64,7 @@ fields:
   label: Lastmod
   type: datetime
   hidden: false
-  default: 
+  default: now
 - name: commments
   label: Commments
   type: boolean
