@@ -91,6 +91,7 @@ fields:
   hidden: false
   default: true
 pages:
+- content/post/implémenter-un-headless-cms-en-3-jours.md
 - content/post/creer-un-environnement-de-preproduction-pour-jekyll.md
 - content/post/configurer-netlify-cms-pour-jekyll.md
 - content/post/un-site-ecommerce-statique-avec-hugo.md
