@@ -4,8 +4,10 @@ date: 2019-06-21T10:34:38.000+00:00
 lastmod: 
 description: Retour sur l'implémentation de Netlify CMS sur un Jekyll
 author: Frank Taillandier
-categories: []
+categories:
+- headless
 images:
+- https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1200/v1561132474/jamstatic/netlify-cms.png
 - "/assets/images///"
 source:
   author: ''
@@ -19,8 +21,6 @@ keywords: []
 draft: true
 
 ---
-![](https://cdn.dwolla.com/com/prod/20190522141939/netlify-cms-blog-opengraph-image-02.png)
-
 Let's say you're building the next great startup or putting together a
 spectacular event---the first question anybody asks you is "What's the
 website?"
@@ -213,7 +213,7 @@ This will define a new collection that shows up on left side of the CMS admin UI
 
 Here's an example of what the data file might look like:
 
-\_data/nav.yml
+_data/nav.yml
 
 ``` {#nav.yml}
 topLevelItems:
@@ -293,7 +293,7 @@ Of special note are the `permalink` and `preview_path` fields. We'll use the per
 
 Here's an example of what the data file for a page might look like:
 
-\_pages/home.md
+_pages/home.md
 
 ``` {#home.md}
 ---
@@ -304,6 +304,7 @@ metaDescription: Shout out what you’re about!
 social: {}
 ---
 ```
+
 ### How to Use a Folder Collection in Jekyll
 
 If you were reading closely, you may have noticed that the file collection is generating YAML files, while the folder collection is generating markdown files with front matter. You might think that's a bit odd to have a markdown file with no content below the data in the front matter (demarcated by the triple dashes), but rest assured there's a good reason!
@@ -312,7 +313,7 @@ We'll work in concert with Jekyll's own [collections feature](https://jekyllrb.c
 
 Before we start, we need to make an addition to the Jekyll config file:
 
-\_config.yml
+_config.yml
 
 ``` {#jekyll-collections}
 collections:
@@ -326,7 +327,7 @@ But how does Jekyll know which template to use? In this case, the `layout` field
 
 Let's look at an example layout template:
 
-\_layouts/home.html
+_layouts/home.html
 
 ``` {#layouts-home}
 ---
@@ -348,7 +349,7 @@ We're off to a great start, but we didn't need to go to all that trouble with ou
 
 First, we need to define our components in the Netlify CMS config file:
 
-\_admin/config.yml
+_admin/config.yml
 
 ``` {#define-components}
 collections:
@@ -380,7 +381,7 @@ Here we've extended our pages collection to include a variable type list widget 
 
 Now let's make a new layout to render our widgets:
 
-\_layouts/blocks.html
+_layouts/blocks.html
 
 ``` {#render-widgets}
 ---
@@ -394,7 +395,7 @@ layout: default
 
 Here we're looping through each component on the page, and including another template file that knows how to render it. Here's what a component template might look like:
 
-\_includes/blocks/hero.html
+_includes/blocks/hero.html
 
 ``` {#component-template}
 <header class="page-hero">
@@ -409,8 +410,7 @@ Here we're looping through each component on the page, and including another tem
 
 Because we passed along our block variable, everything is right where we need it. You'll also notice we took special care to translate our markdown into HTML with markdownify since that isn't being automatically done for us any more.
 
-Our Experience with Netlify + Netlify CMS
------------------------------------------
+## Our Experience with Netlify + Netlify CMS
 
 Using these techniques, our engineers were able to integrate Netlify CMS into our existing Jekyll site for [Monetery](https://monetery.com/) and launch a working CMS within a matter of days (three, to be exact).  
 Content editors were able to onboard quickly and start publishing changes and new pages shortly after launch. During that time we also onboarded a new engineer who was able to start making meaningful contributions on their second day of work!
@@ -419,28 +419,28 @@ That said, [we're never done](https://www.dwolla.com/about/core-beliefs/). We're
 
 ### Pros
 
--   Hosting on Netlify is a breeze and we haven't experienced any issues with the site itself
--   Netlify CMS was very easy to retrofit onto an existing Jekyll project and intuitive for new engineers to learn
--   It's easy and very useful to get a copy of your entire project, including content, and run it locally using docker
--   The Netlify CMS interface is simple and easy to learn for content editors
--   Branch deploys and previews are amazing
--   Netlify's free plans give you the freedom to evaluate the offering before committing
--   There is an active and very helpful [community](https://gitter.im/netlify/NetlifyCMS) for Netlify CMS on Gitter
--   Netlify CMS is open source and welcomes contributions
+* Hosting on Netlify is a breeze and we haven't experienced any issues with the site itself
+* Netlify CMS was very easy to retrofit onto an existing Jekyll project and intuitive for new engineers to learn
+* It's easy and very useful to get a copy of your entire project, including content, and run it locally using docker
+* The Netlify CMS interface is simple and easy to learn for content editors
+* Branch deploys and previews are amazing
+* Netlify's free plans give you the freedom to evaluate the offering before committing
+* There is an active and very helpful [community](https://gitter.im/netlify/NetlifyCMS) for Netlify CMS on Gitter
+* Netlify CMS is open source and welcomes contributions
 
 ### Cons
 
--   Our content editors like the editorial workflow but don't like the multiple steps to save and publish
--   Saving and publishing is relatively slow, sometimes up to a few seconds
--   We experience occasional---but frustrating---errors when using the CMS admin
--   Some widgets or functionality that you might be looking for, such as conditional logic for displaying fields in the admin UI, hasn't been implemented yet
--   The CMS UI doesn't work to save content to your machine during local development, it will always commit back to your Git repository, so be careful
--   You are better off hosting with Netlify instead of another provider if you want features like branch deploys and a hosted Git Gateway -- this may incur more cost to your business
+* Our content editors like the editorial workflow but don't like the multiple steps to save and publish
+* Saving and publishing is relatively slow, sometimes up to a few seconds
+* We experience occasional---but frustrating---errors when using the CMS admin
+* Some widgets or functionality that you might be looking for, such as conditional logic for displaying fields in the admin UI, hasn't been implemented yet
+* The CMS UI doesn't work to save content to your machine during local development, it will always commit back to your Git repository, so be careful
+* You are better off hosting with Netlify instead of another provider if you want features like branch deploys and a hosted Git Gateway -- this may incur more cost to your business
 
 ## The Community & Contributing Back
 
 The Netlify CMS community has been nothing short of wonderful to interact with, so we encourage you to reach out and give this technology a try. Dwolla also believes in linking our words with our actions, so we're committed to giving back to the open source community. We're happy to report that our first pull request contributing to Netlify CMS is already live!
 
-Check out the code on GitHub: <https://github.com/netlify/netlify-cms>
+Check out the code on GitHub: [https://github.com/netlify/netlify-cms](https://github.com/netlify/netlify-cms)
 
 Start building in our [sandbox](https://accounts-sandbox.dwolla.com/sign-up) for free, right now. Get a feel for how our API works before going live in production.
