@@ -1,19 +1,20 @@
 ---
-title: Implémenter un headless CMS en 3 jours
-description: Retour sur l'implémentation de Netlify CMS sur un Jekyll
+title: 'Mettre en place un CMS en 3 jours'
+description: 'Retour d’expérience sur la mise ne palce de Netlify CMS sur un site Jekyll.'
 categories:
   - headless
 source:
-  author: Dwolla
-  title: How We Implemented a headless CMS in 3 Days
+  author: Shea Daniels (Dwolla)
+  title: 'How We Implemented a headless CMS in 3 Days'
   url: 'https://www.dwolla.com/updates/implementing-netlify-cms/'
+  date: 2019-06-06
 images: []
 ---
 source: https://www.dwolla.com/updates/implementing-netlify-cms/
 
 description: Monetery, our annual tech summit, needed flexibility after building a new website. Using Netlify CMS we added content management to a Jekyll site.
 
-How We Implemented a headless CMS in 3 Days
+Comment nous avons mis en place un CMS headless en 3 jours
 ===========================================
 
 ![](https://cdn.dwolla.com/com/prod/20190522141939/netlify-cms-blog-opengraph-image-02.png)
