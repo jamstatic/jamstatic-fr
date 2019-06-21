@@ -8,7 +8,6 @@ categories:
 - headless
 images:
 - https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1200/v1561132474/jamstatic/netlify-cms.png
-- "/assets/images///"
 source:
   author: Shea Daniels
   title: How We Implemented a headless CMS in 3 Days
