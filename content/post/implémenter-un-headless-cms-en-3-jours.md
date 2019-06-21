@@ -341,3 +341,70 @@ layout: default
 ```
 
 All of the data we are interested in from the front matter is available using the `{collection}.{field}` syntax that Jekyll provides. We're able to use parent templates and all of the other features as you'd expect.
+
+### Making a Page Builder in Jekyll
+
+We're off to a great start, but we didn't need to go to all that trouble with our folder collection if we weren't going to take it one step farther: let's make a flexible, component-based page builder!
+
+First, we need to define our components in the Netlify CMS config file:
+
+\_admin/config.yml
+
+``` {#define-components}
+collections:
+  - label: "Pages"
+      ...
+      - label: "Content Blocks"
+        label_singular: "Content Block"
+        name: blocks
+        widget: list
+        types:
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - {label: "Heading", name: heading, widget: string}
+              - {label: "Content", name: content, widget: markdown, buttons: ["bold", "italic", "link"], required: false}
+          - label: "Rich Text Block"
+            name: textBlock
+            widget: object
+            fields:
+              - {label: "Heading", name: heading, widget: string, required: false}
+              - {label: "Content", name: content, widget: markdown}
+          ...
+```
+
+Here we've extended our pages collection to include a variable type list widget that contains several different types of objects that the content editor will be able to dynamically add and rearrange from the CMS Admin.
+
+![](https://cdn.dwolla.com/com/prod/20190529162003/Screen-Shot-2019-05-29-at-4.19.06-PM.png)
+
+Now let's make a new layout to render our widgets:
+
+\_layouts/blocks.html
+
+``` {#render-widgets}
+---
+layout: default
+---
+
+{% for block in page.blocks %}
+  {% include blocks/{{ block.type }}.html block=block %}
+{% endfor %}
+```
+
+Here we're looping through each component on the page, and including another template file that knows how to render it. Here's what a component template might look like:
+
+\_includes/blocks/hero.html
+
+``` {#component-template}
+<header class="page-hero">
+  <h1>{{ block.heading }}</h1>
+  {% if block.content and block.content != '' %}
+    <div class="max-width--330">
+      {{ block.content | markdownify }}
+    </div>
+  {% endif %}
+</header>
+```
+
+Because we passed along our block variable, everything is right where we need it. You'll also notice we took special care to translate our markdown into HTML with markdownify since that isn't being automatically done for us any more.
