@@ -1,23 +1,12 @@
 ---
 title: Implémenter un headless CMS en 3 jours
-date: 2019-06-21T12:34:38+02:00
-lastmod: 
 description: Retour sur l'implémentation de Netlify CMS sur un Jekyll
-author: Frank Taillandier
 categories: []
-images:
-- "/assets/images///"
 source:
-  author: ''
+  author: Frank
   title: How We Implemented a headless CMS in 3 Days
-  url: https://www.dwolla.com/updates/implementing-netlify-cms/
-  lang: ''
-commments: false
-aliases: []
-canonical_url: ''
-keywords: []
-draft: true
-
+  url: 'https://www.dwolla.com/updates/implementing-netlify-cms/'
+images: []
 ---
 ![](https://cdn.dwolla.com/com/prod/20190522141939/netlify-cms-blog-opengraph-image-02.png)
 
@@ -90,22 +79,28 @@ If you were using the built-in Jekyll gems and build process that GitHub provide
 
 Gemfile
 
-    source "https://rubygems.org"
-    gem 'github-pages'
+```
+source "https://rubygems.org"
+gem 'github-pages'
+```
 
 netlify.toml
 
-    [build]
-    publish = "_site/"
-    command = "jekyll build"
+```
+[build]
+publish = "_site/"
+command = "jekyll build"
+```
 
 Once you're satisfied that everything looks good and is deploying correctly from Netlify, you can proceed to claim your domain name on Netlify and migrate DNS over to Netlify's name servers. After your DNS is fully cut over, you can safely turn off the GitHub Pages site from your repo.## Adding Netlify CMS to an Existing Site
 
 Netlify CMS itself consists of a [Single Page Application](https://en.wikipedia.org/wiki/Single-page_application) built with [React](https://reactjs.org/) that lives in an admin folder on your site. For Jekyll, it goes right at the root of your project. It will contain two files:
 
-    admin
-    ├ index.html
-    └ config.yml
+```
+admin
+├ index.html
+└ config.yml
+```
 
 The [Netlify CMS Docs](https://www.netlifycms.org/docs/add-to-your-site/) explain this better than we can:
 
@@ -113,20 +108,22 @@ The [Netlify CMS Docs](https://www.netlifycms.org/docs/add-to-your-site/) explai
 
 admin/index.html
 
-    <!doctype html>
-    <html>
-    <head>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Content Manager</title>
-    
-      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    </head>
-    <body>
-      <!-- Include the script that builds the page and powers Netlify CMS -->
-      <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-    </body>
-    </html>
+```
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <!-- Include the script that builds the page and powers Netlify CMS -->
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+</body>
+</html>
+```
 
 > The second file, `admin/config.yml`, is the heart of your Netlify CMS installation, and a bit more complex. The [Configuration](https://www.netlifycms.org/docs/add-to-your-site/#configuration) section covers the details.
 
@@ -134,20 +131,22 @@ To start with, the config file might look something like this:
 
 admin/config.yml
 
-    backend:
-      name: git-gateway
-      branch: master
-      identity_url: "https://yoursite.com/.netlify/identity"
-      gateway_url: "https://yoursite.com/.netlify/git"
-      squash_merges: true
-    
-    publish_mode: editorial_workflow
-    media_folder: "assets/img/uploads"
-    
-    site_url: https://yoursite.com
-    logo_url: https://yoursite.com/assets/img/logo.svg
-    
-    collections:
+```
+backend:
+  name: git-gateway
+  branch: master
+  identity_url: "https://yoursite.com/.netlify/identity"
+  gateway_url: "https://yoursite.com/.netlify/git"
+  squash_merges: true
+
+publish_mode: editorial_workflow
+media_folder: "assets/img/uploads"
+
+site_url: https://yoursite.com
+logo_url: https://yoursite.com/assets/img/logo.svg
+
+collections:
+```
 
 The `backend` section covers the basics like which branch to update and sets up the Git Gateway connection that we talked about earlier. The `publish_mode` property sets up our workflow to use the [editorial](https://www.netlifycms.org/docs/add-to-your-site/#editorial-workflow) mode. In short, this means that we have the ability to save page drafts as pull requests in Git before we decide to publish them. Combined with the branch deploys feature of Netlify, this is going to give us live previews of unpublished content from a static site generator!
 
@@ -155,20 +154,18 @@ _Note: as of June 2019, the editorial workflow is only supported when you use Gi
 
 Now we just need to drop in the Netlify Identity Widget on the main site. This is needed because after a user logs in they'll be redirected to the homepage of the site. We need to redirect them back to the CMS admin, so add the following script before the closing body tag:
 
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", user => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
+```
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
         });
       }
-    </script>
+    });
+  }
+</script>
+```
 
-With this in place, and the appropriate authentication and Git Gateway configuration on netlify.com, you should be able to log into the Netlify CMS admin for your site at [https://yourdomain.com/admin](https://yourdomain.com/admin "https://yourdomain.com/admin").
-
-### What are Collections?
-
-Although at this point you can log in, you can't do much yet! There is no data structure set up for the CMS fields you'll need to edit your site. You may have noticed the empty `collections` field in the config file, and this is where the magic happens. All fields for data that you want to save need to be part of a collection.
+With this in place, and the appropriate authentication and Git Gateway configuration on netlify.com, you should be able to log into the Netlify CMS admin for your site at [https://yourdomain.com/admin](https://yourdomain.com/admin "https\://yourdomain.com/admin").
