@@ -1,8 +1,8 @@
 ---
-title: Implémenter un headless CMS en 3 jours
+title: Mettre en place un CMS en 3 jours
 date: 2019-06-21T10:34:38.000+00:00
 lastmod: 
-description: Retour sur l'implémentation de Netlify CMS sur un Jekyll
+description: Retour d’expérience sur la mise ne palce de Netlify CMS sur un site Jekyll.
 author: Frank Taillandier
 categories:
 - headless
@@ -10,10 +10,10 @@ images:
 - https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1200/v1561132474/jamstatic/netlify-cms.png
 - "/assets/images///"
 source:
-  author: ''
+  author: Shea Daniels
   title: How We Implemented a headless CMS in 3 Days
   url: https://www.dwolla.com/updates/implementing-netlify-cms/
-  lang: ''
+  lang: en
 commments: false
 aliases: []
 canonical_url: ''
