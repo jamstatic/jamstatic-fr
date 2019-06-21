@@ -304,3 +304,40 @@ metaDescription: Shout out what you’re about!
 social: {}
 ---
 ```
+### How to Use a Folder Collection in Jekyll
+
+If you were reading closely, you may have noticed that the file collection is generating YAML files, while the folder collection is generating markdown files with front matter. You might think that's a bit odd to have a markdown file with no content below the data in the front matter (demarcated by the triple dashes), but rest assured there's a good reason!
+
+We'll work in concert with Jekyll's own [collections feature](https://jekyllrb.com/docs/collections/) to pair our markdown files with a template, read the data in the front matter and then use it to generate our page output. This lets us do neato things later like use the [variable type list widget](https://www.netlifycms.org/docs/beta-features/#list-widget-variable-types) to make a component based page builder!
+
+Before we start, we need to make an addition to the Jekyll config file:
+
+\_config.yml
+
+``` {#jekyll-collections}
+collections:
+  pages:
+    output: true
+```
+
+This tells Jekyll to generate a new page for each markdown file in the `pages` folder.
+
+But how does Jekyll know which template to use? In this case, the `layout` field we defined in Netlify CMS is doing exactly that. Jekyll maps the value in that front matter field directly to the name of a template file in the `_layouts` folder of your project.
+
+Let's look at an example layout template:
+
+\_layouts/home.html
+
+``` {#layouts-home}
+---
+layout: default
+---
+
+<h1>{{ page.title }}</h1>
+
+<section class="home">
+  {{ content }}
+</section>
+```
+
+All of the data we are interested in from the front matter is available using the `{collection}.{field}` syntax that Jekyll provides. We're able to use parent templates and all of the other features as you'd expect.
