@@ -176,3 +176,131 @@ Although at this point you can log in, you can't do much yet! There is no data s
 There are two [types of collections](https://www.netlifycms.org/docs/collection-types/), folder collections and file collections. To understand the difference, let's figure out what Netlify CMS actually does when you make a content edit: the data has to be stored somewhere and we know that it uses Git as a back end. That means the data you save must end up inside of a file in your project. So when we configure a collection, we are telling Netlify CMS about the structure and naming convention of the files we want to create. It's then up to your static site generator to determine how to interpret these files and pull the data into templates. In this blog post, we'll cover how that works for Jekyll.
 
 Knowing this, can you guess why there are two types of collections? In the case of defined options, we can tell the CMS to put that field in a specific file in our project. In the case of repeating content, like blog posts or pages built out of modular components, we want to set up Netlify CMS so that it can generate many files based on a pattern that we define. We can generate a number of different file formats too -- it supports YAML, JSON, markdown with [front matter](https://jekyllrb.com/docs/front-matter/), and a few others.
+
+### Setting Up a File Collection for Global Options
+
+A file collection is the perfect place to define data fields for things that are valid across your entire site, such as global navigation, footers, and defaults. Let's look at a file collection from a real config file:
+
+admin/config.yml
+
+``` {#config.yml-edit}
+collections:
+  - label: "Sitewide Options"
+    name: options
+    editor:
+      preview: false
+    files:
+      - label: "Navigation Menu"
+        name: nav
+        file: "_data/nav.yml"
+        fields:
+          - label: "Nav Items"
+            label_singular: "Nav Item"
+            name: topLevelItems
+            widget: list
+            fields:
+              - {label: "Display Text", name: displayText, widget: string}
+              - {label: URL, name: url, widget: string}
+              - label: "Item Type"
+                name: itemType
+                widget: select
+                options: ["Link", "Button"]
+```
+
+This will define a new collection that shows up on left side of the CMS admin UI, and it will make a "Navigation Menu" page underneath that collection. Inside are fields that define some site navigation items that each include a name, URL, etc. We define the data type and editor interface of the fields using [widgets](https://www.netlifycms.org/docs/widgets/). When a change is made, it will be saved to the file located at `_data/nav.yml` in your project.
+
+![](https://cdn.dwolla.com/com/prod/20190529161537/Screen-Shot-2019-05-29-at-4.14.23-PM.png)
+
+Here's an example of what the data file might look like:
+
+\_data/nav.yml
+
+``` {#nav.yml}
+topLevelItems:
+  - displayText: 'A Page'
+    itemType: Link
+    url: '/a-page/'
+  - displayText: 'External Link'
+    itemType: Link
+    url: 'https://google.com'
+```
+
+### How to Use a File Collection in Jekyll
+
+Let's figure out how to pull this data into a template in Jekyll. Here's a simple liquid template that uses our nav data:
+
+``` {#nav-data}
+<ul>
+  {% for item in site.data.nav.topLevelItems %}
+    <li>
+      {% if item.itemType == 'Link' %}
+        <a href="{{ item.url }}">{{ item.displayText }}</a>
+      {% else %}
+        ...
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+```
+
+In Jekyll, everything in the `_data` folder is available using the `site.data.{file}.{field}` syntax. You can loop and get fields as you would expect.
+
+### Setting Up a Folder Collection for Pages
+
+A folder collection is used any time we need a number of files to be generated according to a pattern, but we don't know how many. For example, if you're building a blog, this is what you need for your posts.  
+In this example, we'll use it with a cool Jekyll feature to let content editors create the pages of our site on the fly and at any path they want.
+
+Let's look at the bones of a folder collection from a real config file to see how this works:
+
+admin/config.yml
+
+``` {#config-collection}
+collections:
+ - label: "Pages"
+    label_singular: "Page"
+    name: pages
+    folder: "_pages"
+    create: true
+    slug: "{{slug}}"
+    preview_path: "{{permalink}}"
+    editor:
+      preview: false
+    fields:
+      - {label: "Title", name: title, widget: string}
+      - {label: "Permalink", name: permalink, widget: string}
+      - label: "Layout Template"
+        name: "layout"
+        widget: "select"
+        default: "blocks"
+        options:
+          - { label: "Default", value: "blocks" }
+          - { label: "Home Page", value: "home" }
+      - {label: "Meta Description", name: metaDescription, widget: text, required: false}
+      - label: "Social Sharing"
+        name: social
+        widget: object
+        required: false
+        fields:
+          - {label: "OpenGraph Image", name: ogImage, widget: image, required: false}
+          - {label: "Twitter Image", name: twitterImage, widget: image, required: false}
+```
+
+This defines another new collection called "Pages" that will consist of many files all stored in the `/_pages/` folder of your project. The files will be named according to the pattern in the slug field, which we've confusingly set to have a pattern of `{{slug}}`. Don't worry, in this case it just means we'll be using the default value, which is the contents of the `title` field. You can configure this in many ways to include dates and other things to match your intended use, but this is perfect for our case.
+
+![](https://cdn.dwolla.com/com/prod/20190529161807/Screen-Shot-2019-05-29-at-4.17.02-PM.png)
+
+Of special note are the `permalink` and `preview_path` fields. We'll use the permalink field to define the path of our page in Jekyll, and the preview field shares that definition with Netlify CMS so it knows how to link to the correct page preview (branch deploys FTW).
+
+Here's an example of what the data file for a page might look like:
+
+\_pages/home.md
+
+``` {#home.md}
+---
+Title: Home
+permalink: /
+layout: home
+metaDescription: Shout out what you’re about!
+social: {}
+---
+```
