@@ -1,9 +1,10 @@
 ---
 title: Implémenter un headless CMS en 3 jours
 description: Retour sur l'implémentation de Netlify CMS sur un Jekyll
-categories: []
+categories:
+  - headless
 source:
-  author: Frank
+  author: Dwolla
   title: How We Implemented a headless CMS in 3 Days
   url: 'https://www.dwolla.com/updates/implementing-netlify-cms/'
 images: []
@@ -630,6 +631,5 @@ already live!
 
 Check out the code on GitHub: <https://github.com/netlify/netlify-cms>
 
-Start building in our
-[sandbox](https://accounts-sandbox.dwolla.com/sign-up) for free, right
+Start building in our [sandbox](https://accounts-sandbox.dwolla.com/sign-up) for free, right
 now. Get a feel for how our API works before going live in production.
