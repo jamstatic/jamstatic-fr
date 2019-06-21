@@ -260,3 +260,13 @@ CMS about the structure and naming convention of the files we want to
 create. It's then up to your static site generator to determine how to
 interpret these files and pull the data into templates. In this blog
 post, we'll cover how that works for Jekyll.
+
+Knowing this, can you guess why there are two types of collections? In
+the case of defined options, we can tell the CMS to put that field in a
+specific file in our project. In the case of repeating content, like
+blog posts or pages built out of modular components, we want to set up
+Netlify CMS so that it can generate many files based on a pattern that
+we define. We can generate a number of different file formats too -- it
+supports YAML, JSON, markdown with [front
+matter](https://jekyllrb.com/docs/front-matter/), and a few others.
+
