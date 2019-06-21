@@ -248,3 +248,15 @@ no data structure set up for the CMS fields you'll need to edit your
 site. You may have noticed the empty `collections` field in the config
 file, and this is where the magic happens. All fields for data that you
 want to save need to be part of a collection.
+
+There are two [types of
+collections](https://www.netlifycms.org/docs/collection-types/), folder
+collections and file collections. To understand the difference, let's
+figure out what Netlify CMS actually does when you make a content edit:
+the data has to be stored somewhere and we know that it uses Git as a
+back end. That means the data you save must end up inside of a file in
+your project. So when we configure a collection, we are telling Netlify
+CMS about the structure and naming convention of the files we want to
+create. It's then up to your static site generator to determine how to
+interpret these files and pull the data into templates. In this blog
+post, we'll cover how that works for Jekyll.
