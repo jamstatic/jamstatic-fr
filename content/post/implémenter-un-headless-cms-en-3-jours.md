@@ -198,7 +198,7 @@ collections:
 
 This will define a new collection that shows up on left side of the CMS admin UI, and it will make a "Navigation Menu" page underneath that collection. Inside are fields that define some site navigation items that each include a name, URL, etc. We define the data type and editor interface of the fields using [widgets](https://www.netlifycms.org/docs/widgets/). When a change is made, it will be saved to the file located at `_data/nav.yml` in your project.
 
-![](https://cdn.dwolla.com/com/prod/20190529161537/Screen-Shot-2019-05-29-at-4.14.23-PM.png){.alignnone .size-full .wp-image-12083 width="1498" height="951" sizes="(max-width: 1498px) 100vw, 1498px" srcset="https://cdn.dwolla.com/com/prod/20190529161537/Screen-Shot-2019-05-29-at-4.14.23-PM.png 1498w, https://cdn.dwolla.com/com/prod/20190529161537/Screen-Shot-2019-05-29-at-4.14.23-PM-300x190.png 300w, https://cdn.dwolla.com/com/prod/20190529161537/Screen-Shot-2019-05-29-at-4.14.23-PM-768x488.png 768w, https://cdn.dwolla.com/com/prod/20190529161537/Screen-Shot-2019-05-29-at-4.14.23-PM-1024x650.png 1024w"}
+![](https://cdn.dwolla.com/com/prod/20190529161537/Screen-Shot-2019-05-29-at-4.14.23-PM.png)
 
 Here's an example of what the data file might look like:
 
@@ -276,7 +276,7 @@ collections:
 
 This defines another new collection called "Pages" that will consist of many files all stored in the `/_pages/` folder of your project. The files will be named according to the pattern in the slug field, which we've confusingly set to have a pattern of `{{slug}}`. Don't worry, in this case it just means we'll be using the default value, which is the contents of the `title` field. You can configure this in many ways to include dates and other things to match your intended use, but this is perfect for our case.
 
-![](https://cdn.dwolla.com/com/prod/20190529161807/Screen-Shot-2019-05-29-at-4.17.02-PM.png){.alignnone .size-full .wp-image-12084 width="1499" height="645" sizes="(max-width: 1499px) 100vw, 1499px" srcset="https://cdn.dwolla.com/com/prod/20190529161807/Screen-Shot-2019-05-29-at-4.17.02-PM.png 1499w, https://cdn.dwolla.com/com/prod/20190529161807/Screen-Shot-2019-05-29-at-4.17.02-PM-300x129.png 300w, https://cdn.dwolla.com/com/prod/20190529161807/Screen-Shot-2019-05-29-at-4.17.02-PM-768x330.png 768w, https://cdn.dwolla.com/com/prod/20190529161807/Screen-Shot-2019-05-29-at-4.17.02-PM-1024x441.png 1024w"}
+![](https://cdn.dwolla.com/com/prod/20190529161807/Screen-Shot-2019-05-29-at-4.17.02-PM.png)
 
 Of special note are the `permalink` and `preview_path` fields. We'll use the permalink field to define the path of our page in Jekyll, and the preview field shares that definition with Netlify CMS so it knows how to link to the correct page preview (branch deploys FTW).
 
@@ -366,7 +366,7 @@ collections:
 
 Here we've extended our pages collection to include a variable type list widget that contains several different types of objects that the content editor will be able to dynamically add and rearrange from the CMS Admin.
 
-![](https://cdn.dwolla.com/com/prod/20190529162003/Screen-Shot-2019-05-29-at-4.19.06-PM.png){.alignnone .size-full .wp-image-12085 width="1499" height="896" sizes="(max-width: 1499px) 100vw, 1499px" srcset="https://cdn.dwolla.com/com/prod/20190529162003/Screen-Shot-2019-05-29-at-4.19.06-PM.png 1499w, https://cdn.dwolla.com/com/prod/20190529162003/Screen-Shot-2019-05-29-at-4.19.06-PM-300x179.png 300w, https://cdn.dwolla.com/com/prod/20190529162003/Screen-Shot-2019-05-29-at-4.19.06-PM-768x459.png 768w, https://cdn.dwolla.com/com/prod/20190529162003/Screen-Shot-2019-05-29-at-4.19.06-PM-1024x612.png 1024w"}
+![](https://cdn.dwolla.com/com/prod/20190529162003/Screen-Shot-2019-05-29-at-4.19.06-PM.png)
 
 Now let's make a new layout to render our widgets:
 
