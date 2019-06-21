@@ -168,3 +168,7 @@ Now we just need to drop in the Netlify Identity Widget on the main site. This i
     </script>
 
 With this in place, and the appropriate authentication and Git Gateway configuration on netlify.com, you should be able to log into the Netlify CMS admin for your site at [https://yourdomain.com/admin](https://yourdomain.com/admin "https://yourdomain.com/admin").
+
+### What are Collections?
+
+Although at this point you can log in, you can't do much yet! There is no data structure set up for the CMS fields you'll need to edit your site. You may have noticed the empty `collections` field in the config file, and this is where the magic happens. All fields for data that you want to save need to be part of a collection.
