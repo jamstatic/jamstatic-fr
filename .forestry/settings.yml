@@ -19,7 +19,7 @@ public_path: ''
 front_matter_path: https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1200
 use_front_matter_path: true
 file_template: 'https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1028/:filename:'
-instant_preview: true
+instant_preview: false
 build:
   preview_command: hugo -E -F -D -b $DEPLOY_URL -d public
   publish_command: hugo -d public
