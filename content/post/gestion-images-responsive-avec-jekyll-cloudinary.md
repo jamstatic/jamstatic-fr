@@ -2,7 +2,7 @@
 title: Gérer les images responsive dans Jekyll avec le plugin Cloudinary
 description: Nicolas Hoizey présente les fonctionnalités de gestion d’images responsive offertes par le plugin Cloudinary qu'il a développé pour Jekyll.
 date: 2016-08-31
-author: Nicolas Hoizey
+author: nhoizey
 source:
   author: Nicolas Hoizey
   url: http://cloudinary.com/blog/how_i_used_cloudinary_to_solve_responsive_image_needs_in_my_jekyll_website_and_shared_the_magic_in_a_plugin

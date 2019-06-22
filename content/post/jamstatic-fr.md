@@ -2,7 +2,6 @@
 title: Lancement de Jamstatic France
 description: Les actualités autour de la Jamstack et des générateurs de site statique
 date: 2016-04-01
-author: Bertrand Keller
 ---
 
 {{% intro %}} Ce site a pour but de relayer les actualités de la communauté

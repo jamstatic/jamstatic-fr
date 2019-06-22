@@ -14,8 +14,9 @@
         • <span aria-label="Temps de lecture">{{ .ReadingTime }} min</span>
         • <span itemprop="author" itemscope itemtype="https://schema.org/Person">
             <span itemprop="name">
-              <a class="post-author" rel="author" href="https://github.com/{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Params.Author.GitHub }}{{ end }}
-">{{ if .Params.author }}{{ .Params.author }}{{ else }}{{ .Site.Params.Author.Name }}{{ end }}</a>
+              <a class="post-author" rel="author" href="https://github.com/{{ if .Params.author }}{{ (index .Site.Data.authors .Params.author).github }}{{ else }}{{ .Site.Data.authors.frank.github }}{{ end }}">
+              {{ if .Params.author }}{{ (index .Site.Data.authors .Params.author).name }}
+              {{ else }}{{ .Site.Data.authors.frank.name }}{{ end }}</a>
             </span>
           </span>
       </p>

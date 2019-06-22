@@ -1,7 +1,7 @@
 ---
 title: Publier des livres avec un générateur de site statique
 description: Le web au secours de la modernisation du procéde de publication de livres numériques et papier.
-author: Antoine Fauchié
+author: antoine
 date: 2017-01-23 15:37:00
 images:
   - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523364540/eric_ruth_greg_1009_1200.jpg

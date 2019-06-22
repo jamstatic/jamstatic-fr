@@ -2,7 +2,7 @@
 title: Construire un blog statique avec Gatsby et Strapi
 description: Découvrez comment facilement développer un blog en utilisant Gatsby et Strapi.
 date: 2018-04-26
-author: pierreburgy
+author: pierre
 images:
  - https://blog.strapi.io/content/images/2018/04/strapi-plus-gatsby-love.jpg
 categories:
