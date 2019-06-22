@@ -1,6 +1,9 @@
 ---
-title: 'Mettre en place un CMS en 3 jours'
-description: 'Retour d’expérience sur la mise ne palce de Netlify CMS sur un site Jekyll.'
+title: Mettre en place un CMS en 3 jours
+description: Retour d’expérience sur la mise ne palce de Netlify CMS sur un site Jekyll.
+author: arnaud
+date: 2019-06-22
+draft: true
 categories:
 - headless
 images:
@@ -8,7 +11,6 @@ images:
 source:
   author: Shea Daniels
   title: How We Implemented a headless CMS in 3 Days
-  url: 'https://www.dwolla.com/updates/implementing-netlify-cms/'
   url: https://www.dwolla.com/updates/implementing-netlify-cms/
   lang: en
 ---
