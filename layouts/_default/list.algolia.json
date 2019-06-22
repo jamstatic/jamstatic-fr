@@ -28,7 +28,7 @@
     {{- .Scratch.SetInMap "temp" "summary" $hit.Summary -}}
     {{- .Scratch.SetInMap "temp" "title" $hit.Title -}}
     {{- .Scratch.SetInMap "temp" "type" $hit.Type -}}
-    {{- .Scratch.SetInMap "temp" "url" $hit.URL -}}
+    {{- .Scratch.SetInMap "temp" "url" $hit.Permalink -}}
     {{- .Scratch.SetInMap "temp" "weight" $hit.Weight -}}
     {{- .Scratch.SetInMap "temp" "wordcount" $hit.WordCount -}}
     {{- .Scratch.SetInMap "temp" "section" $hit.Section -}}
