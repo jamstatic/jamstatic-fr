@@ -1,7 +1,6 @@
 ---
 title: Entretien avec Michael Rose, designer et développeur front-end
 date: 2017-12-02
-author: Frank Taillandier
 description: >
   Michael Rose, webdesigner très actif dans la communauté Jekyll, partage son retour d’expérience sur les générateurs de site statique
 images:

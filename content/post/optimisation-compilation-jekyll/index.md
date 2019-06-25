@@ -4,7 +4,7 @@ description: Comment j'ai réussi à diviser par 15 le temps de génération de 
   avec Jekyll
 date: 2018-11-28 00:00:00 +0000
 commments: true
-author: Boris Schapira
+author: boris
 images:
 - "/v1543499128/twitter-card.png"
 - "/2018/11/28/optimisation-compilation-jekyll/twitter-card.png"

@@ -2,7 +2,7 @@
 title: Entretien avec Parker Moore de Jekyll
 description: Traduction française de l’entretien publié le 11 mars 2016 sur Netlify.
 date: 2016-04-19
-author: Bertrand Keller
+author: bertrand
 images:
   - https://cdn.netlify.com/a3dc6515430891d6df896d718dd7e54f6941d647/99084/uploads/parker-moore-jekyll.jpg
 categories:

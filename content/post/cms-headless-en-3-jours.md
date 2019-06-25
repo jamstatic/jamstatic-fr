@@ -1,25 +1,29 @@
 ---
-title: 'Mettre en place un CMS en 3 jours'
-description: 'Retour d’expérience sur la mise ne palce de Netlify CMS sur un site Jekyll.'
-categories:
-  - headless
-source:
-  author: Shea Daniels (Dwolla)
-  title: 'How We Implemented a headless CMS in 3 Days'
-  url: 'https://www.dwolla.com/updates/implementing-netlify-cms/'
-  date: 2019-06-06
-images: []
----
-source: https://www.dwolla.com/updates/implementing-netlify-cms/
-
-description: Monetery, our annual tech summit, needed flexibility after building a new website. Using Netlify CMS we added content management to a Jekyll site.
-
-Comment nous avons mis en place un CMS headless en 3 jours
-===========================================
 
 ![](https://cdn.dwolla.com/com/prod/20190522141939/netlify-cms-blog-opengraph-image-02.png)
 
 Let's say you're building the next great startup or putting together a spectacular event---the first question anybody asks you is "What's the website?"
+=======
+title: Mettre en place un CMS en 3 jours
+description: Retour d’expérience sur la mise ne palce de Netlify CMS sur un site Jekyll.
+author: arnaud
+date: 2019-06-22
+draft: true
+categories:
+- headless
+images:
+- https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1200/v1561132474/jamstatic/netlify-cms.png
+source:
+  author: Shea Daniels
+  title: How We Implemented a headless CMS in 3 Days
+  url: https://www.dwolla.com/updates/implementing-netlify-cms/
+  lang: en
+---
+Imaginons que vous êtes en train de monter la prochaine grande startup or que vous organisez un évènement extraordinaire — le première question que tout le monde va vous poser est "C'est quoi le site web?"
+
+_Let's say you're building the next great startup or putting together a
+spectacular event---the first question anybody asks you is "What's the
+website?"_
 
 A beautiful and usable online presence is simply table stakes in 2019 for businesses, nonprofits or even prospective employees---and it was no different for [Monetery](https://monetery.com/), the inclusive tech summit Dwolla puts on each spring. We needed to get a great site up and running fast, so we initially landed on a reliable and proven solution that we've used before: [GitHub Pages](https://pages.github.com/).
 
