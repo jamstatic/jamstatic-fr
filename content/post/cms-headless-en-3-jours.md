@@ -1,9 +1,4 @@
 ---
-
-![](https://cdn.dwolla.com/com/prod/20190522141939/netlify-cms-blog-opengraph-image-02.png)
-
-Let's say you're building the next great startup or putting together a spectacular event---the first question anybody asks you is "What's the website?"
-=======
 title: Mettre en place un CMS en 3 jours
 description: Retour d’expérience sur la mise ne palce de Netlify CMS sur un site Jekyll.
 author: arnaud
@@ -21,19 +16,17 @@ source:
 ---
 Imaginons que vous êtes en train de monter la prochaine grande startup or que vous organisez un évènement extraordinaire — le première question que tout le monde va vous poser est "C'est quoi le site web?"
 
-_Let's say you're building the next great startup or putting together a
-spectacular event---the first question anybody asks you is "What's the
-website?"_
+*So we took a look at our options:*
 
-A beautiful and usable online presence is simply table stakes in 2019 for businesses, nonprofits or even prospective employees---and it was no different for [Monetery](https://monetery.com/), the inclusive tech summit Dwolla puts on each spring. We needed to get a great site up and running fast, so we initially landed on a reliable and proven solution that we've used before: [GitHub Pages](https://pages.github.com/).
+1.  *Implement a traditional Content Management System (CMS) like WordPress*
+2.  *Find a Headless CMS to integrate into a Static Site Generator (SSG)*
 
-This worked well early on as we launched the Monetery homepage, but it became clear that we needed a more complete solution. Because of our robust controls process, engineering was quickly becoming a roadblock.  
-We needed to do a better job of enabling our content editors to move fast and make necessary changes quickly.
+Nous avons alors étudié nos options :
 
-So we took a look at our options:
+1. Mettre en place un outil de gestion de contenu (CMS) traditionnel tel que WordPress
+2. Trouver un CMS headless à intégrer dans un générateur de site statique (SSG)
 
-1.  Implement a traditional Content Management System (CMS) like WordPress
-2.  Find a Headless CMS to integrate into a Static Site Generator (SSG)
+*[WIP]*
 
 The landscape of potential products for both of these options is monumental. We were familiar with traditional options, so we scoured [headlesscms.org](https://headlesscms.org/) and [staticgen.com](https://www.staticgen.com) to see what else was out there. Dwolla affords its engineering staff with dedicated time for professional development each week, which gave us an opportunity to test drive potential solutions.
 
