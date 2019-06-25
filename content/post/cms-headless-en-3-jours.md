@@ -14,7 +14,19 @@ source:
   url: https://www.dwolla.com/updates/implementing-netlify-cms/
   lang: en
 ---
-Imaginons que vous êtes en train de monter la prochaine grande startup or que vous organisez un évènement extraordinaire — le première question que tout le monde va vous poser est "C'est quoi le site web?"
+_Let's say you're building the next great startup or putting together a spectacular event---the first question anybody asks you is "What's the website?"_
+
+Imaginons que vous soyez en train de créer la prochaine grande startup ou que vous organisez un évènement extraordinaire — le première question que tout le monde va vous poser est "C'est quoi le site web ?"
+
+*A beautiful and usable online presence is simply table stakes in 2019 for businesses, nonprofits or even prospective employees---and it was no different for [Monetery](https://monetery.com/), the inclusive tech summit Dwolla puts on each spring. We needed to get a great site up and running fast, so we initially landed on a reliable and proven solution that we've used before: [GitHub Pages](https://pages.github.com/).*
+
+Une présence en ligne séduisante et utilisable est tout simplement l'enjeu principal en 2019 pour les entreprises, les organisations à but non lucratif ou même les employés potentiels — et il en vas de même pour [Monetery](https://monetery.com/), le sommet technologique inclusif organisé chaque printemps par Dwolla. Nosu avions besoin d’un site rapidement opératonnel et performant, nosu avons donc d’abord opté pour uen solution fiable et éprouvée que nous avions déjà utilisé : [GitHub Pages](https://pages.github.com/).
+
+*This worked well early on as we launched the Monetery homepage, but it became clear that we needed a more complete solution. Because of our robust controls process, engineering was quickly becoming a roadblock.  
+We needed to do a better job of enabling our content editors to move fast and make necessary changes quickly.*
+
+Ça a rapidement bien fonctionné quand nous avons lancé la page d’accueuoil de Monetery, mais il était clair que nosu avions besoin d’une solution plus complète. En raison de notre processus de contrôles exigeant, la technique est rapidement devenu un obstacle.  
+Nous devions travailler à une meilleur solution pour vite migrer nos contributeurs et effectuer les changements rapidement.
 
 *So we took a look at our options:*
 
