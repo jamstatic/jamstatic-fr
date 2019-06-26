@@ -1,6 +1,6 @@
 ---
-title: Mettre en place un CMS en 3 jours
-description: Retour d’expérience sur la mise ne palce de Netlify CMS sur un site Jekyll.
+title: Intégrer un CMS en 3 jours
+description: Retour d’expérience sur la mise en place de Netlify CMS sur un site Jekyll.
 author: arnaud
 date: 2019-06-22
 draft: true
@@ -16,17 +16,17 @@ source:
 ---
 _Let's say you're building the next great startup or putting together a spectacular event---the first question anybody asks you is "What's the website?"_
 
-Imaginons que vous soyez en train de créer la prochaine grande startup ou que vous organisez un évènement extraordinaire — le première question que tout le monde va vous poser est "C'est quoi le site web ?"
+Imaginons que vous soyez en train de créer la prochaine grande startup ou d'organiser un super évènement — le première question que tout le monde va vous poser est : "C'est quoi le site web ?"
 
 *A beautiful and usable online presence is simply table stakes in 2019 for businesses, nonprofits or even prospective employees---and it was no different for [Monetery](https://monetery.com/), the inclusive tech summit Dwolla puts on each spring. We needed to get a great site up and running fast, so we initially landed on a reliable and proven solution that we've used before: [GitHub Pages](https://pages.github.com/).*
 
-Une présence en ligne séduisante et utilisable est tout simplement l'enjeu principal en 2019 pour les entreprises, les organisations à but non lucratif ou même les employés potentiels — et il en vas de même pour [Monetery](https://monetery.com/), le sommet technologique inclusif organisé chaque printemps par Dwolla. Nosu avions besoin d’un site rapidement opératonnel et performant, nosu avons donc d’abord opté pour uen solution fiable et éprouvée que nous avions déjà utilisé : [GitHub Pages](https://pages.github.com/).
+Une présence en ligne séduisante et utilisable est tout simplement primordial en 2019 pour les entreprises, les organisations à but non lucratif ou même les employés potentiels — et il en va de même pour [Monetery](https://monetery.com/), le sommet technologique inclusif organisé chaque printemps par Dwolla. Nouq avions besoin d’un site rapidement opératonnel et performant, nous avons donc d’abord opté pour une solution fiable et éprouvée que nous avions déjà utilisé : [GitHub Pages](https://pages.github.com/).
 
 *This worked well early on as we launched the Monetery homepage, but it became clear that we needed a more complete solution. Because of our robust controls process, engineering was quickly becoming a roadblock.  
 We needed to do a better job of enabling our content editors to move fast and make necessary changes quickly.*
 
-Ça a rapidement bien fonctionné quand nous avons lancé la page d’accueuoil de Monetery, mais il était clair que nosu avions besoin d’une solution plus complète. En raison de notre processus de contrôles exigeant, la technique est rapidement devenu un obstacle.  
-Nous devions travailler à une meilleur solution pour vite migrer nos contributeurs et effectuer les changements rapidement.
+Cela a rapidement bien fonctionné quand nous avons lancé la page d’accueil de Monetery, mais il était clair que nous avions besoin d’une solution plus complète. En raison de notre processus de contrôle exigeant, la technique est rapidement devenue un obstacle.  
+Nous devions travailler à une meilleure solution pour vite migrer nos contributeurs et effectuer les changements rapidement.
 
 *So we took a look at our options:*
 
@@ -56,15 +56,15 @@ L’une des solutions les plus intéressantes que nous avons testées est venue 
 
 Nous avons pensé que Netlify CMS pourrait être avantageux pour les raisons suivantes :
 
-- Il est conçu pour être utilisé avec des générateurs de sites statiques, ce qui nous permet de conserver les vantages en termes de vitesse, de sécurité et d’évolutivité qui nous ont attirés vers les SSG
-- Il est SSG agnostique, ça fonctionne donc wavec notre site [Jekyll](https://jekyllrb.com/) existant mais ne nous empècherait pas de changer d’avis (salut, [GatsbyJS](https://www.gatsbyjs.org/) !)
-- Il n’y a pas de base de données car les modifications de contenu sont enrehistrées en tant que commits Git — ce qui ravi les gens d‘[InfoSec](https://www.dwolla.com/security/) !
+- Il est conçu pour être utilisé avec des générateurs de sites statiques, ce qui nous permet de conserver les avantages en termes de vitesse, de sécurité et d’évolutivité qui nous ont attirés vers les SSG
+- Il est agnostique au SSG, ça fonctionne donc avec notre site [Jekyll](https://jekyllrb.com/) existant mais ne nous empècherait pas de changer d’avis (bonjour, [GatsbyJS](https://www.gatsbyjs.org/) !)
+- Il n’y a pas de base de données car les modifications de contenu sont enregistrées en tant que commits Git — ce qui ravi les gens d‘[InfoSec](https://www.dwolla.com/security/) !
 - Il fournit une expérience d’édition simple et fonctionnelle
-- Il est open source, il n’y a donc pas de dépendance à un fournisseur, et nous pouvons apporter des fonctionnalités a reversé a la communauté
+- Il est open source, il n’y a donc pas de dépendance à un fournisseur, et nous pouvons apporter des fonctionnalités à reverser à la communauté
 
 *With buy-in from our stakeholders, we decided to move forward. We'll talk about the decisions we had to make and show you how to integrate Netlify CMS with Jekyll on your own site.*
 
-Avec l’adhésion des parties prenantes, nous vons décidé d’aller de l’avant. Nosu allons parler décider des décisions que nous avons dû prendre et vous montrer comment intégrer Netlify CMS avec Jekyll sur votre propre site.
+Avec l’adhésion des parties prenantes, nous avons décidé d’aller de l’avant. Nous allons parler des décisions que nous avons dû prendre et vous montrer comment intégrer Netlify CMS avec Jekyll sur votre propre site.
 
 *[WIP]*
 
