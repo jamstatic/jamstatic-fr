@@ -38,21 +38,35 @@ Nous avons alors étudié nos options :
 1. Mettre en place un outil de gestion de contenu (CMS) traditionnel tel que WordPress
 2. Trouver un CMS headless à intégrer dans un générateur de site statique (SSG)
 
+*The landscape of potential products for both of these options is monumental. We were familiar with traditional options, so we scoured [headlesscms.org](https://headlesscms.org/) and [staticgen.com](https://www.staticgen.com) to see what else was out there. Dwolla affords its engineering staff with dedicated time for professional development each week, which gave us an opportunity to test drive potential solutions.*
+
+Le paysage des solutions potentielles pour ces deux options est monumental. Nous connaissons bien les options traditionnelles, nous avons donc fouillé [headlesscms.org](https://headlesscms.org/) et [staticgen.com](https://www.staticgen.com) pour voir ce qui se passait ailleurs. Dwolla offre à son équipe d’ingénieurs du temps dédié au développement professionnel chaque semaine, ce qui nous a permis de tester les solutions potentielles.
+
+*One of the most interesting solutions we tried came from a company called [Netlify](https://www.netlify.com/), and their project [Netlify CMS](https://www.netlifycms.org/).*
+
+L’une des solutions les plus intéressantes que nous avons testées est venue d’une société appelée [Netlify](https://www.netlify.com/), et de son projet [Netlify CMS](https://www.netlifycms.org/).
+
+*We thought Netlify CMS might benefit us for the following reasons:*
+
+-   *It's built for use with Static Site Generators so we get to keep the speed, security and scalability benefits that drew us to SSGs in the first place*
+-   *It's SSG agnostic, so it would work with our existing [Jekyll](https://jekyllrb.com/) site but not prevent us from changing our mind down the road (hi there, [GatsbyJS](https://www.gatsbyjs.org/)!)*
+-   *There is no database backend since content changes are stored as Git commits -- which makes [InfoSec](https://www.dwolla.com/security/) folks happy!*
+-   *It provides a simple and usable editor experience*
+-   *It's open source, so there is no vendor lock-in, and we can contribute features that are important to us back to the community*
+
+Nous avons pensé que Netlify CMS pourrait être avantageux pour les raisons suivantes :
+
+- Il est conçu pour être utilisé avec des générateurs de sites statiques, ce qui nous permet de conserver les vantages en termes de vitesse, de sécurité et d’évolutivité qui nous ont attirés vers les SSG
+- Il est SSG agnostique, ça fonctionne donc wavec notre site [Jekyll](https://jekyllrb.com/) existant mais ne nous empècherait pas de changer d’avis (salut, [GatsbyJS](https://www.gatsbyjs.org/) !)
+- Il n’y a pas de base de données car les modifications de contenu sont enrehistrées en tant que commits Git — ce qui ravi les gens d‘[InfoSec](https://www.dwolla.com/security/) !
+- Il fournit une expérience d’édition simple et fonctionnelle
+- Il est open source, il n’y a donc pas de dépendance à un fournisseur, et nous pouvons apporter des fonctionnalités a reversé a la communauté
+
+*With buy-in from our stakeholders, we decided to move forward. We'll talk about the decisions we had to make and show you how to integrate Netlify CMS with Jekyll on your own site.*
+
+Avec l’adhésion des parties prenantes, nous vons décidé d’aller de l’avant. Nosu allons parler décider des décisions que nous avons dû prendre et vous montrer comment intégrer Netlify CMS avec Jekyll sur votre propre site.
+
 *[WIP]*
-
-The landscape of potential products for both of these options is monumental. We were familiar with traditional options, so we scoured [headlesscms.org](https://headlesscms.org/) and [staticgen.com](https://www.staticgen.com) to see what else was out there. Dwolla affords its engineering staff with dedicated time for professional development each week, which gave us an opportunity to test drive potential solutions.
-
-One of the most interesting solutions we tried came from a company called [Netlify](https://www.netlify.com/), and their project [Netlify CMS](https://www.netlifycms.org/).
-
-We thought Netlify CMS might benefit us for the following reasons:
-
--   It's built for use with Static Site Generators so we get to keep the speed, security and scalability benefits that drew us to SSGs in the first place
--   It's SSG agnostic, so it would work with our existing [Jekyll](https://jekyllrb.com/) site but not prevent us from changing our mind down the road (hi there, [GatsbyJS](https://www.gatsbyjs.org/)!)
--   There is no database backend since content changes are stored as Git commits -- which makes [InfoSec](https://www.dwolla.com/security/) folks happy!
--   It provides a simple and usable editor experience
--   It's open source, so there is no vendor lock-in, and we can contribute features that are important to us back to the community
-
-With buy-in from our stakeholders, we decided to move forward. We'll talk about the decisions we had to make and show you how to integrate Netlify CMS with Jekyll on your own site.
 
 Should you move from GitHub Pages to Netlify Hosting?
 -----------------------------------------------------
