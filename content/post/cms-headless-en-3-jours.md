@@ -43,15 +43,13 @@ Suite à l’adhésion des parties prenantes, nous avons décidé d’aller ves 
 Devez-vous migrer de GitHub Pages vers Netlify ?
 -----------------------------------------------------
 
-C’était le premier choix que nous devions faire. Changer d’hébergement nous a semblé ajouter du temps et de la complexité au projet, ainsi notre décision était donc « non ». Utiliser Netlify CMS avec votre fournisseur d’hébergement existant est un choix parfaitement valable.
+C’était le premier choix à faire. Changer d’hébergement nous a semblé ajouter du temps et de la complexité au projet, ainsi notre décision était donc « non ». Utiliser Netlify CMS avec votre fournisseur d’hébergement existant est un choix parfaitement valable.
 
 Alors pourquoi avons-nous changé d’avis et opté Netlify ? La réponse tient dans deux fonctionnalités très convaincantes : [Git Gateway](https://www.netlify.com/docs/git-gateway/) et le [déploiement de branches](https://www.netlify.com/docs/continuous-deployment/#branches-deploys).
 
-Git Gateway works as an intermediary between the CMS and your Git repository. In concrete terms, this means you can do things like have your users log into the CMS admin with Google instead of requiring them to each have a GitHub account. Netlify then makes commits on your behalf using a GitHub account that granted access to a repo via OAuth. Although the Git Gateway is [open source](https://github.com/netlify/git-gateway) software as well, it was clear that learning to host that ourselves was going to involve a considerable learning curve.
+Git Gateway fonctionne comme un intermédiaire entre le CMS et votre dépôt Git. Concrètement cela signifie que, par exemple, vos utilisateurs peuvent se connecter à l’administration du CMS en utilisant leur compte Google au lieu de leur demander d’avoir un compte GitHub. Ensuite Netlify effectue les commits via un compte GitHub autorisé à accéder au dépôt via OAuth. Bien que Git Gateway soit également un logiciel [open source](https://github.com/netlify/git-gateway), il était clair qu’apprendre à l’héberger nous-mêmes allait impliquer une courbe d’apprentissage considérable.
 
-Git Gateway fonctionne comme un intermédiaire entre le CMS et votre dépôt Git. Concrètement, cela signifie que vous pouvez, par exemple, demaner à vos utilisateurs de se connecter à l’administration du CMS en utilisant leur compte Google au lieu de leur à chacun d’avoir un compte GitHub. Ensuite Netlify effectue les commits via un compte GitHub autorisé à accéder au dépôt via OAuth. Bien que Git Gateway soit également un logiciel [open source](https://github.com/netlify/git-gateway), il était clair qu’apprendre à l’héberger nous-mêmes allait impliquer une courbe d’apprentissage considérable.
-
-Les déploiements de branches vous permettent d’avoir plusieurs versions de votre site en même temps. À titre de comparaison, GitHub Pages est très limité puisqu’il ne permet de déployer qu’une seule branche (généralement “master“ or “gh-pages“). Ça peut semblé sans intérêt, mais ça offre une possbilité très intéressante que nous allons détailler dans un instant.
+Les déploiements de branches vous permettent d’avoir plusieurs versions de votre site en même temps. À titre de comparaison, GitHub Pages est très limité puisqu’il ne permet de déployer qu’une seule branche (généralement “master“ or “gh-pages“). Ça peut sembler sans intérêt, mais ça offre une possbilité très intéressante que nous allons détailler dans un instant.
 
 *[WIP]*
 
