@@ -40,7 +40,7 @@ Nous avons pensé que Netlify CMS pourrait être avantageux pour les raisons sui
 
 Suite à l’adhésion des parties prenantes, nous avons décidé d’aller ves cette solution. Nous allons parler des décisions que nous avons dû prendre et vous montrer comment intégrer Netlify CMS avec Jekyll sur votre propre site.
 
-Devez-vous migrer de GitHub Pages vers Netlify ?
+Devez-vous passer de GitHub Pages à Netlify ?
 -----------------------------------------------------
 
 C’était le premier choix à faire. Changer d’hébergement nous a semblé ajouter du temps et de la complexité au projet, ainsi notre décision était donc « non ». Utiliser Netlify CMS avec votre fournisseur d’hébergement existant est un choix parfaitement valable.
@@ -51,24 +51,21 @@ Git Gateway fonctionne comme un intermédiaire entre le CMS et votre dépôt Git
 
 Les déploiements de branches vous permettent d’avoir plusieurs versions de votre site en même temps. À titre de comparaison, GitHub Pages est très limité puisqu’il ne permet de déployer qu’une seule branche (généralement “master“ or “gh-pages“). Ça peut sembler sans intérêt, mais ça offre une possbilité très intéressante que nous allons détailler dans un instant.
 
-*[WIP]*
-
-Migrating from GitHub Pages to Netlify
+Migrer de GitHub Pages à Netlify
 --------------------------------------
 
-In general, publishing your site from Netlify is as easy as creating a Netlify account, signing in to your Git provider (GitHub, GitLab or Bitbucket) and selecting a repo. As soon as you provide a build command, Netlify can start deploying your site. Tasks like setting up SSL are explained by the [Netlify Docs](https://www.netlify.com/docs/) so we won't cover that here.
+En général, publier votre site depuis Netlify est aussi simple que de créer un compte Netlify, connectez vous à votre fournisseur (GitHub, GitLab ou Bitbucket) et sélectionnez un dépôt. Dès que vous indiquez une commande de *build*, Netlify peut alors commencer à déployer votre site. Les tâches telles que configurer le SSL sont expliquées par la [documentation Netlify](https://www.netlify.com/docs/), nous ne les détaillerons donc pas ici.
 
-If you were using the built-in Jekyll gems and build process that GitHub provided, you'll need a few additional things to get the build working.  
-You'll need a Gemfile for your dependencies, and it's also a good idea to check your build command into source control as well:
+Si vous utilisez les gemmes Jekyll intégrées et le processus de *build* proposé par gitHub, vous aurez besoin de quelques outils complémentaire pour que ça fonctionne. Vous aurez besoin d’un *Gemfile* pour vos dépendances, et c’est aussi une bonne idée de maitriser la commande de *build* via le gestionnaire de source :
 
-Gemfile
+*Gemfile*
 
 ``` {#gemfile}
 source "https://rubygems.org"
 gem 'github-pages'
 ```
 
-netlify.toml
+*netlify.toml*
 
 ``` {#netlify.toml}
 [build]
@@ -76,7 +73,9 @@ publish = "_site/"
 command = "jekyll build"
 ```
 
-Once you're satisfied that everything looks good and is deploying correctly from Netlify, you can proceed to claim your domain name on Netlify and migrate DNS over to Netlify's name servers. After your DNS is fully cut over, you can safely turn off the GitHub Pages site from your repo.
+Une fois que tout vous semble bon et que le déploiement Netlify se passe correctement, vous pouvez demander à gérer votre nom de domaine sur Netlify et migrer vos DNS vers les serveurs de nom de Netlify. Une fois vos DNS complètement coupés, vous pouvez désactiver le site GitHub Pages en toute sécurité depuis votre dépôt.
+
+*[WIP]*
 
 Adding Netlify CMS to an Existing Site
 --------------------------------------
