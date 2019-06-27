@@ -77,7 +77,7 @@ Et si je vous disais… que construire un site avec Gatsby autorisait toutes ces
 
 Aucune application Gatsby n'est dans les faits purement statique. Tout ce qui peut être rendu à l'aide de HTML statique dès le chargement de la page l'est. Ensuite, le JavaScript côté client (via React !) prend le contrôle en tant que socle technique pour les fonctionnalités dynamiques des applis Web. Un petit tour d'horizon du système de build de Gatsby permet d’expliquer clairement le concept. Gatsby :
 
-1. injecte la données dans les pages (depuis [GraphQL](https://www.gatsbyjs.org/docs/querying-with-graphql/) ou même [sans utiliser GraphQL](https://www.gatsbyjs.org/docs/using-gatsby-without-graphql/));
+1. injecte la donnée dans les pages (depuis [GraphQL](https://www.gatsbyjs.org/docs/querying-with-graphql/) ou même [sans utiliser GraphQL](https://www.gatsbyjs.org/docs/using-gatsby-without-graphql/));
 
 2. utilise la fonction d'API de rendu côté serveur [`ReactDOMServer.renderToString`](https://reactjs.org/docs/react-dom-server.html#rendertostring) pour transformer les composants React en fichiers HTML;
 
