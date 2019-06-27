@@ -14,31 +14,31 @@ source:
   url: https://www.dwolla.com/updates/implementing-netlify-cms/
   lang: en
 ---
-Imaginons que vous soyez en train de créer la prochaine grande startup ou d'organiser un super évènement — le première question que tout le monde va vous poser est : "C'est quoi le site web ?"
+Imaginons que vous soyez en train de créer la prochaine grande startup ou d'organiser un super évènement — la première question que tout le monde va vous poser est : « C'est quoi le site web ? ».
 
-Une présence en ligne séduisante et utilisable est tout simplement primordial en 2019 pour les entreprises, les organisations à but non lucratif ou même les employés potentiels — et il en va de même pour [Monetery](https://monetery.com/), le sommet technologique inclusif organisé chaque printemps par Dwolla. Nouq avions besoin d’un site rapidement opératonnel et performant, nous avons donc d’abord opté pour une solution fiable et éprouvée que nous avions déjà utilisé : [GitHub Pages](https://pages.github.com/).
+Une présence en ligne séduisante et utilisable est tout simplement primordial en 2019, que ce soit pour les entreprises, les organisations à but non lucratif ou encore pour les employés potentiels — et il en va de même pour [Monetery](https://monetery.com/), le sommet technologique — inclusif — organisé chaque printemps par Dwolla. Nous avions besoin d’un site opératonnel rapidement et performant, nous avons donc d’abord opté pour une solution fiable et éprouvée que nous avions déjà utilisé : [GitHub Pages](https://pages.github.com/).
 
-Cela a rapidement bien fonctionné quand nous avons lancé la page d’accueil de Monetery, mais il était clair que nous avions besoin d’une solution plus complète. En raison de notre processus de contrôle exigeant, la technique est rapidement devenue un obstacle.  
-Nous devions travailler à une meilleure solution pour vite migrer nos contributeurs et effectuer les changements rapidement.
+Cette solution a été rapidement opérationnelle quand nous avons lancé la page d’accueil de Monetery, mais il était évident que nous avions besoin d’une solution plus complète. En raison de notre processus de validation exigeant, la technique est rapidement devenue un obstacle.  
+Nous devions travailler à une meilleure solution afin de migrer nos contributeurs et effectuer les changements nécessaires rapidement.
 
 Nous avons alors étudié nos options :
 
 1. Mettre en place un outil de gestion de contenu (CMS) traditionnel tel que WordPress
 2. Trouver un CMS headless à intégrer dans un générateur de site statique (SSG)
 
-Le paysage des solutions potentielles pour ces deux options est monumental. Nous connaissons bien les options traditionnelles, nous avons donc fouillé [headlesscms.org](https://headlesscms.org/) et [staticgen.com](https://www.staticgen.com) pour voir ce qui se passait ailleurs. Dwolla offre à son équipe d’ingénieurs du temps dédié au développement professionnel chaque semaine, ce qui nous a permis de tester les solutions potentielles.
+Le nombre de solutions potentielles pour ces deux options est très vaste. Connaissant déjà bien les options traditionnelles, nous avons donc fouillé du côté de [headlesscms.org](https://headlesscms.org/) et de [staticgen.com](https://www.staticgen.com) pour voir ce qui se passait ailleurs. Dwolla offre à son équipe d’ingénieurs du temps dédié au développement professionnel chaque semaine, ce qui nous a permis de tester les solutions potentielles.
 
-L’une des solutions les plus intéressantes que nous avons testées est venue d’une société appelée [Netlify](https://www.netlify.com/), et de son projet [Netlify CMS](https://www.netlifycms.org/).
+L’une des solutions les plus intéressantes que nous avons testées vient de la société [Netlify](https://www.netlify.com/), et de son projet [Netlify CMS](https://www.netlifycms.org/).
 
 Nous avons pensé que Netlify CMS pourrait être avantageux pour les raisons suivantes :
 
-- Il est conçu pour être utilisé avec des générateurs de sites statiques, ce qui nous permet de conserver les avantages en termes de vitesse, de sécurité et d’évolutivité qui nous ont attirés vers les SSG
-- Il est agnostique au SSG, ça fonctionne donc avec notre site [Jekyll](https://jekyllrb.com/) existant mais ne nous empècherait pas de changer d’avis (bonjour, [GatsbyJS](https://www.gatsbyjs.org/) !)
+- Il est conçu pour être utilisé avec des générateurs de sites statiques, ce qui nous permet de conserver les avantages en terme de vitesse, de sécurité et d’évolutivité qui nous ont attirés vers les SSG
+- Il est SSG agnostique, et fonctionne donc avec notre site [Jekyll](https://jekyllrb.com/) existant mais ne nous empècherait pas de changer d’avis (salut [GatsbyJS](https://www.gatsbyjs.org/) !)
 - Il n’y a pas de base de données car les modifications de contenu sont enregistrées en tant que commits Git — ce qui ravi les gens d‘[InfoSec](https://www.dwolla.com/security/) !
 - Il fournit une expérience d’édition simple et fonctionnelle
-- Il est open source, il n’y a donc pas de dépendance à un fournisseur, et nous pouvons apporter des fonctionnalités à reverser à la communauté
+- Il est open source, il n’y a donc pas de dépendance à un fournisseur, et nous permet de reverser les fonctionnalités importantes à la communauté 
 
-Avec l’adhésion des parties prenantes, nous avons décidé d’aller de l’avant. Nous allons parler des décisions que nous avons dû prendre et vous montrer comment intégrer Netlify CMS avec Jekyll sur votre propre site.
+Suite à l’adhésion des parties prenantes, nous avons décidé d’aller ves cette solution. Nous allons parler des décisions que nous avons dû prendre et vous montrer comment intégrer Netlify CMS avec Jekyll sur votre propre site.
 
 *[WIP]*
 
