@@ -77,10 +77,10 @@ Une fois que tout vous semble bon et que le déploiement Netlify se passe correc
 
 *[WIP]*
 
-Adding Netlify CMS to an Existing Site
+Ajouter Netlify CMS à un site existant
 --------------------------------------
 
-Netlify CMS itself consists of a [Single Page Application](https://en.wikipedia.org/wiki/Single-page_application) built with [React](https://reactjs.org/) that lives in an admin folder on your site. For Jekyll, it goes right at the root of your project. It will contain two files:
+Netlify CMS se compose d’une [application web monopage](https://fr.wikipedia.org/wiki/Application_web_monopage) (en anglais *single-page application* ou SPA) construite avec React qui réside dans un dossier admin de votre site. Pour Jekyll, il doit être placé à la racine  du site. Il contiendra deux fichiers :
 
 ``` {#file-structure}
 admin
@@ -88,11 +88,11 @@ admin
 └ config.yml
 ```
 
-The [Netlify CMS Docs](https://www.netlifycms.org/docs/add-to-your-site/) explain this better than we can:
+La [documentation de Netlify CMS](https://www.netlifycms.org/docs/add-to-your-site/) explique ça très bien :
 
 > The first file, `admin/index.html`, is the entry point for the Netlify CMS admin interface. This means that users navigate to `yoursite.com/admin/` to access it. On the code side, it's a basic HTML starter page that loads the Netlify CMS JavaScript file. In this example, we pull the file from a public CDN:
 
-admin/index.html
+*admin/index.html*
 
 ``` {#index.html}
 <!doctype html>
@@ -113,9 +113,9 @@ admin/index.html
 
 > The second file, `admin/config.yml`, is the heart of your Netlify CMS installation, and a bit more complex. The [Configuration](https://www.netlifycms.org/docs/add-to-your-site/#configuration) section covers the details.
 
-To start with, the config file might look something like this:
+Pour commencer, voici à quoi peut ressembler le fichier de configuration :
 
-admin/config.yml
+*admin/config.yml*
 
 ``` {#config.yml}
 backend:
