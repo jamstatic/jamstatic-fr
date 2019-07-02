@@ -162,55 +162,55 @@ Il existe deux [types de collections](https://www.netlifycms.org/docs/collection
 
 Sachant cela, pouvez-vous deviner pourquoi il existe deux types de collections ? Dans le cas d’options de paramétrage, nous pouvons dire au CMS de mettre ce champ dans un fichier spécifique de notre projet. Dans le cas de contenus répétés tels que des billets de blog ou des pages fabriqués à partir de composants modulaires, nous souhaitons configurer Netlify CMS de manière à ce qu’il puisse générer un certain nombre de formats de fichier différents — il supporte YAML, JSON, Markdown avec un [front matter](https://jekyllrb.com/docs/front-matter/), et quelques autres.
 
-*[WIP]*
+### Paramétrage d’un fichier de collection pour les options globales
 
-### Setting Up a File Collection for Global Options
+Un fichier de collection est l’endroit idéal pour définir les champs de donnée pour les éléments qui sont valables pour l’ensemble du site, tels que la navigation globale, le pied de page et les valeurs par défaut. Jetons un oeil à un fichier de collection issu d’un cas réel :
 
-A file collection is the perfect place to define data fields for things that are valid across your entire site, such as global navigation, footers, and defaults. Let's look at a file collection from a real config file:
-
-admin/config.yml
+*admin/config.yml*
 
 ``` {#config.yml-edit}
 collections:
-  - label: "Sitewide Options"
+  - label: "Options transverses"
     name: options
     editor:
       preview: false
     files:
-      - label: "Navigation Menu"
+      - label: "Menu de navigation"
         name: nav
         file: "_data/nav.yml"
         fields:
-          - label: "Nav Items"
-            label_singular: "Nav Item"
+          - label: "Entrées de menu"
+            label_singular: "Entrée de menu"
             name: topLevelItems
             widget: list
             fields:
-              - {label: "Display Text", name: displayText, widget: string}
+              - {label: "Texte affiché", name: displayText, widget: string}
               - {label: URL, name: url, widget: string}
-              - label: "Item Type"
+              - label: "Type d'objet"
                 name: itemType
                 widget: select
                 options: ["Link", "Button"]
 ```
 
-This will define a new collection that shows up on left side of the CMS admin UI, and it will make a "Navigation Menu" page underneath that collection. Inside are fields that define some site navigation items that each include a name, URL, etc. We define the data type and editor interface of the fields using [widgets](https://www.netlifycms.org/docs/widgets/). When a change is made, it will be saved to the file located at `_data/nav.yml` in your project.
+Cela définira une nouvelle collection qui apparaîtra à gauche de l’interface utilisateur de l’administration du CMS, et créera une page “Menu de navigation” au sein de cette collection. À l’intérieur se trouvent des champs qui définissent les entrées de navigation du site qui incluent chacun un nom, une URL, etc. Nous définissons le type de données et l’interface d’édition des champs à l'aide de [widgets](https://www.netlifycms.org/docs/widgets/). Lorsqu'une modification est apportée, elle sera enregistrée dans le fichier `_data/nav.yml` de votre projet.
 
 ![](https://cdn.dwolla.com/com/prod/20190529161537/Screen-Shot-2019-05-29-at-4.14.23-PM.png)
 
-Here's an example of what the data file might look like:
+Voici un exemple de ce à quoi peut resembler un fichier de données :
 
-\_data/nav.yml
+*\_data/nav.yml*
 
 ``` {#nav.yml}
 topLevelItems:
-  - displayText: 'A Page'
+  - displayText: 'Une page'
     itemType: Link
-    url: '/a-page/'
-  - displayText: 'External Link'
+    url: '/une-page/'
+  - displayText: 'Lien externe'
     itemType: Link
     url: 'https://google.com'
 ```
+
+*[WIP]*
 
 ### How to Use a File Collection in Jekyll
 
