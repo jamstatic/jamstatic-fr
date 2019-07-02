@@ -56,7 +56,7 @@ Migrer de GitHub Pages à Netlify
 
 En général, publier votre site depuis Netlify est aussi simple que de créer un compte Netlify, connectez vous à votre fournisseur (GitHub, GitLab ou Bitbucket) et sélectionnez un dépôt. Dès que vous indiquez une commande de *build*, Netlify peut alors commencer à déployer votre site. Les tâches telles que configurer le SSL sont expliquées par la [documentation Netlify](https://www.netlify.com/docs/), nous ne les détaillerons donc pas ici.
 
-Si vous utilisez les gemmes Jekyll intégrées et le processus de *build* proposé par gitHub, vous aurez besoin de quelques outils complémentaire pour que ça fonctionne. Vous aurez besoin d’un *Gemfile* pour vos dépendances, et c’est aussi une bonne idée de maitriser la commande de *build* via le gestionnaire de source :
+Si vous utilisez les gemmes Jekyll intégrées et le processus de *build* proposé par GitHub, vous aurez besoin de quelques outils complémentaire pour que ça fonctionne. Vous aurez besoin d’un *Gemfile* pour vos dépendances, et c’est aussi une bonne idée de maitriser la commande de *build* via le gestionnaire de source :
 
 *Gemfile*
 
@@ -132,11 +132,11 @@ logo_url: https://yoursite.com/assets/img/logo.svg
 collections:
 ```
 
-La section `backend` couvre les basiques tel que le choix de la branche à modifier et la configuration de la connexion Git Gateway dont avons parlé plus haut. La propriété `publish_mode` configure notre flux de travail de manière à utiliser le mode [*editorial*](https://www.netlifycms.org/docs/add-to-your-site/#editorial-workflow). En bref, cela signifie que nous avons la possibilité de sauvegarder les brouillons sous la forme de pull requests Git afin de décider de les publier. Combiné à la fonctionnalité de déploiement de branches de Netlify, cela va nous permettre d’avoir un aperçu immédiat du contenu non publié depuis un générateur de site statique !
+La section `backend` couvre les basiques tel que le choix de la branche à modifier et la configuration de la connexion Git Gateway dont avons parlé plus haut. La propriété `publish_mode` configure notre flux de travail de manière à utiliser le mode [*editorial*](https://www.netlifycms.org/docs/add-to-your-site/#editorial-workflow). En bref, cela signifie que nous avons la possibilité de sauvegarder les brouillons sous la forme de *pull requests* Git afin de décider de les publier. Combiné à la fonctionnalité de déploiement de branches de Netlify, cela va nous permettre d’avoir un aperçu immédiat du contenu non publié depuis un générateur de site statique !
 
 *Remarque : depuis mai 2019, le flux de travail editorial n’est pris en charge que lorsque vous utilisez GitHub.*
 
-Maintenant il ne nous reste plus qu’à déposer le widget Netlify Identify sur le site principal. C’est nécessaire car après s’être connecté l’utilisateur est redirigé vers la page d’accueil du site. Nous devons les rediriger vers l’administration du CMS, en ajoutant le script suivant avant la fermteture de la balise *body* :
+Maintenant il ne nous reste plus qu’à déposer le widget Netlify Identify sur le site principal. C’est nécessaire car après s’être connecté l’utilisateur est redirigé vers la page d’accueil du site. Nous devons rediriger les utilisateurs vers l’administration du CMS, en ajoutant le script suivant avant la fermteture de la balise *body* :
 
 ``` {#netlify-identity}
 <script>
@@ -152,7 +152,7 @@ Maintenant il ne nous reste plus qu’à déposer le widget Netlify Identify sur
 </script>
 ```
 
-Ceci mis en place, ainsi que l’authentification adéquate et la Git Gateway configurée sur netlify.com, vous devriez être en mesure de vous connecter à l’administration de Netlify CMS de cotre site via l’URL [`https://yourdomain.com/admin`](https://yourdomain.com/admin).
+Ceci mis en place, avec l’authentification adéquate et la Git Gateway configurée sur netlify.com, vous devriez être en mesure de vous connecter à l’administration de Netlify CMS de cotre site via l’URL `https://yourdomain.com/admin/`.
 
 *[WIP]*
 
