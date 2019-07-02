@@ -154,15 +154,15 @@ Maintenant il ne nous reste plus qu’à déposer le widget Netlify Identify sur
 
 Ceci mis en place, avec l’authentification adéquate et la Git Gateway configurée sur netlify.com, vous devriez être en mesure de vous connecter à l’administration de Netlify CMS de cotre site via l’URL `https://yourdomain.com/admin/`.
 
+### Qu’est-ce que les Collections ?
+
+Bien qu'à ce stade vous puissiez vous connecter, vous ne pouvez pas encore faire grand chose ! Aucune structure de données n’est configurée pour les champs du CMS dont vous aurez besoin pour éditer votre site. Vous avez peut-être remarqué le champ vide `collections` dans le fichier de configuration, et c’est là que la magie opère. Tous les champs des données que vous souhaitez enregistrer doivent appartenir à une collection.
+
+Il existe deux [types de collections](https://www.netlifycms.org/docs/collection-types/), le dossier de collections et le fichier de collections. Pour comprendre la différence, voyons ce que Netlify CMS fait réellement lorsque vous modifiez un contenu : les données doivent être stockées quelque part et nous savons qu’il utilise Git comme *back-end*. Cela signifie que les données que vous enregistrez doivent se retrouver dans un un fichier de votre projet. Ainsi, lorsque nous configurons une collection, nous donnons à Netlify CMS l’information de structure et la convention de nommage des fichiers que vous voulons créer. C’est ensuite à votre générateur de site statique de déterminer comment interpréter ces fichiers et d’extraire les données dans des modèles. Dans ce billet, nous expliquerons comment ça fonctionne avec Jekyll.
+
+Sachant cela, pouvez-vous deviner pourquoi il existe deux types de collections ? Dans le cas d’options de paramétrage, nous pouvons dire au CMS de mettre ce champ dans un fichier spécifique de notre projet. Dans le cas de contenus répétés tels que des billets de blog ou des pages fabriqués à partir de composants modulaires, nous souhaitons configurer Netlify CMS de manière à ce qu’il puisse générer un certain nombre de formats de fichier différents — il supporte YAML, JSON, Markdown avec un [front matter](https://jekyllrb.com/docs/front-matter/), et quelques autres.
+
 *[WIP]*
-
-### What are Collections?
-
-Although at this point you can log in, you can't do much yet! There is no data structure set up for the CMS fields you'll need to edit your site. You may have noticed the empty `collections` field in the config file, and this is where the magic happens. All fields for data that you want to save need to be part of a collection.
-
-There are two [types of collections](https://www.netlifycms.org/docs/collection-types/), folder collections and file collections. To understand the difference, let's figure out what Netlify CMS actually does when you make a content edit: the data has to be stored somewhere and we know that it uses Git as a back end. That means the data you save must end up inside of a file in your project. So when we configure a collection, we are telling Netlify CMS about the structure and naming convention of the files we want to create. It's then up to your static site generator to determine how to interpret these files and pull the data into templates. In this blog post, we'll cover how that works for Jekyll.
-
-Knowing this, can you guess why there are two types of collections? In the case of defined options, we can tell the CMS to put that field in a specific file in our project. In the case of repeating content, like blog posts or pages built out of modular components, we want to set up Netlify CMS so that it can generate many files based on a pattern that we define. We can generate a number of different file formats too -- it supports YAML, JSON, markdown with [front matter](https://jekyllrb.com/docs/front-matter/), and a few others.
 
 ### Setting Up a File Collection for Global Options
 
