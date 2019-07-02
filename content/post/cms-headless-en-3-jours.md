@@ -230,16 +230,14 @@ Voyons comment extraire ces données dans un template Jekyll. Voici un template 
 
 Dans Jekyll, toutes les informations du dossier `_data` sont accessibles en utilisant la syntaxe `site.data.{file}.{field}`. Vous pouvez boucler et obtenir des champs comme vous le souhaitez.
 
-*[WIP]*
+### Paramétrer un dossier de collection de pages
 
-### Setting Up a Folder Collection for Pages
+Une dossier de collection est utilisé chaque fois que nous avons besoin de générer un certain nombre de fichiers selon un template, mais sans savoir combien. Par exemple, si vous créez un blog, c’est ce dont vous aurez besoin pour vos billets.  
+Dans cet exemple, nous allons utiliser une fonctionnalité intéressante de Jekyll afin de permettre aux contributeurs de créer les pages de notre site à la volée et selon la destination de leur choix.
 
-A folder collection is used any time we need a number of files to be generated according to a pattern, but we don't know how many. For example, if you're building a blog, this is what you need for your posts.  
-In this example, we'll use it with a cool Jekyll feature to let content editors create the pages of our site on the fly and at any path they want.
+Regardons la structure d’un dossier de collection provenant d’un fichier de configuration réel pour voir comment ça marche :
 
-Let's look at the bones of a folder collection from a real config file to see how this works:
-
-admin/config.yml
+*admin/config.yml*
 
 ``` {#config-collection}
 collections:
@@ -253,44 +251,46 @@ collections:
     editor:
       preview: false
     fields:
-      - {label: "Title", name: title, widget: string}
-      - {label: "Permalink", name: permalink, widget: string}
-      - label: "Layout Template"
+      - {label: "Titre", name: title, widget: string}
+      - {label: "Lien permanent", name: permalink, widget: string}
+      - label: "Template"
         name: "layout"
         widget: "select"
         default: "blocks"
         options:
-          - { label: "Default", value: "blocks" }
-          - { label: "Home Page", value: "home" }
-      - {label: "Meta Description", name: metaDescription, widget: text, required: false}
-      - label: "Social Sharing"
+          - { label: "Défaut", value: "blocks" }
+          - { label: "Page d'accueil", value: "home" }
+      - {label: "Meta description", name: metaDescription, widget: text, required: false}
+      - label: "Partage sur les réseaux sociaux"
         name: social
         widget: object
         required: false
         fields:
-          - {label: "OpenGraph Image", name: ogImage, widget: image, required: false}
-          - {label: "Twitter Image", name: twitterImage, widget: image, required: false}
+          - {label: "Image OpenGraph", name: ogImage, widget: image, required: false}
+          - {label: "Image Twitter", name: twitterImage, widget: image, required: false}
 ```
 
-This defines another new collection called "Pages" that will consist of many files all stored in the `/_pages/` folder of your project. The files will be named according to the pattern in the slug field, which we've confusingly set to have a pattern of `{{slug}}`. Don't worry, in this case it just means we'll be using the default value, which is the contents of the `title` field. You can configure this in many ways to include dates and other things to match your intended use, but this is perfect for our case.
+Ceci définit une nouvelle collection appelée “Pages” qui contiendra de nombreux fichiers stockés dans le dossier `/_pages/` de votre projet. Les fichiers seront nommés en fonction du modèle définit dans le champ *slug*, lequel est configuré pour prendre la valeur de la variable pas très explicite `{{slug}}`. Ne vous inquiétez pas, dans ce cas, cela signifie simplement que nous utiliserons la valeur par défaut, à savoir le contenu du champ `Titre`. Vous pouvez configurer cela de différentes façons pour inclure une date ou tout autre élément selon votre besoin, mais dans le cas de notre exemple c’est parfait.
 
 ![](https://cdn.dwolla.com/com/prod/20190529161807/Screen-Shot-2019-05-29-at-4.17.02-PM.png)
 
-Of special note are the `permalink` and `preview_path` fields. We'll use the permalink field to define the path of our page in Jekyll, and the preview field shares that definition with Netlify CMS so it knows how to link to the correct page preview (branch deploys FTW).
+Veuillez noter les champs `permalink` et `preview_path`. Nous utiliserons le champ *permalink* pour définir le chemin d’accès à notre page dans jekyll, et le champ de *preview* permet à Netlify CMS de savoir comment pointer vers la bonne URL de prévisualisation (déploiement de branche :+1:).
 
-Here's an example of what the data file for a page might look like:
+Voici un exemple de ce à quoi peut ressembler le fichier de données d’une page :
 
-\_pages/home.md
+*\_pages/home.md*
 
 ``` {#home.md}
 ---
-Title: Home
+Title: Accueil
 permalink: /
 layout: home
-metaDescription: Shout out what you’re about!
+metaDescription: Dites nous de quoi il s'agit !
 social: {}
 ---
 ```
+
+*[WIP]*
 
 ### How to Use a Folder Collection in Jekyll
 
