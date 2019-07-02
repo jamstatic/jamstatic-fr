@@ -75,8 +75,6 @@ command = "jekyll build"
 
 Une fois que tout vous semble bon et que le déploiement Netlify se passe correctement, vous pouvez demander à gérer votre nom de domaine sur Netlify et migrer vos DNS vers les serveurs de nom de Netlify. Une fois vos DNS complètement coupés, vous pouvez désactiver le site GitHub Pages en toute sécurité depuis votre dépôt.
 
-*[WIP]*
-
 Ajouter Netlify CMS à un site existant
 --------------------------------------
 
@@ -134,11 +132,11 @@ logo_url: https://yoursite.com/assets/img/logo.svg
 collections:
 ```
 
-The `backend` section covers the basics like which branch to update and sets up the Git Gateway connection that we talked about earlier. The `publish_mode` property sets up our workflow to use the [editorial](https://www.netlifycms.org/docs/add-to-your-site/#editorial-workflow) mode. In short, this means that we have the ability to save page drafts as pull requests in Git before we decide to publish them. Combined with the branch deploys feature of Netlify, this is going to give us live previews of unpublished content from a static site generator!
+La section `backend` couvre les basiques tel que le choix de la branche à modifier et la configuration de la connexion Git Gateway dont avons parlé plus haut. La propriété `publish_mode` configure notre flux de travail de manière à utiliser le mode [*editorial*](https://www.netlifycms.org/docs/add-to-your-site/#editorial-workflow). En bref, cela signifie que nous avons la possibilité de sauvegarder les brouillons sous la forme de pull requests Git afin de décider de les publier. Combiné à la fonctionnalité de déploiement de branches de Netlify, cela va nous permettre d’avoir un aperçu immédiat du contenu non publié depuis un générateur de site statique !
 
-*Note: as of May 2019, the editorial workflow is only supported when you use GitHub as a provider*
+*Remarque : depuis mai 2019, le flux de travail editorial n’est pris en charge que lorsque vous utilisez GitHub.*
 
-Now we just need to drop in the Netlify Identity Widget on the main site. This is needed because after a user logs in they'll be redirected to the homepage of the site. We need to redirect them back to the CMS admin, so add the following script before the closing body tag:
+Maintenant il ne nous reste plus qu’à déposer le widget Netlify Identify sur le site principal. C’est nécessaire car après s’être connecté l’utilisateur est redirigé vers la page d’accueil du site. Nous devons les rediriger vers l’administration du CMS, en ajoutant le script suivant avant la fermteture de la balise *body* :
 
 ``` {#netlify-identity}
 <script>
@@ -154,7 +152,9 @@ Now we just need to drop in the Netlify Identity Widget on the main site. This i
 </script>
 ```
 
-With this in place, and the appropriate authentication and Git Gateway configuration on netlify.com, you should be able to log into the Netlify CMS admin for your site at [`https://yourdomain.com/admin`](https://yourdomain.com/admin).
+Ceci mis en place, ainsi que l’authentification adéquate et la Git Gateway configurée sur netlify.com, vous devriez être en mesure de vous connecter à l’administration de Netlify CMS de cotre site via l’URL [`https://yourdomain.com/admin`](https://yourdomain.com/admin).
+
+*[WIP]*
 
 ### What are Collections?
 
