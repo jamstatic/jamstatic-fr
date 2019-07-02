@@ -210,11 +210,9 @@ topLevelItems:
     url: 'https://google.com'
 ```
 
-*[WIP]*
+### Comment utiliser un fichier de collection dans Jekyll ?
 
-### How to Use a File Collection in Jekyll
-
-Let's figure out how to pull this data into a template in Jekyll. Here's a simple liquid template that uses our nav data:
+Voyons comment extraire ces données dans un template Jekyll. Voici un template *Liquid* qui utilise nos données de navigation :
 
 ``` {#nav-data}
 <ul>
@@ -230,7 +228,9 @@ Let's figure out how to pull this data into a template in Jekyll. Here's a simpl
 </ul>
 ```
 
-In Jekyll, everything in the `_data` folder is available using the `site.data.{file}.{field}` syntax. You can loop and get fields as you would expect.
+Dans Jekyll, toutes les informations du dossier `_data` sont accessibles en utilisant la syntaxe `site.data.{file}.{field}`. Vous pouvez boucler et obtenir des champs comme vous le souhaitez.
+
+*[WIP]*
 
 ### Setting Up a Folder Collection for Pages
 
