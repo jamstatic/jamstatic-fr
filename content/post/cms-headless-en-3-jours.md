@@ -420,12 +420,12 @@ Cela dit, [ce n’est jamais terminé](https://www.dwolla.com/about/core-beliefs
 - L’interface utilisateur du CMS ne permet pas de sauvegarder le contenu sur votre ordinateur lors du développement en local, il sera toujours nécessaire de *commiter* sur votre dépôt Git, alors soyez prudent
 - Il est préférable d’utiliser Netlify comme hébergeur plutôt qu’un autre fournisseur si vous souhaitez utiliser des fonctionnalités telles que le déploiement de branches et un Git Gateway auto-hébergé — Cela peut ajouter des coûts supplémentaires à votre projet
 
-*[WIP]*
-
-## The Community & Contributing Back
+## La communauté et sa contribution
 
 The Netlify CMS community has been nothing short of wonderful to interact with, so we encourage you to reach out and give this technology a try. Dwolla also believes in linking our words with our actions, so we're committed to giving back to the open source community. We're happy to report that our first pull request contributing to Netlify CMS is already live!
 
-Check out the code on GitHub: <https://github.com/netlify/netlify-cms>
+Les échanges avec la communauté Netlify CMS ont été merveilleux, nous vous encourageons donc à essayer cette technologie. Dwolla croit égelement qu’il faut associer les mots et les actes, nous sommes donc résolus à reverser à la communauté open-source. Nous somems heureux d’annoncer que notre première *Pull Request* est déjà en ligne !
 
-Start building in our [sandbox](https://accounts-sandbox.dwolla.com/sign-up) for free, right now. Get a feel for how our API works before going live in production.
+Découvrez le code sur GitHub : <https://github.com/netlify/netlify-cms>
+
+Commencer à tester notre [bac à sable](https://accounts-sandbox.dwolla.com/sign-up) gratuitement, dès maintenant. Découvez comment fonctione notre API avant de basculer en production.
