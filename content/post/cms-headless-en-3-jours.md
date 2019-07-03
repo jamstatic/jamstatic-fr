@@ -1,6 +1,6 @@
 ---
-title: Intégrer un CMS en 3 jours
-description: Retour d’expérience sur la mise en place de Netlify CMS sur un site Jekyll.
+title: 'Intégrer un CMS en 3 jours'
+description: 'Retour d’expérience sur la mise en place de Netlify CMS sur un site Jekyll.''
 author: arnaud
 date: 2019-06-22
 draft: true
@@ -9,8 +9,8 @@ categories:
 images:
 - https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1200/v1561132474/jamstatic/netlify-cms.png
 source:
-  author: Shea Daniels
-  title: How We Implemented a headless CMS in 3 Days
+  author: 'Shea Daniels'
+  title: 'How We Implemented a headless CMS in 3 Days'
   url: https://www.dwolla.com/updates/implementing-netlify-cms/
   lang: en
 typora-root-url: ../../static/
@@ -41,8 +41,7 @@ Nous avons pensé que Netlify CMS pourrait être avantageux pour les raisons sui
 
 Suite à l’adhésion des parties prenantes, nous avons décidé d’aller ves cette solution. Nous allons parler des décisions que nous avons dû prendre et vous montrer comment intégrer Netlify CMS avec Jekyll sur votre propre site.
 
-Devez-vous passer de GitHub Pages à Netlify ?
------------------------------------------------------
+## Devez-vous passer de GitHub Pages à Netlify ?
 
 C’était le premier choix à faire. Changer d’hébergement nous a semblé ajouter du temps et de la complexité au projet, ainsi notre décision était donc « non ». Utiliser Netlify CMS avec votre fournisseur d’hébergement existant est un choix parfaitement valable.
 
@@ -52,8 +51,7 @@ Git Gateway fonctionne comme un intermédiaire entre le CMS et votre dépôt Git
 
 Les déploiements de branches vous permettent d’avoir plusieurs versions de votre site en même temps. À titre de comparaison, GitHub Pages est très limité puisqu’il ne permet de déployer qu’une seule branche (généralement “master“ or “gh-pages“). Ça peut sembler sans intérêt, mais ça offre une possbilité très intéressante que nous allons détailler dans un instant.
 
-Migrer de GitHub Pages à Netlify
---------------------------------------
+## Migrer de GitHub Pages à Netlify
 
 En général, publier votre site depuis Netlify est aussi simple que de créer un compte Netlify, connectez vous à votre fournisseur (GitHub, GitLab ou Bitbucket) et sélectionnez un dépôt. Dès que vous indiquez une commande de *build*, Netlify peut alors commencer à déployer votre site. Les tâches telles que configurer le SSL sont expliquées par la [documentation Netlify](https://www.netlify.com/docs/), nous ne les détaillerons donc pas ici.
 
@@ -76,8 +74,7 @@ command = "jekyll build"
 
 Une fois que tout vous semble bon et que le déploiement Netlify se passe correctement, vous pouvez demander à gérer votre nom de domaine sur Netlify et migrer vos DNS vers les serveurs de nom de Netlify. Une fois vos DNS complètement coupés, vous pouvez désactiver le site GitHub Pages en toute sécurité depuis votre dépôt.
 
-Ajouter Netlify CMS à un site existant
---------------------------------------
+## Ajouter Netlify CMS à un site existant
 
 Netlify CMS se compose d’une [application web monopage](https://fr.wikipedia.org/wiki/Application_web_monopage) (en anglais *single-page application* ou SPA) construite avec React qui réside dans un dossier admin de votre site. Pour Jekyll, il doit être placé à la racine  du site. Il contiendra deux fichiers :
 
@@ -398,8 +395,7 @@ Parce que nous avons transmis notre variable `block`, nosu avons tout ce dont no
 
 *[WIP]*
 
-Our Experience with Netlify + Netlify CMS
------------------------------------------
+## Our Experience with Netlify + Netlify CMS
 
 Using these techniques, our engineers were able to integrate Netlify CMS into our existing Jekyll site for [Monetery](https://monetery.com/) and launch a working CMS within a matter of days (three, to be exact).  
 Content editors were able to onboard quickly and start publishing changes and new pages shortly after launch. During that time we also onboarded a new engineer who was able to start making meaningful contributions on their second day of work!
@@ -408,26 +404,25 @@ That said, [we're never done](https://www.dwolla.com/about/core-beliefs/). We're
 
 ### Pros
 
--   Hosting on Netlify is a breeze and we haven't experienced any issues with the site itself
--   Netlify CMS was very easy to retrofit onto an existing Jekyll project and intuitive for new engineers to learn
--   It's easy and very useful to get a copy of your entire project, including content, and run it locally using docker
--   The Netlify CMS interface is simple and easy to learn for content editors
--   Branch deploys and previews are amazing
--   Netlify's free plans give you the freedom to evaluate the offering before committing
--   There is an active and very helpful [community](https://gitter.im/netlify/NetlifyCMS) for Netlify CMS on Gitter
--   Netlify CMS is open source and welcomes contributions
+- Hosting on Netlify is a breeze and we haven't experienced any issues with the site itself
+- Netlify CMS was very easy to retrofit onto an existing Jekyll project and intuitive for new engineers to learn
+- It's easy and very useful to get a copy of your entire project, including content, and run it locally using docker
+- The Netlify CMS interface is simple and easy to learn for content editors
+- Branch deploys and previews are amazing
+- Netlify's free plans give you the freedom to evaluate the offering before committing
+- There is an active and very helpful [community](https://gitter.im/netlify/NetlifyCMS) for Netlify CMS on Gitter
+- Netlify CMS is open source and welcomes contributions
 
 ### Cons
 
--   Our content editors like the editorial workflow but don't like the multiple steps to save and publish
--   Saving and publishing is relatively slow, sometimes up to a few seconds
--   We experience occasional---but frustrating---errors when using the CMS admin
--   Some widgets or functionality that you might be looking for, such as conditional logic for displaying fields in the admin UI, hasn't been implemented yet
--   The CMS UI doesn't work to save content to your machine during local development, it will always commit back to your Git repository, so be careful
--   You are better off hosting with Netlify instead of another provider if you want features like branch deploys and a hosted Git Gateway -- this may incur more cost to your business
+- Our content editors like the editorial workflow but don't like the multiple steps to save and publish
+- Saving and publishing is relatively slow, sometimes up to a few seconds
+- We experience occasional---but frustrating---errors when using the CMS admin
+- Some widgets or functionality that you might be looking for, such as conditional logic for displaying fields in the admin UI, hasn't been implemented yet
+- The CMS UI doesn't work to save content to your machine during local development, it will always commit back to your Git repository, so be careful
+- You are better off hosting with Netlify instead of another provider if you want features like branch deploys and a hosted Git Gateway -- this may incur more cost to your business
 
-The Community & Contributing Back
----------------------------------
+## The Community & Contributing Back
 
 The Netlify CMS community has been nothing short of wonderful to interact with, so we encourage you to reach out and give this technology a try. Dwolla also believes in linking our words with our actions, so we're committed to giving back to the open source community. We're happy to report that our first pull request contributing to Netlify CMS is already live!
 
