@@ -290,17 +290,17 @@ social: {}
 ---
 ```
 
-*[WIP]*
+### Comment utiliser un dossier Collection dans Jekyll ?
 
-### How to Use a Folder Collection in Jekyll
-
-If you were reading closely, you may have noticed that the file collection is generating YAML files, while the folder collection is generating markdown files with front matter. You might think that's a bit odd to have a markdown file with no content below the data in the front matter (demarcated by the triple dashes), but rest assured there's a good reason!
+Si vous lisiez avec attention, vous avez sans doute remarqué qu’une collection de fichiers génère des fichiers YAML, alors qu‘une collection de dossiers génère des fichiers Markdown avec un *front matter*. Vous pensez peut-être que c’est un peu étrange d’avoir un fichier Markdwon sans contenu en dessous du *front matter* (séparé par trois tirets), mais soyez rassuré : c’est pour une bonne raison !
 
 We'll work in concert with Jekyll's own [collections feature](https://jekyllrb.com/docs/collections/) to pair our markdown files with a template, read the data in the front matter and then use it to generate our page output. This lets us do neato things later like use the [variable type list widget](https://www.netlifycms.org/docs/beta-features/#list-widget-variable-types) to make a component based page builder!
 
-Before we start, we need to make an addition to the Jekyll config file:
+Nous travaillerons de concert avec la fonctionnalité de [collections](https://jekyllrb.com/docs/collections/) propre à Jekyll afin de coupler nos fichiers Markdwon avec un template, lire les données du *front matter* et ensuite générer notre page. Cela nous permet de faire des choses ordonnées plus tard, comme utiliser le [widget liste avec types de variable](https://www.netlifycms.org/docs/beta-features/#list-widget-variable-types) pour créer un composant de *page builder* !
 
-\_config.yml
+Avant de commencer, nous avons besoin de compléter le fichier de configuration de Jekyll :
+
+*\_config.yml*
 
 ``` {#jekyll-collections}
 collections:
@@ -308,13 +308,13 @@ collections:
     output: true
 ```
 
-This tells Jekyll to generate a new page for each markdown file in the `pages` folder.
+Ceci indique à Jekyll qu’il doit générer une nouvelle page pour chaque fichier Markdown présent dans le dossier `pages`.
 
-But how does Jekyll know which template to use? In this case, the `layout` field we defined in Netlify CMS is doing exactly that. Jekyll maps the value in that front matter field directly to the name of a template file in the `_layouts` folder of your project.
+Mais comment Jekyll fait-il pour savoir quel template à utiliser ? Dans ce cas, le champ `layout` que nous avons défini dans Netlify CMS fait exactement ça. Jekyll fait correspondre la valeur du champ dans le *front matter* directement avec le nom du fichier de template présent dans le dossuer `_layouts` du projet.
 
-Let's look at an example layout template:
+Regardons un exemple de template :
 
-\_layouts/home.html
+*\_layouts/home.html*
 
 ``` {#layouts-home}
 ---
@@ -328,7 +328,9 @@ layout: default
 </section>
 ```
 
-All of the data we are interested in from the front matter is available using the `{collection}.{field}` syntax that Jekyll provides. We're able to use parent templates and all of the other features as you'd expect.
+Toutes les données qui nous intéresse provenant du *front matter* sont accessibles en utilisant la syntaxe Jekyll `{collection}.{field}`. Nous pouvons utiliser les templates parents et toutes les autres fonctionnalités comme souhaité. 
+
+*[WIP]*
 
 ### Making a Page Builder in Jekyll
 
