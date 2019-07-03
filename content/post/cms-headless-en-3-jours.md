@@ -395,18 +395,18 @@ Parce que nous avons transmis notre variable `block`, nosu avons tout ce dont no
 
 ## Notre retour d'expérience avec Netlify + Netlify CMS
 
-Grâce à ces techniques, nos ingénieurs ont puitégrer Netlify CMS à notre site jekyll existant pour [Monetery](https://monetery.com/) et mettre en oeuvre un CMS opérationnel en l’espace de quelques jours (trois pour être exact).  
-Les contributeurs de contenu ont été en en mesure de s’intégrer rapidement et de commencer à publier les modifications et les nouvelles pages peu de temps après le lancement. Pendant ce  temps, nous avons également embarqué un nouvel ingénieur qui a pu commencer à contribuer de manière significative dès sont deuxième jour de travail !
+Grâce à ces techniques, nos ingénieurs ont pu intégrer Netlify CMS à notre site jekyll existant pour [Monetery](https://monetery.com/) et mettre en oeuvre un CMS opérationnel en l’espace de quelques jours (trois pour être exact).  
+Les contributeurs de contenu ont été en mesure de s’intégrer rapidement et de commencer à publier des modifications et de nouvelles pages peu de temps après le lancement. Pendant ce temps, nous avons également intégré un nouvel ingénieur qui a pu commencer à contribuer de manière significative dès son deuxième jour de travail !
 
-Cela dit, [ce n’est jamais terminé](https://www.dwolla.com/about/core-beliefs/). Nous apprenons constamment de nos expériences et nous essayons de nous améliorer. Jetons un oeil critique sur les avantages et les inconvénients quant à l’utilisation de Netlify + netlify CMS :
+Cela dit, [ce n’est jamais terminé](https://www.dwolla.com/about/core-beliefs/). Nous apprenons constamment de nos expériences et nous essayons de nous améliorer. Jetons un oeil critique sur les avantages et les inconvénients quant à l’utilisation de Netlify + Netlify CMS :
 
 ### Pour
 
-- L’hébergement sur Netlify est un jeu d’enfant et nous n’avons rencontré aucun problème avec le site lui-même
-- Netlify CMS à été très facile à installer sur un projet Jekyll existant et c'était intuitif pour les nouveaux ingénieurs
-- Il est facile et très utile de créer une copie de l’ensemble de votre projet, y compris le contenu, et de l’exécuter localement à l’aide de docker
-- L’interface de Netlify CMS est simple et facile à apprendre pour les contributeurs de contenu
-- Les déploiements et les aperçus de branches sont extraordinaires
+- Héberger son site avec Netlify est un jeu d’enfant et nous n’avons rencontré aucun problème avec le site lui-même
+- Netlify CMS à été très facile à installer sur un projet Jekyll existant et il est intuitif pour les nouveaux ingénieurs
+- Il est facile et très utile de créer une copie de l’ensemble de votre projet, y compris le contenu, et de l’exécuter localement à l’aide de Docker
+- L’interface de Netlify CMS est simple et facile à prendre en main pour les contributeurs de contenu
+- Le déploiement et l‘aperçu par branche est extraordinaire
 - L‘offre gratuite de Netlify vous donnent la liberté d’évaluer le service avant de vous engager
 - Il existe une [communauté](https://gitter.im/netlify/NetlifyCMS) active et très utile pour Netlify CMS sur Gitter
 - Netlify CMS est open-source et les contributions sont bienvenues
@@ -416,9 +416,9 @@ Cela dit, [ce n’est jamais terminé](https://www.dwolla.com/about/core-beliefs
 - Nos contributeurs de contenu apprécient le flux de travail éditorial, mais n’aiment pas les nombreuses étapes nécessaires pour enregistrer et publier
 - L’enregistrement et la publication sont relativement lents, parfois jusqu’à plusieurs secondes
 - Nous rencontrons des erreurs occasionnelles — mais frustrantes — lors de l’utilisation de l’administration du CMS
-- Certains widgets ou fonctionnalités que vous pourriez rechercher, tels que l‘affichage conditionnel des champs l’interface utlisateur de l’administration, n’ont pas encore été implémentés
-- L’interface utilisateur du CMS ne permet pas de sauvegarder le contenu sur votre ordinateur lors du développement en local, il sera toujours nécessaire de *commiter* sur votre dépôt Git, alros soyez prudent
-- Il est préférable d’utilsier Netlify comme hébergeur plutôt qu’un autre fournisseur si vous souhaitez utiliser des fonctionnalités telles que le déploiement de branches et un Git Gateway auto-hébergé — Cela peut ajouter des coûts supplémentaires à votre projet
+- Certains widgets ou fonctionnalités que vous pourriez rechercher, tels que l‘affichage conditionnel des champs de l’interface utlisateur de l’administration, n’ont pas encore été implémentés
+- L’interface utilisateur du CMS ne permet pas de sauvegarder le contenu sur votre ordinateur lors du développement en local, il sera toujours nécessaire de *commiter* sur votre dépôt Git, alors soyez prudent
+- Il est préférable d’utiliser Netlify comme hébergeur plutôt qu’un autre fournisseur si vous souhaitez utiliser des fonctionnalités telles que le déploiement de branches et un Git Gateway auto-hébergé — Cela peut ajouter des coûts supplémentaires à votre projet
 
 *[WIP]*
 
