@@ -328,47 +328,45 @@ layout: default
 
 Toutes les données qui nous intéresse provenant du *front matter* sont accessibles en utilisant la syntaxe Jekyll `{collection}.{field}`. Nous pouvons utiliser les templates parents et toutes les autres fonctionnalités comme souhaité.
 
-*[WIP]*
+### Réaliser un *page builder* dans Jekyll
 
-### Making a Page Builder in Jekyll
+C’est un bon début, mais nous n’avons pas besoin de tout ça dans notre dossier de collection si nous n’allions pas plus loin : créons un *page builder* flexible, basé sur des composants.
 
-We're off to a great start, but we didn't need to go to all that trouble with our folder collection if we weren't going to take it one step farther: let's make a flexible, component-based page builder!
+Pour commencer, nous devons définir nos composants dans le fichier deconfiguration de Netlify CMS :
 
-First, we need to define our components in the Netlify CMS config file:
-
-\_admin/config.yml
+*\_admin/config.yml*
 
 ``` {#define-components}
 collections:
   - label: "Pages"
       ...
-      - label: "Content Blocks"
-        label_singular: "Content Block"
+      - label: "Blocs de contenu"
+        label_singular: "Bloc de contenu"
         name: blocks
         widget: list
         types:
-          - label: "Hero"
+          - label: "Mise en avant"
             name: hero
             widget: object
             fields:
-              - {label: "Heading", name: heading, widget: string}
-              - {label: "Content", name: content, widget: markdown, buttons: ["bold", "italic", "link"], required: false}
-          - label: "Rich Text Block"
+              - {label: "En-tête", name: heading, widget: string}
+              - {label: "Contenu", name: content, widget: markdown, buttons: ["bold", "italic", "link"], required: false}
+          - label: "Bloc de texte riche"
             name: textBlock
             widget: object
             fields:
-              - {label: "Heading", name: heading, widget: string, required: false}
-              - {label: "Content", name: content, widget: markdown}
+              - {label: "En-tête", name: heading, widget: string, required: false}
+              - {label: "Contenu", name: content, widget: markdown}
           ...
 ```
 
-Here we've extended our pages collection to include a variable type list widget that contains several different types of objects that the content editor will be able to dynamically add and rearrange from the CMS Admin.
+Ici nous avons étendu notre collection de pages afin d’y inclure un widget de liste à type de variable qui contient différents types d’objets que l’éditeur de contenu pourra ajouter dynamiquement et réorganiser depuis l’administration du CMS.
 
 ![](https://cdn.dwolla.com/com/prod/20190529162003/Screen-Shot-2019-05-29-at-4.19.06-PM.png)
 
-Now let's make a new layout to render our widgets:
+Créons maintenant un nouveau template pour rendre nos widgets :
 
-\_layouts/blocks.html
+*\_layouts/blocks.html*
 
 ``` {#render-widgets}
 ---
@@ -380,9 +378,9 @@ layout: default
 {% endfor %}
 ```
 
-Here we're looping through each component on the page, and including another template file that knows how to render it. Here's what a component template might look like:
+Ici nous parcourons chaque composant de la page et incluons un autre fichier de template qui s’occupe du rendu. Voici à quoi pourrait ressembler un template de composant :
 
-\_includes/blocks/hero.html
+*\_includes/blocks/hero.html*
 
 ``` {#component-template}
 <header class="page-hero">
@@ -396,6 +394,10 @@ Here we're looping through each component on the page, and including another tem
 ```
 
 Because we passed along our block variable, everything is right where we need it. You'll also notice we took special care to translate our markdown into HTML with markdownify since that isn't being automatically done for us any more.
+
+Parce que nous avons transmis notre variable `block`, tout est exactement là où nous en avons besoin. Vous remarquez égelement que nous avons pris un soin particulier à transformer notre Mardown en HTML avec *markdownify* car ce n’est pas fait automatiquement.
+
+*[WIP]*
 
 Our Experience with Netlify + Netlify CMS
 -----------------------------------------
