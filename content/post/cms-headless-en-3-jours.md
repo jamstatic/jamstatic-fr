@@ -292,11 +292,9 @@ social: {}
 
 ### Comment utiliser un dossier Collection dans Jekyll ?
 
-Si vous lisiez avec attention, vous avez sans doute remarqué qu’une collection de fichiers génère des fichiers YAML, alors qu‘une collection de dossiers génère des fichiers Markdown avec un *front matter*. Vous pensez peut-être que c’est un peu étrange d’avoir un fichier Markdwon sans contenu en dessous du *front matter* (séparé par trois tirets), mais soyez rassuré : c’est pour une bonne raison !
+Si vous lisiez avec attention, vous avez sans doute remarqué qu’une collection de fichiers génère des fichiers YAML, alors qu‘une collection de dossiers génère des fichiers Markdown avec un *front matter*. Vous pensez peut-être que c’est un peu étrange d’avoir un fichier Markdown sans contenu sous le *front matter* (séparé par trois tirets), mais soyez rassuré : c’est pour une bonne raison !
 
-We'll work in concert with Jekyll's own [collections feature](https://jekyllrb.com/docs/collections/) to pair our markdown files with a template, read the data in the front matter and then use it to generate our page output. This lets us do neato things later like use the [variable type list widget](https://www.netlifycms.org/docs/beta-features/#list-widget-variable-types) to make a component based page builder!
-
-Nous travaillerons de concert avec la fonctionnalité de [collections](https://jekyllrb.com/docs/collections/) propre à Jekyll afin de coupler nos fichiers Markdwon avec un template, lire les données du *front matter* et ensuite générer notre page. Cela nous permet de faire des choses ordonnées plus tard, comme utiliser le [widget liste avec types de variable](https://www.netlifycms.org/docs/beta-features/#list-widget-variable-types) pour créer un composant de *page builder* !
+Nous travaillerons de concert avec la fonctionnalité de [collections](https://jekyllrb.com/docs/collections/) propre à Jekyll afin de coupler nos fichiers Markdown avec un template, lire les données du *front matter* et ensuite générer notre page. Cela nous permettra de faire des choses plus travaillées plus tard, comme utiliser le [widget liste avec types de variable](https://www.netlifycms.org/docs/beta-features/#list-widget-variable-types) pour créer un composant de *page builder* !
 
 Avant de commencer, nous avons besoin de compléter le fichier de configuration de Jekyll :
 
@@ -310,7 +308,7 @@ collections:
 
 Ceci indique à Jekyll qu’il doit générer une nouvelle page pour chaque fichier Markdown présent dans le dossier `pages`.
 
-Mais comment Jekyll fait-il pour savoir quel template à utiliser ? Dans ce cas, le champ `layout` que nous avons défini dans Netlify CMS fait exactement ça. Jekyll fait correspondre la valeur du champ dans le *front matter* directement avec le nom du fichier de template présent dans le dossuer `_layouts` du projet.
+Mais comment Jekyll fait-il pour savoir quel template utiliser ? Dans ce cas, le champ `layout` que nous avons défini dans Netlify CMS fait exactement ça. Jekyll fait correspondre la valeur du champ dans le *front matter* directement avec le nom du fichier de template présent dans le dossuer `_layouts` du projet.
 
 Regardons un exemple de template :
 
@@ -328,7 +326,7 @@ layout: default
 </section>
 ```
 
-Toutes les données qui nous intéresse provenant du *front matter* sont accessibles en utilisant la syntaxe Jekyll `{collection}.{field}`. Nous pouvons utiliser les templates parents et toutes les autres fonctionnalités comme souhaité. 
+Toutes les données qui nous intéresse provenant du *front matter* sont accessibles en utilisant la syntaxe Jekyll `{collection}.{field}`. Nous pouvons utiliser les templates parents et toutes les autres fonctionnalités comme souhaité.
 
 *[WIP]*
 
