@@ -10,7 +10,7 @@ images:
   - /assets/images/cms-headless-en-3-jours/netlify-cms-blog-featured-image-02.png
 source:
   author: 'Shea Daniels'
-  title: 'How We Implemented a headless CMS in 3 Days'
+  title: 'Implementing a CMS in 3 Days'
   url: https://www.dwolla.com/updates/implementing-netlify-cms/
   lang: en
 typora-root-url: ../../static/
