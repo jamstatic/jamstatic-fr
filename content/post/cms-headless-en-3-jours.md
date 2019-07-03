@@ -7,7 +7,7 @@ draft: true
 categories:
   - headless
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1200/v1561132474/jamstatic/netlify-cms.png
+  - /assets/images/cms-headless-en-3-jours/netlify-cms-blog-featured-image-02.png
 source:
   author: 'Shea Daniels'
   title: 'How We Implemented a headless CMS in 3 Days'
@@ -15,6 +15,8 @@ source:
   lang: en
 typora-root-url: ../../static/
 ---
+![](/assets/images/cms-headless-en-3-jours/netlify-cms-blog-featured-image-02.png)
+
 Imaginons que vous soyez en train de créer la prochaine grande startup ou d'organiser un super évènement — la première question que tout le monde va vous poser est : « C'est quoi le site web ? ».
 
 Une présence en ligne séduisante et fonctionnelle est tout simplement primordial en 2019, que ce soit pour les entreprises, les organisations à but non lucratif ou encore pour le recrutement de nouveaux employés — et il en va de même pour [Monetery](https://monetery.com/), l'événement technologique — inclusif — organisé chaque printemps par Dwolla. Nous avions besoin d’un site rapidement opératonnel et performant, nous avons donc d’abord opté pour une solution fiable et éprouvée que nous avions déjà utilisé : [GitHub Pages](https://pages.github.com/).
