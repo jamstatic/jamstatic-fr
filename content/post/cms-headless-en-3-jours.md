@@ -1,13 +1,13 @@
 ---
 title: 'Intégrer un CMS en 3 jours'
-description: 'Retour d’expérience sur la mise en place de Netlify CMS sur un site Jekyll.''
+description: 'Retour d’expérience sur la mise en place de Netlify CMS sur un site Jekyll.'
 author: arnaud
 date: 2019-06-22
 draft: true
 categories:
-- headless
+  - headless
 images:
-- https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1200/v1561132474/jamstatic/netlify-cms.png
+  - https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1200/v1561132474/jamstatic/netlify-cms.png
 source:
   author: 'Shea Daniels'
   title: 'How We Implemented a headless CMS in 3 Days'
