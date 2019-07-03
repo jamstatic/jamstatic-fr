@@ -330,9 +330,9 @@ Toutes les données qui nous intéresse provenant du *front matter* sont accessi
 
 ### Réaliser un *page builder* dans Jekyll
 
-C’est un bon début, mais nous n’avons pas besoin de tout ça dans notre dossier de collection si nous n’allions pas plus loin : créons un *page builder* flexible, basé sur des composants.
+C’est un bon début, mais nous n’aurions pas besoin de tout ça dans notre dossier de collection si nous n’allions pas plus loin : créons un *page builder* flexible, basé sur des composants.
 
-Pour commencer, nous devons définir nos composants dans le fichier deconfiguration de Netlify CMS :
+Pour commencer, nous devons définir nos composants dans le fichier de configuration de Netlify CMS :
 
 *\_admin/config.yml*
 
@@ -364,7 +364,7 @@ Ici nous avons étendu notre collection de pages afin d’y inclure un widget de
 
 ![](https://cdn.dwolla.com/com/prod/20190529162003/Screen-Shot-2019-05-29-at-4.19.06-PM.png)
 
-Créons maintenant un nouveau template pour rendre nos widgets :
+Créons maintenant un nouveau template pour le rendu de nos widgets :
 
 *\_layouts/blocks.html*
 
@@ -393,9 +393,7 @@ Ici nous parcourons chaque composant de la page et incluons un autre fichier de 
 </header>
 ```
 
-Because we passed along our block variable, everything is right where we need it. You'll also notice we took special care to translate our markdown into HTML with markdownify since that isn't being automatically done for us any more.
-
-Parce que nous avons transmis notre variable `block`, tout est exactement là où nous en avons besoin. Vous remarquez égelement que nous avons pris un soin particulier à transformer notre Mardown en HTML avec *markdownify* car ce n’est pas fait automatiquement.
+Parce que nous avons transmis notre variable `block`, nosu avons tout ce dont nous en avons besoin. Vous remarquez égelement que nous avons veillé à transformer notre Mardown en HTML avec *markdownify* car ce n’est pas fait automatiquement.
 
 *[WIP]*
 
