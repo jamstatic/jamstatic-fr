@@ -88,7 +88,7 @@ admin
 
 La [documentation de Netlify CMS](https://www.netlifycms.org/docs/add-to-your-site/) explique ça très bien :
 
-> The first file, `admin/index.html`, is the entry point for the Netlify CMS admin interface. This means that users navigate to `yoursite.com/admin/` to access it. On the code side, it's a basic HTML starter page that loads the Netlify CMS JavaScript file. In this example, we pull the file from a public CDN:
+> Le premier fichier, `admin/index.html`, est le point d’entrée à l’admin de Netlify CMS. Cela signifie que les utilisateurs y accèdent via `votresite.com/admin/`. Du côté du code, c’est une page HTML qui charge le fichier Javascript de Netlify CMS. Dans cet exemple, nous chargeons le fichier depuis un CDN public :
 
 *admin/index.html*
 
@@ -99,7 +99,6 @@ La [documentation de Netlify CMS](https://www.netlifycms.org/docs/add-to-your-si
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Content Manager</title>
-
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
@@ -109,7 +108,7 @@ La [documentation de Netlify CMS](https://www.netlifycms.org/docs/add-to-your-si
 </html>
 ```
 
-> The second file, `admin/config.yml`, is the heart of your Netlify CMS installation, and a bit more complex. The [Configuration](https://www.netlifycms.org/docs/add-to-your-site/#configuration) section covers the details.
+> Le second fichier, `admin/config.yml`, est le coeur de l’installation de Netlify CMS, et il est un peu plus complexe. La section [Configuration](https://www.netlifycms.org/docs/add-to-your-site/#configuration) rentre dans les détails.
 
 Pour commencer, voici à quoi peut ressembler le fichier de configuration :
 
