@@ -5,6 +5,7 @@ author: arnaud
 date: 2019-06-22
 draft: true
 categories:
+  - cms
   - headless
 images:
   - /assets/images/cms-headless-en-3-jours/netlify-cms-blog-featured-image-02.png
