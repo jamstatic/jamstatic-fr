@@ -3,7 +3,7 @@ title: 'Intégrer un CMS en 3 jours'
 description: 'Retour d’expérience suite à l’intégration de Netlify CMS à un site Jekyll.'
 author: arnaud
 date: 2019-06-22
-draft: true
+draft: false
 categories:
   - cms
   - headless
