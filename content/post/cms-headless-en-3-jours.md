@@ -427,4 +427,3 @@ Les échanges avec la communauté Netlify CMS ont été merveilleux, nous vous e
 
 Découvrez le code sur GitHub : <https://github.com/netlify/netlify-cms>
 
-Commencer à tester notre [bac à sable](https://accounts-sandbox.dwolla.com/sign-up) gratuitement, dès maintenant. Découvez comment fonctione notre API avant de passer en production.
