@@ -94,6 +94,7 @@ fields:
   hidden: false
   default: true
 pages:
+- content/post/pour-des-sites-web-modernes-direction-le-maillage-de-contenus.md
 - content/post/entretien-michael-rose.md
 - content/post/entretien-avec-parker-moore.md
 - content/post/creer-un-environnement-de-preproduction-pour-jekyll.md
