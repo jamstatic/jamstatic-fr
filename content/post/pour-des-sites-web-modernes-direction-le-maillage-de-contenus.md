@@ -39,7 +39,7 @@ Les équipes adoptent ces services car chacun d'entre eux est fait pour répondr
 
 ## L'émergence du maillage de contenus
 
-Cet article a pour but d'expliquer l'émergence d'un "maillage de contenus" — une couche structurelle pour un site web découplé. Le maillage de contenus assemble différents systèmes de contenus, dans un environnement de développement moderne, tout en optimisant la performance du site web généré.
+Cet article a pour but d'expliquer l'émergence du "maillage de contenus" — une couche structurelle pour un site web découplé. Le maillage de contenus assemble différents systèmes de contenus, dans un environnement de développement moderne, tout en optimisant la performance du site web généré.
 
 La précédente génération de CMS dédiés aux entreprises offrait souvent une expérience d'édition de contenu générique, basée sur des développement et des environnements de déploiement dépassés. La nouvelle stratégie pour la gestion de contenu tant à ne conserver que les meilleurs solutions, adaptables à des cas d'utilisation spécifiques comme le e-commerce ou le blogging; elle apporte un cadre de travail moderne permettant des itérations rapides et génère des sites web légers et rapides nativement.
 
