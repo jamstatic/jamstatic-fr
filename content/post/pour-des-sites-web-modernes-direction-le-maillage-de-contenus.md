@@ -21,7 +21,7 @@ keywords: []
 draft: true
 
 ---
-The CMS was born to make content sites _possible_. Now, it’s being reimagined to make them _incredible_.
+Les systèmes de gestion de contenu (CMS) sont nés pour rendre l'édition de contenu de sites _possible_. Ils sont maintenant réimaginés pour les rendre _fantastiques_.
 
 In the early 2000s, publishing on the web was difficult. The CMS emerged as a single application to store content, build sites, and deliver them to users.
 
