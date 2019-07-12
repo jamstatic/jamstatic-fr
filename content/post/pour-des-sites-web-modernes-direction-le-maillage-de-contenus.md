@@ -27,7 +27,7 @@ In the early 2000s, publishing on the web was difficult. The CMS emerged as a si
 
 Over time, the feature landscape broadened -- key areas like search, analytics, payments, personalization, and e-commerce emerged. In each category, specialized tools improved rapidly, while the quality of monolithic enterprise CMS applications like Adobe Experience Manager and Sitecore has stayed roughly the same.
 
-## Modularizing the CMS
+## Modulariser le CMS
 
 Today, a website team running an e-commerce site can store product inventory in [Shopify](https://www.shopify.com/), product listings in [Salsify](https://www.salsify.com/) and reviews in [Bazaarvoice](https://www.bazaarvoice.com/). A team running a paywalled content site can create stories in [Wordpress](https://wordpress.org/), store video in [JWPlayer](https://www.jwplayer.com/), user data in [Auth0](https://auth0.com/), and subscription data in [Recurly](https://recurly.com/).
 
@@ -36,13 +36,13 @@ When website teams want to add search, they can turn to [Algolia](https://www.al
 Teams are adopting these services because each is tailored to a specific use-case; the generic enterprise CMS alternative is often optimized for none.
 
 <figure>
-  <img alt="The modularization of the CMS" height="400" src="./modular-cms-architecture.png" />
-  <figcaption>
-   The modularization of the CMS
-  </figcaption>
+<img alt="The modularization of the CMS" height="400" src="./modular-cms-architecture.png" />
+<figcaption>
+The modularization of the CMS
+</figcaption>
 </figure>
 
-## Emergence of the Content Mesh
+## L'émergence du maillage de contenus
 
 This is the first post in a series, Journey to the Content Mesh, intended to explain the emergence of a "content mesh" -- the infrastructure layer for a decoupled website. The content mesh stitches together content systems in a modern development environment while optimizing website delivery for performance.
 
@@ -50,21 +50,19 @@ The previous generation of enterprise CMS offered an often-generic content editi
 
 The content mesh empowers developers while preserving content creators’ workflows. It gives you access to best-of-breed services _without_ the pain of manual integration.
 
-## Three Areas of Rapid Innovation
+## Trois domaines avec une innovation rapide
 
 Change is being spurred by the confluence of three revolutions in how we create and consume content:
 
-- _Content management._ Monolithic CMS applications are being replaced by modular, specialized content systems.
-
-- _Development techniques._ Modern UI frameworks like React are becoming essential to rich user experiences.
-
-- _Performance._ As mobile surpasses 50% of internet traffic, high-performance is becoming a must-have, not a nice-to-have.
+* _Content management._ Monolithic CMS applications are being replaced by modular, specialized content systems.
+* _Development techniques._ Modern UI frameworks like React are becoming essential to rich user experiences.
+* _Performance._ As mobile surpasses 50% of internet traffic, high-performance is becoming a must-have, not a nice-to-have.
 
 <figure>
-  <img alt="Three areas of rapid innovation" height="300" src="./three-website-revolutions.png" />
-  <figcaption>
-    Three areas of rapid innovation
-  </figcaption>
+<img alt="Three areas of rapid innovation" height="300" src="./three-website-revolutions.png" />
+<figcaption>
+Three areas of rapid innovation
+</figcaption>
 </figure>
 
 These technological changes have made modern web technology both _essential_ for creating fresh, novel, and engaging digital experiences, and _more accessible_ for the enterprise.
@@ -90,8 +88,8 @@ In our conclusion, [Creating Compelling Experiences](/blog/2018-10-18-creating-c
 ## The Modern Website Landscape
 
 <figure>
-  <img alt="The modern website landscape" src="./content-mesh.png" height="300" />
-  <figcaption>
-    The modern website landscape
-  </figcaption>
+<img alt="The modern website landscape" src="./content-mesh.png" height="300" />
+<figcaption>
+The modern website landscape
+</figcaption>
 </figure>
