@@ -21,11 +21,11 @@ keywords: []
 draft: true
 
 ---
-Les systèmes de gestion de contenu (CMS) sont nés pour rendre l'édition de contenu de sites _possible_. Ils sont maintenant réimaginés pour la rendre _fantastique_.
+Les systèmes de gestion de contenu (CMS) sont nés pour rendre l'édition de contenu de sites _possible_. Ils sont maintenant ré-imaginés pour la rendre _fantastique_.
 
 Au début des années 2000, publier sur le web était difficile. Le CMS s'est petit à petit imposé comme l'application unique pour stocker les contenus, générer les sites et les servir aux utilisateurs finaux.
 
-Avec le temps, le paysage de fonctionnalités s'est étoffé — des domaines clé comme la recherche, le suivi de données, les payments, la personnalisation et le e-commerce ont émergé. Dans chaque domaine, les outils spécialisés se sont vite améliorés, alors que dans le même temps la qualité des applications de gestion de contenu destinés aux entreprises comme Adobe Experience Manager ou Sitecore a plus ou moins stagné.
+Avec le temps, le paysage de fonctionnalités s'est étoffé — des domaines clé comme la recherche, le suivi de données, les paiements, la personnalisation et le e-commerce ont émergé. Dans chaque domaine, les outils spécialisés se sont vite améliorés, alors que dans le même temps la qualité des applications de gestion de contenu destinés aux entreprises comme Adobe Experience Manager ou Sitecore a plus ou moins stagné.
 
 ## Modulariser le CMS
 
