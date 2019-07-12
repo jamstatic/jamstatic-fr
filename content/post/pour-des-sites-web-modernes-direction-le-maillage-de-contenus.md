@@ -39,7 +39,7 @@ Les équipes adoptent ces services car chacun d'entre eux est fait pour répondr
 
 ## L'émergence du maillage de contenus
 
-This is the first post in a series, Journey to the Content Mesh, intended to explain the emergence of a "content mesh" -- the infrastructure layer for a decoupled website. The content mesh stitches together content systems in a modern development environment while optimizing website delivery for performance.
+Cet article a pour but d'expliquer l'émergence d'un "maillage de contenus" — une couche structurelle pour un site web découplé. Ce maillage de contenus assemble différent systèmes de contenus, dans un environnement de développement moderne, tout en optimisant la performance du site web généré.
 
 The previous generation of enterprise CMS offered an often-generic content editing experience glued to out-of-date development and deployment environments. The emerging strategy for content management selects best-of-breed solutions, tailored to specific use-cases like e-commerce or blogging; it provides a modern framework for rapid iteration and it generates lightning fast websites out of the box.
 
