@@ -31,7 +31,7 @@ Avec le temps, le paysage de fonctionnalités s'est étoffé — des domaines cl
 
 De nos jours, l'équipe web d'un site de e-commerce peut gérer son inventaire produit dans [Shopify](https://www.shopify.com/), les listings de produit dans [Salsify](https://www.salsify.com/) et les évaluations dans [Bazaarvoice](https://www.bazaarvoice.com/). Une équipe qui fait tourner un site avec des contenus payants peut écrire des articles dans [Wordpress](https://wordpress.org/), stocker des vidéos dans [JWPlayer](https://www.jwplayer.com/), des données utilisateur dans [Auth0](https://auth0.com/), et les données d'inscription dans [Recurly](https://recurly.com/).
 
-Lorsque les équipes web ont besoin d'ajouter de la recherche, elles peuvent se tourner vers [Algolia](https://www.algolia.com/); for payments, [Stripe](http://stripe.com); for analytics, [Segment](https://segment.com/); for A/B testing, [Optimizely](https://www.optimizely.com/); for personalization, [Evergage](https://www.evergage.com/).
+Lorsque les équipes web ont besoin d'ajouter de la recherche, elles peuvent se tourner vers [Algolia](https://www.algolia.com/); vers [Stripe](http://stripe.com) pour des paiements; vers [Segment](https://segment.com/) pour des données statistiques; vers [Optimizely](https://www.optimizely.com/) pour du A/B testing ; vers [Evergage](https://www.evergage.com/) pour de la personnalisation.
 
 Teams are adopting these services because each is tailored to a specific use-case; the generic enterprise CMS alternative is often optimized for none.
 
