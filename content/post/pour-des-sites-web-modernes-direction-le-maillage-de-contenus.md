@@ -39,11 +39,11 @@ Les équipes adoptent ces services car chacun d'entre eux est fait pour répondr
 
 ## L'émergence du maillage de contenus
 
-Cet article a pour but d'expliquer l'émergence d'un "maillage de contenus" — une couche structurelle pour un site web découplé. Ce maillage de contenus assemble différent systèmes de contenus, dans un environnement de développement moderne, tout en optimisant la performance du site web généré.
+Cet article a pour but d'expliquer l'émergence d'un "maillage de contenus" — une couche structurelle pour un site web découplé. Le maillage de contenus assemble différents systèmes de contenus, dans un environnement de développement moderne, tout en optimisant la performance du site web généré.
 
-The previous generation of enterprise CMS offered an often-generic content editing experience glued to out-of-date development and deployment environments. The emerging strategy for content management selects best-of-breed solutions, tailored to specific use-cases like e-commerce or blogging; it provides a modern framework for rapid iteration and it generates lightning fast websites out of the box.
+La précédente génération de CMS dédiés aux entreprises offrait souvent une expérience d'édition de contenu générique, basée sur des développement et des environnements de déploiement dépassés. La nouvelle stratégie pour la gestion de contenu tant à ne conserver que les meilleurs solutions, adaptables à des cas d'utilisation spécifiques comme le e-commerce ou le blogging; elle apporte un cadre de travail moderne permettant des itérations rapides et génère des sites web légers et rapides nativement.
 
-The content mesh empowers developers while preserving content creators’ workflows. It gives you access to best-of-breed services _without_ the pain of manual integration.
+Le maillage de contenus donne plus de possibilités aux développeurs tout en conservant le workflow des contributeurs. Il vous donne accès aux meilleurs services _sans_ la difficulté de devoir les intégrer manuellement.
 
 ## Trois domaines avec une innovation rapide
 
