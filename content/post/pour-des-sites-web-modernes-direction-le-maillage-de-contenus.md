@@ -3,7 +3,7 @@ title: Pour des sites web modernes, direction le maillage de contenus
 date: 2019-07-11
 lastmod: 2019-07-12T14:42:35+02:00
 description: ''
-author: Frank Taillandier
+author: Anthony Lopez
 categories:
 - gatsby
 - headless
