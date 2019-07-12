@@ -73,7 +73,7 @@ The key challenge is that without a content mesh, integrating these systems toge
 
 In other words, the content mesh makes developers, content creators, and users _all_ happy.
 
-## Integrating Modern Technologies Without the DIY Work
+## Intégrer les technologies modernes en déléguant le travail
 
 As this series continues, we’ll explore the rise of this "content mesh" -- that allows enterprises to adopt these new technologies without needing to DIY themselves.
 
