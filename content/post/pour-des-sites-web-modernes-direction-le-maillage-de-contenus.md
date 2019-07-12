@@ -47,11 +47,11 @@ Le maillage de contenus donne plus de possibilités aux développeurs tout en co
 
 ## Trois domaines avec une innovation rapide
 
-Change is being spurred by the confluence of three revolutions in how we create and consume content:
+Le changement est stimulé par la rencontre de trois révolutions dans la façon dont nous créons et consommons le contenu :
 
-* _Content management._ Monolithic CMS applications are being replaced by modular, specialized content systems.
-* _Development techniques._ Modern UI frameworks like React are becoming essential to rich user experiences.
-* _Performance._ As mobile surpasses 50% of internet traffic, high-performance is becoming a must-have, not a nice-to-have.
+* _La gestion du contenu_ : les applications de type CMS monolithiques sont remplacées par des systèmes de gestion modulaires et spécialisés.
+* _Les techniques de développement_ : les frameworks Front comme React ont un rôle prépondérant pour les expériences enrichies de l'utilisateur.
+* La performance : étant donné que le mobile représente plus de 50% du traffic internet, la haute performance est devenue obligatoire et non plus optionnelle.
 
 ![](/v1562938846/jamstatic/three-website-revolutions.png)
 
