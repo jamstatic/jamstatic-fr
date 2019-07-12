@@ -21,7 +21,7 @@ keywords: []
 draft: true
 
 ---
-Les systèmes de gestion de contenu (CMS) sont nés pour rendre l'édition de contenu de sites _possible_. Ils sont maintenant réimaginés pour les rendre _fantastiques_.
+Les systèmes de gestion de contenu (CMS) sont nés pour rendre l'édition de contenu de sites _possible_. Ils sont maintenant réimaginés pour la rendre _fantastique_.
 
 In the early 2000s, publishing on the web was difficult. The CMS emerged as a single application to store content, build sites, and deliver them to users.
 
