@@ -33,7 +33,7 @@ De nos jours, l'équipe web d'un site de e-commerce peut gérer son inventaire p
 
 Lorsque les équipes web ont besoin d'ajouter de la recherche, elles peuvent se tourner vers [Algolia](https://www.algolia.com/); vers [Stripe](http://stripe.com) pour des paiements; vers [Segment](https://segment.com/) pour des données statistiques; vers [Optimizely](https://www.optimizely.com/) pour du A/B testing ; vers [Evergage](https://www.evergage.com/) pour de la personnalisation.
 
-Teams are adopting these services because each is tailored to a specific use-case; the generic enterprise CMS alternative is often optimized for none.
+Les équipes adoptent ces services car chacun d'entre eux est fait pour répondre à un besoin bien précis, alors que de leur côté les CMS destinés aux entreprises ne sont souvent pas optimisés pour grand chose.
 
 ![](/v1562938736/jamstatic/modular-cms-architecture.png)
 
