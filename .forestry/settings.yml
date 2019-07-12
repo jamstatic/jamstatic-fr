@@ -1,7 +1,7 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: redac
+admin_path: static/redac
 webhook_url: ''
 sections:
 - type: directory
