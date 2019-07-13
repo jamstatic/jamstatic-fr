@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: jamstatic.fr
+Token: 9cf3e5fc35b9c4227adce7bc77c7e33a17cfb5b7eab60b2f991072e3be5d2fc6
