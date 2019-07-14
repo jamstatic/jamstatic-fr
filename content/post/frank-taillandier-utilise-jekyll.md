@@ -5,9 +5,9 @@ date: 2016-04-12
 author: bertrand
 published: false
 categories:
-  - jekyll
----
+- jekyll
 
+---
 {{% intro %}} Cet article est le premier d’une série qui présente des
 utilisateurs de Jekyll, nous commençons avec Frank Taillandier, contributeur à
 Jamstatic. Si vous souhaitez vous aussi répondre à ces questions, merci de
