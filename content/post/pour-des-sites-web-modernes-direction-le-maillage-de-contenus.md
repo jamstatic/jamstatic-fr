@@ -100,27 +100,26 @@ Une autre marque numérique bien connue qui utilisait Sitecore comme plate de d�
 
 Une meilleure description de cette approche, qui consiste à architecturer des sites web grâce à des APIs serait peut-être "modulaire" ou "microservices" plutôt que "headless". 
 
-À l'aide de ces solutions, les clients peuvent choisir des services à la carte. La principale proposition de valeur des solutions globales comme Sitecore ou AEM a diminuée car elles ne procurent pas la meilleure solution possible à un besoin donné.
+À l'aide de ces solutions, les clients peuvent choisir des services à la carte. La principale proposition de valeur des solutions globales comme Sitecore ou AEM a diminué car elles ne fournissent pas la meilleure réponse possible à un besoin donné.
 
-With these solutions available, customers can pick vendors _à la carte_. The core value proposition of one-stop solutions like Sitecore or AEM has diminished as they do not provide the best solution for any given need.
+Comme souvent en informatique, les entreprises qui ont acheté pour ces types de CMS en sont encore et toujours rendues à se demander si elles doivent s'en tenir à leur application propriétaire actuelle, avec des modules certes intégrés mais inférieurs ou bien trouver un moyen pour intégrer les meilleures solutions sur le marché ?
 
-Enterprises who have purchased these CMS solutions are left asking themselves one of the oldest questions in corporate IT: should they stick with their single-vendor application suite, with inferior but integrated modules? Or, unlock a way to integrate the best-of-breed solutions?
-
-![](/v1563012604/jamstatic/headless-cms-landscape.png) The headless CMS landscape
+![](/v1563012604/jamstatic/headless-cms-landscape.png) 
+L'écosystème des CMS découplés
 
 ### Rendre l'intégration possible à l'aide du maillage de contenus
 
-Over the next three posts, we’ll discuss the rise of a content mesh that makes integration _feasible_ for most digital agencies and enterprise customers.
+Les évolutions technologiques qui permettent le maillage de contenus rendent cette intégration faisable pour la plupart des agences spécialisées dans le numérique et des entreprises.
 
 ## L'évolution du développement Web moderne
 
-Developing for the web is _hard_. With millions of properties on the Internet, website developers have to create experiences that are compelling enough to engage audiences when new destinations are only a few keystrokes away.
+Le développement Web c'est difficile. Parmi les millions de sites, les développeurs web doivent créer des expériences suffisamment remarquables afin de pouvoir retenir l'attention de leur audience, alors que de nouvelles destinations sont à portée de clic.
 
-And while creating rich user experiences is never an easy task, walled-garden CMS development environments introduce additional challenges. Teams are forced to work around them, but ultimately deliver less rich experiences at higher cost.
+Et comme si la création d'expérience riche pour l'utilisateur n'était pas assez difficile en soi, les environnements de dévelopment CMS dorés ne font rien pour faciliter la tâche, au contraire. Obligeant ainsi les équipes à contourner les limitations, pour au final créer des expériences pas aussi riches à un coût plus élevé.
 
 ### Les CMS traditionnels présentent des défis
 
-Some challenges of traditional CMS development environments include:
+Parmi les défis que proposent les environnements de développement des CMS propriétaires traditionnels: 
 
 * **Walled-garden development.** Work on projects across CMS systems often requires reimplementing basic functionality like carousels or banners. Development can be blocked due to CMS access restrictions or code freezes. Upgrade paths can be challenging when CMSs don’t support component UI versioning.
 * **Maintaining local environments**. Setting up a local app server and database and keeping it up to date with team members’ changes is time-consuming, especially when switching between projects or returning after a gap in development.
