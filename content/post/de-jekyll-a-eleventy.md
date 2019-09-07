@@ -24,27 +24,27 @@ Jekyll est un générateur que je continue d'apprécier, d'utiliser et de suivre
 
 ## Choisir un générateur de site
 
-Les générateurs de site statique gagnent toujours plus en popularité, grâce à l'omniprésence des APIs, aux processus de développement basés sur Git, à la puissance des frameworks JavaScript, aux CMS headless et aux couches de données unifiées fournies par GraphQL. Ils sont devenus le choix de raisons pour tous types de sites web.
+Les générateurs de site statiques gagnent toujours plus en popularité, grâce à l'omniprésence des APIs, aux processus de développement basés sur Git, à la puissance des frameworks JavaScript, aux CMS headless et aux couches de données unifiées fournies par GraphQL. Ils sont devenus un choix raisonnable pour tous types de sites web.
 
-Mon site tournait précédemment sous Jekyll, que j'apprécie pour sa facilité d'utilisation et sa flexibilité. Toutefois, il était devenu plus lent que d'autres générateurs plus récents et me forçait à maintenir un environnement Ruby à jour. J'ai testé plusieurs concurrents avant de finalement restreindre ma liste de choix à [Hugo](https://gohugo.io/) et [Eleventy](https://www.11ty.io/).
+Mon site tournait précédemment sous Jekyll, que j'apprécie pour sa facilité d'utilisation et sa flexibilité. Toutefois, il était devenu plus lent que d'autres générateurs plus récents et me forçait à maintenir un environnement Ruby à jour. J'ai testé plusieurs outils, avant de finalement restreindre ma liste de choix à [Hugo](https://gohugo.io/) et [Eleventy](https://www.11ty.io/).
 
 ### Hugo
 
-Écrit en Go, Hugo est hyper rapide. il est également installé sous forme de fichier binaire, de manière à ne pas à avoir à maintenir un environnement Go. Je me suis même amusé à entièrement redévelopper la v2 de mon site avec Hugo et j'ai vraiment adoré.
+Écrit en Go, Hugo est extrèmement rapide. il est également disponible sous forme de fichier binaire, ce qui ne vous force pas à maintenir un environnement Go. A titre d'expérience, j'ai développé la version 2 de mon site avec Hugo et l'exercice a été concluant.
 
-Pour moi ses seuls inconvénients sont la [syntaxe de Go HTML template](https://gohugo.io/templates/introduction/) qui demande pas mal de pratique pour être apprivoisée, et le fait qu'Hugo soit une solution tout en un, ce qui peut se révéler très utile pour les gros projets, mais qui était moins intéressant pour quelqu'un de bricoleur comme moi.
+Cependant, les inconvénients d'Hugo sont pour moi la [syntaxe de Go HTML template](https://gohugo.io/templates/introduction/) qui demande pas mal de pratique pour être apprivoisée, et le fait qu'Hugo soit une solution "tout en un". Cela peut se révéler utile pour les gros projets, mais réduit les possibilités de l'étendre facilement.
 
 ### Eleventy
 
-Ce qui nous amène à Eleventy. Eleventy est écrit en Node, vous avez donc accès à tout l'écosystème de NPM pour l'étendre, il est facile d'utilisation, et il est bien plus rapide que Jekyll (sans atteindre les performances d'Hugo).
+Ce qui nous amène à Eleventy. Eleventy est écrit en Node, vous avez donc accès à tout l'écosystème de NPM pour l'étendre, il est facile d'utilisation, et il est bien plus rapide que Jekyll (sans cependant atteindre les performances d'Hugo).
 
-De plus Eleventy supporte en prime [plusieurs langagues de templating](https://www.11ty.io/docs/languages/).
+De plus Eleventy supporte [plusieurs langagues de templating](https://www.11ty.io/docs/languages/).
 
 #### Configuration
 
-J'ai opté pour le moteur de templating [Nunjucks](https://mozilla.github.io/nunjucks/) de Mozilla, outre cela je n'avais besoin que de fichiers Markdown et HTML.
+J'ai opté pour le moteur de templating [Nunjucks](https://mozilla.github.io/nunjucks/) de Mozilla. Outre cela, je n'avais besoin que de fichiers Markdown et HTML.
 
-Nunjucks n'offre pas de filtres `date` et `limit`, j'ai donc du les ajouter dans mon fichier de configuration `eleventy.js`. J'ai utilisé la très célèbre bibliothèque [`moment.js`](https://momentjs.com/) pour le filtre de date.
+Nunjucks n'offre pas de filtres `date` et `limit`, je les ai donc ajoutés dans mon fichier de configuration `eleventy.js`, en utilisant la bibliothèque [`moment.js`](https://momentjs.com/) pour le filtre de date.
 
 ```js
 const moment = require("moment");
@@ -60,13 +60,13 @@ eleventyConfig.addNunjucksFilter("date", function(date, format) {
 });
 ```
 
-J'utilise [Gulp](https://gulpjs.com/) comme outil de génération, j'ai donc du dire à Eleventy d'ignorer mes assets. J'ai simplement ajouté la ligne suivante au fichier `.eleventyignore` situé à la racine de mon projet :
+J'utilise [Gulp](https://gulpjs.com/) comme outil de génération, j'ai donc dû dire à Eleventy d'ignorer mes assets. Pour ce faire, j'ai simplement ajouté la ligne suivante au fichier `.eleventyignore` situé à la racine de mon projet:
 
 ```
 src/assets/**/*
 ```
 
-L'étape suivante a consisté à ajouter Eleventy à mon fichier `gulpfile.js` et d'utiliser la fonction `child_process` de Node. De cette manière je peux facilement le lancer dans mes commandes `build` et `watch`.
+L'étape suivante a été d'ajouter Eleventy à mon fichier `gulpfile.js` et d'utiliser la fonction `child_process` de Node. De cette manière, je peux facilement intégrer Eleventy à mes commandes `build` et `watch`.
 
 ```js
 // packages
@@ -82,10 +82,11 @@ function build() {
 
 #### Collections
 
-Mon site est simple, je n'avais besoin que de deux collections (blogposts et projects) pour lesquelles j'ai donc crée deux dossiers qui contiennent des fichiers Markdown avec du front matter YAML.
+Mon site est simple, je n'avais besoin que de deux collections (blogposts et projects) pour lesquelles j'ai créé deux dossiers contenant des fichiers Markdown avec du front matter YAML.
 
-Eleventy propose une fonctionnalité très sympa qui vous permet d'utiliser des fichiers JSON nommés comme votre dossier de collection pour déclarer des valeurs front matter communes à tous les fichiers du répertoire courant.
-Par exemple, j'ai utilisé un fichier `blogposts.json` dans mon dossier `blogposts` pour définir le gabarit de page et la structure des permaliens pour tous les articles de blog.
+Eleventy propose une fonctionnalité intéressante qui vous permet d'utiliser des fichiers JSON nommés comme votre dossier de collection pour déclarer des valeurs front matter communes à tous les fichiers du répertoire.
+
+Par exemple, j'ai utilisé un fichier `blogposts.json` dans mon dossier `blogposts` pour définir le layout et la structure des permaliens pour tous les articles de blog.
 
 ```json
 {
@@ -94,7 +95,7 @@ Par exemple, j'ai utilisé un fichier `blogposts.json` dans mon dossier `blogpos
 }
 ```
 
-Les projets quant à eux n'ont pas besoin de pages de détail, j'ai donc mis dans le fichier `projects.json` de mon dossier `projects` la valeur de `permalink` à `false` et je n'ai pas défini de `layout`.
+Les projets quant à eux n'ont pas besoin de pages de détail, j'ai donc spécifié la valeur de `permalink` à `false` dans le fichier `projects.json` de mon dossier `projects` et je n'ai pas défini de `layout`.
 
 ```json
 {
@@ -102,7 +103,7 @@ Les projets quant à eux n'ont pas besoin de pages de détail, j'ai donc mis dan
 }
 ```
 
-Pour créer les deux collections et permettre ainsi à Eleventy de les générer, j'ai utilisé la fonction `getFilteredByGlob( glob )` dans mon fichier `eleventy.js`:
+Pour créer les deux collections et permettre à Eleventy de générer les fichiers HTML, j'ai utilisé la fonction `getFilteredByGlob( glob )` dans mon fichier `eleventy.js`:
 
 ```js
 const moment = require("moment");
@@ -140,9 +141,9 @@ module.exports = function(eleventyConfig) {
 
 #### Les fichiers de données
 
-Eleventy vous laisse aisément travailler avec des fichiers de données aux format JSON ou JS situés par défaut dans le sous-dossier `_data` de votre répertoire d'entrée (`src` dans mon cas).
+Eleventy vous laisse aisément travailler avec des fichiers de données aux format JSON ou JS situés par défaut dans le sous-dossier `_data` de votre répertoire de base (`src` dans mon cas).
 
-J'ai donc utilisé un fichier `./src/_data/site.js` pour définir des variables globales au site auxquelles je peux facilement accéder dans n'importe quel gabarit de page en appelant le nom du fichier de données et une des clés de l'objet correspondant.
+J'ai donc utilisé un fichier `./src/_data/site.js` pour définir des variables globales du site, auxquelles je peux facilement accéder dans n'importe quel fichier en utilisant le nom du fichier de données et une des clés de l'objet correspondant.
 
 ```js
 module.exports = {
@@ -164,13 +165,13 @@ La valeur de `site.buildTime` peut maintenant être utilisée dans le pied de pa
 </div>
 ```
 
-### Gabarits Nunjucks
+### Layouts Nunjucks
 
-J'ai choisi Nunjucks notamment pour son mécanisme d'héritage de gabarit. Je peux définir un gabarit de base et ensuite l'étendre avec d'autres gabartis si besoin.
+J'ai choisi Nunjucks notamment pour son mécanisme d'héritage de layouts. Je peux définir un layout de base et ensuite l'étendre avec d'autres layouts si besoin.
 
 #### Blogposts
 
-Boucler sur la collection `blogposts` pour afficher les titres et la date de publication n'est pas très compliqué:
+Boucler sur la collection `blogposts` pour afficher les titres et les dates de publication n'est pas très compliqué:
 
 ```twig
 {% for post in collections.blogposts | reverse %}
@@ -187,7 +188,7 @@ Boucler sur la collection `blogposts` pour afficher les titres et la date de pub
 {% endfor %}
 ```
 
-J'utilise un gabarit dédié pour afficher le détail de chaque article de blog. Le fichier `_includes/layouts/blogpost.nkj` appelle mon gabarit principal et ajoute l'image associée à l'article de blog, ainsi que le contenu Markdown au bloc `content` :
+J'utilise un layout dédié pour afficher le détail de chaque article de blog. Le fichier `_includes/layouts/blogpost.nkj` appelle mon layout principal et ajoute l'image associée à l'article de blog, ainsi que le contenu Markdown au bloc `content` :
 
 ```twig
 {% extends "layouts/base.njk" %}
@@ -239,7 +240,7 @@ J'utilise un gabarit dédié pour afficher le détail de chaque article de blog.
 
 ### Projects
 
-La même logique est appliquée pour afficher les projets avec une petite nuance. Comme il n'y a pas de gabarit dédié pour la collection `projects`, il nous faut utiliser [`templateContent`](https://www.11ty.io/docs/collections/#collection-item-data-structure) pour afficher le contenu des fichiers Markdown. Voici une version simplifiée du code :
+La même logique est appliquée pour afficher les projets, avec une petite nuance. Comme il n'y a pas de layout dédié pour la collection `projects`, il nous faut utiliser [`templateContent`](https://www.11ty.io/docs/collections/#collection-item-data-structure) pour afficher le contenu des fichiers Markdown. Voici une version simplifiée du code :
 
 ```twig
 {% for project in collections.projects | reverse %}
