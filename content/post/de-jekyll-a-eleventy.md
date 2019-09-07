@@ -44,7 +44,7 @@ De plus Eleventy supporte [plusieurs langagues de templating](https://www.11ty.i
 
 J'ai opté pour le moteur de templating [Nunjucks](https://mozilla.github.io/nunjucks/) de Mozilla. Outre cela, je n'avais besoin que de fichiers Markdown et HTML.
 
-Nunjucks n'offre pas de filtres `date` et `limit`, je les ai donc ajoutés dans mon fichier de configuration `eleventy.js`, en utilisant la librairie [`moment.js`](https://momentjs.com/) pour le filtre de date.
+Nunjucks n'offre pas de filtres `date` et `limit`, je les ai donc ajoutés dans mon fichier de configuration `eleventy.js`, en utilisant la bibliothèque [`moment.js`](https://momentjs.com/) pour le filtre de date.
 
 ```js
 const moment = require("moment");
