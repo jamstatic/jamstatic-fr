@@ -103,7 +103,7 @@ Les projets quant à eux n'ont pas besoin de pages de détail, j'ai donc spécif
 }
 ```
 
-Pour créer les deux collections et permettre à Eleventy générer les fichiers HTML, j'ai utilisé la fonction `getFilteredByGlob( glob )` dans mon fichier `eleventy.js`:
+Pour créer les deux collections et permettre à Eleventy de générer les fichiers HTML, j'ai utilisé la fonction `getFilteredByGlob( glob )` dans mon fichier `eleventy.js`:
 
 ```js
 const moment = require("moment");
