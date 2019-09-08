@@ -24,33 +24,33 @@ Voici l'arborescence de fichiers avec laquelle nous allons travailler. C'est une
 ```text
 +-- src
   +-- _data
-      +-- site.js
-      +-- footer.js
-      +-- header.js
+    +-- site.js
+    +-- footer.js
+    +-- header.js
   +-- _includes
-      +-- layouts
-          +-- base.njk
-      +-- partials
-          +-- header.njk
-          +-- footer.njk
+    +-- layouts
+      +-- base.njk
+    +-- partials
+      +-- header.njk
+      +-- footer.njk
   +-- en
-      +-- pages
-          +-- index.html
-          +-- blog.html
-          +-- contact.html
-      +-- posts
-          +-- yyyy-mm-dd-some-blogpost.md
-          +-- posts.json
-      +-- en.json
+    +-- pages
+      +-- index.html
+      +-- blog.html
+      +-- contact.html
+    +-- posts
+      +-- yyyy-mm-dd-some-blogpost.md
+      +-- posts.json
+    +-- en.json
   +-- fr
-      +-- pages
-          +-- index.html
-          +-- blog.html
-          +-- contact.html
-      +-- posts
-          +-- yyyy-mm-dd-some-blogpost.md
-          +-- posts.json
-      +-- fr.json
+    +-- pages
+      +-- index.html
+      +-- blog.html
+      +-- contact.html
+    +-- posts
+      +-- yyyy-mm-dd-some-blogpost.md
+      +-- posts.json
+    +-- fr.json
 +-- .eleventy.js
 ```
 
@@ -58,7 +58,7 @@ Voici l'arborescence de fichiers avec laquelle nous allons travailler. C'est une
 
 La première consiste à créer nos locales à l'aide [des fichiers de données pour les répertoires](https://www.11ty.io/docs/data-template-dir/).
 
-Pour cela il nous suffit d'ajouter les fichiers `en.json` and `fr.json` dans nos répertoires de langue.  Dans chacun d'entre eux, nous définissons une clé `locale`. Elle va permettre d'accéder aux valeurs correspondantes dans tous les fichiers de gabarit présents dans les sous-répertoires d'un dossier de langue.
+Pour cela il nous suffit d'ajouter les fichiers `en.json` and `fr.json` dans nos répertoires de langues.  Dans chacun d'entre eux, nous définissons une clé `locale`. Elle va permettre d'accéder aux valeurs correspondantes dans tous les fichiers de layout présents dans les sous-répertoires d'un dossier de langue.
 
 Par exemple, notre fichier `fr.json` contient :
 
@@ -68,12 +68,13 @@ Par exemple, notre fichier `fr.json` contient :
 }
 ```
 
-`{{ locale }}` va donc maintenant retourner "fr" ou "en" pour chacun de nos fichiers de gabarit, en fonction de sa position dans notre arborescence de fichiers.
+`{{ locale }}` va donc maintenant retourner "fr" ou "en" pour chacun de nos fichiers de layout, en fonction de sa position dans notre arborescence de fichiers.
 
 ## Filtre de localisation de date
 
-Nunjucks ne possède pas de filtre pour les dates. Nous pouvons en créer un à l'aide de `moment.js` et lui passer la valeur de notre `locale` pour qu'il localise les dates pour nous, une partie toujours importante des projets multilingues.
-Pour se faire, nous allons insérer le code suivant dans notre fichier de configueration `eleventy.js` :
+Nunjucks ne possède pas de filtre pour les dates. Nous pouvons en créer un à l'aide de `moment.js` et lui passer la valeur de notre `locale` pour qu'il localise les dates pour nous, ce qui est toujours une partie importante des projets multilingues.
+
+Pour ce faire, nous allons insérer le code suivant dans notre fichier de configueration `eleventy.js` :
 
 ```js
 // date filter (localized)
@@ -84,7 +85,7 @@ eleventyConfig.addNunjucksFilter("date", function(date, format, locale) {
 });
 ```
 
-À présent, nous pouvons utiliser ce filtre dans nos gabarits et lui passer le paramètre `locale`. Notez bien que comme nous avons défini la `locale` par défaut à `en`, nous pouvons omettre de la préciser pour les dates purement numériques. Un petit exemple :
+À présent, nous pouvons utiliser ce filtre dans nos layouts et lui passer le paramètre `locale`. Notez bien que comme nous avons défini la `locale` par défaut comme `en`, nous pouvons omettre de la préciser pour les dates purement numériques. Un petit exemple :
 
 ```twig
 <p><time datetime="{{ post.date | date('Y-MM-DD') }}">{{ post.item|date("DD MMMM Y", locale) }}</time></p>
@@ -111,9 +112,9 @@ module.exports = function(eleventyConfig) {
 };
 ```
 
-Comme nos fichiers de contenu Markdown se trouvent dans des sous-répertoires de nos dossier de langue, la très utile variable `locale` est accessible. Nous pouvons par exemple l'utiliser pour créer les permaliens de tous nos articles.
+Comme nos fichiers de contenu Markdown se trouvent dans des sous-répertoires de nos dossiers de langues, la variable `locale` est accessible. Nous pouvons par exemple l'utiliser pour créer les permaliens de tous nos articles.
 
-Plutôt que d'ajouter une variable `permalink` dans le front matter de chaque fichier, nous pouvons créer un fichier de données `posts.json` ou `posts.js` dans chacun de nos dossiers `posts` avec le contenu suivant :
+Plutôt que d'ajouter une variable `permalink` dans le front matter de chaque fichier, nous pouvons créer un fichier de données `posts.json` dans chacun de nos dossiers `posts` avec le contenu suivant:
 
 ```js
 {
@@ -121,7 +122,7 @@ Plutôt que d'ajouter une variable `permalink` dans le front matter de chaque fi
 }
 ```
 
-Nous avons ainsi localisé toutes les pages de détail de tous nos articles, il nous reste encore à boucler sur nos collections de langue dans les différentes pages `blog.njk`.
+Nous avons ainsi localisé toutes les pages de détail de tous nos articles, il nous reste encore à boucler sur nos collections dans les différentes pages `blog.njk` de nos différentes langues.
 
 ```twig
 {% for post in collections.posts_en | reverse %}
@@ -152,9 +153,9 @@ Notez que nous pourrions aussi aussi utiliser pour nos collections notre variabl
 
 ## Localisation des layouts et des fichiers partiels
 
-Alors que la duplication de nos pages et de nos articles est toute logique, nous ne voulons pas en faire de même pour nos layouts et nos fichiers partiels.
+Alors que la duplication de nos pages et de nos articles est à priori logique, nous ne voulons pas faire de même pour nos layouts et nos fichiers partiels.
 
-Fort heureusement pour nous, nous pouvons éviter cela en y insérant des traductions de chaînes de caractères. Pour ce faire, nous devons créer [des fichiers de données génériques](https://www.11ty.io/docs/data-global/) qui contiendront nos traductions sous forme de paire clés/valeurs. Nous pourrons ensuite faire référence dynamiquement à ces clés dans nos fichiers partiels et de layouts à l'aide de notre chère variable `locale`.
+Fort heureusement, nous pouvons éviter cela en traduisant simplement certaines chaînes de caractères. Pour ce faire, nous devons créer [des fichiers de données génériques](https://www.11ty.io/docs/data-global/) qui contiendront nos traductions sous forme de paire clés/valeurs. Nous pourrons ensuite faire référence dynamiquement à ces clés dans nos fichiers partiels et de layouts à l'aide de notre chère variable `locale`.
 
 ### Layouts
 
@@ -197,7 +198,7 @@ permalink: /{{ locale }}/index.html
 {% endblock %}
 ```
 
-Puisque ce gabarit étend le fichier `./src/_includes/layouts/base.njk`, les variables Nunjucks déclarées dans le gabarit enfant ainsi que les variables  globales d'Eleventy sont également accessibles dans ce fichier.
+Puisque ce layout étend le fichier `./src/_includes/layouts/base.njk`, les variables Nunjucks déclarées dans le gabarit enfant ainsi que les variables globales d'Eleventy sont également accessibles dans ce fichier.
 
 ```twig
 <!DOCTYPE html>
@@ -233,8 +234,7 @@ Puisque ce gabarit étend le fichier `./src/_includes/layouts/base.njk`, les var
 
 ### Fichiers partiels
 
-La traduction de fichiers partiels comme `./src/_includes/partials/footer.njk`
-est basée sur le même principe.
+La traduction de fichiers partiels comme `./src/_includes/partials/footer.njk` est basée sur le même principe.
 
 Premièrement, nous créons un fichier `./data/footer.js` et nous utilisons nos locales comme clés.
 
