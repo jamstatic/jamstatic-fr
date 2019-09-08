@@ -145,12 +145,10 @@ Nous avons ainsi localisé toutes les pages de détail de tous nos articles, il 
 Notez que nous pourrions aussi aussi utiliser pour nos collections notre variable `locale`. Il faudrait pour cela utiliser à la place une notation entre crochets pour concaténer les chaînes de caractères.
 
 ```twig
-{% raw %}
 {% set posts = collections["posts_" + locale] %}
 {% for post in posts %}
   {# loop content #}
 {% endfor %}
-{% endraw %}
 ```
 
 ## Localisation des layouts et des fichiers partiels
