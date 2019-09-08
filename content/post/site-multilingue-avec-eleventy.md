@@ -1,5 +1,5 @@
 ---
-title: "Des sites multilingues avec Eleventy"
+title: "Un site multilingue avec Eleventy"
 date: 2019-09-07T14:27:07+02:00
 lastmod: 2019-09-07T14:27:07+02:00
 description: "Comment gérer plusieurs langues sur son site Eleventy à l'aide de fichiers de données et de collections."
