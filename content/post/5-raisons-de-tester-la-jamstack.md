@@ -1,19 +1,26 @@
 ---
-title: "Passer au statique : 5 raisons de tester la JAMstack sur votre prochain projet"
-description: Référencement, performance, sécurité, automatisation, communauté grandissante, les raisons de passer au statique ne manquent pas.
+title: 'Passer au statique : 5 raisons de tester la JAMstack sur votre prochain projet'
+description: Référencement, performance, sécurité, automatisation, communauté grandissante,
+  les raisons de passer au statique ne manquent pas.
 date: 2017-03-16
 commments: true
 source:
   author: Tom Bennet
-  title: "Go static: 5 reasons to try JAMstack on your next project"
+  title: 'Go static: 5 reasons to try JAMstack on your next project'
   url: https://builtvisible.com/go-static-try-jamstack/
+  lang: ''
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346582/go_static.jpg
+- https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346582/go_static.jpg
 categories:
-  - jamstack
-  - headless
----
+- jamstack
+- headless
+author: ''
+lastmod: 
+aliases: []
+canonical_url: ''
+keywords: []
 
+---
 {{% intro %}}
 
 Adopter une stack de développement Web moderne pour pouvoir
@@ -24,6 +31,8 @@ que des gains engendrés. Vous trouverez également des lectures pour approfondi
 votre connaissance sur le sujet.
 
 {{% /intro %}}
+
+***
 
 Que ce soit pour mettre en place un blog, configurer un site de e-commerce ou
 développer une single page application en JavaScript, le temps où on se
@@ -99,9 +108,9 @@ que de se reposer sur des règles de réécritures complexes d’URLs côté ser
 pour que votre contenu soit accessible via des URLS lisibles
 (`example.com/?p=12345` → `example.com/clair-et-net/`), vos URLs sont ce que
 vous voulez qu'elles soient : elles reflètent simplement l’emplacement des
-fichiers de votre site[^1].
+fichiers de votre site\[^1\].
 
-[^1]: NdT. Les URLs peuvent être également définies dans les métadonnées des fichiers de contenu.
+\[^1\]: NdT. Les URLs peuvent être également définies dans les métadonnées des fichiers de contenu.
 
 Le risque de duplication de contenus est également très réduit. Beaucoup de CMS
 génèrent automatiquement des pages pour les catégories, les tags et les archives
@@ -139,7 +148,7 @@ avec
 ont montré que même avec un site dynamique très optimisé (et une solide
 stratégie de cache), le temps de début de chargement était en moyenne **six fois
 plus rapide** avec une version statique distribuée via CDN. Smashing Magazine
-ont d’ailleurs [migré vers la JAMstack et Netlify]({{< relref
+ont d’ailleurs \[migré vers la JAMstack et Netlify\]({{< relref
 "smashing-mag-va-dix-fois-plus-vite.md" >}}) à l’occasion de leur refonte.
 
 La mise en cache s'en retrouve grandement simplifiée. Avec WordPress (ou
@@ -297,29 +306,12 @@ leur apparition un peu plus chaque jour.
 
 ### Ressources
 
-- Critiques de générateurs de site statique : Jekyll, Middleman, Roots, Hugo –
-  [Smashing Magazine](https://www.smashingmagazine.com/2015/11/static-website-generators-jekyll-middleman-roots-hugo-review/)
-
-- Utilisation d’un générateur de site statique à grande échelle : leçons
-  apprises –
-  [Smashing Magazine](https://www.smashingmagazine.com/2016/08/using-a-static-site-generator-at-scale-lessons-learned/)
-
-- JAMstack pour les clients : bénéfices, CMS pour site statique et limitations –
-  [Snipcart](https://snipcart.com/blog/jamstack-clients-static-site-cms)
-
-- Passez au statique sans perdre votre serveur –
-  [Netlify](https://www.netlify.com/blog/2016/03/10/go-static-without-losing-your-server/)
-
-- C’est quoi un CMS headless ? –
-  [CSS-Tricks](https://css-tricks.com/what-is-a-headless-cms/)
-
-- Gestionnaires de contenus pour sites statiques –
-  [headlesscms.org](https://headlesscms.org/)
-
-- JAMstack | JavaScript, APIs et Markup – [jamstack.org](https://jamstack.org/)
-
-- Générateurs de site statique open-source –
-  [staticgen.com](https://www.staticgen.com/)
-
-- {static is} The New Dynamic –
-  [thenewdynamic.org](https://www.thenewdynamic.org/)
+* Critiques de générateurs de site statique : Jekyll, Middleman, Roots, Hugo – [Smashing Magazine](https://www.smashingmagazine.com/2015/11/static-website-generators-jekyll-middleman-roots-hugo-review/)
+* Utilisation d’un générateur de site statique à grande échelle : leçons apprises – [Smashing Magazine](https://www.smashingmagazine.com/2016/08/using-a-static-site-generator-at-scale-lessons-learned/)
+* JAMstack pour les clients : bénéfices, CMS pour site statique et limitations – [Snipcart](https://snipcart.com/blog/jamstack-clients-static-site-cms)
+* Passez au statique sans perdre votre serveur – [Netlify](https://www.netlify.com/blog/2016/03/10/go-static-without-losing-your-server/)
+* C’est quoi un CMS headless ? – [CSS-Tricks](https://css-tricks.com/what-is-a-headless-cms/)
+* Gestionnaires de contenus pour sites statiques – [headlesscms.org](https://headlesscms.org/)
+* JAMstack | JavaScript, APIs et Markup – [jamstack.org](https://jamstack.org/)
+* Générateurs de site statique open-source – [staticgen.com](https://www.staticgen.com/)
+* {static is} The New Dynamic – [thenewdynamic.org](https://www.thenewdynamic.org/)
