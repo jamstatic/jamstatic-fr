@@ -212,9 +212,9 @@ body {
 
 .intro {
   font-family: $title-font-family;
-  font-weight: 900;
   line-height: $ms2;
-  font-size: 1.2em;
+  font-size: 1.25em;
+  display: block;
 }
 
 .marker {
