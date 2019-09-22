@@ -840,9 +840,9 @@ body {
 
 .intro {
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-weight: 900;
   line-height: 1.44;
-  font-size: 1.2em; }
+  font-size: 1.25em;
+  display: block; }
 
 .marker {
   background-color: rgba(255, 228, 0, 0.4);
