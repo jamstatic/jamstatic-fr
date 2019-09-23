@@ -2,7 +2,7 @@
 title: "Consommer l'API GraphQL d'un CMS headless avec Eleventy"
 date: 2019-09-08T23:00:48+02:00
 lastmod: 2019-09-08T23:00:48+02:00
-draft: true
+draft: false
 description: "Eleventy permet de récupérer les données d'une API GraphQL pour générer des pages statiques, en lieu et place des fichiers Markdown."
 categories:
   - eleventy
@@ -27,26 +27,26 @@ Les CMS basés sur Git comme [Netlify CMS](https://www.netlifycms.org/) ou [Fore
 
 - code et contenu partagent le même workflow
 - le contenu est versionné par Git avec un historique clair
-- le conteny stocké sous forme de fichiers texte (markdown, YAML, JSON, etc.) est extrêmement portable
+- le contenu stocké sous forme de fichiers texte (markdown, YAML, JSON, etc.) est extrêmement portable
 
 ### Les APIs de CMS headless
 
-Les CMS basés sur des APIs comme [Contentful](https://www.contentful.com/) ou [DatoCMS](https://www.datocms.com/) vont sauvegarder vos contenus dans le Cloud et vont le rendre accessible via une API. GraphQL est en passe de devenir une façon populaire de requêter et de tirer parti de ces APIs. Selon moi, cette approche présente de l'intérêt quand :
+Les CMS basés sur des APIs comme [Contentful](https://www.contentful.com/) ou [DatoCMS](https://www.datocms.com/) vont sauvegarder vos contenus dans le Cloud et vont le rendre accessible via une API. GraphQL est en passe de devenir une façon populaire d'interroger et de tirer parti de ces APIs. Selon moi, cette approche présente de l'intérêt lorsque :
 
 - le contenu est destiné à être publié sur différentes plateformes
-- la modélisation du contenu est hautement relationnelle
+- vos modèles de données sont hautement relationnels
 
 ## Structure du projet
 
-[Eleventy](https://www.11ty.io/)(11ty), qui est en passe de devenir mon générateur de site statique de prédilection, est à même de pouvoir travailler avec les deux approches de façon assez élégante et avec un minimum d'effort.
+[Eleventy](https://www.11ty.io/)(11ty), qui est en passe de devenir mon générateur de site statique de prédilection, est à même de pouvoir travailler avec les deux approches de façon assez élégante et avec un minimum d'efforts.
 
-Qui aurait pensé que requêter une API GraphQL et utiliser les données retournées pour générer des pages statiques pourrait se faire de manière intuitive ?
+Qui aurait pensé faire une requète sur une API GraphQL et utiliser les données retournées pour générer des pages statiques serait aussi simple ?
 
 [DatoCMS](https://www.datocms.com/) est un CMS headless que je recommande à mes clients. Son prix est raisonnable, il propose des options suffisantes et reste très flexible, il gère élégamment l'internationalisation, et propose une bonne expérience utilisateur et de développement.
 
 Si cet article est écrit pour DatoCMS, cette méthodologie est appliquable à tout CMS headless offrant une API GraphQL.
 
-Voici l'arborescence de fichiers très classique avec laquelle nous allons travailler dans Eleventy :
+Voici l'arborescence de fichiers classique avec laquelle nous allons travailler dans Eleventy :
 
 ```text
 +-- src
@@ -67,17 +67,15 @@ Voici l'arborescence de fichiers très classique avec laquelle nous allons trava
 
 ## Configuration de DatoCMS
 
-Après avoir crée son compte, nous avons besoin d'un modèle de données et de quelques entrées dans DatoCMS. J'ai crée un modèle de données nommé `blogposts` avec une série de champs et quelques entrées.
+Après avoir crée notre compte, nous avons besoin d'un modèle de données et de quelques entrées dans DatoCMS. J'ai crée un modèle de données nommé `blogposts` avec une série de champs et quelques entrées.
 
-Nous pouvons alors utiliser notre [token d'API](https://www.datocms.com/docs/content-delivery-api/authentication) pour nous connecter à [l'exporateur de l'API GraphQL](https://cda-explorer.datocms.com/) afin de visualiser les requêtes et les options disponibles et le JSON qui nous est retourné.
+Nous pouvons alors utiliser notre [token d'API](https://www.datocms.com/docs/content-delivery-api/authentication) pour nous connecter à [l'explorateur de l'API GraphQL](https://cda-explorer.datocms.com/) afin de visualiser les requêtes et les options disponibles, ainsi que le JSON qui nous est retourné.
 
-Une fois encore, la plupart des CMS headless avec une API GraphQL offre cette fonctionnalité d'une manière ou d'une autre.
+Une fois encore, la plupart des CMS headless avec une API GraphQL offrent cette fonctionnalité d'une manière ou d'une autre.
 
 ## Configuration d'Eleventy
 
-Nous allons devoir nous authentifier au serveur GraphQL de DatoCMS avec notre [token d'API](https://www.datocms.com/docs/content-delivery-api/authentication).
-Nous pouvons utiliser [`dotenv`](https://www.npmjs.com/package/dotenv) pour le stocker dans un fichier `.env` que nous ajouterons à notre fichier `.gitignore` pour éviter qu'il ne soit stocké dans notre dépôt Git. Après avoir installé le paquet, nous créons le fichier `.env`
-à la racine du projet et y ajoutons le token de l'API de DatoCMS :
+Nous allons devoir nous authentifier au serveur GraphQL de DatoCMS avec notre [token d'API](https://www.datocms.com/docs/content-delivery-api/authentication). Nous pouvons utiliser [`dotenv`](https://www.npmjs.com/package/dotenv) pour le stocker dans un fichier `.env` que nous ajouterons à notre fichier `.gitignore` pour éviter qu'il ne soit stocké dans notre dépôt Git. Après avoir installé le paquet, nous créons le fichier `.env` à la racine du projet et y ajoutons le token de l'API de DatoCMS :
 
 ```text
 DATOCMS_TOKEN="fak3t0k3n3c52750d04b3d92383b1d"
@@ -93,22 +91,21 @@ require("dotenv").config();
 
 ## Utilisation des fichiers de données JavaScript
 
-Au lieu d'aller piocher nos données à l'aide de collections et de fichiers Markdown avec du front matter en YAML, nous allons utiliser [les fichiers de données JavaScript d'Eleventy](https://www.11ty.io/docs/data-js/). Nous utiliserons le fichier `src/_data/blogposts.js` pour nous connecter à [l'API de livraison de contenu](https://www.datocms.com/docs/content-delivery-api/) de DatoCMS avant la génération du site afin d'exporter un fichier JSON contenant tous les articles de blog avec les champs dont nous avons besoin. Le contenu de ce fichier sera accessible dans nos templates via l'objet `blogposts`.
+Au lieu d'aller piocher nos données à l'aide de collections et de fichiers Markdown avec du front matter en YAML, nous allons utiliser [les fichiers de données JavaScript d'Eleventy](https://www.11ty.io/docs/data-js/). Nous utiliserons le fichier `src/_data/blogposts.js` pour nous connecter à [la content delivery API](https://www.datocms.com/docs/content-delivery-api/) de DatoCMS lors de la génération du site, afin d'exporter un fichier JSON contenant tous les articles de blog avec les champs dont nous avons besoin. Le contenu de ce fichier sera accessible dans nos templates via l'objet `blogposts`.
 
-Eleventu sera alors en mesure d'utiliser ce fichier JSON pour générer les pages de détail et d'index de notre blog.
+Eleventy sera alors en mesure d'utiliser ce fichier JSON pour générer les pages de détail et d'index de notre blog.
 
 Çi-dessous, le fichier complet nécessaire pour récupérer tous nos articles de blog, qui se base sur [le code de la requête en Vanilla JS](https://www.datocms.com/docs/content-delivery-api/first-request#vanilla-js-exampl) donné en exemple dans la documentation de DatoCMS.
 
-Afin de miniser les dépendances, j'ai privilégier l'utilisation de `fetch` en Node à celle d'Appolo et consorts.
+Afin de miniser les dépendances, j'ai privilégié l'utilisation de `node-fetch` à celle d'Appolo et consorts.
 
-Par défaut l'API GraphQL de DatoCMS limite à 100 le nombre d'enregistrements retournés par requête (merci à [Dan Fascia](https://twitter.com/danfascia) de me l'avoir fait remarqué). Si notre blog comporte plus de 100 entrées, il va donc nous falloir faire plusieurs requêtes et concaténer tous les résultats pour récupérer l'intégralité de nos articles de blog.
-
+Par défaut l'API GraphQL de DatoCMS limite à 100 le nombre d'enregistrements retournés par requête (merci à [Dan Fascia](https://twitter.com/danfascia) pour sa remarque). Si notre blog comporte plus de 100 entrées, il va donc nous falloir faire plusieurs requêtes et concaténer les résultats pour récupérer l'intégralité de nos articles de blog.
 
 ```js
 // paquets requis
 const fetch = require("node-fetch");
 
-// token de DatoCMS 
+// token de DatoCMS
 const token = process.env.DATOCMS_TOKEN;
 
 // récupération des articles de blog
@@ -129,7 +126,7 @@ async function getAllBlogposts() {
   // Effectuer des requpêtes jusqu'à ce que makeNewQuery passe à faux
   while (makeNewQuery) {
     try {
-      // Initialisation du téléchargement 
+      // Initialisation du téléchargement
       const dato = await fetch("https://graphql.datocms.com/", {
         method: "POST",
         headers: {
@@ -172,7 +169,7 @@ async function getAllBlogposts() {
       // Gestion des erreurs DatoCMS
       if (response.errors) {
         let errors = response.errors;
-        errors.map(error => {
+        errors.map((error) => {
           console.log(error.message);
         });
         throw new Error("Aborting: DatoCMS errors");
@@ -195,7 +192,7 @@ async function getAllBlogposts() {
   }
 
   // mise en forme de l'objet blogposts
-  const blogpostsFormatted = blogposts.map(item => {
+  const blogpostsFormatted = blogposts.map((item) => {
     return {
       id: item.id,
       date: item._createdAt,
@@ -217,18 +214,17 @@ async function getAllBlogposts() {
 module.exports = getAllBlogposts;
 ```
 
-Plutôt que d'utiliser directement les données de la réponse JSON, je la mets généralement en forme pour améliorer la maintenabilité future de mes templates. Si quelque chose au niveau du CMS, je sais que j'aurais seulement à mettre à jour les fichiers de données,  et non tous les templates qui les utilisent.
-
+Plutôt que d'utiliser directement les données de la réponse JSON, je la mets généralement en forme pour améliorer la maintenabilité future de mes templates. Si quelque chose change au niveau du CMS, je sais que j'aurais seulement à mettre à jour les fichiers de données, et non tous les templates qui les utilisent.
 
 ### Les images et les vignettes
 
-Les fichiers et les images uploadés dans DatoCMS sont stockés sur [Imgix](https://www.imgix.com/), nous pouvons donc ahouter [des paramètres à chaque URL d'images](https://docs.imgix.com/apis/url) pour les redimensionner, les retailler et les manipuler de diverses manières. Ces transformations se vont à la volée et sont ensuite mises en cache sur le CDN pour les utilisations ultérieures.
+Les fichiers et les images uploadés dans DatoCMS sont stockés sur [Imgix](https://www.imgix.com/), nous pouvons donc ajouter [des paramètres à chaque URL d'images](https://docs.imgix.com/apis/url) pour les redimensionner, les retailler et les manipuler de diverses manières. Ces transformations se vont à la volée et sont ensuite mises en cache sur le CDN pour les utilisations ultérieures.
 
 La majorité des CMS headless offrent des fonctionnalités similaires, soit en intégrant des services tiers comme [Cloudinary](https://cloudinary.com/) ou [Uploadcare](https://uploadcare.com/), soit en proposant leur propre API pour les images.
 
 ### Champs relationnels
 
-L'API GraphQL de DatoCMS gère très bien les structures de données hautement imbriquées et vous permettra de récupérer les données voulues dans vos champs relationnels. Toutefois, j'adopte généralement une approche plus simple : 
+L'API GraphQL de DatoCMS gère très bien les structures de données hautement imbriquées et vous permettra de récupérer les données voulues dans vos champs relationnels. Toutefois, j'adopte généralement une approche plus simple :
 
 - Je crée un gros fichier JSON pour chaque type de données (articles, projets, évènements, etc.), chaque élément possède un identifiant unique.
 - Pour les champs relationnels, je récupère seulement l'identifiants des élements relatifs.
@@ -238,9 +234,9 @@ Comme les générateurs de site statique performants comme [Hugo](https://gohugo
 
 ## Générer une liste paginée des articles de blog avec 11ty
 
-Grâce à [la fonctionnalité pagination d'Eleventy](https://www.11ty.io/docs/pagination/), nous pouvons parcourir notre fichier JSON (accessible via l'objet `blogposts`) et générée une liste paginée des articles de blog. Dans cet exemple, nous allons générer une liste de pages contenant chacune 12 éléments, grâce à la clé `size`.
+Grâce à [la fonctionnalité pagination d'Eleventy](https://www.11ty.io/docs/pagination/), nous pouvons parcourir notre fichier JSON (accessible via l'objet `blogposts`) et générer une liste paginée des articles de blog. Dans cet exemple, nous allons générer une liste de pages contenant chacune 12 éléments, grâce à la clé `size`.
 
-Voici le code complet du fichier  `src/blogposts/list.njk` :
+Voici le code complet du fichier `src/blogposts/list.njk` :
 
 ```twig
 ---
@@ -285,8 +281,7 @@ permalink: blog{% if pagination.pageNumber > 0 %}/page{{ pagination.pageNumber +
 
 ## Générer les pages individuelles pour les articles dans 11ty
 
-Nous pouvons nous reposer sur la même fonctionnalité pour générer également toutes les pages individuelles. La seule astuce ici est de définir la taille du nombre d'élements de chaque page à 1 et de définir les permaliens de façon dynamique.
-Voici le code complet pour `src/blogposts/entry.njk`:
+Nous pouvons nous reposer sur la même fonctionnalité pour générer également toutes les pages individuelles. La seule astuce ici est de spécifier le nombre d'élements de chaque page comme égal à 1 et de définir les permaliens de façon dynamique. Voici le code complet pour `src/blogposts/entry.njk`:
 
 ```twig
 ---
@@ -336,6 +331,6 @@ permalink: blog/{{ blogpost.slug }}/index.html
 
 La plupart des CMS headless fournissent des webhooks qui vont envoyer une requête à une URL lorsque les données sont modifiées. Si vous hébergez votre site chez Netlify (vous devriez, c'est un super service), il suffit de quelques clics pour [créer un hook entrant](https://www.netlify.com/docs/webhooks/) qui déclenchera la génération de votre site. à chaque reception d'une requête POST.
 
-DatoCMS propose le déploiement en 1 clic grâce à son intégration avec Netlify. Il vous suffit de l'activer et voilà, votre blog sera généré à chaque fois que les données sertont mises à jour.
+DatoCMS propose le déploiement en 1 clic grâce à son intégration avec Netlify. Il vous suffit de l'activer et voilà, votre blog sera généré à chaque fois que les données seront mises à jour.
 
 Nous disposons maintenant d'un blog qui combine la puissance d'une base de données relationnelle avec la rapidité et la stabilité d'un site statique, hébergé sur CDN.
