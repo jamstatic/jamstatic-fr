@@ -19,9 +19,9 @@ Développer un site multilingue avec un générateur de site statique est à la 
 
 Il existe beaucoup d'[articles sur le sujet](/categories/i18n), comme celui que nous avons publié sur [la gestion d'un site multilingue avec Eleventy]({{< relref "post/site-multilingue-avec-eleventy.md" >}}). Hugo dispose d'[une documentation très claire](https://gohugo.io/content-management/multilingual/) sur le sujet, de [nombreux](https://www.sylvaindurand.org/making-jekyll-multilingual/) [articles](https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/) en font de même pour Jekyll.
 
-Notre but ici est de rediriger depuis une page écrite dans une langue donneé vers les traductions disponibles pour cette même page. Si aucune traduction n'existe pour une page, alors nous redirigerons vers la page d'accueil dans la langue demandée. 
+Notre but ici est de rediriger depuis une page écrite dans une langue donnée vers les traductions disponibles pour cette même page. Si aucune traduction n'existe pour une page, alors nous redirigerons vers la page d'accueil dans la langue demandée. 
 
-Ici, nous utilisons [Eleventy](/categories/eleventy), mais l'approche serait simialire avec d'autres générateurs de site statique. 
+Ici, nous utilisons [Eleventy](/categories/eleventy), mais l'approche serait similaire avec d'autres générateurs de site statique. 
 
 Pour parvenir à nos fins, il nous faut : 
 
