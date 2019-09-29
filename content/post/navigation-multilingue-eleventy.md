@@ -19,16 +19,15 @@ Développer un site multilingue avec un générateur de site statique est à la 
 
 Il existe beaucoup d'[articles sur le sujet](/categories/i18n), comme celui que nous avons publié sur [la gestion d'un site multilingue avec Eleventy]({{< relref "post/site-multilingue-avec-eleventy.md" >}}). Hugo dispose d'[une documentation très claire](https://gohugo.io/content-management/multilingual/) sur le sujet, de [nombreux](https://www.sylvaindurand.org/making-jekyll-multilingual/) [articles](https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/) en font de même pour Jekyll.
 
-Notre but ici est de rediriger depuis une page écrite dans une langue donnée vers les traductions disponibles pour cette même page. Si aucune traduction n'existe pour une page, alors nous redirigerons vers la page d'accueil dans la langue demandée. 
+Notre but ici est de rediriger depuis une page écrite dans une langue donnée vers les traductions disponibles pour cette même page. Si aucune traduction n'existe pour une page, alors nous redirigerons vers la page d'accueil dans la langue demandée.
 
-Ici, nous utilisons [Eleventy](/categories/eleventy), mais l'approche serait similaire avec d'autres générateurs de site statique. 
+Ici, nous utilisons [Eleventy](/categories/eleventy), mais l'approche serait similaire avec d'autres générateurs de site statique.
 
-Pour parvenir à nos fins, il nous faut : 
+Pour parvenir à nos fins, il nous faut :
 
 1. Pouvoir boucler sur les différents langages utilisés sur le site
 2. Nous assurer que chaque contenu dispose d'une clé `locale` dont la valeur correspond au code de langue utilisé pour ce même contenu. Si vous avez besoin de vous rafraîchir la mémoire, relisez [comment faire avec les fichiers de données de répertoire avec Eleventy]({{< relref "post/site-multilingue-avec-eleventy.md" >}}).
 3. Définir une clé commune unique nommée `translationKey` pour relier les traductions d'un contenu entre elles.
-
 
 ## Les langues du site
 
@@ -61,9 +60,9 @@ module.exports = {
 
 ## Ajout des clés de traduction
 
-Maintenant il nous faut une relation explicite entre les différentes traductions d'un même contenu. Avec un générateur de site statique qui stocke les données dans des fichiers, nous pouvons utiliser une même clé dans le front matter YAML de ces fichiers. Cette clé de traduction est une chaîne de caractère qui doit être unique pour chaque contenu.
+Maintenant il nous faut créer une relation explicite entre les différentes traductions d'un même contenu. Avec un générateur de site statique qui stocke les données dans des fichiers, nous pouvons utiliser une même clé dans le front matter YAML de ces fichiers. Cette clé de traduction est une chaîne de caractère qui doit être unique pour chaque contenu.
 
-Par exemple, pour connecter entre elles nos pages de contact dans différentes langues, nous pouvons utiliser : 
+Par exemple, pour connecter entre elles nos pages de contact dans différentes langues, nous pouvons utiliser :
 
 `./src/en/pages/about.njk`
 
@@ -83,13 +82,13 @@ translationKey: "about-page"
 ---
 ```
 
-Nous pouvons appliquer le même principe à nos documents de collections, par exemple pour les articles de blog : 
+Nous pouvons appliquer le même principe à nos documents de collections, par exemple pour les articles de blog :
 
 `./src/en/bogposts/2019-09-12-my-awesome-blogpost.njk`
 
 ```text
 ---
-title: "My awesome blog post"
+title: "My awesome blogpost"
 translationKey: "awesome-blogpost"
 ---
 ```
@@ -146,4 +145,4 @@ Voici le détail de ce que nous allons faire avec ce petit morceau de code:
 {% endfor %}
 ```
 
-Et voilà, mission accomplie avec un effort minime. Ces boucles seront déclenchées pour chaque page de site, comme Eleventy a de toute façon déjà crée  `collections.all` et qu'il est assez performant en entrée-sortie, l'impact sur le temps de génération du site devrait être assez faible, même pour de gros sites.
+Et voilà, mission accomplie avec un effort minime. Ces boucles seront déclenchées pour chaque page de site. Comme Eleventy a de toute façon déjà créé `collections.all` et qu'il est assez performant en entrée-sortie, l'impact sur le temps de génération du site devrait être assez faible, même pour de gros sites.
