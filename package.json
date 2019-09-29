@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/jamstatic/jamstatic-fr#readme",
   "dependencies": {
-    "atomic-algolia": "^0.3.17"
+    "atomic-algolia": "^0.3.17",
+    "autoprefixer": "^9.6.1",
+    "postcss-cli": "^6.1.3"
   },
   "devDependencies": {
     "remark-cli": "^7.0.0",

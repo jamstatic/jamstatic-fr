@@ -186,7 +186,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 900; }
 
 strong, th { font-weight: 900; }
 
-.intro code, h1 code, h2 code, h3 code, h4 code { font-weight: 700; }
+.post-intro code, h1 code, h2 code, h3 code, h4 code { font-weight: 700; }
 
 /* Links */
 a { color: #00c7b7; font-weight: 900; text-decoration: none; transition: all 0.3s ease; }
@@ -336,7 +336,7 @@ body { display: flex; flex-direction: column; min-height: 100vh; -webkit-font-sm
 
 .avatar { border-radius: 50%; margin-right: 7.776px; }
 
-.intro { font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-weight: 900; line-height: 1.44; font-size: 1.2em; }
+.post-intro { font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-weight: 900; line-height: 1.44; font-size: 1.2em; }
 
 .marker { background-color: rgba(255, 228, 0, 0.4); padding: 0.1rem; }
 .marker code { background-color: inherit; border: none; font-weight: 900; }
