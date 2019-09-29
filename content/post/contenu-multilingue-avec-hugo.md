@@ -4,6 +4,7 @@ date: 2018-08-17T11:36:38+02:00
 description: "Comment gérer les traductions dans plusieurs langues avec Hugo"
 categories:
   - hugo
+  - i18n
 images:
   - https://res.cloudinary.com/jamstatic/image/upload/q_auto/v1534498973/hugo-multilingual.png
 source:

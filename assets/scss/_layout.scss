@@ -210,11 +210,15 @@ body {
   margin-right: $spacing-unit / 4;
 }
 
-.intro {
+.post-intro {
   font-family: $title-font-family;
   line-height: $ms2;
   font-size: 1.25em;
   display: block;
+  margin-bottom: $spacing-unit;
+  a {
+    font-weight: 400;
+  }
 }
 
 .marker {

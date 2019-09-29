@@ -3,10 +3,10 @@ title: 'Intégrer un CMS en 3 jours'
 description: 'Retour d’expérience suite à l’intégration de Netlify CMS à un site Jekyll.'
 author: arnaud
 date: 2019-06-22
-draft: false
 categories:
   - cms
   - headless
+  - jekyll
 images:
   - /assets/images/cms-headless-en-3-jours/netlify-cms-blog-featured-image-02.png
 source:
@@ -14,7 +14,6 @@ source:
   title: 'Implementing a CMS in 3 Days'
   url: https://www.dwolla.com/updates/implementing-netlify-cms/
   lang: en
-typora-root-url: ../../static/
 ---
 ![](/assets/images/cms-headless-en-3-jours/netlify-cms-blog-featured-image-02.png)
 
