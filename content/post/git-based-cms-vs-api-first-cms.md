@@ -58,7 +58,7 @@ Avec un CMS basé sur Git, les changements sont d'abord enregistrés dans votre 
 
 ## API-first CMS
 
-![API-first CMS](https://res2.forestry.io/AgaQzpPiUXJ_UDYiaE7-Tx3CCubJxCQRq5jKnv7YLrU/fit/512/512/sm/0/aHR0cHM6Ly9hcHAu/Zm9yZXN0cnkuaW8v/cmFpbHMvYWN0aXZl/X3N0b3JhZ2UvYmxv/YnMvZXlKZmNtRnBi/SE1pT25zaWJXVnpj/MkZuWlNJNklrSkJh/SEJDUjB0b1UxRkpQ/U0lzSW1WNGNDSTZi/blZzYkN3aWNIVnlJ/am9pWW14dllsOXBa/Q0o5ZlE9PS0tZDI3/ZmI3MWY2MDRlOTQy/MmFkNzgyMDk1Nzg5/ODI0ZmFkYTAwOWI0/Zi9hcGktZmlyc3Qt/Y21zLnBuZw)
+{{< figure src="https://res2.forestry.io/AgaQzpPiUXJ_UDYiaE7-Tx3CCubJxCQRq5jKnv7YLrU/fit/512/512/sm/0/aHR0cHM6Ly9hcHAu/Zm9yZXN0cnkuaW8v/cmFpbHMvYWN0aXZl/X3N0b3JhZ2UvYmxv/YnMvZXlKZmNtRnBi/SE1pT25zaWJXVnpj/MkZuWlNJNklrSkJh/SEJDUjB0b1UxRkpQ/U0lzSW1WNGNDSTZi/blZzYkN3aWNIVnlJ/am9pWW14dllsOXBa/Q0o5ZlE9PS0tZDI3/ZmI3MWY2MDRlOTQy/MmFkNzgyMDk1Nzg5/ODI0ZmFkYTAwOWI0/Zi9hcGktZmlyc3Qt/Y21zLnBuZw" >}}
 
 Avec les CMS dotés d'une API par défaut, vous avez accès à une API, généralement une API REST ou GraphQL, qui sert le contenu. Donc, vous récupérez vos données de la façon dont elles sont structurées mais c'est à vous de choisir le framework ou le langage que vous allez utiliser pour travailler avec ces données.
 
@@ -104,6 +104,10 @@ Avec un système basé sur Git, les développeurs peuvent travailler en local to
 Grâce aux branches de Git, vous pouvez créer un nombre illimité d'environnements, ce qui facilite en général pas mal le développement.
 
 Les développeurs ainsi que les auteurs peuvent expérimenter et travailler en parallèle sur des fonctionnalités majeures et des améliorations du site.
+
+_NdT: [la conférence de Shawn Erquhart](https://www.youtube.com/embed/Y2ak5o0IqLw?start=103) explique en détail pourquoi les CMS basés sur Git sont des outils plus puissants qu'il n'y paraît._
+
+{{< youtube id="Y2ak5o0IqLw" class="" >}}
 
 ## Les bénéfices de CMS basés sur des APIs
 
