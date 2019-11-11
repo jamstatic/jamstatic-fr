@@ -31,9 +31,9 @@ WordPress par exemple (qui date du début des années 2000) est utilisé à l'he
 
 Mais il faut bien que le contenu de votre site web vive quelque part, n'est-ce pas ?
 
-**Bienvenue dans le monde des CMS headless.** Plutôt que de [lister quelques uns des headless CMS](https://bejamas.io/blog/headless-cms/) de cet écosystème — ce que nous avons déjà fait de manière opiniâtre — dans cet article, nous allons couvrir les différences, les défis, et les bénéfices de l'utilisation des CMS basés sur Git et de ceux accessibles par défaut via une API. \[^git\]
+**Bienvenue dans le monde des CMS headless.** Plutôt que de [lister quelques uns des headless CMS](https://bejamas.io/blog/headless-cms/) de cet écosystème — ce que nous avons déjà fait de manière opiniâtre — dans cet article, nous allons couvrir les différences, les défis, et les bénéfices de l'utilisation des CMS basés sur Git et de ceux accessibles par défaut via une API. [^git]
 
-\[^git\]: NdT: Les CMS basés sur Git, utilisent eux aussi une API pour communiquer avec votre dépôt Git, et vous permettent également de générer _manuellement_ une API à consommer depuis différents terminaux clients.
+[^git]: NdT: Les CMS basés sur Git, utilisent eux aussi une API pour communiquer avec votre dépôt Git, et vous permettent également de générer _manuellement_ une API à consommer depuis différents terminaux clients.
 
 ## Les CMS basés sur Git
 
@@ -106,7 +106,7 @@ Grâce aux branches de Git, vous pouvez créer un nombre illimité d'environneme
 
 Les développeurs ainsi que les auteurs peuvent expérimenter et travailler en parallèle sur des fonctionnalités majeures et des améliorations du site.
 
-_NdT:_ [_la conférence de Shawn Erquhart_](https://www.youtube.com/embed/Y2ak5o0IqLw?start=103) _explique en détail pourquoi les CMS basés sur Git sont des outils plus puissants qu'il n'y paraît._
+_NdT: [la conférence de Shawn Erquhart](https://www.youtube.com/embed/Y2ak5o0IqLw?start=103) explique en détail pourquoi les CMS basés sur Git sont des outils plus puissants qu'il n'y paraît._
 
 {{< youtube id="Y2ak5o0IqLw" class="" >}}
 
@@ -136,17 +136,17 @@ Faute de solution dédiée, l'amélioration du SEO avec Git dépendra de vous. P
 
 ### Les limitations de GitHub Pages
 
-GitHub Pages est gratuit mais ne supporte par défaut que quelques plugins Jekyll, si vous utilisez un autre générateur ou que vous utilisez d'autres plugins, il est toujours possible de générer vos contenus localement, via GitHub Actions ou autre plate-forme d'intégration continue \[^deploiement\].
+GitHub Pages est gratuit mais ne supporte par défaut que quelques plugins Jekyll, si vous utilisez un autre générateur ou que vous utilisez d'autres plugins, il est toujours possible de générer vos contenus localement, via GitHub Actions ou autre plate-forme d'intégration continue [^deploiement].
 
-\[^deploiement\]: Il existe d'autres solutions dédiées pour le déploiement de sites statiques comme [Netlify](https://netlify.com) ou [Zeit Now](https://zeit.co) pour n'en citer que deux.
+[^deploiement]: Il existe d'autres solutions dédiées pour le déploiement de sites statiques comme [Netlify](https://netlify.com) ou [Zeit Now](https://zeit.co) pour n'en citer que deux.
 
 ## Les défis posés par les CMS basés sur des APIs
 
 ### Une grande dépendance aux développeurs web
 
-Créer plusieurs interfaces client personnalisées, représente un travail supplémentaire pour votre équipe. Cela demandera donc une communication constante entre les équipes marketing et celles de développements dès que des modifications devront être apportées. \[^developpeurs\]
+Créer plusieurs interfaces client personnalisées, représente un travail supplémentaire pour votre équipe. Cela demandera donc une communication constante entre les équipes marketing et celles de développements dès que des modifications devront être apportées. [^developpeurs]
 
-\[^developpeurs\]: C'est aussi vrai pour les CMS basés sur Git, le moindre changement apporté dans la structure de données devra être reporté pour être affiché sur le site généré.
+[^developpeurs]: C'est aussi vrai pour les CMS basés sur Git, le moindre changement apporté dans la structure de données devra être reporté pour être affiché sur le site généré.
 
 ### (Pour certains) la prévisualisation de contenu est problématique
 
