@@ -1,17 +1,18 @@
 ---
-title: "Git-based ou API-first headless CMS : lequel choisir ?"
-date: 2019-10-30 10:26:33 +01:00
-description: "Les différences à connaître entre les headless CMS qui reposent sur Git et ceux qui fournissent une API."
+title: 'Git-based ou API-first headless CMS : lequel choisir ?'
+date: 2019-10-30T09:26:33.000+00:00
+description: Les différences à connaître entre les headless CMS qui reposent sur Git
+  et ceux qui fournissent une API.
 categories:
-  - headless
+- headless
 images:
-  - https://bejamas-care.now.sh/Git-based%20CMS%20vs.%20API-first%20CMS%3A%20Which%20Headless%20CMS%20Should%20You%20Choose%3F.png?theme=light&md=1&fontSize=50px&images=https%3A%2F%2Fassets-bejamas.now.sh%2Fbrand%2Fsvg%2FBejamas_logo_black.svg
+- https://bejamas-care.now.sh/Git-based%20CMS%20vs.%20API-first%20CMS%3A%20Which%20Headless%20CMS%20Should%20You%20Choose%3F.png?theme=light&md=1&fontSize=50px&images=https%3A%2F%2Fassets-bejamas.now.sh%2Fbrand%2Fsvg%2FBejamas_logo_black.svg
 source:
   author: Nebojsa Radakovic
-  title: "Git-based CMS vs. API-first CMS: Which Headless CMS Should You Choose?"
+  title: 'Git-based CMS vs. API-first CMS: Which Headless CMS Should You Choose?'
   url: https://bejamas.io/blog/git-based-cms-vs-api-first-cms/
----
 
+---
 {{% intro %}}
 L'agence [Bejamas](https://bejamas.io) s'est spécialisée dans le développement de sites JAMstack. Après avoir testé différentes solutions, elle se penche dans cet article sur les différences entre les CMS basés sur Git et ceux basés sur des APIs. L'article a le mérite de donner un aperçu des avantages et des inconvénients des deux types de plates-formes. Dans les faits la dichotomie n'est pas aussi binaire qu'on pourrait le penser.
 
@@ -20,7 +21,7 @@ En effet, rien n'empêche un CMS qui communique avec l'<abbr title="Interface de
 Il vous faut aussi prendre en compte dans l'équation _votre_ workflow éditorial, la taille de _votre_ site (et donc le temps nécessaire à la génération d'une nouvelle version) ainsi que _votre_ fréquence de publication. Autant de paramètres qui doivent peser dans le choix d'un [headless](/categories/headless) CMS. On rappellera que les CMS headless ne présentent aucun des inconvénients des CMS traditionnels, que ce soit en terme de workflow de développement, de performance ou de sécurité, et qu'ils offrent plus de flexibilité et une meilleure productivité, une fois l'investissement initial consenti.
 {{% /intro %}}
 
----
+***
 
 {{< figure src="https://bejamas.io/static/72bd366139f5ede0e780f9a28db84a5d/54d8b/git-vs-api-headless-cms.png">}}
 
@@ -30,9 +31,9 @@ WordPress par exemple (qui date du début des années 2000) est utilisé à l'he
 
 Mais il faut bien que le contenu de votre site web vive quelque part, n'est-ce pas ?
 
-**Bienvenue dans le monde des CMS headless.** Plutôt que de [lister quelques uns des headless CMS](https://bejamas.io/blog/headless-cms/) de cet écosystème — ce que nous avons déjà fait de manière opiniâtre — dans cet article, nous allons couvrir les différences, les défis, et les bénéfices de l'utilisation des CMS basés sur Git et de ceux accessibles par défaut via une API. [^git]
+**Bienvenue dans le monde des CMS headless.** Plutôt que de [lister quelques uns des headless CMS](https://bejamas.io/blog/headless-cms/) de cet écosystème — ce que nous avons déjà fait de manière opiniâtre — dans cet article, nous allons couvrir les différences, les défis, et les bénéfices de l'utilisation des CMS basés sur Git et de ceux accessibles par défaut via une API. \[^git\]
 
-[^git]: NdT: Les CMS basés sur Git, utilisent eux aussi une API pour communiquer avec votre dépôt Git, et vous permettent également de générer _manuellement_ une API à consommer depuis différents terminaux clients.
+\[^git\]: NdT: Les CMS basés sur Git, utilisent eux aussi une API pour communiquer avec votre dépôt Git, et vous permettent également de générer _manuellement_ une API à consommer depuis différents terminaux clients.
 
 ## Les CMS basés sur Git
 
@@ -56,7 +57,7 @@ Avec un CMS basé sur Git, les changements sont d'abord enregistrés dans votre 
 * Si vous prévoyez des mises à jours en continu, des articles publiés chaque minute par exemple, la génération et le déploiement continu n'est pas la meilleure option.
 * Moins d'options de modélisation de contenu et de formatage.
 
-## API-first CMS
+## Les CMS API-first
 
 {{< figure src="https://res2.forestry.io/AgaQzpPiUXJ_UDYiaE7-Tx3CCubJxCQRq5jKnv7YLrU/fit/512/512/sm/0/aHR0cHM6Ly9hcHAu/Zm9yZXN0cnkuaW8v/cmFpbHMvYWN0aXZl/X3N0b3JhZ2UvYmxv/YnMvZXlKZmNtRnBi/SE1pT25zaWJXVnpj/MkZuWlNJNklrSkJh/SEJDUjB0b1UxRkpQ/U0lzSW1WNGNDSTZi/blZzYkN3aWNIVnlJ/am9pWW14dllsOXBa/Q0o5ZlE9PS0tZDI3/ZmI3MWY2MDRlOTQy/MmFkNzgyMDk1Nzg5/ODI0ZmFkYTAwOWI0/Zi9hcGktZmlyc3Qt/Y21zLnBuZw" >}}
 
@@ -64,7 +65,7 @@ Avec les CMS dotés d'une API par défaut, vous avez accès à une API, généra
 
 ### Pour
 
-* C'est la meilleure solution si vous maintenez plusieurs applications et site web qui récupèrent le même contenu structuré.
+* C'est la meilleure solution si vous maintenez plusieurs applications et sites web qui récupèrent le même contenu structuré.
 * Facile à utiliser avec de multiples terminaux client.
 * Beaucoup d'options disponibles pour vous permettre de personnaliser le CMS.
 * Vous avez des quantités très importantes de données à gérer.
@@ -105,11 +106,11 @@ Grâce aux branches de Git, vous pouvez créer un nombre illimité d'environneme
 
 Les développeurs ainsi que les auteurs peuvent expérimenter et travailler en parallèle sur des fonctionnalités majeures et des améliorations du site.
 
-_NdT: [la conférence de Shawn Erquhart](https://www.youtube.com/embed/Y2ak5o0IqLw?start=103) explique en détail pourquoi les CMS basés sur Git sont des outils plus puissants qu'il n'y paraît._
+_NdT:_ [_la conférence de Shawn Erquhart_](https://www.youtube.com/embed/Y2ak5o0IqLw?start=103) _explique en détail pourquoi les CMS basés sur Git sont des outils plus puissants qu'il n'y paraît._
 
 {{< youtube id="Y2ak5o0IqLw" class="" >}}
 
-## Les bénéfices de CMS basés sur des APIs
+## Les bénéfices des CMS basés sur des APIs
 
 ### Atteindre les consommateurs sur des terminaux variés
 
@@ -131,22 +132,21 @@ Avec les CMS basés sur des APIs, tous vos contenus sont stockés en un unique p
 
 ### Adopter des mesures spécifiques pour le SEO
 
-Faut de solution dédiée, l'amélioration du SEO avec Git dépendra de vous.
-Pour bénéficier d'une meilleure visibilité, vous devrez vous assurer de la compatibilité mobile de votre site, de la génération de sitemap, de l'insertion des balises meta et open graph.
+Faute de solution dédiée, l'amélioration du SEO avec Git dépendra de vous. Pour bénéficier d'une meilleure visibilité, vous devrez vous assurer de la compatibilité mobile de votre site, de la génération de sitemap, de l'insertion des balises meta et open graph.
 
 ### Les limitations de GitHub Pages
 
-GitHub Pages est gratuit mais ne supporte par défaut que quelques plugins Jekyll, si vous utilisez un autre générateur ou que vous utilisez d'autres plugins, il est toujours possible de générer vos contenus localement, via GitHub Actions ou autre plate-forme d'intégration continue [^deploiement].
+GitHub Pages est gratuit mais ne supporte par défaut que quelques plugins Jekyll, si vous utilisez un autre générateur ou que vous utilisez d'autres plugins, il est toujours possible de générer vos contenus localement, via GitHub Actions ou autre plate-forme d'intégration continue \[^deploiement\].
 
-[^deploiement]: Il existe d'autres solutions dédiées pour le déploiement de sites statiques comme [Netlify](https://netlify.com) ou [Zeit Now](https://zeit.co) pour n'en citer que deux.
+\[^deploiement\]: Il existe d'autres solutions dédiées pour le déploiement de sites statiques comme [Netlify](https://netlify.com) ou [Zeit Now](https://zeit.co) pour n'en citer que deux.
 
 ## Les défis posés par les CMS basés sur des APIs
 
 ### Une grande dépendance aux développeurs web
 
-Créer plusieurs interfaces client personnalisées, représente un travail supplémentaire pour votre équipe. Cela demandera donc une communication constante entre les équipes marketing et celles de développements dès que des modifications devront être apportées. [^developpeurs]
+Créer plusieurs interfaces client personnalisées, représente un travail supplémentaire pour votre équipe. Cela demandera donc une communication constante entre les équipes marketing et celles de développements dès que des modifications devront être apportées. \[^developpeurs\]
 
-[^developpeurs]: C'est aussi vrai pour les CMS basés sur Git, le moindre changement apporté dans la structure de données devra être reporté pour être affiché sur le site généré.
+\[^developpeurs\]: C'est aussi vrai pour les CMS basés sur Git, le moindre changement apporté dans la structure de données devra être reporté pour être affiché sur le site généré.
 
 ### (Pour certains) la prévisualisation de contenu est problématique
 
@@ -156,7 +156,7 @@ Les CMS d'APIs de contenu proposent des interfaces d'administration qui permette
 
 Vous devrez gardez en tête les coûts induits par l'utilisation des CMS qui proposent des APIs de contenu, même ceux qui sont open source. Cela inclut les coûts d'infrastructure (hébergement, CDNs, etc. pour les CMS à héberger soi-même) mais aussi les coûts de développement, de maintenance et de sécurité, puisque vous travaillerez avec une interface d'administration entièrement personnalisée.
 
-## Alors quel headless CMS devez vous choisir ?
+## Alors quel CMS headless devez vous choisir ?
 
 Ce n'est pas une question à laquelle il est facile de répondre. Par exemple, nous nous sommes rendus compte que si vous n'avez pas besoin de créer des centaines d'articles ou de pages, et régénérer le site constamment, les CMS basés sur Git sont une bien meilleure option.
 
@@ -164,21 +164,21 @@ Bien entendu, cela dépend surtout de vos besoins. C'est à l'ensemble de votre 
 
 ## Liste de plate-formes CMS basées sur Git
 
-- Forestry - [https://forestry.io](https://forestry.io "https://forestry.io")
-- Crafter CMS - [https://craftercms.org](https://craftercms.org "https://craftercms.org")
-- Netlify CMS - [https://www.netlifycms.org](https://www.netlifycms.org "https://www.netlifycms.org")
-- Publii - [https://getpublii.com](https://getpublii.com "https://getpublii.com")
-- Prose - [http://prose.io](http://prose.io "http://prose.io")
+* Forestry - [https://forestry.io](https://forestry.io "https://forestry.io")
+* Crafter CMS - [https://craftercms.org](https://craftercms.org "https://craftercms.org")
+* Netlify CMS - [https://www.netlifycms.org](https://www.netlifycms.org "https://www.netlifycms.org")
+* Publii - [https://getpublii.com](https://getpublii.com "https://getpublii.com")
+* Prose - [http://prose.io](http://prose.io "http://prose.io")
 
 ## Liste de plates-formes CMS basées sur des APis.
 
-- Storyblok - [https://www.storyblok.com/](https://www.storyblok.com/ "https://www.storyblok.com/")
-- Contentful - [https://www.contentful.com](https://www.contentful.com "https://www.contentful.com")
-- Sanity - [https://sanity.io](https://sanity.io "https://sanity.io")
-- Dato CMS - [https://www.datocms.com/](https://www.datocms.com/ "https://www.datocms.com/")
-- Prismic - [https://prismic.io](https://prismic.io "https://prismic.io")
-- Ghost - [https://ghost.org](https://ghost.org "https://ghost.org")
-- Strapi - [https://strapi.io](https://strapi.io "https://strapi.io")
-- Cloud CMS - [https://www.cloudcms.com](https://www.cloudcms.com "https://www.cloudcms.com")
-- Directus - [https://directus.io](https://directus.io "https://directus.io")
-- Rooftop - [https://www.rooftopcms.com](https://www.rooftopcms.com "https://www.rooftopcms.com")
+* Storyblok - [https://www.storyblok.com/](https://www.storyblok.com/ "https://www.storyblok.com/")
+* Contentful - [https://www.contentful.com](https://www.contentful.com "https://www.contentful.com")
+* Sanity - [https://sanity.io](https://sanity.io "https://sanity.io")
+* Dato CMS - [https://www.datocms.com/](https://www.datocms.com/ "https://www.datocms.com/")
+* Prismic - [https://prismic.io](https://prismic.io "https://prismic.io")
+* Ghost - [https://ghost.org](https://ghost.org "https://ghost.org")
+* Strapi - [https://strapi.io](https://strapi.io "https://strapi.io")
+* Cloud CMS - [https://www.cloudcms.com](https://www.cloudcms.com "https://www.cloudcms.com")
+* Directus - [https://directus.io](https://directus.io "https://directus.io")
+* Rooftop - [https://www.rooftopcms.com](https://www.rooftopcms.com "https://www.rooftopcms.com")
