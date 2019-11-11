@@ -93,6 +93,17 @@ body {
 
   margin-bottom: $base-line;
 
+  abbr[title] {
+    text-decoration: none;
+
+    &:hover {
+      cursor: help;
+      text-decoration-color: rgba(0, 199, 183, .1);
+      text-decoration-thickness: 1em;
+      text-decoration: line-through;
+    }
+  }
+
   li {
     margin-bottom: ($base-line / 2);
 
