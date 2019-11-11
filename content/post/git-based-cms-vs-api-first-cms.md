@@ -160,21 +160,21 @@ Bien entendu, cela dépend surtout de vos besoins. C'est à l'ensemble de votre 
 
 ## Liste de plate-formes CMS basées sur Git
 
-Forestry - [https://forestry.io](https://forestry.io "https://forestry.io")
-Crafter CMS - [https://craftercms.org](https://craftercms.org "https://craftercms.org")
-Netlify CMS - [https://www.netlifycms.org](https://www.netlifycms.org "https://www.netlifycms.org")
-Publii - [https://getpublii.com](https://getpublii.com "https://getpublii.com")
-Prose - [http://prose.io](http://prose.io "http://prose.io")
+- Forestry - [https://forestry.io](https://forestry.io "https://forestry.io")
+- Crafter CMS - [https://craftercms.org](https://craftercms.org "https://craftercms.org")
+- Netlify CMS - [https://www.netlifycms.org](https://www.netlifycms.org "https://www.netlifycms.org")
+- Publii - [https://getpublii.com](https://getpublii.com "https://getpublii.com")
+- Prose - [http://prose.io](http://prose.io "http://prose.io")
 
 ## Liste de plates-formes CMS basées sur des APis.
 
-Storyblok - [https://www.storyblok.com/](https://www.storyblok.com/ "https://www.storyblok.com/")
-Contentful - [https://www.contentful.com](https://www.contentful.com "https://www.contentful.com")
-Sanity - [https://sanity.io](https://sanity.io "https://sanity.io")
-Dato CMS - [https://www.datocms.com/](https://www.datocms.com/ "https://www.datocms.com/")
-Prismic - [https://prismic.io](https://prismic.io "https://prismic.io")
-Ghost - [https://ghost.org](https://ghost.org "https://ghost.org")
-Strapi - [https://strapi.io](https://strapi.io "https://strapi.io")
-Cloud CMS - [https://www.cloudcms.com](https://www.cloudcms.com "https://www.cloudcms.com")
-Directus - [https://directus.io](https://directus.io "https://directus.io")
-Rooftop - [https://www.rooftopcms.com](https://www.rooftopcms.com "https://www.rooftopcms.com")
+- Storyblok - [https://www.storyblok.com/](https://www.storyblok.com/ "https://www.storyblok.com/")
+- Contentful - [https://www.contentful.com](https://www.contentful.com "https://www.contentful.com")
+- Sanity - [https://sanity.io](https://sanity.io "https://sanity.io")
+- Dato CMS - [https://www.datocms.com/](https://www.datocms.com/ "https://www.datocms.com/")
+- Prismic - [https://prismic.io](https://prismic.io "https://prismic.io")
+- Ghost - [https://ghost.org](https://ghost.org "https://ghost.org")
+- Strapi - [https://strapi.io](https://strapi.io "https://strapi.io")
+- Cloud CMS - [https://www.cloudcms.com](https://www.cloudcms.com "https://www.cloudcms.com")
+- Directus - [https://directus.io](https://directus.io "https://directus.io")
+- Rooftop - [https://www.rooftopcms.com](https://www.rooftopcms.com "https://www.rooftopcms.com")
