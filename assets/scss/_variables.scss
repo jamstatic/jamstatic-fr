@@ -26,18 +26,18 @@ $normal: $base-em * $ms0;
 $big: $base-em * $ms1;
 $bigger: $base-em * $ms2;
 $title2: $base-em * $ms3;
-$title1: $base-em * $ms4;
+$title1: $base-em * $ms5;
 $spacing-unit: $base-font-size * $ms3;
 $line-height-base: $base * $ms2;
 $line-height-computed: $base-em * $line-height-base;
 $base-line: $line-height-computed;
 
 // Width of the content area
-$content-width: 66.247rem;
+$content-width: 55.2058333333rem; // 66.247/ratio rem
 
 // Breakpoints
 $on-tablet: 46.005rem;
-$on-desktop: 67.975rem; // content-with + ms3
+$on-desktop: 56.9338333333rem; // content-with + ms3
 
 // Colors
 $text-color: rgba(14,30,37,.9);
