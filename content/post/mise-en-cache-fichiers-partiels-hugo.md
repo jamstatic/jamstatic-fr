@@ -129,7 +129,7 @@ Ici, la variante idéale serait donc de passer notre liste d'auteurs dans un ord
 
 Malheureusement à l'heure actuelle, les variantes passées en argument de la fonction `partialCached` doivent être **des chaînes de caractères** 🤷.
 
-Pour respecter ce prérequis, nous devons transformer cette liste en chaîne de caractères avant de la passer en option, et la manière la plus sûre de le faire, comme souvent, c'est d'utiliser la fonction [`printf`](https://gohugo.io/functions/printf/#readout avec le bon [verbe](https://golang.org/pkg/fmt/#hdr-Printing).
+Pour respecter ce prérequis, nous devons transformer cette liste en chaîne de caractères avant de la passer en option, et la manière la plus sûre de le faire, comme souvent, c'est d'utiliser la fonction [`printf`](https://gohugo.io/functions/printf/#readout) avec le bon [verbe](https://golang.org/pkg/fmt/#hdr-Printing).
 
 Personnellement j'aime bien `%x`, car il va générer la représentation d'une valeur en chaîne hexadécimale, quelque que soit le type de structure.
 
