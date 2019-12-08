@@ -24,7 +24,7 @@ le site en local et le publier sur Github.
 Nous allons voir que cette opération est facilement automatisable à l’aide d’un
 fichier `Rakefile`, la manière la plus courante en Ruby de créer des tâches.
 
-## Pré-requis
+## Prérequis
 
 Nous partons du principe que vous avez déjà un site qui tourne avec Jekyll sur
 GitHub, si ce n’est pas le cas, reportez-vous à la

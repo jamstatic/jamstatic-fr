@@ -21,7 +21,7 @@ création de thème pour Jekyll.
 
 {{% /intro %}}
 
-## Pré-requis
+## Prérequis
 
 Nous allons supposer que vous connaissez déjà Jekyll, que vous savez créer des
 modèles de pages, si ce n'est pas le cas, commencez par lire
