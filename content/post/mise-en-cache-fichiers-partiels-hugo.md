@@ -19,7 +19,7 @@ Les fichiers partiels sont parmi les modèles de fichiers les plus utilisés pou
 
 Nous n'allons pas revenir dans cet article sur les bases des [partiels](https://gohugo.io/templates/partials/) comme leur *contexte* que nous avons déjà [détaillé auparavant]({{< relref "/post/hugo-le-point-sur-le-contexte" >}}).
 
-Nous allons voir comme tirer parti au mieux des fonctionnalités de ces fichiers, bien au-delà des inclusions habituelles. Nous verrons comment Hugo peut mettre en cache vos fichiers partiels pour réduire le temps de génération, comment les utiliser comme des fonctions, nous verrons enfin quelles sont les meilleures pratiques à adopter en terme d'organisation et de commentaires pour nous assurer de leur pérénnité.
+Nous allons voir comme tirer parti au mieux des fonctionnalités de ces fichiers, bien au-delà des inclusions habituelles. Nous verrons comment Hugo peut mettre en cache vos fichiers partiels pour réduire le temps de génération, comment les utiliser comme des fonctions, nous verrons enfin quelles sont les meilleures pratiques à adopter en termes d'organisation et de commentaires pour nous assurer de leur pérennité.
 
 Entrons dans le vif du sujet sans plus attendre avec la solution dédiée à la mise en cache des fichiers partiels : [`partialCached`](https://gohugo.io/functions/partialcached/)
 
@@ -29,7 +29,7 @@ Comme vous le savez peut-être déjà, le but d'un fichier partiel est de permet
 
 Si comme moi vous avez horreur de *copier-coller* des bouts de code un peu partout dans vos projets, vous devez avoir beaucoup recours aux fichiers partiels !
 
-Le rendu du code de votre fichier partiel peut être identique sur une majorité des pages et quelque peu différent pour certaines, ou bien il peut être complètement différent d'une page à l'autre. Ce deuxième scénario bénéficiera rarement des bienfaits d'une mise en cache, concentrons nous donc ici sur le premier.
+Le rendu du code de votre fichier partiel peut être identique sur une majorité des pages et quelque peu différent pour certaines, ou bien il peut être complètement différent d'une page à l'autre. Ce deuxième scénario bénéficiera rarement des bienfaits d'une mise en cache, concentrons-nous donc ici sur le premier.
 
 Songez à l'entête de page de votre site par exemple.
 
@@ -43,13 +43,13 @@ Avec `partialCached` vous pouvez dire à Hugo que ce bout de code ne bouge jamai
 {{ partialCached "header.html" . }}
 ```
 
-C'est 999 fois où Hugo n'aura pas à intérpréter le code de votre fichier partiel. En fonction de la complexité de votre menu de navigation, *vous venez de potentiellement gagner pas mal de précieuses millisecondes* ⏱️!
+C'est 999 fois où Hugo n'aura pas à interpréter le code de votre fichier partiel. En fonction de la complexité de votre menu de navigation, *vous venez de potentiellement gagner pas mal de précieuses millisecondes* ⏱️!
 
 Mais notre entête de page est-il vraiment identique sur toutes les pages ?
 
 Non, car il est fort probable que les liens du menu principal soient soulignés ou mise en forme pour indiquer aux visiteurs où ils se trouvent actuellement sur le site.
 
-Le code de notre menu Hugo contient souvent quelque chose comme : 
+Le code de notre menu Hugo contient souvent quelque chose comme :
 
 ```go-html-template
 <nav>
@@ -64,19 +64,19 @@ Le code de notre menu Hugo contient souvent quelque chose comme :
 </nav>
 ```
 
-Le code ci-dessus parle quasiment de lui même. Notre projet comporte un menu pricipal avec cinq entrées, chacune pointant vers une section du site. Pour rendre active l'entrée __Blog__ du menu lorsqu'on se trouve sur une page de la section Blog, nous comparons la section de la page visitée (`$currentPage.Section`) avec celle de l'entrée de menu (`.Page.Section`).
+Le code ci-dessus parle quasiment de lui-même. Notre projet comporte un menu principal avec cinq entrées, chacune pointant vers une section du site. Pour rendre active l'entrée __Blog__ du menu lorsqu'on se trouve sur une page de la section Blog, nous comparons la section de la page visitée (`$currentPage.Section`) avec celle de l'entrée de menu (`.Page.Section`).
 
-Avec le `{{ partialCached "header.html" . }}` actuel, Hugo va maintenant évaluer une seule fois la condition de ce `if` et appliquer son résultat à toutes les pages suivantes générées,  et ce quelle que soit leur section. 
+Avec le `{{ partialCached "header.html" . }}` actuel, Hugo va maintenant évaluer une seule fois la condition de ce `if` et appliquer son résultat à toutes les pages suivantes générées,  et ce quelle que soit leur section.
 
 Heureusement il y a les variantes de partiel.
 
 ## Les variantes de partiel
 
-Nous savons que notre entête va seulement être modifiée cinq fois, en fonction de la `.Section` de la page courante. Nous devons donc dire à Hugo de mettre en cache une différente variante du partiel en fonction de ce facteur.
+Nous savons que notre entête va seulement être modifié cinq fois, en fonction de la `.Section` de la page courante. Nous devons donc dire à Hugo de mettre en cache une différente variante du partiel en fonction de ce facteur.
 
 Contrairement à la fonction `partial`, les arguments de `partialCached` ne se limitent pas au contexte.
 
-Pour nos cas d'utilisation, il est clair que la variante est la  `.Section` de la page courante, nous pouvons donc écrire ceci :  
+Pour nos cas d'utilisation, il est clair que la variante est la  `.Section` de la page courante, nous pouvons donc écrire ceci :
 
 ```go-html-template
 {{ partialCached "navigation.html" . .Section }}
@@ -100,13 +100,13 @@ Le code ressemble à ça :
 
 Nous avons donc maintenant besoin de deux variantes, la variante `.Section` et la variante `Est-ce la page de contact ?`.
 
-Heureusement pour nous, le nombre de variantes n'est pas limité, alors allons-y gaiement : 
+Heureusement pour nous, le nombre de variantes n'est pas limité, alors allons-y gaiement :
 
 ```go-html-template
 {{ partialCached "navigation.html" . .Section "contact" }}
 ```
 
-OK, c'était simplement à des fins de clarté et de lisibilité mais soyons réaliste, vous aurez vraisemblablement besoin de quelque chose de plus "dynamique" : 
+OK, c'était simplement à des fins de clarté et de lisibilité mais soyons réaliste, vous aurez vraisemblablement besoin de quelque chose de plus "dynamique" :
 
 ```go-html-template
 {{ $layout := cond (eq .Layout "contact") "contact" "other" }}
@@ -117,11 +117,11 @@ OK, c'était simplement à des fins de clarté et de lisibilité mais soyons ré
 
 ## Haussons le niveau d'un cran 💪
 
-Plongeons nous maintenant dans quelque chose d'un peu plus complexe.
+Plongeons-nous maintenant dans quelque chose d'un peu plus complexe.
 
-Notre blog possède une emplacement pour afficher les auteurs d'un article. Il y a trois auteurs pour le site, cet emplacement pourra donc en lister un seul, ou alors une combinaison d'entre eux en fonction de la liste d'auteurs présente dans le front matter de l'article. On peut dire avec certitude que sur nos mille articles, beaucoup partageront la même liste d'auteurs.
+Notre blog possède un emplacement pour afficher les auteurs d'un article. Il y a trois auteurs pour le site, cet emplacement pourra donc en lister un seul, ou alors une combinaison d'entre eux en fonction de la liste d'auteurs présente dans le front matter de l'article. On peut dire avec certitude que sur nos mille articles, beaucoup partageront la même liste d'auteurs.
 
-Ici, la variante idéale serait donc de passer notre liste d'auteurs dans un ordre défini, et nous serions tenté de pouvoir écrire :
+Ici, la variante idéale serait donc de passer notre liste d'auteurs dans un ordre défini, et nous serions tentés de pouvoir écrire :
 
 ```go-html-template
 {{ partialCached "authors-box.html" . .Params.authors }}
@@ -129,9 +129,9 @@ Ici, la variante idéale serait donc de passer notre liste d'auteurs dans un ord
 
 Malheureusement à l'heure actuelle, les variantes passées en argument de la fonction `partialCached` doivent être **des chaînes de caractères** 🤷.
 
-Pour respecter ce prérequis, nous devons transformer cette liste en chaîne de caractères avant de la passer en option, et la manière la plus sûre de le faire, comme souvent, c'est d'utiliser la fonction [`printf`](https://gohugo.io/functions/printf/#readout avec le bon [verbe](https://golang.org/pkg/fmt/#hdr-Printing). 
+Pour respecter ce prérequis, nous devons transformer cette liste en chaîne de caractères avant de la passer en option, et la manière la plus sûre de le faire, comme souvent, c'est d'utiliser la fonction [`printf`](https://gohugo.io/functions/printf/#readout avec le bon [verbe](https://golang.org/pkg/fmt/#hdr-Printing).
 
-Personnellement j'aime bien `%x` car il va générer la réprésentation d'une valeur en chaîne hexadécimale, quelque que soit le type de structure.
+Personnellement j'aime bien `%x`, car il va générer la représentation d'une valeur en chaîne hexadécimale, quelque que soit le type de structure.
 
 Admettons que nous ayons :
 
@@ -171,7 +171,7 @@ Cette solution pour utiliser les variantes marche pour les listes et les tableau
 
 ## Et les langues ? 🇫🇷🇬🇧
 
-Dans un contexte multilingue, si nous repensons à notre partiel pour l'entête de page, il se pourrait que nous y trouvions aussi un sélecteur de langue et que nous soyons tenté d'ajouter une autre variante : 
+Dans un contexte multilingue, si nous repensons à notre partiel pour l'entête de page, il se pourrait que nous y trouvions aussi un sélecteur de langue et que nous soyons tentés d'ajouter une autre variante :
 
 ```
 {{ partialCached "navigation.html" . .Section .Lang }}
@@ -188,11 +188,11 @@ La règle d'or pour connaître le "calcul" du nombre de partiels est :
 
 ## Améliorer votre temps de génération ⏱️
 
-Pour les sites que vous avez développé vous même, il est relativement facile d'aller inspecter votre dossier `partials` et d'identifier ceux qui pourraient être mis en cache. Mais pour les projets dont vous avez hérité ou que vous avez développé il y a moment, il existe deux options que vous pouvez passer à la ligne de commande: `hugo --templateMetrics --templateMetricsHints`.
+Pour les sites que vous avez développé vous-même, il est relativement facile d'aller inspecter votre dossier `partials` et d'identifier ceux qui pourraient être mis en cache. Mais pour les projets dont vous avez hérité ou que vous avez développé il y a moment, il existe deux options que vous pouvez passer à la ligne de commande: `hugo --templateMetrics --templateMetricsHints`.
 
 La première option même utilisée seule est déjà très utile puisqu'elle vous affiche le détail des durées de génération. Cependant tout ne peut pas être mis en cache, seulement les fichiers partiels.
 
-Ces options vous aideront à identifier les pricipaux goulots d'étranglement, cependant vous devriez tout le temps garder ces trois points en tête: 
+Ces options vous aideront à identifier les principaux goulots d'étranglement, cependant vous devriez tout le temps garder ces trois points en tête:
 
 1. Le niveau de complexité de votre fichier partiel et sa durée de génération ajoutée au temps total.
 2. La comparaison entre le nombre de fois où un partiel sera traité et son potentiel de variantes.
@@ -202,4 +202,4 @@ Ces options vous aideront à identifier les pricipaux goulots d'étranglement, c
 
 Lorsque vous créez ou maintenez un projet Hugo, vous devez toujours garder en tête que chaque ligne de code peut réduire potentiellement le temps de génération. Laissez Hugo faire le gros du travail seulement quelques fois et non systématiquement!
 
-Allez donc jetez un œil à vos fichiers partiels, créez vos propres variantes, et économisez du temps et de l'argent en vous reposant autant que possible sur `partialCached`!
+Allez donc jeter un œil à vos fichiers partiels, créez vos propres variantes, et économisez du temps et de l'argent en vous reposant autant que possible sur `partialCached`!
