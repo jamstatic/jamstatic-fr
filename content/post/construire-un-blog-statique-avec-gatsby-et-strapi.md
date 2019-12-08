@@ -57,7 +57,7 @@ Tout d'abord, nous allons commencer par créer une API avec Strapi et ajouter du
 
 #### Installation de Strapi
 
-_Pré-requis_: vérifiez que [Node 8](https://nodejs.org/en/download/) (ou plus) et [MongoDB](https://docs.mongodb.com/manual/installation/) sont installés et démarrés sur votre machine.
+_Prérequis_: vérifiez que [Node 8](https://nodejs.org/en/download/) (ou plus) et [MongoDB](https://docs.mongodb.com/manual/installation/) sont installés et démarrés sur votre machine.
 
 Installez Strapi via npm :
 

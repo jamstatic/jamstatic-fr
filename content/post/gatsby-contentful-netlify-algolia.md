@@ -45,7 +45,7 @@ L'exemple que je vais couvrir ici est [le site de documentation][rollcalldocs]
 pour le principal logiciel édité par notre entreprise. Le site regroupe beaucoup
 de contenus avec des centaines d’articles.
 
-La liste de pré-requis pour ce site est la suivante :
+La liste de prérequis pour ce site est la suivante :
 
 -  Vitesse — autant pour le développement que pour la performance du site
 -  Facilité d’utilisation — autant pour le développeur que pour le contributeur
@@ -232,7 +232,7 @@ que tout mon contenu soit indexé proprement. La documentation d’Algolia est
 d’une grande aide en ce qui concerne l’indexation.
 
 Le plus difficile était de savoir comment découper le contenu des articles en
-petits morceaux pour respecter les pré-requis de l’indexation.
+petits morceaux pour respecter les prérequis de l’indexation.
 [La documentation d’Algolia](https://www.algolia.com/doc/guides/indexing/structuring-your-data/?language=php#indexing-long-documents)
 indique que les enregistrements de l’index ne doivent pas dépasser 10kb chacun,
 ce qui équivaut à peu près à un ou deux paragraphes. C’est devenu soudainement

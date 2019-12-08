@@ -62,7 +62,7 @@ il en retourne — voici ce que nous allons faire :
 -  **Ajouter un fichier `manifest.json`** pour définir l’apparence de
   l’application Web sur mobile.
 
-## Pré-requis
+## Prérequis
 
 ### Créer une page `hors-connexion`
 

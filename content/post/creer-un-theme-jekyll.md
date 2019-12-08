@@ -186,7 +186,7 @@ Jekyll (et de Sitelaf) :
     pouvoir habiller différents types et différentes tailles de contenus.
 
 2.  **Fournissez une bonne documentation :** Tout bon thème s'accompagne d’une
-    documentation claire et détaillée. C’est même un pré-requis spécifique si
+    documentation claire et détaillée. C’est même un prérequis spécifique si
     vous souhaitez soumettre votre thème sur des marketplaces comme ThemeForest.
     Assurez-vous que le processus d’installation soit simple à suivre et que
     toutes les fonctionnalités et les options sont documentées. Je fais de mon
@@ -224,7 +224,7 @@ pour Jekyll.
 
 ## Bien configurer son environnement
 
-Avant de rentrer dans le vif du sujet, il y a quelques pré-requis à respecter.
+Avant de rentrer dans le vif du sujet, il y a quelques prérequis à respecter.
 Il est préférable de connaître un minimum le fonctionnement de Jekyll,
 l’arborescence de fichiers d’un thème ressemble à celle d’un site Jekyll, même
 chose pour le processus de développement et le versionnement des fichiers aveec
