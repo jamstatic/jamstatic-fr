@@ -11,6 +11,11 @@ footnoteReturnLinkContents: "↩"
 googleAnalytics: UA-75833986-1
 disqusShortname: jekyllfr
 
+module:
+  imports:
+    - path: github.com/jygastaud/hugo-microtypo/microtypo
+      disable: false
+
 blackfriday:
   angledQuotes: true
   smartypantsQuotesNBSP: true
