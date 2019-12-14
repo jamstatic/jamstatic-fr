@@ -1,8 +1,7 @@
 ---
 title: "Jamstack pour les clients"
 date: 2019-12-10T13:54:24+01:00
-lastmod:
-draft: true
+lastmod: 2019-12-14T15:24:18+01:00
 description: "How to clearly and effectively communicate the benefits of JAMstack with your prospects and your clients?"
 categories:
   - jamstack
