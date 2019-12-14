@@ -155,7 +155,8 @@ blockquote {
 }
 
 pre {
-  margin: $spacing-unit 0;
+  max-width: 37em;
+  margin: 0 auto;
 }
 
 code {

@@ -232,6 +232,10 @@ body {
   }
 }
 
+.highlight {
+  margin: 2em calc(50% - 50vw);
+}
+
 .marker {
   background-color: rgba(255, 228, 0, 0.4);
   padding: 0.1rem;
@@ -257,7 +261,7 @@ body {
   }
 
   &.tip {
-    background-color: #ffed7f;
+    background-color: rgba(255, 237, 127, 0.48);
     border-color: #feda00;
 
     code {
@@ -288,7 +292,7 @@ body {
   }
 
   code {
-    background-color: #bdd6ec;
+    background-color: rgba(189, 214, 236, 0.72);
   }
 }
 
@@ -332,8 +336,14 @@ figcaption {
   }
 }
 
-.footnotes {
+.footnotes,
+.edit {
   font-size: $small;
   font-style: italic;
   color: $grey-dark;
+}
+
+.edit {
+  color: $grey-light;
+  text-align: right;
 }

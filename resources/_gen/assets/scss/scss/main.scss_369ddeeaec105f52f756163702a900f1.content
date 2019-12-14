@@ -483,7 +483,8 @@ blockquote {
   padding: 1px 5px; }
 
 pre {
-  margin: 31.104px 0; }
+  max-width: 37em;
+  margin: 0 auto; }
 
 code {
   font-family: 'Roboto Mono',monospace;
@@ -503,13 +504,13 @@ pre {
 .wrapper {
   margin-right: auto;
   margin-left: auto;
-  max-width: calc(66.247rem - (31.104px / 2));
+  max-width: calc(55.20583333rem - (31.104px / 2));
   padding-right: 31.104px;
   padding-left: 31.104px; }
-  @media screen and (min-width: 67.975rem) {
+  @media screen and (min-width: 56.93383333rem) {
     .wrapper {
-      max-width: -webkit-calc(66.247rem - (31.104px));
-      max-width: calc(66.247rem - (31.104px));
+      max-width: -webkit-calc(55.20583333rem - (31.104px));
+      max-width: calc(55.20583333rem - (31.104px));
       padding-right: 31.104px;
       padding-left: 31.104px; } }
 
@@ -605,7 +606,7 @@ h2,
 
 h1,
 .h1 {
-  font-size: 2.0736em; }
+  font-size: 2.48832em; }
 
 @media screen and (min-width: 46.005rem) {
   body {
@@ -625,9 +626,6 @@ h6,
 .h6 {
   margin-top: 1.44em;
   margin-bottom: 0.19380888em; }
-
-h2 + h3 {
-  margin-top: 0.40189785em; }
 
 h1,
 h2,
@@ -704,7 +702,7 @@ body {
   margin: 0 auto;
   padding: 0 0.5em;
   font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 2.985984em;
+  font-size: 3.5831808em;
   font-weight: 900;
   letter-spacing: 0.021736em;
   line-height: 1;
@@ -828,7 +826,7 @@ body {
   .post-link {
     font-size: 1.2em; } }
 
-@media screen and (min-width: 67.975rem) {
+@media screen and (min-width: 56.93383333rem) {
   .grid {
     grid-template-columns: 1fr 1fr 1fr; } }
 
@@ -854,6 +852,9 @@ body {
   .post-intro a {
     font-weight: 400; }
 
+.highlight {
+  margin: 2em calc(50% - 50vw); }
+
 .marker {
   background-color: rgba(255, 228, 0, 0.4);
   padding: 0.1rem; }
@@ -871,7 +872,7 @@ body {
   .notice.info {
     background-color: rgba(169, 197, 234, 0.2); }
   .notice.tip {
-    background-color: #ffed7f;
+    background-color: rgba(255, 237, 127, 0.48);
     border-color: #feda00; }
     .notice.tip code {
       background-color: #feda00;
@@ -889,7 +890,7 @@ body {
   .notice p:last-child {
     margin-bottom: 0; }
   .notice code {
-    background-color: #bdd6ec; }
+    background-color: rgba(189, 214, 236, 0.72); }
 
 figure {
   display: block;
@@ -905,7 +906,7 @@ figcaption {
   line-height: 1.2;
   color: rgba(14, 30, 37, 0.64); }
 
-@media screen and (min-width: 67.975rem) {
+@media screen and (min-width: 56.93383333rem) {
   figcaption {
     margin: auto; } }
 
@@ -923,13 +924,18 @@ figcaption {
     width: 100%;
     height: 100%; }
 
-.footnotes {
+.footnotes,
+.edit {
   font-size: 0.83333333em;
   font-style: italic;
   color: rgba(14, 30, 37, 0.9); }
 
+.edit {
+  color: rgba(14, 30, 37, 0.64);
+  text-align: right; }
+
 /* Background */
-.chroma {
+.highlight {
   background-color: #f0f3f3; }
 
 /* Error */
