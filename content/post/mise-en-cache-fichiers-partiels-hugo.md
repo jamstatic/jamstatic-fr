@@ -37,7 +37,7 @@ Votre entête de page affichera presque toujours le même balisage. Même logo, 
 
 Si votre projet Hugo nécessite la création de milliers de fichiers HTML, alors, à chaque génération Hugo va devoir inspecter mille fois la configuration de votre menu, celle de vos profils sociaux pour au final générer le même balisage.
 
-Avec `partialCached` vous pouvez dire à Hugo que ce bout de code ne bouge jamais et qu'il peut donc l'inspecter une seule fois, le mettre en cache et le réutiliser :
+Avec `partialCached` vous pouvez dire à Hugo que ce bout de code ne bouge jamais et qu'il peut donc l'inspecter une seule fois, le mettre en cache et le réutiliser&#8239;:
 
 ```go-html-template
 {{ partialCached "header.html" . }}
@@ -135,7 +135,7 @@ Personnellement j'aime bien `%x`, car il va générer la représentation d'une v
 
 Admettons que nous ayons :
 
-```
+```yaml
 authors:
   - Bud Parr
   - Frank Taillandier
@@ -145,8 +145,9 @@ authors:
 ```go-html-template
 {{ $variant := printf "%x" .Params.authors }}
 ```
+
 🖨️👇
-`[4275642050617272 4672616e6b205461696c6c616e64696572 52c3a9676973205068696c6962657274]`
+`[42756420506172724672616e6b205461696c6c616e6469657252c3a9676973205068696c6962657274]`
 
 Nous avons maintenant une chaîne de caractères que nous pouvons passer comme variante du partiel :
 
@@ -173,7 +174,7 @@ Cette solution pour utiliser les variantes marche pour les listes et les tableau
 
 Dans un contexte multilingue, si nous repensons à notre partiel pour l'entête de page, il se pourrait que nous y trouvions aussi un sélecteur de langue et que nous soyons tentés d'ajouter une autre variante :
 
-```
+```go-html-template
 {{ partialCached "navigation.html" . .Section .Lang }}
 ```
 
