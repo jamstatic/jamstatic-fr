@@ -26,9 +26,10 @@
 
       {{ with .Params.Source }}
         {{ if and .url .title .author }}
-        <p class="notice info">
-          <em>Article original : <a href="{{ .url }}">{{ .title }}</a> de {{ .author }}</em>
+        <p class="post-source">
+          <em>Source : <a href="{{ .url }}">{{ .title }}</a> de {{ .author }}</em>
         </p>
+        <hr />
         {{ end }}
       {{ end }}
 

@@ -33,16 +33,16 @@ $line-height-computed: $base-em * $line-height-base;
 $base-line: $line-height-computed;
 
 // Width of the content area
-$content-width: 55.2058333333rem; // 66.247/ratio rem
+$content-width: 55.206rem;
 
 // Breakpoints
 $on-tablet: 46.005rem;
-$on-desktop: 56.9338333333rem; // content-with + ms3
+$on-desktop: 56.934rem; // content-with + ms3
 
 // Colors
 $text-color: rgba(14,30,37,.9);
-$brand-color: #00c7b7;
-$brand-light: #4d9abf;
+$brand-color: #2f91a7;
+$brand-light: #45b8d2;
 $grey: #8b8b8b;
-$grey-light: rgba(14,30,37,.64);
-$grey-dark: rgba(14,30,37,.9);
+$grey-light: rgba(14,30,37,.77);
+$grey-dark: rgba(14,30,37,.92);
