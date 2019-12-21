@@ -13,14 +13,16 @@ categories:
   - jekyll
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 J'ai récemment mis à jour
 [mon site perso](https://nicolas-hoizey.com) avec
 [la version 3.0 de Jekyll](https://jekyllrb.com/news/2015/10/26/jekyll-3-0-released/)
 et j'en ai profité pour changer quelques outils.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 Les plugins que j'utilisais ne répondaient pas à mes exigences pour les images
 responsive, j'ai donc décidé de trouver d’autres moyens de satisfaire ces

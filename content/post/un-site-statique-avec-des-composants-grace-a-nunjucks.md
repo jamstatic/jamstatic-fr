@@ -10,7 +10,7 @@ source:
   url: "https://www.smashingmagazine.com/2018/03/static-site-with-nunjucks/"
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 La philosophie de la génération de site statique à l’aide d’un langage de
 templating et d’un langage de balisage léger comme Markdown continue d’être
@@ -27,7 +27,9 @@ on pourrait tout aussi bien utiliser le générateur open source
 [Eleventy](/categories/eleventy) par exemple, qui utilise aussi
 [Nunjucks](https://mozilla.github.io/nunjucks/).
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 Il est de plus en plus courant de nos jours de bâtir des sites avec des
 composants et c'est une très bonne idée. Plutôt que de construire les pages les

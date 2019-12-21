@@ -14,7 +14,7 @@ categories:
   - hugo
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 Si vous faites du développement front-end, du CSS, du SVG et
 autres joyeusetés, vous connaissez sans doute déjà la talentueuse
@@ -34,7 +34,9 @@ contente d’avoir menée à bien. Puisse le partage de son périple vous éparg
 subir les mêmes écueils et vous aider à commencer à vous familiariser avec les
 concepts d’Hugo.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 Ces derniers mois, travailler sur mon site web s'est révélé être de plus en plus
 pénible, que ce soit pour continuer à le développer, itérer sur son design,
@@ -150,7 +152,7 @@ Hugo qui comporte quelques astuces. Si vous envisagez d’adopter Hugo comme
 nouveau générateur de site statique, j'espère que vous trouverez quelques trucs
 utiles pour avoir un système fonctionnel.
 
-{{% /notice %}}
+{{< /notice >}}
 
 ### Configurer Hugo
 
@@ -206,7 +208,7 @@ les cheveux pas mal de fois. Mais croyez-moi, le résultat final prouve que ça
 valait **vraiment** le coup. Au passage, j'ai beaucoup appris. C’est ce que je
 vais partager avec vous dans la prochaine section.
 
-{{% notice tip %}}
+{{< notice tip >}}
 
 **Astuce** : Vous appartenez peut-être à une autre catégorie
 de développeur fainéant, vous préférez peut-être partir d’un modèle standard qui
@@ -219,7 +221,7 @@ configurés pour pouvoir faire tourner votre site. La structure de ce thème
 standard est légèrement différente de ce que je vais vous montrer, mais pas tant
 que ça.
 
-{{% /notice %}}
+{{< /notice >}}
 
 ### Se plonger dans Hugo : quelques détails techniques
 
@@ -253,7 +255,7 @@ et que vous repérez des choses qui pourraient être réalisées d’une meilleu
 façon, ne vous gênez pas pour partager vos manières de faire avec le reste
 d’entre nous pour que nous puissions tous apprendre de vous.
 
-{{% /notice %}}
+{{< /notice >}}
 
 #### La structure des dossiers d’Hugo
 
@@ -301,7 +303,7 @@ l’utilité, je vous recommande d’utiliser leur template pour Hugo. Et perso,
 préfère commencer de zéro pour apprendre et comprendre comment tout ça marche.
 Faites comme bon vous semble.
 
-{{% /notice %}}
+{{< /notice >}}
 
 #### Créer et mettre en page du contenu
 
@@ -327,7 +329,7 @@ pris un peu de temps pour apprendre à utiliser toutes ces nouvelles syntaxes
 Néanmoins la courbe d’apprentissage est assez rapide, ne vous laissez donc pas
 intimider par ces nouvelles syntaxes si tout cela est nouveau pour vous.
 
-{{% /notice %}}
+{{< /notice >}}
 
 ##### Définir (ou déclarer) les types de contenu
 
@@ -362,7 +364,7 @@ depuis la version 0.24 d’Hugo ! Cela vous permet par exemple de créer des
 sous-sections _design_ et _développement_ dans la section _articles_ et bien
 plus. C’est une fonctionnalité intéressante.
 
-{{% /notice %}}
+{{< /notice >}}
 
 C’est une des choses que j'aime chez Hugo comparativement à Jekyll qui, _à ma
 connaissance_, n'offre pas de fonctionnalité similaire.[^3]
@@ -566,7 +568,7 @@ j'avais peur de casser une fois de plus ma mise en page. Mais maintenant que
 j'en sais davantage, il est bon de signaler que vous n'avez pas vraiment besoin
 de la variable `page` ici.
 
-{{% /notice %}}
+{{< /notice >}}
 
 Le `title` est utilisé comme intitulé de lien dans le menu. (Sur mon site le
 menu situé en haut de page contient une entrée "About & Interviews").
@@ -592,7 +594,7 @@ menu principal. J'ajoute que certains aspects sont encore assez confus pour moi,
 mais comme je suis arrivée à faire ce que je voulais maintenant : je ne touche
 plus à rien, j'ai trop peur de casser un truc. Une fois de plus. 😂
 
-{{% /notice %}}
+{{< /notice >}}
 
 Toutes les autres pages statiques sont créées de la même manière. La seule chose
 qui change c'est le titre, la description et leur ordre dans le menu. Elles
@@ -622,7 +624,7 @@ etc. dans le modèle de mise en page et n'avoir que le texte dans le fichier
 Markdown. Si j'ai procédé de la sorte, c'est juste que ça me convient bien comme
 ça.
 
-{{% /notice %}}
+{{< /notice >}}
 
 ##### Les archétypes de contenu
 
@@ -858,7 +860,7 @@ Ne faites pas attention au code HTML de cette boucle, ça fait
 un moment que je n'ai pas travaillé sur mon site, il aurait bien besoin de
 quelques améliorations. Le balisage sera bientôt mis à jour.
 
-{{% /notice %}}
+{{< /notice >}}
 
 C’est la partie `{{ range .Paginator.Pages }}` qui est vraiment importante ici.
 {{% marker %}}Chaque `.Paginator` que vous utilisez dans une page d’index de
@@ -878,7 +880,7 @@ faudra que je me replonge de nouveau dans la documentation pour arriver à tirer
 de la logique d’Hugo plus qu'une simple boucle. Vous devriez en faire de
 même.
 
-{{% /notice %}}
+{{< /notice >}}
 
 Et pour ce qui est du fichier partiel `pagination.html`, le mien ressemble pour
 le moment à ça :

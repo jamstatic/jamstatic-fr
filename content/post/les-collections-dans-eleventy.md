@@ -12,12 +12,16 @@ source:
   url: https://www.pborenstein.com/articles/collections/
 ---
 
-{{% intro %}}Le générateur de site statique open source
-[Eleventy](/categories/eleventy) est à la différence d'autres générateurs —
-comme Jekyll ou Hugo — beaucoup moins opiniâtre. Là où ces deux générateurs
-vont imposer _la_ manière dont vous pouvez créer des collections de documents
-(appelées sections de contenu dans Hugo), Eleventy lui vous laisse le choix.{{%
-/intro %}}
+{{< intro >}}
+
+Le générateur de site statique open source [Eleventy](/categories/eleventy) est à la différence d'autres générateurs — comme Jekyll ou Hugo — beaucoup moins
+opiniâtre. Là où ces deux générateurs vont imposer _la_ manière dont vous pouvez
+créer des collections de documents (appelées sections de contenu dans Hugo),
+Eleventy lui vous laisse le choix.
+
+{{% /intro %}}
+
+***
 
 Dans Eleventy les `collections` permettent de grouper des articles selon divers
 critères. Une collection pourrait désigner une série d'articles. Un autre

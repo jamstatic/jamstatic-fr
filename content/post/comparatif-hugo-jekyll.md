@@ -1,7 +1,7 @@
 ---
 title: Hugo ou Jekyll ? Six critères de comparaison
 date: 2018-04-06 18:10:03 +0000
-description: Jekyll et Hugo sont les deux générateurs de site statiques les plus populaires.
+description: Jekyll et Hugo sont parmi les générateurs de site statiques les plus populaires.
   Quel est celui qu'il vous faut ?
 categories:
 - hugo
@@ -273,13 +273,13 @@ statique en pesant les pour et les contre.
 
 [^plugins]: NdT: Les plugins de génération de Sitemap XML, de génération de Flux RSS/Atom ou de génération des balises meta pour le SEO sont développés par la core team et sont parfaitement bien intégrés à Jekyll.
 
-{{% notice tip %}}
+{{< notice tip >}}
 
 Vous pouvez consulter
 [le guide de Forestry pour développer avec Jekyll](https://forestry.io/docs/guides/developing-with-jekyll/)
 pour apprendre à développer un site avec Jekyll et le connecter au CMS Forestry.
 
-{{% /notice %}}
+{{< /notice >}}
 
 ## Hugo
 
@@ -418,12 +418,12 @@ Parmi les fonctionnalités bien pratiques d’Hugo on peut citer :
 - La gestion du multilingue/i18n
 - Les formats d’export personnalisés
 
-{{% notice tip %}}
+{{< notice tip >}}
 
 Envie de passer à Hugo, mais encore sous Jekyll?
 [Hugo peut importer votre site Jekyll en ligne de commande !](https://gohugo.io/commands/hugo_import_jekyll/)
 
-{{% /notice %}}
+{{< /notice >}}
 
 ### Performance
 
@@ -466,14 +466,14 @@ statique en pesant le pour et le contre.
 - **Une syntaxe de gabarit compliquée.** Bien que le moteur de gabarits d’Hugo
   soit versatile, il est assez peu intuitif et compliqué pour les débutants.
 
-{{% notice tip %}}
+{{< notice tip >}}
 
 Reportez-vous au
 [guide de Forestry pour développer avec Hugo](https://forestry.io/docs/guides/developing-with-hugo/)
 pour apprendre comment développer un site avec Hugo et le connecter au CMS
 Forestry.
 
-{{% /notice %}}
+{{< /notice >}}
 
 ## En résumé
 

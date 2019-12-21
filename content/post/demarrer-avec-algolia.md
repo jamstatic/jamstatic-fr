@@ -1,7 +1,7 @@
 ---
 title: "Bien démarrer avec Algolia"
 date: 2018-03-19T21:13:46+01:00
-description: ""
+description: "Jess West vous dit comment indexer et intégrer une recherche performante pour son site."
 categories:
   - algolia
 images:
@@ -12,14 +12,16 @@ source:
   url: "https://dev.to/algolia/getting-started-with-algolia-4lnp"
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 Algolia fait tout pour faciliter l’ajout d’une recherche
 performante sur votre site. Jessica West le prouve une fois de plus en nous
 décrivant pas-à-pas les étapes nécessaires pour y parvenir, ici en vanilla JS
 avec InstantSearch.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 Salut 👋 ! Ça vous est déjà arrivé de développer entièrement un moteur de
 recherche ? Avez-vous déjà redouté que votre Product Manager vous dise "tu sais

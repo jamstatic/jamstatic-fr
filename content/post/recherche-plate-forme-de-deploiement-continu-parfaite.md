@@ -14,8 +14,11 @@ aliases:
   - /2018/08/26/recherche-plate-forme-de-developpement-continu-parfaite/
 ---
 
-{{% intro %}}L'automatisation est une des composantes qui permet de bien travailler en versionnant son projet et en configurant une publication automatique. Cette bonne pratique issue du développement permet de s'assurer que tout le monde peut contribuer et que les changements seront bien publiés. DJ Walker a pris le temps de passer en revue différents services pour vous, c'est parti pour la visite guidée.
-{{% /intro %}}
+{{< intro >}}
+L'automatisation est une des composantes qui permet de bien travailler en versionnant son projet et en configurant une publication automatique. Cette bonne pratique issue du développement permet de s'assurer que tout le monde peut contribuer et que les changements seront bien publiés. DJ Walker a pris le temps de passer en revue différents services pour vous, c'est parti pour la visite guidée.
+{{< /intro >}}
+
+***
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1280/v1535462763/steps-building.jpg"
 caption="Photo by Samuel Zeller on Unsplash" >}}
@@ -53,7 +56,7 @@ On ne peut pas connecter de projets GitLab à CircleCI pour le moment.
 
 {{% notice info %}}
 Lire comment [déployer un site statique avec CircleCI](https://forestry.io/blog/automate-deploy-w-circle-ci/).
-{{% /notice %}}
+{{< /notice >}}
 
 ## TravisCI
 
@@ -71,7 +74,7 @@ TravisCI promet d'être gratuit à vie pour les projets open source. TravisCI tr
 
 Avec TravisCI, vos builds doivent tourner dans un environnement Ubuntu. Vous pouvez installer Docker dans cet environnement pour récupérer des images, mais c'est la solution la plus verbeuse de toutes. De plus, vous ne pouvez utiliser TravisCI que si vos projets sont hébergés sur GitHub.
 
-{{% notice info %}}[Guide de démarrage TravisCI](https://docs.travis-ci.com/user/getting-started/){{% /notice %}}
+{{% notice info %}}[Guide de démarrage TravisCI](https://docs.travis-ci.com/user/getting-started/){{< /notice >}}
 
 ## Drone
 
@@ -87,7 +90,7 @@ Drone propose des [matrices de builds](http://docs.drone.io/matrix-builds/) pour
 
 Drone est un arrivant relativement récent, et sa documentation aurait besoin d'un peu d'amour.
 
-{{% notice info %}} [Bien démarrer avec Drone CI](http://docs.drone.io/getting-started/) {{% /notice %}}
+{{% notice info %}} [Bien démarrer avec Drone CI](http://docs.drone.io/getting-started/) {{< /notice >}}
 
 ## GitLab CI
 
@@ -103,7 +106,7 @@ GitLab CI est compatible avec toutes les versions de GitLab : vous pouvez l'util
 
 Forcément pour utiliser GitLab CI, vous devez héberger votre code source avec GitLab, le fait de pouvoir héberger vous-même votre suite logicielle devrait vous rassurer si vous avez peur d'être trop dépendant d'un service tiers.
 
-{{% notice info %}} [GitLab CI : guide de démarrage rapide](https://docs.gitlab.com/ee/ci/quick_start/) {{% /notice %}}
+{{% notice info %}} [GitLab CI : guide de démarrage rapide](https://docs.gitlab.com/ee/ci/quick_start/) {{< /notice >}}
 
 ## Jenkins
 
@@ -127,7 +130,7 @@ Pas grand-chose à redire à ce niveau : Jenkins peut faire à peu près tout ce
 
 {{% notice info %}}
 [Jenkins : Guide de démarrage](https://jenkins.io/doc/pipeline/tour/getting-started/)
-{{% /notice %}}
+{{< /notice >}}
 
 ## Choisir l'outil qui vous convient le mieux
 

@@ -10,7 +10,7 @@ images:
   - https://cdn.css-tricks.com/wp-content/uploads/2017/02/terraform-1.jpg
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 Après être aller regarder [sous le capot de Jekyll]({{< relref
 "comment-fonctionne-jekyll.md" >}}) et toujours dans l’idée de continuer à nous
@@ -21,7 +21,9 @@ nous entraîne cette fois-ci dans les entrailles de [Harp](https://harpjs.com/),
 un générateur de fichiers statiques développé en JavaScript, qui résume bien le
 périmètre fonctionnel de ces outils.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 Je parle beaucoup des générateurs de site statique, mais je parle toujours de
 comment _utiliser_ des générateurs de site statique. Ils sont souvent perçus

@@ -12,7 +12,9 @@ source:
   url: "https://medium.com/@11ty/making-a-simple-web-site-with-the-simplest-static-site-generator-level-1-7fc6febca1"
 ---
 
-{{% intro %}} Il existe des centaines de générateurs de site statique et il en
+{{< intro >}}
+
+Il existe des centaines de générateurs de site statique et il en
 arrive toujours de nouveaux. Après avoir longtemps utilisé Jekyll,
 [Zach Leat](https://www.zachleat.com/web/), développeur front-end chez
 [Filament Group](https://www.filamentgroup.com/), a décidé de s'inspirer des
@@ -24,7 +26,11 @@ choix du langage de templating ([Liquid](https://shopify.github.io/liquid/) par
 défaut comme dans Jekyll et aussi
 [tout plein d’autres qu'on peut mélanger à loisir](https://github.com/11ty/eleventy/#eleventy-)
 bien connus des développeurs JS) tout en leur offrant la puissance de `npm`.
-Zach nous propose un premier aperçu de son fonctionnement. {{% /intro %}}
+Zach nous propose un premier aperçu de son fonctionnement.
+
+{{< /intro >}}
+
+***
 
 {{< figure
 src="https://cdn-images-1.medium.com/max/800/1*u1v8ojapeWAgL2xjaJZ5rA.png"
@@ -54,7 +60,7 @@ Faisons un site web pour notre collection d’images GIF. Une interface pour not
 propre domaine [bukk.it](https://bukk.it/). Appelons ça _Giffleball_.
 
 {{% notice info %}}Le code source de la première partie de ce tutoriel est
-[disponible sur GitHub](https://github.com/11ty/giffleball).{{% /notice %}}
+[disponible sur GitHub](https://github.com/11ty/giffleball).{{< /notice >}}
 
 #### Création des fichiers
 

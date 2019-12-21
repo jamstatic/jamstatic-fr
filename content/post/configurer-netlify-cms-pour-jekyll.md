@@ -13,7 +13,7 @@ categories:
   - headless
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 Les outils de gestion de contenus connectés aux générateurs de
 site statique continuent d’évoluer. Lors de [la refonte de Smashing
@@ -27,7 +27,9 @@ article, nous utiliserons [Jekyll](https://jekyllrb.com/), le générateur le pl
 populaire, sachez que le principe est similaire pour [Hugo](https://gohugo.io/)
 ou d’autres générateurs.
 
-{{% /intro %}}
+{{</ intro >}}
+
+***
 
 Nous partirons du principe que vous avez une installation de Jekyll déjà
 fonctionnelle, dans le cas contraire, reportez-vous à la

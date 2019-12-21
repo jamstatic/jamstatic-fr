@@ -13,7 +13,7 @@ categories:
   - jekyll
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 [The Design Portfolio Workflow](https://medium.com/@katfukui/the-design-portfolio-workflow-a94030d0b39e#.uut2a0ulw)
 de @katmeister, s'adresse aux webdesigners curieux de se frotter un peu à la
@@ -22,7 +22,9 @@ premiers pas avec Jekyll, d’apprécier la liberté et la souplesse qu'il procu
 et qui sait de pouvoir ensuite
 [développer des thèmes pour Jekyll]({{< relref "creer-un-theme-pour-jekyll.md" >}}). 😊
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 ## Un guide complet pour coder et déployer un site, tout en ligne de commande
 

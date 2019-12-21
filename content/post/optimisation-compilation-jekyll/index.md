@@ -1,7 +1,6 @@
 ---
 title: Optimisation du temps de compilation de Jekyll
-description: Comment j'ai réussi à diviser par 15 le temps de génération de mon site
-  avec Jekyll
+description: Comment diviser par quinze le temps de génération de son site.
 date: 2018-11-28 00:00:00 +0000
 commments: true
 author: boris
@@ -12,7 +11,7 @@ categories:
 - jekyll
 
 ---
-{{% intro %}}
+{{< intro >}}
 
 Il y a trois ans, fatigué par WordPress et de sa galaxie de plugins douteux, j'ai décidé de migrer vers un générateur de site statique. Après quelques essais avec diverses solutions, j'ai opté pour Jekyll, dont la communauté me semblait plus mature.
 
@@ -20,9 +19,9 @@ Trois ans plus tard, je commence à comprendre les forces et les faiblesses de l
 
 Par contre, à force de manipulations, mon Jekyll ressemblait moins au célèbre docteur qu'au monstre de Frankenstein&nbsp;: un assemblage de portions de code grossièrement liées entre elles par des liens fragiles, se déplaçant lentement en gémissant… En un mot comme en cent&nbsp;: mon <em lang="en">build</em> était lent.
 
-{{% /intro %}}
+{{< /intro >}}
 
----
+***
 
 ## TL;DR
 

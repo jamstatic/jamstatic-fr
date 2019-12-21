@@ -9,9 +9,11 @@ images:
   - https://i.ytimg.com/vi/xLQ4to7Ubn0/sddefault.jpg
 ---
 
-{{% intro %}}
+{{< intro >}}
 Au programme du premier meetup JAMstack Paris, un retour d'expérience sur la migration d'un site Angular vers Gatsby, et un exemple de développement en live d'un plugin Gatsby. [Les vidéos sont en ligne](https://www.youtube.com/channel/UC66eQOycjMnaqzpbRUhEK2w).
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 Dans la première présentation, [Louis Lafont](https://twitter.com/dot_louis), développeur front-end chez [MonBanquet](https://monbanquet.fr/), présente la stack qu'il a choisi pour la refonte du site, à savoir [Gatsby](https://gatsbyjs.org) pour la partie front, [Contentful](https://www.contentful.com/) pour la gestion de contenu et [Netlify](https://www.netlify.com/) pour héberger le tout.
 

@@ -9,7 +9,7 @@ categories:
   - jekyll
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 Depuis la version 3.2, les webdesigners ont la possibilité de
 créer des thèmes pour Jekyll. Le support des thèmes sous forme de gem est encore
@@ -19,7 +19,9 @@ Jekyll et Git. Packager un thème se fait en quelques minutes grâce à
 l’utilisation de `bundler`. Voyons ensemble à quoi ressemble le workflow de
 création de thème pour Jekyll.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 ## Prérequis
 

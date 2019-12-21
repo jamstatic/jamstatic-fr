@@ -2,7 +2,7 @@
 title: "JAMstack pour les clients"
 date: 2019-12-10T13:54:24+01:00
 lastmod: 2019-12-14T15:24:18+01:00
-description: "Comment communiquer clairement et efficacement les avantages de JAMstack avec vos prospects et vos clients ?"
+description: "Comment communiquer clairement et efficacement les avantages de la JAMstack à vos prospects et vos clients ?"
 categories:
   - jamstack
 images:
@@ -36,7 +36,7 @@ En général, cela se résume à des revenus ou à une meilleure expérience pou
 
 ### De meilleures performances
 
-> Plus de la moitié des gens abandonnent leur visite sur un site s'il met plus de trois secondes à se charger. Cela se traduit par des pertes de revenu directes, une baisse des conversions et une mauvaise expérience utilisateur. — ([ThinkWithGoogle](https://www.thinkwithgoogle.com/marketing-resources/experience-design/mobile-page-speed-load-time/))
+> Plus de la moitié des gens abandonnent leur visite sur un site s'il met plus de trois secondes à se charger. Cela se traduit par des pertes de revenu directes, une baisse des conversions et une mauvaise expérience utilisateur. — [ThinkWithGoogle](https://www.thinkwithgoogle.com/marketing-resources/experience-design/mobile-page-speed-load-time/)
 
 La rapidité de votre site Web peut faire gagner ou perdre des visites engagées qui sont plus susceptibles d'être exploités à des fins commerciales, que vous recherchiez des ventes, des clics publicitaires et/ou une augmentation du trafic. De plus, aujourd'hui, les gens du monde entier s'attendent à ce que les marques offrent une expérience de site Web rapide et sans friction sur de multiples appareils.
 

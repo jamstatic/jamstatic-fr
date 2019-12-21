@@ -1,7 +1,7 @@
 ---
 title: "Les startups de l’écosystème JAMstack"
 date: 2018-05-31T20:21:08+02:00
-description: "Les capital risqueurs de la Silicon Valley misent sur les startups autour de la JAMstack"
+description: "Les capital risqueurs de la Silicon Valley misent sur les startups qui forment l'écosytème de la JAMstack."
 categories:
   - jamstack
 images:
@@ -12,7 +12,7 @@ source:
   url: "https://medium.com/@CRVVC/the-jamstack-startup-landscape-c06cc3cdb917"
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 Devant la tendance croissante de l'adoption d'outils et de services web modernes
 pour gérer les sites ou les applications web, les investisseurs de la Silicon
@@ -21,7 +21,9 @@ Algolia, Contentful et plus récemment Gatsby ont tous levé quelques millions d
 dollars pour les aider dans leur développement. Et ce n'est que le début, les
 annonces de financement devraient se poursuivre dans les prochains mois.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 Dans cet article [CRV](https://www.crv.com/) montre une vue d'ensemble du
 résultat de plusieurs tendances qui ont permis l'émergence d'une nouvelle

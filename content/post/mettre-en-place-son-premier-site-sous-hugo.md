@@ -12,7 +12,7 @@ images:
 - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346998/up_running_w_hugo_I_1.jpg
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 Pour créer un nouveau projet avec Hugo, [Forestry](https://forestry.io) propose
 un kit de démarrage en libre téléchargement. Que vous ayez déjà utilisé le
@@ -22,7 +22,9 @@ outils de l’écosystème de `npm`.
 [Chris Macrae](https://twitter.com/chrisdmacrae) nous montre comment s'en servir
 pour créer votre premier site en moins de 30 minutes.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 [Hugo](https://gohugo.io), le générateur de site statique écrit en Go, a pris la
 communauté de vitesse. Il présente tous les avantages d’un générateur de site
@@ -154,13 +156,13 @@ suivante dans l’en-tête _Front Matter_ de l’article:
 
 `date: "YYYY-MM-DDTHH:MM:SS-00:00"`
 
-{{% notice tip %}}
+{{< notice tip >}}
 
 _Remplacez_ `YYYY-MM-DDTHH:MM:SS-00:00` avec une date valide, comme…
 `2018-01-01T12:42:00-00:00`. Si votre date se situe dans le futur, Hugo ne
 générera pas cet article en production.
 
-{{% /notice %}}
+{{< /notice >}}
 
 Sauvegardez vos changements puis affichez l’article mis à jour dans votre
 navigateur à l’adresse [http://localhost:3000/](http://localhost:3000/). La date
@@ -388,13 +390,13 @@ Vous êtes maintenant prêt·e à commencer à créer un site statique avec Hugo
 Vous pouvez continuer à utiliser le thème Casper ou repartir du début en
 utilisant les modèles du répertoire `hugo/layouts/`.
 
-{{% notice tip %}}
+{{< notice tip >}}
 
 Les fichiers des modèles de gabarits de page se trouvent dans le
 [_dépôt de notre kit de démarrage_](https://github.com/forestryio-templates/hugo-boilerplate/tree/master/hugo/layouts)
 si vous souhaitez repartir de zéro.
 
-{{% /notice %}}
+{{< /notice >}}
 
 Pour en apprendre un peu plus sur Hugo, reportez-vous aux sections suivantes de
 la documentation officielle :

@@ -1,9 +1,9 @@
 ---
-title: Entretien avec Bud Parr, créateur de The New Dynamic
+title: Entretien avec Bud Parr de The New Dynamic
 date: 2017-11-27
 description: >
   Bud Parr, créateur et gérant de l’agence The New Dynamic, partage son expérience
-  et sa vision sur l’écosystème actuel de la JAMstack
+  et sa vision sur l’écosystème actuel de la JAMstack.
 images:
   - https://github.com/budparr.png
 source:
@@ -182,4 +182,4 @@ J'aimerais donc que les gens puissent se familiariser davantage avec cet
 écosystème, je ne sais pas très bien comment. La mission de The New Dynamic est
 de contribuer à cela, et il y a encore beaucoup de travail à faire.
 
-[Lire la version originale en anglais sur thenewdynamic.org](https://www.thenewdynamic.org/article/interview-bud-parr/)
+[Lire la version originale en anglais sur thenewdynamic.org](https://www.thenewdynamic.org/article/2017-11-27-interview-with-bud-parr/)

@@ -2,6 +2,7 @@
 title: "Oubliez Docker, le futur c'est la JAMstack"
 date: 2018-12-07T01:21:13+01:00
 lastmod: 2018-01-26T01:09:11+01:00
+description: À l'heure où les entreprises se débattent pour devenir plus agiles et rester pertinentes, elles peuvent compter sur les dernières évolutions des technologies.
 categories:
   - jamstack
 images:
@@ -12,9 +13,11 @@ source:
   url: "https://hackernoon.com/forget-docker-the-future-is-jamstack-aae5bcaf4616"
 ---
 
-{{% intro %}}
+{{< intro >}}
 La popularité croissante des architectures décentralisées s'explique par l'évolution de l'offre de services disponibles. Que ce soit pour héberger du code source, gérer ses contenus, fournir une authentification, une gestion des paiements, etc. faire appel à des services distants fait de plus en plus sens pour les entreprises dont l'informatique n'est pas le coeur de métier mais simplement un moyen de fournir un service à leurs clients.
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 À l'heure où les entreprises se débattent pour devenir plus agiles et rester
 pertinentes, elles peuvent compter sur les dernières évolutions des

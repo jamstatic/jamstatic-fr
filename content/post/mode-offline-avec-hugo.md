@@ -12,7 +12,7 @@ categories:
   - hugo
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 La majorité des articles publiés jusqu'ici se référaient à Jekyll,
 cette fois place à [Hugo](https://gohugo.io/). Hugo est un générateur de site
@@ -21,7 +21,9 @@ visiteurs si vous lui adjoignez les services d’un Service Worker pour gérer l
 mode déconnecté de votre site web. Notez que les explications fournies ici sont
 valables et facilement adaptables pour tout autre générateur statique.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 Après le _mobile first_, place maintenant au _offline first_ et
 [_aux progressive web apps (PWA)_](https://frank.taillandier.me/2016/06/28/que-sont-les-progressive-web-apps/)

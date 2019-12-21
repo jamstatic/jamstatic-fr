@@ -16,14 +16,18 @@ source:
   url: https://fettblog.eu/wordpress-and-jamstack-sites/
 ---
 
-{{% intro %}} La mode est au [CMS headless]({{< relref "cms-headless.md" >}}),
+{{< intro >}}
+La mode est au [CMS headless]({{< relref "cms-headless.md" >}}),
 comprenez au découplage du back et du front. WordPress n'échappe pas à la règle.
 Même si son API REST ne permet pas encore de faire tout ce qu'on voudrait, il
 est tout à fait possible d’aller récupérer les contenus entrés par les
 utilisateurs dans l’interface d’administration qu'ils affectionnent tant pour
 ensuite les passer à la moulinette d’un générateur de site statique. Stefan
 Baumgartner a testé pour vous avec [Metalsmith](http://www.metalsmith.io/),
-voici comment il a procédé. {{% /intro %}}
+voici comment il a procédé.
+{{< /intro >}}
+
+***
 
 La toute-puissante [JAMStack]({{< relref
 "5-raisons-de-tester-la-jamstack.md" >}}) offre des sites web statiques rapides

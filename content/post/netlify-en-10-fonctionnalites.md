@@ -12,7 +12,7 @@ source:
   url: "https://medium.com/netlify/10-netlify-features-to-surprise-and-delight-225e846b7b21"
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 En l’espace de quelques années [Netlify](https://www.netlify.com/)
 est devenu un acteur incontournable de l’écosystème JAMstack - ils sont
@@ -31,7 +31,9 @@ architecture JAMstack]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}})
 hébergée par Netlify a montré que ça pouvait aller bien au delà en faisant appel
 à différentes APIs et microservices.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 [Phil Hawksworth](https://twitter.com/philhawksworth), nouvellement en charge
 des relations avec les développeurs chez Netlify a publié une liste de

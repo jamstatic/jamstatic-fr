@@ -1,7 +1,7 @@
 ---
 title: Gatsby pour les applis Web
 description: Comment Gatsby permet d'allier les atouts du statique avec les possibilités
-  du dynamique pour créer des applis Web riches en fonctionnalités
+  du dynamique pour créer des applis Web riches en fonctionnalités.
 date: 2019-03-01 11:00:00 +0100
 commments: true
 source:

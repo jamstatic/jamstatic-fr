@@ -12,7 +12,7 @@ categories:
   - hugo
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 S'il est un domaine où les générateurs de site statique se sont
 rapidement imposés c'est bien celui des sites de documentation. Avec la
@@ -32,7 +32,9 @@ explique tout cela en détail. Une bonne occasion pour découvrir les
 fonctionnalités liées aux snippets de code dans Hugo et d’apprendre à créer des
 éléments Shadow DOM en JavaScript.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 Il y a des gens qui détestent écrire de la documentation et d’autres qui
 détestent écrire tout court. Il se trouve que j'aime écrire, sinon vous ne

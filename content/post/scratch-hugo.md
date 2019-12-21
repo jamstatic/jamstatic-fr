@@ -12,7 +12,7 @@ source:
   url: https://regisphilibert.com/blog/2017/04/hugo-scratch-explained-variable/
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 Si vous avez aimé l’article de
 [Régis Philibert](https://regisphilibert.com/) à propos de [la gestion du
@@ -20,9 +20,11 @@ contexte]({{< relref "hugo-le-point-sur-le-contexte.md" >}}) dans les fichiers
 de gabarits de page, vous devriez tout autant apprécier cette
 explication par l’exemple de la fonction `.Scratch` du langage de templating d'Hugo. Ça vous démange ? Voyons tout cela en détail.
 
-{{% /intro %}}
+{{< /intro >}}
 
-{{% notice %}} Vous êtes ici pour apprendre à écraser une variable dans un gabarit de page ? Bonne nouvelle, vous n'avez plus besoin de la fonction `.Scratch` pour celà depuis la version 0.48 d'Hugo. Malgré cela, `.Scratch` reste encore utile pour plein d'autres choses ! {{% /notice %}}
+***
+
+{{% notice %}} Vous êtes ici pour apprendre à écraser une variable dans un gabarit de page ? Bonne nouvelle, vous n'avez plus besoin de la fonction `.Scratch` pour celà depuis la version 0.48 d'Hugo. Malgré cela, `.Scratch` reste encore utile pour plein d'autres choses ! {{< /notice >}}
 
 Le contexte de Page d'Hugo n'est pas seulement la source d'information la plus importante pour vos pages, c'est aussi la source de données principale de tous vos templates. Plus souvent qu'il n'y paraît, vous aurez à ajouter vos propres variables personnalisées en plus de celles définies par défaut.
 
@@ -34,7 +36,7 @@ Scratch a été ajouté à l'origine pour contourner une [limitation](https://gi
 
 {{% notice info %}}
 À des fins de lisibilité, les extraits de code qui suivent ont des commentaires incompatibles avec le langage de template de Go. Reportez vous à la [doc](http://gohugo.io/templates/introduction/#comments) pour comment commenter dans Hugo.
-{{% /notice %}}
+{{< /notice >}}
 
 ### `.Scratch.Set`
 
