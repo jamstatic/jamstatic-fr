@@ -18,7 +18,7 @@ body {
 }
 
 .site-header {
-  padding: $base-line*$ratio*2 0;
+  padding: $base-line 0;
   color: rgba(255, 255, 255, 0.9);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%);
@@ -57,10 +57,11 @@ body {
 
 .site-description {
   display: inline-block;
+  font-size: $bigger;
   padding: 0;
   width: 100%;
   text-align: center;
-  text-shadow: 0 1px 1px rgba(27, 31, 35, 0.25), 0 1px 25px rgba(27, 31, 35, 0.75);
+  text-shadow: 0 1px 1px rgba(27, 31, 35, 0.25), 0 1px 25px rgba(27, 31, 35, 0.5);
   margin-bottom: $spacing-unit;
 }
 
@@ -154,7 +155,7 @@ body {
   .post-item {
     padding: $spacing-unit/$ms1;
     border-radius: 1rem;
-    margin-bottom: $base-line;
+    margin-bottom: $base-line*2;
     grid-column: auto;
 
     &:hover {
@@ -197,7 +198,7 @@ body {
 .post-link {
   display: block;
   line-height: 1.1;
-  margin: ($line-height-computed / $ms7) 0;
+  margin: 0 0 $line-height-computed / $ms7;
   font-family: $title-font-family;
   font-weight: 700;
   letter-spacing: $title-letter-spacing;

@@ -15,7 +15,4 @@
       {{ end }}
     </ul>
   </main>
-  {{ if eq (getenv "HUGO_ENV") "production" }}
-    {{ partial "search.html" . }}
-  {{ end }}
 {{ end }}
