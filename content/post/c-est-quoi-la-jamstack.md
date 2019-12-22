@@ -2,8 +2,7 @@
 title: C'est quoi la JAMstack au juste ?
 date: 2019-02-07 19:12:14 +0000
 lastmod: 2019-02-28 08:17:42 +0000
-description: Un petit pense-bête pour expliquer les concepts de la JAMstack et encourager
-  les développeurs à adopter cette approche.
+description: Un petit pense-bête pour expliquer les concepts de la JAMstack et encourager davantage de personnes à adopter cette approche.
 source:
   author: Pedro Duarte
   title: WTF is JAMstack?
@@ -12,10 +11,13 @@ categories:
 - jamstack
 
 ---
-{{% intro %}}
-[Pedro Duarte](https://twitter.com/peduarte) a lancé [https://jamstack.wtf](https://jamstack.wtf) un mini-site afin de donner une vue d'ensemble de la JAMstack. Nous vous proposons ici sa traduction en français afin de permettre à toujours plus de développeurs d'adopter cette façon de travailler.
-{{% /intro %}}
+{{< intro >}}
 
+[Pedro Duarte](https://twitter.com/peduarte) a lancé [https://jamstack.wtf](https://jamstack.wtf) un mini-site afin de donner une vue d'ensemble de la JAMstack. Nous vous proposons ici sa traduction en français afin de permettre à toujours plus de développeurs d'adopter cette façon de travailler.
+
+{{< /intro >}}
+
+***
 
 La JAMstack révolutionne notre manière de travailler en proposant une expérience de développement plus simple, de meilleures performances, des coûts bien moins élevés et une grande scalabilité.
 
@@ -188,7 +190,7 @@ Un excellent moyen d'interagir avec votre audience.
 **E-Commerce**<br/>
 Mettre en place une boutique en ligne sur un site JAMstack n'a jamais été aussi simple.
 
-**Recherche**<br/> 
+**Recherche**<br/>
 Reposez-vous sur des services tiers pour intégrer des fonctionnalités de recherche.
 
 [Voir plus de services pour les sites statiques](https://github.com/agarrharr/awesome-static-website-services#e-commerce)

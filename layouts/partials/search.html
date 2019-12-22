@@ -83,6 +83,7 @@ const hitTemplate = function(hit) {
     <li class="post-item">
       <span class="post-meta">${date}</span>
       <h2 class="post-link"><a href="${hit.relpermalink}">${hit._highlightResult.title.value}</a></h2>
+      <p class="post-description">${hit.description}</p>
     </li>
   `;
 }
@@ -111,30 +112,20 @@ search.start();
 
 <style>
 .ais-search-box {
+  font-size: 1rem;
   max-width: 60%;
-  margin: 2em auto;
+  margin: 1.2rem auto;
   display: block;
 }
 
-.ais-hits--item {
-  display: flex;
+@media screen and (min-width: 45rem) {
+  .ais-search-box {
+    margin: 4.8rem auto;
+  }
 }
 
 .ais-Highlight {
   color: #00c7b7;
   font-style: normal;
-}
-
-.post-item {
-  flex-grow: 1;
-  background: #fff;
-}
-
-@media screen and (min-width:46.005rem) {
-  .ais-hits {
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1em;
-  }
 }
 </style>

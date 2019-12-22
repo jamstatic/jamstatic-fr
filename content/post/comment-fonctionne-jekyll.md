@@ -13,7 +13,7 @@ categories:
   - jekyll
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 Si vous suivez ce blog, vous savez déjà que Jekyll est un
 générateur de site statique développé en Ruby. Jack Phelan a décidé d’aller
@@ -26,7 +26,9 @@ connaissance des concepts fondamentaux de ce générateur. Nous espérons que ce
 vous permettra de mieux appréhender la philosophie de Jekyll ou que cela vous
 sera utile si vous songez à développer un plugin.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 <style type="text/css">
 

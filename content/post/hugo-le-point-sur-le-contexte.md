@@ -12,14 +12,19 @@ source:
   url: https://regisphilibert.com/blog/2018/02/hugo-the-scope-the-context-and-the-dot/
 ---
 
-{{% intro %}} Le
-[contexte](https://gohugo.io/templates/introduction/#context-aka-the-dot), c'est
-un concept assez perturbant quand on commence à vouloir développer des modèles
-de page pour Hugo. Il est facile de s'emmêler les pinceaux pour accéder à ses
-[variables](https://golang.org/pkg/text/template/#hdr-Variables). Au travers de
-quelques exemples très simples,
-[Régis Philibert](https://regisphilibert.com/tags/hugo/) se propose de nous
-aider à y voir plus clair. {{% /intro %}}
+{{< intro >}}
+
+Le [contexte](https://gohugo.io/templates/introduction/#context-aka-the-dot),
+c'est un concept assez perturbant quand on commence à vouloir développer des
+modèles de page pour Hugo. Il est facile de s'emmêler les pinceaux pour accéder à
+ses [variables](https://golang.org/pkg/text/template/#hdr-Variables). Au travers
+de quelques exemples très simples, [Régis
+Philibert](https://regisphilibert.com/tags/hugo/) se propose de nous aider à y
+voir plus clair.
+
+{{< /intro >}}
+
+***
 
 **Mais pourquoi ma variable n'est pas accessible ici et ici ?** 🙄
 

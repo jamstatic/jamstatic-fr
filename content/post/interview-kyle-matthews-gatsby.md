@@ -1,8 +1,7 @@
 ---
 title: Questions au créateur de Gatsby
 date: 2017-07-11 10:00:00 +02:00
-description: Entretien avec Kyle Mathews, le créateur de Gatsby, un générateur de
-  site statique basé sur React
+description: Entretien avec Kyle Mathews, le créateur de Gatsby, un générateur de site statique basé sur React.
 images:
   - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346952/architecture-gatsby.png
 source:
@@ -13,7 +12,7 @@ categories:
   - gatsby
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 Après deux ans de développement, Gatsby vient de passer en version
 1.0. Ce générateur intègre beaucoup d’outils notamment React et GraphQL et
@@ -25,7 +24,9 @@ français, car nous pensons que Gatsby devrait séduire la communauté JavaScrip
 et devenir un des outils phares pour développer des applications Web très
 performantes.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 Après avoir travaillé pour différentes startups, Kyle Mathews a démissionné pour
 se consacrer à l’un de ses projets personnels

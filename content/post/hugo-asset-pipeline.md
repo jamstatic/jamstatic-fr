@@ -1,18 +1,20 @@
 ---
 title: "La gestion des assets avec Hugo"
 date: 2018-07-21T20:54:26+02:00
-description: "Hugo offre une gestion des assets: Sass, minification, support de postCSS, concaténation des fichiers JS, et plus encore depuis la version 0.43."
+description: "Depuis la version 0.43 Hugo offre une gestion des assets: Sass, minification, support de postCSS, concaténation des fichiers JS, et plus encore."
 categories:
   - hugo
 images:
   - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1532283632/pipes.jpg
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 Depuis la [version 0.43](https://gohugo.io/news/0.43-relnotes/), Hugo comble un des reproches qui lui a souvent été fait, le manque de solution native pour gérer les assets, à savoir la génération de fichiers CSS et JS pour la production — et le développement). Cette nouvelle possibilité fait d'Hugo une solution toujours plus performante pour le développement de sites statiques.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 Hugo est surtout apprécié pour sa performance et son modèle de structuration de contenu, mais en ce qui concerne le traitement des fichiers CSS et JS, il fallait jusqu'ici avoir recours à l'écosystème `npm`, tout ça pour simplement pouvoir compiler des fichiers Sass, voire concaténer et minifier des fichiers JS. C'est désormais une dépendance dont on pourra se passer. Vous pouvez dire adieu à Webpack, Gulp et à votre `package.json` jamais à jour.
 

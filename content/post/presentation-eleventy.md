@@ -15,21 +15,27 @@ source:
   lang: en
 ---
 
-{{% intro %}} L'auteur d’Eleventy, le talentueux
+{{< intro >}} L'auteur d’Eleventy, le talentueux
 [Zach Leat](https://twitter.com/zachleat), développeur front-end
 particulièrement attentif à la performance explique pourquoi il a décidé de
 développer à son tour un générateur de site statique. Eleventy se pose d’emblée
 comme une alternative intéressante à Jekyll ou aux générateurs qui reposent sur
 des bibliothèques JavaScript, tout en en s'affranchissant de leurs contraintes.
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 Eleventy est un nouveau générateur de site statique.
 
-{{% notice info %}}Si n'êtes pas encore au fait de ce que sont les générateurs
+{{< notice info >}}
+
+Si n'êtes pas encore au fait de ce que sont les générateurs
 de sites statiques et des avantages qu'ils procurent, lisez
 [ce très bon article](https://www.smashingmagazine.com/2015/11/modern-static-website-generators-next-big-thing/)
 paru dans Smashing Magazine écrit par
-[Matt Biilmann](https://twitter.com/biilmann).{{% /notice %}}
+[Matt Biilmann](https://twitter.com/biilmann).
+
+{{< /notice >}}
 
 Encore un générateur de site statique ? Oui. Mais pourquoi ? Bonne question.
 

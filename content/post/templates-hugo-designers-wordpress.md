@@ -13,7 +13,7 @@ categories:
   - hugo
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 Loin de réinventer la roue, les gestionnaires de site statique
 comme Hugo s'appuient sur des conventions existantes. On retrouve beaucoup de
@@ -26,7 +26,9 @@ d’Hugo, c'est l’occasion pour les designers WordPress d’apprécier la soup
 apportée par la gestion de la structuration des contenus sous forme de dossiers
 et de fichiers, ainsi que l’importance de la convention de nommage adoptée.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 L'année dernière j'avais écris un article générique
 d’[introduction aux concepts qui se cachent derrière les gestionnaires de site statique](http://blog.teamtreehouse.com/getting-started-static-sites).
@@ -189,11 +191,11 @@ Voilà comment ça marche :
 {{ partial "footer.html" . }}
 ```
 
-{{% notice tip %}}
+{{< notice tip >}}
 
 N'oubliez pas le point (`.`) à la fin, il désigne le contexte.
 
-{{% /notice %}}
+{{< /notice >}}
 
 Notez que le nom du fichier partiel doit se trouver dans le répertoire
 `partials`, un des sous-dossiers du dossier `layouts` où sont stockés les

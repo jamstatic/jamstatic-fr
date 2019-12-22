@@ -9,7 +9,7 @@ categories:
   - jekyll
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 La popularité de Jekyll est en partie due à son support natif par GitHub Pages.
 Si cette solution gratuite est bien pratique, elle n’en reste pas moins limitée
@@ -19,7 +19,9 @@ vous voulez utiliser des plugins comme [jekyll-cloudinary]({{< relref
 [jekyll-assets](https://github.com/jekyll/jekyll-assets), il vous faudra générer
 le site en local et le publier sur Github.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 Nous allons voir que cette opération est facilement automatisable à l’aide d’un
 fichier `Rakefile`, la manière la plus courante en Ruby de créer des tâches.

@@ -10,7 +10,7 @@ categories:
   - hugo
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 [Hugo](https://gohugo.io) est rapidement devenu l’un des
 gestionnaires de sites statiques les plus populaires comme en attestent ses
@@ -29,7 +29,9 @@ nouveautés se succèdent à un rythme soutenu. Depuis la v0.14,
 [Bjørn Erik Pedersen](https://github.com/bep) dirige les développements, il a
 gentiment accepté de répondre à nos questions.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346509/hugo-bjorn-erik-pedersen.jpg"
 attr="Bjørn Erik Pedersen" attrlink="https://github.com/bep" >}}

@@ -4,8 +4,14 @@ description: Les actualités autour de la Jamstack et des générateurs de site 
 date: 2016-04-01
 ---
 
-{{% intro %}} Ce site a pour but de relayer les actualités de la communauté
-[Jamstack](https://jamstack.org/) en français. {{% /intro %}}
+{{< intro >}}
+
+Ce site a pour but de relayer les actualités de la communauté
+[Jamstack](https://jamstack.org/) en français.
+
+{{< /intro >}}
+
+***
 
 ## Pourquoi ce site ?
 

@@ -8,11 +8,14 @@ categories:
   - jekyll
 ---
 
-{{% intro %}} Cet article est le premier d’une série qui présente des
-utilisateurs de Jekyll, nous commençons avec Frank Taillandier, contributeur à
-Jamstatic. Si vous souhaitez vous aussi répondre à ces questions, merci de
-[soumettre une pull request sur Github](https://github.com/{{ site.repository
-}}/pulls). {{% /intro %}}
+{{< intro >}}
+
+Cet article est le premier d’une série qui présente des utilisateurs de la
+JAMstack, nous commençons avec Frank Taillandier, contributeur à JAMstatic.
+
+{{< /intro >}}
+
+***
 
 ### Bonjour, pourrais-tu te présenter ?
 
@@ -21,9 +24,9 @@ depuis de nombreuses années. J’ai travaillé successivement dans le public, p
 dans le privé, où j’ai contribué pendant quelques années à un CMS open-source et
 où j’accompagnais les équipes dans une amélioration continue. Parallèlement, je
 participe à l’organisation de [Sud Web](//sudweb.fr/), une conférence annuelle
-destinées aux gens du web depuis six ans. Actuellement sans emploi, j’en profite
-pour
-[m’intéresser aux gestionnaires de site statique](http://frank.taillandier.me/2016/03/08/les-gestionnaires-de-contenu-statique/)
+destinées aux gens du web depuis six ans. Actuellement en phase de transition,
+j’en profite pour [m’intéresser aux gestionnaires de site
+statique](http://frank.taillandier.me/2016/03/08/les-gestionnaires-de-contenu-statique/)
 et à Jekyll en particulier.
 
 ### Pourquoi utilises-tu Jekyll ?

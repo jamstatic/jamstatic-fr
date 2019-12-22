@@ -15,13 +15,13 @@ categories:
 - jamstack
 - headless
 author: ''
-lastmod: 
+lastmod:
 aliases: []
 canonical_url: ''
 keywords: []
 
 ---
-{{% intro %}}
+{{< intro >}}
 
 Adopter une stack de développement Web moderne pour pouvoir
 générer des sites statiques présente bien des avantages et Tom Bennet en a listé
@@ -30,7 +30,7 @@ cet article donne un aperçu global du processus et de l’écosystème actuel a
 que des gains engendrés. Vous trouverez également des lectures pour approfondir
 votre connaissance sur le sujet.
 
-{{% /intro %}}
+{{< /intro >}}
 
 ***
 

@@ -10,14 +10,16 @@ source:
   url: "https://regisphilibert.com/blog/2018/04/hugo-optmized-relashionships-with-related-content/"
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 Même s'il est le plus rapide des générateurs de site statiques,
 Hugo continue de s'améliorer et de proposer de nouvelles fonctionnalités pour
 nous simplifier la vie. [Régis Philibert](https://regisphilibert.com/) a testé
 pour vous la gestion des contenus relatifs apparus dans la version `0.27`.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 Je me suis enfin décidé à améliorer la façon dont je gère les relations entre
 les contenus dans mes projets en utilisant la fonctionnalité dédiée aux contenus

@@ -2,7 +2,7 @@
 title: Entretien avec Michael Rose, designer et développeur front-end
 date: 2017-12-02
 description: >
-  Michael Rose, webdesigner très actif dans la communauté Jekyll, partage son retour d’expérience sur les générateurs de site statique
+  Michael Rose, webdesigner très actif dans la communauté Jekyll, partage son retour d’expérience sur les générateurs de site statique.
 images:
   - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347062/michael-rose.jpg
 source:

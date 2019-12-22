@@ -14,7 +14,7 @@ categories:
   - jekyll
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 Dans son article, [Eduardo Boucas](https://eduardoboucas.com/) révèle comment il
 a mis simplement en place [un site de préproduction pour Jekyll grâce à Netlify](https://eduardoboucas.com/blog/2017/02/22/jekyll-staging-environment.html).
@@ -27,7 +27,9 @@ dédiée. L'article d’Eduardo aborde néanmoins l’utilisation des variables
 d’environnements et utilise Jekyll comme exemple, la technique reste bien
 entendu valable pour d’autres générateurs comme Hugo, Hexo et les autres.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 Un environnement de préproduction ou de _staging_ est une infrastructure de test
 qui s'approche autant que possible de la configuration d’un site de production.

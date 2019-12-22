@@ -1,5 +1,5 @@
 ---
-title: "Meetup JAMstack Toulouse #1"
+title: "Meetup JAMstack Toulouse"
 date: 2018-03-17T09:24:53+01:00
 description: "Deux très bonnes présentations de Netlify et Algolia au premier meetup JAMStack français."
 categories:
@@ -10,7 +10,7 @@ images:
   - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347003/thefrontisback.jpg
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 Ce premier meetup JAMstack français a été l’occasion d’accueillir Netlify et
 Algolia, deux acteurs incontournables du mouvement. Les deux start-ups sont
@@ -20,7 +20,9 @@ embarquée. Au programme deux présentations de Phil Hawksworth et Martyn Davies
 toutes deux axées sur la _developer experience_ et les bénéfices apportés par
 ces deux services de qualité.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347003/thefrontisback.jpg"
 caption="The Front is back !" attr="Photo : Nicolas Manaud"

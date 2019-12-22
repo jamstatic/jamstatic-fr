@@ -17,7 +17,7 @@ categories:
   - algolia
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 Le passage d’un CMS traditionnel comme WordPress à un processus moderne de
 développement faisant appel à différents services dans le Cloud et à des
@@ -29,7 +29,9 @@ mais que ça peut se faire sans douleur et à moindre coût. Le témoignage de
 documentation vient s'ajouter à la longue liste des heureux convertis à la
 [JAMstack]({{< relref "5-raisons-de-tester-la-jamstack.md" >}}).
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 Gatsby connaît un vif succès et une
 [adoption](https://github.com/gatsbyjs/gatsby#showcase) croissante depuis peu et
@@ -108,7 +110,7 @@ depuis l’outil, mais sans WordPress. L'expérience de rédaction ne pouvait do
 pas se résumer à la création d’un fichier et à enregistrer les changements dans
 un dépôt Git.
 
-{{% notice tip %}}
+{{< notice tip >}}
 
 Il existe un plugin
 [Gatsby-Source-WordPress](https://www.gatsbyjs.org/packages/gatsby-source-wordpress/)
@@ -116,7 +118,7 @@ qui récupère le contenu via l’API de WordPress. Toutefois, en ce qui me
 concerne, ce n'était pas vraiment souhaitable, car je voulais éviter d’avoir à
 héberger un CMS traditionnel.
 
-{{% /notice %}}
+{{< /notice >}}
 
 Contentful est un CMS headless hébergé avec une expérience utilisateur
 fantastique. C’est comme avoir une interface comme WordPress, sauf que vous êtes
@@ -175,7 +177,7 @@ médias, le contenu désigne les pages, les articles, tous vos contenus texte et
 vos fichiers Markdown) à l’aide de requêtes GraphQL directement dans vos
 fichiers de gabarits de page.
 
-{{% notice tip %}}
+{{< notice tip >}}
 
 J'ai mis en place un blog pour ma femme à l’aide de Gatsby
 avant de travailler sur ce site de documentation, j'avais donc un peu
@@ -185,7 +187,7 @@ Heureusement pour moi, les tutos de Gatsby et de la communauté sont excellents
 et répondent aux questions qu'on peut se poser, ainsi qu'à celles liées à
 l’utilisation globale.
 
-{{% /notice %}}
+{{< /notice >}}
 
 À l’aide d’une seule requête GraphQL, j'ai été capable de récupérer toutes les
 entrées et les articles relatifs définis dans mon modèle de contenu dans

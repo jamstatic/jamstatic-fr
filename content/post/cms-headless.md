@@ -1,7 +1,7 @@
 ---
 title: C’est quoi un CMS headless ?
 date: 2017-12-15T16:40:50+01:00
-description: Le rôle d’un CMS headless est de confier le stockage et l’édition des contenus à un service dédié
+description: Un CMS headless s'occupe uniquement de vous aider à modéliser et à saisir vos contenus pour les fournir au terminal de votre choix.
 categories:
   - cms
   - headless

@@ -8,7 +8,7 @@ categories:
   - algolia
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 Sur un site généré, l’interactivité est reléguée côté client, au navigateur,
 donc à JavaScript. Si vous souhaitez intégrer une partie dynamique sur votre
@@ -31,7 +31,9 @@ chez Algolia pour qu'il nous en dise un peu plus sur ce service en pleine
 croissance qui a réussi en l’espace de quelque temps à conquérir la communauté
 des développeurs web.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 Frank: **Bonjour Vincent, on va peut-être commencer par te présenter ?**
 

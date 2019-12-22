@@ -1,7 +1,7 @@
 ---
 title: Un site ecommerce statique (très performant) avec Hugo
 date: 2017-08-28 14:00:00 +02:00
-description: "Un exemple de site de ecommerce statique avec Hugo, Snipcart et Netlify"
+description: "Un exemple de site de ecommerce statique avec Hugo, Snipcart et Netlify."
 source:
   author: Charles Ouellet
   title: "Hugo Tutorial: How to Build & Host a (Very Fast) Static E-Commerce Site"
@@ -14,7 +14,7 @@ categories:
   - hugo
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 C’est fou tout ce qu'on peut faire avec un générateur de site, des APis et du
 JavaScript. Et rien de mieux qu'un exemple parlant de mise en place d’une
@@ -23,7 +23,9 @@ Dans cet exemple nous utiliserons le service [Snipcart](https://snipcart.com/)
 pour la gestion du panier d’achat et [Hugo](https://gohugo.io/) pour générer le
 site à la vitesse de l’éclair.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 > Pressé ? Passez directement au [tutoriel](#tutoriel) ou
 > [à la démo et au code dispo sur GitHub](#demo-repo).
@@ -217,7 +219,7 @@ Snipcart "Ajouter au panier".
 à l’aide de simples attributs data.
 [Plus de détails ici](https://docs.snipcart.com/configuration/product-definition).
 
-{{% /notice %}}
+{{< /notice >}}
 
 Dans le répertoire `layouts` nous allons ajouter un nouveau modèle
 **index.html**. Ce fichier sera celui utilisé par défaut et sera le premier à

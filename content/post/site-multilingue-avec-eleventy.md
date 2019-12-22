@@ -14,11 +14,11 @@ source:
   url: "https://www.webstoemp.com/blog/multilingual-sites-eleventy/"
 ---
 
-{{% intro %}}
+{{< intro >}}
 Eleventy n'offre pas de fonctionnalités natives liées au multilinguisme et à la localisation, cela ne nous empêche aucunement de développer une bonne gestion du multilingue à l'aide de fichiers de données globales, de collections en utilisant Nunjucks comme langage de templating.
-{{% /intro %}}
+{{< /intro >}}
 
----
+***
 
 Afin d'illustrer notre propos, nous allons développer un blog multilingue tout ce qu'il y a de plus classique.
 

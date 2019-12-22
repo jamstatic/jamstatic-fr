@@ -174,34 +174,3 @@ pre {
     padding-left: 0;
   }
 }
-
-/**
- * Wrapper
- */
-.wrapper {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: calc(#{$content-width} - (#{$spacing-unit} / 2));
-  padding-right: $spacing-unit;
-  padding-left: $spacing-unit;
-
-  @extend %clearfix;
-
-  @include media-query($on-desktop) {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width: calc(#{$content-width} - (#{$spacing-unit}));
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-  }
-}
-
-/**
- * Clearfix
- */
-%clearfix {
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}

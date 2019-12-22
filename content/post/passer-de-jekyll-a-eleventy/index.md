@@ -16,13 +16,15 @@ categories:
 - eleventy
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 [Jekyll](/categories/jekyll) est à ce jour le générateur de site statique le plus utilisé, c'est aussi un des plus anciens, et il fait face aujourd'hui à beaucoup de concurrents. Un des projets récents qui se rapproche le plus de Jekyll est [Eleventy](/categories/eleventy), développé par le très sympathique [Zach Leat](https://twitter.com/zachleat). Eleventy, c'est Jekyll repensé pour tirer parti de JavaScript et de l'écosystème npm. C'est un outil qui reste très simple d'approche et qui supporte Liquid comme langage de gabarit.
 
 Autant d'arguments qui ont vite fait de convaincre [Paul Robert Lloyd](https://paulrobertlloyd.com/) de tenter de migrer son site vers Eleventy. Qui sait, la lecture de cet article vous incitera peut-être à faire de même ?
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 Ne pas compliquer les choses s'avère parfois payant. Bien que beaucoup de sites
 que nous utilisons tous les jours aient besoin de bases de données

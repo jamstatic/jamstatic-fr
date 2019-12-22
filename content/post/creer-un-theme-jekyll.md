@@ -15,7 +15,7 @@ categories:
   - jekyll
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 Si vous êtes designer web, que vous savez écrire des pages HTML,
 les mettre en forme avec CSS, voire les enrichir avec du JavaScript, vous
@@ -28,7 +28,9 @@ des gems Ruby, rien de bien sorcier. Dans cet article,
 [Alembic](https://alembic.darn.es), explique comment utiliser une 💎 gem de
 thème pour Jekyll, puis comment développer la vôtre.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,q_auto,w_1028/v1523345884/making-jekyll-theme-intro.jpg" alt="" >}}
 
@@ -310,13 +312,13 @@ prévisualisation dans votre navigateur, utilisez la commande suivante :
 bundle exec jekyll serve
 ```
 
-{{% notice tip %}}
+{{< notice tip >}}
 
 Si vous utilisez Jekyll v3.7.0, vous pouvez passer l’option
 `--livereload` en paramètre pour que votre navigateur rafraîchisse
 automatiquement la page après modifications des fichiers.
 
-{{% /notice %}}
+{{< /notice >}}
 
 La sortie sur la console devrait ressembler à ça :
 

@@ -17,7 +17,8 @@ categories:
   - cms
 ---
 
-{{% intro %}} La refonte de Smashing Magazine à l’aide d’un générateur de site
+{{< intro >}}
+La refonte de Smashing Magazine à l’aide d’un générateur de site
 statique et d’APIs tierces comme Algolia constitue un petit évènement pour le
 développement Web moderne. Smashing est en effet un des sites les plus consultés
 et le fait de faire évoluer leur stack technique, de se reposer sur des outils
@@ -26,8 +27,10 @@ société Netlify, basée à San Francisco et spécialisée dans l’hébergemen
 sites statiques, qui a accompagné Smashing dans cette aventure. En traduisant
 [l’article paru sur leur blog](https://www.netlify.com/blog/2017/03/16/smashing-magazine-just-got-10x-faster/),
 nous continuons à promouvoir ces solutions dans l’espoir que cela vous incite à
-adopter à votre tour ce type d’architectures dans certains de vos projets. {{%
-/intro %}}
+adopter à votre tour ce type d’architectures dans certains de vos projets.
+{{% /intro %}}
+
+***
 
 {{< youtube rB4Cl5LSe2c >}}
 

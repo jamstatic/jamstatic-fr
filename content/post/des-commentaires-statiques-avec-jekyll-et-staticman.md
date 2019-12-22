@@ -14,7 +14,7 @@ categories:
   - jekyll
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 [Michael Rose](https://github.com/mmistakes), l’auteur du
 [thème Jekyll Minimal Mistakes](https://mademistakes.com/work/minimal-mistakes-jekyll-theme/),
@@ -26,7 +26,9 @@ qui permet d’insérer des contenus générés par les utilisateurs sur un site
 si statique que ça, proposant ainsi une alternative à Disqus au même titre que
 [Jekyll AWS comment](https://github.com/ummels/jekyll-aws-comments).
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 {{< figure
 src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1024/v1523364658/improving-jekyll-static-comments-feature.jpg"
@@ -149,7 +151,7 @@ Afin d’éviter d’afficher des doublons, j'avais besoin d’exclure les répo
 de ne montrer que les commentaires parents dans la boucle principale. C'était le
 moment idéal pour utiliser le filtre `where_exp` de Jekyll.
 
-{{% notice tip %}}
+{{< notice tip >}}
 
 #### Le filtre d’expression where de Jekyll
 
@@ -158,7 +160,7 @@ depuis la version 3.2.0 de Jekyll.
 
 **Exemple:** `site.members | where_exp:"item","item.graduation_year == 2014"`
 
-{{% /notice %}}
+{{< /notice >}}
 
 Si le champ caché `options[parent]` que j'ai ajouté au formulaire fonctionne
 correctement, je devrais obtenir des fichiers de données de commentaires
@@ -592,7 +594,7 @@ Le(s) domaine(s) autorisé()s doi(ven)t correspondre à ceux passés par le cham
 domaines correspondants déclencheront les notifications à envoyer, faute de quoi
 l’opération échouera.
 
-{{% notice tip %}}
+{{< notice tip >}}
 
 #### ProTip : Utilisez votre propre compte Mailgun
 
@@ -604,7 +606,7 @@ dans le fichier `staticman.yml`. Assurez-vous de bien chiffrer les deux en
 utilisant le chemin suivant :
 `https://api.staticman.net/v2/encrypt/{TEXTE À CHIFFRER}`.
 
-{{% /notice %}}
+{{< /notice >}}
 
 ### Mise à jour du formulaire de commentaire
 

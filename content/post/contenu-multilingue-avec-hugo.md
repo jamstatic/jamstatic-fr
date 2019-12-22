@@ -1,7 +1,7 @@
 ---
 title: "Contenu multilingue avec Hugo"
 date: 2018-08-17T11:36:38+02:00
-description: "Comment gérer les traductions dans plusieurs langues avec Hugo"
+description: "Comment gérer les traductions dans plusieurs langues avec Hugo."
 categories:
   - hugo
   - i18n
@@ -496,10 +496,10 @@ This story has only one Mouse.
 <hr>
 ```
 
-{{% notice tip %}}
+{{< notice tip >}}
 Vous pensez peut-être déjà au cas où il n'y a pas de souris quand le total est `0` ?
 Comme [expliqué plus bas](#traduction-des-chaînes-avec-le-système-de-fichier-d-hugo), cela ne sera pas possible 🙅‍♂️.
-{{% /notice %}}
+{{< /notice >}}
 
 ### Inclusion du contexte dans la traduction
 
@@ -570,10 +570,10 @@ Si nous pouvons deviner sans mal le nombre correspondant au pluriel de `zero` ou
 
 Heureusement, nous pouvons nous reposer sur Hugo et [go-i18n](https://github.com/nicksnyder/go-i18n) de [Nick Snyder](https://github.com/nicksnyder) pour nous aider à assembler toutes les pièces du puzzle.
 
-{{% notice info %}}
+{{< notice info >}}
 Voici tous les pluriels supportés pour l'ensemble des langues :
 `zero` `one` `two` `few` `many` `other`
-{{% /notice %}}
+{{< /notice >}}
 
 Mais, cela ne veut pas dire pour autant que vous pouvez les utiliser en anglais.
 

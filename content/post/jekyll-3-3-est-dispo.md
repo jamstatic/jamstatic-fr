@@ -9,12 +9,14 @@ categories:
   - jekyll
 ---
 
-{{% intro %}}
+{{< intro >}}
 
 Plein de nouveautés pour vous simplifier la vie dans la version
 3.3 de Jekyll. On retiendra trois fonctionnalités à tester en priorité.
 
-{{% /intro %}}
+{{< /intro >}}
+
+***
 
 ## Les thèmes peuvent désormais fournir des assets statiques et dynamiques dans le dossier `/assets`
 
