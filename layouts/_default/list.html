@@ -8,9 +8,11 @@
     <ul class="post-list" id="search-hits">
       {{ range .Site.RegularPages }}
       <li class="post-item">
+        <a href="{{ .RelPermalink }}">
         <span class="post-meta">{{ $mymonths := .Site.Data.mois }}{{ .Date.Day }} {{ index $mymonths (printf "%d" .Date.Month) }} {{ .Date.Year }}</span>
-        <h2 class="post-link"><a href="{{ .RelPermalink }}">{{ partial "content.html" .Title }}</a></h2>
-        <p class="post-description">{{ .Description }}</p>
+        <h2 class="post-link">{{ partial "content.html" .Title }}</h2>
+        <p class="post-description">{{ partial "content.html" .Description }}</p>
+        </a>
       </li>
       {{ end }}
     </ul>

@@ -165,9 +165,14 @@ body {
     margin-bottom: $base-line*2;
     grid-column: auto;
 
+    a {
+      text-decoration: none;
+      font-weight: 400;
+      color: inherit;
+    }
+
     &:hover {
       background: rgba($grey-light, .05);
-      cursor: pointer;
     }
 
     &::after {
