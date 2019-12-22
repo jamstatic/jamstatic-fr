@@ -94,7 +94,9 @@
       "name": "jygastaud",
       "avatar_url": "https://avatars3.githubusercontent.com/u/1499325?v=4",
       "profile": "http://gastaud.io",
-      "contributions": []
+      "contributions": [
+        "review"
+      ]
     },
     {
       "login": "martinsam",
@@ -148,5 +150,8 @@
   "imageSize": 100,
   "projectName": "jamstatic-fr",
   "projectOwner": "jamstatic",
-  "repoType": "github"
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true,
+  "contributorsPerLine": 7
 }
