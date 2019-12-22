@@ -1,6 +1,6 @@
 {
-    "name": "Jamstatic",
-    "short_name": "Jamstatic",
+    "name": "JAMstatic",
+    "short_name": "JAMstatic",
     "icons": [
         {
             "src": "/assets/favicons/android-chrome-192x192.png",
@@ -13,8 +13,8 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#00c7b7",
-    "background_color": "#00c7b7",
+    "theme_color": "#2f91a7",
+    "background_color": "#2f91a7",
     "start_url": "https://jamstatic.fr",
     "display": "standalone"
 }

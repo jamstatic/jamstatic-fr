@@ -189,12 +189,12 @@ strong, th { font-weight: 900; }
 .post-intro code, h1 code, h2 code, h3 code, h4 code { font-weight: 700; }
 
 /* Links */
-a { color: #00c7b7; font-weight: 900; text-decoration: none; transition: all 0.3s ease; }
+a { color: #45b8d2; font-weight: 900; text-decoration: none; transition: all 0.3s ease; }
 a:hover { text-decoration: underline; }
 a code { font-weight: 700; }
 
 /* Blockquotes */
-blockquote { border-left: 0.5rem solid #00c7b7; padding-left: 15.552px; font-size: 1.2em; letter-spacing: -1px; font-style: italic; }
+blockquote { border-left: 0.5rem solid #45b8d2; padding-left: 15.552px; font-size: 1.2em; letter-spacing: -1px; font-style: italic; }
 blockquote > :last-child { margin-bottom: 0; }
 
 /** Code formatting */
@@ -285,7 +285,7 @@ body { display: flex; flex-direction: column; min-height: 100vh; -webkit-font-sm
 .page-content { flex: 1; }
 
 .site-header { display: flex; justify-content: center; align-content: center; flex-direction: column; padding: 1.44em 0; min-height: 18vw; color: rgba(255, 255, 255, 0.9); position: relative; overflow: hidden; }
-.site-header::before { content: ""; position: absolute; width: 151%; height: 141%; top: -50%; left: -50%; z-index: -1; background-color: #00c7b7; background-image: linear-gradient(45deg, #4d9abf 0, #00c7b7 100%); transform: rotate(1deg); }
+.site-header::before { content: ""; position: absolute; width: 151%; height: 141%; top: -50%; left: -50%; z-index: -1; background-color: #45b8d2; background-image: linear-gradient(45deg, #4d9abf 0, #45b8d2 100%); transform: rotate(1deg); }
 
 .site-title { display: block; margin: 0 auto; padding: 0 0.5em; font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; font-size: 2.985984em; font-weight: 900; letter-spacing: 0.021736em; line-height: 1; text-transform: uppercase; text-shadow: 0 1px 1px rgba(27, 31, 35, 0.15), 0 1px 25px rgba(27, 31, 35, 0.25); vertical-align: middle; text-align: center; transition: all 0.4s ease; }
 .site-title, .site-title:hover, .site-title:visited { color: rgba(255, 255, 255, 0.95); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-decoration: none; }

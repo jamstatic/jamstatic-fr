@@ -3,7 +3,7 @@
     {{ if .IsHome }}
       <h1 class="site-title">{{ .Site.Title }}</h1>
     {{ else }}
-      <a class="site-title" href="{{ "/" | relURL }}" title="Retour à l'accueil">{{ .Site.Title }}</a>
+      <a class="h1 site-title" href="{{ "/" | relURL }}" title="Retour à l'accueil">{{ .Site.Title }}</a>
     {{ end }}
     <div class="site-description">{{ .Site.Params.description }}</div>
   </div>
