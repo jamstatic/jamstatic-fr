@@ -52,6 +52,7 @@ Merci à ces personnes extraordinaires ([emoji key](https://github.com/kentcdodd
   </tr>
   <tr>
     <td align="center"><a href="http://laurent.la"><img src="https://avatars1.githubusercontent.com/u/6553086?v=4" width="100px;" alt=""/><br /><sub><b>Laurent de Lacerda</b></sub></a><br /><a href="https://github.com/jamstatic/jamstatic-fr/pulls?q=is%3Apr+reviewed-by%3Alaurent-d" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://regisphilibert.com"><img src="https://avatars2.githubusercontent.com/u/1480503?v=4" width="100px;" alt=""/><br /><sub><b>Regis Philibert</b></sub></a><br /><a href="#blog-regisphilibert" title="Blogposts">📝</a> <a href="#tutorial-regisphilibert" title="Tutorials">✅</a> <a href="https://github.com/jamstatic/jamstatic-fr/pulls?q=is%3Apr+reviewed-by%3Aregisphilibert" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
 
