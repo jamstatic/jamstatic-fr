@@ -31,7 +31,6 @@ body {
   margin: 0 auto;
   padding: 0 0.5em;
   font-family: $title-font-family;
-  font-size: $title1 * ($ratio*$ratio);
   font-weight: 900;
   letter-spacing: $title-letter-spacing;
   line-height: 1;
@@ -57,12 +56,21 @@ body {
 
 .site-description {
   display: inline-block;
-  font-size: $bigger;
   padding: 0;
   width: 100%;
   text-align: center;
   text-shadow: 0 1px 1px rgba(27, 31, 35, 0.25), 0 1px 25px rgba(27, 31, 35, 0.5);
   margin-bottom: $spacing-unit;
+}
+
+@include media-query($on-tablet) {
+  .site-title {
+    font-size: $title1 * ($ratio*$ratio);
+  }
+  .site-description {
+    font-size: $bigger;
+  }
+
 }
 
 .site-footer {
