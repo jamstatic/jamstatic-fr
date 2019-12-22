@@ -142,6 +142,17 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "regisphilibert",
+      "name": "Regis Philibert",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/1480503?v=4",
+      "profile": "https://regisphilibert.com",
+      "contributions": [
+        "blog",
+        "tutorial",
+        "review"
+      ]
     }
   ],
   "files": [
