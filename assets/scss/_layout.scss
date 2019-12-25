@@ -142,11 +142,18 @@ body {
   }
 }
 
-.summary {
-  font-size: 1rem/$ratio;
+.nav {
+  font-size: 1rem;
   color: $grey-light;
-  padding: $spacing-unit/$ms1;
-  margin: 0;
+  padding-top: $base-line;
+
+  nav {
+    text-align: center;
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
 
   em {
     font-style: normal;
@@ -267,7 +274,7 @@ body {
   }
 }
 /* utilities */
-.highlight {
+.post-content > .highlight {
   margin: 2em calc(50% - 50vw);
 }
 
