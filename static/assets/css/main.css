@@ -365,7 +365,7 @@ figcaption { text-align: center; font-style: italic; line-height: 1.2; color: rg
 .footnotes { font-size: 0.8333333333em; font-style: italic; color: rgba(14, 30, 37, 0.9); }
 
 /* Background */
-.chroma { background-color: #f0f3f3; }
+.highlight > .chroma { background-color: #f0f3f3; }
 
 /* Error */
 .chroma .ss4 { color: #aa0000; background-color: #ffaaaa; }
