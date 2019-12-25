@@ -30,7 +30,7 @@ nous continuons à promouvoir ces solutions dans l’espoir que cela vous incite
 adopter à votre tour ce type d’architectures dans certains de vos projets.
 {{% /intro %}}
 
-***
+---
 
 {{< youtube rB4Cl5LSe2c >}}
 

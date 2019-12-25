@@ -15,7 +15,7 @@ JAMstack, nous commençons avec Frank Taillandier, contributeur à JAMstatic.
 
 {{< /intro >}}
 
-***
+---
 
 ### Bonjour, pourrais-tu te présenter ?
 

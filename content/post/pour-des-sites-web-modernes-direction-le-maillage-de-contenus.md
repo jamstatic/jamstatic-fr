@@ -49,9 +49,9 @@ Le maillage de contenus donne plus de possibilités aux développeurs tout en co
 
 Le changement est stimulé par la rencontre de trois révolutions dans la façon dont nous créons et consommons le contenu :
 
-* _La gestion du contenu_ : les applications de type CMS monolithiques sont remplacées par des systèmes de gestion modulaires et spécialisés.
-* _Les techniques de développement_ : les frameworks Front comme React ont un rôle prépondérant pour les expériences enrichies de l'utilisateur.
-* La performance : étant donné que le mobile représente plus de 50% du traffic internet, la haute performance est devenue obligatoire et non plus optionnelle.
+- _La gestion du contenu_ : les applications de type CMS monolithiques sont remplacées par des systèmes de gestion modulaires et spécialisés.
+- _Les techniques de développement_ : les frameworks Front comme React ont un rôle prépondérant pour les expériences enrichies de l'utilisateur.
+- La performance : étant donné que le mobile représente plus de 50% du traffic internet, la haute performance est devenue obligatoire et non plus optionnelle.
 
 ![](/v1562938846/jamstatic/three-website-revolutions.png)
 

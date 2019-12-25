@@ -30,7 +30,7 @@ thème pour Jekyll, puis comment développer la vôtre.
 
 {{< /intro >}}
 
-***
+---
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,q_auto,w_1028/v1523345884/making-jekyll-theme-intro.jpg" alt="" >}}
 

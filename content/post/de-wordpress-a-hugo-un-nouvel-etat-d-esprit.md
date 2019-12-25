@@ -40,20 +40,20 @@ Pour Hugo, tout fichier compilé et ajouté à votre dossier cible public est un
 
 On peut le voir ainsi : tout ce qui possède une URL, c'est une page !
 
-Si pour Hugo, tout est page, il faut néanmoins faire quelques distinctions bien nettes. Parmi elles, il y a les les __Types__ et les __Kinds__.
+Si pour Hugo, tout est page, il faut néanmoins faire quelques distinctions bien nettes. Parmi elles, il y a les les **Types** et les **Kinds**.
 
 ### Type
 
-Si dans WordPress, toute entrée est un __post__ avec un type distinct. Un article c'est un post de type `post`, une page c'est post de type `page` et une recette, c'est un post de type personnalisé `recipe` (ou ce qui vous chante).
+Si dans WordPress, toute entrée est un **post** avec un type distinct. Un article c'est un post de type `post`, une page c'est post de type `page` et une recette, c'est un post de type personnalisé `recipe` (ou ce qui vous chante).
 
-Dans Hugo, chaque entrée ou fichier de contenu est une __page__ habituelle d'un type différent. Et comme il n'existe pas de type pré-établi, tout type est votre propre type personnalisé. Pour créer une page d'un certain type :
+Dans Hugo, chaque entrée ou fichier de contenu est une **page** habituelle d'un type différent. Et comme il n'existe pas de type pré-établi, tout type est votre propre type personnalisé. Pour créer une page d'un certain type :
 
 1. Vous ajoutez le `type` désiré dans le front matter
 2. Ou plus généralement, vous laissez le premier niveau d'arborescence de contenu définir le type du fichier.
 
 Donc pour créer une page de type recette, vous pouvez soit écrire le front matter suivant :
 
-```Markdown
+```yaml
 title: De délicieux cupcakes
 type: recette
 ---
@@ -61,13 +61,12 @@ type: recette
 
 Ou vous reposer sur la structure de votre arborescence et laisser faire la magie :
 
-```
+```txt
 content
   ├── post
   └── recette
       └── de-delicieux-cupcakes.md
 ```
-
 
 ### Kind
 
@@ -289,7 +288,7 @@ Hugo supporte également les [shortcodes](https://gohugo.io/templates/shortcode-
 
 ### Les shortcodes par l'exemple
 
-Voici un exemple de shortcode WordPress tiré de la documentation. Il prendre en paramètre une classe, `caption` par défaut, et un contenu à insérer.
+Voici un exemple de shortcode WordPress tiré de la documentation[^1]. Il prendre en paramètre une classe, `caption` par défaut, et un contenu à insérer.
 
 [^1]: [L'API Shortcode de WordPress](https://codex.wordpress.org/Shortcode_API#Enclosing_vs_self-closing_shortcodes) contient des exemples de shortcode.
 
@@ -319,16 +318,16 @@ Voyons maintenant la réponse en une ligne d'Hugo :
 ```
 
 On écrira dans son fichier Markdown :
+
 ```md
 {{%/* caption "headline" */%}}My Caption{{%/* /caption */%}}
 ```
 
-Nous avons opté pour l'utilisation de la _position_ ... car il n'y a qu'un seul paramètre 🤷
+Nous avons opté pour l'utilisation de la _position_… car il n'y a qu'un seul paramètre 🤷
 
 {{< notice >}}
 [Tirer parti des shortcodes d'Hugo](https://jpescador.com/blog/leverage-shortcodes-in-hugo/) | [Julio Pescador](https://twitter.com/julio_pescador)
 {{< /notice >}}
-
 
 ## Paramètres
 
@@ -352,7 +351,7 @@ Ah oui c'est vrai, WordPress ne vous a pas présenté.
 
 Imaginons que pour chaque page vous ayez un fichier HTML `cette-page/index.html` et c'est tout. Hugo vous permet aussi de faire en sorte que chaque page possède aussi une version au format JSON ainsi qu'au format [AMP](https://www.ampproject.org/docs/). Ces pages sont générées à côté de leur soeur au format HTML, respectivement `cette-page/index.json` et `cette-page/index.amp.html`.
 
-Tout ce que vous avez à faire pour cela est de dire à Hugo d'ajouter les formats de sortie pour les __Kinds__ desirés à l'aide du fichier de configuration évoqué juste avant, et d'ajouter les fichiers de templates correspondants.
+Tout ce que vous avez à faire pour cela est de dire à Hugo d'ajouter les formats de sortie pour les **Kinds** desirés à l'aide du fichier de configuration évoqué juste avant, et d'ajouter les fichiers de templates correspondants.
 
 Pour résumer :
 
@@ -367,7 +366,7 @@ outputs:
     - AMP
 ```
 
-```
+```sh
 layouts
   ├── _default
   │   └── about.html
@@ -393,7 +392,7 @@ WordPress ne propose rien en ce sens, c'est à vous d'utiliser votre propre gest
 Hugo propose lui sa propre suite d'outils de traitement des assets !
 
 -- Heeein?
--- Oui! Ça s'appelle les [tuyaux d'Hugo](https://gohugo.io/hugo-pipes/) et __sans aucune dépendance node__ vous pouvez :
+-- Oui! Ça s'appelle les [tuyaux d'Hugo](https://gohugo.io/hugo-pipes/) et **sans aucune dépendance node** vous pouvez :
 
 - Minifier 🗜️
 - Paquetter vos fichiers 📦
@@ -480,7 +479,7 @@ Avec WordPress il vous faudrait :
 
 Notez bien que si en plus de cela, vous souhaitez créer vos propres fichiers de gabarit pour prendre le pas sur les thèmes parent et enfant… et bien à ce que je sâche, ce n'est pas possible. 🤷‍♂️
 
-Dans Hugo, vous n'avez qu'à ajouter ces différents répertoires dans votre dossier `thèmes` et y faire appel dans votre fichier de configuration principal.
+Dans Hugo, vous n'avez qu'à ajouter ces différents répertoires dans votre dossier `themes` et y faire appel dans votre fichier de configuration principal.
 
 ```yaml
 theme:
@@ -497,7 +496,7 @@ output:
     - JSON
 ```
 
-L'exmple ci-dessus déclare les composants de thèmes à utiliser ainsi que leur ordre de précédence. Et comme vu auparavant, nous nous assurons que le format de sortie JSON est ajouté à toutes les pages de type `page`.
+L'exemple ci-dessus déclare les composants de thèmes à utiliser ainsi que leur ordre de précédence. Et comme vu auparavant, nous nous assurons que le format de sortie JSON est ajouté à toutes les pages de type `page`.
 
 C'est tout. Si vous devez écraser n'importe quel des composants des fichiers de gabarit, il vous suffit de placer un fichier homonyme dans le dossier `layouts` à la racine de votre projet (à condition que les chemins soient identiques bien entendu).
 
@@ -586,7 +585,6 @@ vous écrivez :
 ```
 .................................................... ☝️ Vous allez l'aimer ce point !
 
-
 ### Les options génériques du site
 
 Qu'en est-il de ces options génériques non rattachées à une page en particulier ?
@@ -644,8 +642,10 @@ Heureusement il existe un support natif de [Disqus](https://disqus.com/) [prêt 
 Et si vous n'êtes pas fans de Disqus, il existe bien d'autres solutions, qui ne demandent souvent qu'une simple balise script et le balisage correspondant.
 
 {{< notice >}}
+
 - [Remplacer Disqus avec les commentaires Github](http://donw.io/post/github-comments/) | [Don Williamson](https://twitter.com/Donzanoid)
-- [Hugo + Staticman : réponses imbriquées et notifications par email](https://networkhobo.com/2017/12/30/hugo-staticman-nested-replies-and-e-mail-notifications/) | [ Dan C Williams](https://twitter.com/dancwilliams)
+- [Hugo + Staticman : réponses imbriquées et notifications par email](https://networkhobo.com/2017/12/30/hugo-staticman-nested-replies-and-e-mail-notifications/) | [Dan C Williams](https://twitter.com/dancwilliams)
+
 {{</notice >}}
 
 ### Formulaires
@@ -670,8 +670,10 @@ Comme pour tout ce qui est dynamique, rien de natif dans un générateur de site
 - [Algolia](https://www.algolia.com/) et leur incroyable widget [InstantSearch.js](https://community.algolia.com/instantsearch.js/) (🆓 pour les sites de petite et moyenne tailles)
 
 {{< notice >}}
+
 - [Recherche sur Bleve avec Hugo](http://blevesearch.com/news/Site-Search/)
 - [Recherche côté client pour Hugo avec Fuse.js](https://gist.github.com/eddiewebb/735feb48f50f0ddd65ae5606a1cb41ae) | [Eddie Webb](https://twitter.com/edwardawebb/)
+
 {{</ notice >}}
 
 ## Conclusion

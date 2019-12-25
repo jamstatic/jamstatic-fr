@@ -29,7 +29,7 @@ entendu valable pour d’autres générateurs comme Hugo, Hexo et les autres.
 
 {{< /intro >}}
 
-***
+---
 
 Un environnement de préproduction ou de _staging_ est une infrastructure de test
 qui s'approche autant que possible de la configuration d’un site de production.

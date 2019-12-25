@@ -24,7 +24,7 @@ pour créer votre premier site en moins de 30 minutes.
 
 {{< /intro >}}
 
-***
+---
 
 [Hugo](https://gohugo.io), le générateur de site statique écrit en Go, a pris la
 communauté de vitesse. Il présente tous les avantages d’un générateur de site

@@ -15,7 +15,7 @@ ouverte à tous, preuve de la volonté de partage qui anime la communauté. Elle
 aura lieu le samedi 7 mai 2016 à partir de 19h heure française, les vidéos
 seront mises en ligne peu après. {{< /intro >}}
 
-***
+---
 
 La première édition avait rassemblé Tom Preston-Werner, Parker Moore, Brandon
 Mathis ou Ben Balter, respectivement créateurs et mainteneurs de Jekyll,

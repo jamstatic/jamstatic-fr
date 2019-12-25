@@ -21,7 +21,7 @@ Eleventy lui vous laisse le choix.
 
 {{% /intro %}}
 
-***
+---
 
 Dans Eleventy les `collections` permettent de grouper des articles selon divers
 critères. Une collection pourrait désigner une série d'articles. Un autre

@@ -20,7 +20,7 @@ Eleventy n'en finit pas de faire des émules, il séduit par sa simplicité et s
 
 {{< /intro >}}
 
-***
+---
 
 Jekyll est un générateur que je continue d'apprécier, d'utiliser et de suivre, néanmoins quand j'ai enfin eu le temps de mettre à jour [mon site](https://www.webstoemp.com), j'ai choisi de partir sur Eleventy.
 
@@ -64,7 +64,7 @@ eleventyConfig.addNunjucksFilter("date", function(date, format) {
 
 J'utilise [Gulp](https://gulpjs.com/) comme outil de génération, j'ai donc dû dire à Eleventy d'ignorer mes assets. Pour ce faire, j'ai simplement ajouté la ligne suivante au fichier `.eleventyignore` situé à la racine de mon projet:
 
-```
+```txt
 src/assets/**/*
 ```
 

@@ -23,7 +23,7 @@ périmètre fonctionnel de ces outils.
 
 {{< /intro >}}
 
-***
+---
 
 Je parle beaucoup des générateurs de site statique, mais je parle toujours de
 comment _utiliser_ des générateurs de site statique. Ils sont souvent perçus

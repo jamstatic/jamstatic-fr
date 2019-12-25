@@ -28,7 +28,7 @@ et de fichiers, ainsi que l’importance de la convention de nommage adoptée.
 
 {{< /intro >}}
 
-***
+---
 
 L'année dernière j'avais écris un article générique
 d’[introduction aux concepts qui se cachent derrière les gestionnaires de site statique](http://blog.teamtreehouse.com/getting-started-static-sites).

@@ -23,7 +23,7 @@ valables et facilement adaptables pour tout autre générateur statique.
 
 {{< /intro >}}
 
-***
+---
 
 Après le _mobile first_, place maintenant au _offline first_ et
 [_aux progressive web apps (PWA)_](https://frank.taillandier.me/2016/06/28/que-sont-les-progressive-web-apps/)

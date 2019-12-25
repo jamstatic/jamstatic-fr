@@ -24,7 +24,7 @@ Autant d'arguments qui ont vite fait de convaincre [Paul Robert Lloyd](https://p
 
 {{< /intro >}}
 
-***
+---
 
 Ne pas compliquer les choses s'avère parfois payant. Bien que beaucoup de sites
 que nous utilisons tous les jours aient besoin de bases de données

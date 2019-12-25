@@ -23,7 +23,7 @@ varier les mises en pages des différentes études de cas à l’aide de Jekyll.
 
 {{< /intro >}}
 
-***
+---
 
 > Voici comment nous avons tiré profit du YAML front matter pour pouvoir
 > effectuer de nombreux changements au sein d’un même modèle pour différents

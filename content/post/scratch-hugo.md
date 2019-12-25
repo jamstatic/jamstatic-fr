@@ -22,7 +22,7 @@ explication par l’exemple de la fonction `.Scratch` du langage de templating d
 
 {{< /intro >}}
 
-***
+---
 
 {{% notice %}} Vous êtes ici pour apprendre à écraser une variable dans un gabarit de page ? Bonne nouvelle, vous n'avez plus besoin de la fonction `.Scratch` pour celà depuis la version 0.48 d'Hugo. Malgré cela, `.Scratch` reste encore utile pour plein d'autres choses ! {{< /notice >}}
 

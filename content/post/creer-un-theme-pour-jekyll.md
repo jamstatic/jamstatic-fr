@@ -21,7 +21,7 @@ création de thème pour Jekyll.
 
 {{< /intro >}}
 
-***
+---
 
 ## Prérequis
 

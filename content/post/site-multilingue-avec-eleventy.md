@@ -18,7 +18,7 @@ source:
 Eleventy n'offre pas de fonctionnalités natives liées au multilinguisme et à la localisation, cela ne nous empêche aucunement de développer une bonne gestion du multilingue à l'aide de fichiers de données globales, de collections en utilisant Nunjucks comme langage de templating.
 {{< /intro >}}
 
-***
+---
 
 Afin d'illustrer notre propos, nous allons développer un blog multilingue tout ce qu'il y a de plus classique.
 
@@ -99,7 +99,6 @@ Maintenant que nos dates sont automatiquement localisées, passons aux collectio
 ## Localisation des collections
 
 Nous allons pouvoir tirer parti de notre arborescence de fichiers pour créer des collections dans Eleventy. Le plus simple est encore de créer une collection par langue. Nous utilisons pour cela la fonction [`getFilteredByGlob`](https://www.11ty.io/docs/collections/#getfilteredbyglob(-glob-)) dans notre fichier `eleventy.js`.
-
 
 ```js
 module.exports = function(eleventyConfig) {

@@ -25,7 +25,7 @@ site à la vitesse de l’éclair.
 
 {{< /intro >}}
 
-***
+---
 
 > Pressé ? Passez directement au [tutoriel](#tutoriel) ou
 > [à la démo et au code dispo sur GitHub](#demo-repo).

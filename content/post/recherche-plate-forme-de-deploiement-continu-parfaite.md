@@ -18,7 +18,7 @@ aliases:
 L'automatisation est une des composantes qui permet de bien travailler en versionnant son projet et en configurant une publication automatique. Cette bonne pratique issue du développement permet de s'assurer que tout le monde peut contribuer et que les changements seront bien publiés. DJ Walker a pris le temps de passer en revue différents services pour vous, c'est parti pour la visite guidée.
 {{< /intro >}}
 
-***
+---
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1280/v1535462763/steps-building.jpg"
 caption="Photo by Samuel Zeller on Unsplash" >}}

@@ -29,7 +29,7 @@ ou d’autres générateurs.
 
 {{</ intro >}}
 
-***
+---
 
 Nous partirons du principe que vous avez une installation de Jekyll déjà
 fonctionnelle, dans le cas contraire, reportez-vous à la

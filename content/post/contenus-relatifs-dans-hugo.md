@@ -19,7 +19,7 @@ pour vous la gestion des contenus relatifs apparus dans la version `0.27`.
 
 {{< /intro >}}
 
-***
+---
 
 Je me suis enfin décidé à améliorer la façon dont je gère les relations entre
 les contenus dans mes projets en utilisant la fonctionnalité dédiée aux contenus

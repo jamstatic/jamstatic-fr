@@ -21,7 +21,7 @@ Imaginons que vous soyez en train de créer la prochaine grande startup ou d'org
 
 Une présence en ligne séduisante et fonctionnelle est tout simplement primordial en 2019, que ce soit pour les entreprises, les organisations à but non lucratif ou encore pour le recrutement de nouveaux employés — et il en va de même pour [Monetery](https://monetery.com/), l'événement technologique — inclusif — organisé chaque printemps par Dwolla. Nous avions besoin d’un site rapidement opératonnel et performant, nous avons donc d’abord opté pour une solution fiable et éprouvée que nous avions déjà utilisé : [GitHub Pages](https://pages.github.com/).
 
-Cette solution a été rapidement opérationnelle lorsque nous avons lancé la page d’accueil de Monetery, mais il était évident que nous avions besoin d’une solution plus complète. En raison de notre processus de validation exigeant, la technique est rapidement devenue un obstacle.  
+Cette solution a été rapidement opérationnelle lorsque nous avons lancé la page d’accueil de Monetery, mais il était évident que nous avions besoin d’une solution plus complète. En raison de notre processus de validation exigeant, la technique est rapidement devenue un obstacle.
 Nous devions travailler à une meilleure solution afin de migrer nos contributeurs de contenu et effectuer les changements nécessaires rapidement.
 
 Nous avons alors étudié les options qui s’offraient à nous :
@@ -37,9 +37,9 @@ Nous avons pensé que Netlify CMS pourrait être avantageux pour les raisons sui
 
 - Il est conçu pour être utilisé avec des générateurs de site statique, ce qui nous permet de conserver les avantages en terme de vitesse, de sécurité et d’évolutivité qui nous ont attirés vers les SSG
 - Il est SSG agnostique, et fonctionne donc avec notre site [Jekyll](https://jekyllrb.com/) existant mais ne nous empècherait pas de changer d’avis (salut [GatsbyJS](https://www.gatsbyjs.org/) !)
-- Il n’y a pas de base de données car les modifications de contenu sont enregistrées via des *commits* Git — ce qui ravi les gens d‘[InfoSec](https://www.dwolla.com/security/) !
+- Il n’y a pas de base de données car les modifications de contenu sont enregistrées via des commits Git — ce qui ravi les gens d‘[InfoSec](https://www.dwolla.com/security/) !
 - Il fournit une expérience d’édition simple et fonctionnelle
-- Il est open-source, il n’y a donc pas de dépendance à un fournisseur, et nous permet de reverser les fonctionnalités importantes à la communauté 
+- Il est open-source, il n’y a donc pas de dépendance à un fournisseur, et nous permet de reverser les fonctionnalités importantes à la communauté
 
 Suite à l’adhésion des parties prenantes, nous avons décidé de nous orienter vers cette solution. Nous allons parler des décisions que nous avons dû prendre et vous montrer comment intégrer Netlify CMS avec Jekyll sur votre propre site.
 
@@ -55,20 +55,20 @@ Le déploiement de branches vous permet d’avoir plusieurs versions de votre si
 
 ## Migrer de GitHub Pages à Netlify
 
-En général, publier votre site depuis Netlify est aussi simple que de créer un compte Netlify, connectez vous à votre fournisseur (GitHub, GitLab ou Bitbucket) et sélectionnez un dépôt. Dès que vous définissez la commande de *build*, Netlify peut commencer à déployer votre site. Les tâches telles que configurer le SSL sont expliquées dans la [documentation Netlify](https://www.netlify.com/docs/), nous ne les détaillerons donc pas ici.
+En général, publier votre site depuis Netlify est aussi simple que de créer un compte Netlify, connectez vous à votre fournisseur (GitHub, GitLab ou Bitbucket) et sélectionnez un dépôt. Dès que vous définissez la commande de _build_, Netlify peut commencer à déployer votre site. Les tâches telles que configurer le SSL sont expliquées dans la [documentation Netlify](https://www.netlify.com/docs/), nous ne les détaillerons donc pas ici.
 
-Si vous utilisez les *gems* intégrées à Jekyll et le processus de *build* proposé par GitHub, vous aurez besoin de quelques outils complémentaires pour que ça fonctionne. Vous aurez besoin d’un *Gemfile* pour vos dépendances, et c’est aussi une bonne idée d’intégrer la commande de *build* au code source :
+Si vous utilisez les _gems_ intégrées à Jekyll et le processus de _build_ proposé par GitHub, vous aurez besoin de quelques outils complémentaires pour que ça fonctionne. Vous aurez besoin d’un _Gemfile_ pour vos dépendances, et c’est aussi une bonne idée d’intégrer la commande de _build_ au code source :
 
-*Gemfile*
+**Gemfile**{#gemfile}
 
-``` {#gemfile}
+```ruby
 source "https://rubygems.org"
 gem 'github-pages'
 ```
 
-*netlify.toml*
+**netlify.toml**{#netlify.toml}
 
-``` {#netlify.toml}
+```toml
 [build]
 publish = "_site/"
 command = "jekyll build"
@@ -78,7 +78,7 @@ Une fois que tout vous semble bon et que le déploiement Netlify se déroule cor
 
 ## Ajouter Netlify CMS à un site existant
 
-Netlify CMS se compose d’une [application web monopage](https://fr.wikipedia.org/wiki/Application_web_monopage) (NDT : en anglais *single-page application* ou SPA) construite avec React qui réside dans un dossier admin de votre site. Pour Jekyll, il doit être placé à la racine du site. Il contiendra deux fichiers :
+Netlify CMS se compose d’une [application web monopage](https://fr.wikipedia.org/wiki/Application_web_monopage) (NDT : en anglais _single-page application_ ou SPA) construite avec React qui réside dans un dossier admin de votre site. Pour Jekyll, il doit être placé à la racine du site. Il contiendra deux fichiers :
 
 ``` {#file-structure}
 admin
@@ -90,9 +90,9 @@ La [documentation de Netlify CMS](https://www.netlifycms.org/docs/add-to-your-si
 
 > Le premier fichier, `admin/index.html`, est le point d’entrée à l’admin de Netlify CMS. Cela signifie que les utilisateurs y accèdent via `votresite.com/admin/`. Du côté du code, c’est une page HTML qui charge le fichier Javascript de Netlify CMS. Dans cet exemple, nous chargeons le fichier depuis un CDN public :
 
-*admin/index.html*
+**admin/index.html**{#index.html}
 
-``` {#index.html}
+```html
 <!doctype html>
 <html>
 <head>
@@ -112,9 +112,9 @@ La [documentation de Netlify CMS](https://www.netlifycms.org/docs/add-to-your-si
 
 Pour commencer, voici à quoi peut ressembler le fichier de configuration :
 
-*admin/config.yml*
+_admin/config.yml_{#config.yml}
 
-``` {#config.yml}
+```yml
 backend:
   name: git-gateway
   branch: master
@@ -131,13 +131,13 @@ logo_url: https://yoursite.com/assets/img/logo.svg
 collections:
 ```
 
-La section `backend` couvre la configuration de base tel que le choix de la branche à modifier et la connexion Git Gateway dont nous avons parlé plus haut. La propriété `publish_mode` est paramétrée de manière à ce que notre flux de travail utilise le mode [*editorial*](https://www.netlifycms.org/docs/add-to-your-site/#editorial-workflow). En bref cela signifie que nous avons la possibilité de sauvegarder les brouillons sous la forme de *Pull Requests* Git avant de décider de les publier. Combiné à la fonctionnalité de déploiement de branches de Netlify, cela va nous permettre d’avoir un aperçu immédiat du contenu non publié !
+La section `backend` couvre la configuration de base tel que le choix de la branche à modifier et la connexion Git Gateway dont nous avons parlé plus haut. La propriété `publish_mode` est paramétrée de manière à ce que notre flux de travail utilise le mode [_editorial_](https://www.netlifycms.org/docs/add-to-your-site/#editorial-workflow). En bref cela signifie que nous avons la possibilité de sauvegarder les brouillons sous la forme de _Pull Requests_ Git avant de décider de les publier. Combiné à la fonctionnalité de déploiement de branches de Netlify, cela va nous permettre d’avoir un aperçu immédiat du contenu non publié !
 
-*Remarque : depuis mai 2019, le flux de travail editorial n’est pris en charge que lorsque vous utilisez GitHub.*
+_Remarque : depuis mai 2019, le flux de travail éditorial n’est pris en charge que lorsque vous utilisez GitHub._
 
-Maintenant il ne nous reste plus qu’à déposer le widget Netlify Identify sur le site principal. C’est nécessaire car après s’être connecté l’utilisateur est redirigé vers la page d’accueil du site. Nous devons rediriger les utilisateurs vers l’administration du CMS, en ajoutant le script suivant avant la fermteture de la balise *body* :
+Maintenant il ne nous reste plus qu’à déposer le widget Netlify Identify sur le site principal. C’est nécessaire car après s’être connecté l’utilisateur est redirigé vers la page d’accueil du site. Nous devons rediriger les utilisateurs vers l’administration du CMS, en ajoutant le script suivant avant la fermteture de la balise _body_ :
 
-``` {#netlify-identity}
+```js
 <script>
   if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {
@@ -151,13 +151,13 @@ Maintenant il ne nous reste plus qu’à déposer le widget Netlify Identify sur
 </script>
 ```
 
-Uen fois ceci mis en place, avec l’authentification adéquate et la Git Gateway configurée sur netlify.com, vous devriez être en mesure de vous connecter à l’administration de Netlify CMS de votre site via l’URL `https://yourdomain.com/admin/`.
+Une fois ceci mis en place, avec l’authentification adéquate et la Git Gateway configurée sur netlify.com, vous devriez être en mesure de vous connecter à l’administration de Netlify CMS de votre site via l’URL `https://yourdomain.com/admin/`.
 
 ### Qu’est-ce que les Collections ?
 
 Bien qu'à ce stade vous pouvez vous connecter, vous ne pouvez pas encore faire grand chose ! Aucune structure de données n’est configurée pour les champs du CMS dont vous aurez besoin pour éditer votre site. Vous avez peut-être remarqué le champ vide `collections` dans le fichier de configuration, et c’est là que la magie opère. Tous les champs des données que vous souhaitez enregistrer doivent appartenir à une collection.
 
-Il existe deux [types de collections](https://www.netlifycms.org/docs/collection-types/), le dossier de collections et le fichier de collections. Pour comprendre la différence, voyons ce que Netlify CMS fait réellement lorsque vous modifiez un contenu : les données doivent être stockées quelque part et nous savons qu’il utilise Git comme *back-end*. Cela signifie que les données que vous enregistrez doivent se retrouver dans un un fichier de votre projet. Ainsi, lorsque nous configurons une collection, nous donnons à Netlify CMS l’information de structure et la convention de nommage des fichiers que nous voulons créer. C’est ensuite à votre générateur de site statique de déterminer comment interpréter ces fichiers et injecter les données dans des templates. Dans ce billet, nous allons expliquer comment ça fonctionne avec Jekyll.
+Il existe deux [types de collections](https://www.netlifycms.org/docs/collection-types/), le dossier de collections et le fichier de collections. Pour comprendre la différence, voyons ce que Netlify CMS fait réellement lorsque vous modifiez un contenu : les données doivent être stockées quelque part et nous savons qu’il utilise Git comme _back-end_. Cela signifie que les données que vous enregistrez doivent se retrouver dans un un fichier de votre projet. Ainsi, lorsque nous configurons une collection, nous donnons à Netlify CMS l’information de structure et la convention de nommage des fichiers que nous voulons créer. C’est ensuite à votre générateur de site statique de déterminer comment interpréter ces fichiers et injecter les données dans des templates. Dans ce billet, nous allons expliquer comment ça fonctionne avec Jekyll.
 
 Sachant cela, pouvez-vous deviner pourquoi il existe deux types de collections ? Dans le cas de données de configuration, nous pouvons dire au CMS de mettre ces champs dans un fichier spécifique de notre projet. Dans le cas de contenus répétés tels que des billets de blog ou des pages construites à partir de composants modulaires, nous souhaitons configurer Netlify CMS de manière à ce qu’il puisse générer un certain nombre de formats de fichier différents — il supporte YAML, JSON, Markdown avec un [front matter](https://jekyllrb.com/docs/front-matter/), et quelques autres.
 
@@ -165,9 +165,9 @@ Sachant cela, pouvez-vous deviner pourquoi il existe deux types de collections ?
 
 Un fichier de collection est l’endroit idéal pour définir les champs des données pour les éléments qui sont valables sur l’ensemble du site, tels que la navigation globale, le pied de page et les valeurs par défaut. Jetons un oeil à un fichier de collection issu d’un cas réel :
 
-*admin/config.yml*
+**admin/config.yml**
 
-``` {#config.yml-edit}
+```yml
 collections:
   - label: "Options transverses"
     name: options
@@ -197,9 +197,9 @@ Cela définira une nouvelle collection qui apparaîtra à gauche de l’interfac
 
 Voici un exemple de ce à quoi peut resembler un fichier de données :
 
-*\_data/nav.yml*
+**\_data/nav.yml**
 
-``` {#nav.yml}
+```yml
 topLevelItems:
   - displayText: 'Une page'
     itemType: Link
@@ -211,9 +211,9 @@ topLevelItems:
 
 ### Comment utiliser un fichier de collection dans Jekyll ?
 
-Voyons comment exploiter ces données dans un template Jekyll. Voici un template *Liquid* qui utilise nos données de navigation :
+Voyons comment exploiter ces données dans un template Jekyll. Voici un template _Liquid_ qui utilise nos données de navigation :
 
-``` {#nav-data}
+```liquid
 <ul>
   {% for item in site.data.nav.topLevelItems %}
     <li>
@@ -231,14 +231,14 @@ Dans Jekyll, toutes les informations du dossier `_data` sont accessibles en util
 
 ### Paramétrer un dossier de collection de pages
 
-Une dossier de collection est utilisé chaque fois que nous avons besoin de générer un certain nombre de fichiers selon un template, mais sans savoir combien. Par exemple, si vous créez un blog, c’est ce dont vous aurez besoin pour vos billets.  
+Une dossier de collection est utilisé chaque fois que nous avons besoin de générer un certain nombre de fichiers selon un template, mais sans savoir combien. Par exemple, si vous créez un blog, c’est ce dont vous aurez besoin pour vos billets.
 Dans cet exemple, nous allons utiliser une fonctionnalité intéressante de Jekyll afin de permettre aux contributeurs de créer les pages de notre site à la volée et selon la destination de leur choix.
 
 Regardons la structure d’un dossier de collection provenant d’un fichier de configuration réel pour voir comment ça marche :
 
-*admin/config.yml*
+**admin/config.yml**
 
-``` {#config-collection}
+```yaml
 collections:
  - label: "Pages"
     label_singular: "Page"
@@ -269,17 +269,17 @@ collections:
           - {label: "Image Twitter", name: twitterImage, widget: image, required: false}
 ```
 
-Ceci définit une nouvelle collection appelée “Pages” qui contiendra de nombreux fichiers stockés dans le dossier `/_pages/` de votre projet. Les fichiers seront nommés en fonction du modèle définit dans le champ *slug*, lequel est configuré pour prendre la valeur de la variable pas forcément très explicite `{{slug}}`. Ne vous inquiétez pas, dans ce cas, cela signifie simplement que nous utiliserons la valeur par défaut, à savoir le contenu du champ `Titre`. Vous pouvez configurer cela de différentes façons pour y inclure une date ou tout autre élément selon votre besoin, mais dans le cas de notre exemple c’est parfait.
+Ceci définit une nouvelle collection appelée “Pages” qui contiendra de nombreux fichiers stockés dans le dossier `/_pages/` de votre projet. Les fichiers seront nommés en fonction du modèle définit dans le champ _slug_, lequel est configuré pour prendre la valeur de la variable pas forcément très explicite `{{slug}}`. Ne vous inquiétez pas, dans ce cas, cela signifie simplement que nous utiliserons la valeur par défaut, à savoir le contenu du champ `Titre`. Vous pouvez configurer cela de différentes façons pour y inclure une date ou tout autre élément selon votre besoin, mais dans le cas de notre exemple c’est parfait.
 
 ![](/assets/images/cms-headless-en-3-jours/Screen-Shot-2019-05-29-at-4.17.02-PM.png)
 
-Veuillez noter les champs `permalink` et `preview_path`. Nous utiliserons le champ *permalink* pour définir le chemin d’accès à notre page dans Jekyll, et le champ de *preview* permet à Netlify CMS de savoir comment pointer vers la bonne URL de prévisualisation (déploiement de branches :+1:).
+Veuillez noter les champs `permalink` et `preview_path`. Nous utiliserons le champ _permalink_ pour définir le chemin d’accès à notre page dans Jekyll, et le champ de _preview_ permet à Netlify CMS de savoir comment pointer vers la bonne URL de prévisualisation (déploiement de branches :+1:).
 
 Voici un exemple de ce à quoi peut ressembler le fichier de contenu d’une page :
 
-*\_pages/home.md*
+_\_pages/home.md_
 
-``` {#home.md}
+```yaml
 ---
 Title: Accueil
 permalink: /
@@ -291,15 +291,15 @@ social: {}
 
 ### Comment utiliser un dossier de collection dans Jekyll ?
 
-Si vous lisiez avec attention, vous avez sans doute remarqué qu’une collection de fichiers génère des fichiers YAML, alors qu‘une collection de dossiers génère des fichiers Markdown avec un *front matter*. Vous pensez peut-être que c’est un peu étrange d’avoir un fichier Markdown sans contenu sous le *front matter* (séparé par trois tirets), mais soyez rassuré : c’est pour une bonne raison !
+Si vous lisiez avec attention, vous avez sans doute remarqué qu’une collection de fichiers génère des fichiers YAML, alors qu‘une collection de dossiers génère des fichiers Markdown avec un _front matter_. Vous pensez peut-être que c’est un peu étrange d’avoir un fichier Markdown sans contenu sous le _front matter_ (séparé par trois tirets), mais soyez rassuré : c’est pour une bonne raison !
 
-Nous travaillerons de concert avec la fonctionnalité de [collections](https://jekyllrb.com/docs/collections/) propre à Jekyll afin de coupler nos fichiers Markdown avec un template, lire les données du *front matter* et ensuite générer notre page. Cela nous permettra de faire des choses plus travaillées plus tard, comme utiliser le [widget liste à types de variable](https://www.netlifycms.org/docs/beta-features/#list-widget-variable-types) pour créer un composant de *page builder* !
+Nous travaillerons de concert avec la fonctionnalité de [collections](https://jekyllrb.com/docs/collections/) propre à Jekyll afin de coupler nos fichiers Markdown avec un template, lire les données du _front matter_ et ensuite générer notre page. Cela nous permettra de faire des choses plus travaillées plus tard, comme utiliser le [widget liste à types de variable](https://www.netlifycms.org/docs/beta-features/#list-widget-variable-types) pour créer un composant de _page builder_ !
 
 Avant de commencer, nous avons besoin de compléter le fichier de configuration de Jekyll :
 
-*\_config.yml*
+_\_config.yml_
 
-``` {#jekyll-collections}
+```yaml
 collections:
   pages:
     output: true
@@ -307,11 +307,11 @@ collections:
 
 Ceci indique à Jekyll qu’il doit générer une nouvelle page pour chaque fichier Markdown présent dans le dossier `pages`.
 
-Mais comment Jekyll fait-il pour savoir quel template utiliser ? Dans le cas présent c’est champ `layout` défini dans Netlify CMS qui s’occupe de ça. Jekyll fait correspondre la valeur du champ dans le *front matter* directement avec le nom du fichier de template présent dans le dossuer `_layouts` du projet.
+Mais comment Jekyll fait-il pour savoir quel template utiliser ? Dans le cas présent c’est champ `layout` défini dans Netlify CMS qui s’occupe de ça. Jekyll fait correspondre la valeur du champ dans le _front matter_ directement avec le nom du fichier de template présent dans le dossuer `_layouts` du projet.
 
 Regardons un exemple de template :
 
-*\_layouts/home.html*
+_\_layouts/home.html_
 
 ``` {#layouts-home}
 ---
@@ -325,17 +325,17 @@ layout: default
 </section>
 ```
 
-Toutes les données provenant du *front matter* qui nous intéresse sont accessibles en utilisant la syntaxe Jekyll `{collection}.{field}`. Nous pouvons utiliser les templates parents et autres comme on veut.
+Toutes les données provenant du _front matter_ qui nous intéresse sont accessibles en utilisant la syntaxe Jekyll `{collection}.{field}`. Nous pouvons utiliser les templates parents et autres comme on veut.
 
-### Réaliser un *page builder* dans Jekyll
+### Réaliser un _page builder_ dans Jekyll
 
-C’est un bon début, mais nous n’aurions pas besoin de tout ça dans notre dossier de collection si nous n’allions pas plus loin : créons un *page builder* flexible, basé sur des composants.
+C’est un bon début, mais nous n’aurions pas besoin de tout ça dans notre dossier de collection si nous n’allions pas plus loin : créons un _page builder_ flexible, basé sur des composants.
 
 Pour commencer, nous devons définir nos composants dans le fichier de configuration de Netlify CMS :
 
-*\_admin/config.yml*
+_\_admin/config.yml_
 
-``` {#define-components}
+```yaml
 collections:
   - label: "Pages"
       ...
@@ -365,9 +365,9 @@ Ici nous avons étendu notre collection de pages afin d’y inclure un widget de
 
 Créons maintenant un nouveau template pour le rendu de nos widgets :
 
-*\_layouts/blocks.html*
+_\_layouts/blocks.html_
 
-``` {#render-widgets}
+```yaml
 ---
 layout: default
 ---
@@ -379,7 +379,7 @@ layout: default
 
 Ici nous itérons sur chacun des composants de la page et incluons un autre fichier de template qui lui s’occupe du rendu. Voici à quoi pourrait ressembler un template de composant :
 
-*\_includes/blocks/hero.html*
+_\_includes/blocks/hero.html_
 
 ``` {#component-template}
 <header class="page-hero">
@@ -392,11 +392,11 @@ Ici nous itérons sur chacun des composants de la page et incluons un autre fich
 </header>
 ```
 
-Parce que nous avons transmis notre variable `block`, nous avons tout ce dont nous en avons besoin. Vous remarquez égelement que nous avons veillé à transformer notre Mardown en HTML avec *markdownify* car ce n’est pas fait automatiquement.
+Parce que nous avons transmis notre variable `block`, nous avons tout ce dont nous en avons besoin. Vous remarquez égelement que nous avons veillé à transformer notre Markdown en HTML avec _markdownify_ car ce n’est pas fait automatiquement.
 
 ## Notre retour d'expérience avec Netlify + Netlify CMS
 
-Grâce à ces techniques, nos ingénieurs ont pu intégrer Netlify CMS à notre site jekyll existant pour [Monetery](https://monetery.com/) et mettre en oeuvre un CMS opérationnel en l’espace de quelques jours (trois pour être exact).  
+Grâce à ces techniques, nos ingénieurs ont pu intégrer Netlify CMS à notre site Jekyll existant pour [Monetery](https://monetery.com/) et mettre en oeuvre un CMS opérationnel en l’espace de quelques jours (trois pour être exact).
 Les contributeurs de contenu ont été en mesure de s’intégrer rapidement et de commencer à publier des modifications et de nouvelles pages peu de temps après le lancement. Pendant ce temps, nous avons également intégré un nouvel ingénieur qui a pu commencer à contribuer de manière significative dès son deuxième jour de travail !
 
 Cela dit, [ce n’est jamais terminé](https://www.dwolla.com/about/core-beliefs/). Nous apprenons constamment de nos expériences et nous essayons de nous améliorer. Jetons un oeil critique sur les avantages et les inconvénients quant à l’utilisation de Netlify + Netlify CMS :
@@ -418,12 +418,11 @@ Cela dit, [ce n’est jamais terminé](https://www.dwolla.com/about/core-beliefs
 - L’enregistrement et la publication sont relativement lents, parfois jusqu’à plusieurs secondes
 - Nous rencontrons des erreurs occasionnelles — mais frustrantes — lors de l’utilisation de l’administration du CMS
 - Certains widgets ou fonctionnalités que vous pourriez rechercher, tels que l‘affichage conditionnel des champs de l’interface utilisateur de l’administration, n’ont pas encore été implémentés
-- L’interface utilisateur du CMS ne permet pas de sauvegarder le contenu sur votre ordinateur lors du développement en local, il sera toujours nécessaire de *commiter* sur votre dépôt Git, alors soyez prudent
+- L’interface utilisateur du CMS ne permet pas de sauvegarder le contenu sur votre ordinateur lors du développement en local, il sera toujours nécessaire de _commiter_ sur votre dépôt Git, alors soyez prudent
 - Il est préférable d’utiliser Netlify comme hébergeur plutôt qu’un autre fournisseur si vous souhaitez utiliser des fonctionnalités telles que le déploiement de branches et un Git Gateway déjà hébergé — Cela peut ajouter des coûts supplémentaires à votre projet
 
 ## Communauté et contribution
 
-Les échanges avec la communauté Netlify CMS ont été merveilleux, nous vous encourageons donc à essayer cette technologie. Dwolla croit également qu’il faut associer les mots et les actes, aussi nous sommes résolus à reverser à la communauté open-source. Nous sommes heureux d’annoncer que notre première *Pull Request* est déjà en ligne !
+Les échanges avec la communauté Netlify CMS ont été merveilleux, nous vous encourageons donc à essayer cette technologie. Dwolla croit également qu’il faut associer les mots et les actes, aussi nous sommes résolus à reverser à la communauté open-source. Nous sommes heureux d’annoncer que notre première _Pull Request_ est déjà en ligne !
 
 Découvrez le code sur GitHub : <https://github.com/netlify/netlify-cms>
-

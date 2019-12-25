@@ -21,7 +21,7 @@ un campus culturel et de recherche situé à Los Angeles.
 
 {{< /intro >}}
 
-***
+---
 
 {{< figure
 src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1531412780/getty-museum-ancient-terracottas.jpg"

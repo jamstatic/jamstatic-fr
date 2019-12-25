@@ -17,7 +17,8 @@ source:
 
 Les fichiers partiels sont parmi les modèles de fichiers les plus utilisés pour la maintenance de sites Hugo. C'est eux qui nous permettent d'isoler nos composants, inclusions, ou autres morceaux de code et même plus récemment nos fonctions.
 
-Nous n'allons pas revenir dans cet article sur les bases des [partiels](https://gohugo.io/templates/partials/) comme leur *contexte* que nous avons déjà [détaillé auparavant]({{< relref "/post/hugo-le-point-sur-le-contexte" >}}).
+Nous n'allons pas revenir dans cet article sur les bases des
+[partiels](https://gohugo.io/templates/partials/) comme leur _contexte_ que nous avons déjà [détaillé auparavant]({{< relref "/post/hugo-le-point-sur-le-contexte" >}}).
 
 Nous allons voir comme tirer parti au mieux des fonctionnalités de ces fichiers, bien au-delà des inclusions habituelles. Nous verrons comment Hugo peut mettre en cache vos fichiers partiels pour réduire le temps de génération, comment les utiliser comme des fonctions, nous verrons enfin quelles sont les meilleures pratiques à adopter en termes d'organisation et de commentaires pour nous assurer de leur pérennité.
 
@@ -27,7 +28,7 @@ Entrons dans le vif du sujet sans plus attendre avec la solution dédiée à la 
 
 Comme vous le savez peut-être déjà, le but d'un fichier partiel est de permettre de refactoriser les parties de code utilisées souvent dans vos modèles.
 
-Si comme moi vous avez horreur de *copier-coller* des bouts de code un peu partout dans vos projets, vous devez avoir beaucoup recours aux fichiers partiels !
+Si comme moi vous avez horreur de _copier-coller_ des bouts de code un peu partout dans vos projets, vous devez avoir beaucoup recours aux fichiers partiels !
 
 Le rendu du code de votre fichier partiel peut être identique sur une majorité des pages et quelque peu différent pour certaines, ou bien il peut être complètement différent d'une page à l'autre. Ce deuxième scénario bénéficiera rarement des bienfaits d'une mise en cache, concentrons-nous donc ici sur le premier.
 
@@ -43,7 +44,7 @@ Avec `partialCached` vous pouvez dire à Hugo que ce bout de code ne bouge jamai
 {{ partialCached "header.html" . }}
 ```
 
-C'est 999 fois où Hugo n'aura pas à interpréter le code de votre fichier partiel. En fonction de la complexité de votre menu de navigation, *vous venez de potentiellement gagner pas mal de précieuses millisecondes* ⏱️!
+C'est 999 fois où Hugo n'aura pas à interpréter le code de votre fichier partiel. En fonction de la complexité de votre menu de navigation, **vous venez de potentiellement gagner pas mal de précieuses millisecondes** ⏱️!
 
 Mais notre entête de page est-il vraiment identique sur toutes les pages ?
 
@@ -64,7 +65,7 @@ Le code de notre menu Hugo contient souvent quelque chose comme :
 </nav>
 ```
 
-Le code ci-dessus parle quasiment de lui-même. Notre projet comporte un menu principal avec cinq entrées, chacune pointant vers une section du site. Pour rendre active l'entrée __Blog__ du menu lorsqu'on se trouve sur une page de la section Blog, nous comparons la section de la page visitée (`$currentPage.Section`) avec celle de l'entrée de menu (`.Page.Section`).
+Le code ci-dessus parle quasiment de lui-même. Notre projet comporte un menu principal avec cinq entrées, chacune pointant vers une section du site. Pour rendre active l'entrée **Blog** du menu lorsqu'on se trouve sur une page de la section Blog, nous comparons la section de la page visitée (`$currentPage.Section`) avec celle de l'entrée de menu (`.Page.Section`).
 
 Avec le `{{ partialCached "header.html" . }}` actuel, Hugo va maintenant évaluer une seule fois la condition de ce `if` et appliquer son résultat à toutes les pages suivantes générées,  et ce quelle que soit leur section.
 
@@ -162,7 +163,7 @@ Nous avons maintenant une chaîne de caractères que nous pouvons passer comme v
 Grâce à cela, nous sommes maintenant assurés qu'Hugo ne génèrera qu'une seule variante par combinaison d'auteurs, soit 7 au maximum.
 
 {{< notice info >}}
- #### Pourquoi ordonner les auteurs ?
+ ### Pourquoi ordonner les auteurs ?
  En les classant par ordre alphabétique, nous nous assurons de ne pas créer des variantes inutiles, et ce que quel que soit l'ordre dans lequel les auteurs ont été listés dans le front matter.
 {{< /notice >}}
 

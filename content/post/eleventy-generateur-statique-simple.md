@@ -30,7 +30,7 @@ Zach nous propose un premier aperçu de son fonctionnement.
 
 {{< /intro >}}
 
-***
+---
 
 {{< figure
 src="https://cdn-images-1.medium.com/max/800/1*u1v8ojapeWAgL2xjaJZ5rA.png"

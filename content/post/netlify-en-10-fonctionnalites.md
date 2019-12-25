@@ -33,7 +33,7 @@ hébergée par Netlify a montré que ça pouvait aller bien au delà en faisant 
 
 {{< /intro >}}
 
-***
+---
 
 [Phil Hawksworth](https://twitter.com/philhawksworth), nouvellement en charge
 des relations avec les développeurs chez Netlify a publié une liste de

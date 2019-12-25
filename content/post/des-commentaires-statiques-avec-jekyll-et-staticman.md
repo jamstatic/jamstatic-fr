@@ -28,7 +28,7 @@ si statique que ça, proposant ainsi une alternative à Disqus au même titre qu
 
 {{< /intro >}}
 
-***
+---
 
 {{< figure
 src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1024/v1523364658/improving-jekyll-static-comments-feature.jpg"

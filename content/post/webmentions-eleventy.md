@@ -339,7 +339,7 @@ Finally, we can render our replies using that new partial for a single reply web
 </article>
 ```
 
-## Bravely jumping into the black hole...
+## Bravely jumping into the black hole…
 Does it work?!?! We can finally test it out. First run `npm run build` to generate an initial list of webmentions that is saved to the `_cache/webmentions.json` file. Then run your local development server and see if it worked! Of course, you'll need to have at least one webmention associated with a post to see anything. 😁
 
 You can see the result of my own implementation below. Good luck! Let me know how it turns out or if you find in bugs or errors in this post!

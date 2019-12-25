@@ -27,7 +27,7 @@ Baumgartner a testé pour vous avec [Metalsmith](http://www.metalsmith.io/),
 voici comment il a procédé.
 {{< /intro >}}
 
-***
+---
 
 La toute-puissante [JAMStack]({{< relref
 "5-raisons-de-tester-la-jamstack.md" >}}) offre des sites web statiques rapides

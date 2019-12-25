@@ -22,7 +22,7 @@ et j'en ai profité pour changer quelques outils.
 
 {{< /intro >}}
 
-***
+---
 
 Les plugins que j'utilisais ne répondaient pas à mes exigences pour les images
 responsive, j'ai donc décidé de trouver d’autres moyens de satisfaire ces

@@ -36,7 +36,7 @@ concepts d’Hugo.
 
 {{< /intro >}}
 
-***
+---
 
 Ces derniers mois, travailler sur mon site web s'est révélé être de plus en plus
 pénible, que ce soit pour continuer à le développer, itérer sur son design,

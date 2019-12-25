@@ -11,7 +11,7 @@ Ce site a pour but de relayer les actualités de la communauté
 
 {{< /intro >}}
 
-***
+---
 
 ## Pourquoi ce site ?
 

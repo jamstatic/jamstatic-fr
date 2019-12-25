@@ -33,7 +33,7 @@ des développeurs web.
 
 {{< /intro >}}
 
-***
+---
 
 Frank: **Bonjour Vincent, on va peut-être commencer par te présenter ?**
 

@@ -26,7 +26,7 @@ performantes.
 
 {{< /intro >}}
 
-***
+---
 
 Après avoir travaillé pour différentes startups, Kyle Mathews a démissionné pour
 se consacrer à l’un de ses projets personnels

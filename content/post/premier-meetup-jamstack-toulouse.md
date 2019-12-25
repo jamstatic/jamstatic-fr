@@ -22,7 +22,7 @@ ces deux services de qualité.
 
 {{< /intro >}}
 
-***
+---
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347003/thefrontisback.jpg"
 caption="The Front is back !" attr="Photo : Nicolas Manaud"

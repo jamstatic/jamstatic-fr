@@ -23,7 +23,7 @@ comme une alternative intéressante à Jekyll ou aux générateurs qui reposent 
 des bibliothèques JavaScript, tout en en s'affranchissant de leurs contraintes.
 {{< /intro >}}
 
-***
+---
 
 Eleventy est un nouveau générateur de site statique.
 

@@ -29,7 +29,7 @@ on pourrait tout aussi bien utiliser le générateur open source
 
 {{< /intro >}}
 
-***
+---
 
 Il est de plus en plus courant de nos jours de bâtir des sites avec des
 composants et c'est une très bonne idée. Plutôt que de construire les pages les

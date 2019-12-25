@@ -21,7 +21,7 @@ avec InstantSearch.
 
 {{< /intro >}}
 
-***
+---
 
 Salut 👋 ! Ça vous est déjà arrivé de développer entièrement un moteur de
 recherche ? Avez-vous déjà redouté que votre Product Manager vous dise "tu sais

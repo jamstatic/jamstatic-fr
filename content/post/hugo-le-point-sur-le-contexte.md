@@ -24,7 +24,7 @@ voir plus clair.
 
 {{< /intro >}}
 
-***
+---
 
 **Mais pourquoi ma variable n'est pas accessible ici et ici ?** 🙄
 

@@ -31,7 +31,7 @@ documentation vient s'ajouter à la longue liste des heureux convertis à la
 
 {{< /intro >}}
 
-***
+---
 
 Gatsby connaît un vif succès et une
 [adoption](https://github.com/gatsbyjs/gatsby#showcase) croissante depuis peu et

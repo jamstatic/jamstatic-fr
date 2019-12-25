@@ -34,7 +34,7 @@ fonctionnalités liées aux snippets de code dans Hugo et d’apprendre à crée
 
 {{< /intro >}}
 
-***
+---
 
 Il y a des gens qui détestent écrire de la documentation et d’autres qui
 détestent écrire tout court. Il se trouve que j'aime écrire, sinon vous ne

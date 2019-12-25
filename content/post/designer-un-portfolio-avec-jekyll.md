@@ -24,7 +24,7 @@ et qui sait de pouvoir ensuite
 
 {{< /intro >}}
 
-***
+---
 
 ## Un guide complet pour coder et déployer un site, tout en ligne de commande
 

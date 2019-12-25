@@ -22,7 +22,7 @@ En effet, rien n'empêche un CMS qui communique avec l'<abbr title="Interface de
 Il vous faut aussi prendre en compte dans l'équation _votre_ workflow éditorial, la taille de _votre_ site (et donc le temps nécessaire à la génération d'une nouvelle version) ainsi que _votre_ fréquence de publication. Autant de paramètres qui doivent peser dans le choix d'un [headless](/categories/headless) CMS. On rappellera que les CMS headless ne présentent aucun des inconvénients des CMS traditionnels, que ce soit en terme de workflow de développement, de performance ou de sécurité, et qu'ils offrent plus de flexibilité et une meilleure productivité, une fois l'investissement initial consenti.
 {{</ intro >}}
 
-***
+---
 
 {{< figure src="https://bejamas.io/static/72bd366139f5ede0e780f9a28db84a5d/54d8b/git-vs-api-headless-cms.png">}}
 
@@ -44,19 +44,19 @@ Avec un CMS basé sur Git, les changements sont d'abord enregistrés dans votre 
 
 ### Pour
 
-* Pas de verrou propriétaire sur vos contenus.
-* Gestion de version de _tous_ les contenus par défaut.
-* Tous les contenus étant disponibles sous forme de fichiers texte, les développeurs peuvent continuer d'utiliser leurs outils habituels.
-* Facilite l'annulation de changements.
-* C'est l'approche la plus homogène pour la plupart des développeurs web, qui utilisent déjà un workflow basé sur Git.
-* Facile à configurer.
+-   Pas de verrou propriétaire sur vos contenus.
+-   Gestion de version de _tous_ les contenus par défaut.
+-   Tous les contenus étant disponibles sous forme de fichiers texte, les développeurs peuvent continuer d'utiliser leurs outils habituels.
+-   Facilite l'annulation de changements.
+-   C'est l'approche la plus homogène pour la plupart des développeurs web, qui utilisent déjà un workflow basé sur Git.
+-   Facile à configurer.
 
 ### Contre
 
-* Si vous avez plusieurs sites ou applications qui récupèrent des contenus depuis un même CMS, ce n'est pas forcément la meilleure solution.
-* Si votre site a une quantité très importante de contenus, vous préférerez peut-être regarder du côté d'une base de données.
-* Si vous prévoyez des mises à jours en continu, des articles publiés chaque minute par exemple, la génération et le déploiement continu n'est pas la meilleure option.
-* Moins d'options de modélisation de contenu et de formatage.
+-   Si vous avez plusieurs sites ou applications qui récupèrent des contenus depuis un même CMS, ce n'est pas forcément la meilleure solution.
+-   Si votre site a une quantité très importante de contenus, vous préférerez peut-être regarder du côté d'une base de données.
+-   Si vous prévoyez des mises à jours en continu, des articles publiés chaque minute par exemple, la génération et le déploiement continu n'est pas la meilleure option.
+-   Moins d'options de modélisation de contenu et de formatage.
 
 ## Les CMS API-first
 
@@ -66,16 +66,16 @@ Avec les CMS dotés d'une API par défaut, vous avez accès à une API, généra
 
 ### Pour
 
-* C'est la meilleure solution si vous maintenez plusieurs applications et sites web qui récupèrent le même contenu structuré.
-* Facile à utiliser avec de multiples terminaux client.
-* Beaucoup d'options disponibles pour vous permettre de personnaliser le CMS.
-* Vous avez des quantités très importantes de données à gérer.
+-   C'est la meilleure solution si vous maintenez plusieurs applications et sites web qui récupèrent le même contenu structuré.
+-   Facile à utiliser avec de multiples terminaux client.
+-   Beaucoup d'options disponibles pour vous permettre de personnaliser le CMS.
+-   Vous avez des quantités très importantes de données à gérer.
 
 ### Contre
 
-* Pas de gestion de version dans Git, ni d'intégration dans le workflow de développement.
-* Va souvent de paire avec une limitation de stockage ou d'utilisation de l'API. Peut revenir cher si vous ne calculez pas bien votre coût.
-* Dépendance aux développeurs pour des gros changements.
+-   Pas de gestion de version dans Git, ni d'intégration dans le workflow de développement.
+-   Va souvent de paire avec une limitation de stockage ou d'utilisation de l'API. Peut revenir cher si vous ne calculez pas bien votre coût.
+-   Dépendance aux développeurs pour des gros changements.
 
 Maintenant que nous savons tout cela, regardons de plus près les bénéfices et les défauts de ces systèmes que vous devriez gardez en tête lors du choix du headless CMS pour votre prochain projet.
 
@@ -165,21 +165,21 @@ Bien entendu, cela dépend surtout de vos besoins. C'est à l'ensemble de votre 
 
 ## Liste de plate-formes CMS basées sur Git
 
-* Forestry - [https://forestry.io](https://forestry.io "https://forestry.io")
-* Crafter CMS - [https://craftercms.org](https://craftercms.org "https://craftercms.org")
-* Netlify CMS - [https://www.netlifycms.org](https://www.netlifycms.org "https://www.netlifycms.org")
-* Publii - [https://getpublii.com](https://getpublii.com "https://getpublii.com")
-* Prose - [http://prose.io](http://prose.io "http://prose.io")
+-   Forestry - [https://forestry.io](https://forestry.io "https://forestry.io")
+-   Crafter CMS - [https://craftercms.org](https://craftercms.org "https://craftercms.org")
+-   Netlify CMS - [https://www.netlifycms.org](https://www.netlifycms.org "https://www.netlifycms.org")
+-   Publii - [https://getpublii.com](https://getpublii.com "https://getpublii.com")
+-   Prose - [http://prose.io](http://prose.io "http://prose.io")
 
-## Liste de plates-formes CMS basées sur des APis.
+## Liste de plates-formes CMS basées sur des APis
 
-* Storyblok - [https://www.storyblok.com/](https://www.storyblok.com/ "https://www.storyblok.com/")
-* Contentful - [https://www.contentful.com](https://www.contentful.com "https://www.contentful.com")
-* Sanity - [https://sanity.io](https://sanity.io "https://sanity.io")
-* Dato CMS - [https://www.datocms.com/](https://www.datocms.com/ "https://www.datocms.com/")
-* Prismic - [https://prismic.io](https://prismic.io "https://prismic.io")
-* Ghost - [https://ghost.org](https://ghost.org "https://ghost.org")
-* Strapi - [https://strapi.io](https://strapi.io "https://strapi.io")
-* Cloud CMS - [https://www.cloudcms.com](https://www.cloudcms.com "https://www.cloudcms.com")
-* Directus - [https://directus.io](https://directus.io "https://directus.io")
-* Rooftop - [https://www.rooftopcms.com](https://www.rooftopcms.com "https://www.rooftopcms.com")
+-   Storyblok - [https://www.storyblok.com/](https://www.storyblok.com/ "https://www.storyblok.com/")
+-   Contentful - [https://www.contentful.com](https://www.contentful.com "https://www.contentful.com")
+-   Sanity - [https://sanity.io](https://sanity.io "https://sanity.io")
+-   Dato CMS - [https://www.datocms.com/](https://www.datocms.com/ "https://www.datocms.com/")
+-   Prismic - [https://prismic.io](https://prismic.io "https://prismic.io")
+-   Ghost - [https://ghost.org](https://ghost.org "https://ghost.org")
+-   Strapi - [https://strapi.io](https://strapi.io "https://strapi.io")
+-   Cloud CMS - [https://www.cloudcms.com](https://www.cloudcms.com "https://www.cloudcms.com")
+-   Directus - [https://directus.io](https://directus.io "https://directus.io")
+-   Rooftop - [https://www.rooftopcms.com](https://www.rooftopcms.com "https://www.rooftopcms.com")

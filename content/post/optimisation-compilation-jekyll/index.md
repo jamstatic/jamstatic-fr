@@ -21,7 +21,7 @@ Par contre, à force de manipulations, mon Jekyll ressemblait moins au célèbre
 
 {{< /intro >}}
 
-***
+---
 
 ## TL;DR
 

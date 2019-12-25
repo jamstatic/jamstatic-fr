@@ -17,7 +17,7 @@ source:
 La popularité croissante des architectures décentralisées s'explique par l'évolution de l'offre de services disponibles. Que ce soit pour héberger du code source, gérer ses contenus, fournir une authentification, une gestion des paiements, etc. faire appel à des services distants fait de plus en plus sens pour les entreprises dont l'informatique n'est pas le coeur de métier mais simplement un moyen de fournir un service à leurs clients.
 {{< /intro >}}
 
-***
+---
 
 À l'heure où les entreprises se débattent pour devenir plus agiles et rester
 pertinentes, elles peuvent compter sur les dernières évolutions des

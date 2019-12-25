@@ -16,7 +16,7 @@ Plein de nouveautés pour vous simplifier la vie dans la version
 
 {{< /intro >}}
 
-***
+---
 
 ## Les thèmes peuvent désormais fournir des assets statiques et dynamiques dans le dossier `/assets`
 

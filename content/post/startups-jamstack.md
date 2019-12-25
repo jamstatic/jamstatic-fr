@@ -23,7 +23,7 @@ annonces de financement devraient se poursuivre dans les prochains mois.
 
 {{< /intro >}}
 
-***
+---
 
 Dans cet article [CRV](https://www.crv.com/) montre une vue d'ensemble du
 résultat de plusieurs tendances qui ont permis l'émergence d'une nouvelle
