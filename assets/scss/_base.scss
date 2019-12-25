@@ -90,6 +90,7 @@ ol {
 li {
   > ul,
   > ol {
+    margin-top: $line-height-computed / 2;
     margin-bottom: 0;
   }
 }

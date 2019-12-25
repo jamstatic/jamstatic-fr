@@ -105,7 +105,7 @@ p {
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: ($line-height-computed / 2);
+  @extend %vertical-rhythm;
 
   ul,
   ol {

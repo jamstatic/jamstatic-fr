@@ -255,6 +255,10 @@ body {
 
 .post-content {
   margin-bottom: $spacing-unit;
+
+  li p {
+    margin: auto;
+  }
 }
 
 .avatar {
@@ -294,6 +298,10 @@ body {
   padding: 1em;
   border-left: 0.25em solid rgba(169,197,234,.6);
 
+  h3 {
+    margin-top: auto;
+  }
+
   a {
     color: rgba(0,81,193,.54);
   }
@@ -303,8 +311,12 @@ body {
   }
 
   &.tip {
-    background-color: rgba(255, 237, 127, 0.48);
+    background-color: rgba(255, 237, 127, .2);
     border-color: #feda00;
+
+    &::before {
+      content: "💡 ";
+    }
 
     code {
       background-color: #feda00;
