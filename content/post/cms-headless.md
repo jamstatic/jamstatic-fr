@@ -65,14 +65,14 @@ Si vous utilisez un générateur de site statique, le CMS headless est donc une
 pièce supplémentaire que vous pourriez vouloir ajouter à votre architecture,
 comme d’habitude cela dépend du projet.
 
-Attention quand même à bien distinguer les CMS headless qui vous permettront de
-modifier les fichiers déjà présents dans votre dépôt Git
+[Distinguons les CMS headless]({{< relref "post/git-based-cms-vs-api-first-cms.md">}}) qui vous permettent de
+modifier les fichiers de votre dépôt Git
 ([Forestry](https://forestry.io), [Siteleaf](https://siteleaf.com), [Netlify
-CMS]({{< relref "configurer-netlify-cms-pour-jekyll.md" >}}), etc.) de ceux qui
-mettront vos contenus à disposition via une API
+CMS]({{< relref "configurer-netlify-cms-pour-jekyll.md" >}}), etc.) de ceux qui mettent vos contenus à disposition via une API
 ([Contentful](https://www.contentful.com/), [Prismic](https://prismic.io/),
 [Directus](https://getdirectus.com/), [GraphCMS](https://graphcms.com/), etc.).
-Chris Macrae détaille bien la différence entre les deux approches dans
+
+Chris Macrae détaille la différence entre les deux approches dans
 [cette vidéo](https://www.youtube.com/watch?v=KX4G49ZrvY0).
 
 Quoi qu'il en soit dans les deux cas, le CMS headless ne s'occupe que de la
@@ -80,7 +80,7 @@ partie cachée, le back, pas de la partie visible — la tête est coupée comme
 suggère le terme anglophone _headless_, d’ici à parler de révolution, il n'y a
 qu'un pas. Tout se recoupe !
 
-Si vous suivez de près ce qui se passe autour des architecures JAMstack, vous
+Si vous suivez de près ce qui se passe autour des architectures JAMstack, vous
 n'aurez pas manqué de constater que des CMS headless il y en a de plus en plus,
 et ce n'est pas prêt de s'arrêter vu la popularité croissante des architectures
 découplées, et de tous ces termes à la mode comme "microservices" ou
