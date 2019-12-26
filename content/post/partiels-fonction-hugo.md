@@ -2,7 +2,6 @@
 title: "Des fonctions dans nos partiels Hugo !"
 date: 2019-12-22T10:36:56+01:00
 lastmod: 2019-12-22T16:21:43+01:00
-draft: true
 description: "Maintenant que les partiels peuvent retourner tout type de donnée, nous pouvons écrire des fonctions réutilisables dans nos différents modèles de page !"
 categories:
   - hugo
