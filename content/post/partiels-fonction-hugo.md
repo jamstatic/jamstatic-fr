@@ -16,7 +16,7 @@ source:
 
 ![](https://regisphilibert.com/blog/2019/12/hugo-partial-series-part-2-functions-with-returning-partials//images/featured.png)
 
-Comme nous l'avons déjà vu dans différents articles dont celui sur la [mise en cache des fichiers partiels]({{< relref "post/"> }}), jusqu'ici le moteur de _templating_ d'Hugo se concentrait principalement sur la génération de fichiers. Résultat : même si les fichiers partiels étaient très utiles pour afficher tout un tas de trucs, jusqu'à récemment, ils ne permettaient pas de retourner une valeur typée.
+Comme nous l'avons déjà vu dans différents articles dont celui sur la [mise en cache des fichiers partiels]({{< relref "/post/mise-en-cache-fichiers-partiels-hugo" >}}), jusqu'ici le moteur de _templating_ d'Hugo se concentrait principalement sur la génération de fichiers. Résultat : même si les fichiers partiels étaient très utiles pour afficher tout un tas de trucs, jusqu'à récemment, ils ne permettaient pas de retourner une valeur typée.
 
 Tout a changé à partir de la version `0.55.0` d'Hugo qui a introduit l'instruction `return` dans l'API de la fonction `partial` ! Les partiels sont tout à coup devenus des fonctions réutilisables qui peuvent être appelées par des fichiers de modèles plus conventionnels.
 
@@ -330,7 +330,7 @@ Bien entendu ! Nous pourrions :
 
 - Exclure certains tags du tableau retourné par la fonction `GetTags`
 - Transformer `GetTags` en `GetTerms`, afin de pouvoir l'utiliser pour n'importe quelle taxonomie.
-- Trouver la bonne variante de notre *partiel de fonction* `GetTags` et utiliser `partialCached`.
+- Trouver la bonne variante de notre _partiel de fonction_ `GetTags` et utiliser `partialCached`.
 - Développer bien plus de partiels de fonction pour répondre à d'autres besoins !
 
 ## Conclusion
@@ -339,7 +339,7 @@ Après avoir vu les bases, nous avons pu développer deux partiels de fonction q
 
 Et si nous avons besoin d’afficher seulement certains articles ou bien tous les articles mais en excluant certains tags ? Cela se passera dans la fonction `GetTags` et pas ailleurs !  Et si dans une prochaine version Hugo introduit un moyen plus efficace de gérer les termes d’une taxonomie ? Nous ajusteront notre fonction `GetTerm` !
 
-Avec ses *partiels de fonction*, Hugo répond enfin à la séparation des problématiques de templating et de gestion des données, en permettant la réutilisabilité et le typage de données !
+Avec ses _partiels de fonction_, Hugo répond enfin à la séparation des problématiques de templating et de gestion des données, en permettant la réutilisabilité et le typage de données !
 
 Est-ce que je vous ai déjà dit que c'était une de mes fonctionnalités préférées dont je vais abuser en 2020 ?
 
