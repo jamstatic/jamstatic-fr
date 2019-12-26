@@ -31,7 +31,7 @@ Avant l'arrivée de l'instruction `return`, quand les partiels ne savaient qu'im
 {{- $S3Domain := site.Params.s3Domain -}}
 {{- printf "%s/%s" $S3Domain . | safeHTMLAttr -}}
 # layout/_default/single.html
-{{ with .Params.image }}
+{{- with .Params.image -}}
 <img src="{{ partial "FormatURL.html" . }}" />
 {{ end }}
 ```
@@ -148,7 +148,7 @@ Là où ça devient intéressant c'est qu'on peut stocker la valeur retournée !
 
 ### 📏 Quelques conventions
 
-Du moins celles que j'ai adopté…
+Du moins celles que j'ai adoptées…
 
 Pour bien distinguer mes partiels classiques de ceux qui retournent des valeurs de tous types, j'ai pris pour habitude de ranger ces derniers dans le dossier  `layouts/partials/func/`. Cela a au moins le mérite de les isoler des partiels plus conventionnels, sans avoir non plus à avoir à taper beaucoup plus de caractères lors de leur appel.
 
@@ -280,7 +280,7 @@ Nous mettons donc notre partiel à jour :
 
 OK très bien, mais je veux une fonction qui liste les tags d'une page et qui me renvoie un tableau de tableaux associatifs qui contiennent chacun des données structurées comme `.URL` et `.Name`. De cette façon, si je veux passer de `.RelPermalink` à `.Permalink` dans le futur, je peux le faire dans ma _variable retournée_ plutôt que dans chaque fichier de modèle où je souhaite afficher ces liens.
 
-C'est l'occasion idéale pour voir comment appeler une _variable retournée_ depuis une _variable retournée_ et mettre en cache sa valeur. :sweat_smile:
+C'est l'occasion idéale de voir comment appeler un _partiel de fonction_ depuis un _partiel de fonction_ et mettre en cache sa valeur. :sweat_smile:
 
 ```go-html-template
 #layout/partials/func/GetTags.html
