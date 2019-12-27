@@ -28,6 +28,16 @@
       ]
     },
     {
+      "login": "jeromecoupe",
+      "name": "Jérôme Coupé",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/657571?v=4",
+      "profile": "https://www.webstoemp.com",
+      "contributions": [
+        "blog",
+        "review"
+      ]
+    },
+    {
       "login": "Narno",
       "name": "Arnaud Ligny",
       "avatar_url": "https://avatars0.githubusercontent.com/u/80580?v=4",
@@ -47,6 +57,26 @@
         "code",
         "review"
       ]
+    },
+    {
+      "avatar_url": "https://avatars0.githubusercontent.com/u/284742?v=4",
+      "contributions": [
+        "review",
+        "blog"
+      ],
+      "login": "borisschapira",
+      "name": "Boris SCHAPIRA",
+      "profile": "https://borisschapira.com"
+    },
+    {
+      "avatar_url": "https://avatars2.githubusercontent.com/u/78213?v=4",
+      "contributions": [
+        "review",
+        "blog"
+      ],
+      "login": "nhoizey",
+      "name": "Nicolas Hoizey",
+      "profile": "https://nicolas-hoizey.com/"
     },
     {
       "avatar_url": "https://avatars2.githubusercontent.com/u/6869488?v=4",
@@ -85,26 +115,6 @@
       "login": "tut-tuuut",
       "name": "Agnès Haasser",
       "profile": "https://tut-tuuut.github.io"
-    },
-    {
-      "avatar_url": "https://avatars0.githubusercontent.com/u/284742?v=4",
-      "contributions": [
-        "review",
-        "blog"
-      ],
-      "login": "borisschapira",
-      "name": "Boris SCHAPIRA",
-      "profile": "https://borisschapira.com"
-    },
-    {
-      "avatar_url": "https://avatars2.githubusercontent.com/u/78213?v=4",
-      "contributions": [
-        "review",
-        "blog"
-      ],
-      "login": "nhoizey",
-      "name": "Nicolas Hoizey",
-      "profile": "https://nicolas-hoizey.com/"
     },
     {
       "login": "P45QU10U",
@@ -157,16 +167,6 @@
       "avatar_url": "https://avatars1.githubusercontent.com/u/6553086?v=4",
       "profile": "http://laurent.la",
       "contributions": [
-        "review"
-      ]
-    },
-    {
-      "login": "jeromecoupe",
-      "name": "Jérôme Coupé",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/657571?v=4",
-      "profile": "https://www.webstoemp.com",
-      "contributions": [
-        "blog",
         "review"
       ]
     }
