@@ -1,8 +1,8 @@
 ---
 title: "Guide complet des Webmentions avec Eleventy"
 description: Ajoutez les Webmentions à votre site statique Eleventy grâce à ce guide pas à pas.
-date: 2019-11-30T13:48:32+01:00
-lastmod: 2019-11-30T13:49:32+01:00
+date: 2019-12-27T13:48:32+01:00
+lastmod: 2019-12-27T17:05:32+01:00
 draft: true
 categories:
   - eleventy
@@ -21,9 +21,9 @@ Je suis toujours une grande fan du générateur de site statique [Eleventy](http
 
 C'est un outil très cool qui vous permet d'avoir des interactions sociales quand vous hébergez votre propre contenu. Max Böck a écrit un excellent article qui détaille son implémentation, [Indieweb statique 2e partie : utiliser les Webmentions](https://mxb.dev/blog/using-webmentions-on-static-sites/). Il a également crée un starter pour Eleventy, [eleventy-webmentions](https://github.com/maxboeck/eleventy-webmentions), un modèle de départ avec un support basique des webmentions.
 
-Alors pourquoi écrire cet article ? Malheureusement pour moi j'ai commencé à déveloper mon site avec le [blog de base pour Eleventy](https://github.com/11ty/eleventy-base-blog) et j'avais déjà terminé quand j'ai découvert [eleventy-webmentions](https://github.com/maxboeck/eleventy-webmentions). J'ai dû lutter pour développer pleinement cette fonctionnalité, car je débute encore avec Eleventy. J'ai donc voulu partager en détail les étapes que j'ai dû mener à bien, en espérant que ça aide davantage d'entre vous à rejoindre l'IndieWeb.
+Alors pourquoi écrire cet article ? Malheureusement pour moi j'ai commencé à développer mon site avec le [blog de base pour Eleventy](https://github.com/11ty/eleventy-base-blog) et j'avais déjà terminé quand j'ai découvert [eleventy-webmentions](https://github.com/maxboeck/eleventy-webmentions). J'ai dû lutter pour développer pleinement cette fonctionnalité, car je débute encore avec Eleventy. J'ai donc voulu partager en détail les étapes que j'ai dû mener à bien, en espérant que ça aide davantage d'entre vous à rejoindre l'IndieWeb.
 
-Le but de cet article est d'ahouter les webmentions à un site Eleventy, après coup. Les fichiers, les dossiers, et l'architecture du site sont les mêmes que dans `eleventy-base-blog`, mais vous pouvez vous en servir comme point de départ pour un site Eleventy. Simplement faites attention aux endroits où votre architecture pourrait différer.
+Le but de cet article est d'ajouter les webmentions à un site Eleventy, après coup. Les fichiers, les dossiers, et l'architecture du site sont les mêmes que dans `eleventy-base-blog`, mais vous pouvez vous en servir comme point de départ pour un site Eleventy. Simplement faites attention aux endroits où votre architecture pourrait différer.
 
 Le code de cet article est un mélange de l'article de Max Böck, son [site perso](https://github.com/maxboeck/mxb), du modèle d'amorçage [eleventy-webmentions](https://github.com/maxboeck/eleventy-webmentions), du [site de Zach Leatherman](https://github.com/zachleat/zachleat.com), et des modifications effectuées pendant ma propre implémentation. Je leur suis très reconnaissante pour leur travail, car je n'aurais jamais pu arriver à ce résultat sans eux.
 
@@ -32,10 +32,10 @@ Le code de cet article est un mélange de l'article de Max Böck, son [site pers
 Il nous faut d'abord s'inscrire sur webmention.io, le service tiers qui nous permet de profiter du pouvoir des webmentions sur les sites statiques.
 
 1. Configurer IndieAuth de manière à ce que webmention.io sache que vous êtes bien le propriétaire de votre domaine. Suivez les instructions données [sur leur site](https://indieauth.com/setup).
-2. Allez sur [webmention.io/](https://webmention.io/).
+2. Allez sur [webmention.io](https://webmention.io/).
 3. Entrez l'URL de votre site web dans le champ "Web Sign-In" , et cliquez sur "Sign in".
 
-Si la validation est réussie, vous devriez être redirigé vers le tableau des webmnetions où sont affichées deux balises `<link>` que vous devez insérez dans la balise `<head>` de votre site web :
+Si la validation est réussie, vous devriez être redirigé·e vers le tableau des webmentions où sont affichées deux balises `<link>` que vous devez insérez dans la balise `<head>` de votre site web :
 
 ```html
 <!-- _includes/layouts/base.njk -->
@@ -49,7 +49,7 @@ Vous disposez aussi d'un token d'API personnel. Nous voulons pouvoir le stocker 
 npm install dotenv
 ```
 
-Créez un fichier `.env` à lma racine de votre projet et ajoutez votre token d'API pour webmention.io.
+Créez un fichier `.env` à la racine de votre projet et ajoutez votre token d'API pour webmention.io.
 
 ```bash
 WEBMENTION_IO_TOKEN=v07r370k3n1c1.
@@ -64,7 +64,7 @@ node_modules/
 .env
 ```
 
-Vous aimeriez probablement avec quelques webmentions. Si vous utilisez Twitter, [Bridgy](https://brid.gy/) est un excellent moyen de récupérer vos mentions depuis Twitter. Assurez d'abord qu'un lien vers votre site web est présent dans votre profil, puis connectez le.
+Vous aimeriez probablement récupérer quelques webmentions. Si vous utilisez Twitter, [Bridgy](https://brid.gy/) est un excellent moyen de récupérer vos mentions depuis Twitter. Assurez d'abord qu'un lien vers votre site web est présent dans votre profil, puis connectez-le.
 
 ## Comment tout ça va marcher
 
@@ -72,15 +72,15 @@ Quand nous lançons une génération avec `NODE_ENV=production`, nous allons ré
 
 Lors de chaque génération, pour chaque page :
 
-- From the webmentions cache in `_cache/webmentions.json`, only keep webmentions that match the URL of the page (for me, this is each blog post).
-- Use a `webmentionsByType` function to filter for one type (e.g., likes or replies)
-- Use a `size` function to calculate the count of those mentions by type
-- Render the count with mention type as a heading (e.g., "7 Replies")
-- Render a list of the mentions of that type (e.g., linked Twitter profile pictures representing each like)
+- Depuis le cache des webmentions `_cache/webmentions.json`, ne garder que les webmentions qui correspondent à l'URL de la page en cours (dans mon cas, celle de l’article de blog).
+- Faire appel à la fonction `webmentionsByType` pour les filtrer par type (par exemple des _likes_ ou des réponses)
+- Utiliser la fonction `size` pour calculer le nombre de mentions par type
+- Afficher le total avec le type de mention sous forme d'entête (ex: "7 réponses")
+- Afficher la liste des mentions de ce type (par exemple sous forme d'avatar avec un lien vers le profil Twitter pour chaque _like_.)
 
 ## Récupération des webmentions
 
-First, we need to set up our domain as another property in our `_data/metadata.json`. Let's also add our root URL for use later:
+Tout d'abord, nous devons ajouter notre nom de domaine en tant que propriété dans notre fichier `_data/metadata.json`. Ajoutons-y également l'URL racine qui nous sera utile par la suite :
 
 ```json
 // _data/metadata.json
@@ -91,92 +91,94 @@ First, we need to set up our domain as another property in our `_data/metadata.j
 }
 ```
 
-Next, we'll add a few more dependencies:
+Ensuite, installons quelques dépendances supplémentaires :
 
 ```bash
 $ npm install lodash node-fetch
 ```
 
-And update our `build` script to set the `NODE_ENV` in our `package.json`:
+Et mettons à jour notre script de `build` pour y préciser la variable d'environnement `NODE_ENV` dans notre `package.json` :
+
 ```json
 // package.json
 {
-  // … config
+  // …config
   "scripts": {
     "build": "NODE_ENV=production npx eleventy",
     // scripts…
 }
 ```
 
-Now we can focus on the fetch code. Okay, okay, I know this next file is beaucoup long, but I thought it was more difficult to understand out of context. Here are the general steps happening in the code:
+Nous pouvons maintenant nous concentrer sur la partie récupération. Oui, je sais que le fichier qui suit est beaucoup trop long, mais je pense qu'il n'est pas facile à comprendre hors contexte. Voici les grandes étapes qui constituent le code :
 
-1. Read any mentions from the file cache at `_cache/webmentions.json`.
-2. If our environment is "production", fetch new webmentions since the last time we fetched. Merge them with the cached ones and save to the cache file. Return the merged set of mentions.
-3. If our envinroment is not "production", return the cached mentions from the file
+1. Lire les mentions depuis le cache enregistré dans `_cache/webmentions.json`.
+2. Si notre environnement est `production`, récupérer les nouvelles webmentions depuis la dernière génération. Les fusionner avec celles en cache et sauvegarder le fichier de cache. Retourner les mentions ajoutées.
+3. Si notre environnement n’est pas `production`, retourner les mentions depuis le cache.
 
 ```javascript
 // _data/webmentions.js
+// Déclaration des dépendances
 const fs = require('fs')
 const fetch = require('node-fetch')
 const unionBy = require('lodash/unionBy')
 const domain = require('./metadata.json').domain
 
-// Load .env variables with dotenv
+// Charger les variables d'environnement avec `dotenv`
 require('dotenv').config()
 
-// Define Cache Location and API Endpoint
+// Définir l'emplacement du cache et les paramètres d'appel de l'API
 const CACHE_FILE_PATH = '_cache/webmentions.json'
 const API = 'https://webmention.io/api'
 const TOKEN = process.env.WEBMENTION_IO_TOKEN
 
 async function fetchWebmentions(since, perPage = 10000) {
-  // If we dont have a domain name or token, abort
+  // Avertir et s'arrêter là si le nom de domaine et le token d'API ne sont pas définis
   if (!domain || !TOKEN) {
-    console.warn('>>> unable to fetch webmentions: missing domain or token')
+    console.warn('>>> Impossible de récupérer les webmentions : domaine ou token manquant')
     return false
   }
 
   let url = `${API}/mentions.jf2?domain=${domain}&token=${TOKEN}&per-page=${perPage}`
-    if (since) url += `&since=${since}` // only fetch new mentions
+    if (since) url += `&since=${since}` // ne récupérer que les nouvelles webmentions
 
   const response = await fetch(url)
   if (response.ok) {
     const feed = await response.json()
-    console.log(`>>> ${feed.children.length} new webmentions fetched from ${API}`)
+    console.log(`>>> ${feed.children.length} nouvelles webmentions récupérées depuis ${API}`)
     return feed
   }
 
   return null
 }
 
-// Merge fresh webmentions with cached entries, unique per id
+// Fusionner les nouvelles webmentions avec celles du cache, unique par id
 function mergeWebmentions(a, b) {
   return unionBy(a.children, b.children, 'wm-id')
 }
 
-// save combined webmentions in cache file
+// sauvegarder les webmentions combinnées dans le fichier de cache
 function writeToCache(data) {
   const dir = '_cache'
   const fileContent = JSON.stringify(data, null, 2)
-  // create cache folder if it doesnt exist already
+  // créer le dossier de cache s'il n'existe pas déjà
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir)
   }
-  // write data to cache json file
+  // écrire les données dans le fichier de cache JSON
   fs.writeFile(CACHE_FILE_PATH, fileContent, err => {
     if (err) throw err
-    console.log(`>>> webmentions cached to ${CACHE_FILE_PATH}`)
+    console.log(`>>> webmentions mise en cache dans ${CACHE_FILE_PATH}`)
   })
 }
 
-// get cache contents from json file
+// Lire le contenu du cache à partir du fichier JSON
 function readFromCache() {
   if (fs.existsSync(CACHE_FILE_PATH)) {
     const cacheFile = fs.readFileSync(CACHE_FILE_PATH)
     return JSON.parse(cacheFile)
   }
 
-  // no cache found.
+  // Pas de cache trouvé.
   return {
     lastFetched: null,
     children: []
@@ -184,17 +186,17 @@ function readFromCache() {
 }
 
 module.exports = async function () {
-  console.log('>>> Reading webmentions from cache...');
+  console.log('>>> Lectures des webmentions depuis le cache…');
 
   const cache = readFromCache()
 
   if (cache.children.length) {
-    console.log(`>>> ${cache.children.length} webmentions loaded from cache`)
+    console.log(`>>> ${cache.children.length} webmentions chargées depuis le cache`)
   }
 
-  // Only fetch new mentions in production
+  // Ne télécharger les nouvelles webmentions qu'en production
   if (process.env.NODE_ENV === 'production') {
-    console.log('>>> Checking for new webmentions...');
+    console.log('>>> Vérification de nouvelles webmentions...');
     const feed = await fetchWebmentions(cache.lastFetched)
     if (feed) {
       const webmentions = {
@@ -211,15 +213,15 @@ module.exports = async function () {
 }
 ```
 
-## Filters for build
+## Filtres pour la génération
 
-Now that we've populated our webmentions cache, we need to use it. First we have to generate the functions, or "filters" that Eleventy will use to build our templates.
+Maintenant que nous avons rempli notre cache de webmentions, il nous faut pouvoir l'utiliser. Nous devons pour cela générer les fonctions, les [filtres](https://www.11ty.dev/docs/filters/), qu'Eleventy va utiliser pour générer nos fichiers.
 
-First, I like keeping some filters separated from the main Eleventy config so that it doesn't get too bogged down. The separate filters file will define each of our filters in an object. The keys are the filter names and the values are the filter functions. In `_11ty/filters.js`, add each of our new filter functions:
+D'abord, j'aime bien séparer les filtres de la configuration principale d'Eleventy pour ne pas trop la surcharger. Le fichier dédié aux filtres va définir chacun de nos filtres dans un objet. Les clés seront les noms de filtres et les valeurs seront les fonctions de filtres. Ajouter nos nouvelles fonctions de filtres dans le fichier `_11ty/filters.js` :
 
 ```javascript
 // _11ty/filters.js
-const { DateTime } = require("luxon"); // Already in eleventy-base-blog
+const { DateTime } = require("luxon"); // Déjà présent dans eleventy-base-blog
 
 module.exports = {
   getWebmentionsForUrl: (webmentions, url) => {
@@ -237,11 +239,11 @@ module.exports = {
 }
 ```
 
-Now to use these new filters, in our `.eleventy.js`, we need to loop through the keys of that filters object to add each filter to our Eleventy config:
+Maintenant pour pouvoir utiliser ces nouveaux filtres, dans notre fichier `.eleventy.js`, nous devons boucler sur les clefs de cet objet de filtres, pour ajouter chaque filtre à la configuration d'Eleventy :
 
 ```javascript
 // .eleventy.js
-// ...Other imports
+// ...Autres imports
 const filters = require('./_11ty/filters')
 
 module.exports = function(eleventyConfig) {
@@ -250,14 +252,16 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter(filterName, filters[filterName])
   })
 
-  // Other configs...
+  // Autres configs...
 ```
 
-I do not have a sanitize HTML filter because I noticed the content data has a `text` field that is already sanitized. Maybe this is new or not true for all webmentions. I'll update this post if I add it in.
+{{< notice info >}}
+Ici je n'utilise pas de filtre d’assainissement du HTML car j'ai remarqué que les données sont contenues dans un champ `text` qui est déjà nettoyé. C'est peut-être nouveau ou bien ce n'est pas valable pour toutes les webmentions. Je mettrais cet article à jour si je dois l'ajouter.
+{{< /notice >}}
 
-## Rendering mentions
+## Afficher les mentions
 
-Now we're ready to put it all together and render our webmentions. I put them at the bottom of each blog post, so in my `_includes/layouts/post.njk`, I add a new section for the webmentions. Here, we are setting a variable called `webmentionUrl` to the page's full URL, and passing it into the partial for the `webmentions.njk` template:
+Nous sommes maintenant fin prêts à tout assembler et à afficher nos webmentions. Je les positionne à la fin de chaque article de blog, donc dans mon fichier `_includes/layouts/post.njk`, j'ajoute une nouvelle section pour les webmentions. Ici, nous déclarons une variable nommée `webmentionUrl` qui contient l’URL complète de la page, puis nous la passons dans le fichier partiel `webmentions.njk` :
 
 ```html
 <!-- _includes/layouts/post.njk -->
@@ -268,33 +272,33 @@ Now we're ready to put it all together and render our webmentions. I put them at
 </section>
 ```
 
-Now we can write the webmentions template. In this example, I will show links, retweets, and replies. First, I set all of the variables I will need for rendering in a bit:
+Nous pouvons maintenant écrire notre fichier de modèle pour les webmentions. Dans cet exemple, j’affiche des liens, des retweets et des réponses. Je commence par définir toutes les variables dont j’aurais besoin dans quelques instants :
 
 ```html
 <!-- _includes/webmentions.njk -->
-  <!-- Filter the cached mentions to only include ones matching the post's url -->
+  <!-- Filtrer les webmentions du cache pour n’inclure que celles relatives à l’URL de l’article en cours -->
   {% set mentions = webmentions | getWebmentionsForUrl(metadata.url + webmentionUrl) %}
-  <!-- Set reposts as mentions that are `repost-of`  -->
+  <!-- Définir les reposts comme des mentions de type `repost-of`  -->
   {% set reposts = mentions | webmentionsByType('repost-of') %}
-  <!-- Count the total reposts -->
+  <!-- Calcul du total de reposts -->
   {% set repostsSize = reposts | size %}
-  <!-- Set likes as mentions that are `like-of`  -->
+  <!-- Définir les likes comme des mentions de type `like-of`  -->
   {% set likes = mentions | webmentionsByType('like-of') %}
-  <!-- Count the total likes -->
+  <!-- Calcul du total de likes -->
   {% set likesSize = likes | size %}
-  <!-- Set replies as mentions that are `in-reply-to`  -->
+  <!-- Définir les réponses comme des mentions de type `in-reply-to`  -->
   {% set replies = mentions | webmentionsByType('in-reply-to')  %}
-  <!-- Count the total replies -->
+  <!-- Calcul du total de réponses -->
   {% set repliesSize = replies | size  %}
 ```
 
-With our variables set, we can now use that data for rendering. Here I'll walk through only "replies", but feel free to see a snapshot of how I handled the remaining sets in [this gist](https://gist.github.com/siakaramalegos/b1f7ded21f9ecddaee91e3f6d88e2e48).
+Une fois nos variables définies, nous pouvons afficher ces données. Ici je vais seulement m'attarder sur la partie "réponses", libre à vous d'aller voir comment je gère les autres types de webmentions dans [ce gist](https://gist.github.com/siakaramalegos/b1f7ded21f9ecddaee91e3f6d88e2e48).
 
-Since replies are more complex than just rendering a photo and link, I call another template to render the individual webmention. Here we render the count of replies and conditionally plural-ify the word "Reply". Then we loop through the reply webmentions to render them with a new nunjucks partial:
+L'affichage des réponses est un peu plus complexe que de simplement afficher une photo et un lien. Je fais appel à un autre template ici pour afficher chaque webmention. Nous affichons le nombre total de réponses et affichons le mot "Réponse" au pluriel si nécessaire. Puis nous bouclons sur les webmentions de type réponse et les affichons à l'aide d'un nouveau fichier partiel Nunjucks :
 
 ```html
 <!-- _includes/webmentions.njk -->
-<!-- ...setting variables and other markup -->
+<!-- …définition des variables… -->
 {% if repliesSize > 0 %}
 <div class="webmention-replies">
   <h3>{{ repliesSize }} {% if repliesSize == "1" %}Reply{% else %}Replies{% endif %}</h3>
@@ -306,7 +310,7 @@ Since replies are more complex than just rendering a photo and link, I call anot
 {% endif %}
 ```
 
-Finally, we can render our replies using that new partial for a single reply webmention. Here, if the author has a photo, we show it, otherwise we show an avatar. We also conditionally show their name if it exists, otherwise we show "Anonymous". We use our `readableDateFromISO` filter to show a human-friendly published date, and finally render the text of the webmention:
+Nous pouvons afficher les réponses à l'aide de ce nouveau fichier partiel pour chaque réponse. Si l'auteur de la webmention a une photo de profil, nous l'affichons, sinon nous affichons un avatar. Même chose pour le nom, nous l'affichons s'il existe, sinon nous affichons "Anonyme". Notre filtre `readableDateFromISO` nous aide à afficher la date de publication dans un format plus sympathique pour les humains, enfin nous affichons le texte de la webmention :
 
 ```html
 <!-- _includes/webmention.njk -->
@@ -339,17 +343,17 @@ Finally, we can render our replies using that new partial for a single reply web
 </article>
 ```
 
-## Bravely jumping into the black hole…
-Does it work?!?! We can finally test it out. First run `npm run build` to generate an initial list of webmentions that is saved to the `_cache/webmentions.json` file. Then run your local development server and see if it worked! Of course, you'll need to have at least one webmention associated with a post to see anything. 😁
+## Sautons courageusement dans l’inconnu…
+Ça fonctionne ? Nous allons enfin pouvoir tester. Commencez par lancer la commande `npm run build` pour générer une liste initiale de webmentions qui sera sauvegardée dans le fichier `_cache/webmentions.json`. Puis lancer votre serveur de développement local pour vérifier que ça marche ! Bien entendu, vous devrez au moins avoir une webmention associée à un article pour voir quelque chose. 😁
 
-You can see the result of my own implementation below. Good luck! Let me know how it turns out or if you find in bugs or errors in this post!
+Vous pouvez voir le résultat de ma propre implémentation sur mon [site](https://sia.codes/posts/webmentions-eleventy-in-depth/#webmentions). Bon courage ! Dites moi si vous trouvez des anomalies ou des erreurs dans cet article !
 
-## Continue your journey by using Microformats
+## Poursuivez en ajoutant des Microformats
 
-Keith Grant has a great write-up in his article [Adding Webmention Support to a Static Site](https://keithjgrant.com/posts/2019/02/adding-webmention-support-to-a-static-site/). Check out the "Enhancing with Microformats" section for an explanation and examples.
+Keith Grant a un excellent article [Ajouter le support de Webmention à un site statique](https://keithjgrant.com/posts/2019/02/adding-webmention-support-to-a-static-site/). Lisez la section ["Amélioration à l'aide des Microformats"](https://keithjgrant.com/posts/2019/02/adding-webmention-support-to-a-static-site/#enhancing-with-microformats) pour plus d'explication et d'exemple.
 
-## Additional resources
+## Ressources additionnelles
 
-- You can find the full code for my site on [Github](https://github.com/siakaramalegos/sia.codes-eleventy). It will evolve in the future, I'm sure, so you can focus on [this commit](https://github.com/siakaramalegos/sia.codes-eleventy/commit/d7318565917b1342b38d6b3bff4e3e548276afca) which has the bulk of my changes for adding webmentions.
-- How I added dotenv support to Netlify is covered in this [Stack Overflow answer](https://stackoverflow.com/questions/48453493/set-environment-variable-for-build-in-netlify).
-- How I set up a "cron" job through Github actions to periodically rebuild my site on Netlify (to grab and post new webmentions) is covered in [Scheduling Netlify deploys with GitHub Actions](https://www.voorhoede.nl/en/blog/scheduling-netlify-deploys-with-github-actions/).
+- La totalité du code source de mon site est sur [Github](https://github.com/siakaramalegos/sia.codes-eleventy). Il évoluera avec le temps, j'en suis sûre, regardez donc attentivement [ce commit](https://github.com/siakaramalegos/sia.codes-eleventy/commit/d7318565917b1342b38d6b3bff4e3e548276afca) qui contient l'ensemble de mes changements pour l'ajout des webmentions.
+- Comment ajouter le support de `dotenv` sur Netlify est abordé dans [cette réponse sur Stack Overflow](https://stackoverflow.com/questions/48453493/set-environment-variable-for-build-in-netlify).
+- Comment définir un job `cron` via Github Actions pour régénérer périodiquement mon site sur Netlify (afin de récupérer et d'afficher les nouvelles webmentions) est détaillé dans [Programmer des déploiements Netlify avec les GitHub Actions](https://www.voorhoede.nl/en/blog/scheduling-netlify-deploys-with-github-actions/).
