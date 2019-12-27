@@ -6,7 +6,7 @@ lastmod: 2019-12-27T17:05:32+01:00
 categories:
   - eleventy
 images:
-  - /assets/images/2019/11/
+  - /2019/12/27/webmentions-eleventy/twitter-card.png
 source:
   author: "Sia Karamalegos"
   title: "An In-Depth Tutorial of Webmentions + Eleventy"
