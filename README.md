@@ -55,6 +55,7 @@ Merci à ces personnes extraordinaires ([emoji key](https://github.com/kentcdodd
     <td align="center"><a href="https://christopheducamp.com/"><img src="https://avatars1.githubusercontent.com/u/174418?v=4" width="100px;" alt=""/><br /><sub><b>Christophe Ducamp</b></sub></a><br /><a href="https://github.com/jamstatic/jamstatic-fr/pulls?q=is%3Apr+reviewed-by%3AChristopheDucamp" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="https://github.com/inseo"><img src="https://avatars3.githubusercontent.com/u/2088264?v=4" width="100px;" alt=""/><br /><sub><b>Corinne Schillinger</b></sub></a><br /><a href="https://github.com/jamstatic/jamstatic-fr/pulls?q=is%3Apr+reviewed-by%3Ainseo" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="http://laurent.la"><img src="https://avatars1.githubusercontent.com/u/6553086?v=4" width="100px;" alt=""/><br /><sub><b>Laurent de Lacerda</b></sub></a><br /><a href="https://github.com/jamstatic/jamstatic-fr/pulls?q=is%3Apr+reviewed-by%3Alaurent-d" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://strapi.io"><img src="https://avatars0.githubusercontent.com/u/5550462?v=4" width="100px;" alt=""/><br /><sub><b>Pierre Burgy</b></sub></a><br /><a href="#blog-pierreburgy" title="Blogposts">📝</a></td>
   </tr>
 </table>
 

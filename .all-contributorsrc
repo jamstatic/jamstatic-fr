@@ -183,6 +183,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "pierreburgy",
+      "name": "Pierre Burgy",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/5550462?v=4",
+      "profile": "https://strapi.io",
+      "contributions": [
+        "blog"
+      ]
     }
   ],
   "files": [
