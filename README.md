@@ -5,7 +5,7 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#contributors)
 
 
-Vous utilisez Jekyll, Hugo ou tout autre générateur de site statique, vous
+Vous utilisez Jekyll, Hugo, Eleventy ou tout autre générateur de site statique, vous
 voulez échanger avec la communauté francophone et vous tenir informé de
 l'actualité de l'écosystème de la JAMstack ?
 
@@ -34,6 +34,7 @@ Merci à ces personnes extraordinaires ([emoji key](https://github.com/kentcdodd
 <table>
   <tr>
     <td align="center"><a href="https://frank.taillandier.me"><img src="https://avatars3.githubusercontent.com/u/103008?v=4" width="100px;" alt=""/><br /><sub><b>Frank Taillandier</b></sub></a><br /><a href="#blog-DirtyF" title="Blogposts">📝</a> <a href="https://github.com/jamstatic/jamstatic-fr/commits?author=DirtyF" title="Code">💻</a> <a href="#design-DirtyF" title="Design">🎨</a> <a href="#infra-DirtyF" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#translation-DirtyF" title="Translation">🌍</a> <a href="#tutorial-DirtyF" title="Tutorials">✅</a></td>
+    <td align="center"><a href="https://regisphilibert.com"><img src="https://avatars2.githubusercontent.com/u/1480503?v=4" width="100px;" alt=""/><br /><sub><b>Regis Philibert</b></sub></a><br /><a href="#blog-regisphilibert" title="Blogposts">📝</a> <a href="#tutorial-regisphilibert" title="Tutorials">✅</a> <a href="https://github.com/jamstatic/jamstatic-fr/pulls?q=is%3Apr+reviewed-by%3Aregisphilibert" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/jamstatic/jamstatic-fr/commits?author=regisphilibert" title="Code">💻</a></td>
     <td align="center"><a href="https://www.quaternum.net"><img src="https://avatars2.githubusercontent.com/u/6869488?v=4" width="100px;" alt=""/><br /><sub><b>antoine</b></sub></a><br /><a href="#blog-antoinentl" title="Blogposts">📝</a> <a href="https://github.com/jamstatic/jamstatic-fr/pulls?q=is%3Apr+reviewed-by%3Aantoinentl" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="http://bertrandkeller.info"><img src="https://avatars2.githubusercontent.com/u/1500301?v=4" width="100px;" alt=""/><br /><sub><b>Bertrand Keller</b></sub></a><br /><a href="#blog-bertrandkeller" title="Blogposts">📝</a> <a href="https://github.com/jamstatic/jamstatic-fr/commits?author=bertrandkeller" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Natouille"><img src="https://avatars0.githubusercontent.com/u/2006947?v=4" width="100px;" alt=""/><br /><sub><b>Nathalie Rosenberg</b></sub></a><br /><a href="https://github.com/jamstatic/jamstatic-fr/pulls?q=is%3Apr+reviewed-by%3ANatouille" title="Reviewed Pull Requests">👀</a></td>
@@ -52,7 +53,6 @@ Merci à ces personnes extraordinaires ([emoji key](https://github.com/kentcdodd
   </tr>
   <tr>
     <td align="center"><a href="http://laurent.la"><img src="https://avatars1.githubusercontent.com/u/6553086?v=4" width="100px;" alt=""/><br /><sub><b>Laurent de Lacerda</b></sub></a><br /><a href="https://github.com/jamstatic/jamstatic-fr/pulls?q=is%3Apr+reviewed-by%3Alaurent-d" title="Reviewed Pull Requests">👀</a></td>
-    <td align="center"><a href="https://regisphilibert.com"><img src="https://avatars2.githubusercontent.com/u/1480503?v=4" width="100px;" alt=""/><br /><sub><b>Regis Philibert</b></sub></a><br /><a href="#blog-regisphilibert" title="Blogposts">📝</a> <a href="#tutorial-regisphilibert" title="Tutorials">✅</a> <a href="https://github.com/jamstatic/jamstatic-fr/pulls?q=is%3Apr+reviewed-by%3Aregisphilibert" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
 
