@@ -16,6 +16,39 @@
       "profile": "https://frank.taillandier.me"
     },
     {
+      "login": "regisphilibert",
+      "name": "Regis Philibert",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/1480503?v=4",
+      "profile": "https://regisphilibert.com",
+      "contributions": [
+        "blog",
+        "tutorial",
+        "review",
+        "code"
+      ]
+    },
+    {
+      "login": "Narno",
+      "name": "Arnaud Ligny",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/80580?v=4",
+      "profile": "http://narno.org",
+      "contributions": [
+        "code",
+        "blog",
+        "translation"
+      ]
+    },
+    {
+      "login": "jygastaud",
+      "name": "jygastaud",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1499325?v=4",
+      "profile": "http://gastaud.io",
+      "contributions": [
+        "code",
+        "review"
+      ]
+    },
+    {
       "avatar_url": "https://avatars2.githubusercontent.com/u/6869488?v=4",
       "contributions": [
         "blog",
@@ -56,7 +89,8 @@
     {
       "avatar_url": "https://avatars0.githubusercontent.com/u/284742?v=4",
       "contributions": [
-        "review"
+        "review",
+         "blog"
       ],
       "login": "borisschapira",
       "name": "Boris SCHAPIRA",
@@ -65,7 +99,8 @@
     {
       "avatar_url": "https://avatars2.githubusercontent.com/u/78213?v=4",
       "contributions": [
-        "review"
+        "review",
+        "blog"
       ],
       "login": "nhoizey",
       "name": "Nicolas Hoizey",
@@ -80,25 +115,7 @@
         "review"
       ]
     },
-    {
-      "login": "Narno",
-      "name": "Arnaud Ligny",
-      "avatar_url": "https://avatars0.githubusercontent.com/u/80580?v=4",
-      "profile": "http://narno.org",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
-      "login": "jygastaud",
-      "name": "jygastaud",
-      "avatar_url": "https://avatars3.githubusercontent.com/u/1499325?v=4",
-      "profile": "http://gastaud.io",
-      "contributions": [
-        "review",
-        "code"
-      ]
-    },
+
     {
       "login": "martinsam",
       "name": "Samuel Martin",
@@ -142,18 +159,6 @@
       "profile": "http://laurent.la",
       "contributions": [
         "review"
-      ]
-    },
-    {
-      "login": "regisphilibert",
-      "name": "Regis Philibert",
-      "avatar_url": "https://avatars2.githubusercontent.com/u/1480503?v=4",
-      "profile": "https://regisphilibert.com",
-      "contributions": [
-        "blog",
-        "tutorial",
-        "review",
-        "code"
       ]
     }
   ],
