@@ -16,6 +16,19 @@
       "profile": "https://frank.taillandier.me"
     },
     {
+      "login": "phacks",
+      "name": "Nicolas Goutay",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/2587348?v=4",
+      "profile": "https://phacks.dev/",
+      "contributions": [
+        "translation",
+        "blog",
+        "eventOrganizing",
+        "talk",
+        "video"
+      ]
+    },
+    {
       "login": "regisphilibert",
       "name": "Regis Philibert",
       "avatar_url": "https://avatars2.githubusercontent.com/u/1480503?v=4",
@@ -45,7 +58,8 @@
       "contributions": [
         "code",
         "blog",
-        "translation"
+        "translation",
+        "talk"
       ]
     },
     {
