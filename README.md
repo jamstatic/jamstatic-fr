@@ -3,7 +3,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5f02cf72-0ba6-4fd3-a606-29262d8d8606/deploy-status)](https://app.netlify.com/sites/jamstatic/deploys)
 [![Slack Channel](https://jamstatic.herokuapp.com/badge.svg)](https://jamstatic.herokuapp.com)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![Contributeurs](https://img.shields.io/badge/all_contributors-19-orange.svg?style=flat-square)](#contributeurs)
+[![Contributeurs](https://img.shields.io/badge/all_contributors-23-orange.svg?style=flat-square)](#contributeurs)
 <!-- ALL-CONTRIBUTORS-BADGE:END --> 
 
 
@@ -58,6 +58,12 @@ Merci à ces personnes extraordinaires ([emoji key](https://github.com/kentcdodd
     <td align="center"><a href="https://christopheducamp.com/"><img src="https://avatars1.githubusercontent.com/u/174418?v=4" width="100px;" alt=""/><br /><sub><b>Christophe Ducamp</b></sub></a><br /><a href="https://github.com/jamstatic/jamstatic-fr/pulls?q=is%3Apr+reviewed-by%3AChristopheDucamp" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="https://github.com/inseo"><img src="https://avatars3.githubusercontent.com/u/2088264?v=4" width="100px;" alt=""/><br /><sub><b>Corinne Durrmeyer</b></sub></a><br /><a href="https://github.com/jamstatic/jamstatic-fr/pulls?q=is%3Apr+reviewed-by%3Ainseo" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="http://laurent.la"><img src="https://avatars1.githubusercontent.com/u/6553086?v=4" width="100px;" alt=""/><br /><sub><b>Laurent de Lacerda</b></sub></a><br /><a href="https://github.com/jamstatic/jamstatic-fr/pulls?q=is%3Apr+reviewed-by%3Alaurent-d" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://polkatulk.com/en"><img src="https://avatars3.githubusercontent.com/u/164912?v=4" width="100px;" alt=""/><br /><sub><b>Uxlco</b></sub></a><br /><a href="https://github.com/jamstatic/jamstatic-fr/pulls?q=is%3Apr+reviewed-by%3Ajonathanulco" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://github.com/yvesdo"><img src="https://avatars2.githubusercontent.com/u/5601690?v=4" width="100px;" alt=""/><br /><sub><b>yvesdo</b></sub></a><br /><a href="https://github.com/jamstatic/jamstatic-fr/pulls?q=is%3Apr+reviewed-by%3Ayvesdo" title="Reviewed Pull Requests">👀</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://gitlab.com/yannicka"><img src="https://avatars0.githubusercontent.com/u/22885898?v=4" width="100px;" alt=""/><br /><sub><b>Yannick A.</b></sub></a><br /><a href="https://github.com/jamstatic/jamstatic-fr/pulls?q=is%3Apr+reviewed-by%3Ayannicka" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://zooly.surge.sh/"><img src="https://avatars1.githubusercontent.com/u/7328625?v=4" width="100px;" alt=""/><br /><sub><b>Hugo Torzuoli</b></sub></a><br /><a href="https://github.com/jamstatic/jamstatic-fr/pulls?q=is%3Apr+reviewed-by%3AHZooly" title="Reviewed Pull Requests">👀</a></td>
   </tr>
 </table>
 

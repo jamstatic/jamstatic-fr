@@ -194,6 +194,42 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "jonathanulco",
+      "name": "Uxlco",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/164912?v=4",
+      "profile": "https://polkatulk.com/en",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "yvesdo",
+      "name": "yvesdo",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5601690?v=4",
+      "profile": "https://github.com/yvesdo",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "yannicka",
+      "name": "Yannick A.",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/22885898?v=4",
+      "profile": "https://gitlab.com/yannicka",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "HZooly",
+      "name": "Hugo Torzuoli",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/7328625?v=4",
+      "profile": "https://zooly.surge.sh/",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "files": [
@@ -206,5 +242,6 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true,
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "commitConvention": "none"
 }

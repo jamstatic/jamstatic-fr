@@ -6,7 +6,8 @@
     "algolia": "atomic-algolia",
     "lint-md": "remark -q content/post",
     "contributors:add": "all-contributors add",
-    "contributors:generate": "all-contributors generate"
+    "contributors:generate": "all-contributors generate",
+    "contributors:check": "all-contributors check"
   },
   "repository": {
     "type": "git",
