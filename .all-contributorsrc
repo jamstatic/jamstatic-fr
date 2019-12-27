@@ -90,7 +90,7 @@
       "avatar_url": "https://avatars0.githubusercontent.com/u/284742?v=4",
       "contributions": [
         "review",
-         "blog"
+        "blog"
       ],
       "login": "borisschapira",
       "name": "Boris SCHAPIRA",
@@ -115,7 +115,6 @@
         "review"
       ]
     },
-
     {
       "login": "martinsam",
       "name": "Samuel Martin",
@@ -158,6 +157,16 @@
       "avatar_url": "https://avatars1.githubusercontent.com/u/6553086?v=4",
       "profile": "http://laurent.la",
       "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "jeromecoupe",
+      "name": "Jérôme Coupé",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/657571?v=4",
+      "profile": "https://www.webstoemp.com",
+      "contributions": [
+        "blog",
         "review"
       ]
     }
