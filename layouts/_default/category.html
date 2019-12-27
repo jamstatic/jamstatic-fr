@@ -3,7 +3,7 @@
 <div class="nav">
   <nav>
     {{ $cats := first 8 (where site.Taxonomies.categories.ByCount "Count" ">" 3) }}
-    {{ delimit (apply $cats "partial" "category-link" ".") ", " }}
+    {{ delimit (apply $cats "partial" "category-link" ".") " · " }}
   </nav>
   <h1>Articles taggués <em>{{ .Title }}</em></h1>
 </div>
