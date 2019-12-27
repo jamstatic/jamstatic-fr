@@ -7,9 +7,11 @@
         "blog",
         "code",
         "design",
-        "infra",
+        "eventOrganizing",
         "translation",
-        "tutorial"
+        "tutorial",
+        "talk",
+        "video"
       ],
       "login": "DirtyF",
       "name": "Frank Taillandier",
@@ -60,6 +62,15 @@
         "blog",
         "translation",
         "talk"
+      ]
+    },
+    {
+      "login": "pierreburgy",
+      "name": "Pierre Burgy",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/5550462?v=4",
+      "profile": "https://strapi.io",
+      "contributions": [
+        "blog"
       ]
     },
     {
@@ -183,21 +194,13 @@
       "contributions": [
         "review"
       ]
-    },
-    {
-      "login": "pierreburgy",
-      "name": "Pierre Burgy",
-      "avatar_url": "https://avatars0.githubusercontent.com/u/5550462?v=4",
-      "profile": "https://strapi.io",
-      "contributions": [
-        "blog"
-      ]
     }
   ],
   "files": [
     "README.md"
   ],
   "imageSize": 100,
+  "badgeTemplate": "[![Contributeurs](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-orange.svg?style=flat-square)](#contributeurs)",
   "projectName": "jamstatic-fr",
   "projectOwner": "jamstatic",
   "repoType": "github",
