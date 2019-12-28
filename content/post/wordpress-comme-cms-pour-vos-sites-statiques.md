@@ -30,7 +30,7 @@ voici comment il a procédé.
 ---
 
 La toute-puissante [JAMStack]({{< relref
-"5-raisons-de-tester-la-jamstack.md" >}}) offre des sites web statiques rapides
+"5-raisons-de-tester-la-jamstack/" >}}) offre des sites web statiques rapides
 et sécurisés, et avec des systèmes de gestion de contenu [headless]({{< relref
 "cms-headless.md" >}}) ils deviennent même faciles à éditer ! Toutefois il peut
 arriver que de temps à autre, vous vous retrouviez devant un blog WordPress avec

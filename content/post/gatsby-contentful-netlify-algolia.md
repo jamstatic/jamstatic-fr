@@ -27,7 +27,7 @@ partager votre enthousiasme, afin de montrer que non seulement c'est possible,
 mais que ça peut se faire sans douleur et à moindre coût. Le témoignage de
 [Josh Weaver](https://twitter.com/3cordguy) sur la migration d’un site de
 documentation vient s'ajouter à la longue liste des heureux convertis à la
-[JAMstack]({{< relref "5-raisons-de-tester-la-jamstack.md" >}}).
+[JAMstack]({{< relref "5-raisons-de-tester-la-jamstack/" >}}).
 
 {{< /intro >}}
 
@@ -64,7 +64,7 @@ mettre le nez dans le code.
 Je sais que ce n'est pas bien de formuler des hypothèses, mais je vais quand
 même partir du principe que si vous lisez ceci c'est que vous en savez déjà un
 peu sur
-[les avantages offerts par les sites statiques et la JAMstack]({{< relref "5-raisons-de-tester-la-jamstack.md" >}}).
+[les avantages offerts par les sites statiques et la JAMstack]({{< relref "5-raisons-de-tester-la-jamstack/" >}}).
 Si ce n'est pas le cas, allez faire un tour sur
 [https://jamstack.org/](https://jamstack.org/) pour comprendre en détail
 pourquoi le développement web, à défaut d’une meilleure formule, "revient aux

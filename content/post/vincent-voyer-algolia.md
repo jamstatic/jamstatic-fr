@@ -13,7 +13,7 @@ categories:
 Sur un site généré, l’interactivité est reléguée côté client, au navigateur,
 donc à JavaScript. Si vous souhaitez intégrer une partie dynamique sur votre
 site _statique_, il faudra donc faire appel à une API externe. C’est tout le
-concept de la [JAMStack]({{< relref "5-raisons-de-tester-la-jamstack.md" >}})
+concept de la [JAMStack]({{< relref "5-raisons-de-tester-la-jamstack" >}})
 dont nous parlons sur ce blog. Et c'est typiquement le cas si vous souhaitez
 intégrer un moteur de recherche sur votre site généré. Heureusement pour nous,
 en ce qui concerne la recherche, [Algolia](https://www.algolia.com/) propose une

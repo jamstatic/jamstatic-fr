@@ -35,7 +35,7 @@ le comportement désiré.
 
 Nous aimerions relayer et agréger en français ce qui se passe à divers endroits
 de la toile autour des générateurs de site statique et de [la stack JavaScript,
-APIs & Markup]({{< relref "5-raisons-de-tester-la-jamstack.md" >}}).
+APIs & Markup]({{< relref "5-raisons-de-tester-la-jamstack" >}}).
 
 ## Actualités
 

@@ -10,7 +10,7 @@ images:
 ---
 
 Dans les architectures [JAMstack]({{< relref
-"5-raisons-de-tester-la-jamstack.md" >}}), chaque service est assuré par un
+"5-raisons-de-tester-la-jamstack/" >}}), chaque service est assuré par un
 outil spécifique qui va se contenter de faire une chose et une seule, si
 possible de son mieux. L'édition de contenus pourra par exemple être confiée à
 un CMS _headless_ — qui contrairement à un CMS dynamique classique comme

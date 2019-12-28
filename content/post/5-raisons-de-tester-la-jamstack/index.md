@@ -9,8 +9,6 @@ source:
   title: 'Go static: 5 reasons to try JAMstack on your next project'
   url: https://builtvisible.com/go-static-try-jamstack/
   lang: ''
-images:
-- https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346582/go_static.jpg
 categories:
 - jamstack
 - headless

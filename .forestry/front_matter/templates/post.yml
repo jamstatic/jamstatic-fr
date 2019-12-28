@@ -25,7 +25,7 @@ fields:
   type: tag_list
   hidden: false
   default:
-  - 
+  -
 - name: images
   label: Images
   type: image_gallery
@@ -57,7 +57,7 @@ fields:
     hidden: false
     default: ''
   hidden: false
-  default: 
+  default:
 - name: author
   label: Author
   type: text
@@ -94,7 +94,7 @@ fields:
   hidden: false
   default: true
 pages:
-- content/post/5-raisons-de-tester-la-jamstack.md
+- content/post/5-raisons-de-tester-la-jamstack/index.md
 - content/post/premier-meetup-jamstack-toulouse.md
 - content/post/comparatif-hugo-jekyll.md
 - content/post/scratch-hugo.md
