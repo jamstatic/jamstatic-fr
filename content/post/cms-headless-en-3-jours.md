@@ -29,15 +29,15 @@ Nous avons alors étudié les options qui s’offraient à nous :
 1. Mettre en place un outil de gestion de contenu (CMS) traditionnel tel que WordPress
 2. Trouver un CMS headless à intégrer dans un générateur de site statique (SSG)
 
-Le nombre de solutions potentielles pour ces deux options est très vaste. Connaissant déjà bien les solutions traditionnelles, nous avons donc fouillé du côté de [headlesscms.org](https://headlesscms.org/) et de [staticgen.com](https://www.staticgen.com) pour voir ce qui se passait ailleurs. Dwolla offre à son équipe d’ingénieurs du temps dédié au développement professionnel chaque semaine, ce qui nous a permis de tester les solutions potentielles.
+Le nombre de solutions potentielles pour ces deux options est très vaste. Connaissant déjà bien les solutions traditionnelles, nous avons donc fouillé du côté de [headlesscms.org](https://headlesscms.org) et de [staticgen.com](https://www.staticgen.com) pour voir ce qui se passait ailleurs. Dwolla offre à son équipe d’ingénieurs du temps dédié au développement professionnel chaque semaine, ce qui nous a permis de tester les solutions potentielles.
 
-L’une des solutions les plus intéressantes que nous avons testées vient de la société [Netlify](https://www.netlify.com/), et de son projet [Netlify CMS](https://www.netlifycms.org/).
+L’une des solutions les plus intéressantes que nous avons testées vient de la société [Netlify](https://www.netlify.com), et de son projet [Netlify CMS](https://www.netlifycms.org).
 
 Nous avons pensé que Netlify CMS pourrait être avantageux pour les raisons suivantes :
 
 - Il est conçu pour être utilisé avec des générateurs de site statique, ce qui nous permet de conserver les avantages en terme de vitesse, de sécurité et d’évolutivité qui nous ont attirés vers les SSG
-- Il est SSG agnostique, et fonctionne donc avec notre site [Jekyll](https://jekyllrb.com/) existant mais ne nous empècherait pas de changer d’avis (salut [GatsbyJS](https://www.gatsbyjs.org/) !)
-- Il n’y a pas de base de données car les modifications de contenu sont enregistrées via des commits Git — ce qui ravi les gens d‘[InfoSec](https://www.dwolla.com/security/) !
+- Il est SSG agnostique, et fonctionne donc avec notre site [Jekyll](https://jekyllrb.com) existant mais ne nous empècherait pas de changer d’avis (salut [GatsbyJS](https://www.gatsbyjs.org) !)
+- Il n’y a pas de base de données car les modifications de contenu sont enregistrées via des commits Git — ce qui ravi les gens de la [sécurité informatique](https://www.dwolla.com/security/) !
 - Il fournit une expérience d’édition simple et fonctionnelle
 - Il est open-source, il n’y a donc pas de dépendance à un fournisseur, et nous permet de reverser les fonctionnalités importantes à la communauté
 
@@ -59,14 +59,14 @@ En général, publier votre site depuis Netlify est aussi simple que de créer u
 
 Si vous utilisez les _gems_ intégrées à Jekyll et le processus de _build_ proposé par GitHub, vous aurez besoin de quelques outils complémentaires pour que ça fonctionne. Vous aurez besoin d’un _Gemfile_ pour vos dépendances, et c’est aussi une bonne idée d’intégrer la commande de _build_ au code source :
 
-**Gemfile**{#gemfile}
+**Gemfile**
 
 ```ruby
 source "https://rubygems.org"
 gem 'github-pages'
 ```
 
-**netlify.toml**{#netlify.toml}
+**netlify.toml**
 
 ```toml
 [build]
@@ -80,7 +80,7 @@ Une fois que tout vous semble bon et que le déploiement Netlify se déroule cor
 
 Netlify CMS se compose d’une [application web monopage](https://fr.wikipedia.org/wiki/Application_web_monopage) (NDT : en anglais _single-page application_ ou SPA) construite avec React qui réside dans un dossier admin de votre site. Pour Jekyll, il doit être placé à la racine du site. Il contiendra deux fichiers :
 
-``` {#file-structure}
+```
 admin
 ├ index.html
 └ config.yml
@@ -90,7 +90,7 @@ La [documentation de Netlify CMS](https://www.netlifycms.org/docs/add-to-your-si
 
 > Le premier fichier, `admin/index.html`, est le point d’entrée à l’admin de Netlify CMS. Cela signifie que les utilisateurs y accèdent via `votresite.com/admin/`. Du côté du code, c’est une page HTML qui charge le fichier Javascript de Netlify CMS. Dans cet exemple, nous chargeons le fichier depuis un CDN public :
 
-**admin/index.html**{#index.html}
+**admin/index.html**
 
 ```html
 <!doctype html>
@@ -112,7 +112,7 @@ La [documentation de Netlify CMS](https://www.netlifycms.org/docs/add-to-your-si
 
 Pour commencer, voici à quoi peut ressembler le fichier de configuration :
 
-_admin/config.yml_{#config.yml}
+**admin/config.yml**
 
 ```yml
 backend:
@@ -137,7 +137,7 @@ _Remarque : depuis mai 2019, le flux de travail éditorial n’est pris en charg
 
 Maintenant il ne nous reste plus qu’à déposer le widget Netlify Identify sur le site principal. C’est nécessaire car après s’être connecté l’utilisateur est redirigé vers la page d’accueil du site. Nous devons rediriger les utilisateurs vers l’administration du CMS, en ajoutant le script suivant avant la fermteture de la balise _body_ :
 
-```js
+```javascript
 <script>
   if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {
@@ -213,7 +213,7 @@ topLevelItems:
 
 Voyons comment exploiter ces données dans un template Jekyll. Voici un template _Liquid_ qui utilise nos données de navigation :
 
-```liquid
+```html
 <ul>
   {% for item in site.data.nav.topLevelItems %}
     <li>
@@ -277,7 +277,7 @@ Veuillez noter les champs `permalink` et `preview_path`. Nous utiliserons le cha
 
 Voici un exemple de ce à quoi peut ressembler le fichier de contenu d’une page :
 
-_\_pages/home.md_
+**\_pages/home.md**
 
 ```yaml
 ---
@@ -297,7 +297,7 @@ Nous travaillerons de concert avec la fonctionnalité de [collections](https://j
 
 Avant de commencer, nous avons besoin de compléter le fichier de configuration de Jekyll :
 
-_\_config.yml_
+**\_config.yml**
 
 ```yaml
 collections:
@@ -311,9 +311,9 @@ Mais comment Jekyll fait-il pour savoir quel template utiliser ? Dans le cas pr�
 
 Regardons un exemple de template :
 
-_\_layouts/home.html_
+**\_layouts/home.html**
 
-``` {#layouts-home}
+```html
 ---
 layout: default
 ---
@@ -333,7 +333,7 @@ C’est un bon début, mais nous n’aurions pas besoin de tout ça dans notre d
 
 Pour commencer, nous devons définir nos composants dans le fichier de configuration de Netlify CMS :
 
-_\_admin/config.yml_
+**\_admin/config.yml**
 
 ```yaml
 collections:
@@ -365,9 +365,9 @@ Ici nous avons étendu notre collection de pages afin d’y inclure un widget de
 
 Créons maintenant un nouveau template pour le rendu de nos widgets :
 
-_\_layouts/blocks.html_
+**\_layouts/blocks.html**
 
-```yaml
+```html
 ---
 layout: default
 ---
@@ -379,9 +379,9 @@ layout: default
 
 Ici nous itérons sur chacun des composants de la page et incluons un autre fichier de template qui lui s’occupe du rendu. Voici à quoi pourrait ressembler un template de composant :
 
-_\_includes/blocks/hero.html_
+**\_includes/blocks/hero.html**
 
-``` {#component-template}
+```html
 <header class="page-hero">
   <h1>{{ block.heading }}</h1>
   {% if block.content and block.content != '' %}
