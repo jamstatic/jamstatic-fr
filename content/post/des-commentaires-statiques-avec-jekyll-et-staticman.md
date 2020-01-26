@@ -192,7 +192,7 @@ pour créer un tableau ne contenant que les commentaires "parents".
 
 Malheureusement, le code suivant n'a pas marché :
 
-```liquid
+```twig
 {% assign comments = site.data.comments[page.slug] | where_exp:"item","item._parent == nil" %}
 {% for comment in comments %}
   {% assign avatar = comment[1].avatar %}
@@ -225,7 +225,7 @@ Malheureusement, le code suivant n'a pas marché :
 Hmm… j'imagine qu'il était temps d’ajouter des filtres `inspect` à mes tableaux
 pour voir ce qui se passait.
 
-```liquid
+```twig
 {{ site.data.comments[page.slug] | inspect }}
 ```
 
@@ -279,7 +279,7 @@ Apparemment l’utilisation du filtre `where_exp` aplatit quelque peu les choses
 en supprimant les objets `comment-xxxxxxxxxxxxx`. Cela fait que mes tags
 `assign` retournent des valeurs nulles parce que `comment[1]` n'existe plus.
 
-```liquid
+```twig
 {% assign avatar  = comment[1].avatar %}
 {% assign email   = comment[1].email %}
 {% assign name    = comment[1].name %}
@@ -291,7 +291,7 @@ en supprimant les objets `comment-xxxxxxxxxxxxx`. Cela fait que mes tags
 Une fois cela découvert, la solution était simple --- supprimer `[1]` pour
 chacun des noms des propriétés.
 
-```liquid
+```twig
 {% assign avatar  = comment.avatar %}
 {% assign email   = comment.email %}
 {% assign name    = comment.name %}
@@ -337,14 +337,14 @@ J'ai déterminé que la manière la plus simple d’assigner un identifiant uniq
 chaque commentaire parent était de le faire à l’aide d’une séquence.
 Heureusement Liquid nous permet de faire cela à l’aide de `forloop.index`.
 
-```liquid
+```twig
 {% assign index = forloop.index %}
 ```
 
 Ensuite j'ai imbriqué une copie modifiée de la boucle _parent_ précédente à
 l’intérieur d’elle-même --- pour faire fonction de boucle "enfant" ou `replies`.
 
-```liquid
+```twig
 {% assign replies = site.data.comments[page.slug] | where_exp:"item","item._parent == include.index" %}
 {% for reply in replies %}
   {% assign parent  = reply._parent %}
@@ -375,7 +375,7 @@ condition du filtre `where_exp` afin de comparer `_parent` avec cette nouvelle
 variable `{{ i }}` --- pour corriger le problème et me permettre de passer à la
 suite.
 
-```liquid
+```twig
 {% capture i %}{{ include.index }}{% endcapture %}
 {% assign replies = site.data.comments[page.slug] | where_exp:"item","item._parent == i" %}
 ```

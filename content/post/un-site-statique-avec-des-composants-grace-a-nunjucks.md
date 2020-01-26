@@ -129,7 +129,7 @@ fichier `index.html` dans CodePen project à chaque enregistrement.
 Voici ce que nous pourrions écrirer dans le fichier `index.njk` pour appliquer
 le gabarit de page et ajouter du contenu dans le bloc principal :
 
-```liquid
+```twig
 {% extends "_layout.njk" %}
 
 {% block content %}
@@ -202,7 +202,7 @@ body.services .nav-services a {
 _Oh, c'est quoi ces icônes ?_ Ce sont simplement des fichiers `.svg` déposés
 dans un dossier et inclus de la sorte :
 
-```liquid
+```twig
 {% include "../icons/cloud.svg" %}
 ```
 

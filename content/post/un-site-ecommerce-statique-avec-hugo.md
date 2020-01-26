@@ -213,7 +213,7 @@ Nous allons aussi créer un modèle principal dans lequel nous bouclerons sur no
 produits pour en afficher une courte description et où nous ajouterons un bouton
 Snipcart "Ajouter au panier".
 
-{{% notice info %}}
+{{< notice info >}}
 
 **Remarque**: les produits Snipcart sont définis directement dans le code HTML
 à l’aide de simples attributs data.

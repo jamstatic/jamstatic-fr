@@ -45,7 +45,7 @@ En combinant trois langages faciles d'approche — Markdown pour le contenu, YA
 
 Vu que le contenu est stocké avec la même combinaison familière de front matter YAML et de Markdown, passer de Jekyll à Eleventy semble plutôt raisonnable au premier abord. Et pourtant, j'ai découvert à mes dépens qu'il y avait quelques pièges. Si vous envisagez une migration, voici quelques petits trucs et astuces pour vous aider dans votre parcours[^1].
 
-{{% notice info %}}
+{{< notice info >}}
 
 Tout au long de cet article, nous allons prendre comme exemple le site du [Guide Markdown](https://www.markdownguide.org) de Matt Cone. Si vous voulez tester les modifications, commencez par cloner le [dépôt git](https://github.com/mattcone/markdown-guide) et placez-vous dans le dossier du projet :
 
@@ -54,7 +54,7 @@ git clone https://github.com/mattcone/markdown-guide.git
 cd markdown-guide
 ```
 
-{{%/ notice %}}
+{{</ notice >}}
 
 ## Avant de commencer
 
@@ -238,7 +238,7 @@ Le filtre `jsonify` sert à exporter un objet ou une chaîne de caractères dans
 
 Le filtre `where` de Jekyll est un peu plus complexe au sens où il prend deux arguments additionnels, la clef sur laquelle on veut effectuer la recherche et la valeur recherchée :
 
-```liquid
+```twig
 {{ site.members | where: "graduation_year","2014" }}
 ```
 
@@ -266,7 +266,7 @@ Nous examinons chaque `item` dans notre `array`, et nous [réduisons](https://de
 Comme pour les filtres, [Jekyll fournit un jeu de tags](https://jekyllrb.com/docs/liquid/tags/) qui ne fait pas partie intégrante du cœur de Liquid. Parmi eux, l'un des plus utiles est le tag `include`. La bibliothèque utilisée par Eleventy, [LiquidJS](https://github.com/harttle/liquidjs) fournit aussi un tag `include`, mais sa syntaxe diffère légèrement de [celle définie par Shopify](https://help.shopify.com/en/themes/liquid/tags/theme-tags#include). Si vous ne passez pas de variables en paramètre de vos includes, vous ne devriez pas à avoir à faire de modification pour que ça marche.
 Dans le cas contraire, alors qu'avec Jekyll vous écrivez :
 
-```liquid
+```twig
 <!-- page.html -->
 {% include include.html value="key" %}
 
@@ -276,7 +276,7 @@ Dans le cas contraire, alors qu'avec Jekyll vous écrivez :
 
 dans Eleventy, vous allez écrire :
 
-```liquid
+```twig
 <!-- page.html -->
 {% include "include.html", value: "key" %}
 
@@ -323,7 +323,7 @@ collections:
 
 Elles correspondent aux dossiers `_basic-syntax` et `_extended-syntax`, nous pouvons itérer sur leurs contenus de la sorte :
 
-```liquid
+```twig
 {% for syntax in site.extended-syntax %}
   {{ syntax.title }}
 {% endfor %}
@@ -345,7 +345,7 @@ tag: extended-syntax
 
 Nous pouvons ensuite itérer sur les contenus étiquetés de la sorte :
 
-```liquid
+```twig
 {% for syntax in collections.extended-syntax %}
   {{ syntax.data.title }}
 {% endfor %}

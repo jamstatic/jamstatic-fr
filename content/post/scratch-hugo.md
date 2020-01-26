@@ -24,7 +24,7 @@ explication par l’exemple de la fonction `.Scratch` du langage de templating d
 
 ---
 
-{{% notice %}} Vous êtes ici pour apprendre à écraser une variable dans un gabarit de page ? Bonne nouvelle, vous n'avez plus besoin de la fonction `.Scratch` pour celà depuis la version 0.48 d'Hugo. Malgré cela, `.Scratch` reste encore utile pour plein d'autres choses ! {{< /notice >}}
+{{< notice >}} Vous êtes ici pour apprendre à écraser une variable dans un gabarit de page ? Bonne nouvelle, vous n'avez plus besoin de la fonction `.Scratch` pour cela depuis la version 0.48 d'Hugo. Malgré cela, `.Scratch` reste encore utile pour plein d'autres choses ! {{< /notice >}}
 
 Le contexte de Page d'Hugo n'est pas seulement la source d'information la plus importante pour vos pages, c'est aussi la source de données principale de tous vos templates. Plus souvent qu'il n'y paraît, vous aurez à ajouter vos propres variables personnalisées en plus de celles définies par défaut.
 
@@ -34,7 +34,7 @@ Avec la fonction **.Scratch** d'Hugo,  n'importe quelle [Page](https://gohugo.io
 
 Scratch a été ajouté à l'origine pour contourner une [limitation](https://github.com/golang/go/issues/10608) du langage de templating de Go, qui empêchait d'écraser des variables. Elle s'est rapidement enrichie d'autres méthodes et constitue désormais une fonctionnalité d'Hugo à part entière.
 
-{{% notice info %}}
+{{< notice info >}}
 À des fins de lisibilité, les extraits de code qui suivent ont des commentaires incompatibles avec le langage de template de Go. Reportez vous à la [doc](http://gohugo.io/templates/introduction/#comments) pour comment commenter dans Hugo.
 {{< /notice >}}
 

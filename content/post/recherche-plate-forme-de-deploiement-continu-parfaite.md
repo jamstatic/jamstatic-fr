@@ -54,7 +54,7 @@ Le fait que ce soit à la fois hautement configurable et simple à intégrer ave
 
 On ne peut pas connecter de projets GitLab à CircleCI pour le moment.
 
-{{% notice info %}}
+{{< notice info >}}
 Lire comment [déployer un site statique avec CircleCI](https://forestry.io/blog/automate-deploy-w-circle-ci/).
 {{< /notice >}}
 
@@ -74,7 +74,9 @@ TravisCI promet d'être gratuit à vie pour les projets open source. TravisCI tr
 
 Avec TravisCI, vos builds doivent tourner dans un environnement Ubuntu. Vous pouvez installer Docker dans cet environnement pour récupérer des images, mais c'est la solution la plus verbeuse de toutes. De plus, vous ne pouvez utiliser TravisCI que si vos projets sont hébergés sur GitHub.
 
-{{% notice info %}}[Guide de démarrage TravisCI](https://docs.travis-ci.com/user/getting-started/){{< /notice >}}
+{{< notice info >}}
+[Guide de démarrage TravisCI](https://docs.travis-ci.com/user/getting-started/)
+{{< /notice >}}
 
 ## Drone
 
@@ -90,7 +92,7 @@ Drone propose des [matrices de builds](http://docs.drone.io/matrix-builds/) pour
 
 Drone est un arrivant relativement récent, et sa documentation aurait besoin d'un peu d'amour.
 
-{{% notice info %}} [Bien démarrer avec Drone CI](http://docs.drone.io/getting-started/) {{< /notice >}}
+{{< notice info >}} [Bien démarrer avec Drone CI](http://docs.drone.io/getting-started/) {{< /notice >}}
 
 ## GitLab CI
 
@@ -106,7 +108,7 @@ GitLab CI est compatible avec toutes les versions de GitLab : vous pouvez l'util
 
 Forcément pour utiliser GitLab CI, vous devez héberger votre code source avec GitLab, le fait de pouvoir héberger vous-même votre suite logicielle devrait vous rassurer si vous avez peur d'être trop dépendant d'un service tiers.
 
-{{% notice info %}} [GitLab CI : guide de démarrage rapide](https://docs.gitlab.com/ee/ci/quick_start/) {{< /notice >}}
+{{< notice info >}} [GitLab CI : guide de démarrage rapide](https://docs.gitlab.com/ee/ci/quick_start/) {{< /notice >}}
 
 ## Jenkins
 
@@ -128,7 +130,7 @@ Le fait de pouvoir faire tourner ses builds sur n'importe quel système d'exploi
 
 Pas grand-chose à redire à ce niveau : Jenkins peut faire à peu près tout ce que vous voulez ! Toutefois, il se peut que les petites équipes n'aient peut-être pas envie de devoir se coltiner la maintenance et l'hébergement de leur propre serveur d'intégration continue.
 
-{{% notice info %}}
+{{< notice info >}}
 [Jenkins : Guide de démarrage](https://jenkins.io/doc/pipeline/tour/getting-started/)
 {{< /notice >}}
 

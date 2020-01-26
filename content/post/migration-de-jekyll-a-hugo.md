@@ -138,7 +138,7 @@ site est bien plus petit que Smashing Magazine, je savais que je n'avais aucun
 souci à me faire. Si Smashing Magazine pouvait être compilé aussi rapidement,
 pourquoi pas mon blog ?
 
-{{% notice info %}}
+{{< notice info >}}
 
 Veuillez prendre note que cet article n'est en aucun cas
 destiné à constituer un guide exhaustif sur Hugo. Il me reste encore beaucoup de
@@ -244,7 +244,7 @@ j'ai trouvé et qui m'ont également bien aidé. Prenez cet article comme un
 pense-bête, un ensemble de rappels, une note à mon futur moi à laquelle je
 devrai revenir si jamais j'ai besoin de revoir les bases.
 
-{{% notice info %}}
+{{< notice info >}}
 
 Notez bien que vous finirez sûrement par ne pas utiliser le
 même processus ou la même arborescence de fichiers que moi. Il est en effet peu
@@ -289,7 +289,7 @@ Le dossier `static` est destiné à héberger les contenus statiques comme les
 images, les fichiers CSS et JS mais aussi les fichiers audio, vidéo, les slides
 de présentations, etc. Je passe pas mal de temps à travailler dans ce dossier.
 
-{{% notice info %}}
+{{< notice info >}}
 
 Après être intervenue sur le redesign de Smashing Magazine,
 j'ai appris que votre structure peut-être différente de celle présentée plus
@@ -320,7 +320,7 @@ Puisque je voulais m'imprégner d’un nouvel environnement et que la plupart de
 documentation et des ressources dédiées à Hugo utilisent le format `toml`, c'est
 le format que j'ai utilisé. Jekyll utilise `yaml`.[^2]
 
-{{% notice info %}}
+{{< notice info >}}
 
 Je ne rentrerai pas ici sur les différences entre les deux
 formats, la documentation d’Hugo et Google sont vos amis. Personnellement ça m'a
@@ -338,7 +338,7 @@ contenu qui à son tour définit le type de modèle qui sera utilisé pour le re
 Le type de page est défini par la variable `type`. Par exemple le front matter
 d’un article dans la section blog de mon site ressemble à ça:
 
-```html
+```toml
 +++
 type = "blog"
 description = "…"
@@ -348,8 +348,8 @@ date = …
 +++
 ```
 
-{{% marker %}}La valeur `type` peut prendre pratiquement n'importe quelle
-valeur{{% /marker %}}, et c'est là où on peut se rendre compte du pouvoir
+{{< marker >}}La valeur `type` peut prendre pratiquement n'importe quelle
+valeur{{< /marker >}}, et c'est là où on peut se rendre compte du pouvoir
 d’Hugo. Vous pouvez définir autant de types de contenus que vous voulez. Par
 exemple, j'utilise actuellement cinq types de contenus pour mon site :
 _statique_ (pour les pages comme "À propos" et "Travailler avec moi"), _blog_
@@ -357,7 +357,7 @@ _statique_ (pour les pages comme "À propos" et "Travailler avec moi"), _blog_
 _études de cas_ et _bureau_ (un nouveau type d’articles à paraître bientôt). Je
 peux créer autant de types de contenu que je veux.
 
-{{% notice update %}}
+{{< notice update >}}
 
 Il est possible de créer des sous-sections de contenu
 depuis la version 0.24 d’Hugo ! Cela vous permet par exemple de créer des
@@ -381,8 +381,8 @@ Les pages statiques sont créées dans des fichiers individuels au format Markdo
 besoin d’un index (comme des articles, des ateliers, des études de cas, etc.)
 sont créés dans des dossiers nommés d’après le type de contenu. Par exemple on
 stockera les contenus de type _ateliers_ dans un dossier `/content/ateliers/`.
-Mes articles se trouvent dans le répertoire `/content/blog/`. {{% marker %}}Les
-dossiers de ce type sont également appelés des `sections`.{{% /marker %}}
+Mes articles se trouvent dans le répertoire `/content/blog/`. {{< marker >}}Les
+dossiers de ce type sont également appelés des `sections`.{{< /marker >}}
 
 Pour chaque contenu, il vous faut définir son type. Vous pouvez faire ça de deux
 manières.
@@ -401,7 +401,7 @@ l’arborescence de fichier. Généralement vous utiliserez la variable `type` p
 les pages statiques et vous vous reposerez sur l’arborescence de fichiers pour
 les contenus qui auront besoin d’un index, par exemple des billets de blog.
 
-Une chose importante à savoir est que {{% marker %}}si vous définissez le type
+Une chose importante à savoir est que {{< marker >}}si vous définissez le type
 de page à l’aide de la variable `type`, la page peut se trouver n'importe où
 dans le dossier `/content/`, l’arborescence n'aura alors aucune importance.{{%
 /marker %}}
@@ -455,7 +455,7 @@ Vous définissez le type page dans le [front matter][front-matter] du fichier
 
 Le front matter de ma page d’accueil ressemble à ça :
 
-```html
+```go-html-template
 +++
 type = "page"
 title = "Accueil"
@@ -466,7 +466,7 @@ description = "Sara Soueidan — Développeuse Web Front-end, auteure et confér
 La description est utilisée dans le fichier partiel d’entête du site en tant que
 valeur de l’attribut `<title>` ainsi :
 
-```html
+```go-html-template
 <title> {{ .Page.Description }} </title>
 ```
 
@@ -484,7 +484,7 @@ entête et un pied de page ? Tout cela se passe dans le modèle de mise en page.
 Le fichier `/layouts/index.html` est la mise en page utilisée pour l’accueil et
 voici à quoi il ressemble :
 
-```html
+```go-html-template
 {{ partial "homepage-header.html" . }}
 
 {{ .Content }}
@@ -492,16 +492,16 @@ voici à quoi il ressemble :
 {{ partial "footer.html" . }}
 ```
 
-{{% marker %}}`{{ .Content }}` récupère le contenu de la page correspondante
-dans le dossier `/content/`.{{% /marker %}} Donc ici ça récupère le contenu de
+{{< marker >}}`{{ .Content }}` récupère le contenu de la page correspondante
+dans le dossier `/content/`.{{< /marker >}} Donc ici ça récupère le contenu de
 la page d’accueil à partir du fichier `/contents/_index.md`.
 
 En outre, j'appelle l’entête ainsi que le pied de page à l’aide de fichiers
 partiels.
 
-Par défaut, quand vous demandez `partial "footer.html ."`, {{% marker %}}Hugo va
+Par défaut, quand vous demandez `partial "footer.html ."`, {{< marker >}}Hugo va
 regarder s'il existe un fichier partiel dans le dossier `partials` situé dans le
-répertoire `layouts`.{{% /marker %}}
+répertoire `layouts`.{{< /marker >}}
 
 Reportez-vous à
 [la documentation d’Hugo sur les fichiers partiels](https://gohugo.io/templates/partials/)
@@ -534,7 +534,7 @@ titre et une description.
 Pour la page _À propos_ de mon site, j’ai créé un fichier `/content/about.md`.
 Le front matter de la page est le suivant :
 
-```html
+```toml
 +++
 type = "static"
 page = "static/single.html"
@@ -553,7 +553,7 @@ utilisent ce type pour les pages statiques.
 La variable `page` indique à Hugo quel modèle de mise en page présent dans le
 répertoire `/layouts/` utiliser.
 
-{{% notice info %}}
+{{< notice info >}}
 
 Il est bon de noter également que Hugo utilisera automatiquement ce modèle même
 si je ne lui dis pas. Je me rappelle tout de même avoir eu quelques prises de
@@ -577,16 +577,16 @@ Je vous ai déjà dit que la `description` est utilisée dans le fichier partiel
 qui gère l’entête de page, cette description apparait ensuite dans l’onglet de
 votre navigateur.
 
-{{% marker %}}La variable `menu` indique à Hugo que cette page doit avoir une
-entrée dans le menu principal.{{% /marker %}}
+{{< marker >}}La variable `menu` indique à Hugo que cette page doit avoir une
+entrée dans le menu principal.{{< /marker >}}
 
-{{% marker %}}La variable `weight` est très utile pour vous aider à définir
-l’ordre d’affichage des liens dans le menu.{{% /marker %}} Si vous ne l’utilisez
+{{< marker >}}La variable `weight` est très utile pour vous aider à définir
+l’ordre d’affichage des liens dans le menu.{{< /marker >}} Si vous ne l’utilisez
 pas, Hugo utilisera son propre ordre par défaut – qui n'était pas celui que je
 souhaitais pour mon site. Vous pouvez également définir des valeurs négatives
 pour cette variable.
 
-{{% notice info %}}
+{{< notice info >}}
 
 Pour faire court, je vous renvoie une fois de plus à la
 documentation d’Hugo pour ce qui est de l’utilisation et de la configuration du
@@ -616,7 +616,7 @@ appel aux fichiers partiels d’entête et de bas de page. Notez la correspondan
 entre le type `static` et le dossier `static` situé dans `layouts` qui contient
 le modèle de mise en page.
 
-{{% notice info %}}
+{{< notice info >}}
 
 Vous n'avez pas à écrire tout le HTML dans le fichier
 Markdown. Vous pouvez mettre toute la structure du HTML, comme les conteneurs,
@@ -672,8 +672,7 @@ défaut les valeurs de ces variables seront vierges, prêtes à être renseigné
 La capture d’écran suivante montre les variables front matter que j'ai définis
 pour l’archétype `etudes-de-cas` :
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346514/archetype-hugo.png"
-caption="Les variables définies pour l’archétype des études de cas. À chaque fois que je demande à Hugo de créer une nouvelle étude de cas pour moi, il va automatiquement ajouter ces variables front matter. Ces variables sont ensuite utilisées par le modèle HTML de la page d’études de cas." >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346514/archetype-hugo.png" caption="Les variables définies pour l’archétype des études de cas. À chaque fois que je demande à Hugo de créer une nouvelle étude de cas pour moi, il va automatiquement ajouter ces variables front matter. Ces variables sont ensuite utilisées par le modèle HTML de la page d’études de cas." >}}
 
 Notez aussi que les autres archétypes que j'ai définis dans le répertoire
 `archetypes` qui correspondent aux quatre autres types de section qui figurent
@@ -734,7 +733,7 @@ utiliser pour surcharger la mise en page des pages statiques
 Encore une fois la page `/layouts/static/single.html` est simplement un modèle
 avec le contenu suivant :
 
-```html
+```go-html-template
 {{ partial "header.html" . }}
 
 {{ .Content }}
@@ -833,7 +832,7 @@ d’entre vous. Après avoir pas mal cherché, je suis arrivée à écrire la bo
 suivante qui affiche les cinq derniers articles, suivi d’un appel à un fichier
 partiel pour la gestion de la pagination.
 
-```html
+```go-html-template
 <ul class="articles-list">
     <!-- Boucle à travers les fichiers situés dans content/blog/*.md -->
     {{ range (.Paginator 5).Pages }}
@@ -854,7 +853,7 @@ partiel pour la gestion de la pagination.
 {{ partial "pagination.html" . }}
 ```
 
-{{% notice info %}}
+{{< notice info >}}
 
 Ne faites pas attention au code HTML de cette boucle, ça fait
 un moment que je n'ai pas travaillé sur mon site, il aurait bien besoin de
@@ -863,15 +862,15 @@ quelques améliorations. Le balisage sera bientôt mis à jour.
 {{< /notice >}}
 
 C’est la partie `{{ range .Paginator.Pages }}` qui est vraiment importante ici.
-{{% marker %}}Chaque `.Paginator` que vous utilisez dans une page d’index de
-section va boucler et afficher les articles **de cette section**.{{% /marker %}}
+{{< marker >}}Chaque `.Paginator` que vous utilisez dans une page d’index de
+section va boucler et afficher les articles **de cette section**.{{< /marker >}}
 `(.Paginator 5).Pages` indique à Hugo de ne lister que cinq éléments. Cette
 boucle va parcourir tous les articles de la section `blog` et ne lister que les
 cinq plus récents. Une boucle similaire dans le fichier
 `layouts/workshops/index.html` bouclerait sur les ateliers stockés dans le
 dossier `/content/workshops/` et afficherait la liste des ateliers dans l’index.
 
-{{% notice info %}}
+{{< notice info >}}
 
 Je confonds encore quelques variables globales du site et des
 variables de page dans Hugo. Ce que j'ai pour le moment me suffit, et si jamais
@@ -885,7 +884,7 @@ même.
 Et pour ce qui est du fichier partiel `pagination.html`, le mien ressemble pour
 le moment à ça :
 
-```html
+```go-html-template
 {{ $baseurl := .Site.BaseURL }}
 {{ $pag := .Paginator }}
 
@@ -940,7 +939,7 @@ ai donné un nouveau `type`: `archive`. La page utilise le modèle situé dans
 Dans le modèle de page, je boucle sur les articles comme pour la page d’index du
 blog, mais avec une différence importante :
 
-```html
+```go-html-template
 <!-- /layouts.archive/single.html -->
 
 {{ range where .Site.Pages "Type" "blog" }}
@@ -957,9 +956,9 @@ blog, mais avec une différence importante :
 {{ end }}
 ```
 
-En résumé : {{% marker %}}`.Site.Pages` boucle sur toutes les pages de votre
+En résumé : {{< marker >}}`.Site.Pages` boucle sur toutes les pages de votre
 site. En d’autres termes, cela va lister tous les fichiers Markdown contenus
-dans le dossier `/content/`.{{% /marker %}} Pour indiquer à Hugo de n'afficher
+dans le dossier `/content/`.{{< /marker >}} Pour indiquer à Hugo de n'afficher
 que les fichiers situés dans la section `/content/blog/`, on “filtre” les pages
 en précisant le `"Type" "blog"`. On procédera également de la sorte pour une
 page d’archive d’une autre section, en utilisant le nom de la section comme
@@ -1064,8 +1063,8 @@ auparavant. J'ai encore du travail de ce côté-là.
 
 Il est également utile de mentionner que désormais la compilation complète de
 mon site après chaque changement, sans avoir à filtrer de vieux contenus, prend
-à Hugo moins de 40 millisecondes. {{% marker %}}Hugo met 39ms à compiler mon
-site pour être plus précis{{% /marker %}}, là où Jekyll, même avec des options
+à Hugo moins de 40 millisecondes. {{< marker >}}Hugo met 39ms à compiler mon
+site pour être plus précis{{< /marker >}}, là où Jekyll, même avec des options
 comme `--incremental` mettait plusieurs **minutes**.
 
 ### Objectifs futurs

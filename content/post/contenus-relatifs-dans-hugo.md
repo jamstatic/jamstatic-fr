@@ -256,7 +256,7 @@ Et qu'avons-nous gagné outre un code plus propre ?
 
 Le temps de génération n'excède maintenant pas les 1.5s. Dans le mille Émile !
 
-{{% notice %}}
+{{< notice info >}}
 
 Si vous êtes curieux, vous pouvez cloner le
 [repo](https://github.com/regisphilibert/rougon) et vous en donner à cœur joie
@@ -265,7 +265,7 @@ branche
 [`oldRelationship`](https://github.com/regisphilibert/rougon/tree/oldRelationships)
 et comparer avec l’implémentation précédente des relations.
 
-{{%/ notice %}}
+{{</ notice >}}
 
 ## Conclusion
 

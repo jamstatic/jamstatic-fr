@@ -109,7 +109,7 @@ juillet 2016.
 
 La syntaxe est assez intuitive :
 
-```liquid
+```twig
 {% cloudinary [preset] path/to/img.jpg alt="alt text" caption="image caption" %}
 ```
 
@@ -126,7 +126,7 @@ Par exemple, comme indiqué dans
 [la documentation](https://nhoizey.github.io/jekyll-cloudinary/#live-example),
 ce code dans un fichier Markdown :
 
-```liquid
+```twig
 {% cloudinary logo /assets/logos/cloudinary.png alt="Cloudinary logo" %}
 ```
 

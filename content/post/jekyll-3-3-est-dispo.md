@@ -57,14 +57,14 @@ qu'elle corresponde à votre environnement de développement, mettons par exempl
 `baseurl: "/mondossier"`, le filtre `relative_url` se chargera de préfixer cette
 valeur pour toutes les URLs que vous appellerez :
 
-```liquid
+```twig
 {{ "/docs/assets/" | relative_url }} => /mondossier/docs/assets
 ```
 
 Par défaut, `baseurl` est défini à `""` et sera remplacé tel quel (ne définissez
 jamais cette valeur à `"/"`):
 
-```liquid
+```twig
 {{ "/docs/assets/" | relative_url }} => /docs/assets
 ```
 
@@ -73,7 +73,7 @@ domaine racine. Le même principe s'applique au filtre `absolute_url`, il ajoute
 les valeurs définies dans `baseurl` et `url` et facilite ainsi la création
 d’URLs absolues :
 
-```liquid
+```twig
 {{ "/docs/assets/" | absolute_url }} => http://jamstatic.fr/mondossier/docs/assets
 ```
 

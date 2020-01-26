@@ -95,7 +95,7 @@ Essayez de vous connecter à Internet pour naviguer sur le site.
 
 Le fichier **layouts/offline/single.html** :
 
-```liquid
+```twig
 <html>
  <head>
   <title>{{ .Title }}</title>

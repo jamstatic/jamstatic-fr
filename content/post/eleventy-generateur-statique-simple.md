@@ -59,7 +59,7 @@ que votre site dure 10 ans, pas 10 mois.**
 Faisons un site web pour notre collection d’images GIF. Une interface pour notre
 propre domaine [bukk.it](https://bukk.it/). Appelons ça _Giffleball_.
 
-{{% notice info %}}Le code source de la première partie de ce tutoriel est
+{{< notice info >}}Le code source de la première partie de ce tutoriel est
 [disponible sur GitHub](https://github.com/11ty/giffleball).{{< /notice >}}
 
 #### Création des fichiers
@@ -239,9 +239,10 @@ Ah c'est bien mieux. Ça marche nickel.
 J'espère que vous vous rendez compte de l’avantage d’utiliser des moteurs de
 rendu et un générateur de site statique pour vos sites web.
 
-{{% notice info %}}Le code source de la deuxième partie de ce tutoriel est
-[disponible sur GitHub](https://github.com/11ty/giffleball/tree/level-2).{{%
-/notice %}}
+{{< notice info >}}
+Le code source de la deuxième partie de ce tutoriel est
+[disponible sur GitHub](https://github.com/11ty/giffleball/tree/level-2).
+{{</notice >}}
 
 ### Ajoutons un filtre
 
@@ -315,13 +316,9 @@ court):
 
 ```html
 <ul>
-
-<li><a href="img/%3F%3F%3F.jpg">???.jpg</a> 0 KB</li>
-
-<li><a href="img/%E2%80%A6.jpg">….jpg</a> 0 KB</li>
-
-<li><a href="img/parrot.gif">parrot.gif</a> 0 KB</li>
-
+  <li><a href="img/%3F%3F%3F.jpg">???.jpg</a> 0 KB</li>
+  <li><a href="img/%E2%80%A6.jpg">….jpg</a> 0 KB</li>
+  <li><a href="img/parrot.gif">parrot.gif</a> 0 KB</li>
 </ul>
 ```
 
@@ -337,7 +334,7 @@ Personnellement je trouve que ça rend mieux avec juste `{%-` au début. Il est
 important pour moi d’avoir une vue du code source qui soit propre, alors
 nettoyons tout ça :
 
-```liquid
+```twig
 <ul>
  {%- for filename in images %}
  {%- capture path %}img/{{ filename }}{% endcapture %}

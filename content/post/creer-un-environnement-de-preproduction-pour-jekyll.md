@@ -126,7 +126,7 @@ fonction de l’environnement dans lequel il tourne.
 Par exemple, nous ne voulons pas que le site de préproduction soit indexé par
 les moteurs de recherche.
 
-```liquid
+```twig
 {% if jekyll.environment == 'stage' %}
   <meta name="robots" content="noindex">
 {% endif %}
@@ -135,7 +135,7 @@ les moteurs de recherche.
 Vous pouvez même ajouter une bannière en haut de chaque page, pour avertir les
 visiteurs qu'ils consultent la version de développement de votre site.
 
-```liquid
+```twig
 {% if jekyll.environment == 'stage' %}
   <p class="banner">
     <a href="https://eduardoboucas.com">
