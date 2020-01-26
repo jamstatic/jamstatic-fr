@@ -13,8 +13,8 @@ h6 {
   font-family: $title-font-family;
 }
 
-h3,
-h2 {
+h2,
+h3 {
   line-height: $base * $ms1;
 }
 
@@ -22,58 +22,56 @@ h1 {
   line-height: $ms1;
 }
 
-h6,
-.h6 {
+.h6,
+h6 {
   font-size: $small;
 }
 
-h5,
-.h5 {
+.h5,
+h5 {
   font-size: $normal;
 }
 
-h4,
-.h4 {
+.h4,
+h4 {
   font-size: $big;
 }
 
-h3,
-.h3 {
+.h3,
+h3 {
   font-size: $bigger;
 }
 
-h2,
-.h2 {
+.h2,
+h2 {
   font-size: $title2;
 }
 
-h1,
-.h1 {
+.h1,
+h1 {
   font-size: $title1;
 }
-
 @include media-query($on-tablet) {
   body {
     font-size: $base-em * $ms2;
   }
 }
 
-h1,
 .h1,
-h2,
 .h2,
-h3,
 .h3,
-h4,
 .h4,
-h5,
 .h5,
-h6,
-.h6 {
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: $line-height-computed;
   margin-bottom: $line-height-computed / 7.43;
 }
-
 // h2 + h3 {
 //   margin-top: $line-height-computed / 3.583;
 // }
@@ -92,23 +90,22 @@ h6 {
   }
 }
 
-small,
-.small {
+.small,
+small {
   font-size: $small;
 }
 
 p {
   margin: 0 0 $line-height-computed;
 }
-
 // Lists
-ul,
-ol {
+ol,
+ul {
   margin-top: 0;
-  @extend %vertical-rhythm;
+  margin-bottom: $line-height-computed / 2;
 
-  ul,
-  ol {
+  ol,
+  ul {
     margin-bottom: 0;
   }
 }
@@ -118,8 +115,8 @@ dl {
   margin-bottom: $line-height-computed;
 }
 
-dt,
-dd {
+dd,
+dt {
   line-height: $line-height-base;
 }
 

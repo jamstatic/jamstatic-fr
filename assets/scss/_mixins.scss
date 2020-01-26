@@ -4,7 +4,6 @@
 //         padding-left: $spacing-unit / 2;
 //     }
 // }
-
 @mixin media-query($device) {
   @media screen and (min-width: $device) {
     @content;

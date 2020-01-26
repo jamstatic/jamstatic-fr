@@ -1,17 +1,5 @@
 @charset "utf-8";
-
-@import
-  "normalize",
-  "fonts",
-  "variables",
-  "mixins",
-  "base",
-  "utilities",
-  "typography",
-  "layout",
-  "syntax-highlighting",
-  "print"
-;
+@import "normalize", "fonts", "variables", "mixins", "base", "utilities", "typography", "layout", "syntax-highlighting", "print";
 
 figure {
   display: block;
@@ -36,8 +24,8 @@ table {
   border-collapse: collapse;
   margin-bottom: $line-height-computed * 2;
 
-  th,
-  td {
+  td,
+  th {
     padding: $spacing-unit/2;
     border-bottom: 0.0134em solid $grey;
   }
@@ -68,7 +56,7 @@ summary {
 }
 
 .icon--twitter {
-    color: #1da1f2;
+  color: #1da1f2;
 }
 
 .icon--github {
@@ -76,9 +64,5 @@ summary {
 }
 
 .icon--rss {
-  color:#e3702d;
-}
-
-.icon--meetup {
-  color:#f64060;
+  color: #e3702d;
 }

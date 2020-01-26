@@ -1,5 +1,5 @@
 body {
-  display: flex; // Use flexbox for a Sticky Footer
+  display: flex;
   flex-direction: column;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
@@ -62,11 +62,11 @@ body {
   text-shadow: 0 1px 1px rgba(27, 31, 35, 0.25), 0 1px 25px rgba(27, 31, 35, 0.5);
   margin-bottom: $spacing-unit;
 }
-
 @include media-query($on-tablet) {
   .site-title {
     font-size: $title1 * ($ratio*$ratio);
   }
+
   .site-description {
     font-size: $bigger;
   }
@@ -100,9 +100,7 @@ body {
     padding: 0 0.69445em;
   }
 }
-/**
- * Page content
- */
+
 .page-content {
   margin-bottom: $base-line;
 
@@ -277,7 +275,7 @@ body {
     font-weight: 400;
   }
 }
-/* utilities */
+
 .post-content > .highlight {
   margin: 2em calc(50% - 50vw);
 }

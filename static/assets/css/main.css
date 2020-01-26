@@ -219,14 +219,6 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 .center { margin: 0 auto 1.44; text-align: center; }
 
-.pull-right { float: right !important; }
-
-.pull-left { float: left !important; }
-
-.left { float: left; }
-
-.right { float: right; }
-
 .hide, .hidden { display: none !important; }
 
 .show { display: block !important; }
