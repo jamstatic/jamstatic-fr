@@ -29,8 +29,4 @@
 {{- template "_internal/opengraph.html" . -}}
 {{- template "_internal/twitter_cards.html" . -}}
 {{- partialCached "head/favicons.html" . -}}
-{{ if eq (getenv "HUGO_ENV") "production"  }}
-  {{ template "_internal/google_analytics_async.html" . }}
-{{ end }}
-<script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
