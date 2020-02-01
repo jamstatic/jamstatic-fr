@@ -14,6 +14,11 @@
   </div>
 
 {{- partialCached "site/footer" . -}}
-{{- partial "site/scripts" . -}}
+
+{{ if and .IsHome (eq (getenv "HUGO_ENV") "production") }}
+  {{- partial "search.html" . -}}
+{{ else }}
+ {{- partial "site/scripts" . -}}
+{{ end }}
 </body>
 </html>

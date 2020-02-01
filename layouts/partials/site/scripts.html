@@ -1,6 +1,3 @@
 <script src="{{ "assets/js/anchor.min.js" | relURL }}"></script>
 <script>anchors.add('.post h2, .post h3');</script>
 <!-- <script async src="{{ "assets/js/turbolinks.js" | relURL }}"></script> -->
-{{ if eq (getenv "HUGO_ENV") "production" }}
-  {{ partial "search.html" . }}
-{{ end }}
