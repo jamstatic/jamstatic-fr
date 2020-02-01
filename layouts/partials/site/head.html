@@ -10,17 +10,17 @@
 <link rel="preload" href="{{ "assets/fonts/roboto-mono-v5-latin-regular.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{ "assets/fonts/roboto-mono-v5-latin-700.woff2" | absURL }}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ "assets/css/chroma.css" | relURL }}">
-{{ end -}}
-<title>{{ block "title" . }}{{ if .IsHome }}{{ .Site.Params.Description }} · {{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} · {{ end }}{{ .Site.Title }}{{ end }}{{ end }}</title>
-{{ hugo.Generator }}
-{{ if .Site.IsServer }}
-{{ $cssOpts := (dict "targetPath" "assets/css/main.css" "enableSourceMap" true ) }}
-{{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts }}
+{{- end }}
+<title>{{ block "title" . }}{{- if .IsHome }}{{ .Site.Params.Description }} · {{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} · {{ end }}{{ .Site.Title }}{{ end }}{{ end }}</title>
 <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ .Description }}{{ end }}"/>
+{{ hugo.Generator -}}
+{{- if .Site.IsServer }}
+{{- $cssOpts := (dict "targetPath" "assets/css/main.css" "enableSourceMap" true ) }}
+{{- $styles := resources.Get "scss/main.scss" | toCSS $cssOpts }}
 <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
-{{ else }}
-{{$cssOpts := (dict "targetPath" "assets/css/main.css" ) }}
-{{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts | postCSS | minify | fingerprint }}
+{{- else }}
+{{- $cssOpts := (dict "targetPath" "assets/css/main.css" ) }}
+{{- $styles := resources.Get "scss/main.scss" | toCSS $cssOpts | postCSS | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
 {{ end }}
 <link rel="alternate" href="{{ .Site.RSSLink | relURL }}" title="{{ .Site.Title }}" type="application/atom+xml">
