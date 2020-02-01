@@ -16,6 +16,7 @@
 {{ if .Site.IsServer }}
 {{ $cssOpts := (dict "targetPath" "assets/css/main.css" "enableSourceMap" true ) }}
 {{ $styles := resources.Get "scss/main.scss" | toCSS $cssOpts }}
+<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ .Description }}{{ end }}"/>
 <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
 {{ else }}
 {{$cssOpts := (dict "targetPath" "assets/css/main.css" ) }}
