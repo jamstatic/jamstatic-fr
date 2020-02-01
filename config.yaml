@@ -75,7 +75,7 @@ outputFormats:
     notAlternative: true
 
 params:
-  title: Jamstastic
+  title: JAMstastic
   description: Sites statiques et architectures découplées
   email: contact@jamstatic.fr
   author:
