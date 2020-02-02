@@ -1,4 +1,4 @@
-title: JAMstastic
+title: JAMstatic
 baseURL: https://jamstatic.fr
 DefaultContentLanguage: fr
 languageCode: fr-fr
@@ -75,7 +75,7 @@ outputFormats:
     notAlternative: true
 
 params:
-  title: JAMstastic
+  title: JAMstatic
   description: Sites statiques et architectures découplées
   email: contact@jamstatic.fr
   author:
