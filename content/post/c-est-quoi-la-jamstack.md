@@ -8,9 +8,9 @@ source:
   title: WTF is JAMstack?
   url: https://jamstack.wtf/
 categories:
-- jamstack
-
+  - jamstack
 ---
+
 {{< intro >}}
 
 [Pedro Duarte](https://twitter.com/peduarte) a lancé [https://jamstack.wtf](https://jamstack.wtf) un mini-site afin de donner une vue d'ensemble de la JAMstack. Nous vous proposons ici sa traduction en français afin de permettre à toujours plus de développeurs d'adopter cette façon de travailler.
@@ -227,7 +227,7 @@ Voici une sélection de ressources sur la JAMstack qui comporte des matériaux d
 - [Débuter avec la JAMstack? Tout ce que vous devez savoir pour bien démarrer](https://snipcart.com/blog/jamstack)
 - [Quel est le concept derrière la JAMstack](https://www.quora.com/What-is-the-concept-behind-JAMstack)
 - [Développement web moderne avec la JAMstack](https://bejamas.io/blog/jamstack-modern-web-development/)
-- [Smashing Magazine va dix fois plus vite](/2017/03/17/smashing-mag-va-dix-fois-plus-vite/)
+- [Smashing Magazine va dix fois plus vite]({{< relref "post/smashing-mag-va-dix-fois-plus-vite.md" >}})
 - [Ghost avec la JAMstack](https://blog.ghost.org/jamstack/)
 - [JAMstack avec Gatsby, Netlify et Netlify CMS](https://medium.com/netlify/jamstack-with-gatsby-netlify-and-netlify-cms-a300735e2c5d)
 

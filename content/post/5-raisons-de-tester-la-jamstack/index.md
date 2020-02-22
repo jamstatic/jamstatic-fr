@@ -1,24 +1,25 @@
 ---
-title: 'Passer au statique : 5 raisons de tester la JAMstack sur votre prochain projet'
-description: Référencement, performance, sécurité, automatisation, communauté grandissante,
+title: "Passer au statique : 5 raisons de tester la JAMstack sur votre prochain projet"
+description:
+  Référencement, performance, sécurité, automatisation, communauté grandissante,
   les raisons de passer au statique ne manquent pas.
 date: 2017-03-16
 commments: true
 source:
   author: Tom Bennet
-  title: 'Go static: 5 reasons to try JAMstack on your next project'
+  title: "Go static: 5 reasons to try JAMstack on your next project"
   url: https://builtvisible.com/go-static-try-jamstack/
-  lang: ''
+  lang: ""
 categories:
-- jamstack
-- headless
-author: ''
+  - jamstack
+  - headless
+author: ""
 lastmod:
 aliases: []
-canonical_url: ''
+canonical_url: ""
 keywords: []
-
 ---
+
 {{< intro >}}
 
 Adopter une stack de développement Web moderne pour pouvoir
@@ -106,9 +107,9 @@ que de se reposer sur des règles de réécritures complexes d’URLs côté ser
 pour que votre contenu soit accessible via des URLS lisibles
 (`example.com/?p=12345` → `example.com/clair-et-net/`), vos URLs sont ce que
 vous voulez qu'elles soient : elles reflètent simplement l’emplacement des
-fichiers de votre site\[^1\].
+fichiers de votre site[^1].
 
-\[^1\]: NdT. Les URLs peuvent être également définies dans les métadonnées des fichiers de contenu.
+[^1]: NdT. Les URLs peuvent être également définies dans les métadonnées des fichiers de contenu.
 
 Le risque de duplication de contenus est également très réduit. Beaucoup de CMS
 génèrent automatiquement des pages pour les catégories, les tags et les archives
@@ -146,8 +147,8 @@ avec
 ont montré que même avec un site dynamique très optimisé (et une solide
 stratégie de cache), le temps de début de chargement était en moyenne **six fois
 plus rapide** avec une version statique distribuée via CDN. Smashing Magazine
-ont d’ailleurs \[migré vers la JAMstack et Netlify\]({{< relref
-"smashing-mag-va-dix-fois-plus-vite.md" >}}) à l’occasion de leur refonte.
+ont d’ailleurs [migré vers la JAMstack et Netlify]({{< relref
+"post/smashing-mag-va-dix-fois-plus-vite.md" >}}) à l’occasion de leur refonte.
 
 La mise en cache s'en retrouve grandement simplifiée. Avec WordPress (ou
 n'importe quel CMS dynamique) les URLs peuvent retourner différents contenus en
