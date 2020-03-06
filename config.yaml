@@ -79,10 +79,10 @@ params:
   description: Sites statiques et architectures découplées
   email: contact@jamstatic.fr
   author:
-      name: Frank Taillandier
-      url: https://frank.taillandier.me
-      avatar: https://github.com/DirtyF.png
-      GitHub: DirtyF
+    name: Frank Taillandier
+    url: https://frank.taillandier.me
+    avatar: https://github.com/DirtyF.png
+    GitHub: DirtyF
   social:
     twitter: jamstatic_fr
     GitHub: jamstatic
@@ -117,6 +117,6 @@ related:
       weight: 80
     - name: "keywords"
       weight: 80
-    - name : "date"
+    - name: "date"
       weight: 10
       pattern: "2006"
