@@ -4,7 +4,7 @@ Ce site se veut communautaire, toute contribution est la bienvenue. :smile:
 
 ## Proposer un article
 
-Ouvrez d'abord une issue si vous souhaitez [proposer un article](/issues/new) ou une traduction en rapport avec l'écosystème JAMstack et les générateurs de site statique.
+Ouvrez d'abord une issue si vous souhaitez [proposer un article](../../issues/new) ou une traduction en rapport avec l'écosystème JAMstack et les générateurs de site statique.
 
 ## Ajouter un article
 
@@ -23,7 +23,7 @@ hugo new post/mon-nouvel-article.md
 
 ## Soumettre un article à la relecture
 
-Une fois votre branche poussée sur votre fork, [ouvrez une pull request](/pulls) pour soumettre votre article à la relecture.
+Une fois votre branche poussée sur votre fork, [ouvrez une pull request](../../pulls) pour soumettre votre article à la relecture.
 
 Merci d'avance pour vos contributions !
 
