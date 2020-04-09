@@ -15,13 +15,16 @@
 <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ .Description }}{{ end }}"/>
 {{ hugo.Generator -}}
 {{- if .Site.IsServer }}
-{{- $cssOpts := (dict "targetPath" "assets/css/main.css" "enableSourceMap" true ) }}
-{{- $styles := resources.Get "scss/main.scss" | toCSS $cssOpts }}
-<link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+  {{- $cssOpts := (dict "targetPath" "assets/css/main.css" "enableSourceMap" true ) }}
+  {{- $styles := resources.Get "scss/main.scss" | toCSS $cssOpts }}
+  <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
 {{- else }}
-{{- $cssOpts := (dict "targetPath" "assets/css/main.css" ) }}
-{{- $styles := resources.Get "scss/main.scss" | toCSS $cssOpts | postCSS | minify | fingerprint }}
-<link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+{{ $CSSnakeday := (time "2020-04-10") }}
+{{ if $CSSnakeday.Equal now }}
+  {{- $cssOpts := (dict "targetPath" "assets/css/main.css" ) }}
+  {{- $styles := resources.Get "scss/main.scss" | toCSS $cssOpts | postCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+{{ end }}
 {{ end }}
 <link rel="alternate" href="{{ .Site.RSSLink | relURL }}" title="{{ .Site.Title }}" type="application/atom+xml">
 <link rel="alternate" href="{{ "feed.json" | relURL }}" title="{{ .Site.Title }}" type="application/json">
