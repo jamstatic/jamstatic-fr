@@ -5,18 +5,19 @@
     {{ $cats := first 8 (where site.Taxonomies.categories.ByCount "Count" ">" 3) }}
     {{ delimit (apply $cats "partial" "category-link" ".") " · " }}
   </nav>
-  <h1>Articles taggués <em>{{ .Title }}</em></h1>
+  <h1 class="center h2">Articles taggués <em class="tag cap">{{ .Title }}</em></h1>
 </div>
 
 <ul class="post-list">
   {{ range .Data.Pages }}
   <li class="post-item">
-    <span class="post-meta">{{ $mymonths := .Site.Data.mois }}{{ .Date.Day }} {{ index $mymonths (printf "%d" .Date.Month) }} {{ .Date.Year }}</span>
-    <h2 class="post-link"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-    <p class="post-description">{{ .Description }}</p>
+    <a href="{{ .RelPermalink }}">
+      <span class="post-meta">{{ $mymonths := .Site.Data.mois }}{{ .Date.Day }} {{ index $mymonths (printf "%d" .Date.Month) }} {{ .Date.Year }}</span>
+      <h2 class="post-link">{{ .Title }}</h2>
+      <p class="post-description">{{ .Description }}</p>
+    </a>
   </li>
   {{ end }}
 </ul>
 
 {{ end }}
-

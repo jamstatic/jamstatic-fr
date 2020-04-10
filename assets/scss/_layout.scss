@@ -152,13 +152,12 @@ body {
   }
 
   h1 {
-    margin-bottom: 0;
+    margin: ($base-line * 2) 0;
   }
 
-  em {
+  .tag {
     font-style: normal;
-    padding: $spacing-unit/($ratio*4);
-    background: rgba($grey-light, .05);
+    color: $brand-color;
   }
 }
 
