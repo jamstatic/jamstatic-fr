@@ -80,7 +80,7 @@ Une fois que tout vous semble bon et que le déploiement Netlify se déroule cor
 
 Netlify CMS se compose d’une [application web monopage](https://fr.wikipedia.org/wiki/Application_web_monopage) (NDT : en anglais _single-page application_ ou SPA) construite avec React qui réside dans un dossier admin de votre site. Pour Jekyll, il doit être placé à la racine du site. Il contiendra deux fichiers :
 
-```
+```text
 admin
 ├ index.html
 └ config.yml

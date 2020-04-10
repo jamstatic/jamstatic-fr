@@ -589,6 +589,5 @@ Nous avons vu qu'Hugo offre une solution de localisation très simple et très e
 
 Si vous avez été amenés à gérer des projets multilingues plus complexes que ceux présentés ici, si vous pensez pouvoir enrichir cet article ou que vous avez vérifié le nombre exact de souris présentes dans Cendrillon[^2], [faite-le savoir en commentaire](https://regisphilibert.com/blog/2018/08/hugo-multilingual-part-2-i18n-string-localization/#disqus_thread).
 
-[^1]: <http://www.unicode.org/cldr/charts/33/supplemental/language_plural_rules.html>
-
 [^2]: Evidemment, j'ai pris un nombre au pif !
+[^1]: <http://www.unicode.org/cldr/charts/33/supplemental/language_plural_rules.html>
