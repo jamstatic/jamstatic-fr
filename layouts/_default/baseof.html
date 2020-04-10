@@ -15,7 +15,7 @@
 
 {{- partialCached "site/footer" . -}}
 
-{{ if and .IsHome (eq (getenv "HUGO_ENV") "production") }}
+{{ if and .IsHome hugo.IsProduction }}
   {{- partial "search.html" . -}}
 {{ else }}
  {{- partial "site/scripts" . -}}
