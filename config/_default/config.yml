@@ -8,7 +8,7 @@ permalinks:
 footnoteReturnLinkContents: "↩"
 
 build:
-  useResourceCacheWhen: always
+  useResourceCacheWhen: fallback
 
 module:
   imports:
