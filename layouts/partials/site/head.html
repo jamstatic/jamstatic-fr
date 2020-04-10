@@ -13,20 +13,20 @@
 {{- end }}
 <title>{{ block "title" . }}{{- if .IsHome }}{{ .Site.Params.Description }} · {{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} · {{ end }}{{ .Site.Title }}{{ end }}{{ end }}</title>
 <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ .Description }}{{ end }}"/>
-{{ hugo.Generator -}}
+{{- hugo.Generator }}
 {{- if .Site.IsServer }}
-  {{- $cssOpts := (dict "targetPath" "assets/css/main.css" "enableSourceMap" true ) }}
-  {{- $styles := resources.Get "scss/main.scss" | toCSS $cssOpts }}
+  {{- $cssOpts := (dict "targetPath" "assets/css/main.css" "enableSourceMap" true) -}}
+  {{- $styles := resources.Get "scss/main.scss" | toCSS $cssOpts -}}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
 {{- else if hugo.IsProduction -}}
   {{- $cssOpts := (dict "targetPath" "assets/css/main.css") -}}
   {{- $styles := resources.Get "scss/main.scss" | toCSS $cssOpts | postCSS | minify | fingerprint | resources.PostProcess -}}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" media="print" onload="this.media='all'">
 {{- else }}
-  {{- $cssOpts := (dict "targetPath" "assets/css/main.css" ) }}
   {{- $styles := resources.Get "scss/main.scss" | toCSS $cssOpts | postCSS | minify | fingerprint }}
+  {{- $cssOpts := (dict "targetPath" "assets/css/main.css") -}}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
-{{ end }}
+{{- end }}
 <link rel="alternate" href="{{ .Site.RSSLink | relURL }}" title="{{ .Site.Title }}" type="application/atom+xml">
 <link rel="alternate" href="{{ "feed.json" | relURL }}" title="{{ .Site.Title }}" type="application/json">
 <link rel="alternate" href="https://jamstatic-bookmarks.herokuapp.com/feed/bookmarks" title="JAMstatic bookmarks" type="application/atom+xml">
