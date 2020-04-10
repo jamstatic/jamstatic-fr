@@ -1,0 +1,91 @@
+baseURL: /
+title: JAMstatic
+DefaultContentLanguage: fr
+languageCode: fr-fr
+disablePathToLower: true
+permalinks:
+  post: /:year/:month/:day/:filename/
+footnoteReturnLinkContents: "↩"
+
+build:
+  useResourceCacheWhen: always
+
+module:
+  imports:
+    - path: github.com/jygastaud/hugo-microtypo/microtypo
+      disable: false
+
+blackfriday:
+  angledQuotes: true
+  smartypantsQuotesNBSP: true
+
+pygmentsCodefences: true
+pygmentsUseClasses: true
+
+mediaTypes:
+  "text/netlify":
+    delimiter: ""
+
+disableKinds:
+  - section
+  - taxonomyTerm
+
+# Redirections over to Netlify
+disableAliases: true
+
+taxonomies:
+  category: categories
+
+outputs:
+  home:
+    - html
+    - rss
+  page:
+    - html
+
+params:
+  title: JAMstatic
+  description: Sites statiques et architectures découplées
+  email: contact@jamstatic.fr
+  author:
+    name: Frank Taillandier
+    url: https://frank.taillandier.me
+    avatar: https://github.com/DirtyF.png
+    GitHub: DirtyF
+  social:
+    twitter: jamstatic_fr
+    GitHub: jamstatic
+  ghrepo: https://github.com/jamstatic/jamstatic-fr/
+  branch: master
+  images:
+    - "assets/images/twitter-card.png"
+  algolia:
+    vars:
+      - title
+      - description
+      - summary
+      - date
+      - publishdate
+      - expirydate
+      - permalink
+      - relpermalink
+    params:
+      - categories
+    appId: TLI4UDRZDR
+    indexName: jamstatic
+    searchOnlyApiKey: 5af8d385eec1e00ac16d0963c630b6ac
+
+related:
+  threshold: 80
+  includeNewer: true
+  toLower: false
+  indices:
+    - name: "categories"
+      weight: 80
+    - name: "tags"
+      weight: 80
+    - name: "keywords"
+      weight: 80
+    - name: "date"
+      weight: 10
+      pattern: "2006"
