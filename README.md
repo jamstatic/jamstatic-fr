@@ -21,6 +21,42 @@ Vous pouvez aussi nous aider nous à constituer une liste de [sites statiques fr
 
 ## Développement
 
+Le site est développé avec [Hugo](https://gohugo.io).
+
+Pour installer Hugo sur macOS:
+
+```
+brew install hugo
+```
+
+Pour clôner le dépôt sur sa machine:
+
+```sh
+git clone https://github.com/jamstatic/jamstatic-fr.git
+```
+
+Pour créer un nouvel article:
+
+```sh
+git switch ---create post/nouvel-article
+
+hugo new post/nouvel-article.md
+```
+
+### Prévisualiser en local
+
+```sh
+hugo server -D --environment development
+```
+
+### Ouvrir une pull request
+```sh
+git commit -am "chore: nouvel article"
+gh pr create
+
+## Production
+
+
 Chaque commit dans la branche `master` génère un déploiement en production.
 
 Si vous souhaitez contribuer, proposer des articles, vous pouvez ouvrir une
