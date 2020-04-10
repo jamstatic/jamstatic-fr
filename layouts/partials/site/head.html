@@ -18,6 +18,10 @@
   {{- $cssOpts := (dict "targetPath" "assets/css/main.css" "enableSourceMap" true ) }}
   {{- $styles := resources.Get "scss/main.scss" | toCSS $cssOpts }}
   <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+{{- else if hugo.IsProduction -}}
+  {{- $cssOpts := (dict "targetPath" "assets/css/main.css") -}}
+  {{- $styles := resources.Get "scss/main.scss" | toCSS $cssOpts | postCSS | minify | fingerprint | resources.PostProcess -}}
+  <link rel="stylesheet" href="{{ $styles.Permalink }}" media="print" onload="this.media='all'">
 {{- else }}
   {{- $cssOpts := (dict "targetPath" "assets/css/main.css" ) }}
   {{- $styles := resources.Get "scss/main.scss" | toCSS $cssOpts | postCSS | minify | fingerprint }}
