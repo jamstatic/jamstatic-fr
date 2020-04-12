@@ -32,7 +32,7 @@ relationnelles pour gérer leurs contenus, et de pages dynamiques pour répondre
 aux contributions de leurs utilisateurs, beaucoup de sites plus simples
 peuvent se contenter de servir du HTML pré-compilé, c'est généralement une solution beaucoup moins onéreuse et bien plus sécurisée.
 
-La [JAMstack](https://www.jamstack.org) (JavaScript, APIs réutilisables et
+La [Jamstack](https://www.jamstack.org) (JavaScript, APIs réutilisables et
 Markup préparé à l'avance) est un terme marketing populaire qui désigne cette
 nouvelle manière d'architecturer des sites web, et en un sens c'est un retour
 aux débuts du web, avant que les développeurs ne commencent à bricoler avec des scripts CGI ou PHP. En réalité mon site web a toujours servi du HTML pré-compilé : d'abord à l'aide de [Movable Type](https://movabletype.org), et puis récemment avec celle de [Jekyll](https://jekyllrb.com), à propos duquel [Anna écrivait en 2013](https://24ways.org/2013/get-started-with-github-pages/).

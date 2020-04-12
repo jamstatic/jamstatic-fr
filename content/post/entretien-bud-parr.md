@@ -3,19 +3,19 @@ title: Entretien avec Bud Parr de The New Dynamic
 date: 2017-11-27
 description: >
   Bud Parr, créateur et gérant de l’agence The New Dynamic, partage son expérience
-  et sa vision sur l’écosystème actuel de la JAMstack.
+  et sa vision sur l’écosystème actuel de la Jamstack.
 images:
   - https://github.com/budparr.png
 source:
   lang: en
-  title: Interview with Bud Parr, JAMstack engineer
+  title: Interview with Bud Parr, Jamstack engineer
   url: https://www.thenewdynamic.org/article/interview-bud-parr/
 ---
 
 Bud Parr est impliqué dans la communauté qui gravite autour des générateurs de
 site statique depuis plusieurs années. Il possède
 [sa propre agence](https://www.thenewdynamic.com/) et agrège sa curation autour
-de l’écosystème de la JAMstack sur
+de l’écosystème de la Jamstack sur
 [thenewdynamic.org](https://thenewdynamic.org). Bud organise également des
 [meetups à New-York](http://www.meetup.com/the-new-dynamic/) et il est également
 à l’origine du récent redesign du [site d’Hugo](https://gohugo.io/). Il a
@@ -55,7 +55,7 @@ Peter Levine, un des associés d’Andreessen Horowitz, fait également ce const
 lorsqu'il écrit :
 [<q>Il y a plus de 300 millions de sites Web déployés chaque année, la plupart de ces sites et applications Web pourraient être hébergées chez Netlify</q>](https://a16z.com/2017/08/09/netlify/).
 Par Netlify, il sous-entend déployé en statique ou basé sur la
-[JAMstack](https://jamstack.org/). Il me semble que nous sommes encore loin du
+[Jamstack](https://jamstack.org/). Il me semble que nous sommes encore loin du
 compte.
 
 Divisons le Web en trois grandes catégories : le Web développé par des
@@ -94,13 +94,13 @@ services et des produits et faire des choses plus sophistiquées.
 [Smashing Magazine](https://www.smashingmagazine.com/) est un des parfaits
 derniers exemples en date. C’est un site complet avec beaucoup de contenus, de
 la vente en ligne, un espace membre, etc. C’est vraiment une chouette vitrine
-pour la JAMstack.
+pour la Jamstack.
 
 ## Mais alors pourquoi les agences n'adoptent-elles pas ce processus de travail ?
 
 C’est difficile à dire pour moi, vu que j'ai choisi de travailler _uniquement_
 de cette façon. J'imagine que tout le monde n'a pas encore conscience des
-possibilités offertes. Je lis encore souvent que la JAMstack, c'est juste bon
+possibilités offertes. Je lis encore souvent que la Jamstack, c'est juste bon
 pour les sites vitrines et les blogs, cette idée reçue est encore tenace. Partir
 sur les CMS les plus utilisés c'est la sécurité, même si ce n'est pas forcément
 la bonne solution. Quand un client me dit "Je veux un site WordPress", ce que je
@@ -151,7 +151,7 @@ Par exemple, pour le projet [www.retroreport.org](https://www.retroreport.org/)
 que j'ai réalisé avec Hugo, je me suis reposé sur les
 [formats d’export personnalisés d’Hugo](https://gohugo.io/templates/output-formats/)
 pour générer des versions alternatives du contenu dans des fichiers JSON pour le
-lecteur vidéo. La JAMstack est parfaitement indiquée pour ce projet, car le site
+lecteur vidéo. La Jamstack est parfaitement indiquée pour ce projet, car le site
 subit de forts pics de charge quand une des vidéos devient virale sur le Web et
 il est rassurant de savoir que nous n'aurons pas à nous soucier de la latence
 lorsque ces pics de charge aléatoires se produisent.
@@ -170,12 +170,12 @@ peut publier les changements suite à leurs retours.
 
 ## Que souhaites-tu pour cette stack Web moderne à court terme ?
 
-Je pense que le découplage qu'induit naturellement la JAMstack peut perturber
+Je pense que le découplage qu'induit naturellement la Jamstack peut perturber
 ceux qui ne sont pas encore familiers avec le concept. Et il n'y a pas vraiment
 d’acteur dominant qui impose une "manière standard de faire", comme le font
 React ou Angular dans le domaine du développement de _Single Page Applications_.
 Je trouve que Netlify a fait un super boulot de vulgarisation, en nommant le
-concept et en faisant la promotion de la JAMstack, mais de ce que je peux
+concept et en faisant la promotion de la Jamstack, mais de ce que je peux
 observer, les gens sont encore assez désorientés, ils ne savent pas trop par où
 commencer ni quel serait le meilleur outil à utiliser dans leur cas de figure.
 J'aimerais donc que les gens puissent se familiariser davantage avec cet

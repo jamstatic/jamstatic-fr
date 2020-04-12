@@ -1,14 +1,14 @@
 ---
-title: "Les startups de l’écosystème JAMstack"
+title: "Les startups de l’écosystème Jamstack"
 date: 2018-05-31T20:21:08+02:00
-description: "Les capital risqueurs de la Silicon Valley misent sur les startups qui forment l'écosytème de la JAMstack."
+description: "Les capital risqueurs de la Silicon Valley misent sur les startups qui forment l'écosytème de la Jamstack."
 categories:
   - jamstack
 images:
   - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1527850625/jamstack-landscape.png
 source:
   author: "CRV"
-  title: "The JAMstack Startup Landscape"
+  title: "The Jamstack Startup Landscape"
   url: "https://medium.com/@CRVVC/the-jamstack-startup-landscape-c06cc3cdb917"
 ---
 
@@ -67,7 +67,7 @@ Quelle que soit votre idéologie — les clients lourds/légers, les Single Page
 Applications (SPA) avec rendu côté serveur, les sites dynamiques/statiques — la
 manière dont la partie cliente est développée est en train de changer
 
-## L'histoire de la JAMstack
+## L'histoire de la Jamstack
 
 Les sites dynamiques ont pris le pas sur les sites statiques, car ils
 proposaient plus d'interactivité et de personnalisation, cela n'allait pas sans
@@ -79,14 +79,14 @@ comme [Disqus](https://disqus.com/) ou [Algolia](https://www.algolia.com/), nous
 avons l'opportunité de revenir à la simplicité des sites web statiques. Pour
 faire passer le message aux développeurs, des gens comme Matt Biilmann, le
 créateur et le CEO de [Netlify](https://netlify.com/), ont diffusé le concept de
-la JAMstack: une approche différente, _serverless_ pour développer des sites web
+la Jamstack: une approche différente, _serverless_ pour développer des sites web
 modernes et performants. JAM signifie JavaScript, APIs et Markup et l'idée
 centrale est de ne plus avoir à gérer ses propres serveurs, d'héberger le code
 sur des CDNs rapides, fiables et sécurisés et de faire interagir les navigateurs
-avec les APIs qui peuvent s'occuper des composants « dynamiques ». La JAMstack
+avec les APIs qui peuvent s'occuper des composants « dynamiques ». La Jamstack
 personnifie toutes les tendances soulignées plus haut.
 
-## Le paysage de la JAMstack
+## Le paysage de la Jamstack
 
 Cette image illustre le paysage florissant des startups avec quelques projets
 open source et des membres clés de la communauté, qui profitent des tendances
@@ -99,7 +99,7 @@ mentionnées plus haut.
 Il en résulte des sites plus sécurisés, des déploiements et des temps de
 chargement plus rapides, moins onéreux et plus faciles à gérer. Ça a l'air trop
 beau pour être vrai ? Contrairement à la stack LAMP, il n'y a pas de base de
-données dans la JAMstack, donc moins d'appels aux backend et une surface
+données dans la Jamstack, donc moins d'appels aux backend et une surface
 d'attaque réduite. Les sites web (comme ceux développés avec WordPress) ont
 particulièrement été la cible d'attaques malveillantes, mais en l'absence de
 base de données et de plugins, les menaces sont considérablement réduites.
@@ -148,7 +148,7 @@ d'origine ce qui vous permettra d'avoir des applications plus rapides.
 Les tendances du développement frontend et le changement architectural qui en
 résulte est très prometteur pour l'écosystème des startups et des
 capital-risqueurs. [CRV](https://www.crv.com/) aime prendre des risques au plus
-tôt, et a déjà investi dans 6 startups qui font partie du paysage de la JAMstack
+tôt, et a déjà investi dans 6 startups qui font partie du paysage de la Jamstack
 (dont 3 qui seront annoncées publiquement très bientôt). Si vous êtes un
 créateur de startup lié à cet écosystème, un investisseur ou que vous voulez
 simplement papoter, écrivez à reid@crv.com.

@@ -1,5 +1,5 @@
 ---
-title: "Passer au statique : 5 raisons de tester la JAMstack sur votre prochain projet"
+title: "Passer au statique : 5 raisons de tester la Jamstack sur votre prochain projet"
 description:
   Référencement, performance, sécurité, automatisation, communauté grandissante,
   les raisons de passer au statique ne manquent pas.
@@ -7,7 +7,7 @@ date: 2017-03-16
 commments: true
 source:
   author: Tom Bennet
-  title: "Go static: 5 reasons to try JAMstack on your next project"
+  title: "Go static: 5 reasons to try Jamstack on your next project"
   url: https://builtvisible.com/go-static-try-jamstack/
   lang: ""
 categories:
@@ -24,7 +24,7 @@ keywords: []
 
 Adopter une stack de développement Web moderne pour pouvoir
 générer des sites statiques présente bien des avantages et Tom Bennet en a listé
-cinq des principaux. Si vous n'aviez encore jamais entendu parlé de la JAMstack,
+cinq des principaux. Si vous n'aviez encore jamais entendu parlé de la Jamstack,
 cet article donne un aperçu global du processus et de l’écosystème actuel ainsi
 que des gains engendrés. Vous trouverez également des lectures pour approfondir
 votre connaissance sur le sujet.
@@ -43,16 +43,16 @@ mouvement.
 Avant d’expliquer plus en détail _pourquoi_, commençons déjà par regarder de
 _quoi_ on parle.
 
-## JAMstack et développement statique
+## Jamstack et développement statique
 
-Le terme **JAMstack** désigne la stack JavaScript, APIs et Markup et une manière
+Le terme **Jamstack** désigne la stack JavaScript, APIs et Markup et une manière
 de construire des sites Web statiques sans base de données. Ce concept est
 _vraiment tout bête_ — le mot "statique" sous-entend de la simplicité ou un
 manque d’interactivité, mais c'est loin d’être le cas. Quand on parle de sites
 statiques, on fait surtout référence aux technologies utilisées pour les
 générer, les mettre en ligne et les héberger.
 
-Le truc vraiment puissant c'est que le développement avec la JAMstack est bien
+Le truc vraiment puissant c'est que le développement avec la Jamstack est bien
 plus simple à appréhender que le développement de sites dynamiques à base de
 CMS. Il est facile d’oublier le nombre d’étapes nécessaires pour satisfaire une
 simple requête de page et la complexité des opérations qui sont menées
@@ -82,7 +82,7 @@ et que le développement front-end est dominé par JavaScript et les
 automatisations à l’aide de `npm`, n'avons-nous pas déjà dépassé ce modèle ?
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346591/diagram-ssg.png"
-caption="Un site Web statique développé à l’aide d’un processus basé sur la JAMstack" >}}
+caption="Un site Web statique développé à l’aide d’un processus basé sur la Jamstack" >}}
 
 Les générateurs de site statique comme Jekyll et Hugo permettent de rendre cela
 possible. Ils nous servent essentiellement de système de templating à la place
@@ -102,7 +102,7 @@ moteurs de recherche et tous ne sont pas forcément toujours appréciés à leur
 juste valeur.
 
 Premièrement, la simplification des URLs et de l’architecture du site est
-souvent plus simple avec la JAMstack qu'avec un site dynamique et un CMS. Plutôt
+souvent plus simple avec la Jamstack qu'avec un site dynamique et un CMS. Plutôt
 que de se reposer sur des règles de réécritures complexes d’URLs côté serveur
 pour que votre contenu soit accessible via des URLS lisibles
 (`example.com/?p=12345` → `example.com/clair-et-net/`), vos URLs sont ce que
@@ -147,7 +147,7 @@ avec
 ont montré que même avec un site dynamique très optimisé (et une solide
 stratégie de cache), le temps de début de chargement était en moyenne **six fois
 plus rapide** avec une version statique distribuée via CDN. Smashing Magazine
-ont d’ailleurs [migré vers la JAMstack et Netlify]({{< relref
+ont d’ailleurs [migré vers la Jamstack et Netlify]({{< relref
 "post/smashing-mag-va-dix-fois-plus-vite.md" >}}) à l’occasion de leur refonte.
 
 La mise en cache s'en retrouve grandement simplifiée. Avec WordPress (ou
@@ -185,7 +185,7 @@ gratuitement grâce à des autorités de certification automatisées comme
 
 ## 4. Déploiement & Workflow
 
-Une fois que vous avez travaillé sur un site Web avec la JAMstack — que vous
+Une fois que vous avez travaillé sur un site Web avec la Jamstack — que vous
 avez déployé des mises à jour et publié des contenus régulièrement — vous
 commencez à ressentir le potentiel disruptif de cette manière de développer. Ça
 évolue rapidement et on peut parfois se sentir un peu comme dans le Far West,
@@ -193,7 +193,7 @@ avec tous ces nouveaux outils et ces nouveaux services qui arrivent tous les
 jours, mais ne vous y trompez pas : c'est puissant, flexible, on a atteint le
 stade de la maturité.
 
-Un des principes de base du développement avec la JAMstack c'est que tout vit
+Un des principes de base du développement avec la Jamstack c'est que tout vit
 dans un dépôt Git, que ce soit les composants de notre site statique, les
 fichiers de configuration de notre générateur, nos fichiers CSS et JS, nos
 contenus écrits (sauvegardés sous forme de documents Markdown en texte brut).
@@ -278,7 +278,7 @@ veut dire **fini les htaccess**).
 ## Est-ce que c'est fait pour moi ?
 
 Bien entendu, il y a plein de sites Web pour lesquels le développement avec la
-JAMstack n'est pas approprié. Il y a également des problèmes légitimes et
+Jamstack n'est pas approprié. Il y a également des problèmes légitimes et
 quelques obstacles — auxquels vous ferez face même sur de tous petits projets —
 qui doivent être surmontés. Et plus particulièrement les services destinés aux
 utilisateurs non techniques et aux éditeurs de contenu doivent être encore plus
@@ -307,10 +307,10 @@ leur apparition un peu plus chaque jour.
 
 - Critiques de générateurs de site statique : Jekyll, Middleman, Hugo– [Smashing Magazine](https://www.smashingmagazine.com/2015/11/static-website-generators-jekyll-middleman-roots-hugo-review/)
 - Utilisation d’un générateur de site statique à grande échelle : leçons apprises – [Smashing Magazine](https://www.smashingmagazine.com/2016/08/using-a-static-site-generator-at-scale-lessons-learned/)
-- JAMstack pour les clients : bénéfices, CMS pour site statique et limitations – [Snipcart](https://snipcart.com/blog/jamstack-clients-static-site-cms)
+- Jamstack pour les clients : bénéfices, CMS pour site statique et limitations – [Snipcart](https://snipcart.com/blog/jamstack-clients-static-site-cms)
 - Passez au statique sans perdre votre serveur – [Netlify](https://www.netlify.com/blog/2016/03/10/go-static-without-losing-your-server/)
 - C’est quoi un CMS headless ? – [CSS-Tricks](https://css-tricks.com/what-is-a-headless-cms/)
 - Gestionnaires de contenus pour sites statiques – [headlesscms.org](https://headlesscms.org/)
-- JAMstack | JavaScript, APIs et Markup – [jamstack.org](https://jamstack.org/)
+- Jamstack | JavaScript, APIs et Markup – [jamstack.org](https://jamstack.org/)
 - Générateurs de site statique open-source – [staticgen.com](https://www.staticgen.com/)
 - {static is} The New Dynamic – [thenewdynamic.org](https://www.thenewdynamic.org/)

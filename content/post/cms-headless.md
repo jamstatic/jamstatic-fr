@@ -9,7 +9,7 @@ images:
   - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346947/headless-cms-logos.png
 ---
 
-Dans les architectures [JAMstack]({{< relref
+Dans les architectures [Jamstack]({{< relref
 "5-raisons-de-tester-la-jamstack/" >}}), chaque service est assuré par un
 outil spécifique qui va se contenter de faire une chose et une seule, si
 possible de son mieux. L'édition de contenus pourra par exemple être confiée à
@@ -18,7 +18,7 @@ WordPress ou Drupal ne sera pas chargé de la gestion des modèles, puisque c'es
 le rôle du générateur de site statique, ni du rendu, puisque les pages HTML
 générées seront ensuite directement servies depuis un CDN.
 
-Si les architectures JAMstack sont très [performantes]({{< relref
+Si les architectures Jamstack sont très [performantes]({{< relref
 "smashing-mag-va-dix-fois-plus-vite.md" >}}), il n'en reste pas moins que tous
 les intervenants doivent pouvoir contribuer au produit quel que soit leur
 profil. Une interface conviviale pour l’édition de contenus est donc un passage
@@ -80,7 +80,7 @@ partie cachée, le back, pas de la partie visible — la tête est coupée comme
 suggère le terme anglophone _headless_, d’ici à parler de révolution, il n'y a
 qu'un pas. Tout se recoupe !
 
-Si vous suivez de près ce qui se passe autour des architectures JAMstack, vous
+Si vous suivez de près ce qui se passe autour des architectures Jamstack, vous
 n'aurez pas manqué de constater que des CMS headless il y en a de plus en plus,
 et ce n'est pas prêt de s'arrêter vu la popularité croissante des architectures
 découplées, et de tous ces termes à la mode comme "microservices" ou

@@ -1,5 +1,5 @@
 ---
-title: "Oubliez Docker, le futur c'est la JAMstack"
+title: "Oubliez Docker, le futur c'est la Jamstack"
 date: 2018-12-07T01:21:13+01:00
 lastmod: 2018-01-26T01:09:11+01:00
 description: À l'heure où les entreprises se débattent pour devenir plus agiles et rester pertinentes, elles peuvent compter sur les dernières évolutions des technologies.
@@ -9,7 +9,7 @@ images:
   - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1548402220/jamstatic/1_uD1IkSE1cwF1Yr_njKu9qA.png
 source:
   author: "Mike Carlisle"
-  title: "Forget Docker, the future is JAMstack"
+  title: "Forget Docker, the future is Jamstack"
   url: "https://hackernoon.com/forget-docker-the-future-is-jamstack-aae5bcaf4616"
 ---
 
@@ -21,10 +21,10 @@ La popularité croissante des architectures décentralisées s'explique par l'é
 
 À l'heure où les entreprises se débattent pour devenir plus agiles et rester
 pertinentes, elles peuvent compter sur les dernières évolutions des
-technologies. Oubliez Docker, JAMstack marque la prochaine évolution du
+technologies. Oubliez Docker, Jamstack marque la prochaine évolution du
 développement web moderne.
 
-JAMstack c'est pour JavaScript, APis et Markup. C'est la merveilleuse union de
+Jamstack c'est pour JavaScript, APis et Markup. C'est la merveilleuse union de
 technologies modernes, du logiciel _as a service_ et des langages au coeur des
 fondations du web. Cette stack procure :
 
@@ -41,13 +41,13 @@ Le fait de devoir gérer et maintenir soi-même sa propre infrastructure
 appartiendra bientôt au passé.
 
 Si votre coeur de métier n'est pas de fournir des services dans le Cloud, cet
-article vous explique pourquoi la JAMstack devrait devenir votre première
+article vous explique pourquoi la Jamstack devrait devenir votre première
 préoccupation si vous tenez à fournir un avantage stratégique et une agilité
 accrue à la majorité de vos activités en ligne.
 
-### La JAMstack ?
+### La Jamstack ?
 
-La JAMstack c'est en partie du JavaScript et du code généré qui peuvent être
+La Jamstack c'est en partie du JavaScript et du code généré qui peuvent être
 hébergés en statique n'importe où. Elle est parfaitement complémentaire avec les
 technologies serverless et peut faire appel à des fonctions serverless exécutées
 dans le Cloud. Les serveurs d'applications traditionnelles sont en passe d'être
@@ -68,7 +68,7 @@ Il est possible de déclencher des modifications à partir de n'importe quel
 service en aval grâce à des webhooks et de générer une nouvelle version en
 quelques secondes après avoir récupéré le contenu mis à jour.
 
-Bien que les applications JAMstack soient hébergées de manière statique, cela ne
+Bien que les applications Jamstack soient hébergées de manière statique, cela ne
 veut pas dire qu'elles n'en sont pas moins dynamiques ou interactives que des
 pages dont le rendu est effectué côté serveur. Ces applications peuvent être
 conçues pour interagir avec des APIs web côté client et peuvent fournir du
@@ -80,11 +80,11 @@ Des fonctions exécutées depuis le Cloud peuvent fournir des capacités de
 services additionnelles au besoin, et peuvent être elles aussi être écrites en
 JavaScript.
 
-![Exemple d'architecure JAMstack](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1548402220/jamstatic/1_uD1IkSE1cwF1Yr_njKu9qA.png)
+![Exemple d'architecure Jamstack](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1548402220/jamstatic/1_uD1IkSE1cwF1Yr_njKu9qA.png)
 
-### Pourquoi la JAMstack ?
+### Pourquoi la Jamstack ?
 
-Un application JAMstack réduit les dépendances nécessaires lors de l'exécution
+Un application Jamstack réduit les dépendances nécessaires lors de l'exécution
 pour des performances, une fiabilité, une capacité de montée en charge et une
 sécurité maximales. En effet comme elles n'ont pas besoin de serveurs
 d'application dédiés pour servir les pages, cela réduit considérablement la
@@ -92,7 +92,7 @@ surface d'attaque possible. Le contenu statique est extrêmement facile à mettr
 en cache et à distribuer via un fournisseur d'accès au Cloud. Vous ne dépendez
 pas d'un fournisseur en particulier.
 
-Les entreprises peuvent développer des solutions à l'aide de la JAMstack pour se
+Les entreprises peuvent développer des solutions à l'aide de la Jamstack pour se
 lancer plus rapidement sur le marché et ce à moindre coût. C'est dû au fait
 qu'il y a besoin de beaucoup moins de ressources pour gérer et maintenir
 l'application en production et en développement. Une petite équipe agile
@@ -102,7 +102,7 @@ il s'agit de publier pour le web.
 
 Dans les applications traditionnelles, les mises à jour de dépendances se font
 généralement sur le serveur. Cela augment le risque d'interruption. Avec la
-JAMstack comme tout se fait en aval, il y a beaucoup moins de chances que
+Jamstack comme tout se fait en aval, il y a beaucoup moins de chances que
 quelque chose puisse impacter les utilisateurs finaux — et encore moins si les
 générations sont testées automatiquement avant la mise en production.
 
@@ -114,9 +114,9 @@ bases de données SQL. Plus besoin d'une infrastructure disponible en permanence
 pour effectuer du rendu côté serveur à l'aide de langages compilés comme Java ou
 .NET.
 
-Une architecture JAMstack n'est jamais aussi performante que lorsqu'elle utilise
+Une architecture Jamstack n'est jamais aussi performante que lorsqu'elle utilise
 les services d'un hébergeur spécialisé comme Netlify. Netlify est une
-plate-forme complète de Cloud pour les architectures JAMstack, qui se connecte
+plate-forme complète de Cloud pour les architectures Jamstack, qui se connecte
 directement à votre dépôt de code. Chaque sauvegarde permet d'à la fois
 versionner et déployer votre application et ses fonctions de support dans le
 Cloud sur votre environnement de production en quelques secondes.
@@ -145,7 +145,7 @@ Depuis les offres de services ont évolué et les solutions adaptatives du Cloud
 entièrement gérées et maintenues pour une fraction du prix ont changé la donne.
 Prismic et Contentful sont des exemples de solutions de CMS découplés qui
 offrent des APIs web hautement interopérables. Plus besoin des compétences d'un
-expert maison, ces services s'intègrent facilement à une architecture JAMstack,
+expert maison, ces services s'intègrent facilement à une architecture Jamstack,
 quelle que soit la technologie choisie.
 
 Sur le même principe, presque n'importe quelle fonctionnalité peut être lancée
@@ -169,7 +169,7 @@ Les commodités, c'est quand des produits sont disponibles à grande échelle, e
 
 Ici le terme commodité fait référence à [la technique de cartographie de Wardley](https://medium.com/wardleymaps) et décrit la façon dont les produits évoluent : de leur genèse à des solutions sur mesure, puis à des produits et enfin à des commodités. Parmi les composants de la topologie d'un business qui favorisent l'évolution des process, et en fonction de leur valeur pour le client, vous pouvez établir une stratégie et décider sur quoi votre entreprise doit porter ses efforts afin de vous focaliser uniquement sur votre canal de vente.
 
-Avec la JAMstack, on tire parti des services du Cloud comme suit :
+Avec la Jamstack, on tire parti des services du Cloud comme suit :
 
 - hébergement de fichiers statiques plutôt que des serveurs d'application,
 - intégration et déploiement dans le Cloud plutôt que chez soi en fonction de ses capacités,
@@ -195,13 +195,13 @@ entreprises à s'engouffrer dans de faux problèmes en se focalisant sur
 l'infrastructure et le déploiement, plutôt que de se défaire de ces dépendances
 qui peuvent s'avérer douloureuses à gérer.
 
-La JAMstack propose un modèle d'architecture efficace pour remplacer l'approche
+La Jamstack propose un modèle d'architecture efficace pour remplacer l'approche
 traditionnelle du développement web et permet à une petit équipe agile d'adopter
 un bon rythme. Plus besoin de se préoccuper de l'infrastructure et des serveurs.
 Elle encourage également l'intégration d'autres offres SaaS qui fournissent des
 APIs interopérables et s'affranchit des systèmes
 
-La JAMstack rend les mises à jour, le support et le redimensionnement de ses
+La Jamstack rend les mises à jour, le support et le redimensionnement de ses
 applications trivial. C'est l'assurance d'une agilité accrue et d'un lancement
 sur le marché plus rapide, avec de meilleures performances. Le monde de
 l'entreprise bouge lentement et ceux qui pourront s'adapter en tireront un

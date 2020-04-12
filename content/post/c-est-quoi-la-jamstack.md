@@ -1,11 +1,11 @@
 ---
-title: C'est quoi la JAMstack au juste ?
+title: C'est quoi la Jamstack au juste ?
 date: 2019-02-07 19:12:14 +0000
 lastmod: 2019-02-28 08:17:42 +0000
-description: Un petit pense-bête pour expliquer les concepts de la JAMstack et encourager davantage de personnes à adopter cette approche.
+description: Un petit pense-bête pour expliquer les concepts de la Jamstack et encourager davantage de personnes à adopter cette approche.
 source:
   author: Pedro Duarte
-  title: WTF is JAMstack?
+  title: WTF is Jamstack?
   url: https://jamstack.wtf/
 categories:
   - jamstack
@@ -13,19 +13,19 @@ categories:
 
 {{< intro >}}
 
-[Pedro Duarte](https://twitter.com/peduarte) a lancé [https://jamstack.wtf](https://jamstack.wtf) un mini-site afin de donner une vue d'ensemble de la JAMstack. Nous vous proposons ici sa traduction en français afin de permettre à toujours plus de développeurs d'adopter cette façon de travailler.
+[Pedro Duarte](https://twitter.com/peduarte) a lancé [https://jamstack.wtf](https://jamstack.wtf) un mini-site afin de donner une vue d'ensemble de la Jamstack. Nous vous proposons ici sa traduction en français afin de permettre à toujours plus de développeurs d'adopter cette façon de travailler.
 
 {{< /intro >}}
 
 ---
 
-La JAMstack révolutionne notre manière de travailler en proposant une expérience de développement plus simple, de meilleures performances, des coûts bien moins élevés et une grande scalabilité.
+La Jamstack révolutionne notre manière de travailler en proposant une expérience de développement plus simple, de meilleures performances, des coûts bien moins élevés et une grande scalabilité.
 
 Vous vous demandez peut-être ; oui OK, mais comment ? pourquoi ? c'est quoi au juste ?
 
 C'est la raison d'être de cette page [https://jamstack.wtf](https://jamstack.wtf/).
 
-Le but de ce guide est de présenter de manière claire le concept de la JAMstack et d'inciter d'autres développeurs à adopter cette approche.
+Le but de ce guide est de présenter de manière claire le concept de la Jamstack et d'inciter d'autres développeurs à adopter cette approche.
 
 Le contenu ci-dessous est tiré du site ci-dessus 👆
 
@@ -35,7 +35,7 @@ Asseyez-vous, mettez-vous à l'aise et appréciez ✌️
 
 **Sommaire**
 
-[C'est quoi la JAMstack ?](#c-est-quoi-la-jamstack)
+[C'est quoi la Jamstack ?](#c-est-quoi-la-jamstack)
 
 - [Signification](#signification)
   - [Bénéfices](#bénéfices)
@@ -52,7 +52,7 @@ Asseyez-vous, mettez-vous à l'aise et appréciez ✌️
 
 ---
 
-## C'est quoi la JAMstack ?
+## C'est quoi la Jamstack ?
 
 ### Signification
 
@@ -71,7 +71,7 @@ Les sites web sont servis sous forme de fichiers HTML statiques. Ces fichiers pe
 
 ### Bénéfices
 
-Les principaux bénéfices apportés par la JAMstack sont :
+Les principaux bénéfices apportés par la Jamstack sont :
 
 **Une performance accrue** \
 Servir du code généré et des assets à partir d'un CDN
@@ -119,7 +119,7 @@ Votre serveur est notifié lorsqu'une nouvelle génération est requise, typique
 
 ### Chaîne de publication
 
-Voici à quoi ressemblerait la chaîne de publication JAMstack idéale.
+Voici à quoi ressemblerait la chaîne de publication Jamstack idéale.
 
 ![](https://cdn-images-1.medium.com/max/800/1*iaJIWN-1jhRBTiVfmYYdlA.png)
 
@@ -129,13 +129,13 @@ Voici à quoi ressemblerait la chaîne de publication JAMstack idéale.
 Les générateurs statiques sont de plus en plus en vogue, grâce à des générateurs populaires comme Jekyll.
 
 **2016** \
-Quelques développeurs pensent que les sites statiques n'ont pas à être forcément statiques, le terme "JAMstack" fait son apparition.
+Quelques développeurs pensent que les sites statiques n'ont pas à être forcément statiques, le terme "Jamstack" fait son apparition.
 
 **2017** \
-La révolution du web moderne commence à prioriser la performance, le redimensionnement à la volée et l'expérience de développement. Le terme JAMstack est adopté par un groupe de développeurs plus important et les premières entreprises commencent à annoncer des projets basés sur la JAMstack.
+La révolution du web moderne commence à prioriser la performance, le redimensionnement à la volée et l'expérience de développement. Le terme Jamstack est adopté par un groupe de développeurs plus important et les premières entreprises commencent à annoncer des projets basés sur la Jamstack.
 
 **2018** \
-Des outils comme Netlify, Gatsby et Contentful contribuent à promouvoir le terme et la communauté grandit vite. C'est aussi l'année de la première conférence JAMstack.
+Des outils comme Netlify, Gatsby et Contentful contribuent à promouvoir le terme et la communauté grandit vite. C'est aussi l'année de la première conférence Jamstack.
 
 [Source: SnipCart](https://snipcart.com/blog/jamstack)
 
@@ -151,7 +151,7 @@ C'est à vous de décider comment générer vos fichiers HTML. Les trois approch
 Une méthode simple et efficace d'écrire du HTML, c'est idéal pour les pages super simples.
 
 **Générateurs de site statique** \
-La plupart des sites JAMstack sont propulsés par un générateur de site statique.
+La plupart des sites Jamstack sont propulsés par un générateur de site statique.
 Vous êtes libres de choisir votre GSS.
 
 - [Gatsby](https://www.gatsbyjs.org/)
@@ -179,19 +179,19 @@ Vous devez héberger le résultat de la compilation de votre site. Il existe de 
 
 ### Parties dynamiques
 
-Les sites JAMstack n'ont pas à être entièrement statiques. Il existe des services formidables pour vous aider à insérer des parties dynamiques dans votre projet.
+Les sites Jamstack n'ont pas à être entièrement statiques. Il existe des services formidables pour vous aider à insérer des parties dynamiques dans votre projet.
 
 **Fonctions personnalisées** \
 Vous pouvez également abstraire vos propres fonctions pour en faire des APIs réutilisables. Pour cela vous pouvez utiliser [les fonctions AWS lambda](https://aws.amazon.com/lambda/features/) ou [les fonctions Netlify](https://functions.netlify.com/examples/)
 
 **Commentaires** \
-Beaucoup de sites JAMstack intègrent des sections pour les commentaires, principalement sur des blogs.
+Beaucoup de sites Jamstack intègrent des sections pour les commentaires, principalement sur des blogs.
 
 **Formulaires** \
 Un excellent moyen d'interagir avec votre audience.
 
 **E-Commerce** \
-Mettre en place une boutique en ligne sur un site JAMstack n'a jamais été aussi simple.
+Mettre en place une boutique en ligne sur un site Jamstack n'a jamais été aussi simple.
 
 **Recherche** \
 Reposez-vous sur des services tiers pour intégrer des fonctionnalités de recherche.
@@ -200,7 +200,7 @@ Reposez-vous sur des services tiers pour intégrer des fonctionnalités de reche
 
 ### CMS
 
-Les sites JAMstack peuvent aussi être gérés via un système de gestion de contenu, plus précisément avec des CMS headless. Chaque changement effectué dans le CMS va entraîner une nouvelle génération du site, qui sera ensuite déployé sous forme de fichiers statiques.
+Les sites Jamstack peuvent aussi être gérés via un système de gestion de contenu, plus précisément avec des CMS headless. Chaque changement effectué dans le CMS va entraîner une nouvelle génération du site, qui sera ensuite déployé sous forme de fichiers statiques.
 
 - [Contentful](http://contentful.com/)
 - [Forestry](https://forestry.io/)
@@ -213,38 +213,38 @@ Les sites JAMstack peuvent aussi être gérés via un système de gestion de con
 
 ### Ressources
 
-Voici une sélection de ressources sur la JAMstack qui comporte des matériaux d'apprentissage ainsi que des listes de services.
+Voici une sélection de ressources sur la Jamstack qui comporte des matériaux d'apprentissage ainsi que des listes de services.
 
 #### Services
 
 - [Une liste de services pour les sites web statiques](https://github.com/agarrharr/awesome-static-website-services)
-- [Une liste de gestionnaires de contenu pour les sites JAMstack](https://headlesscms.org/)
-- [Une liste de générateurs de site statiques pour les sites JAMstack](https://www.staticgen.com/)
+- [Une liste de gestionnaires de contenu pour les sites Jamstack](https://headlesscms.org/)
+- [Une liste de générateurs de site statiques pour les sites Jamstack](https://www.staticgen.com/)
 - [Un annuaire de sélection d'outils et de services](https://www.thenewdynamic.org/tool/)
 
 #### Articles
 
-- [Débuter avec la JAMstack? Tout ce que vous devez savoir pour bien démarrer](https://snipcart.com/blog/jamstack)
-- [Quel est le concept derrière la JAMstack](https://www.quora.com/What-is-the-concept-behind-JAMstack)
-- [Développement web moderne avec la JAMstack](https://bejamas.io/blog/jamstack-modern-web-development/)
+- [Débuter avec la Jamstack? Tout ce que vous devez savoir pour bien démarrer](https://snipcart.com/blog/jamstack)
+- [Quel est le concept derrière la Jamstack](https://www.quora.com/What-is-the-concept-behind-Jamstack)
+- [Développement web moderne avec la Jamstack](https://bejamas.io/blog/jamstack-modern-web-development/)
 - [Smashing Magazine va dix fois plus vite]({{< relref "post/smashing-mag-va-dix-fois-plus-vite.md" >}})
-- [Ghost avec la JAMstack](https://blog.ghost.org/jamstack/)
-- [JAMstack avec Gatsby, Netlify et Netlify CMS](https://medium.com/netlify/jamstack-with-gatsby-netlify-and-netlify-cms-a300735e2c5d)
+- [Ghost avec la Jamstack](https://blog.ghost.org/jamstack/)
+- [Jamstack avec Gatsby, Netlify et Netlify CMS](https://medium.com/netlify/jamstack-with-gatsby-netlify-and-netlify-cms-a300735e2c5d)
 
 #### Vidéos
 
-- [L'essor de la JAMstack, présentation de Mathias Biilmann](https://www.youtube.com/watch?v=uWTMEDEPw8c)
+- [L'essor de la Jamstack, présentation de Mathias Biilmann](https://www.youtube.com/watch?v=uWTMEDEPw8c)
 - [La nouvelle stack Front-end, présentation de Mathias Biilmann](https://vimeo.com/163522126)
 - [Une sélection de vidéos par The New Dynamic](https://www.thenewdynamic.org/video/)
-- [Comment freeCodeCamp sert des millions d'apprenants en utilisant la JAMstack](https://www.youtube.com/watch?v=e5H7CI3yqPY)
+- [Comment freeCodeCamp sert des millions d'apprenants en utilisant la Jamstack](https://www.youtube.com/watch?v=e5H7CI3yqPY)
 
 #### Podcast
 
-- [JAMstack Radio](https://www.heavybit.com/library/podcasts/jamstack-radio/)
+- [Jamstack Radio](https://www.heavybit.com/library/podcasts/jamstack-radio/)
 
 ---
 
 ## À propos
 
 Cette page a été mise en place par [@peduarte](https://twitter.com/peduarte) et
-présentée au [meetup JAMstack de Londres](https://www.meetup.com/JAMstack-London/events/257961818/) — ([voir les slides](https://speakerdeck.com/peduarte/jamstack-cheatsheet)).
+présentée au [meetup Jamstack de Londres](https://www.meetup.com/Jamstack-London/events/257961818/) — ([voir les slides](https://speakerdeck.com/peduarte/jamstack-cheatsheet)).

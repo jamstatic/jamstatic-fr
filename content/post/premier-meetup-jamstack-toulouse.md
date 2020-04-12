@@ -1,5 +1,5 @@
 ---
-title: "Meetup JAMstack Toulouse"
+title: "Meetup Jamstack Toulouse"
 date: 2018-03-17T09:24:53+01:00
 description: "Deux très bonnes présentations de Netlify et Algolia au premier meetup JAMStack français."
 categories:
@@ -12,7 +12,7 @@ images:
 
 {{< intro >}}
 
-Ce premier meetup JAMstack français a été l’occasion d’accueillir Netlify et
+Ce premier meetup Jamstack français a été l’occasion d’accueillir Netlify et
 Algolia, deux acteurs incontournables du mouvement. Les deux start-ups sont
 maintenant devenues des références dans leur domaine, l’une pour le déploiement
 d’applications web servies en statique, l’autre comme service de recherche

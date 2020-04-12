@@ -1,5 +1,5 @@
 ---
-title: "Meetup JAMstack Paris #1"
+title: "Meetup Jamstack Paris #1"
 date: 2019-01-28T18:45:24+01:00
 description: "Résumé des deux présentations dédiées à Gatsby."
 categories:
@@ -10,7 +10,7 @@ images:
 ---
 
 {{< intro >}}
-Au programme du premier meetup JAMstack Paris, un retour d'expérience sur la migration d'un site Angular vers Gatsby, et un exemple de développement en live d'un plugin Gatsby. [Les vidéos sont en ligne](https://www.youtube.com/channel/UC66eQOycjMnaqzpbRUhEK2w).
+Au programme du premier meetup Jamstack Paris, un retour d'expérience sur la migration d'un site Angular vers Gatsby, et un exemple de développement en live d'un plugin Gatsby. [Les vidéos sont en ligne](https://www.youtube.com/channel/UC66eQOycjMnaqzpbRUhEK2w).
 {{< /intro >}}
 
 ---
@@ -37,7 +37,7 @@ L'application récupére les références des _releases_ sur Discogs pour pouvoi
 
 ---
 
-👏 Un grand bravo aux organisateurs, le [prochain meetup aura lieu le 27 février](https://www.meetup.com/fr-FR/JAMstack-paris/events/257983707/).
+👏 Un grand bravo aux organisateurs, le [prochain meetup aura lieu le 27 février](https://www.meetup.com/fr-FR/Jamstack-paris/events/257983707/).
 Au programme encore du Gatsby, cette fois avec du Algolia et du WordPress dedans.
 
 On espère voir toujours plus de retours d'expérience, pas forcément que sur Gatsby, même si les frameworks front-end sont devenus en quelques années le nouveau standard de facto. En tout cas ça fait rudement plaisir de voir que la communauté francophone se fédère, nul doute que ce genre d'évènement contribuera à inciter à l'adoption d'architectures décentralisées.

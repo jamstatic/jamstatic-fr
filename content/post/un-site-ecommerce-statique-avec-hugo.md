@@ -31,7 +31,7 @@ site à la vitesse de l’éclair.
 > [à la démo et au code dispo sur GitHub](#demo-repo).
 
 Il est temps de nous plonger à nouveau dans le monde en perpétuel mouvement de
-la [JAMstack](https://frank.taillandier.me/2016/05/21/la-jamstack/) et du
+la [Jamstack](https://frank.taillandier.me/2016/05/21/la-jamstack/) et du
 développement web statique. Nos articles précédents sur la gestion d’un site
 e-commerce avec des générateurs de site statique comme
 [Middleman](https://snipcart.com/blog/static-site-e-commerce-integrating-snipcart-with-middleman)
@@ -431,7 +431,7 @@ pouvez utiliser un autre outil assez cool de Netlify :
 [Testmysite.io](https://testmysite.io). Notre démo obtient un score de 87/100,
 c'est pas si mal.
 
-Au fait, si vous développez un site JAMstack pour un client, vous voudrez
+Au fait, si vous développez un site Jamstack pour un client, vous voudrez
 peut-être effectuer un suivi de sa performance à l’aide de
 [Speedtracker, un outil open source](https://speedtracker.org/). Les équipes
 techniques seront peut-être intéressées par

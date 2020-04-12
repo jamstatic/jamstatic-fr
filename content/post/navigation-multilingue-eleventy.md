@@ -1,6 +1,6 @@
 ---
 title: "Navigation multilingue avec Eleventy"
-description: "Une approche pour gérer la navigation sur un site JAMstack multilingue généré avec Eleventy."
+description: "Une approche pour gérer la navigation sur un site Jamstack multilingue généré avec Eleventy."
 date: 2019-09-28
 images: 
   - https://www.webstoemp.com/img/blogposts/languages-choices.jpg
@@ -9,7 +9,7 @@ categories:
   - i18n
 source:
   author: Jérôme Coupé
-  title: Language switcher for multilingual JAMstack sites
+  title: Language switcher for multilingual Jamstack sites
   url: https://www.webstoemp.com/blog/language-switcher-multilingual-jamstack-sites/
 ---
 

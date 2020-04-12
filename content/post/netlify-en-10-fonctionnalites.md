@@ -15,7 +15,7 @@ source:
 {{< intro >}}
 
 En l’espace de quelques années [Netlify](https://www.netlify.com/)
-est devenu un acteur incontournable de l’écosystème JAMstack - ils sont
+est devenu un acteur incontournable de l’écosystème Jamstack - ils sont
 d’ailleurs à l’origine de cette appellation - et des sites statiques. Nous
 sommes nous-mêmes des utilisateurs plus que satisfaits de ce service et
 l’article que vous lisez en ce moment est lui-même hébergé sur un de leurs CDN.
@@ -27,7 +27,7 @@ mise en production et de fournir tous les outils modernes nécessaires à des
 stratégies de déploiement agiles à tout un chacun, sans avoir besoin pour cela
 d’être un devops confirmé. Ce n'est pas simplement une solution pour héberger
 vos sites statiques à moindre frais, [le passage de Smashing Magazine à une
-architecture JAMstack]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}})
+architecture Jamstack]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}})
 hébergée par Netlify a montré que ça pouvait aller bien au delà en faisant appel
 à différentes APIs et microservices.
 
@@ -346,7 +346,7 @@ interminable.
 Plus je creuse, plus je découvre qu'il est possible de contrôler pas mal de
 choses. Il est important que les développeurs puissent bénéficier d’une solution
 simple pour mettre en ligne leurs sites statiques, et comme l’écosystème de la
-JAMstack évolue en permanence, les possibilités sont de plus en plus grandes.
+Jamstack évolue en permanence, les possibilités sont de plus en plus grandes.
 
 Ça vaut le coup de garder un œil sur Netlify, d’autres fonctionnalités
 prometteuses sont actuellement testées par des alpha-testeurs enthousiastes.
@@ -355,4 +355,4 @@ Vous pouvez [suivre Netlify sur Twitter](https://twitter.com/Netlify) pour
 rester informé des nouvelles fonctionnalités, plonger dans la
 [documentation](https://www.netlify.com/docs/), ou prendre connaissance des
 [nos projets open source](https://www.netlify.com/open-source/) pour étendre les
-possibilités de l’écosystème [JAMstack](https://www.jamstack.org/).
+possibilités de l’écosystème [Jamstack](https://www.jamstack.org/).

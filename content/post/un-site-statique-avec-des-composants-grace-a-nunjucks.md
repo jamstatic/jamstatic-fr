@@ -17,7 +17,7 @@ templating et d’un langage de balisage léger comme Markdown continue d’êtr
 déclinée à l’envi. Le même principe est repris ici par Chris Coyier, le créateur
 de CodePen que les développeurs front connaissent bien, pour la création
 d’[un site qui liste quelques-unes des possibilités offertes](https://thepowerofserverless.info)
-par ce que nous appelons plus globalement la [JAMstack](/categories/jamstack) et
+par ce que nous appelons plus globalement la [Jamstack](/categories/jamstack) et
 qui est ici désigné sous le nom de _serverless_ — une des nombreuses composantes
 de ces architectures découplées.
 

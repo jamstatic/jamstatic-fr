@@ -52,20 +52,20 @@ comparaison pour voir à quel point Smashing Magazine serait plus rapide s'il
 premiers tests ont montré que ça allait **6 fois plus vite** !
 
 En avril 2016, Matt a fait une présentation lors de la SmashingConf à San
-Francisco où il a parlé de la [JAMstack](https://jamstack.org/), une
+Francisco où il a parlé de la [Jamstack](https://jamstack.org/), une
 architecture de développement moderne pour le Web basée sur le Javascript côté
 client, des APIs réutilisables et du Markup pré-généré.
 
-La JAMstack intègre des pratiques qui la rendent idéale pour le développement
+La Jamstack intègre des pratiques qui la rendent idéale pour le développement
 Web moderne :
 
-- Les sites basés sur la JAMstack tirent partie de la puissance des CDN pour
+- Les sites basés sur la Jamstack tirent partie de la puissance des CDN pour
   bénéficier d’une vitesse et d’une performance impossibles à battre.
 
 - Tout est versionné dans Git, pas besoin de bases de données à répliquer, pas
   d’installation compliquée.
 
-- Le code est pré-généré avec la JAMstack, les régénérations sont automatisées,
+- Le code est pré-généré avec la Jamstack, les régénérations sont automatisées,
   les modifications ne seront pas en production avant la prochaine régénération…
   pour ne citer que quelques exemples.
 
@@ -77,7 +77,7 @@ Une renaissance du Web moderne est en train d’avoir lieu et Smashing comptait
 bien en faire partie. Mais d’abord, ils voulaient l’implémenter pour eux-mêmes.
 En faisant cela Smashing consolide un peu plus le fait "qu'ils appliquent ce
 qu'ils recommandent" et qu'ils font partie des pionniers du développement Web
-moderne. Le fait d’avoir choisi la JAMstack et Netlify pour les aider à
+moderne. Le fait d’avoir choisi la Jamstack et Netlify pour les aider à
 concrétiser cette vision ne pouvait que nous réjouir.
 
 ## Un travail titanesque
@@ -115,7 +115,7 @@ cruciales pour Smashing :
 Rien que ça ? Après quelques échanges et une réunion avec toute l’équipe,
 Netlify a décidé qu'ils ne pouvaient laisser passer une aussi belle occasion.
 Smashing magazine serait la parfaite étude de cas pour montrer que l’utilisation
-de la JAMstack constitue **la** manière de développer des sites.
+de la Jamstack constitue **la** manière de développer des sites.
 
 {{< figure
 src="https://cdn.netlify.com/8847cc537164cc098d3f77f8db225c41f14430a5/e553b/img/blog/gif_4.gif"
@@ -137,7 +137,7 @@ repartir de zéro.
 Nous voulions fournir à Smashing tous les outils et les fonctionnalités dont il
 avait besoin. Mais il était également important pour nous que nos efforts en
 vaillent la peine et puissent bénéficier plus largement à l’ensemble de la
-communauté. Nous avions l’occasion de montrer que la JAMstack représente le
+communauté. Nous avions l’occasion de montrer que la Jamstack représente le
 futur du développement Web tout en construisant des outils qui allaient pouvoir
 être utilisés par la communauté grandissante qui gravite autour. C’est pour cela
 que tout ce que nous avons développé pour Smashing est **open source**.

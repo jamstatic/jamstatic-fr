@@ -680,4 +680,4 @@ Comme pour tout ce qui est dynamique, rien de natif dans un générateur de site
 
 Cet article n'est pas gravé dans le marbre, beaucoup de choses vont continuer d'évoluer dans Hugo, et il se peut que certaines comparaisons ne fassent plus sens.
 
-Nous espérons simplement qu'en étudiant sur les concepts bien arrêtés depuis longtemps et rarement remis en question de WordPress, nous avons contribué à aider quelques utilisateurs de WordPress à mieux comprendre l'état d'esprit et la logique d'Hugo, et qui sait à les convaincre de franchir le pas vers la JAMstack en 2019 ! 🏃
+Nous espérons simplement qu'en étudiant sur les concepts bien arrêtés depuis longtemps et rarement remis en question de WordPress, nous avons contribué à aider quelques utilisateurs de WordPress à mieux comprendre l'état d'esprit et la logique d'Hugo, et qui sait à les convaincre de franchir le pas vers la Jamstack en 2019 ! 🏃

@@ -25,7 +25,7 @@ Par contre, à force de manipulations, mon Jekyll ressemblait moins au célèbre
 
 ## TL;DR
 
-- Constatant que ma compilation Jekyll était des plus lentes, j'ai contacté la communauté JAMstack francophone pour des conseils.
+- Constatant que ma compilation Jekyll était des plus lentes, j'ai contacté la communauté Jamstack francophone pour des conseils.
 - Plusieurs choses ont émergé, chaque conseil permettant d'optimiser le temps de compilation.
 - Le plus gros gain provient des évolutions de Jekyll lui-même, sur lequel l'équipe est en train de faire un énorme travail.
 

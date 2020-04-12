@@ -9,7 +9,7 @@
 
 Vous utilisez Jekyll, Hugo, Eleventy ou tout autre générateur de site statique, vous
 voulez échanger avec la communauté francophone et vous tenir informé de
-l'actualité de l'écosystème de la JAMstack ?
+l'actualité de l'écosystème de la Jamstack ?
 
 Vous pouvez :
 

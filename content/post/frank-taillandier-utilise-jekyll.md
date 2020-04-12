@@ -11,7 +11,7 @@ categories:
 {{< intro >}}
 
 Cet article est le premier d’une série qui présente des utilisateurs de la
-JAMstack, nous commençons avec Frank Taillandier, contributeur à JAMstatic.
+Jamstack, nous commençons avec Frank Taillandier, contributeur à JAMstatic.
 
 {{< /intro >}}
 

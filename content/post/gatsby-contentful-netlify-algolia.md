@@ -27,7 +27,7 @@ partager votre enthousiasme, afin de montrer que non seulement c'est possible,
 mais que ça peut se faire sans douleur et à moindre coût. Le témoignage de
 [Josh Weaver](https://twitter.com/3cordguy) sur la migration d’un site de
 documentation vient s'ajouter à la longue liste des heureux convertis à la
-[JAMstack]({{< relref "5-raisons-de-tester-la-jamstack/" >}}).
+[Jamstack]({{< relref "5-raisons-de-tester-la-jamstack/" >}}).
 
 {{< /intro >}}
 
@@ -64,7 +64,7 @@ mettre le nez dans le code.
 Je sais que ce n'est pas bien de formuler des hypothèses, mais je vais quand
 même partir du principe que si vous lisez ceci c'est que vous en savez déjà un
 peu sur
-[les avantages offerts par les sites statiques et la JAMstack]({{< relref "5-raisons-de-tester-la-jamstack/" >}}).
+[les avantages offerts par les sites statiques et la Jamstack]({{< relref "5-raisons-de-tester-la-jamstack/" >}}).
 Si ce n'est pas le cas, allez faire un tour sur
 [https://jamstack.org/](https://jamstack.org/) pour comprendre en détail
 pourquoi le développement web, à défaut d’une meilleure formule, "revient aux
@@ -375,7 +375,7 @@ quand il y a un changement, et Netlify va générer le site et le déployer.
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346571/netlify-build-webhook.png" alt="Déclenchement de la génération par webhook" >}}
 
-C’est l’association rêvée au paradis de la JAMstack.
+C’est l’association rêvée au paradis de la Jamstack.
 
 La génération avec Gatsby se fait sous soucis et sans stress. Gatsby sait se
 faire oublier pour vous permettre d’exprimer votre créativité et votre habilité

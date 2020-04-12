@@ -4,7 +4,7 @@ Ce site se veut communautaire, toute contribution est la bienvenue. :smile:
 
 ## Proposer un article
 
-Ouvrez d'abord une issue si vous souhaitez [proposer un article](../../issues/new) ou une traduction en rapport avec l'écosystème JAMstack et les générateurs de site statique.
+Ouvrez d'abord une issue si vous souhaitez [proposer un article](../../issues/new) ou une traduction en rapport avec l'écosystème Jamstack et les générateurs de site statique.
 
 ## Ajouter un article
 
