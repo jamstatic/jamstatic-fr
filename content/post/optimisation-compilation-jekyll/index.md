@@ -49,7 +49,7 @@ Je ne pense pas que ce soit tout à fait vrai. Je crois que lorsque nous nous en
 
 ---
 
-Quand j'ai pensé que j'atteignais la limite de mes compétences, j'ai demandé l'aide à la communauté que je connais le mieux&nbsp;: les membres de JAMstatic. Et parmi eux, un membre de la <span lang="en">Core Team</span> de Jekyll, [Frank](https://github.com/DirtyF). Il m'a beaucoup aidé (et continue de le faire) en me montrant des possibilités que je n'avais pas envisagées.
+Quand j'ai pensé que j'atteignais la limite de mes compétences, j'ai demandé l'aide à la communauté que je connais le mieux&nbsp;: les membres de Jamstatic. Et parmi eux, un membre de la <span lang="en">Core Team</span> de Jekyll, [Frank](https://github.com/DirtyF). Il m'a beaucoup aidé (et continue de le faire) en me montrant des possibilités que je n'avais pas envisagées.
 
 ## Inclusions&nbsp;: à consommer avec modération
 

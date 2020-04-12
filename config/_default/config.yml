@@ -1,5 +1,5 @@
 baseURL: /
-title: JAMstatic
+title: Jamstatic
 DefaultContentLanguage: fr
 languageCode: fr-fr
 disablePathToLower: true
@@ -44,7 +44,7 @@ outputs:
     - html
 
 params:
-  title: JAMstatic
+  title: Jamstatic
   description: Sites statiques et architectures découplées
   email: contact@jamstatic.fr
   author:

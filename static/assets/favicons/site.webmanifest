@@ -1,6 +1,6 @@
 {
-    "name": "JAMstatic",
-    "short_name": "JAMstatic",
+    "name": "Jamstatic",
+    "short_name": "Jamstatic",
     "icons": [
         {
             "src": "/assets/favicons/android-chrome-192x192.png",
