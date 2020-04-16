@@ -5,8 +5,8 @@ disqusShortname: jekyllfr
 theme: "json-api"
 
 build:
-  useResourceCacheWhen: never
-  writeStats: false
+  useResourceCacheWhen: fallback
+  writeStats: true
 
 outputs:
   home:
