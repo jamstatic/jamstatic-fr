@@ -28,6 +28,7 @@ unzip master.zip
 mkdir -p ./themes/json-api
 mv ./hugo-json-api-component-master ./themes/json-api
 
+cd themes
 ls -l
 
 # run Hugo
