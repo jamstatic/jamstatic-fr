@@ -28,6 +28,8 @@ unzip master.zip
 mkdir -p ./themes/json-api
 mv ./hugo-json-api-component-master ./themes/json-api
 
+ls -l
+
 # run Hugo
 echo "================================================================================"
 echo "Building site..."
