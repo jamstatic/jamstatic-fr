@@ -18,7 +18,10 @@ curl -sSOL https://github.com/gohugoio/hugo/releases/download/v0.69.0/hugo_0.69.
 tar -xzf hugo_0.69.0_Linux-64bit.tar.gz
 ./hugo version
 
-git submodule add https://github.com/DirtyF/hugo-json-api-component themes/json-api
+# install theme(s)
+echo "================================================================================"
+echo "Installing theme(s)..."
+git submodule add https://github.com/dwalkr/hugo-json-api-component themes/json-api
 #git submodule update --init --recursive
 
 # run Hugo
