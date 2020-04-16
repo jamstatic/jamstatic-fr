@@ -20,5 +20,5 @@ mkdir -p ./themes/json-api
 mv ./hugo-json-api-component-master/* ./themes/json-api/
 
 # run Hugo
-echo "Building site..."
-./hugo
+echo "Running Hugo..."
+./hugo  --gc --minify
