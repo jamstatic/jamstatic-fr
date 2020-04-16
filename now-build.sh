@@ -24,6 +24,7 @@ echo "Installing theme(s)..."
 #git submodule update --init --recursive
 #git submodule add https://github.com/DirtyF/hugo-json-api-component themes/json-api
 curl -OL https://github.com/DirtyF/hugo-json-api-component/archive/master.zip
+mkdir ./themes/json-api
 unzip master.zip -d ./themes/json-api
 
 # run Hugo
