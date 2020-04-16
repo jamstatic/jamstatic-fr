@@ -10,10 +10,16 @@ tar -C /usr/local -xzf go${GO_VERSION}.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 
 # install Hugo
-echo "Installing Hugo $HUGO_VERSION..."
-curl -sSOL https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
-tar -xzf hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
-./hugo version
+#echo "Installing Hugo $HUGO_VERSION..."
+#curl -sSOL https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
+#tar -xzf hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
+#./hugo version
+
+mkdir ./hugo_src
+cd ./hugo_src
+git clone https://github.com/gohugoio/hugo.git
+cd hugo
+go install --tags extended
 
 # install theme(s)
 #git submodule update --init --recursive
