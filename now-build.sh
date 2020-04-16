@@ -9,7 +9,7 @@ export PATH=$PATH:/usr/local/go/bin
 # install Hugo
 if [ -z $HUGO_VERSION ]; then HUGO_VERSION='0.69.0'; fi
 echo "Installing Hugo $HUGO_VERSION..."
-curl -OL https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
+curl -sSOL https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
 tar -xzf hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
 ./hugo version
 
