@@ -1,11 +1,6 @@
 {
   "name": "jamstatic-fr",
   "regions": ["cdg"],
-  "build": {
-    "env": {
-      "HUGO_VERSION": "0.69.0"
-    }
-  },
   "builds": [{
     "src": "now-build.sh",
     "use": "@now/static-build",
