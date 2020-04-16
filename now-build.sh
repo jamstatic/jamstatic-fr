@@ -16,6 +16,8 @@ tar -xzf hugo_0.69.0_Linux-64bit.tar.gz
 
 ./hugo version
 
+git submodule update
+
 # run Hugo
 echo "Building site..."
 ./hugo --gc --minify
