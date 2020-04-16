@@ -1,13 +1,15 @@
 #!/bin/bash
 
-# install Go
+# default versions
 if [ -z $GO_VERSION ]; then GO_VERSION='1.14.1'; fi
+if [ -z $HUGO_VERSION ]; then HUGO_VERSION='0.69.0'; fi
+
+# install Go
 curl -sSOL https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz
 tar -C /usr/local -xzf go${GO_VERSION}.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 
 # install Hugo
-if [ -z $HUGO_VERSION ]; then HUGO_VERSION='0.69.0'; fi
 echo "Installing Hugo $HUGO_VERSION..."
 curl -sSOL https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
 tar -xzf hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
