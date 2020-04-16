@@ -1,14 +1,16 @@
 #!/bin/bash
 
 # install Go
-curl -sSOL https://dl.google.com/go/go1.14.1.linux-amd64.tar.gz
-tar -C /usr/local -xzf go1.14.1.linux-amd64.tar.gz
+if [ -z $GO_VERSION ]; then GO_VERSION='1.14.1'; fi
+curl -sSOL https://dl.google.com/go/go$GO_VERSION.linux-amd64.tar.gz
+tar -C /usr/local -xzf go$GO_VERSION.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 
 # install Hugo
-echo "Installing Hugo 0.69.0..."
-curl -sSOL https://github.com/gohugoio/hugo/releases/download/v0.69.0/hugo_0.69.0_Linux-64bit.tar.gz
-tar -xzf hugo_0.69.0_Linux-64bit.tar.gz
+if [ -z $HUGO_VERSION ]; then HUGO_VERSION='0.69.0'; fi
+echo "Installing Hugo $HUGO_VERSION..."
+curl -sSOL https://github.com/gohugoio/hugo/releases/download/v$HUGO_VERSION/hugo_$HUGO_VERSION_Linux-64bit.tar.gz
+tar -xzf hugo_$HUGO_VERSION_Linux-64bit.tar.gz
 ./hugo version
 
 # install theme(s)
