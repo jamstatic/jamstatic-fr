@@ -20,29 +20,29 @@ body {
 .site-header {
   padding: $base-line 0;
   color: rgba(255, 255, 255, 0.9);
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%);
   background-color: #2f91a7;
   background-image: linear-gradient(45deg, #45b8d2 0, #2f91a7 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+
 }
 
 .site-title {
   display: block;
   margin: 0 auto;
-  padding: 0 0.5em;
   font-family: $title-font-family;
   font-weight: 900;
   letter-spacing: $title-letter-spacing;
   line-height: 1;
-  text-transform: uppercase;
-  text-shadow: 0 1px 1px rgba(27, 31, 35, 0.15), 0 1px 25px rgba(27, 31, 35, 0.25);
+  text-shadow: 0 1px 1px rgba(27, 31, 35, 0.15),
+    0 1px 25px rgba(27, 31, 35, 0.25);
   vertical-align: middle;
   text-align: center;
 
   &,
   &:hover,
   &:visited {
-    color: rgba(255, 255, 255, .95);
+    color: rgba(255, 255, 255, 0.95);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-decoration: none;
@@ -58,13 +58,14 @@ body {
   padding: 0;
   width: 100%;
   text-align: center;
-  text-shadow: 0 1px 1px rgba(27, 31, 35, 0.25), 0 1px 25px rgba(27, 31, 35, 0.5);
+  text-shadow: 0 1px 1px rgba(27, 31, 35, 0.25),
+    0 1px 25px rgba(27, 31, 35, 0.5);
   margin-bottom: $spacing-unit;
 }
 
 @include media-query($on-tablet) {
   .site-title {
-    font-size: $title1 * ($ratio*$ratio);
+    font-size: $title1 * ($ratio * $ratio);
   }
   .site-description {
     font-size: $bigger;
@@ -73,8 +74,8 @@ body {
 
 .site-footer {
   position: relative;
-  padding: $spacing-unit*2 0 $spacing-unit;
-  background: rgb(247,247,248);
+  padding: $spacing-unit * 2 0 $spacing-unit;
+  background: rgb(247, 247, 248);
   color: $grey;
   font-size: $small;
   text-align: center;
@@ -110,7 +111,7 @@ body {
 
     &:hover {
       cursor: help;
-      text-decoration-color: rgba(0, 199, 183, .1);
+      text-decoration-color: rgba(0, 199, 183, 0.1);
       text-decoration-thickness: 1em;
       text-decoration: line-through;
     }
@@ -133,7 +134,13 @@ body {
 
   .hr::after,
   hr {
-    background-image: linear-gradient(90deg, rgba(14, 30, 37, 0) 0, #0e1e25 30%, #0e1e25 70%, rgba(14, 30, 37, 0) 100%);
+    background-image: linear-gradient(
+      90deg,
+      rgba(14, 30, 37, 0) 0,
+      #0e1e25 30%,
+      #0e1e25 70%,
+      rgba(14, 30, 37, 0) 100%
+    );
     border: none;
     height: 1.728px;
     margin: $base-line auto;
@@ -167,7 +174,7 @@ body {
   .post-item {
     padding: $spacing-unit/$ms1;
     border-radius: 1rem;
-    margin-bottom: $base-line*2;
+    margin-bottom: $base-line * 2;
     grid-column: auto;
 
     a {
@@ -280,22 +287,22 @@ body {
 .notice {
   margin: 2em 0;
   padding: 1em;
-  border-left: 0.25em solid rgba(169,197,234,.6);
+  border-left: 0.25em solid rgba(169, 197, 234, 0.6);
 
   h3 {
     margin-top: auto;
   }
 
   a {
-    color: rgba(0,81,193,.54);
+    color: rgba(0, 81, 193, 0.54);
   }
 
   &.info {
-    background-color: rgba(169,197,234,.2);
+    background-color: rgba(169, 197, 234, 0.2);
   }
 
   &.tip {
-    background-color: rgba(255, 237, 127, .2);
+    background-color: rgba(255, 237, 127, 0.2);
     border-color: #feda00;
 
     &::before {
@@ -385,7 +392,7 @@ figcaption {
   display: inline-block;
   color: $grey-light;
   text-align: right;
-  background: rgba($grey-light, .05);
+  background: rgba($grey-light, 0.05);
   border-radius: 1em;
   border: 0;
   padding: $spacing-unit/2;
