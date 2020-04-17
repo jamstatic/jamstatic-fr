@@ -177,14 +177,7 @@ body {
     }
 
     &:hover {
-      background: rgba($grey-light, .05);
-    }
-
-    &::after {
-      display: block;
-      content: "";
-      border-top: $small solid $brand-color;
-      border-image: linear-gradient(45deg, $brand-light 0, $brand-color 100%) 10;
+      background: rgba($grey-light, 0.05);
     }
   }
 }
@@ -242,13 +235,6 @@ body {
 /* Posts */
 .post-header {
   margin-bottom: $spacing-unit;
-
-  &::after {
-    display: block;
-    content: "";
-    border-top: $small solid $brand-color;
-    border-image: linear-gradient(45deg, $brand-light 0, $brand-color 100%) 10;
-  }
 }
 
 .post-content {
