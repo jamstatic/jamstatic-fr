@@ -9,6 +9,9 @@ curl -sSOL https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz
 tar -C /usr/local -xzf go${GO_VERSION}.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 
+# install Node
+curl -s https://install-node.now.sh | sh
+
 # install Hugo
 echo "Installing Hugo $HUGO_VERSION..."
 curl -sSOL https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
