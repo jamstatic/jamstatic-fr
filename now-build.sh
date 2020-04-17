@@ -14,6 +14,10 @@ echo "Installing Node (latest)..."
 curl -sL install-node.now.sh | sh -s -- --yes
 node -v
 
+# install packages
+echo "Installing packages..."
+npm install
+
 # install Hugo
 echo "Installing Hugo $HUGO_VERSION..."
 curl -sSOL https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
