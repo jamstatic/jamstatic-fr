@@ -10,7 +10,7 @@ tar -C /usr/local -xzf go${GO_VERSION}.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 
 # install Node
-curl -sL https://install-node.now.sh | sh --yes
+curl -sL install-node.now.sh | sh -s -- --yes
 
 # install Hugo
 echo "Installing Hugo $HUGO_VERSION..."
