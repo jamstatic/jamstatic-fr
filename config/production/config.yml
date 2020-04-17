@@ -2,10 +2,10 @@ baseURL: https://jamstatic.fr
 enableRobotsTXT: true
 disqusShortname: jekyllfr
 
-theme: "json-api"
+# theme: "json-api"
 
 build:
-  useResourceCacheWhen: never
+  useResourceCacheWhen: fallback
   writeStats: true
 
 outputs:
@@ -13,13 +13,13 @@ outputs:
     - html
     - rss
     - jsonfeed
-    - json
+#    - json
     - HEADERS
     - REDIR
     - algolia
   page:
     - html
-    - json
+#    - json
 
 outputFormats:
   algolia:
