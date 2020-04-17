@@ -12,7 +12,7 @@ export PATH=$PATH:/usr/local/go/bin
 # install packages
 echo "Installing packages..."
 node -v
-npm install
+npm ci
 
 # install Hugo
 echo "Installing Hugo $HUGO_VERSION..."
