@@ -5,7 +5,7 @@ module.exports = {
       whitelist: ["highlight", "notice", "pre", "code", "chroma", "blockquote", "fill-current"]
     },
     autoprefixer: {
-      overrideBrowserslist: ["> 0.5% in my stats", "> 5% in FR"]
+      overrideBrowserslist: ["> 0.2% in my stats", "> 2% in FR"]
     }
   }
 };

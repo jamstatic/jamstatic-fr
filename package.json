@@ -7,7 +7,8 @@
     "lint-md": "remark -q content/post",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate",
-    "contributors:check": "all-contributors check"
+    "contributors:check": "all-contributors check",
+    "update-browserslist-stats": "browserslist-ga-export --reportPath analytics-2020-02.csv"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
     "postcss-cli": "^7.1"
   },
   "devDependencies": {
+    "browserslist-ga-export": "^2.0.1",
     "remark-cli": "^8.0",
     "remark-frontmatter": "^2.0",
     "remark-inline-links": "^4.0",
