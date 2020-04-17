@@ -9,13 +9,9 @@ curl -sSOL https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz
 tar -C /usr/local -xzf go${GO_VERSION}.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 
-# install Node
-echo "Installing Node (latest)..."
-curl -sL install-node.now.sh | sh -s -- --yes
-node -v
-
 # install packages
 echo "Installing packages..."
+node -v
 npm install
 
 # install Hugo
