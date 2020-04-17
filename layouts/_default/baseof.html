@@ -5,7 +5,7 @@
 
 <body class="{{.Kind}}">
 
-{{- partial "site/header" . -}}
+{{- partialCached "site/header" . -}}
 
   <div class="page-content">
     <div class="wrapper">
@@ -16,9 +16,9 @@
 {{- partialCached "site/footer" . -}}
 
 {{ if and .IsHome hugo.IsProduction }}
-  {{- partial "search.html" . -}}
+  {{- partialCached "search.html" . -}}
 {{ else }}
- {{- partial "site/scripts" . -}}
+ {{- partialCached "site/scripts" . -}}
 {{ end }}
 </body>
 </html>
