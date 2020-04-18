@@ -1,0 +1,9 @@
+{
+  "name": "jamstatic-fr",
+  "regions": ["cdg"],
+  "builds": [{
+    "src": "now-build.sh",
+    "use": "@now/static-build",
+    "config": { "distDir": "public" }
+  }]
+}
