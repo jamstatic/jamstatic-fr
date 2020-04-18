@@ -53,6 +53,7 @@ hugo server -D --environment development
 ```sh
 git commit -am "chore: nouvel article"
 gh pr create
+```
 
 ## Production
 
