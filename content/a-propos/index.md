@@ -6,7 +6,7 @@ draft: true
 Ce site s'adresse à tous ceux qui s'intéressent de près ou de loin aux
 générateurs de sites statiques et à tout son écosystème : APIs, Headless CMS,
 services de déploiement, etc. Nous pensons que l'utilisation de la
-[Jamstack]({{< relref "post/5-raisons-de-tester-la-jamstack" >}} "C'est quoi la Jamstack?"), une
+[Jamstack]({{< relref "post/5-raisons-de-tester-la-jamstack" >}}), une
 manière de versionner, de concevoir et de déployer des sites web, est une
 réponse moderne aux enjeux d'aujourd'hui. Il y a depuis quelques années
 [une mouvance statique](https://frank.taillandier.me/2016/03/08/les-gestionnaires-de-contenu-statique/)
