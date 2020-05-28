@@ -25,7 +25,7 @@ file_template: 'https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto
 build:
   preview_env:
   - HUGO_ENV=staging
-  - HUGO_VERSION=0.70.0
+  - HUGO_VERSION=0.71.1
   preview_output_directory: public
   preview_docker_image: forestryio/hugo:latest
   mount_path: "/srv"
