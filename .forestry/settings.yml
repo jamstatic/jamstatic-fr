@@ -12,6 +12,10 @@ sections:
   templates:
   - post
 - type: document
+  path: content/a-propos/index.md
+  label: À propos
+  match: "**/*"
+- type: document
   path: config.yaml
   label: Configuration
 upload_dir: ''
