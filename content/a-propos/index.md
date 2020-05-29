@@ -1,6 +1,5 @@
 ---
 title: À propos
-draft: true
 
 ---
 Ce site s'adresse à toutes celles et tous ceux qui s'intéressent de près ou de loin aux générateurs de sites statiques et à l'ensemble de son écosystème : API, CMS headless, services de déploiement, etc.
