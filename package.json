@@ -26,7 +26,7 @@
   "homepage": "https://github.com/jamstatic/jamstatic-fr#readme",
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.2",
-    "all-contributors-cli": "^6.15",
+    "all-contributors-cli": "^6.16",
     "atomic-algolia": "^0.3",
     "autoprefixer": "^9.8.0",
     "postcss-cli": "^7.1"
