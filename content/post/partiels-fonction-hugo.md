@@ -336,7 +336,7 @@ Bien entendu ! Nous pourrions :
 
 Après avoir vu les bases, nous avons pu développer deux partiels de fonction qui nous aideront grandement dans la maintenance de l'affichage des taxonomies de notre site.
 
-Et si nous avons besoin d’afficher seulement certains articles ou bien tous les articles mais en excluant certains tags ? Cela se passera dans la fonction `GetTags` et pas ailleurs !  Et si dans une prochaine version Hugo introduit un moyen plus efficace de gérer les termes d’une taxonomie ? Nous ajusteront notre fonction `GetTerm` !
+Et si nous avons besoin d’afficher seulement certains articles ou bien tous les articles mais en excluant certains tags ? Cela se passera dans la fonction `GetTags` et pas ailleurs !  Et si dans une prochaine version Hugo introduit un moyen plus efficace de gérer les termes d’une taxonomie ? Nous ajusterons notre fonction `GetTerm` !
 
 Avec ses _partiels de fonction_, Hugo répond enfin à la séparation des problématiques de templating et de gestion des données, en permettant la réutilisabilité et le typage de données !
 
