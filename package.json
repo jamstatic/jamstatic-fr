@@ -28,7 +28,7 @@
     "@fullhuman/postcss-purgecss": "^2.2",
     "all-contributors-cli": "^6.15",
     "atomic-algolia": "^0.3",
-    "autoprefixer": "^9.8.0",
+    "autoprefixer": "^9.8.6",
     "postcss-cli": "^7.1"
   },
   "devDependencies": {
