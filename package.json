@@ -25,26 +25,26 @@
   },
   "homepage": "https://github.com/jamstatic/jamstatic-fr#readme",
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^2.2",
-    "all-contributors-cli": "^6.15",
-    "atomic-algolia": "^0.3",
-    "autoprefixer": "^9.8.0",
-    "postcss-cli": "^7.1"
+    "@fullhuman/postcss-purgecss": "^2.3.0",
+    "all-contributors-cli": "^6.17.2",
+    "atomic-algolia": "^0.3.19",
+    "autoprefixer": "^9.8.6",
+    "postcss-cli": "^7.1.2"
   },
   "devDependencies": {
     "browserslist-ga-export": "^2.0.1",
-    "remark-cli": "^8.0",
+    "remark-cli": "^8.0.1",
     "remark-frontmatter": "^2.0",
     "remark-inline-links": "^4.0",
     "remark-lint-code": "^2.0",
-    "remark-lint-first-heading-level": "^2.0",
-    "remark-lint-maximum-line-length": "^2.0",
-    "remark-lint-no-consecutive-blank-lines": "^2.0",
+    "remark-lint-first-heading-level": "^2.0.1",
+    "remark-lint-maximum-line-length": "^2.0.3",
+    "remark-lint-no-consecutive-blank-lines": "^2.0.1",
     "remark-lint-no-empty-sections": "^4.0.0",
     "remark-lint-no-leading-spaces": "^1.0.0",
-    "remark-preset-lint-consistent": "^3.0",
-    "remark-preset-lint-markdown-style-guide": "^3.0",
-    "remark-preset-lint-recommended": "^4.0",
+    "remark-preset-lint-consistent": "^3.0.1",
+    "remark-preset-lint-markdown-style-guide": "^3.0.1",
+    "remark-preset-lint-recommended": "^4.0.1",
     "remark-squeeze-paragraphs": "^4.0"
   }
 }
