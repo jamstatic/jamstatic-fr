@@ -1,8 +1,10 @@
 .DS_Store
 .env
 .netlify
-.sass-cache
-.tags*
-node_modules
-public
 .now
+node_modules
+
+# Hugo
+public/
+resources/_gen/
+hugo_stats.json
