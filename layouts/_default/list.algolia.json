@@ -1,11 +1,11 @@
 {{/* Generates a valid Algolia search index */}}
 {{- $hits := slice -}}
-{{- $section := $.Site.GetPage .Section }}
+{{- $section := .Site.GetPage "/post" }}
 {{- $validVars := $.Param "algolia.vars" | default slice -}}
 {{- $validParams := $.Param "algolia.params" | default slice -}}
 {{- range $i, $hit := .Site.RegularPages -}}
   {{- $dot := . -}}
-  {{- if or (and ($hit.IsDescendant $section) (and (not $hit.Draft) (not $hit.Params.private))) $section.IsHome -}}
+  {{- if or (and ($hit.IsDescendant $section) (and (not $hit.Draft) (not $hit.Params.Private))) $section.IsHome -}}
     {{/* Set the hit objectID */}}
     {{- .Scratch.SetInMap $hit.File.Path "objectID" $hit.File.UniqueID -}}
     {{/* Store built-in page variables in iterable object */}}
