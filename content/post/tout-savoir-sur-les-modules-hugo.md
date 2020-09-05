@@ -25,7 +25,7 @@ Cet article vous propose de vous mettre la main à la pâte et après avoir vu c
 Il est important de comprendre qu'avant d'importer un module Hugo, votre projet doit lui même être un module !
 {{< /notice >}}
 
-Pour initialiser votre projet ene tant que module, vous devez faire reférence à une URL de dépôt Git.
+Pour initialiser votre projet en tant que module, vous devez faire reférence à une URL de dépôt Git.
 
 Partons du principe que votre projet Hugo est déjà sur GitHub à l'adresse `https://github.com/chez-moi/mon-depot`
 
@@ -85,7 +85,7 @@ Comme pour les `imports`, on peut utiliser plusieurs `mounts`, pour le moment no
 - le paramètre `source` désigne la location des fichiers dans le dépôt distant. Ici nous voulons juste le réperetoire `icons` situé à la racine du dépôt.
 - le paramètre `target` désigne l'endroit où Hugo doit monter les fichiers dans notre systéme de fichier Hugo unifié.
 
-Une fois le montage effectué, nous pouvons accéder aux icônes SVG situés dans ce dossier comme à n'importe quel autre fichier de notre projet:
+Une fois le montage effectué, nous pouvons accéder aux icônes SVG situées dans ce dossier comme à n'importe quel autre fichier de notre projet:
 
 ```go-html-template
 {{ with resources.Get "icons/cart.svg" }}
@@ -103,7 +103,7 @@ Dans l'éventualité où vous voulez personnaliser cette icône de panier nous p
 
 Tout ce que nous avons à faire est de créer un fichier d'icône du même nom et de le placer au même emplacement `assets/icons/cart.svg` dans notre projet pour qu'il soit utilisé à la place de l'icône de panier de Bootstrap.
 
-Ou si nous voulions, nous pourrions aussi l'icône d'un autre dépôt distant juste pour ce simple icône 🤪:
+Ou si nous voulions, nous pourrions aussi importer le fichier d'un autre dépôt distant pour une simple icône 🤪:
 
 ```yaml
 - path: github.com/refactoringui/heroicons
@@ -116,7 +116,7 @@ Ou si nous voulions, nous pourrions aussi l'icône d'un autre dépôt distant ju
       target: assets/icons
 ```
 
-☝️ Ici nous importons deux dépôts, chacun avec son propre paramètres de montage.
+☝️ Ici nous importons deux dépôts, chacun avec son propre point de montage.
 
 {{< notice tip >}}
 Peu importe le nombre de fichiers montés, Hugo téléchargera quand même l'intégralité du dépôt, donc pensez-y à deux fois avant d'importer un dépôt de plusieurs MB pour un simple fichier SVG.
@@ -124,7 +124,7 @@ Peu importe le nombre de fichiers montés, Hugo téléchargera quand même l'int
 
 ### Mise à jour
 
-Et si le dépôt distant est mis à jour ? Par défaut lors du premier import Hugo va télécharger la dernière release, sinon ce serait le commit de tête de la branche par défaut. C'est pour cela qu'Hugo a ajouté `v1.0.0` à la fin du `require` dans le fichier `go.mod`.
+Et si le dépôt distant est mis à jour ? Par défaut lors du premier import Hugo va télécharger la dernière version publiée, à défaut le commit de tête de la branche par défaut. C'est pour cela qu'Hugo a ajouté `v1.0.0` à la fin du `require` dans le fichier `go.mod`.
 
 Si [`github.com/twbs/icons`](https://github.com/twbs/icons/) sort une version `v1.1.0` et que vous souhaitez faire la mise à jour:
 
@@ -154,30 +154,30 @@ Vous devez bien entendu versionner les fichiers `go.mod` et `go.sum` afin que to
 
 {{< notice >}}
 #### Développer un module en local
-Cet article ne couvre pas le développemeent local d'un module, nous vous invitons à [lire notre note sur le sujet](https://www.thenewdynamic.com/note/develop-hugo-modules-locally/) avant d'embarquer pour le monde des modules  Hugo.
+Cet article ne couvre pas le développemeent local d'un module, nous vous invitons à [lire notre note sur le sujet](https://www.thenewdynamic.com/note/develop-hugo-modules-locally/) avant d'embarquer pour le joyeux monde des modules Hugo.
 {{< /notice >}}
 
 ## Créer un module Hugo
 
-Bon c'est intéressant de savoir importer n'importe quel dépôt et d'intégrer ses fichiers dans notre projet, mais la vraie puissance vient de l'utilisation de modules Hugo complets, qui peuvent gérer des fichiers de modèles, des assets, des fichiers de données, et même des fichiers de **contenu** !
+Bon c'est intéressant de savoir importer n'importe quel dépôt et d'intégrer ses fichiers dans notre projet, mais la vraie puissance vient de l'utilisation de modules Hugo complets, qui peuvent gérer des fichiers de modèles, des assets, des fichiers de données, voire des fichiers de **contenu** !
 
-Et quel meilleur moyen d'appreendrre que de crérer nous même le nôtre !
+Et quel meilleur moyen d'apprendre que de créer nous-mêmes notre propre module ?
 
-Créons pour l'exemple notre propre module d'icônes. Pour cela il faut:
+Créons pour l'exemple un petit module d'icônes. Pour cela nous voulons:
 
-1. Importer des fichiers SVG d'un dépôt distant
+1. Importer les fichiers SVG d'un dépôt distant
 2. Créer une page qui liste toutes les icônes disponibles
-3. Utiliser notre propre fichier partiel `icon` pour faciliter l'affichagee de n'importe quel icône du projet.
+3. Utiliser notre propre fichier partiel `icon` pour faciliter l'affichage de n'importe quelle icône du projet.
 
 Créons d'abord un dossier sur notre ordinateur et nommons-le `assets/hugo-icons` pour éviter tout conflit avec un dossier `assets/icons` existant.
 
 ### 1. Les imports
 
-Nous avons tout d'abord besoin de lister les imports des fichiers de notre module dans un fichier `config.yaml`.
+Nous avons tout d'abord besoin de lister les `imports` des fichiers de notre module dans un fichier `config.yaml`.
 
-En effeet, n'importe quel projet Hugo, que ce soit un site web, un thème ou un composant peut importer d'autres modules ou d'autres dépôts. Il n'y a pas de limite dans l'arborescence de dépendances, les modules sont une vraie de gestion de dépendences !
+En effet, n'importe quel projet Hugo, que ce soit un site web, un thème ou un composant peut importer d'autres modules ou d'autres dépôts. Il n'y a pas de limite dans l'arborescence de dépendances, les modules sont une vraie de gestion de dépendences !
 
-Nos imports seront très similairees à ce que nous avons vu plus haut, la seule différence est que nous importons les fichiers dans un dossier différent pour éviter tout conflit:
+Nos imports seront très similaires à ce que nous avons vu plus haut, la seule différence est que nous importons les fichiers dans un dossier différent pour éviter tout conflit:
 
 ```yaml
 # config.yaml
@@ -193,17 +193,17 @@ module:
 
 Pour cela nous avons besoin de deux fichiers:
 
-1. Un fichier de contenu
-2. Un modèle pour qu'Hugo puisse effectuer le rendu de notre fichier
+1. Un fichier de contenu,
+2. Un fichier de modèle pour qu'Hugo puisse effectuer le rendu de notre fichier.
 
-Puisque nous utilisons la directive `mounts`, nous n'avons pas besoin de nous tenir à l'arborescence classique d'un projet Hugo. Nous sommes libres d'organiser les fichiers de notre module comme bon nous semble:
+Puisque nous utilisons la directive `mounts`, nous n'avons pas besoin de nous respecter l'arborescence classique d'un projet Hugo. Nous sommes libres d'organiser les fichiers de notre module comme bon nous semble:
 
 - `page/layout.html`
 - `page/content.md`
 
-Mettons à jour notre fichier `config.yaml` , vous pouveez noter que les paramètres `mounts` se situent à la racine de notre map `module`.
+Mettons à jour notre fichier `config.yaml`, vous pouveez noter que les paramètres `mounts` se situent à la racine de notre map `module`.
 
-Les points de montage ne sont en effet pas réservés aux seuls `imports`. Vous pouvez attribuer des points de montage du projet en question à l'aide de sa propre directive `mounts`:
+Les points de montage ne sont en effet pas réservés aux seuls `imports`. Vous pouvez attribuer des points de montage au module en question à l'aide de sa propre directive `mounts`:
 
 ```yaml
 # config.yaml
@@ -244,7 +244,7 @@ layout: hugo-icons-listing
 ```
 
 {{< notice info >}}
-Notez qu'ici nous partons du principe que votre modèle `baseof.html` contient un block `main` block, sans quoi Hugo affichera une erreur.
+Notez qu'ici nous partons du principe que votre modèle `baseof.html` contient un block `main`, sans quoi Hugo affichera une erreur.
 {{< /notice >}}
 
 ### 3. Le fichier partiel
@@ -292,7 +292,7 @@ Notre fichier partiel:
 
 Notre module comporte maintenant les fichiers nécessaires. Il nous faut encore ajouter quelque chose de très important à sa configuration: sa compatibilité avec les versions d'Hugo.
 
-Nous utilisons la fonction `resources.Match` introduitee dans [Hugo 0.57.0](https://gohugo.io/news/0.57.0-relnotes/). Quant au montage dans les sous-dossiers, il n'est supporté que depuis [Hugo 0.64.0](https://gohugo.io/news/0.64.0-relnotes/#other-1).
+Nous utilisons la fonction `resources.Match` introduite dans [Hugo 0.57.0](https://gohugo.io/news/0.57.0-relnotes/). Quant au montage dans les sous-dossiers, il n'est supporté que depuis [Hugo 0.64.0](https://gohugo.io/news/0.64.0-relnotes/#other-1).
 
 Il nous faut donc indiquer que notre module ne marchera qu'avec une version d'Hugo au moins égale à 0.64.0 ou sinon… patatra !
 
@@ -350,3 +350,9 @@ Cette commande supprimera les entrées inutilisées dans votre fichier `go.sum`.
 Les modules Hugo sont la méthode à priviléger dès qu'il s'agit d'importer des fichiers issus de n'importe quel dépôt Git public dans vos projets et de contrôler leur versionnement.
 
 Et maintenant que vous savez comment créer un module Hugo, vous devriez vous en servir pour gérer les composants réutilisables de vos projets et les [publier](https://www.thenewdynamic.com/open-source/) pour enrichir l'écosystème d'Hugo. :smile:
+
+## Ressources complémentaires
+
+- [Documentation officielle](https://gohugo.io/hugo-modules/)
+- [Les modules Hugo pour les nuls](https://dev.to/craftsmandigital/hugo-modules-for-dummies-42j9)
+- [Maîtriser les modules Hugo](https://www.hugofordevelopers.com/series/master-hugo-modules/)
