@@ -93,7 +93,7 @@ Tout d'abord, nous devons ajouter notre nom de domaine en tant que propriété d
 Ensuite, installons quelques dépendances supplémentaires :
 
 ```bash
-$ npm install lodash node-fetch
+npm install lodash node-fetch
 ```
 
 Et mettons à jour notre script de `build` pour y préciser la variable d'environnement `NODE_ENV` dans notre `package.json` :
