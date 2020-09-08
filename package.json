@@ -5,6 +5,7 @@
   "scripts": {
     "algolia": "atomic-algolia",
     "lint-md": "remark -q content/post",
+    "format-html": "prettier --write layouts/**/*.html",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate",
     "contributors:check": "all-contributors check",
@@ -33,6 +34,8 @@
   },
   "devDependencies": {
     "browserslist-ga-export": "^2.0.1",
+    "prettier": "^2.1.1",
+    "prettier-plugin-go-template": "0.0.10",
     "remark-cli": "^8.0.1",
     "remark-frontmatter": "^2.0",
     "remark-inline-links": "^4.0",

@@ -1,49 +1,69 @@
 {{- define "main" }}
   <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
     <header class="post-header swoosh">
-      <h1 class="post-title" itemprop="name headline">{{- partial "content.html" .Title -}}</h1>
+      <h1 class="post-title" itemprop="name headline">
+        {{- partial "content.html" .Title -}}
+      </h1>
       <p class="post-meta">
-        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}" itemprop="datePublished">
+        <time
+          datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}"
+          itemprop="datePublished"
+        >
           {{- $mymonths := .Site.Data.mois }}
-          {{- .Date.Day }} {{ index $mymonths (printf "%d" .Date.Month) }} {{ .Date.Year -}}
+          {{- .Date.Day }} {{ index $mymonths (printf "%d" .Date.Month) }}
+          {{ .Date.Year -}}
         </time>
         {{- if isset .Params "categories" }}
-        • {{ range $index, $category := .Params.categories }}{{ if $index }}, {{ end }}<a href="{{ "categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
+          •
+          {{ range $index, $category := .Params.categories }}
+            {{ if $index }}, {{ end }}
+            <a href="{{ "categories/" | relURL }}{{ . | urlize }}"
+              >{{ . }}</a
+            >{{ end }}
+
         {{- end }}
-        • <span aria-label="Temps de lecture">{{ .ReadingTime }} min</span>
-        • <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <span itemprop="name">
-              <a class="post-author" rel="author" href="https://github.com/{{ if .Params.author }}{{ (index .Site.Data.authors .Params.author).github }}{{ else }}{{ .Site.Data.authors.frank.github }}{{ end }}">
-              {{- if .Params.author }}{{ (index .Site.Data.authors .Params.author).name }}
-              {{- else }}{{ .Site.Data.authors.frank.name }}{{ end }}</a>
-            </span>
+        • <span aria-label="Temps de lecture">{{ .ReadingTime }} min</span> •
+        <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+          <span itemprop="name">
+            <a
+              class="post-author"
+              rel="author"
+              href="https://github.com/{{ if .Params.author }}{{ (index .Site.Data.authors .Params.author).github }}{{ else }}{{ .Site.Data.authors.frank.github }}{{ end }}"
+            >
+              {{- if .Params.author }}
+                {{ (index .Site.Data.authors .Params.author).name }}
+                {{- else }}{{ .Site.Data.authors.frank.name }}{{ end }}
+
+            </a>
           </span>
+        </span>
       </p>
     </header>
 
     <div class="post-content" itemprop="articleBody">
       {{- with .Params.Source }}
         {{- if and .url .title .author }}
-        <p class="post-source">
-          <em>Source : <a href="{{ .url }}">{{ .title }}</a> de {{ .author }}</em>
-        </p>
-        <hr />
+          <p class="post-source">
+            <em
+              >Source : <a href="{{ .url }}">{{ .title }}</a> de
+              {{ .author }}</em
+            >
+          </p>
+          <hr />
         {{- end }}
       {{- end }}
 
       {{- partial "content.html" .Content -}}
 
       <footer>
-      {{- partial "page-edit" . }}
+        {{- partial "page-edit" . }}
 
-      {{- partial "related" . }}
+        {{- partial "related" . }}
 
-      {{- with .Params.Comments }}
-        {{ template "_internal/disqus.html" . }}
-      {{- end }}
-
+        {{- with .Params.Comments }}
+          {{ template "_internal/disqus.html" . }}
+        {{- end }}
       </footer>
     </div>
   </article>
-
 {{- end }}
