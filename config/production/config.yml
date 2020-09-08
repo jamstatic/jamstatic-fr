@@ -2,7 +2,8 @@ baseURL: https://jamstatic.fr
 enableRobotsTXT: true
 disqusShortname: jekyllfr
 
-theme: "json-api"
+theme: 
+ - github.com/DirtyF/hugo-json-api-component
 
 build:
   useResourceCacheWhen: never
