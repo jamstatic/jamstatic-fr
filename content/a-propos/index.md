@@ -13,7 +13,7 @@ Cette approche est marketée par la société Netlify sous le nom [Jamstack]({{<
 
 Ce qui nous intéresse ici, plus que le recours à des services bien pratiques il est vrai, c'est d'abord de répondre aux enjeux d'aujourd'hui : concilier des outils de développement qui adoptent une approche par composition, automatiser les déploiements, pour mieux se concentrer sur notre cœur de métier : le front, et ainsi pouvoir délivrer de sites utilisables, y compris avec une connexion 3G instable.
 
-On assiste depuis quelques années à [une mouvance statique](https://frank.taillandier.me/2016/03/08/les-gestionnaires-de-contenu-statique/) et l'écosystème autour de ce paradigme ne cesse de se développer.
+On assiste depuis quelques années à [une mouvance statique](https://frank.taillandier.me/2016/03/08/les-gestionnaires-de-contenu-statique/) et nous pouvons observer que l'écosystème autour de ce paradigme ne cesse de se développer.
 
 Sur ce site vous trouverez l'actualité relative aux principaux générateurs, tels que [Eleventy](/categories/eleventy/ "Catégorie Eleventy"), [Hugo](/categories/hugo/ "Catégorie Hugo"), [Gatsby](/categories/gatsby/ "Catégorie Gatsby"), ou encore [NextJS](https://nextjs.org), des exemples d'utilisation, des traductions d'articles de référence, des retours d'expérience, des entretiens et bien plus encore.
 
