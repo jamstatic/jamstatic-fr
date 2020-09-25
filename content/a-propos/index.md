@@ -11,11 +11,13 @@ Une architecture à base de pages statiques enrichies par des appels à des APIs
 
 Cette approche est marketée par la société Netlify sous le nom [Jamstack]({{< relref "post/5-raisons-de-tester-la-jamstack" >}}) afin de simplifier la compréhension de leur service mais ils sont loin d'être les seuls à proposer de l'intégration continue et du déploiement sur CDN.
 
-Ce qui nous intéresse ici, plus que le recourrs à des services bien pratiques il est vrai, c'est d'abord de répondre aux enjeux d'aujourd'hui: concilier des outils de développement qui adoptent une approche par composition, automatiser les déploiements, pour mieux se concentrer sur notre coeur de métier: le front, et ainsi pouvoir de sites utilisables même avec une connextion 3G instable.
+Ce qui nous intéresse ici, plus que le recourrs à des services bien pratiques il est vrai, c'est d'abord de répondre aux enjeux d'aujourd'hui: concilier des outils de développement qui adoptent une approche par composition, automatiser les déploiements, pour mieux se concentrer sur notre coeur de métier: le front, et ainsi pouvoir délivrer de sites utilisables même avec une connextion 3G instable.
 
 On assisite depuis quelques années à [une mouvance statique](https://frank.taillandier.me/2016/03/08/les-gestionnaires-de-contenu-statique/) et l'écosystème autour de ce paradigme ne cesse de se développer.
 
 Vous trouverez ici l'actualité relative aux principaux générateurs tels que [Eleventy](/categories/eleventy/ "Catégorie Eleventy"), [Hugo](/categories/hugo/ "Catégorie Hugo"), [Gatsby](/categories/gatsby/ "Catégorie Gatsby"), ou [NextJS](https://nextjs.org) des exemples d'utilisation, des traductions d'articles de référence, des retours d'expérience, des entretiens et bien plus encore.
+
+Nous échangeons également beaucoup sur [notre Slack](https://jamstatic.herokuapp.com/), n'hésitez à nous rejoindre!
 
 ***
 
