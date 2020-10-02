@@ -19,7 +19,6 @@
 
 [[redirects]]
   from = "/slack"
-  #to = "https://join.slack.com/t/jamstatic-fr/shared_invite/zt-hzza3llw-2OgiKWFE3oAhBjmb5XDBNA"
   to = "https://jamstatic.herokuapp.com"
 
 [[redirects]]
