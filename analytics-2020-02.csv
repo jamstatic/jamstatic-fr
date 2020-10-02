@@ -3,7 +3,6 @@
 # Browser & OS
 # 20200101-20200229
 # ----------------------------------------
-
 Operating System,Operating System Version,Browser,Browser Version,Device Category,Pageviews
 Android,10,Android Webview,78.0.3904.96,mobile,1
 Android,10,Android Webview,79.0.3945.116,mobile,1
