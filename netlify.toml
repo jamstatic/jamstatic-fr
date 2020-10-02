@@ -18,10 +18,10 @@
   command = "hugo --gc --minify -D -E -F -b $DEPLOY_PRIME_URL"
 
 [[redirects]]
+  from = "/slack"
+  to = "https://join.slack.com/t/jamstatic-fr/shared_invite/zt-hzza3llw-2OgiKWFE3oAhBjmb5XDBNA"
+
+[[redirects]]
   from = "/*"
   to = "/404.html"
   status = 404
-
-[[redirects]]
-  from = "/slack"
-  to = "https://join.slack.com/t/jamstatic-fr/shared_invite/zt-hzza3llw-2OgiKWFE3oAhBjmb5XDBNA"
