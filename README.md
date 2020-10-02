@@ -14,10 +14,8 @@ l'actualité de l'écosystème de la Jamstack ?
 Vous pouvez :
 
 * [Nous suivre sur Twitter](https://twitter.com/jamstatic_fr)
-* [Rejoindre le channel Slack jamstatic-fr](https://jamstatic.herokuapp.com/)
-* [Soumettre un article à la  publication](https://github.com/jamstatic/jamstatic-fr/projects/1)
-
-Vous pouvez aussi nous aider nous à constituer une liste de [sites statiques francophones](https://github.com/jamstatic/jamstatic-fr/wiki/Sources-des-sites-francophones).
+* [Rejoindre le channel Slack](https://jamstatic.fr/slack/)
+* [Soumettre un article à la publication](https://github.com/jamstatic/jamstatic-fr/projects/1)
 
 ## Développement
 
@@ -25,43 +23,41 @@ Le site est développé avec [Hugo](https://gohugo.io).
 
 Pour installer Hugo sur macOS:
 
-```
+```bash
 brew install hugo
 ```
 
 Pour clôner le dépôt sur sa machine:
 
-```sh
+```bash
 git clone https://github.com/jamstatic/jamstatic-fr.git
 ```
 
 Pour créer un nouvel article:
 
-```sh
+```bash
 git switch ---create post/nouvel-article
-
 hugo new post/nouvel-article.md
 ```
 
 ### Prévisualiser en local
 
-```sh
+```bash
 hugo server -D --environment development
 ```
 
 ### Ouvrir une pull request
-```sh
+
+```bash
 git commit -am "chore: nouvel article"
 gh pr create
 ```
 
 ## Production
 
-
 Chaque commit dans la branche `master` génère un déploiement en production.
 
-Si vous souhaitez contribuer, proposer des articles, vous pouvez ouvrir une
-issue ou soumettre directement une pull request :heart:
+Si vous souhaitez contribuer, proposer des articles, vous pouvez ouvrir une issue ou soumettre directement une pull request :heart:
 
 ## Contributeurs
 
