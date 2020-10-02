@@ -18,6 +18,10 @@
   command = "hugo --gc --minify -D -E -F -b $DEPLOY_PRIME_URL"
 
 [[redirects]]
+  from = "/slack"
+  to = "https://jamstatic.herokuapp.com"
+
+[[redirects]]
   from = "/*"
   to = "/404.html"
   status = 404
