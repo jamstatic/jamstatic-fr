@@ -28,4 +28,4 @@ mv ./hugo-json-api-component-master/* ./themes/json-api/
 
 # run Hugo
 echo "Running Hugo..."
-./hugo  --gc --minify
+./hugo --gc --minify
