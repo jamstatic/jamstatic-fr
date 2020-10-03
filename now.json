@@ -5,5 +5,9 @@
     "src": "now-build.sh",
     "use": "@now/static-build",
     "config": { "distDir": "public" }
-  }]
+  }],
+  "redirects": [
+    { "source": "/slack", "destination": "https://jamstatic.herokuapp.com" },
+    { "source": "/slack/", "destination": "https://jamstatic.herokuapp.com" }
+  ]
 }
