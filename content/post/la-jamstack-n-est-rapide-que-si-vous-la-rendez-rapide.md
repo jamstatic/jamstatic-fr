@@ -3,7 +3,7 @@ title: La jamstack n'est rapide que si vous la rendez rapide
 date: 2020-10-04
 lastmod: 2020-10-04T17:09:00+02:00
 description: Trop de sites web construits sur le principe de la Jamstack sont lents.
-author: Arnaud Ligny
+author: arnaud
 categories:
 - jamstack
 - Mstack
@@ -50,4 +50,7 @@ Je préfère [le faire sur le serveur](https://nicolas-hoizey.com/articles/2017/
 
 Par exemple :
 
-- WIP
+- mon site web a reçu 75 webmentions en avril 2020. Je l’ai probablement généré une centaine de fois durant la même période, ce qui correspond à **100 requêtes à webmention.io avec des réponses peu volumineuses**.
+- pendant la même période, 3 746 pages de mon site web ont été vu (sous estimé, je continue à utiliser Google Analytics 🤷‍♂️), ce qui aurait correspondu à **3 746 requêtes à webmention.io avec des réponses volumineuses**.
+
+WIP
