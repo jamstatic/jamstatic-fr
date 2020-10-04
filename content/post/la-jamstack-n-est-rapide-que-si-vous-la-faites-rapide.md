@@ -19,7 +19,7 @@ draft: true
 
 ---
 
-La JAMstack se présente souvent comme un excellent moyen de fournir des sites performants. C'est même le premier avantage répertorié sur [jamstack.wtf](https://jamstack.wtf), un guide pour "comprendre le concept de JAMstack simplement de manière à encourager d'autres développeurs à adopter le workflow". Mais trop de sites JAMstack sont très lents.
+La Jamstack se présente souvent comme un excellent moyen de fournir des sites performants. C'est même le premier avantage répertorié sur [jamstack.wtf](https://jamstack.wtf), un guide pour "comprendre le concept de Jamstack simplement de manière à encourager d'autres développeurs à adopter le workflow". Mais trop de sites Jamstack sont très lents.
 
 Vous avez peut-être vu les diatribes fréquentes d'[Alex Russell](https://infrequently.org) à propos de Gatsby :
 
