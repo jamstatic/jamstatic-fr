@@ -26,7 +26,11 @@
         <span itemprop="author" itemscope itemtype="https://schema.org/Person">
           <span itemprop="name">
             {{- if isset .Params "author" }}
-              <a class="post-author" rel="author" href="{{ (index .Site.Data.authors .Params.author).web }}">{{ (index .Site.Data.authors .Params.author).name }}</a>
+              {{- if isset .Params.author "web" }}
+            <a class="post-author" rel="author" href="{{ (index .Site.Data.authors .Params.author).web }}">{{ (index .Site.Data.authors .Params.author).name }}</a>
+              {{ else }}
+            <a class="post-author" rel="author" href="https://github.com/{{ (index .Site.Data.authors .Params.author).github }}">{{ (index .Site.Data.authors .Params.author).name }}</a>
+              {{end -}}
             {{ else }}
               <a class="post-author" rel="author" href="{{ .Permalink }}">{{ .Site.Title }}</a>
             {{end -}}
