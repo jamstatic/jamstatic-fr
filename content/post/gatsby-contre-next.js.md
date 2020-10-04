@@ -20,16 +20,16 @@ canonical_url: https://jaredpalmer.com/gatsby-vs-nextjs
 ---
 
 {{< intro >}}
-Gatsby n'a pas toujours bonne presse, surtout quand il s'agit de développer des sites statiques plutôt simples avec une seule source de données. Le retour d'expérience de [Jared Palmer](https://jaredpalmer.com), le créateur de Formik et de Razzle en est une bonne illustration. À l'opposé [NextJS](https://nextjs.org) 9 propose le juste niveau d'abstraction nécessaire pour générer des sites statiques à partir du système de fichiers, tout en continuant d'utiliser React pour le développement par composition.
+Gatsby n'a pas toujours bonne presse, surtout quand il s'agit de développer des sites statiques plutôt simples avec une seule source de données. Le retour d'expérience de [Jared Palmer](https://jaredpalmer.com), le créateur de Formik et de Razzle en est une bonne illustration. À l'opposé [Next.js](https://nextjs.org) 9 propose le juste niveau d'abstraction nécessaire pour générer des sites statiques à partir du système de fichiers, tout en continuant d'utiliser React pour le développement par composition.
 {{< /intro >}}
 
 ---
 
-Ces derniers mois, j'ai migré autant de code que possible hors de Gatsby. Bien que je comprenne parfaitement pourquoi certaines personnes soient attirées par Gatsby et son écosystème grandissant, de mon côté je me suis résolu à arrêter de siroter du Tang à la paille. Bien que Next.js ne soit pas parfait non plus, il procure une meilleure abstraction au dessus de Webpack, qui est plus qu'adéquate pour une grande majorité de projets.
+Ces derniers mois, j'ai migré autant de code que possible hors de Gatsby. Bien que je comprenne parfaitement pourquoi certaines personnes soient attirées par Gatsby et son écosystème grandissant, de mon côté je me suis résolu à arrêter de siroter du Tang à la paille. Bien que Next.js ne soit pas parfait non plus, il procure une meilleure abstraction au-dessus de Webpack, qui est plus qu'adéquate pour une grande majorité de projets.
 
-Dans cet article je partagee mon opinion personnelle sur ces deux projets quand il s'agit de développer des sites web statiques[^1].
+Dans cet article je partage mon opinion personnelle sur ces deux projets quand il s'agit de développer des sites web statiques[^1].
 
-[^1]: Pour des applications dynamiques rendues côté serveur, je préfère Razzle + After.js car je suis convaincu que dans ce cas le routeur de React offre une meilleure API de routing que celle de NextJS.
+[^1]: Pour des applications dynamiques rendues côté serveur, je préfère Razzle + After.js car je suis convaincu que dans ce cas le routeur de React offre une meilleure API de routing que celle de Next.js.
 
 ## À quoi Gatsby est-il bon ?
 
@@ -43,19 +43,19 @@ En attendant, ils m'ont demandé si je pouvais simplement extraire des images de
 
 ![L'interface de GraphiQL](https://jaredpalmer.com/static/233f7821107d91fe1cd1b3d65d293412/9acdc/noir-graphiql-2.webp)
 
-Celà a pris 15 minutes pour intégrer et insérer les images sur la page. Ce qui est remarquable, c'est que j'ai fait tout cela sans jamais consulter la documentation de l'API Instagram. Plutôt cool.
+Cela a pris 15 minutes pour intégrer et insérer les images sur la page. Ce qui est remarquable, c'est que j'ai fait tout cela sans jamais consulter la documentation de l'API Instagram. Plutôt cool.
 
 Ce type d'interaction illustre la proposition de valeur unique de Gatsby : une API GraphQL unique et universelle pour toutes les sources de données. En exploitant GraphQL et son écosystème croissant de plugins source, Gatsby peut, en théorie, fournir aux développeurs une couche d'abstraction unifiée (et un langage de requête) pour accéder à n'importe quelle donnée (qu'il s'agisse de JSON distant, de fichiers locaux ou de vidéos de chats).
 
 ## Où est le problème ?
 
-L'exemple ci-dessus illustre à la fois le meilleure et le pire côté de Gatsby. Oui, c'est bien beau d'utiliser GraphQL, mais c'est surtout très très agaçant la plupart du temps. Si vous y réfléchissez deux secondes, je me fous de savoir comment les données Instagram que je veux arrivent à mon composant React, je veux juste qu'elles apparaissent sous forme de propriétés (et de préférence avec des types TypeScript). Rappelez-vous, puisque nous sommes en terrain statique, nous ne nous soucions pas trop de la sur-extraction ; je serais tout aussi heureux que vous me donniez _toutes_ les données Instagram comme props puisqu'il n'y a pas de temps d'exécution supplémentaire (juste du temps de génération).
+L'exemple ci-dessus illustre à la fois le meilleur et le pire côté de Gatsby. Oui, c'est bien beau d'utiliser GraphQL, mais c'est surtout très très agaçant la plupart du temps. Si vous y réfléchissez deux secondes, je me fous de savoir comment les données Instagram que je veux arrivent à mon composant React, je veux juste qu'elles apparaissent sous forme de propriétés (et de préférence avec des types TypeScript). Rappelez-vous, puisque nous sommes en terrain statique, nous ne nous soucions pas trop de la sur-extraction ; je serais tout aussi heureux que vous me donniez _toutes_ les données Instagram comme propriétés(props) puisqu'il n'y a pas de temps d'exécution supplémentaire (juste du temps de génération).
 
 Cela donne l'impression de prendre des pilules qui rendent fou, mais imaginez comme il aurait été agréable de ne pas écrire de GraphQL du tout ? Et s'il avait simplement fourni automatiquement toutes les données à toutes mes pages. Cela aurait permis de gagner un temps fou.
 
 ## GraphQL est excessif pour la plupart des sites statiques
 
-Une autre expérience notable avec Gatsby pour moi a été la construction du site web de mon podcast : https://undefined.fm ([source](https://github.com/undefinedfm/undefined.fm)). Contrairement au blog Markdown typique d'un développeur (comme celui-ci), le contenu de undefined.fm est uniquement dérivé du f[lux RSS de notre podcast](https://feeds.simplecast.com/8lcA0Is7). C'est une bonne chose car cela permet à notre solution d'hébergement de podcasts/CMS (Simplecast) d'être l'unique source de vérité[^2].
+Une autre expérience notable avec Gatsby pour moi a été la construction du site web de mon podcast : https://undefined.fm ([source](https://github.com/undefinedfm/undefined.fm)). Contrairement au blog Markdown typique d'un développeur (comme celui-ci), le contenu d' undefined.fm est uniquement dérivé du f[lux RSS de notre podcast](https://feeds.simplecast.com/8lcA0Is7). C'est une bonne chose car cela permet à notre solution d'hébergement de podcasts/CMS (Simplecast) d'être l'unique source de vérité[^2].
 
 [^2]: J'ai une action GitHub qui redéploie le site chaque nuit en pingant le hook de déploiement de Netlify. Quand je poste un nouvel épisode, une fois par semaine environ, je le redéploie généralement manuellement via le tableau de bord de Netlify.
 
@@ -72,7 +72,7 @@ exports.sourceNodes = async ({ actions }, options = {}) => {
   const { createNode } = actions;
   const { feed } = options;
   try {
-    // Création des noeuds, souvent en récupérant
+    // Création des nœuds, souvent en récupérant
     // des données d'une API distante.
     const { rss } = await load(feed);
     const podcast = rss.channel[0].item;
@@ -177,7 +177,7 @@ Nul besoin de parcourir le code ligne par ligne, voici ce que fait ce plugin :
 - Conversion du XML en JSON
 - Extraction du tableau des épisodes de l'objet JSON
 - Parcours de chaque entrée, modification de certaines d'entre elles avec la magie des chaînes de caractères (pour générer un slug et obtenir l'URL correcte pour l'intégration de l'iframe)
-- Ajout de chaque entrée à la couche GraphQL de Gatsby en tant que noeud d'épisode en spécifiant un type et en le hachant (je suppose que Gatsby utilise ce hachage pour optimiser les changements ? :)
+- Ajout de chaque entrée à la couche GraphQL de Gatsby en tant que nœud d'épisode en spécifiant un type et en le hachant (je suppose que Gatsby utilise ce hachage pour optimiser les changements ? :)
 
 Tout cela semble parfait et cela fonctionne, mais le développement de ce plugin était loin d'être idéal. Chaque fois que j'ai modifié le plugin, j'ai dû relancer la commande `rm -rf .cache && gatsby develop`. S'il y avait ne serait-ce qu'_une_ erreur, le site explosait (nous y reviendrons plus tard).
 
@@ -405,7 +405,7 @@ TypeError: Cannot read property 'allEpisode' of undefined
 
 Cette erreur indique qu'il y a un problème dans `gatsby-node.js` à la ligne 81 (où je map les épisodes retournés par GraphQL).
 
-mouais… à ce moment là, dans ma tête je suis perdu :
+mouais… à ce moment-là, dans ma tête je suis perdu :
 
 Il y a une erreur dans mon plugin source ? Peut-être ? Est-elle présente sur tous les épisodes ? Peut-être ? Est-elle présente sur un seul champ d'un épisode ? Ou peut-être sur un champ spécifique d'un épisode spécifique ? Mais lequel ? Ça a l'air bon pourtant ? Peut-être ai-je fait une faute de frappe dans ma requête GraphQL de `gatsby-node.js` ? D'après le reste de la sortie du terminal, il semble que mes autres requêtes GraphQL (situées quelque part dans mon code source) échouent également ? Où sont-elles ? Celles qui échouent ? J'ai oublié ? Zut. Mon plugin semblait fonctionner quelques secondes auparavant ? Maintenant, aucun de mon GraphQL ne semble fonctionner ?
 
@@ -423,7 +423,7 @@ Attendez ! Ce n'est pas fini !
 
 ## Gatsby pourrait bien être trop intelligent à ses dépens
 
-Mon père ([@shellypalmer](https://twitter.com/shellypalmer)) a lancé [Think About This](https://thinkaboutthis.fm/) son podcast sur la technologie en compagnie de [Ross Martin](https://twitter.com/rossmartin1) il y a quelques semaines. Vous devriez l'écouter, c'est super. En bon fiston, je me suis empressé de forker le code source de mon podcast undefined.fm, en changeant just les visuels et les contenus textuels, pour lancer thinkaabouthis.fm. Mis à part le fait que le site utilise Megaphone.fm à la place de Simplecast, le code des deux sites est identique à 99,9%. Tout marchait comme sur des roulettes pour l'épisode pilote. J'ai même automatisé le déploiement du site à l'aide d'une tâche cron dans une action GitHub tous les mecredi matins.
+Mon père ([@shellypalmer](https://twitter.com/shellypalmer)) a lancé [Think About This](https://thinkaboutthis.fm/) son podcast sur la technologie en compagnie de [Ross Martin](https://twitter.com/rossmartin1) il y a quelques semaines. Vous devriez l'écouter, c'est super. En bon fiston, je me suis empressé de forker le code source de mon podcast undefined.fm, en changeant juste les visuels et les contenus textuels, pour lancer thinkaabouthis.fm. Mis à part le fait que le site utilise Megaphone.fm à la place de Simplecast, le code des deux sites est identique à 99,9%. Tout marchait comme sur des roulettes pour l'épisode pilote. J'ai même automatisé le déploiement du site à l'aide d'une tâche cron dans une action GitHub tous les mercredi matin.
 
 Cependant le jour du lancement du premier véritable épisode, mon père me ping sur Slack :
 
@@ -432,9 +432,9 @@ Cependant le jour du lancement du premier véritable épisode, mon père me ping
 Cela n'a pas de sens, mon site marche très bien depuis des mois. Pourquoi est-ce que le premiere épisode ne s'affiche-t-il pas ?
 Le déploiement semble se passer correctement, aucune erreur à signaler dans les fichiers journaux de Netlify. Qu'est-ce qui se passe encore ?
 
-Et bien, il se trouve que parfois Gatsby/GraphQL est vraiment trop intelligent à ses dépens. Bien que ce soit en régle générale une bonne chose, Gatsby _déduit_ le schema GraphQL de la source de données. Cela marche très bien quand tout est toujours défini, mais beaucoup moins bien lorsque certaines entrées sont nulles. Il se trouve que le premier épisode du flux RSS du podcast de mon père était un épisode pilote et ne possédait donc pas de numéro pour le champ `<itunes:episode>`. Ce n'était pas un problème jusqu'à la parution du véritable premier épisode (le deuxième élément du flux RSS) qui lui avait la valeur `1` pour `<itunes:episode>`. Ça a fait explosé Gatsby car il n'arrivait pas à déduire la valeur d'`episodeNumber` pour le pilote. Qui l'aurait cru ? Pas moi. Après avoir fouillé la documentation, j'ai appris qu'on peut [outrepasser ce comportement à l'aide de l'annotation GrapQL `@dontinfer`](https://www.gatsbyjs.com/docs/schema-customization/#opting-out-of-type-inference).
+Hé bien, il se trouve que parfois Gatsby/GraphQL est vraiment trop intelligent à ses dépens. Bien que ce soit en règle générale une bonne chose, Gatsby _déduit_ le schéma GraphQL de la source de données. Cela marche très bien quand tout est toujours défini, mais beaucoup moins bien lorsque certaines entrées sont nulles. Il se trouve que le premier épisode du flux RSS du podcast de mon père était un épisode pilote et ne possédait donc pas de numéro pour le champ `<itunes:episode>`. Ce n'était pas un problème jusqu'à la parution du véritable premier épisode (le deuxième élément du flux RSS) qui lui avait la valeur `1` pour `<itunes:episode>`. Ça a fait exploser Gatsby car il n'arrivait pas à déduire la valeur d'`episodeNumber` pour le pilote. Qui l'eut cru ? Pas moi. Après avoir fouillé la documentation, j'ai appris qu'on peut [outrepasser ce comportement à l'aide de l'annotation GrapQL `@dontinfer`](https://www.gatsbyjs.com/docs/schema-customization/#opting-out-of-type-inference).
 
-Bien que ça ait l'air d'une correction simple à cette petite anomalie, cela m'a pris des heures à comprendre d'où le problème venait. Pendant ce temps, j'ai du supprimere le numéro d'épisode du site.
+Bien que ça ait l'air d'une correction simple à cette petite anomalie, cela m'a pris des heures pour comprendre d'où venait le problème. Pendant ce temps, j'ai du supprimer le numéro d'épisode du site.
 
 ### Alors GraphQL pour des sites statiques ?
 
@@ -449,7 +449,7 @@ Je vous répondrais: la partie GraphQL et les abstractions de Gatsby.
 
 Next.js (et Razzle) vous donnent tous deux  un simple accès direct à la configuration de Webpack. Si vous connaissez Webpack, alors vous connaissez Next.js et Razzle. Point final.
 Avec Gatsby, vous disposez de méthodes et de fonctions du framework que vous _devez_ utiliser pour augmenter les fonctionnalités.
-GraphQL est encore une fois, la source de la complexité pour Gatsby et la raison pour laquelle les fichiers `gatsby-node.js` sont beaucoup plus complexes que votre fichier `next.config.js` usuel. Autrement dit, `gatsby-node.js` c'est l'équivalent de `functions.php` de ce bon vieux Wordpress  sous stéroïdes. Et je ne suis pas fan.
+GraphQL est encore une fois, la source de la complexité pour Gatsby et la raison pour laquelle les fichiers `gatsby-node.js` sont beaucoup plus complexes que votre fichier `next.config.js` usuel. Autrement dit, `gatsby-node.js` c'est l'équivalent de `functions.php` de ce bon vieux WordPress  sous stéroïdes. Et je ne suis pas fan.
 
 ## Next.js c'est top pour des sites statiques
 
@@ -457,7 +457,7 @@ GraphQL est encore une fois, la source de la complexité pour Gatsby et la raiso
 
 ### Faire des trucs géniaux avec `getStaticProps`
 
-Pour être honnête je n'ai pas titlé sur Next.js jusqu'à ce que je lise le code source de [la documentation d'Expo](https://github.com/expo/expo/tree/master/docs). Il contient un code excellent pour générer la barre latérale et analyser statiquement le système de fichiers. Tout fonctionne grâce à `babel-plugin-preval`. Cet astucieux plugin de Kent C. Dodds pré-évalue le code JavaScript au moment de la génération. Il peut ensuite être utilisé pour préévaluer le contenu du système de fichiers en utilisant le bon vieux paquet `fs`. Cependant, maintenant avec Next.js 9.x, vous n'avez même plus besoin de `preval`, vous pouvez simplement exporter une fonction depuis une page appelée `getStaticProps` et ça marche.
+Pour être honnête je n'ai pas tilté sur Next.js jusqu'à ce que je lise le code source de [la documentation d'Expo](https://github.com/expo/expo/tree/master/docs). Il contient un code excellent pour générer la barre latérale et analyser statiquement le système de fichiers. Tout fonctionne grâce à `babel-plugin-preval`. Cet astucieux plugin de Kent C. Dodds pré-évalue le code JavaScript au moment de la génération. Il peut ensuite être utilisé pour préévaluer le contenu du système de fichiers en utilisant le bon vieux paquet `fs`. Cependant, maintenant avec Next.js 9.x, vous n'avez même plus besoin de `preval`, vous pouvez simplement exporter une fonction depuis une page appelée `getStaticProps` et ça marche.
 
 Par exemple, la nouvelle documentation de Formik aura un blog. Tous les articles sont écrits en MDX. Chaque article reçoit un fichier `.mdx` dans le répertoire `./pages/blog` et possède le même front matter:  titre, description, date, etc. Pour générer l'index du blog, je fais le plus simple possible : je lis les fichiers `.mdx` dans le répertoire `./pages/blog/`, j'analyse leur contenu avec le paquet `front-matter`, je les mets dans un tableau et je les classe par date. Comme j'utilise `getStaticProps`, tout se passe au moment de la compilation, de sorte que le résultat est toujours une page statique.
 
