@@ -57,11 +57,11 @@ Cela donne l'impression de prendre des pilules qui rendent fou, mais imaginez co
 
 Une autre expérience notable avec Gatsby pour moi a été la construction du site web de mon podcast : https://undefined.fm ([source](https://github.com/undefinedfm/undefined.fm)). Contrairement au blog Markdown typique d'un développeur (comme celui-ci), le contenu de undefined.fm est uniquement dérivé du f[lux RSS de notre podcast](https://feeds.simplecast.com/8lcA0Is7). C'est une bonne chose car cela permet à notre solution d'hébergement de podcasts/CMS (Simplecast) d'être l'unique source de vérité[^2].
 
-[^2] : J'ai une action GitHub qui redéploie le site chaque nuit en pingant le hook de déploiement de Netlify. Quand je poste un nouvel épisode, une fois par semaine environ, je le redéploie généralement manuellement via le tableau de bord de Netlify.
+[^2]: J'ai une action GitHub qui redéploie le site chaque nuit en pingant le hook de déploiement de Netlify. Quand je poste un nouvel épisode, une fois par semaine environ, je le redéploie généralement manuellement via le tableau de bord de Netlify.
 
 Bien que cela semble génial, la mise en place de cette solution a été pénible. Bien qu'il existe quelques plugins Gatsby source pour les flux RSS, aucun d'entre eux n'était adapté aux Podcasts[^3]. J'ai choisi celui qui semblait le mieux fonctionner et j'ai copié tout cela dans le code source de mon projet sous `./plugins/gatsby-source-simplecast-rss`. Je l'ai ensuite ajouté à mon fichier `gatsby-config.js`. J'ai ensuite dû trouver comment ajouter ces données à l'API GraphQL de Gatsby.
 
-[^3] : Les podcasts ont un format RSS très spécifique qu'Apple a inventé il y a des années. Chaque application de podcast, PocketCasts, Overcasts, etc. n'est en fait qu'un lecteur RSS fantaisiste déguisé.
+[^3]: Les podcasts ont un format RSS très spécifique qu'Apple a inventé il y a des années. Chaque application de podcast, PocketCasts, Overcasts, etc. n'est en fait qu'un lecteur RSS fantaisiste déguisé.
 
 Il est temps de nous amuser un peu, comme ceci:
 
