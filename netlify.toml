@@ -12,6 +12,7 @@
   HUGO_ENABLEGITINFO = "true"
 
 [context.deploy-preview]
+  HUGO_ENV = "development"
   command = "hugo --gc --minify -D -E -F -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy]
