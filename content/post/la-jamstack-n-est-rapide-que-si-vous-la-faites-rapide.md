@@ -33,8 +33,21 @@ Eleventy est très différent, comme Zach Leatherman nous le rappelle dans [*Ele
 
 Le problème avec la plupart des sites Jamstack lents est qu'ils chargent un tas de JavaScript. N'oubliez pas que tout JavaScript ajouté doit être envoyé au navigateur, qui réclamera d’avantage de ressources pour traiter ça. Ça impacte rapidement les performances.
 
-Parfois, l’utilisation du build côté serveur est suffisant pour obtenir les données depuis une API et servir le HTML à tous les visiteurs, ce qui est nettement plus performant.
+Parfois, la génération côté serveur est suffisante pour obtenir les données depuis une API et servir le HTML à tous les visiteurs, ce qui est nettement plus performant.
 
 Par exemple, [swyx](https://www.swyx.io) a écrit *[Clientside Webmentions](https://www.swyx.io/writing/clientside-webmentions/)* à propos de l’implémentation de Webmention avec [Svelte](https://svelte.dev). Tout article faisant la promotion de [Webmention](https://nicolas-hoizey.com/tags/webmention/) et facilitant son adoption est le bienvenu ! Mais même si c’est une démo de Webmention et Svelte, je ne recommanderais pas de le faire côté client.
 
-to do
+## D’abord côté serveur
+
+Je préfère [le faire sur le serveur](https://nicolas-hoizey.com/articles/2017/07/27/so-long-disqus-hello-webmentions/#how-does-it-work-on-this-site).
+
+Ça permet de :
+
+- appeler l’API [webmentio.io](http://webmentio.io) seulement au moment de générer le site, ce qui devrait être moins fréquent que la consultation des pages par les visiteurs.
+- cacher le résultat des requêtes à [webmentio.io](http://webmentio.io) et le *timestamp* de la dernière, afin que la prochaine demande uniquement les nouvelles webmentions.
+
+Ça sollicite moins [webmentio.io](http://webmentio.io), avec une unique requête simple par génération, alors que le client effectue une requête bien plus volumineuse (voire plusieurs, avec pagination) pour chaque page vue.
+
+Par exemple :
+
+- WIP
