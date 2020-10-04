@@ -112,4 +112,4 @@ Voici la **Mstack** :
 
 Assurez-vous que cette « pile » (NDT : « stack ») est excellente, et ensuite améliorez la avec JavaScript et des API.
 
-[^1]: [Version FR]({{< relref "c-est-quoi-la-jamstack.md" >}})
+[^1]: [Version française de jamstack.wtf]({{< relref "c-est-quoi-la-jamstack.md" >}})
