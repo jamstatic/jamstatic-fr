@@ -94,7 +94,7 @@ Comme suggéré par [Yann](https://twitter.com/yann_yinn), j’aimerais commence
 
 ![JAMstack-schema-2](/assets/images/jamstack/JAMstack-schema-2.png)
 
-Cela rend plus évident qu’il s’agit d’une pile de choses, très utile pour une « stack » (NDT : « stack » peut être traduit « pile » en français).
+Cela rend plus évident qu’il s’agit d’une pile de choses, très utile pour une « pile » (NDT : « stack » peut être traduit « pile » en français).
 
 Mais j’aimerais suggérer cette modification :
 
@@ -104,12 +104,12 @@ Bien sûr, ça se lit **AJMstack** au lieu de JAMstack, donc je parie que je n�
 
 Mais au final ça semble plus adéquate, ça montre que JavaScript est le lien entre les API et le balisage.
 
-Ça permet de présenter cela comme une excellente plate-forme d’amélioration progressive, car nous pouvons commencer avec de bonnes vieilles (ai-je entendu « ennuyeuses » ?) balises…
+Ça permet de présenter cela comme une excellente plate-forme d’amélioration progressive, car nous pouvons commencer avec du bon vieux (ai-je entendu « ennuyeux » ?) HTML…
 
 Voici la **Mstack** :
 
 ![JAMstack-schema-4](/assets/images/jamstack/JAMstack-schema-4.png)
 
-Assurez-vous que cette « pile » (NDT : « stack ») est excellente, et ensuite améliorez la avec JavaScript et des API.
+Assurez-vous que cette « pile » est excellente, et ensuite améliorez la avec JavaScript et des API.
 
 [^1]: [Version française de jamstack.wtf]({{< relref "c-est-quoi-la-jamstack.md" >}})
