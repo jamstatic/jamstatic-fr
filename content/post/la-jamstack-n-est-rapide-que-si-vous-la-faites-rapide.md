@@ -1,17 +1,25 @@
 ---
 title: La JAMstack n'est rapide que si vous la faites rapide
 date: 2020-10-04
+lastmod: 2020-10-04T17:09:00+02:00
 description: Trop de sites web construit avec la JAMstack sont très lent
 author: Arnaud Ligny
 categories:
 - JAMstack
 - Mstack
+images:
+- "/assets/images///"
 source:
   author: Nicolas Hoizey
   title: JAMstack is fast only if you make it so
   url: https://nicolas-hoizey.com/articles/2020/05/05/jamstack-is-fast-only-if-you-make-it-so/
   lang: en
+commments: false
+aliases: []
+canonical_url: ''
+keywords: []
 draft: true
+
 ---
 
 La JAMstack se présente souvent comme un excellent moyen de fournir des sites performants. C'est même le premier avantage répertorié sur [jamstack.wtf](https://jamstack.wtf), un guide pour "comprendre le concept de JAMstack simplement de manière à encourager d'autres développeurs à adopter le workflow". Mais trop de sites JAMstack sont très lents.
