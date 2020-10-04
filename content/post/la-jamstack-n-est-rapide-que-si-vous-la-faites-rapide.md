@@ -8,16 +8,13 @@ categories:
 - JAMstack
 - Mstack
 images:
-- "/assets/images///"
+- "/assets/images/"
 source:
   author: Nicolas Hoizey
   title: JAMstack is fast only if you make it so
   url: https://nicolas-hoizey.com/articles/2020/05/05/jamstack-is-fast-only-if-you-make-it-so/
   lang: en
-commments: false
-aliases: []
-canonical_url: ''
-keywords: []
+canonical_url: https://nicolas-hoizey.com/articles/2020/05/05/jamstack-is-fast-only-if-you-make-it-so/
 draft: true
 
 ---
