@@ -16,7 +16,7 @@ source:
   lang: en
 canonical_url: https://nicolas-hoizey.com/articles/2020/05/05/jamstack-is-fast-only-if-you-make-it-so/
 draft: true
-
+typora-root-url: ../../static
 ---
 
 La Jamstack se présente souvent comme un excellent moyen de fournir des sites performants. C'est même le premier avantage répertorié sur [jamstack.wtf](https://jamstack.wtf), un guide pour "comprendre le concept de Jamstack simplement, de manière à encourager d'autres développeurs à adopter le workflow". Mais trop de sites Jamstack sont très lents.
@@ -88,17 +88,17 @@ C’est aussi quelque chose que je n’aime pas vraiment dans la tendance actuel
 
 Voici pour l’exemple ce que vous pouvez voir sur [jamstack.wtf](https://jamstack.wtf/) (simplifié) :
 
-![JAMstack-schema-1](../../static/assets/images/jamstack/JAMstack-schema-1.png)
+![JAMstack-schema-1](/assets/images/jamstack/JAMstack-schema-1.png)
 
 Comme suggéré par [Yann](https://twitter.com/yann_yinn), j’aimerais commencer par utiliser cette meilleures présentation :
 
-![JAMstack-schema-2](../../static/assets/images/jamstack/JAMstack-schema-2.png)
+![JAMstack-schema-2](/assets/images/jamstack/JAMstack-schema-2.png)
 
 Cela rend plus évident qu’il s’agit d’une pile de choses, très utile pour une « stack » (NDT : « stack » peut être traduit « pile » en français).
 
 Mais j’aimerais suggérer cette modification :
 
-![JAMstack-schema-3](../../static/assets/images/jamstack/JAMstack-schema-3.png)
+![JAMstack-schema-3](/assets/images/jamstack/JAMstack-schema-3.png)
 
 Bien sûr, ça se lit **AJMstack** au lieu de JAMstack, donc je parie que je n’aurais pas de succès dans la promotion… 🤷‍♂️
 
@@ -108,6 +108,6 @@ Mais au final ça semble plus adéquate, ça montre que JavaScript est le lien e
 
 Voici la **Mstack** :
 
-![JAMstack-schema-4](../../static/assets/images/jamstack/JAMstack-schema-4.png)
+![JAMstack-schema-4](/assets/images/jamstack/JAMstack-schema-4.png)
 
 Assurez-vous que cette « pile » (NDT : « stack ») est excellente, et ensuite améliorez la avec JavaScript et des API.
