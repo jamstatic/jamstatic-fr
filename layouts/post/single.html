@@ -1,11 +1,3 @@
-{{- if .Params.author }}
-  {{ $author_name := (index .Site.Data.authors .Params.author).name}}
-  {{ $author_url := (index .Site.Data.authors .Params.author).web}}
-{{ else }}
-  {{ $author_name := "Jamstatic" }}
-  {{ $author_url := .Permalink }}
-{{end -}}
-
 {{- define "main" }}
   <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
     <header class="post-header swoosh">
@@ -33,7 +25,11 @@
         • <span aria-label="Temps de lecture">{{ .ReadingTime }} min</span> •
         <span itemprop="author" itemscope itemtype="https://schema.org/Person">
           <span itemprop="name">
-            <a class="post-author" rel="author" href="{{ $author_url }}">{{ $author_name }}</a>
+            {{- if .Params.author }}
+              <a class="post-author" rel="author" href="{{ (index .Site.Data.authors .Params.author).web }}">{{ (index .Site.Data.authors .Params.author).name }}</a>
+            {{ else }}
+              <a class="post-author" rel="author" href="{{ .Permalink }}">{{ .Site.Title }}</a>
+            {{end -}}
           </span>
         </span>
       </p>
