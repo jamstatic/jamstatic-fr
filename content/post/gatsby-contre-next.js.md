@@ -4,7 +4,6 @@ date: 2020-10-03
 lastmod: 2020-10-03T21:12:22+02:00
 description: Une illustration du surcoût de la complexité engendré par Gatsby sur un site
   statique par rapport au framework React Next.js
-author: Frank Taillandier
 categories:
 - gatsby
 - nextjs
