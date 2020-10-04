@@ -1,10 +1,10 @@
-{{- if .Params.author
-  $author_name := (index .Site.Data.authors .Params.author).name
-  $author_url := (index .Site.Data.authors .Params.author).web
-else
-  $author_name := "Jamstatic"
-  $author_url := .Permalink
-end -}}
+{{- if .Params.author }}
+  {{ $author_name := (index .Site.Data.authors .Params.author).name}}
+  {{ $author_url := (index .Site.Data.authors .Params.author).web}}
+{{ else }}
+  {{ $author_name := "Jamstatic" }}
+  {{ $author_url := .Permalink }}
+{{end -}}
 
 {{- define "main" }}
   <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
