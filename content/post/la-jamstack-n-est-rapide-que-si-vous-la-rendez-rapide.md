@@ -19,7 +19,7 @@ draft: true
 typora-root-url: ../../static
 ---
 
-La Jamstack se présente souvent comme un excellent moyen de fournir des sites performants. C'est même le premier avantage répertorié sur [jamstack.wtf](https://jamstack.wtf), un guide pour "comprendre le concept de Jamstack simplement, de manière à encourager d'autres développeurs à adopter le workflow". Mais trop de sites Jamstack sont très lents.
+La Jamstack se présente souvent comme un excellent moyen de fournir des sites performants. C'est même le premier avantage répertorié sur [jamstack.wtf](https://jamstack.wtf), un guide[^1] pour "comprendre le concept de Jamstack simplement, de manière à encourager d'autres développeurs à adopter le workflow". Mais trop de sites Jamstack sont très lents.
 
 Vous avez peut-être vu les diatribes fréquentes d'[Alex Russell](https://infrequently.org) à propos de Gatsby :
 
@@ -111,3 +111,5 @@ Voici la **Mstack** :
 ![JAMstack-schema-4](/assets/images/jamstack/JAMstack-schema-4.png)
 
 Assurez-vous que cette « pile » (NDT : « stack ») est excellente, et ensuite améliorez la avec JavaScript et des API.
+
+[^1]: [Version FR]({{< relref "c-est-quoi-la-jamstack.md" >}})
