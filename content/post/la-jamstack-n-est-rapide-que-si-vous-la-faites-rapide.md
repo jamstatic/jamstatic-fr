@@ -29,7 +29,7 @@ Gatsby est une cible facile (parmi tant d'autres) car il n'est actuellement pas 
 
 Eleventy est très différent, comme Zach Leatherman nous le rappelle dans [*Eleventy’s New Performance Leaderboard*](https://www.zachleat.com/web/performance-dashboard/) :
 
-> Eleventy n'effectue aucune optimisation particulière en sortie de boîte pour rendre vos sites rapides. Cela ne vous empêchera pas de créer un site lent. Mais surtout, il n’ajoute rien de plus non plus.
+> Eleventy n'effectue aucune optimisation particulière pour rendre vos sites plus rapides. Cela ne vous empêchera pas de créer un site lent. Mais surtout, Eleventy n’ajoute rien qui ralentisse votrre site.
 
 Le problème avec la plupart des sites JAMstack lents est qu'ils chargent un tas de JavaScript. N'oubliez pas que tout JavaScript ajouté doit être envoyé au navigateur, qui réclamera d’avantage de ressources pour traiter ça. Ça impacte rapidement les performances.
 
