@@ -91,47 +91,17 @@ C’est aussi quelque chose que je n’aime pas vraiment dans la tendance actuel
 
 Voici pour l’exemple ce que vous pouvez voir sur [jamstack.wtf](https://jamstack.wtf/) (simplifié) :
 
-<dl class="stack stack-wtf">
-  <dt class="stack__name">JAMstack
-    <dd>
-      <ol>
-        <li class="stack__javascript">JavaScript</li>
-        <li class="stack__apis">APIs</li>
-        <li class="stack__markup">Markup</li>
-      </ol>
-    </dd>
-  </dt>
-</dl>
+{{< figure src="jamstack-horizontal.svg" caption="Jamstack à plat" >}}
 
 Comme suggéré par [Yann](https://twitter.com/yann_yinn), j’aimerais commencer par utiliser cette meilleures présentation :
 
-<dl class="stack stack-jam">
-  <dt class="stack__name">JAMstack
-    <dd>
-      <ol>
-        <li class="stack__javascript">JavaScript</li>
-        <li class="stack__apis">APIs</li>
-        <li class="stack__markup">Markup</li>
-      </ol>
-    </dd>
-  </dt>
-</dl>
+{{< figure src="jamstack-vertical.svg" caption="Jamstack empilé" >}}
 
 Cela rend plus évident qu’il s’agit d’une pile de choses, très utile pour une « pile » (NDT : « stack » peut être traduit « pile » en français).
 
 Mais j’aimerais suggérer cette modification :
 
-<dl class="stack stack-ajm">
-  <dt class="stack__name">AJMstack
-    <dd>
-      <ol>
-        <li class="stack__apis">APIs</li>
-        <li class="stack__javascript">JavaScript</li>
-        <li class="stack__markup">Markup</li>
-      </ol>
-    </dd>
-  </dt>
-</dl>
+{{< figure src="ajmstack.svg" caption="AJMstack" >}}
 
 Bien sûr, ça se lit **AJMstack** au lieu de JAMstack, donc je parie que je n’aurais pas de succès dans la promotion… 🤷‍♂️
 
@@ -141,15 +111,7 @@ Mais au final ça semble plus adéquate, ça montre que JavaScript est le lien e
 
 Voici la **Mstack** :
 
-<dl class="stack stack-m">
-  <dt class="stack__name">Mstack
-    <dd>
-      <ol>
-        <li class="stack__markup">Markup</li>
-      </ol>
-    </dd>
-  </dt>
-</dl>
+{{< figure src="mstack.svg" caption="mstack" >}}
 
 Assurez-vous que cette « pile » est excellente, et ensuite améliorez la avec JavaScript et des API.
 
