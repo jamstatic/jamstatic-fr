@@ -25,16 +25,15 @@
         • <span aria-label="Temps de lecture">{{ .ReadingTime }} min</span> •
         <span itemprop="author" itemscope itemtype="https://schema.org/Person">
           <span itemprop="name">
-            <a
-              class="post-author"
-              rel="author"
-              href="https://github.com/{{ if .Params.author }}{{ (index .Site.Data.authors .Params.author).github }}{{ else }}{{ .Site.Data.authors.frank.github }}{{ end }}"
-            >
-              {{- if .Params.author }}
-                {{ (index .Site.Data.authors .Params.author).name }}
-                {{- else }}{{ .Site.Data.authors.frank.name }}{{ end }}
-
-            </a>
+            {{- if .Params.author }}
+              {{- if isset (index .Site.Data.authors .Params.author) "web" }}
+            <a class="post-author" rel="author" href="{{ (index .Site.Data.authors .Params.author).web }}">{{ (index .Site.Data.authors .Params.author).name }}</a>
+              {{ else }}
+            <a class="post-author" rel="author" href="https://github.com/{{ (index .Site.Data.authors .Params.author).github }}">{{ (index .Site.Data.authors .Params.author).name }}</a>
+              {{end -}}
+            {{ else }}
+            <a class="post-author" rel="author" href="{{ .Site.Data.authors.frank.web }}">{{ .Site.Data.authors.frank.name }}</a>
+            {{end -}}
           </span>
         </span>
       </p>
