@@ -32,7 +32,7 @@
             <a class="post-author" rel="author" href="https://github.com/{{ (index .Site.Data.authors .Params.author).github }}">{{ (index .Site.Data.authors .Params.author).name }}</a>
               {{end -}}
             {{ else }}
-              <a class="post-author" rel="author" href="{{ .Permalink }}">{{ .Site.Title }}</a>
+            <a class="post-author" rel="author" href="{{ .Permalink }}">{{ .Site.Title }}</a>
             {{end -}}
           </span>
         </span>
