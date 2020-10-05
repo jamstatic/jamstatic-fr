@@ -1,7 +1,7 @@
 ---
 title: La Jamstack n'est rapide que si vous y veillez
 date: 2020-10-05
-description: Pour en finir avec l'incomprréhension selon laquelle votre site statique doit forcément utiliser du JavaScript et des APIs.
+description: Pour en finir avec l'incompréhension selon laquelle votre site statique doit forcément utiliser du JavaScript et des APIs.
 author: arnaud
 categories:
 - jamstack
@@ -14,7 +14,7 @@ canonical_url: https://nicolas-hoizey.com/articles/2020/05/05/jamstack-is-fast-o
 typora-root-url: ../../static
 ---
 {{< intro >}}
-[Nicolas Hoizey](https://nicolas-hoizey.com) partage ici sa vision de la Jamstack et le fait que celle-ci n’est performante que si vous faites véritablement en sorte qu’elle le soit. À noter que depuis la parution de son article, Netlify a supprimé les majuscules afin de moins insister sur l'acronyme à l'origine de cette appelation qui suscite encore trop souvent une incompréhension. Encore heureux qu'en 2020 on puisse encore générer du HTML sans passer par un framework JS.
+[Nicolas Hoizey](https://nicolas-hoizey.com) partage ici sa vision de la Jamstack et le fait que celle-ci n’est performante que si vous faites véritablement en sorte qu’elle le soit. À noter que depuis la parution de son article, Netlify a supprimé les majuscules de Jamstack afin de moins insister sur l'acronyme à l'origine de cette appelation qui suscite encore trop souvent une incompréhension. Encore heureux qu'en 2020 on puisse encore générer du HTML sans passer par un framework JS !
 {{< /intro >}}
 
 ---
@@ -27,7 +27,7 @@ Vous avez peut-être vu les diatribes fréquentes d'[Alex Russell](https://infre
 
 Gatsby est une cible facile (parmi tant d'autres) car il n'est actuellement pas optimisé pour être performant par défaut, malgré ce qui est [présenté](https://store.gatsbyjs.org/product/gatsby-sticker-6-pack). Il est possible de corriger cela, notamment avec [ce plugin](https://www.gatsbyjs.org/packages/gatsby-plugin-no-javascript/), et je pense que de bons développeurs React peuvent améliorer les choses, mais cela devrait être le cas **par défaut**, et non après coup.
 
-Eleventy est très différent, comme Zach Leatherman nous le rappelle dans [*Eleventy’s New Performance Leaderboard*](https://www.zachleat.com/web/performance-dashboard/) :
+Eleventy est très différent, comme Zach Leatherman nous le rappelle dans [_Eleventy’s New Performance Leaderboard_](https://www.zachleat.com/web/performance-dashboard/) :
 
 > Eleventy n'effectue aucune optimisation particulière pour rendre vos sites plus rapides. Cela ne vous empêchera pas de créer un site lent. Mais Eleventy n’ajoute **rien** qui ralentisse votre site.
 
@@ -35,7 +35,7 @@ Le problème avec la plupart des sites Jamstack lents est qu'ils chargent tout u
 
 Parfois, la génération côté serveur suffit pour obtenir des données depuis une API et servir le HTML à tous les visiteurs, ce qui est nettement plus performant.
 
-Par exemple, [swyx](https://www.swyx.io) a écrit *[Clientside Webmentions](https://www.swyx.io/writing/clientside-webmentions/)* à propos de l’implémentation de Webmention avec [Svelte](https://svelte.dev). Tout article faisant la promotion de [Webmention](https://indieweb.org/Webmention) et facilitant son adoption est le bienvenu ! Mais même si c’est une bonne démo de Webmention et Svelte, je ne recommanderais pas de le faire côté client.
+Par exemple, [swyx](https://www.swyx.io) a écrit _[Clientside Webmentions](https://www.swyx.io/writing/clientside-webmentions/)_ à propos de l’implémentation de Webmention avec [Svelte](https://svelte.dev). Tout article faisant la promotion de [Webmention](https://indieweb.org/Webmention) et facilitant son adoption est le bienvenu ! Mais même si c’est une bonne démo de Webmention et Svelte, je ne recommanderais pas de le faire côté client.
 
 ## Privilégier le côté serveur
 
@@ -50,10 +50,10 @@ Cela sollicite moins [webmentio.io](http://webmentio.io), avec une unique requê
 
 Par exemple :
 
-- Mon site web a reçu 75 webmentions en avril 2020. Je l’ai probablement généré une centaine de fois durant la même période, ce qui correspond à **100 requêtes à webmention.io avec des réponses peu volumineuses**.
-- Pendant la même période, 3 746 pages de mon site web ont été vues (sous estimé, je continue à utiliser Google Analytics 🤷‍♂️), ce qui équivaudrait à **3 746 requêtes à webmention.io avec des réponses volumineuses**.
+- Mon site web a reçu 75 Webmentions en avril 2020. Je l’ai probablement généré une centaine de fois durant la même période, ce qui correspond à **100 requêtes à Webmention.io avec des réponses peu volumineuses**.
+- Pendant la même période, 3 746 pages de mon site web ont été vues (sous estimé, je continue à utiliser Google Analytics 🤷‍♂️), ce qui équivaudrait à **3 746 requêtes à Webmention.io avec des réponses volumineuses**.
 
-Utiliser la génération côté serveur pour récupérer les webmentions offre de multiples avantages :
+Utiliser la génération côté serveur pour récupérer les Webmentions offre de multiples avantages :
 
 - La performance pour les utilisateurs est largement meilleure, avec du HTML déjà compilé sur le serveur et servi de manière statique.
 - Beaucoup moins d’appels d’API, ce qui requiert beaucoup moins de temps de compilation et d’énergie.
@@ -61,20 +61,20 @@ Utiliser la génération côté serveur pour récupérer les webmentions offre d
 
 ## Améliorer le côté client, s’il est indispensable
 
-Si vous savez que vous recevez beaucoup de webmentions très utiles que vous devez afficher à vos visiteurs, vous pouvez améliorer la liste générée côté serveur via le côté client.
+Si vous savez que vous recevez beaucoup de Webmentions très utiles que vous devez afficher à vos visiteurs, vous pouvez améliorer la liste générée côté serveur via le côté client.
 
-Mais rappelez-vous que chaque JavaScript ajouté à la page a un coût, donc les quelques webmentions supplémentaires doivent être vraiment utiles.
+Mais rappelez-vous que chaque JavaScript ajouté à la page a un coût, donc les quelques Webmentions supplémentaires doivent être vraiment utiles.
 
 Alors, au lieu de le faire pour chaque page vue :
 
- - Essayez d’**attendre un peu après la génération du site** avant de faire les appels API côté client. Garder l’horodatage de génération du site côté client via JavaScript, et attendez une heure, une journée, en fonction de la fréquence des webmentions. Vous pouvez même utiliser l’« âge » de la page pour moins requêter [webmention.io](http://webmention.io) pour le contenu plus ancien, qui reçoit probablement moins de webmentions, comme l’a fait [Aaron Gustafson pour les appels côté serveur dans son plugin Jekyll](https://aarongustafson.github.io/jekyll-webmention_io/performance-tuning).
- - Gardez une trace des appels API, pour un utilisateur, dans le *localStorage* ou l’*IndexDB*, afin que vous ne répétiez pas ces appels tout de suite. Vous pouvez même utiliser un Service Worker pour mettre en cache les requêtes et leur horodatage.
+- Essayez d’**attendre un peu après la génération du site** avant de faire les appels API côté client. Garder l’horodatage de génération du site côté client via JavaScript, et attendez une heure, une journée, en fonction de la fréquence des Webmentions. Vous pouvez même utiliser l’« âge » de la page pour moins requêter [webmention.io](http://webmention.io) pour le contenu plus ancien, qui reçoit probablement moins de Webmentions, comme l’a fait [Aaron Gustafson pour les appels côté serveur dans son plugin Jekyll](https://aarongustafson.github.io/jekyll-webmention_io/performance-tuning).
+- Gardez une trace des appels API, pour un utilisateur, dans le _localStorage_ ou l’_IndexDB_, afin que vous ne répétiez pas ces appels tout de suite. Vous pouvez même utiliser un Service Worker pour mettre en cache les requêtes et leur horodatage.
 
 ## Les appels à l’API uniquement côté client ont parfois plus de sens
 
-Je suis d’accord que les webmentions ne sont pas le cas d’usage le plus complexe pour expliquer que la plupart du temps vous devez appeler les API côté serveur au moment de la génération plutôt que côté client :
+Je suis d’accord que les Webmentions ne sont pas le cas d’usage le plus complexe pour expliquer que la plupart du temps vous devez appeler les API côté serveur au moment de la génération plutôt que côté client :
 
-- Les webmentions à afficher sont les mêmes pour tous les visiteurs.
+- Les Webmentions à afficher sont les mêmes pour tous les visiteurs.
 - Ne pas générer les plus récentes n’est sûrement pas un problème.
 
 Alors oui je comprends bien que de nombreux autres cas d’usage rendent les appels côté client nécessaires, ou meilleurs que ceux côté serveur.
@@ -101,7 +101,7 @@ Mais j’aimerais suggérer cette modification :
 
 Bien sûr, cela se lit **AJMstack** au lieu de Jamstack, donc je parie que je n’aurais pas de succès dans la promotion… 🤷‍♂️
 
-Mais au final ça semble plus adéquat,et cela montre que JavaScript est le lien entre les APIs et le balisage.
+Mais au final ça semble plus adéquat, et cela montre que JavaScript fait le lien entre les APIs et le balisage.
 
 Cela permet de présenter cela comme une excellente plate-forme d’amélioration progressive, car nous pouvons commencer avec du bon vieux (ai-je entendu « ennuyeux » ?) HTML…
 
@@ -109,6 +109,6 @@ Voici la **Mstack** :
 
 {{< figure src="mstack.svg" caption="mstack" >}}
 
-Assurez-vous déjà que cette « couche » soit excellente, et ensuite améliorez-la avec du JavaScript et des APIs au besoin.
+Assurez-vous déjà que cette « couche » soit au top, et ensuite améliorez-la avec du JavaScript et des APIs au besoin.
 
 [^1]: Il existe une [version française]({{< relref "c-est-quoi-la-jamstack.md" >}}) de ce guide.
