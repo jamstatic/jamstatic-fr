@@ -1,6 +1,6 @@
 ---
 title: La jamstack n'est rapide que si vous la rendez rapide
-date: 2020-10-04
+date: 2020-10-05
 description: Trop de sites web construits sur le principe de la Jamstack sont lents.
 author: arnaud
 categories:
