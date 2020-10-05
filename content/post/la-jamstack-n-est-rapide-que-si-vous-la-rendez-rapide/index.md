@@ -32,7 +32,7 @@ Eleventy est très différent, comme Zach Leatherman nous le rappelle dans [*Ele
 
 > Eleventy n'effectue aucune optimisation particulière pour rendre vos sites plus rapides. Cela ne vous empêchera pas de créer un site lent. Mais avant tout, Eleventy n’ajoute rien qui ralentisse votre site.
 
-Le problème avec la plupart des sites Jamstack lents est qu'ils chargent un tas de JavaScript. N'oubliez pas que tout JavaScript ajouté doit être envoyé au navigateur, qui nécessitera d’avantage de ressources pour traiter ça. Ça impacte rapidement les performances.
+Le problème avec la plupart des sites Jamstack lents est qu'ils chargent tout un tas de JavaScript. N'oubliez pas que tout code JavaScript ajouté doit être envoyé au navigateur, qui nécessitera davantage de ressources pour le traiter. Cela impactera rapidement les performances.
 
 Parfois, la génération côté serveur est suffisante pour obtenir les données depuis une API et servir le HTML à tous les visiteurs, ce qui est nettement plus performant.
 
