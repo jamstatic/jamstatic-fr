@@ -91,8 +91,6 @@ C’est aussi quelque chose que je n’aime pas vraiment dans la tendance actuel
 
 Voici pour l’exemple ce que vous pouvez voir sur [jamstack.wtf](https://jamstack.wtf/) (simplifié) :
 
-![JAMstack-schema-1](/assets/images/jamstack/JAMstack-schema-1.png)
-
 <dl class="stack stack-wtf">
   <dt class="stack__name">JAMstack
     <dd>
@@ -106,8 +104,6 @@ Voici pour l’exemple ce que vous pouvez voir sur [jamstack.wtf](https://jamsta
 </dl>
 
 Comme suggéré par [Yann](https://twitter.com/yann_yinn), j’aimerais commencer par utiliser cette meilleures présentation :
-
-![JAMstack-schema-2](/assets/images/jamstack/JAMstack-schema-2.png)
 
 <dl class="stack stack-jam">
   <dt class="stack__name">JAMstack
@@ -124,8 +120,6 @@ Comme suggéré par [Yann](https://twitter.com/yann_yinn), j’aimerais commence
 Cela rend plus évident qu’il s’agit d’une pile de choses, très utile pour une « pile » (NDT : « stack » peut être traduit « pile » en français).
 
 Mais j’aimerais suggérer cette modification :
-
-![JAMstack-schema-3](/assets/images/jamstack/JAMstack-schema-3.png)
 
 <dl class="stack stack-ajm">
   <dt class="stack__name">AJMstack
@@ -146,8 +140,6 @@ Mais au final ça semble plus adéquate, ça montre que JavaScript est le lien e
 Ça permet de présenter cela comme une excellente plate-forme d’amélioration progressive, car nous pouvons commencer avec du bon vieux (ai-je entendu « ennuyeux » ?) HTML…
 
 Voici la **Mstack** :
-
-![JAMstack-schema-4](/assets/images/jamstack/JAMstack-schema-4.png)
 
 <dl class="stack stack-m">
   <dt class="stack__name">Mstack
