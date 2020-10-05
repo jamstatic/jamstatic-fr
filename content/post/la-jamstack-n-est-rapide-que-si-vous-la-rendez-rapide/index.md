@@ -11,7 +11,7 @@ source:
   url: https://nicolas-hoizey.com/articles/2020/05/05/jamstack-is-fast-only-if-you-make-it-so/
   lang: en
 canonical_url: https://nicolas-hoizey.com/articles/2020/05/05/jamstack-is-fast-only-if-you-make-it-so/
-draft: true
+draft: false
 typora-root-url: ../../static
 ---
 {{< intro >}}
