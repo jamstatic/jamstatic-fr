@@ -14,6 +14,12 @@ canonical_url: https://nicolas-hoizey.com/articles/2020/05/05/jamstack-is-fast-o
 draft: true
 typora-root-url: ../../static
 ---
+{{< intro >}}
+Dans cet article [Nicolas Hoizey](https://nicolas-hoizey.com) nous partage sa vision de la Jamstack et le fait que celle-ci n’est performante que si vous faites en sorte qu’elle le soit.
+{{< /intro >}}
+
+---
+
 La Jamstack se présente souvent comme un excellent moyen de fournir des sites performants. C'est même le premier avantage répertorié sur [jamstack.wtf](https://jamstack.wtf), un guide[^1] pour "comprendre le concept de Jamstack simplement, de manière à encourager d'autres développeurs à adopter le workflow". Mais trop de sites Jamstack sont très lents.
 
 Vous avez peut-être vu les diatribes fréquentes d'[Alex Russell](https://infrequently.org) à propos de Gatsby :
