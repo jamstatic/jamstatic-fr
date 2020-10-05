@@ -85,21 +85,59 @@ Ce que je dis c’est que **ça ne devrait pas être le cas par défaut**.
 
 ## Promouvoir la ~~AJMstack~~ Mstack
 
+<link rel="stylesheet" href="styles.css" />
+
 C’est aussi quelque chose que je n’aime pas vraiment dans la tendance actuelle de la JAMstack, promouvoir **J**avaScript et les **A**PI bien plus que le balisage (NDT : « balisage » peut être traduit « **M**arkup » en anglais).
 
 Voici pour l’exemple ce que vous pouvez voir sur [jamstack.wtf](https://jamstack.wtf/) (simplifié) :
 
 ![JAMstack-schema-1](/assets/images/jamstack/JAMstack-schema-1.png)
 
+<dl class="stack stack-wtf">
+  <dt class="stack__name">JAMstack
+    <dd>
+      <ol>
+        <li class="stack__javascript">JavaScript</li>
+        <li class="stack__apis">APIs</li>
+        <li class="stack__markup">Markup</li>
+      </ol>
+    </dd>
+  </dt>
+</dl>
+
 Comme suggéré par [Yann](https://twitter.com/yann_yinn), j’aimerais commencer par utiliser cette meilleures présentation :
 
 ![JAMstack-schema-2](/assets/images/jamstack/JAMstack-schema-2.png)
+
+<dl class="stack stack-jam">
+  <dt class="stack__name">JAMstack
+    <dd>
+      <ol>
+        <li class="stack__javascript">JavaScript</li>
+        <li class="stack__apis">APIs</li>
+        <li class="stack__markup">Markup</li>
+      </ol>
+    </dd>
+  </dt>
+</dl>
 
 Cela rend plus évident qu’il s’agit d’une pile de choses, très utile pour une « pile » (NDT : « stack » peut être traduit « pile » en français).
 
 Mais j’aimerais suggérer cette modification :
 
 ![JAMstack-schema-3](/assets/images/jamstack/JAMstack-schema-3.png)
+
+<dl class="stack stack-ajm">
+  <dt class="stack__name">AJMstack
+    <dd>
+      <ol>
+        <li class="stack__apis">APIs</li>
+        <li class="stack__javascript">JavaScript</li>
+        <li class="stack__markup">Markup</li>
+      </ol>
+    </dd>
+  </dt>
+</dl>
 
 Bien sûr, ça se lit **AJMstack** au lieu de JAMstack, donc je parie que je n’aurais pas de succès dans la promotion… 🤷‍♂️
 
@@ -110,6 +148,16 @@ Mais au final ça semble plus adéquate, ça montre que JavaScript est le lien e
 Voici la **Mstack** :
 
 ![JAMstack-schema-4](/assets/images/jamstack/JAMstack-schema-4.png)
+
+<dl class="stack stack-m">
+  <dt class="stack__name">Mstack
+    <dd>
+      <ol>
+        <li class="stack__markup">Markup</li>
+      </ol>
+    </dd>
+  </dt>
+</dl>
 
 Assurez-vous que cette « pile » est excellente, et ensuite améliorez la avec JavaScript et des API.
 
