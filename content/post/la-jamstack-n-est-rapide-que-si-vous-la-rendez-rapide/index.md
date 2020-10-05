@@ -26,7 +26,7 @@ Vous avez peut-être vu les diatribes fréquentes d'[Alex Russell](https://infre
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Looking across the full set of traces, modern Gatsby seems to produce pages that take 2-3x as long as they should to become interactive. <br><br>This is not OK. Gatsby/NPM/React regressively tax access to content.<br><br>In less generous moments, I&#39;d go as far as to say it&#39;s unethical.</p>&mdash; Alex Russell (@slightlylate) <a href="https://twitter.com/slightlylate/status/1184959830819106816">October 17, 2019</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Gatsby est une cible facile (parmi tant d'autres) car il n'est actuellement pas optimisé pour être performant par défaut, malgré ce qui est [présenté](https://store.gatsbyjs.org/product/gatsby-sticker-6-pack). Il est possible corriger ça, par exemple avec [ce plugin](https://www.gatsbyjs.org/packages/gatsby-plugin-no-javascript/), et je pense que les bons développeurs React peuvent améliorer les choses, mais cela devrait être le cas par défaut, et non après coup.
+Gatsby est une cible facile (parmi tant d'autres) car il n'est actuellement pas optimisé pour être performant par défaut, malgré ce qui est [présenté](https://store.gatsbyjs.org/product/gatsby-sticker-6-pack). Il est possible corriger cela, par exemple avec [ce plugin](https://www.gatsbyjs.org/packages/gatsby-plugin-no-javascript/), et je pense que les bons développeurs React peuvent améliorer les choses, mais cela devrait être le cas par défaut, et non après coup.
 
 Eleventy est très différent, comme Zach Leatherman nous le rappelle dans [*Eleventy’s New Performance Leaderboard*](https://www.zachleat.com/web/performance-dashboard/) :
 
@@ -42,12 +42,12 @@ Par exemple, [swyx](https://www.swyx.io) a écrit *[Clientside Webmentions](http
 
 Je préfère [le faire sur le serveur](https://nicolas-hoizey.com/articles/2017/07/27/so-long-disqus-hello-webmentions/#how-does-it-work-on-this-site).
 
-Ça permet de :
+Cela permet de :
 
 - appeler l’API [webmentio.io](http://webmentio.io) seulement au moment de générer le site, ce qui devrait être moins fréquent que la consultation des pages par les visiteurs.
 - mettre en cache le résultat des requêtes à [webmentio.io](http://webmentio.io) et l’horodatage de la dernière, afin que la prochaine requête demande uniquement les nouvelles webmentions.
 
-Ça sollicite moins [webmentio.io](http://webmentio.io), avec une unique requête simple par génération, alors que le client effectue une requête bien plus volumineuse (voire plusieurs, avec pagination) pour chaque page vue.
+Cela sollicite moins [webmentio.io](http://webmentio.io), avec une unique requête simple par génération, alors que le client effectue une requête bien plus volumineuse (voire plusieurs, avec pagination) pour chaque page vue.
 
 Par exemple :
 
@@ -66,7 +66,7 @@ Si vous savez que vous recevez beaucoup de webmentions très utiles que vous dev
 
 Mais rappelez-vous que chaque JavaScript ajouté à la page a un coût, donc les quelques webmentions supplémentaires doivent être vraiment utiles.
 
-Alors, au lieu de faire ça sur chaque page vue, faites au moins :
+Alors, au lieu de faire cela sur chaque page vue, faites au moins :
 
 D’abord, essayez d’**attendre un peu après la génération du site** avant de faire les appels API côté client. Garder l’horodatage de génération du site côté client via JavaScript, et attendre une heure, une journée, en fonction de la fréquence des webmentions. Vous pouvez même utiliser l’« age » de la page pour moins requêter [webmention.io](http://webmention.io) pour le contenu plus ancien, qui reçoit probablement moins de webmentions, comme l’a fait [Aaron Gustafson pour les appels côté serveur dans son plugin Jekyll](https://aarongustafson.github.io/jekyll-webmention_io/performance-tuning).
 
@@ -103,11 +103,11 @@ Mais j’aimerais suggérer cette modification :
 
 {{< figure src="ajmstack.svg" caption="AJMstack" >}}
 
-Bien sûr, ça se lit **AJMstack** au lieu de JAMstack, donc je parie que je n’aurais pas de succès dans la promotion… 🤷‍♂️
+Bien sûr, cela se lit **AJMstack** au lieu de JAMstack, donc je parie que je n’aurais pas de succès dans la promotion… 🤷‍♂️
 
-Mais au final ça semble plus adéquat, ça montre que JavaScript est le lien entre les API et le balisage.
+Mais au final ça semble plus adéquat,et cela montre que JavaScript est le lien entre les API et le balisage.
 
-Ça permet de présenter cela comme une excellente plate-forme d’amélioration progressive, car nous pouvons commencer avec du bon vieux (ai-je entendu « ennuyeux » ?) HTML…
+Cela permet de présenter cela comme une excellente plate-forme d’amélioration progressive, car nous pouvons commencer avec du bon vieux (ai-je entendu « ennuyeux » ?) HTML…
 
 Voici la **Mstack** :
 
