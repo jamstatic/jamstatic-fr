@@ -1,6 +1,6 @@
 # For Forestry
 metaDataFormat: yaml
-# Allow HTML in Mardown
+# Allow HTML in Markdown
 markup:
   goldmark:
     renderer:
