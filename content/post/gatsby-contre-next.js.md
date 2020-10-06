@@ -14,8 +14,8 @@ source:
   title: Gatsby vs. Next.js
   url: https://jaredpalmer.com/gatsby-vs-nextjs
   lang: en
-aliases: []
 canonical_url: https://jaredpalmer.com/gatsby-vs-nextjs
+published: false
 ---
 
 {{< intro >}}
