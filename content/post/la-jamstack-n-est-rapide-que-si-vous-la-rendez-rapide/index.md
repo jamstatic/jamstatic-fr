@@ -43,10 +43,10 @@ Je préfère [le faire sur le serveur](https://nicolas-hoizey.com/articles/2017/
 
 Cela permet :
 
-- D'appeler l’API [webmentio.io](http://webmentio.io) seulement au moment de générer le site, ce qui devrait être moins fréquent que la consultation des pages par les visiteurs.
-- De mettre en cache le résultat des requêtes à [webmentio.io](http://webmentio.io) et l’horodatage de la dernière, afin que la prochaine requête demande uniquement les nouvelles webmentions.
+- D'appeler l’API [webmention.io](http://webmention.io) seulement au moment de générer le site, ce qui devrait être moins fréquent que la consultation des pages par les visiteurs.
+- De mettre en cache le résultat des requêtes à [webmention.io](http://webmention.io) et l’horodatage de la dernière, afin que la prochaine requête demande uniquement les nouvelles webmentions.
 
-Cela sollicite moins [webmentio.io](http://webmentio.io), avec une unique requête simple par génération, alors que le client effectue une requête bien plus volumineuse (voire plusieurs, avec pagination) pour chaque page vue.
+Cela sollicite moins [webmention.io](http://webmention.io), avec une unique requête simple par génération, alors que le client effectue une requête bien plus volumineuse (voire plusieurs, avec pagination) pour chaque page vue.
 
 Par exemple :
 
