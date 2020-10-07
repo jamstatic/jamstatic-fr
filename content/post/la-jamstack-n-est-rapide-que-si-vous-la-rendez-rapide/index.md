@@ -89,7 +89,7 @@ Voici pour l’exemple ce que vous pouvez voir sur [jamstack.wtf](https://jamsta
 
 {{< figure src="jamstack-horizontal.svg" caption="Jamstack version aplatie" >}}
 
-Comme suggéré par [Yann](https://twitter.com/yann_yinn), j’aimerais commencer par utiliser cette meilleures présentation :
+Comme suggéré par [Yann](https://twitter.com/yann_yinn), j’aimerais commencer par utiliser cette meilleure présentation :
 
 {{< figure src="jamstack-vertical.svg" caption="Jamstack version empilée" >}}
 
