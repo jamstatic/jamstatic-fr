@@ -35,7 +35,7 @@ Le problème avec la plupart des sites Jamstack lents est qu'ils chargent tout u
 
 Parfois, la génération côté serveur suffit pour obtenir des données depuis une API et servir le HTML à tous les visiteurs, ce qui est nettement plus performant.
 
-Par exemple, [swyx](https://www.swyx.io) a écrit _[Clientside Webmentions](https://www.swyx.io/writing/clientside-webmentions/)_ à propos de l’implémentation de Webmention avec [Svelte](https://svelte.dev). Tout article faisant la promotion de [Webmention](https://indieweb.org/Webmention) et facilitant son adoption est le bienvenu ! Mais même si c’est une bonne démo de Webmention et Svelte, je ne recommanderais pas de le faire côté client.
+Par exemple, [swyx](https://www.swyx.io) a écrit [_Clientside Webmentions_](https://www.swyx.io/writing/clientside-webmentions/) à propos de l’implémentation de Webmention avec [Svelte](https://svelte.dev). Tout article faisant la promotion de [Webmention](https://indieweb.org/Webmention) et facilitant son adoption est le bienvenu ! Mais même si c’est une bonne démo de Webmention et Svelte, je ne recommanderais pas de le faire côté client.
 
 ## Privilégier le côté serveur
 
