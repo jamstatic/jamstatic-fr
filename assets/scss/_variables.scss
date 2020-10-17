@@ -3,7 +3,7 @@ $base-font-family: Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,
 $base-font-size: 18px;
 $small-font-size: $base-font-size * (1/1.44);
 $base-font-weight: 400;
-$title-font-family: Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$title-font-family: Poppins, Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 $title-font-weight: 900;
 $title-letter-spacing: 0.021736em;
 $base-line-height: 1.5;
@@ -40,9 +40,10 @@ $on-tablet: 46.005rem;
 $on-desktop: 56.934rem; // content-with + ms3
 
 // Colors
-$text-color: rgba(14,30,37,.9);
-$brand-color: #2f91a7;
-$brand-light: #45b8d2;
+$text-color: #300A66;
+$brand-color: #FF4863;
+$brand-light: #7DACFF;
+$contrast-dark: #231B30;
+$contrast-bright: #4A21CC;
 $grey: #8b8b8b;
 $grey-light: rgba(14,30,37,.77);
-$grey-dark: rgba(14,30,37,.92);

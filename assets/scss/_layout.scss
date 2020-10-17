@@ -20,8 +20,7 @@ body {
 .site-header {
   padding: $base-line 0;
   color: rgba(255, 255, 255, 0.9);
-  background-color: #2f91a7;
-  background-image: linear-gradient(45deg, #45b8d2 0, #2f91a7 100%);
+  background-color: $contrast-bright;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
 
@@ -49,7 +48,7 @@ body {
   }
 
   &:hover {
-    text-shadow: 4px 2px #4d9abf;
+    text-shadow: 4px 2px $text-color;
   }
 }
 
@@ -75,13 +74,13 @@ body {
 .site-footer {
   position: relative;
   padding: $spacing-unit * 2 0 $spacing-unit;
-  background: rgb(247, 247, 248);
-  color: $grey;
+  background: rgba($brand-light, 0.1);
+  color: $contrast-dark;
   font-size: $small;
   text-align: center;
 
   a {
-    color: $grey;
+    color: $contrast-dark;
 
     &:hover {
       color: $brand-color;
@@ -136,10 +135,10 @@ body {
   hr {
     background-image: linear-gradient(
       90deg,
-      rgba(14, 30, 37, 0) 0,
-      #0e1e25 30%,
-      #0e1e25 70%,
-      rgba(14, 30, 37, 0) 100%
+      $brand-light,
+      $text-color 30%,
+      $text-color 70%,
+      $brand-light 100%
     );
     border: none;
     height: 1.728px;
@@ -150,7 +149,7 @@ body {
 
 .nav {
   font-size: 1rem;
-  color: $grey-light;
+  color: $contrast-dark;
   padding-top: $base-line;
 
   nav {
@@ -173,7 +172,7 @@ body {
 
   .post-item {
     padding: $spacing-unit/$ms1;
-    border-radius: 1rem;
+    border-radius: 2rem;
     margin-bottom: $base-line * 2;
     grid-column: auto;
 
@@ -184,7 +183,7 @@ body {
     }
 
     &:hover {
-      background: rgba($grey-light, 0.05);
+      background: rgba($brand-light, 0.1);
     }
   }
 }
@@ -195,21 +194,28 @@ body {
 }
 
 .post-meta {
-  color: $grey;
+  color: $contrast-dark;
   font-size: $smaller;
   letter-spacing: $title-letter-spacing;
   text-transform: uppercase;
+  font-weight: 800;
+}
 
-  a {
-    font-weight: 400;
-  }
+.post-title {
+  margin-bottom: $spacing-unit;
 }
 
 .post-source {
-  color: $grey;
-  font-size: $small;
-  font-weight: 600;
-  text-align: right;
+  display: inline-block;
+  background-color: $text-color;
+  color: white;
+  padding: .5em 1em;
+  text-align: center;
+
+  a {
+    color: white;
+  }
+
 }
 
 .post-link {
@@ -222,7 +228,7 @@ body {
 
   a {
     text-decoration: none;
-    color: $grey-dark;
+    color: $contrast-dark;
   }
 }
 @include media-query($on-tablet) {
@@ -258,16 +264,13 @@ body {
 }
 
 .post-intro {
-  font-family: $title-font-family;
   line-height: $ms2;
   font-size: 1.25em;
+  font-weight: bold;
   display: block;
   margin-bottom: $spacing-unit;
-
-  a {
-    font-weight: 400;
-  }
 }
+
 /* utilities */
 .post-content > .highlight {
   margin: 2em calc(50% - 50vw);
@@ -287,18 +290,14 @@ body {
 .notice {
   margin: 2em 0;
   padding: 1em;
-  border-left: 0.25em solid rgba(169, 197, 234, 0.6);
+  border-left: 0.25em solid rgba(125,172,255,0.6);
 
   h3 {
     margin-top: auto;
   }
 
-  a {
-    color: rgba(0, 81, 193, 0.54);
-  }
-
   &.info {
-    background-color: rgba(169, 197, 234, 0.2);
+    background-color: rgba(125,172,255, 0.2);
   }
 
   &.tip {
@@ -328,9 +327,6 @@ body {
   }
 
   p {
-    a {
-      color: #1a5891;
-    }
 
     &:last-child {
       margin-bottom: 0;
@@ -356,7 +352,7 @@ figcaption {
   text-align: center;
   font-style: italic;
   line-height: 1.2;
-  color: $grey-light;
+  color: $contrast-dark;
 }
 @include media-query($on-desktop) {
   figcaption {
@@ -385,22 +381,30 @@ figcaption {
 .footnotes {
   font-size: $smaller;
   font-style: italic;
-  color: $grey-dark;
 }
 
 .edit {
   display: inline-block;
-  color: $grey-light;
+  color: $contrast-dark;
   text-align: right;
-  background: rgba($grey-light, 0.05);
+  background: rgba($brand-light, 0.1);
   border-radius: 1em;
   border: 0;
   padding: $spacing-unit/2;
   margin-bottom: $base-line;
+
+  a {
+    color: $contrast-dark;
+  }
 }
 
 .related {
   line-height: $base-line;
+
+  a {
+    text-decoration: underline;
+    color: $text-color;
+  }
 
   h3 {
     font-size: $bigger;
@@ -419,6 +423,6 @@ figcaption {
   }
 
   li::before {
-    content: "👉 ";
+    content: "🎗 ";
   }
 }

@@ -1,9 +1,19 @@
 {{- define "main" }}
   <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
-    <header class="post-header swoosh">
+    <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
         {{- partial "content.html" .Title -}}
       </h1>
+      {{- with .Params.Source }}
+        {{- if and .url .title .author }}
+          <p class="post-source">
+            <em
+              >Article original : <a href="{{ .url }}">{{ .title }}</a> de
+              {{ .author }}</em
+            >
+          </p>
+        {{- end }}
+      {{- end }}
       <p class="post-meta">
         <time
           datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}"
@@ -38,19 +48,8 @@
         </span>
       </p>
     </header>
-
+    <hr />
     <div class="post-content" itemprop="articleBody">
-      {{- with .Params.Source }}
-        {{- if and .url .title .author }}
-          <p class="post-source">
-            <em
-              >Source : <a href="{{ .url }}">{{ .title }}</a> de
-              {{ .author }}</em
-            >
-          </p>
-          <hr />
-        {{- end }}
-      {{- end }}
 
       {{- partial "content.html" .Content -}}
 

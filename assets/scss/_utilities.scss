@@ -61,15 +61,6 @@
   visibility: hidden;
 }
 
-.swoosh::after {
-  display: block;
-  content: "";
-  border-top: $small solid $brand-color;
-  border-image: linear-gradient(45deg, $brand-light 0, $brand-color 100%) 10;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 20%, 0% 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 20%, 0% 100%);
-}
-
 .icon {
   > svg {
     display: inline-block;
