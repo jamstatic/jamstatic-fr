@@ -18,9 +18,9 @@ sections:
   path: config.yaml
   label: Configuration
 upload_dir: jamstatic
-public_path: ''
-front_matter_path: ''
-use_front_matter_path: false
+public_path: https://res.cloudinary.com/jamstatic/image/upload
+front_matter_path: https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1028
+use_front_matter_path: true
 file_template: ":filename:"
 build:
   preview_env:
