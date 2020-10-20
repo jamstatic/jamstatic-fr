@@ -21,7 +21,7 @@ upload_dir: jamstatic
 public_path: ''
 front_matter_path: ''
 use_front_matter_path: false
-file_template: 'https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1028/:filename:'
+file_template: ":filename:"
 build:
   preview_env:
   - HUGO_ENV=staging
