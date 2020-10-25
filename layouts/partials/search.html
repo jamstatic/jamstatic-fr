@@ -88,10 +88,10 @@ const hitTemplate = function(hit) {
   }
 
   return `
-    <li class="post-item swoosh">
+    <li class="post-item">
       <a href="${hit.relpermalink}">
-        <span class="post-meta">${date}</span>
         <h2 class="post-link">${hit._highlightResult.title.value}</h2>
+        <span class="post-meta">${date}</span>
         <p class="post-description">${hit.description}</p>
       </a>
     </li>
@@ -136,7 +136,7 @@ search.start();
   }
 
   .ais-Highlight {
-    color: #00c7b7;
+    color: #FF4863;
     font-style: normal;
   }
 </style>

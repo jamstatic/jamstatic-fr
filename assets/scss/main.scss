@@ -2,7 +2,6 @@
 
 @import
   "normalize",
-  "fonts",
   "variables",
   "mixins",
   "base",
@@ -63,22 +62,6 @@ summary {
   cursor: pointer;
 }
 
-.icon:hover {
-  color: $brand-color;
-}
-
-.icon--twitter {
-    color: #1da1f2;
-}
-
-.icon--github {
-  color: #24292e;
-}
-
-.icon--rss {
-  color:#e3702d;
-}
-
-.icon--meetup {
-  color:#f64060;
+.icon {
+  color: white;
 }

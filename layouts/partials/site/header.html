@@ -1,10 +1,14 @@
 <header class="site-header">
   <div class="wrapper">
-    {{ if .IsHome }}
-      <h1 class="site-title">{{ .Site.Title }}</h1>
-    {{ else }}
-      <a class="h1 site-title" href="{{ "/" | relURL }}" title="Retour à l'accueil">{{ .Site.Title }}</a>
-    {{ end }}
-    <div class="site-description">{{ .Site.Params.description }}</div>
+    <div class="site-title">
+      {{ if .IsHome }}
+        <h1>
+          {{ partial "svg/jamstatic-logo-violet.svg" }}
+        </h1>
+        {{ else }}
+          <a href="{{ "/" | relURL }}" title="Retour à l'accueil">{{ partial "svg/jamstatic-logo-violet.svg" }}</a>
+      {{ end }}
+      <div class="site-description">{{ .Site.Params.description }}</div>
+    </div>
   </div>
 </header>

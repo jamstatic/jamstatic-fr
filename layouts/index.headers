@@ -1,26 +1,27 @@
 /*
-  X-Frame-Options: DENY
+  Cache-Control: max-age=7200, private
+  X-Frame-Options: SAMEORIGIN
   X-XSS-Protection: 1; mode=block
-  X-Content-Type-Options: nosniff
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-  Content-Security-Policy-Report-Only: default-src 'self'; object-src 'self'; img-src 'self' https://gravatar.com data:; script-src 'unsafe-eval' 'unsafe-inline' d33wubrfki0l68.cloudfront.net cdn.jsdeliver.net cdnjs.cloudflare.com identity.netlify.com www.google-analytics.com; style-src 'self' 'unsafe-inline' *.cloudfront.net; font-src 'self' data:; report-uri https://franktaillandierme.report-uri.com/r/d/csp/reportOnly;
   Referrer-Policy: origin-when-cross-origin
+  Feature-Policy: web-share 'self"
+  Permissions-Policy: web-share=(self)
   Link: <{{ "assets/js/anchor.min.js" | relURL }}>; rel=preload; as=script
   Access-Control-Allow-Origin: "*"
-  Cache-Control: max-age=86400, private
-/assets/css/*.css
-  Cache-Control: max-age=86400, private
-/assets/js/*.js
-  Cache-Control: max-age=86400, private
-/assets/images/*.jpg
-  Cache-Control: max-age=86400, private
-/assets/images/*.jpeg
-  Cache-Control: max-age=86400, private
-/assets/images/*.png
-  Cache-Control: max-age=86400, private
-/assets/images/*.gif
-  Cache-Control: max-age=86400, private
-/assets/svg/*.svg
-  Cache-Control: max-age=86400, private
-/*.ico
-  Cache-Control: max-age=86400, private
+
+/*.css
+  X-Content-Type-Options: nosniff
+  Cache-Control: max-age=31536000, private
+
+/*.js
+  X-Content-Type-Options: nosniff
+  Cache-Control: max-age=31536000, private
+
+/*.png
+  Cache-Control: max-age=31536000, private
+
+/*.jpg
+  Cache-Control: max-age=31536000, private  
+
+/*.gif
+  Cache-Control: max-age=31536000, private
