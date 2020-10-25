@@ -8,3 +8,6 @@ node_modules
 public/
 resources/_gen/
 hugo_stats.json
+
+# VS Code
+.vscode/
