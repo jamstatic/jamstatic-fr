@@ -9,7 +9,7 @@ source:
   url: https://mademistakes.com/articles/improving-jekyll-static-comments/
   lang: en
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1200/v1523364658/improving-jekyll-static-comments-feature.jpg
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1000,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Des%20commentaires%20statiques%20avec%20Jekyll%20et%20Staticman/jamstatic/twitter-card.png
 categories:
   - jekyll
 ---

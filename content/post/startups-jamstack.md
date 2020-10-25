@@ -1,11 +1,11 @@
 ---
 title: "Les startups de l’écosystème Jamstack"
-date: 2018-05-31T20:21:08+02:00
 description: "Les capital risqueurs de la Silicon Valley misent sur les startups qui forment l'écosytème de la Jamstack."
+date: 2018-05-31T20:21:08+02:00
 categories:
   - jamstack
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1527850625/jamstack-landscape.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Les%20startups%20de%20l%E2%80%99%C3%A9cosyst%C3%A8me%20Jamstack/jamstatic/twitter-card.png
 source:
   author: "CRV"
   title: "The Jamstack Startup Landscape"
@@ -92,7 +92,7 @@ Cette image illustre le paysage florissant des startups avec quelques projets
 open source et des membres clés de la communauté, qui profitent des tendances
 mentionnées plus haut.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1527850625/jamstack-landscape.png" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1527850625/jamstatic/jamstack-landscape.png" >}}
 
 ## Les bénéfices
 

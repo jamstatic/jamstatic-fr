@@ -1,9 +1,9 @@
 ---
 title: Microbloguer avec Jekyll
+description: "Un microblog est un blog qui publie des articles courts, le plus souvent sans titre. Rejoignez la communauté IndieWeb et configurez votre site pour pour publier vos notes pour ensuite les envoyer sur Twitter."
 date: 2018-09-07 14:26:04 +0000
-description: " Un microblog est un blog qui publie des articles courts, le plus souvent
-  sans titre. Rejoignez la communauté IndieWeb et configurez votre site pour pour
-  publier vos notes pour ensuite les envoyer sur Twitter."
+images:
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Microbloguer%20avec%20Jekyll/jamstatic/twitter-card.png
 categories:
 - jekyll
 source:

@@ -4,7 +4,7 @@ description: Jekyll 3.3 intègre le support des assets dans les thèmes, de nouv
   filtres pour les URLs et bien plus encore.
 date: 2016-10-07
 images:
-  - https://avatars3.githubusercontent.com/u/3083652?v=3&amp;s=200
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1000,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Les%20nouveaut%C3%A9s%20de%20Jekyll%203.3/jamstatic/twitter-card.png
 categories:
   - jekyll
 ---

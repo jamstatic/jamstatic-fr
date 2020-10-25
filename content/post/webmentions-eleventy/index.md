@@ -6,14 +6,14 @@ lastmod: 2019-12-27T17:05:32+01:00
 categories:
   - eleventy
 images:
-  - /2019/12/27/webmentions-eleventy/twitter-card.png
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Guide%2520complet%2520des%2520Webmentions%2520avec%2520Eleventy/jamstatic/twitter-card.png
 source:
   author: "Sia Karamalegos"
   title: "An In-Depth Tutorial of Webmentions + Eleventy"
   url: "https://sia.codes/posts/webmentions-eleventy-in-depth/"
 ---
 
-Je suis toujours une grande fan du générateur de site statique [Eleventy](https://www.11ty.io/), et j'étais impatiente de gérer les [Webmentions](https://indieweb.org/Webmention) avec.
+Je suis toujours une grande fan du générateur de site statique [Eleventy](https://www.11ty.dev/), et j'étais impatiente de gérer les [Webmentions](https://indieweb.org/Webmention) avec.
 
 > Webmention est un standard web pour les mentions et les conversations sur le web, un puissant élément constitutif d'un réseau fédéré croissant de commentaires, d'appréciations, de rediffusions et d'autres riches interactions  sur le web social décentralisé.
 > — [IndieWeb.org](https://indieweb.org/Webmention)

@@ -7,7 +7,7 @@ source:
   url: https://gohugohq.com/howto/go-offline-with-service-worker/
   lang: en
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346493/service-worker.png
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Passez%20en%20mode%20hors-connexion%20avec%20un%20Service%20Worker%20et%20Hugo%20!/jamstatic/twitter-card.png
 categories:
   - hugo
 ---

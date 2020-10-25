@@ -1,13 +1,13 @@
 ---
 title: "Meetup Jamstack Toulouse"
+description: "Deux présentations de Netlify et Algolia lors premier meetup Jamstack en France."
 date: 2018-03-17T09:24:53+01:00
-description: "Deux très bonnes présentations de Netlify et Algolia au premier meetup JAMStack français."
 categories:
   - meetup
   - algolia
   - netlify
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347003/thefrontisback.jpg
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Meetup%20Jamstack%20Toulouse%20avec%20Netlify%20et%20Algolia/jamstatic/twitter-card.png
 ---
 
 {{< intro >}}
@@ -24,7 +24,7 @@ ces deux services de qualité.
 
 ---
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347003/thefrontisback.jpg"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/dpr_2.0,f_auto,q_auto/v1523347003/jamstatic/thefrontisback.jpg"
 caption="The Front is back !" attr="Photo : Nicolas Manaud"
 attrlink="https://twitter.com/nmanaud/status/974957331279695872" >}}
 
@@ -71,7 +71,7 @@ fichiers, Netlify propose la même chose mais sous forme visuelle, vous pouvez
 consulter n'importe quelle version du site sur une URL unique basée sur le hash
 du commit.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346982/netlify-prototype.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/dpr_2.0,f_auto,q_auto/jamstatic/netlify-prototype.png"
 caption="Les premiers prototypes du site de Netlify sont encore accessibles en ligne" >}}
 
 Un webdesigner pourra dès alors présenter une nouvelle itération sur le design
@@ -129,7 +129,7 @@ l’affirmative, en souriant devant l’incrédulité de son homologue.
 Deux présentations rondemment menées donc, qui ont été
 [bien appréciées par les personnes présentes](https://twitter.com/nmanaud/status/974957331279695872).
 
-Maxime Thirouin le développeur de [Phenomic](https://phenomic.io/) a bien envie
+Maxime Thirouin le développeur de [~~Phenomic~~](https://phenomic.io/) a bien envie
 de développer à son tour un plugin Algolia après la présentation de Martyn. Il
 pourra pour cela se baser sur le
 [code source ouvert](https://github.com/chrisdmacrae/atomic-algolia) du paquet

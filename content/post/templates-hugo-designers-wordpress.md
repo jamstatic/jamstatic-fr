@@ -8,7 +8,7 @@ source:
   url: http://blog.teamtreehouse.com/hugo-templates-wordpress-designers
   lang: en
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1200/v1523346505/hugo-header.jpg
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Les%20templates%20Hugo%20pour%20les%20designers%20WordPress/jamstatic/twitter-card.png
 categories:
   - hugo
 ---

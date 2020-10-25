@@ -3,12 +3,12 @@ title: Gérer les images responsive dans Jekyll avec le plugin Cloudinary
 description: Nicolas Hoizey présente les fonctionnalités de gestion d’images responsive offertes par le plugin Cloudinary qu'il a développé pour Jekyll.
 date: 2016-08-31
 author: nhoizey
+images:
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:G%C3%A9rer%20les%20images%20responsive%20dans%20Jekyll%20avec%20le%20plugin%20Cloudinary/jamstatic/twitter-card.png
 source:
   author: Nicolas Hoizey
   url: http://cloudinary.com/blog/how_i_used_cloudinary_to_solve_responsive_image_needs_in_my_jekyll_website_and_shared_the_magic_in_a_plugin
   title: How I used Cloudinary to solve responsive image needs in my Jekyll website, and shared the magic in a plugin
-images:
-  - http://res-1.cloudinary.com/cloudinary/image/upload/c_fill,q_auto,f_auto,w_560/dpr_1.0/jekyll_cloudinary_plugin.png
 categories:
   - jekyll
 ---
@@ -37,16 +37,16 @@ Il est vraiment sympa, il vous laisse définir vos propres gabarits de balisage
 d’image, vous pouvez donc utiliser `srcset` ou `<picture>` selon votre envie.
 Mais il ne répondait à tous mes besoins :
 
--  Lors de la première génération d’un site statique Jekyll avec ce plugin vous
-   devez générer toutes les variantes à partir des images originales. J'ai
-   actuellement environ 750 images sur mon blog et cela entraîne des temps de
-   compilation extrêmement longs,
+- Lors de la première génération d’un site statique Jekyll avec ce plugin vous
+  devez générer toutes les variantes à partir des images originales. J'ai
+  actuellement environ 750 images sur mon blog et cela entraîne des temps de
+  compilation extrêmement longs,
 
--  Envoyer toutes ces variantes au serveur prend également du temps, car je n'ai
-   pas un accès très rapide chez moi,
+- Envoyer toutes ces variantes au serveur prend également du temps, car je n'ai
+  pas un accès très rapide chez moi,
 
--  Et bien entendu toutes ces images sont servies sur le même serveur que les
-   pages, dans mon cas sur un hébergement mutualisé sympa et bon marché.
+- Et bien entendu toutes ces images sont servies sur le même serveur que les
+  pages, dans mon cas sur un hébergement mutualisé sympa et bon marché.
 
 Je voulais revenir à un workflow plus simple et plus rapide et qui génère moins
 de charge côté serveur.
@@ -136,9 +136,10 @@ va générer le code HTML suivant :
 <img
   src="https://res.cloudinary.com/<cloud_name>/image/fetch/c_limit,w_480,q_auto,f_auto/https://<domain>/assets/logos/cloudinary.png"
   srcset="
-    https://res.cloudinary.com/<cloud_name>/image/fetch/c_limit,w_80,q_auto,f_auto/https://<domain>/assets/logos/cloudinary.png 80w,
+    https://res.cloudinary.com/<cloud_name>/image/fetch/c_limit,w_80,q_auto,f_auto/https://<domain>/assets/logos/cloudinary.png   80w,
     https://res.cloudinary.com/<cloud_name>/image/fetch/c_limit,w_240,q_auto,f_auto/https://<domain>/assets/logos/cloudinary.png 240w,
-    https://res.cloudinary.com/<cloud_name>/image/fetch/c_limit,w_400,q_auto,f_auto/https://<domain>/assets/logos/cloudinary.png 400w"
+    https://res.cloudinary.com/<cloud_name>/image/fetch/c_limit,w_400,q_auto,f_auto/https://<domain>/assets/logos/cloudinary.png 400w
+  "
   sizes="
     (min-width: 50rem) 13rem,
     (min-width: 40rem) 25vw,
@@ -165,7 +166,7 @@ cloudinary:
       max_width: 400
       fallback_max_width: 200
       steps: 3
-      sizes: '(min-width: 50rem) 13rem, (min-width: 40rem) 25vw, 45vw'
+      sizes: "(min-width: 50rem) 13rem, (min-width: 40rem) 25vw, 45vw"
       figure: never
       attributes:
         class: logo

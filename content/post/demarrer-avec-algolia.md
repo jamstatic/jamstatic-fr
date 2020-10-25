@@ -5,7 +5,7 @@ description: "Jess West vous dit comment indexer et intégrer une recherche perf
 categories:
   - algolia
 images:
-  - https://res.cloudinary.com/practicaldev/image/fetch/s--bOzJM1UG--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/9heb90tm7eoyapp3mbl1.jpg
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_60,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Bien%20d%C3%A9marrer%20avec%20Algolia/jamstatic/twitter-card.png
 source:
   author: "Jessica West"
   title: "Getting Started with Algolia"
@@ -50,8 +50,8 @@ fonctionnelle sur votre site.
 ## Obtenir vos clefs d’API
 
 {{< figure
-src="https://res.cloudinary.com/practicaldev/image/fetch/s--RDmWaa8U--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn.glitch.com/45e6d35c-2e10-4020-8ad3-d5f1b9d3aae6%252FalgoliaAPIkeysMarkedUp.png%3F1514567735627"
-caption="Les différentes clés d’API d’Algolia" attr="" attrlink="" >}}
+src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,dpr_2.0,f_auto,q_auto,w_880/v1603620867/jamstatic/algoliaAPIkeysMarkedUp.png"
+caption="Les différentes clés d’API d’Algolia" >}}
 
 Commencez par créer un compte chez [Algolia](https://www.algolia.com/cc/devto).
 Et récupérez ensuite vos identifiants dans votre
@@ -367,7 +367,6 @@ la remixer et vous aurez tout ce code et une application basique qui tourne en
 moins de 5 minutes.
 
 {{< figure
-src="https://cdn.glitch.com/45e6d35c-2e10-4020-8ad3-d5f1b9d3aae6%2Fezgif.com-gif-maker.gif?1514128983358"
-caption="" attr="" attrlink="" >}}
+src="https://res.cloudinary.com/jamstatic/image/upload/v1603621048/jamstatic/45e6d35c-2e10-4020-8ad3-d5f1b9d3aae6_2Fezgif.com-gif-maker.gif" >}}
 
 😉 J'espère que cette lecture vous a plu et vous aura été utile !

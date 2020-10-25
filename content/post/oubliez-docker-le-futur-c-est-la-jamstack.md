@@ -1,12 +1,12 @@
 ---
 title: "Oubliez Docker, le futur c'est la Jamstack"
+description: À l'heure où les entreprises se débattent pour devenir plus agiles et rester pertinentes, elles peuvent compter sur les dernières évolutions des technologies.
 date: 2018-12-07T01:21:13+01:00
 lastmod: 2018-01-26T01:09:11+01:00
-description: À l'heure où les entreprises se débattent pour devenir plus agiles et rester pertinentes, elles peuvent compter sur les dernières évolutions des technologies.
 categories:
   - jamstack
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1548402220/jamstatic/1_uD1IkSE1cwF1Yr_njKu9qA.png
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Oubliez%20Docker%252C%20le%20futur%20c'est%20la%20Jamstack/jamstatic/twitter-card.png
 source:
   author: "Mike Carlisle"
   title: "Forget Docker, the future is Jamstack"
@@ -80,7 +80,7 @@ Des fonctions exécutées depuis le Cloud peuvent fournir des capacités de
 services additionnelles au besoin, et peuvent être elles aussi être écrites en
 JavaScript.
 
-![Exemple d'architecure Jamstack](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1548402220/jamstatic/1_uD1IkSE1cwF1Yr_njKu9qA.png)
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/v1548402220/jamstatic/exemple-architecture-jamstack.png" caption="Exemple d'architecture Jamstack" >}}
 
 ### Pourquoi la Jamstack ?
 

@@ -2,11 +2,9 @@
 title: Optimisation du temps de compilation de Jekyll
 description: Comment diviser par quinze le temps de génération de son site.
 date: 2018-11-28 00:00:00 +0000
-commments: true
 author: boris
 images:
-- "/v1543499128/twitter-card.png"
-- "/2018/11/28/optimisation-compilation-jekyll/twitter-card.png"
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Optimisation%2520du%2520temps%2520de%2520compilation%2520de%2520Jekyll/jamstatic/twitter-card.png
 categories:
 - jekyll
 

@@ -1,9 +1,9 @@
 ---
-title: Entretien avec Vincent Voyer, fullstack engineer chez Algolia
+title: Questions à Vincent Voyer, ingénieur fullstack chez Algolia
 description: Présentation d’Algolia, un service de recherche personnalisé pour votre site web.
 date: 2017-07-05 12:34:00 +02:00
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347081/algolia-smashing.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1180,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Questions%20%C3%A0%20Vincent%20Voyer%20ing%C3%A9nieur%20fullstack/jamstatic/twitter-card.png
 categories:
   - algolia
 ---

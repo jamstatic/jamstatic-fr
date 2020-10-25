@@ -1,5 +1,5 @@
 ---
-title: "Un site multilingue avec Eleventy"
+title: Un site multilingue avec Eleventy
 date: 2019-09-07T14:27:07+02:00
 lastmod: 2019-09-07T14:27:07+02:00
 description: "Comment gérer plusieurs langues sur son site Eleventy à l'aide de fichiers de données et de collections."
@@ -7,7 +7,7 @@ categories:
   - eleventy
   - i18n
 images:
-  - https://www.webstoemp.com/img/blogposts/blahblahblah.jpg
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Un%20site%20multilingue%20avec%20Eleventy/jamstatic/twitter-card.png
 source:
   author: "Jérôme Coupé"
   title: "Multilingual sites with Eleventy"
@@ -59,7 +59,7 @@ Voici l'arborescence de fichiers avec laquelle nous allons travailler. C'est une
 
 ## Définition des locales
 
-La première consiste à créer nos locales à l'aide [des fichiers de données pour les répertoires](https://www.11ty.io/docs/data-template-dir/).
+La première consiste à créer nos locales à l'aide [des fichiers de données pour les répertoires](https://www.11ty.dev/docs/data-template-dir/).
 
 Pour cela il nous suffit d'ajouter les fichiers `en.json` and `fr.json` dans nos répertoires de langues.  Dans chacun d'entre eux, nous définissons une clé `locale`. Elle va permettre d'accéder aux valeurs correspondantes dans tous les fichiers de layout présents dans les sous-répertoires d'un dossier de langue.
 
@@ -98,7 +98,7 @@ Maintenant que nos dates sont automatiquement localisées, passons aux collectio
 
 ## Localisation des collections
 
-Nous allons pouvoir tirer parti de notre arborescence de fichiers pour créer des collections dans Eleventy. Le plus simple est encore de créer une collection par langue. Nous utilisons pour cela la fonction [`getFilteredByGlob`](https://www.11ty.io/docs/collections/#getfilteredbyglob(-glob-)) dans notre fichier `eleventy.js`.
+Nous allons pouvoir tirer parti de notre arborescence de fichiers pour créer des collections dans Eleventy. Le plus simple est encore de créer une collection par langue. Nous utilisons pour cela la fonction [`getFilteredByGlob`](https://www.11ty.dev/docs/collections/#getfilteredbyglob(-glob-)) dans notre fichier `eleventy.js`.
 
 ```js
 module.exports = function(eleventyConfig) {
@@ -155,7 +155,7 @@ Notez que nous pourrions aussi aussi utiliser pour nos collections notre variabl
 
 Alors que la duplication de nos pages et de nos articles est à priori logique, nous ne voulons pas faire de même pour nos layouts et nos fichiers partiels.
 
-Fort heureusement, nous pouvons éviter cela en traduisant simplement certaines chaînes de caractères. Pour ce faire, nous devons créer [des fichiers de données génériques](https://www.11ty.io/docs/data-global/) qui contiendront nos traductions sous forme de paire clés/valeurs. Nous pourrons ensuite faire référence dynamiquement à ces clés dans nos fichiers partiels et de layouts à l'aide de notre chère variable `locale`.
+Fort heureusement, nous pouvons éviter cela en traduisant simplement certaines chaînes de caractères. Pour ce faire, nous devons créer [des fichiers de données génériques](https://www.11ty.dev/docs/data-global/) qui contiendront nos traductions sous forme de paire clés/valeurs. Nous pourrons ensuite faire référence dynamiquement à ces clés dans nos fichiers partiels et de layouts à l'aide de notre chère variable `locale`.
 
 ### Layouts
 

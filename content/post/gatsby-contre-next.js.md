@@ -1,14 +1,10 @@
 ---
 title: Gatsby contre Next.js
+description: Une illustration du surcoût de la complexité engendré par Gatsby sur un site  statique par rapport au framework React Next.js
 date: 2020-10-03
 lastmod: 2020-10-03T21:12:22+02:00
-description: Une illustration du surcoût de la complexité engendré par Gatsby sur un site
-  statique par rapport au framework React Next.js
-categories:
-- gatsby
-- nextjs
 images:
-- "/assets/images/"
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Gatsby%20contre%20Next.js/jamstatic/twitter-card.png
 source:
   author: Jared Palmer
   title: Gatsby vs. Next.js
@@ -66,7 +62,7 @@ Il est temps de nous amuser un peu, comme ceci:
 
 ```js
 // gastby-node.js
-const { load, select, createChildren } = require('./internals');
+const { load, select, createChildren } = require("./internals");
 exports.sourceNodes = async ({ actions }, options = {}) => {
   const { createNode } = actions;
   const { feed } = options;
@@ -86,16 +82,16 @@ Là ça devient délirant:
 
 ```js
 // internals.js
-const crypto = require('crypto');
-const rp = require('request-promise');
-const { parseString } = require('xml2js');
-const lget = require('lodash.get');
+const crypto = require("crypto");
+const rp = require("request-promise");
+const { parseString } = require("xml2js");
+const lget = require("lodash.get");
 // Utils copied from initial plugin by Uptime Ventures
-const transform = i =>
+const transform = (i) =>
   new Promise((resolve, reject) =>
     parseString(i, (e, p) => (e ? reject(e) : resolve(p)))
   );
-const load = uri => rp({ uri, transform });
+const load = (uri) => rp({ uri, transform });
 const select = (i, key) => {
   const value = lget(i, key);
   if (Array.isArray(value)) {
@@ -103,52 +99,49 @@ const select = (i, key) => {
   }
   return value;
 };
-const digest = i =>
-  crypto
-    .createHash('md5')
-    .update(JSON.stringify(i))
-    .digest('hex');
+const digest = (i) =>
+  crypto.createHash("md5").update(JSON.stringify(i)).digest("hex");
 /**
  * Slugify a string
  * @param s Any string
  */
 function toSlug(s) {
   if (!s) {
-    return '';
+    return "";
   }
   s = s.toLowerCase().trim();
-  s = s.replace(/ & /g, ' and ');
-  s = s.replace(/[ ]+/g, '-');
-  s = s.replace(/[-]+/g, '-');
-  s = s.replace(/[^a-z0-9-]+/g, '');
+  s = s.replace(/ & /g, " and ");
+  s = s.replace(/[ ]+/g, "-");
+  s = s.replace(/[-]+/g, "-");
+  s = s.replace(/[^a-z0-9-]+/g, "");
   return s;
 }
 const createChildren = (nodes, parent, createNode) => {
   const children = [];
-  nodes.forEach(n => {
-    const link = toSlug(select(n, 'title'));
+  nodes.forEach((n) => {
+    const link = toSlug(select(n, "title"));
     children.push(link);
     const node = {
-      id: toSlug(select(n, 'title')),
-      title: select(n, 'title'),
-      description: select(n, 'itunes:summary'),
-      html: select(n, 'content:encoded'),
+      id: toSlug(select(n, "title")),
+      title: select(n, "title"),
+      description: select(n, "itunes:summary"),
+      html: select(n, "content:encoded"),
       // Fix the date
-      date: new Date(select(n, 'pubDate')).toISOString(),
+      date: new Date(select(n, "pubDate")).toISOString(),
       // Extract out the embed URL
-      artwork: n['itunes:image'][0]['$']['href'],
-      embed: n.enclosure[0]['$']['url']
-        .replace('.mp3', '')
+      artwork: n["itunes:image"][0]["$"]["href"],
+      embed: n.enclosure[0]["$"]["url"]
+        .replace(".mp3", "")
         // hack @todo
-        .replace('/audio/17ba21/17ba21db-66b5-4612-855e-556b20f60155', '')
-        .replace('https://cdn', 'https://player')
-        .split('/')
+        .replace("/audio/17ba21/17ba21db-66b5-4612-855e-556b20f60155", "")
+        .replace("https://cdn", "https://player")
+        .split("/")
         .slice(0, 4)
-        .join('/'),
-      audioUrl: n.enclosure[0]['$']['url'],
-      duration: select(n, 'itunes:duration'),
-      keywords: select(n, 'itunes:keywords'),
-      episodeNumber: select(n, 'itunes:episode'),
+        .join("/"),
+      audioUrl: n.enclosure[0]["$"]["url"],
+      duration: select(n, "itunes:duration"),
+      keywords: select(n, "itunes:keywords"),
+      episodeNumber: select(n, "itunes:episode"),
       link,
       parent,
       children: [],
@@ -156,7 +149,7 @@ const createChildren = (nodes, parent, createNode) => {
     // This is how you we specify that each entry
     // in the RSS feed should become an Episode node in Gatsby's GraphQL layer
     node.internal = {
-      type: 'Episode',
+      type: "Episode",
       contentDigest: digest(node),
     };
     createNode(node);
@@ -185,7 +178,7 @@ Je n'ose pas imaginer ce que cela doit être pour les débutants. Si tout cela s
 C'est du moins ce que je pensais. Ce que je viens de vous montrer, c'est comment faire entrer les données _dans_ l'API GraphQL de Gatsby. Pour générer une page pour chaque épisode, j'ai dû trouver cette fonction monstre dans le fichier `gatsby-node.js`. J'ai fait cela en copiant la requête GraphQL de la documentation de `gatsby-source-filesystem` et en l'adaptant à ma requête `allEpisode`. Il a fallu tout un tas d'essais et d'erreurs pour que les slugs fonctionnent.
 
 ```js
-const path = require('path');
+const path = require("path");
 // Appremment notre plugin n'a pas crée les noeuds comme nos le pensions,
 // cette partie est requise
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -202,7 +195,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 // Cela ressemble beaucoup au plugin `gatsby-source-filesystem`
 exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
-    const episodeTemplate = path.resolve('./src/templates/episode.tsx');
+    const episodeTemplate = path.resolve("./src/templates/episode.tsx");
     const episodeQuery = /* GraphQL */ `
       {
         allEpisode(sort: { fields: [date], order: DESC }, limit: 1000) {
@@ -220,11 +213,11 @@ exports.createPages = ({ graphql, actions }) => {
       }
     `;
     resolve(
-      graphql(episodeQuery).then(result => {
+      graphql(episodeQuery).then((result) => {
         if (result.errors) {
           reject(result.errors);
         }
-        result.data.allEpisode.edges.forEach(edge => {
+        result.data.allEpisode.edges.forEach((edge) => {
           actions.createPage({
             path: edge.node.fields.slug,
             component: episodeTemplate,
@@ -243,13 +236,13 @@ exports.createPages = ({ graphql, actions }) => {
  */
 function toSlug(s) {
   if (!s) {
-    return '';
+    return "";
   }
   s = s.toLowerCase().trim();
-  s = s.replace(/ & /g, ' and ');
-  s = s.replace(/[ ]+/g, '-');
-  s = s.replace(/[-]+/g, '-');
-  s = s.replace(/[^a-z0-9-]+/g, '');
+  s = s.replace(/ & /g, " and ");
+  s = s.replace(/[ ]+/g, "-");
+  s = s.replace(/[-]+/g, "-");
+  s = s.replace(/[^a-z0-9-]+/g, "");
   return s;
 }
 // ...
@@ -446,9 +439,9 @@ Un autre aspect controversé de Gatsby est son système de plugin. On trouve une
 "Mais Jared, espèce d'idiot, en quoi est-ce différent d'un fichier `razzle.config.js` ou d'un `next.config.js` ?"
 Je vous répondrais: la partie GraphQL et les abstractions de Gatsby.
 
-Next.js (et Razzle) vous donnent tous deux  un simple accès direct à la configuration de Webpack. Si vous connaissez Webpack, alors vous connaissez Next.js et Razzle. Point final.
+Next.js (et Razzle) vous donnent tous deux un simple accès direct à la configuration de Webpack. Si vous connaissez Webpack, alors vous connaissez Next.js et Razzle. Point final.
 Avec Gatsby, vous disposez de méthodes et de fonctions du framework que vous _devez_ utiliser pour augmenter les fonctionnalités.
-GraphQL est encore une fois, la source de la complexité pour Gatsby et la raison pour laquelle les fichiers `gatsby-node.js` sont beaucoup plus complexes que votre fichier `next.config.js` usuel. Autrement dit, `gatsby-node.js` c'est l'équivalent de `functions.php` de ce bon vieux WordPress  sous stéroïdes. Et je ne suis pas fan.
+GraphQL est encore une fois, la source de la complexité pour Gatsby et la raison pour laquelle les fichiers `gatsby-node.js` sont beaucoup plus complexes que votre fichier `next.config.js` usuel. Autrement dit, `gatsby-node.js` c'est l'équivalent de `functions.php` de ce bon vieux WordPress sous stéroïdes. Et je ne suis pas fan.
 
 ## Next.js c'est top pour des sites statiques
 
@@ -458,16 +451,16 @@ GraphQL est encore une fois, la source de la complexité pour Gatsby et la raiso
 
 Pour être honnête je n'ai pas tilté sur Next.js jusqu'à ce que je lise le code source de [la documentation d'Expo](https://github.com/expo/expo/tree/master/docs). Il contient un code excellent pour générer la barre latérale et analyser statiquement le système de fichiers. Tout fonctionne grâce à `babel-plugin-preval`. Cet astucieux plugin de Kent C. Dodds pré-évalue le code JavaScript au moment de la génération. Il peut ensuite être utilisé pour préévaluer le contenu du système de fichiers en utilisant le bon vieux paquet `fs`. Cependant, maintenant avec Next.js 9.x, vous n'avez même plus besoin de `preval`, vous pouvez simplement exporter une fonction depuis une page appelée `getStaticProps` et ça marche.
 
-Par exemple, la nouvelle documentation de Formik aura un blog. Tous les articles sont écrits en MDX. Chaque article reçoit un fichier `.mdx` dans le répertoire `./pages/blog` et possède le même front matter:  titre, description, date, etc. Pour générer l'index du blog, je fais le plus simple possible : je lis les fichiers `.mdx` dans le répertoire `./pages/blog/`, j'analyse leur contenu avec le paquet `front-matter`, je les mets dans un tableau et je les classe par date. Comme j'utilise `getStaticProps`, tout se passe au moment de la compilation, de sorte que le résultat est toujours une page statique.
+Par exemple, la nouvelle documentation de Formik aura un blog. Tous les articles sont écrits en MDX. Chaque article reçoit un fichier `.mdx` dans le répertoire `./pages/blog` et possède le même front matter: titre, description, date, etc. Pour générer l'index du blog, je fais le plus simple possible : je lis les fichiers `.mdx` dans le répertoire `./pages/blog/`, j'analyse leur contenu avec le paquet `front-matter`, je les mets dans un tableau et je les classe par date. Comme j'utilise `getStaticProps`, tout se passe au moment de la compilation, de sorte que le résultat est toujours une page statique.
 
 ```js
 // ./pages/blog/index.js
-import React from 'react';
-import path from 'path';
-import fm from 'front-matter';
-import fs from 'fs-extra';
-import toDate from 'date-fns/toDate';
-import compareDesc from 'date-fns/compareDesc';
+import React from "react";
+import path from "path";
+import fm from "front-matter";
+import fs from "fs-extra";
+import toDate from "date-fns/toDate";
+import compareDesc from "date-fns/compareDesc";
 export default function BlogList({ posts }) {
   return (
     <>
@@ -478,21 +471,21 @@ export default function BlogList({ posts }) {
   );
 }
 export function getStaticProps() {
-  let items = fs.readdirSync('./pages/blog');
+  let items = fs.readdirSync("./pages/blog");
   for (var i = 0; i < items.length; i++) {
     const filePath = path.join(path_, items[i]);
     const { ext, name } = path.parse(filePath);
     // Traiter uniquement les fichiers markdown/mdx qui ne sont pas des pages index.tsx
-    if (ext.startsWith('.md') && ext !== 'index') {
+    if (ext.startsWith(".md") && ext !== "index") {
       try {
-        let { attributes } = fm(fs.readFileSync(filePath, 'utf8'));
+        let { attributes } = fm(fs.readFileSync(filePath, "utf8"));
         let obj = {
           ...attributes,
           date: toDate(attributes.date),
           href: filePath
-            .replace(/^pages\/blog/, '/blog')
-            .replace(/.mdx?$/, '')
-            .replace(/.tsx?$/, ''),
+            .replace(/^pages\/blog/, "/blog")
+            .replace(/.mdx?$/, "")
+            .replace(/.tsx?$/, ""),
         };
         arr.push(obj);
       } catch (e) {

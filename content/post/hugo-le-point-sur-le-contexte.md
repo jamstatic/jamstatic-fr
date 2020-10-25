@@ -1,11 +1,11 @@
 ---
 title: "Hugo, le point sur le contexte"
-date: 2018-02-08T17:27:39+01:00
 description: "Exemples de gestion du contexte et signification du point dans les templates Hugo."
+date: 2018-02-08T17:27:39+01:00
+images:
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Hugo%252C%2520le%2520point%2520sur%2520le%2520contexte/jamstatic/twitter-card.png
 categories:
   - hugo
-images:
-  - https://regisphilibert.com/blog/2018/02/hugo-the-scope-the-context-and-the-dot/images/featured.png
 source:
   author: Régis Philibert
   title: Hugo, the scope, the context and the dot
@@ -34,8 +34,7 @@ périmètre en [Go Template](https://golang.org/pkg/html/template/) n'est pas
 toujours aisé.
 
 Dans cet article, nous essaierons de comprendre l’impact du périmètre et du
-contexte à l’intérieur de nos gabarits et de nos fichiers partiels, et comment
-jongler avec le point 🤹.\
+contexte à l’intérieur de nos gabarits et de nos fichiers partiels, et comment jongler avec le point 🤹.
 
 ## Le contexte et le point
 
@@ -203,7 +202,7 @@ d’éléments en paramètre (entier, chaine de caractère, objet)
 `dict` va créer une _map_, souvent désignée également comme un tableau
 associatif.\
 Reportez-vous à la [documentation de cette fonction](https://gohugo.io/functions/dict)
-ou à mon propre article [sur le sujet](https://regisphilibert.com/blog/2017/04/hugo-go-template-translator-explained-understanding/#associative-arrays).
+ou à mon propre article [sur le sujet](https://regisphilibert.com/blog/2017/04/hugo-cheat-sheet-go-template-translator/#associative-arrays).
 
 ```go-html-template
 {{ partial "img" dict("path" $path "alt" "Nice blue sky") }}
@@ -223,7 +222,7 @@ Vous pouvez mettre une lettre majuscule à vos clefs pour qu'elles fassent plus
 fichier partiel j'identifie immédiatement les clefs issues d’un contexte
 personnalisé de celles issues de celui de la page.
 
-### Accéder au plus haut niveau $ depuis un fichier partiel
+### Accéder au plus haut niveau \$ depuis un fichier partiel
 
 Contrairement à `range` et `with` le contexte de page n'est pas disponible dans
 `$`.
@@ -240,7 +239,7 @@ moment que vous êtes consistent dans votre nomenclature.
 
 ```html
 <figure class="Figure Figure--framed">
-    <img src="{{ .path }}" alt="{{ .alt }} from {{ .Page.Title }}">
+  <img src="{{ .path }}" alt="{{ .alt }} from {{ .Page.Title }}" />
 </figure>
 ```
 

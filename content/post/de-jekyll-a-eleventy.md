@@ -3,11 +3,11 @@ title: "De Jekyll à Eleventy"
 date: 2019-09-07T10:59:06+02:00
 lastmod: 2019-09-07T12:24:06+02:00
 description: "Retour d'expérience du passage de Jekyll à Eleventy."
+images:
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:De%20Jekyll%20%C3%A0%20Eleventy/jamstatic/twitter-card.png
 categories:
   - eleventy
   - jekyll
-images:
-  - https://www.webstoemp.com/img/blogposts/eleventy-logo.png
 source:
   author: "Jérôme Coupé"
   title: "From Jekyll to Eleventy"
@@ -28,7 +28,7 @@ Jekyll est un générateur que je continue d'apprécier, d'utiliser et de suivre
 
 Les générateurs de site statiques gagnent toujours plus en popularité, grâce à l'omniprésence des APIs, aux processus de développement basés sur Git, à la puissance des frameworks JavaScript, aux CMS headless et aux couches de données unifiées fournies par GraphQL. Ils sont devenus un choix raisonnable pour tous types de sites web.
 
-Mon site tournait précédemment sous Jekyll, que j'apprécie pour sa facilité d'utilisation et sa flexibilité. Toutefois, il était devenu plus lent que d'autres générateurs plus récents et me forçait à maintenir un environnement Ruby à jour. J'ai testé plusieurs outils, avant de finalement restreindre ma liste de choix à [Hugo](https://gohugo.io/) et [Eleventy](https://www.11ty.io/).
+Mon site tournait précédemment sous Jekyll, que j'apprécie pour sa facilité d'utilisation et sa flexibilité. Toutefois, il était devenu plus lent que d'autres générateurs plus récents et me forçait à maintenir un environnement Ruby à jour. J'ai testé plusieurs outils, avant de finalement restreindre ma liste de choix à [Hugo](https://gohugo.io/) et [Eleventy](https://www.11ty.dev/).
 
 ### Hugo
 
@@ -40,7 +40,7 @@ Cependant, les inconvénients d'Hugo sont pour moi la [syntaxe de Go HTML templa
 
 Ce qui nous amène à Eleventy. Eleventy est écrit en Node, vous avez donc accès à tout l'écosystème de NPM pour l'étendre, il est facile d'utilisation, et il est bien plus rapide que Jekyll (sans cependant atteindre les performances d'Hugo).
 
-De plus Eleventy supporte [plusieurs langagues de templating](https://www.11ty.io/docs/languages/).
+De plus Eleventy supporte [plusieurs langagues de templating](https://www.11ty.dev/docs/languages/).
 
 #### Configuration
 
@@ -242,7 +242,7 @@ J'utilise un layout dédié pour afficher le détail de chaque article de blog. 
 
 ### Projects
 
-La même logique est appliquée pour afficher les projets, avec une petite nuance. Comme il n'y a pas de layout dédié pour la collection `projects`, il nous faut utiliser [`templateContent`](https://www.11ty.io/docs/collections/#collection-item-data-structure) pour afficher le contenu des fichiers Markdown. Voici une version simplifiée du code :
+La même logique est appliquée pour afficher les projets, avec une petite nuance. Comme il n'y a pas de layout dédié pour la collection `projects`, il nous faut utiliser [`templateContent`](https://www.11ty.dev/docs/collections/#collection-item-data-structure) pour afficher le contenu des fichiers Markdown. Voici une version simplifiée du code :
 
 ```twig
 {% for project in collections.projects | reverse %}

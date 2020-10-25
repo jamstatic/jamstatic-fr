@@ -4,7 +4,7 @@ description: Jekyll permet de publier des thèmes sous forme de gem, afin de fac
   l’installation et les mises à jour.
 date: 2016-10-29T15:18:59+02:00
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346531/octojekyll.png
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_60,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Cr%C3%A9er%20un%20th%C3%A8me%20pour%20Jekyll/jamstatic/twitter-card.png
 categories:
   - jekyll
 ---

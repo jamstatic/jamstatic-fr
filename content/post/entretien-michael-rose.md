@@ -4,7 +4,7 @@ date: 2017-12-02
 description: >
   Michael Rose, webdesigner très actif dans la communauté Jekyll, partage son retour d’expérience sur les générateurs de site statique.
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347062/michael-rose.jpg
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Questions%2520%25C3%25A0%2520Michael%2520Rose%252C%2520designer%2520et%2520d%25C3%25A9veloppeur%2520front-end/jamstatic/twitter-card.png
 source:
   lang: en
   url: https://www.thenewdynamic.org/article/interview-michael-rose/
@@ -22,7 +22,7 @@ expérience et son point de vue de designer qui travaille avec des générateurs
 site statique comme Jekyll, Gatsby ou Hugo. Aucun logiciel n'est parfait et il y
 a toujours de la place pour des améliorations selon lui.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347062/michael-rose.jpg" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347062/jamstatic/michael-rose.jpg" >}}
 
 ## Bonjour Michael, comment te présenter ?
 

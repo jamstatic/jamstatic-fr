@@ -1,14 +1,14 @@
 ---
 title: Un site ecommerce statique (très performant) avec Hugo
-date: 2017-08-28 14:00:00 +02:00
 description: "Un exemple de site de ecommerce statique avec Hugo, Snipcart et Netlify."
+date: 2017-08-28 14:00:00 +02:00
 source:
   author: Charles Ouellet
   title: "Hugo Tutorial: How to Build & Host a (Very Fast) Static E-Commerce Site"
   url: https://snipcart.com/blog/hugo-tutorial-static-site-ecommerce
   lang: en
 images:
-  - https://snipcartweb-10f3.kxcdn.com/media/1173/toolbox.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Un%20site%20ecommerce%20statique%20tr%C3%A8s%20performant%20avec%20Hugo/jamstatic/twitter-card.png
 canonical_url: https://snipcart.com/blog/hugo-tutorial-static-site-ecommerce
 categories:
   - hugo
@@ -194,8 +194,7 @@ Nous allons devoir ajouter un nouveau fichier `products.json` dans le dossier
   {
     "id": "2",
     "name": "Phaser du Captain Kirk",
-    "description":
-      "The Original Series Phaser comprises a small, hand-held Type I Phaser, which slots into a larger Type II Phaser body with a removable pistol-grip.",
+    "description": "The Original Series Phaser comprises a small, hand-held Type I Phaser, which slots into a larger Type II Phaser body with a removable pistol-grip.",
     "price": 145.98,
     "image": "/images/phaser.png",
     "url": "http://snipcart-hugo.netlify.com"
@@ -270,32 +269,48 @@ Ajoutez-le dans le dossier `layouts/partials`.
 ```html
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
 
-  <title> Intégration de Snipcart dans Hugo! </title>
+    <title>Intégration de Snipcart dans Hugo!</title>
 
-  <link id="snipcart-theme" type="text/css" href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
+    <link
+      id="snipcart-theme"
+      type="text/css"
+      href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-  <div class="container">
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Star Trek shop</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li class="snipcart-summary">
-            <a href="#" class="snipcart-checkout">
-              View cart (<span class="snipcart-total-items">0</span>)
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">Star Trek shop</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="snipcart-summary">
+              <a href="#" class="snipcart-checkout">
+                View cart (<span class="snipcart-total-items">0</span>)
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>
 ```
 
 Nous avons choisi d’utiliser le framework
@@ -346,28 +361,29 @@ produit. Appelons le **product.html**.
 
 ```html
 <div class="col s6">
-    <h2 class="header">{{ .name }}</h2>
-    <div class="card horizontal">
-        <div class="card-image">
-        <img src="{{ .image }}">
-        </div>
-        <div class="card-stacked">
-        <div class="card-content">
-            <p>{{ .description }}</p>
-        </div>
-        <div class="card-action">
-            <button
-                class="snipcart-add-item waves-effect waves-light btn"
-                data-item-id="{{ .id }}"
-                data-item-name="{{ .name }}"
-                data-item-price="{{ .price }}"
-                data-item-url="{{ .url }}">
-                    <i class="material-icons right">shopping_cart</i>
-                    Add to cart
-            </button>
-        </div>
-        </div>
+  <h2 class="header">{{ .name }}</h2>
+  <div class="card horizontal">
+    <div class="card-image">
+      <img src="{{ .image }}" />
     </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <p>{{ .description }}</p>
+      </div>
+      <div class="card-action">
+        <button
+          class="snipcart-add-item waves-effect waves-light btn"
+          data-item-id="{{ .id }}"
+          data-item-name="{{ .name }}"
+          data-item-price="{{ .price }}"
+          data-item-url="{{ .url }}"
+        >
+          <i class="material-icons right">shopping_cart</i>
+          Add to cart
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 ```
 

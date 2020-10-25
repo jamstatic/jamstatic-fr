@@ -3,12 +3,12 @@ title: Comment marche Jekyll ?
 description: À partir du code source, nous pouvons mieux comprendre le process de
   génération au cœur de Jekyll.
 date: 2017-01-17
+images:
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Comment%2520marche%2520Jekyll%2520%253F/jamstatic/twitter-card.png
 source:
   author: Jack Phelan
   title: How does Jekyll work?
   url: https://www.bytesandwich.com/jekyll/software/blogging/2016/09/14/how-does-jekyll-work.html
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346929/jekyll-rendu-brouillons.png
 categories:
   - jekyll
 ---

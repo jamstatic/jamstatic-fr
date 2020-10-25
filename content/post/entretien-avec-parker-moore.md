@@ -4,7 +4,7 @@ description: Traduction française de l’entretien publié le 11 mars 2016 sur 
 date: 2016-04-19
 author: bertrand
 images:
-  - https://cdn.netlify.com/a3dc6515430891d6df896d718dd7e54f6941d647/99084/uploads/parker-moore-jekyll.jpg
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_60,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Entretien%20avec%20Parker%20Moore%20de%20Jekyll/jamstatic/twitter-card.png
 categories:
   - jekyll
 source:

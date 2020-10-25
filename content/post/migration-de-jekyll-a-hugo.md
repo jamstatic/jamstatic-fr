@@ -1,15 +1,14 @@
 ---
 title: Passer de Jekyll+Github Pages à Hugo+Netlify
+description: Le détail de la migration du blog de Sara Soueidan de Jekyll à Hugo et son passage de GitHub Pages à Netlify.
 date: 2017-06-07
-description: Le détail de la migration du blog de Sara Soueidan de Jekyll à Hugo et
-  son passage de GitHub Pages à Netlify.
+images:
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Passer%20de%20Jekyll%2BGithub%20Pages%20%C3%A0%20Hugo%2BNetlify/jamstatic/twitter-card.png
 source:
   url: https://www.sarasoueidan.com/blog/jekyll-ghpages-to-hugo-netlify/
   title: Migrating from Jekyll+Github Pages to Hugo+Netlify
   author: Sara Soueidan
   lang: en
-images:
-  - https://d33wubrfki0l68.cloudfront.net/4aa07c8129bdae37f8c6510453f274a32ac664c0/09ca5/images/article-assets/hugo-netlify/hugo-folder-structure.png
 categories:
   - hugo
 ---

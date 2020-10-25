@@ -1,12 +1,12 @@
 ---
 title: "Implémenter les catégories dans Eleventy"
+description: "Comment créer une collection afin de pouvoir travailler avec des catégories dans le générateur Eleventy."
 date: 2019-02-05T09:15:06+01:00
 lastmod: 2019-02-06T09:10:26+01:00
-description: "Comment créer une collection afin de pouvoir travailler avec des catégories dans le générateur Eleventy."
+images:
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Impl%C3%A9menter%20les%20cat%C3%A9gories%20dans%20Eleventy/jamstatic/twitter-card.png
 categories:
   - eleventy
-images:
-  - https://cdn-images-1.medium.com/max/800/1*u1v8ojapeWAgL2xjaJZ5rA.png
 source:
   author: "Philip Borenstein"
   title: "Implementing Categories"
@@ -45,10 +45,11 @@ date: 10/30/2018
 title: Loomings
 category: Tech
 tags:
-- tools
-- git
-- eleventy
+  - tools
+  - git
+  - eleventy
 ---
+
 ```
 
 ### Appeler la catégorie dans un modèle
@@ -100,17 +101,20 @@ Pour générer une liste de catégories nous itérons sur tous les fichiers gén
 Cette fonction crée une collection `categoryList` qui contient les noms de toutes les catégories.
 
 ```js
-getCatList = function(collection) {
-  let catSet = new Set()
+getCatList = function (collection) {
+  let catSet = new Set();
 
-  collection.getAllSorted().forEach(item =>
-        typeof item.data.category === "string"
-    &&  catSet.add(item.data.category))
+  collection
+    .getAllSorted()
+    .forEach(
+      (item) =>
+        typeof item.data.category === "string" && catSet.add(item.data.category)
+    );
 
-  return [...catSet]
-}
+  return [...catSet];
+};
 
-eleventyConfig.addCollection("categoryList", getCatList)
+eleventyConfig.addCollection("categoryList", getCatList);
 ```
 
 ### Créer une liste d'articles pour chaque catégorie
@@ -128,36 +132,34 @@ categories {
 Nous pouvons utiliser la fonction `makeCategories()` comme callback de `addCollection()` pour créer cet objet. Nous itérons sur chaque élément qui possède une propriété `category` dans son front matter et nous l'ajoutons à la liste de cette catégorie [^explication] :
 
 ```js
-makeCategories = function(collection) {
-  let categories = {}
+makeCategories = function (collection) {
+  let categories = {};
 
-    // Every rendered page
+  // Every rendered page
 
-  collection.getAllSorted().forEach(item => {
-    let category = item.data.category
+  collection.getAllSorted().forEach((item) => {
+    let category = item.data.category;
 
-      // Ignore the ones without a category
+    // Ignore the ones without a category
 
-    if (typeof category !== "string")
-      return
+    if (typeof category !== "string") return;
 
     if (Array.isArray(categories[category]))
       //  category array exists? Just push
-      categories[category].push(item)
-    else
-      //  Otherwise create it and
-      //  make `item` the first, uh, item.
-      categories[category] = [item]
-  })
+      categories[category].push(item);
+    //  Otherwise create it and
+    //  make `item` the first, uh, item.
+    else categories[category] = [item];
+  });
 
-  return categories
-}
+  return categories;
+};
 ```
 
 Puisque nous souhaitons appeler notre collection de catégories `catgories`, nous la créons comme cela :
 
 ```js
-addCollection("categories", makeCategories)
+addCollection("categories", makeCategories);
 ```
 
 Nous avons maintenant un moyen de créer une collection, qui contient elle-même ses propres collections. Cela me permet de ranger mes articles dans des@ endroits distincts.

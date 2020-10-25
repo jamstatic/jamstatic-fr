@@ -9,7 +9,7 @@ source:
   title: "Up & Running With Hugo Part I: Building Your First Site"
   url: https://forestry.io/blog/up-and-running-with-hugo/
 images:
-- https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346998/up_running_w_hugo_I_1.jpg
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Mettre%20en%20place%20son%20premier%20site%20sous%20Hugo/jamstatic/twitter-card.png
 ---
 
 {{< intro >}}
@@ -42,15 +42,19 @@ Nous allons utiliser
 [notre kit de démarrage](https://github.com/forestryio/hugo-boilerplate)
 régulièrement mis à jour qui ajoute un workflow de développement moderne à Hugo.
 
-## Sommaire
+**Sommaire**
 
-1.  [Configurer Hugo sur votre ordinateur](#1-configurer-hugo)
-2.  [Ajouter du contenu et installer un theme](#2-configurer-votre-site)
-3.  [Personnaliser votre site](#3-personnaliser-votre-site)
-4.  [Personnaliser votre thème](#4-personnaliser-votre-thème)
-5.  [Prochaine étape](#5-prochaine-étape)
+- [1. Configurer Hugo](#1-configurer-hugo)
+- [2. Configurer votre site](#2-configurer-votre-site)
+  - [Mettre à jour un article](#mettre-à-jour-un-article)
+  - [Créer un nouvel article](#créer-un-nouvel-article)
+  - [Utiliser un thème](#utiliser-un-thème)
+- [3. Personnaliser votre site](#3-personnaliser-votre-site)
+- [4. Personnaliser votre thème](#4-personnaliser-votre-thème)
+  - [CSS & Javascript personnalisé](#css--javascript-personnalisé)
+- [5. Prochaine étape](#5-prochaine-étape)
 
-## 1) Configurer Hugo
+## 1. Configurer Hugo
 
 Pou commencer, clonez ou
 [téléchargez notre kit de démarrage pour Hugo](https://github.com/forestryio/hugo-boilerplate/archive/master.zip "Téléchargez depuis GitHub"),
@@ -101,13 +105,13 @@ lancez simplement :
 
 `npm start`
 
-## 2) Configurer votre site
+## 2. Configurer votre site
 
 Nous allons commencer par ajouter de nouveaux contenus au site. Pour ce faire,
 nous allons devoir mettre à jour le contenu présent dans le dossier
 `hugo/content`.
 
-## Mettre à jour un article
+### Mettre à jour un article
 
 Commencer par mettre à jour l’exemple d’article fourni dans notre structure de
 départ. Ouvrez le fichier `hugo/content/posts/example.md` dans votre éditeur de
@@ -168,7 +172,7 @@ Sauvegardez vos changements puis affichez l’article mis à jour dans votre
 navigateur à l’adresse [http://localhost:3000/](http://localhost:3000/). La date
 affichée devant le titre de l’article devrait avoir été mise à jour.
 
-## Créer un nouvel article
+### Créer un nouvel article
 
 Maintenant essayons de créer un nouvel article. Nous utiliserons pour cela la
 commande fournie avec Hugo pour générer un nouvel article. Dans notre projet,
@@ -208,7 +212,7 @@ Pratique ce modèle de projet *Hugo*. j'espère que vous appréciez ce guide !
 Vous pouvez voir l’article mis à jour dans votre navigateur à l’adresse
 [http://localhost:3000/posts/mon-premier-article/](http://localhost:3000/posts/mon-premier-article/).
 
-## Utiliser un thème
+### Utiliser un thème
 
 Pour le moment votre nouveau site n'est pas très beau. Remédions à cela en
 ajoutant un thème issu de
@@ -269,7 +273,7 @@ rm -r hugo/layouts/
 Regardez maintenant dans votre navigateur et vérifiez que votre site a bien été
 mis à jour !
 
-## 3) Personnaliser votre site
+## 3. Personnaliser votre site
 
 Maintenant que nous avons mis en place un site fonctionnel avec un thème, vous
 avez probablement envie de le personnaliser.
@@ -294,7 +298,7 @@ sauvegardez vos changements.
 Retournons maintenant voir notre site dans le navigateur. C’est déjà mieux, mais
 il y a encore du travail.
 
-## 4) Personnaliser votre thème
+## 4. Personnaliser votre thème
 
 Maintenant que vous avez adapté le site pour le personnaliser en peu, nous
 allons nous attarder sur l’aspect le plus puissant d’Hugo et de ce kit de
@@ -383,7 +387,7 @@ fichier `src/css/styles.css` et ajoutez le code suivant à la fin du fichier :
 
 Admirez le résultat final dans votre navigateur !
 
-## 5) Prochaine étape
+## 5. Prochaine étape
 
 Vous êtes maintenant prêt·e à commencer à créer un site statique avec Hugo !
 

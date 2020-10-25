@@ -3,9 +3,8 @@ title: "Netlify en 10 fonctionnalités"
 description: "Déployez et hébergez gratuitement vos sites statiques comme les pros : CDN, HTTPS, CI, environnements de build, formulaires, tests A/B, et bien plus."
 date: 2018-01-07T21:05:43+01:00
 categories:
-  - netlify
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347058/paperplane.png
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Netlify%20en%2010%20fonctionnalit%C3%A9s/jamstatic/twitter-card.png
 source:
   author: Phil Hawksworth
   title: "10 Netlify features to surprise and delight"
@@ -41,7 +40,7 @@ fonctionnalités disponibles quelle que soit
 [la formule utilisée](https://www.netlify.com/pricing/), même celle entièrement
 gratuite.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347058/paperplane.png" alt="" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/dpr_auto,f_auto,q_auto/v1603628397/jamstatic/paperplane.png" alt="" >}}
 
 ## Mais d’abord, comment démarrer simplement
 
@@ -131,7 +130,7 @@ Netlify vous permet de garder le contrôle sur la façon dont vous déployez. Vo
 pouvez choisir de déployer uniquement la branche de production, toutes vos
 branches, ou seulement certaines branches.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347027/controle-deploiement-continu.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/dpr_auto,f_auto,q_auto/v1523347027/jamstatic/controle-deploiement-continu.png"
 caption="Paramètres du déploiement continu" >}}
 
 Une fois déployée, chaque branche sera accessible depuis un sous-domaine généré
@@ -154,7 +153,7 @@ trafic de votre site entre les différentes branches de votre choix.
 Vous pouvez partager le trafic de votre site en autant de branches que vous le
 souhaitez et définir le pourcentage de trafic attribué à chacune des branches.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347053/split-testing.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347053/jamstatic/split-testing.png"
 caption="La configuration du split testing chez Netlify" >}}
 
 Cette fonctionnalité me bluffe. Elle rend les différents types de tests A/B
@@ -246,7 +245,7 @@ La configuration se fait en un clic (bon ok peut-être trois, mais ça m'a pris
 moins d’une minute). En plus le certificat est renouvelé automatiquement, pour
 que vous n'ayez pas à le faire tous les ans.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347047/ssl-config.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347047/jamstatic/ssl-config.png"
 caption="La configuration de SSL chez Netlify avec renouvellement automatique des certificats grâce à Let’s Encrypt" >}}
 
 ### 7. Lancer des tests avec l’intégration continue de Netlify

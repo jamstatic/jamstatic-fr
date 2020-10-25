@@ -1,10 +1,10 @@
 ---
-title: Utiliser des plugins Jekyll avec GitHub Pages
-description: Automatiser la publication du site généré sur GitHub Pages pour pouvoir
-  utiliser les plugins Jekyll sans restriction.
+title: Utiliser des plugins Jekyll sur GitHub Pages
+description: Automatiser la publication d'un site Jekyll sur GitHub Pages quels que soient les plugins utilisés.
 date: 2016-09-18T13:51:13+02:00
+lastmod: 2010-09-18T13:51:13+02:00
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346531/octojekyll.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1180,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Utiliser%20des%20plugins%20Jekyll%20sur%20GitHub%20Pages/jamstatic/twitter-card.png
 categories:
   - jekyll
 ---
@@ -16,15 +16,15 @@ Si cette solution gratuite est bien pratique, elle n’en reste pas moins limit�
 en termes de support de plugins Jekyll et ce pour des raisons de sécurité. Si
 vous voulez utiliser des plugins comme [jekyll-cloudinary]({{< relref
 "gestion-images-responsive-avec-jekyll-cloudinary.md" >}}) ou
-[jekyll-assets](https://github.com/jekyll/jekyll-assets), il vous faudra générer
-le site en local et le publier sur Github.
+[jekyll-assets](https://github.com/jekyll/jekyll-assets), il va falloir utiliser GitHub Actions ou générer votre site localement avant de le pousser en ligne.
 
 {{< /intro >}}
 
 ---
 
-Nous allons voir que cette opération est facilement automatisable à l’aide d’un
-fichier `Rakefile`, la manière la plus courante en Ruby de créer des tâches.
+**Mise à jour**: GitHub Actions permet maintenant de [publier un site Jekyll quels que soient les plugins utilisés](https://jekyllrb.com/docs/continuous-integration/github-actions/).
+
+Nous allons voir que cette opération est facilement automatisable à l’aide d’un fichier `Rakefile`, la manière la plus courante en Ruby de créer des tâches.
 
 ## Prérequis
 

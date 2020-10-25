@@ -1,12 +1,12 @@
 ---
 title: "Gestion du cache des fichiers partiels avec Hugo"
+description: "Apprenez à optimiser le cache des fichiers partiels pour reduire plus encore vos temps de génération avec Hugo."
 date: 2019-12-03T18:10:24+01:00
 lastmod: 2019-12-07T18:13:54+01:00
-description: "Apprenez à optimiser le cache des fichiers partiels pour reduire plus encore vos temps de génération avec Hugo."
+images:
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Gestion%20du%20cache%20des%20fichiers%20partiels%20avec%20Hugo/jamstatic/twitter-card.png
 categories:
   - hugo
-images:
-  - https://regisphilibert.com/blog/2019/12/hugo-partial-series-part-1-caching-with-partialcached/images/featured.png
 source:
   author: "Régis Philibert"
   title: "The Full Partial Series Part 1: Caching!"

@@ -2,23 +2,18 @@
 title: Pour des sites web modernes, direction le maillage de contenus
 date: 2019-07-11
 lastmod: 2019-07-12T12:42:35.000+00:00
-description: ''
 author: anthony
 categories:
 - gatsby
 - headless
 images:
-- "/assets/images///"
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Pour%2520des%2520sites%2520web%2520modernes%252C%2520direction%2520le%2520maillage%2520de%2520contenus/jamstatic/twitter-card.png
 source:
   author: Sam Bhagwat
   title: 'Delivering Modern Website Experiences: The Journey to a Content Mesh'
   url: https://www.gatsbyjs.org/blog/2018-10-04-journey-to-the-content-mesh/
   lang: en
-commments: false
-aliases: []
-canonical_url: ''
-keywords: []
-draft: true
+
 
 ---
 Les systèmes de gestion de contenu (CMS) sont nés pour rendre l'édition de contenu de sites _possible_. Ils sont maintenant ré-imaginés pour la rendre _fantastique_.
@@ -35,7 +30,7 @@ Lorsque les équipes web ont besoin d'ajouter de la recherche, elles peuvent se 
 
 Les équipes adoptent ces services car chacun d'entre eux est fait pour répondre à un besoin bien précis, alors que de leur côté les CMS destinés aux entreprises ne sont souvent pas optimisés pour grand chose.
 
-![](/v1562938736/jamstatic/modular-cms-architecture.png)
+![](https://res.cloudinary.com/jamstatic/image/upload/v1562938736/jamstatic/modular-cms-architecture.png)
 
 ## L'émergence du maillage de contenus
 
@@ -53,7 +48,7 @@ Le changement est stimulé par la rencontre de trois révolutions dans la façon
 - _Les techniques de développement_ : les frameworks Front comme React ont un rôle prépondérant pour les expériences enrichies de l'utilisateur.
 - La performance : étant donné que le mobile représente plus de 50% du traffic internet, la haute performance est devenue obligatoire et non plus optionnelle.
 
-![](/v1562938846/jamstatic/three-website-revolutions.png)
+![](https://res.cloudinary.com/jamstatic/image/upload/v1562938846/jamstatic/three-website-revolutions.png)
 
 These technological changes have made modern web technology both _essential_ for creating fresh, novel, and engaging digital experiences, and _more accessible_ for the enterprise.
 
@@ -77,4 +72,4 @@ In our conclusion, [Creating Compelling Experiences](/blog/2018-10-18-creating-c
 
 ## Le paysage du développement web moderne
 
-![](/v1562939172/jamstatic/content-mesh.png)
+![](https://res.cloudinary.com/jamstatic/image/upload/v1562939172/jamstatic/content-mesh.png)

@@ -1,22 +1,22 @@
 ---
 title: Présentation d’Eleventy, un nouveau générateur de site statique
 date: 2018-02-18 10:23:07 +0100
-description: Zach Leat explique pourquoi il a développé Eleventy, un générateur de
+description: Zach Leatherman explique pourquoi il a développé Eleventy, un générateur de
   site statique basé sur JavaScript, particulièrement flexible et qui sait se faire
   oublier.
 categories:
 - eleventy
 images:
-- https://cdn-images-1.medium.com/max/800/1*u1v8ojapeWAgL2xjaJZ5rA.png
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Eleventy%252C%20un%20nouveau%20g%C3%A9n%C3%A9rateur%20de%20site%20statique/jamstatic/twitter-card.png
 source:
-  author: Zach Leat
+  author: Zach Leatherman
   title: Introducing Eleventy
   url: https://www.zachleat.com/web/introducing-eleventy/
   lang: en
 ---
 
 {{< intro >}} L'auteur d’Eleventy, le talentueux
-[Zach Leat](https://twitter.com/zachleat), développeur front-end
+[Zach Leatherman](https://twitter.com/zachleat), développeur front-end
 particulièrement attentif à la performance explique pourquoi il a décidé de
 développer à son tour un générateur de site statique. Eleventy se pose d’emblée
 comme une alternative intéressante à Jekyll ou aux générateurs qui reposent sur
@@ -176,7 +176,7 @@ J'espère que vous donnerez sa chance à Eleventy ! Installez-le !
 npm install -g @11ty/eleventy
 ```
 
-Vous trouverez des tutoriels sur [11ty.io](https://www.11ty.io/). Dites à Zach
+Vous trouverez des tutoriels sur [11ty.dev](https://www.11ty.dev/). Dites à Zach
 ce que vous aimez ou que vous n'aimez pas !
 [il adorerait avoir vos retours](https://twitter.com/zachleat).
 

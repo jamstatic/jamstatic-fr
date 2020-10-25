@@ -4,7 +4,7 @@ date: 2017-12-05
 description: >
   Retour d’expérience sur la mise en place d’un site statique à l’aide de Contentful, Gatsby, Algolia et Netlify pour une qualité et un coût défiant toute concurrence.
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347089/gatsby-contentful-netlify-algolia.jpg
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_600,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Gatsby%20%2B%20Contentful%20%2B%20Netlify%20%2B%20Algolia/jamstatic/twitter-card.png
 source:
   lang: en
   title: Gatsby + Contentful + Netlify (and Algolia)
@@ -153,7 +153,7 @@ Notre documentation est composée de 40 entrées et chaque entrée comporte
 plusieurs articles. Notre gros challenge était de concevoir une navigation par
 entrée.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346549/rollcall-docs.png"alt="Navigation documentation" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346549/jamstatic/rollcall-docs.png"alt="Navigation documentation" >}}
 
 La façon dont Gastby gère les données permet de résoudre facilement ce genre de
 problématique, car il est très simple de récupérer des données depuis des
@@ -276,7 +276,7 @@ votre site toutes les 24 heures et mettre à jour l’index pour vous. Vous ajou
 une balise script qui relie votre champ de rechercher à leur API. Vous affinez
 les styles avec un peu de CSS et hop, c'est terminé.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346556/algolia-search.png"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346556/jamstatic/algolia-search.png"
 caption="Algolia DocSearch FTW" >}}
 
 Et ça marchait bien mieux que mon implémentation. Je me suis senti tout bête
@@ -362,7 +362,7 @@ les avantages de pré-téléchargement de Gatsby aident aussi à ce que votre si
 obtienne de bons scores aux tests de performances. Tout ça sans n'avoir rien à
 faire.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346563/webpage-test.png" alt="Indicateurs de performance de la page" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346563/jamstatic/webpage-test.png" alt="Indicateurs de performance de la page" >}}
 
 Pour boucler la boucle, nous avions besoin de pouvoir déclencher une nouvelle
 génération du site à chaque édition ou ajout de contenu depuis Contentful. Une
@@ -373,7 +373,7 @@ une requête quand une action est effectuée sur un contenu ou qu'un contenu est
 crée. Parfait, à l’aide de ce hook Contentful va pouvoir indiquer à Netlify
 quand il y a un changement, et Netlify va générer le site et le déployer.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346571/netlify-build-webhook.png" alt="Déclenchement de la génération par webhook" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346571/jamstatic/netlify-build-webhook.png" alt="Déclenchement de la génération par webhook" >}}
 
 C’est l’association rêvée au paradis de la Jamstack.
 

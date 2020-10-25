@@ -1,9 +1,9 @@
 ---
 title: "Un site statique avec des composants à l’aide de Nunjucks"
-date: 2018-03-13T20:21:48+01:00
 description: "Apprenez à construire un site statique avec des composants à l’aide d’un préprocesseur HTML."
+date: 2018-03-13T20:21:48+01:00
 images:
-  - https://res.cloudinary.com/indysigner/image/fetch/f_auto,q_auto/w_1600/https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/e2990832-ae6d-4aab-9603-561a8c623003/static-site-nunjucks-image1.jpg
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Un%20site%20statique%20avec%20des%20composants%20%C3%A0%20l%E2%80%99aide%20de%20Nunjucks/jamstatic/twitter-card.png
 source:
   author: "Chris Coyier"
   title: "Building A Static Site With Components Using Nunjucks"
@@ -60,7 +60,7 @@ par CMS capable de gérer des centaines de pages, ni de JavaScript pour ajouter
 de l’interaction. Par contre il faut qu'une poignée de pages partage la même
 mise en page.
 
-![Un haut et un pied de page consistants sur toutes les pages](https://res.cloudinary.com/indysigner/image/fetch/f_auto,q_auto/w_1600/https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/e2990832-ae6d-4aab-9603-561a8c623003/static-site-nunjucks-image1.jpg)
+![Un haut et un pied de page consistants sur toutes les pages](https://res.cloudinary.com/jamstatic/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_960/v1603621914/jamstatic/static-site-nunjucks-image1.jpg)
 
 HTML n'apporte pas encore de réponse à ce problème. Nous avons besoin de pouvoir
 faire des _imports_. Les langages comme PHP permettent cela avec
@@ -69,7 +69,7 @@ les hébergeurs de sites statiques et HTML ne peut encore rien pour nous.
 Heureusement nous pouvons préprocesser nos inclusions à l’aide d’un langage de
 templating comme [Nunjucks](https://mozilla.github.io/nunjucks/).
 
-![L'import est possible dans les langages comme PHP](https://res.cloudinary.com/indysigner/image/fetch/f_auto,q_auto/w_1600/https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/54d6ea31-54a0-422c-9cba-d71995bfc733/static-site-nunjucks-image2.png)
+![L'import est possible dans les langages comme PHP](https://res.cloudinary.com/jamstatic/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_960/jamstatic/static-site-nunjucks-image2.png)
 
 Cela fait parfaitement sens ici de créer un gabarit de page, qui inclus des
 morceaux de HTML pour le haut de page, la navigation et le pied de page. Le
@@ -78,23 +78,16 @@ lorsque nous utilisons le gabarit de page.
 
 ```html
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Power of Serverless</title>
-  <link rel="stylesheet" href="/styles/style.processed.css">
+  <link rel="stylesheet" href="/styles/style.processed.css" />
 </head>
 
 <body>
-
-  {% include "./template-parts/_header.njk" %}
-
-  {% include "./template-parts/_nav.njk" %}
-
-  {% block content %}
-  {% endblock %}
-
-  {% include "./template-parts/_footer.njk" %}
-
+  {% include "./template-parts/_header.njk" %} {% include
+  "./template-parts/_nav.njk" %} {% block content %} {% endblock %} {% include
+  "./template-parts/_footer.njk" %}
 </body>
 ```
 
@@ -111,7 +104,9 @@ bouts de HTML destinés à être utilisés sur toutes nos pages.
 
 ```html
 <footer>
-  <p>Ceci est un simple pied de page, les gens. Circulez, y’a rien à voir.<p>
+  <p>
+    Ceci est un simple pied de page, les gens. Circulez, y’a rien à voir.
+  </p>
 </footer>
 ```
 
@@ -124,7 +119,7 @@ Maintenant nous pouvons créer un fichier pour chacune de nos pages. Commençons
 quand même par `index.njk` , qui sera automatiquement traité pour créer un
 fichier `index.html` dans CodePen project à chaque enregistrement.
 
-![Démarrer avec un fichier index.njk](https://res.cloudinary.com/indysigner/image/fetch/f_auto,q_auto/w_1600/https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/b94ae297-5040-4739-b27e-33a09c180758/static-site-nunjucks-image3.png)
+![Démarrer avec un fichier index.njk](https://res.cloudinary.com/jamstatic/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_960/jamstatic/static-site-nunjucks-image3.png)
 
 Voici ce que nous pourrions écrirer dans le fichier `index.njk` pour appliquer
 le gabarit de page et ajouter du contenu dans le bloc principal :
@@ -141,7 +136,7 @@ le gabarit de page et ajouter du contenu dans le bloc principal :
 pareil pour chacune des autres pages, le contenu du bloc sera simplement
 différent, et nous aurons un petit site de quatre pages facile à maintenir.
 
-![Le fichier index.njk est transformé en index.html](https://res.cloudinary.com/indysigner/image/fetch/f_auto,q_auto/w_1600/https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/19c10690-1672-47cb-ac34-99abd88cf7d3/static-site-nunjucks-image4.png)
+![Le fichier index.njk est transformé en index.html](https://res.cloudinary.com/jamstatic/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_960/jamstatic/static-site-nunjucks-image4.png)
 
 Entre nous soit dit, je ne suis pas persuadé que ces petits morceaux
 réutilisables soient des _composants_ à proprement parlé. Nous sommes simplement
@@ -163,15 +158,14 @@ Dans notre fichier `_layout.njk` nous allons générer un nom de classe à l’a
 d’une variable :
 
 ```html
-<body class="{{ body_class }}">
+<body class="{{ body_class }}"></body>
 ```
 
 Et avant d’appliquer le gabarit sur chaque page, nous définissons cette variable
 :
 
 ```html
-{% set body_class = "home" %}
-{% extends "_layout.njk" %}
+{% set body_class = "home" %} {% extends "_layout.njk" %}
 ```
 
 Imaginons que notre navigation soit structurée de la sorte :
@@ -180,10 +174,11 @@ Imaginons que notre navigation soit structurée de la sorte :
 <nav class="site-nav">
   <ul>
     <li class="nav-home">
-      <a href="/">
-        Home
-      </a>
+      <a href="/"> Home </a>
       …
+    </li>
+  </ul>
+</nav>
 ```
 
 Nous pouvons maintenant cibler ce lien et lui appliquer un style spécifique en
@@ -197,7 +192,7 @@ body.services .nav-services a {
 }
 ```
 
-![Styler les liens de navigation avec une classe active](https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/16c75ae8-69e5-4f61-89ba-c752b458d0ed/static-site-nunjucks-image5.gif)
+![Styler les liens de navigation avec une classe active](https://res.cloudinary.com/jamstatic/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_960/jamstatic/static-site-nunjucks-image5.gif)
 
 _Oh, c'est quoi ces icônes ?_ Ce sont simplement des fichiers `.svg` déposés
 dans un dossier et inclus de la sorte :
@@ -228,13 +223,11 @@ Rien de plus simple dans CodePen Projects. Je crée un fichier avec l’extensio
 `.md` qui sera automatiquement transformé en HTML avant d’être inclus dans le
 fichier `index.njk`.
 
-![Les fichiers Markdown sont transformés en HTML dans CodePen Projects](https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/6f1b35c3-a4d2-49bd-839d-9f7ab023c704/static-site-nunjucks-image6.gif)
+![Les fichiers Markdown sont transformés en HTML dans CodePen Projects](https://res.cloudinary.com/jamstatic/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_960/jamstatic/static-site-nunjucks-image6.gif)
 
 ```html
 {% block content %}
-<main class="centered-text-column">
-{% include "content/about.html" %}
-</main>
+<main class="centered-text-column">{% include "content/about.html" %}</main>
 {% endblock %}
 ```
 
@@ -251,7 +244,7 @@ pas besoin de quelque chose d’aussi sophistiqué.
 Nous avons besoin de créer des "cartes" qui utilisent un modèle simple, on peut
 par exemple faire quelque chose comme :
 
-![Créer des composants réutilisables à l’aide de modèles](https://res.cloudinary.com/indysigner/image/fetch/f_auto,q_auto/w_1600/https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/4f883321-3601-433b-ae3a-e4b83bde12b2/static-site-nunjucks-image7.png)
+![Créer des composants réutilisables à l’aide de modèles](https://res.cloudinary.com/jamstatic/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_960/jamstatic/static-site-nunjucks-image7.png)
 
 Pour créer un tel composant dans Nunjucks, il faut utilise ce qu'on appelle des
 [Macros](https://mozilla.github.io/nunjucks/templating.html). Les Macros sont
@@ -275,12 +268,12 @@ Puis vous les appelez comme bon vous semble :
 L'idée générale est de **séparer les données et le balisage**. Cela nous donne
 des bénéfices concrets et assez clairs :
 
-1.  Si nous devons changer le HTML, nous pouvons le faire dans la macro et le
+1. Si nous devons changer le HTML, nous pouvons le faire dans la macro et le
     changement sera reporté partout où la macro est utilisée.
 
-2.  La donnée n'est pas mélangée avec le balisage
+2. La donnée n'est pas mélangée avec le balisage
 
-3.  La donnée pourrait venir de n'importe où ! Nous pouvons passer la donnée
+3. La donnée pourrait venir de n'importe où ! Nous pouvons passer la donnée
     directement lors de l’appel comme nous l’avons fait ci-dessus. Ou bien nous
     pouvons référencer des données en JSON et boucler dessus. Je suis sûr qu'on
     pourrait mettre en place un système dans lequel des données JSON proviennent
@@ -291,7 +284,7 @@ des bénéfices concrets et assez clairs :
 Maintenant que nous avons juste ce dont nous avons besoin, des cartes répétables
 qui combinent des données et du balisage :
 
-![Le HTML vient de la macro, les données peuvent venir de n'importe où](https://res.cloudinary.com/indysigner/image/fetch/f_auto,q_auto/w_1600/https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/1c6b34c1-97bb-4951-939f-f18b9c904415/static-site-nunjucks-image8.png)
+![Le HTML vient de la macro, les données peuvent venir de n'importe où](https://res.cloudinary.com/jamstatic/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_960/jamstatic/static-site-nunjucks-image8.png)
 
 ### Créer autant de composants que vous voulez
 
@@ -313,7 +306,7 @@ des composants conditionnels et des variations en passant différents paramètre
 créé une autre macro pour la section idées du site car les données utilisées et
 le design de la carte sont légèrement différents.
 
-![Vous pouvez créer autant de composants que vous voulez](https://res.cloudinary.com/indysigner/image/fetch/f_auto,q_auto/w_1600/https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/c38a0e1e-34d5-46ef-919c-742d2dc7047a/static-site-nunjucks-image9.png)
+![Vous pouvez créer autant de composants que vous voulez](https://res.cloudinary.com/jamstatic/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_960/jamstatic/static-site-nunjucks-image9.png)
 
 ### Un avis rapide sur les sites statiques
 
@@ -329,7 +322,7 @@ travailler en statique, je suis souvent bien content d’avoir une base de donn�
 et des langages côté serveur pour travailler. Cela me permet de développer ce
 sont j'ai besoin et de tout avoir au même endroit.
 
-### Allez de l’avant et passer au statique !
+### Allez de l’avant et passer au statique
 
 Rappelez-vous qu'un des bénéfices de développer le site comme nous l’avons fait
 dans cet article est qu'au final nous obtenons quelques fichiers statiques.

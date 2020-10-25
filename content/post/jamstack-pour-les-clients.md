@@ -6,7 +6,7 @@ description: "Comment communiquer clairement et efficacement les avantages de la
 categories:
   - jamstack
 images:
-  - https://bejamas-care.now.sh/Jamstack%20for%20Clients.png?theme=light-v1&amp;md=1&amp;fontSize=75px&amp;images=https%3A%2F%2Fassets-bejamas.now.sh%2Fbrand%2Fsvg%2FBejamas_logo_black.svg
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Jamstack%20pour%20les%20clients/jamstatic/twitter-card.png
 source:
   author: "Nebojsa Radakovic"
   title: "Jamstack for clients"

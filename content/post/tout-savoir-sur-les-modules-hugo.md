@@ -1,12 +1,12 @@
 ---
 title: "Tout ce que vous devez savoir sur les modules Hugo"
+description: "Les modules Hugo permettent d'utiliser des fichiers stockés dans n'importe quel dépôt Git dans vos projets."
 date: 2020-09-05T13:55:22+02:00
 lastmod: 2020-09-05T13:55:22+02:00
-description: "Les modules Hugo permettent d'utiliser des fichiers stockés dans n'importe quel dépôt Git dans vos projets. "
 categories:
   - hugo
 images:
-  - https://www.thenewdynamic.com/uploads/hugo-modules-featured_huf2138671cfe006278d5b5c4f580acc47_21595_577x0_resize_lanczos_2.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_64,y_120,l_text:poppins_78_ultrabold_line_spacing_-30:Tout%20ce%20que%20vous%20devez%20savoir%20sur%20les%20modules%20Hugo/jamstatic/twitter-card.png
 source:
   author: "Régis Philibert"
   title: "Hugo Modules: everything you need to know!"
@@ -20,6 +20,7 @@ Cet article vous propose de vous mettre la main à la pâte et après avoir vu c
 ### Initialiser votre projet en tant que module
 
 {{< notice info >}}
+
 #### Tout est module
 
 Il est important de comprendre qu'avant d'importer un module Hugo, votre projet doit lui même être un module !
@@ -74,10 +75,10 @@ Grâce à la clé `mounts`, relative à notre import de Bootstrap, donnons plus 
 ```yaml
 module:
   imports:
-   - path: github.com/twbs/bootstrap
-     mounts:
-     - source: icons
-       target: assets/icons
+    - path: github.com/twbs/bootstrap
+      mounts:
+        - source: icons
+          target: assets/icons
 ```
 
 Comme pour les `imports`, on peut utiliser plusieurs `mounts`, pour le moment nous contenterons d'un seul avec les paramètres suivants:
@@ -153,7 +154,9 @@ Vous devez bien entendu versionner les fichiers `go.mod` et `go.sum` afin que to
 {{< /notice >}}
 
 {{< notice >}}
+
 #### Développer un module en local
+
 Cet article ne couvre pas le développemeent local d'un module, nous vous invitons à [lire notre note sur le sujet](https://www.thenewdynamic.com/note/develop-hugo-modules-locally/) avant d'embarquer pour le joyeux monde des modules Hugo.
 {{< /notice >}}
 
@@ -183,10 +186,10 @@ Nos imports seront très similaires à ce que nous avons vu plus haut, la seule 
 # config.yaml
 module:
   imports:
-   - path: github.com/twbs/bootstrap
-     mounts:
-     - source: icons
-       target: assets/hugo-icons/icons
+    - path: github.com/twbs/bootstrap
+      mounts:
+        - source: icons
+          target: assets/hugo-icons/icons
 ```
 
 ### 2. La page de listing
@@ -214,8 +217,7 @@ module:
       lang: en
     - source: page/template.html
       target: layouts/_default/hugo-icons-listing.html
-  imports:
-   [...]
+  imports: [...]
 ```
 
 {{< notice info >}}
@@ -230,6 +232,7 @@ Nos deux fichiers eux ressemblent à ça:
 title: Liste des icônes
 layout: hugo-icons-listing
 ---
+
 ```
 
 ```go-html-template
@@ -249,7 +252,7 @@ Notez qu'ici nous partons du principe que votre modèle `baseof.html` contient u
 
 ### 3. Le fichier partiel
 
- Plaçons notre fichier dans `partials/icon.html` et déclarons un nouveau point de montage:
+Plaçons notre fichier dans `partials/icon.html` et déclarons un nouveau point de montage:
 
 ```yaml
 # config.yaml
@@ -303,9 +306,9 @@ module:
     # La version extended (Sass) n'est pas requise
     extended: false
     # Il n'y a pas de version maximale
-    max: ''
+    max: ""
     # Par contre il y a une version minimale
-    min: '0.64.0'
+    min: "0.64.0"
 ```
 
 Notre fichier `config.yaml` final:
@@ -313,7 +316,7 @@ Notre fichier `config.yaml` final:
 ```yaml
 module:
   hugoVersion:
-    min: '0.64.0'
+    min: "0.64.0"
   mounts:
     - source: page/index.md
       target: content/hugo-icons-listing.md
@@ -325,13 +328,14 @@ module:
   imports:
     - path: github.com/twbs/icons
       mounts:
-      - source: icons
-        target: assets/hugo-icons/icons
+        - source: icons
+          target: assets/hugo-icons/icons
 ```
 
 Vous pouvez consulter [le dépôt de notre module d'exemple pour cet article](https://github.com/regisphilibert/hugo-module-icons).
 
 {{< notice info >}}
+
 #### Pense-bête
 
 Nous avons vu les commandes `hugo mod init` et `hugo mod get -u`. Ces deux commandes sont aussi très utiles:

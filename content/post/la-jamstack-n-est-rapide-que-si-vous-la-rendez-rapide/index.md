@@ -1,8 +1,10 @@
 ---
 title: La Jamstack n'est rapide que si vous y veillez
-date: 2020-10-05
 description: Pour en finir avec l'incompréhension selon laquelle votre site statique doit forcément utiliser du JavaScript et des APIs.
+date: 2020-10-05
 author: arnaud
+images:
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:La%2520Jamstack%2520n'est%2520rapide%2520que%2520si%2520vous%2520y%2520veillez/jamstatic/twitter-card.png
 categories:
 - jamstack
 source:

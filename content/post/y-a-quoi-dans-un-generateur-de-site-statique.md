@@ -7,7 +7,7 @@ source:
   title: What Really Makes a Static Site Generator?
   url: https://css-tricks.com/really-makes-static-site-generator/
 images:
-  - https://cdn.css-tricks.com/wp-content/uploads/2017/02/terraform-1.jpg
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Qu%E2%80%99y%20a-t-il%20dans%20un%20g%C3%A9n%C3%A9rateur%20de%20site%20statique%20%3F/jamstatic/twitter-card.png
 ---
 
 {{< intro >}}
@@ -126,7 +126,7 @@ Dans Harp, servir votre projet se fait généralement en lançant la commande
 [code for cette fonction](https://github.com/sintaxi/harp/blob/master/lib/index.js):
 
 ```js
-exports.server = function(dirPath, options, callback) {
+exports.server = function (dirPath, options, callback) {
   var app = connect();
   app.use(middleware.regProjectFinder(dirPath));
   app.use(middleware.setup);
@@ -138,7 +138,7 @@ exports.server = function(dirPath, options, callback) {
   app.use(middleware.process);
   app.use(middleware.fallback);
 
-  return app.listen(options.port || 9966, options.ip, function() {
+  return app.listen(options.port || 9966, options.ip, function () {
     app.projectPath = dirPath;
     callback.apply(app, arguments);
   });
@@ -166,7 +166,7 @@ Restons dans le fichier
 maintenant un coup d’œil à la fonction suivante `compile`.
 
 ```js
-exports.compile = function(projectPath, outputPath, callback) {
+exports.compile = function (projectPath, outputPath, callback) {
   /**
    * Both projectPath and outputPath are optional
    */
@@ -203,7 +203,7 @@ exports.compile = function(projectPath, outputPath, callback) {
       message:
         "Output path cannot be greater then one level up from project path and must be in directory starting with `_` (underscore).",
       projectPath: projectPath,
-      outputPath: outputPath
+      outputPath: outputPath,
     });
   }
 
@@ -211,9 +211,9 @@ exports.compile = function(projectPath, outputPath, callback) {
    * Compile and save file
    */
 
-  var compileFile = function(file, done) {
-    process.nextTick(function() {
-      terra.render(file, function(error, body) {
+  var compileFile = function (file, done) {
+    process.nextTick(function () {
+      terra.render(file, function (error, body) {
         if (error) {
           done(error);
         } else {
@@ -222,7 +222,7 @@ exports.compile = function(projectPath, outputPath, callback) {
               outputPath,
               terraform.helpers.outputPath(file)
             );
-            fs.mkdirp(path.dirname(dest), function(err) {
+            fs.mkdirp(path.dirname(dest), function (err) {
               fs.writeFile(dest, body, done);
             });
           } else {
@@ -238,7 +238,7 @@ exports.compile = function(projectPath, outputPath, callback) {
    *
    * TODO: reference ignore extensions from a terraform helper.
    */
-  var copyFile = function(file, done) {
+  var copyFile = function (file, done) {
     var ext = path.extname(file);
     if (
       !terraform.helpers.shouldIgnore(file) &&
@@ -250,11 +250,11 @@ exports.compile = function(projectPath, outputPath, callback) {
         ".less",
         ".scss",
         ".sass",
-        ".coffee"
+        ".coffee",
       ].indexOf(ext) === -1
     ) {
       var localPath = path.resolve(outputPath, file);
-      fs.mkdirp(path.dirname(localPath), function(err) {
+      fs.mkdirp(path.dirname(localPath), function (err) {
         fs.copy(path.resolve(setup.publicPath, file), localPath, done);
       });
     } else {
@@ -266,15 +266,15 @@ exports.compile = function(projectPath, outputPath, callback) {
    * Scan dir, Compile Less and Jade, Copy the others
    */
 
-  helpers.prime(outputPath, { ignore: projectPath }, function(err) {
+  helpers.prime(outputPath, { ignore: projectPath }, function (err) {
     if (err) console.log(err);
 
-    helpers.ls(setup.publicPath, function(err, results) {
-      async.each(results, compileFile, function(err) {
+    helpers.ls(setup.publicPath, function (err, results) {
+      async.each(results, compileFile, function (err) {
         if (err) {
           callback(err);
         } else {
-          async.each(results, copyFile, function(err) {
+          async.each(results, copyFile, function (err) {
             setup.config["harp_version"] = pkg.version;
             delete setup.config.globals;
             callback(null, setup.config);

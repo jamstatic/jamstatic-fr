@@ -6,7 +6,7 @@ description: >-
   il a décidé de passer à la vitesse supérieure avec Eleventy, écrit en JS.
 date: 2018-12-12
 images:
-- /2018/12/12/passer-de-jekyll-a-eleventy/twitter-card-fr.png
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Passer%2520de%2520Jekyll%2520%25C3%25A0%2520Eleventy/jamstatic/twitter-card.png
 source:
   author: Paul Robert Lloyd
   title: Turn Jekyll up to Eleventy
@@ -41,7 +41,7 @@ En combinant trois langages faciles d'approche — Markdown pour le contenu, YA
 
 ## Présentation d'Eleventy
 
-[Eleventy](https://www.11ty.io) est une alternative beaucoup plus flexible que Jekyll. Outre le fait qu'il soit écrit en Node, il est beaucoup moins strict quant à la manière d'organiser ses fichiers, et supporte d'autres langages de gabarits comme EJS, Pug, Handlebars et Nunjucks, en plus de Liquid. Le top c'est que les temps de compilations sont _bien_ meilleurs (et les [optimisations futures](https://github.com/11ty/eleventy/issues/56) promettent des gains supplémentaires).
+[Eleventy](https://www.11ty.dev) est une alternative beaucoup plus flexible que Jekyll. Outre le fait qu'il soit écrit en Node, il est beaucoup moins strict quant à la manière d'organiser ses fichiers, et supporte d'autres langages de gabarits comme EJS, Pug, Handlebars et Nunjucks, en plus de Liquid. Le top c'est que les temps de compilations sont _bien_ meilleurs (et les [optimisations futures](https://github.com/11ty/eleventy/issues/56) promettent des gains supplémentaires).
 
 Vu que le contenu est stocké avec la même combinaison familière de front matter YAML et de Markdown, passer de Jekyll à Eleventy semble plutôt raisonnable au premier abord. Et pourtant, j'ai découvert à mes dépens qu'il y avait quelques pièges. Si vous envisagez une migration, voici quelques petits trucs et astuces pour vous aider dans votre parcours[^1].
 
@@ -115,14 +115,14 @@ module.exports = function(eleventyConfig) {
 
 Quelques choses bonnes à savoir :
 
--   Alors que Jekyll vous permet de lister les fichiers et dossiers à exclure de la génération avec le paramètre `exclude`, [Eleventy recherche ses mêmes valeurs](https://www.11ty.io/docs/ignores/) dans un fichier nommé  `.eleventyignore` (en plus du `.gitignore`).
--   Par défaut, Eleventy utilise [markdown-it](https://github.com/markdown-it/markdown-it) pour parcourir le Markdown. Si vous utilisez des fonctionnalités avancées (comme les abréviations, les listes de définition et les notes de bas de page), vous devrez [déclarer votre propre instance de cette bibliothèque Markdown (ou d'une autre) à Eleventy](https://www.11ty.io/docs/languages/markdown/)et la configurer avec les options et les plugins de votre choix.
+-   Alors que Jekyll vous permet de lister les fichiers et dossiers à exclure de la génération avec le paramètre `exclude`, [Eleventy recherche ses mêmes valeurs](https://www.11ty.dev/docs/ignores/) dans un fichier nommé  `.eleventyignore` (en plus du `.gitignore`).
+-   Par défaut, Eleventy utilise [markdown-it](https://github.com/markdown-it/markdown-it) pour parcourir le Markdown. Si vous utilisez des fonctionnalités avancées (comme les abréviations, les listes de définition et les notes de bas de page), vous devrez [déclarer votre propre instance de cette bibliothèque Markdown (ou d'une autre) à Eleventy](https://www.11ty.dev/docs/languages/markdown/)et la configurer avec les options et les plugins de votre choix.
 
 ## Les gabarits de mise en forme
 
 Eleventy manque encore de flexibilité quant à la localisation des `layouts`, qui doivent pour le moment se trouver dans le répertoire `_includes` ([Surveiller la résolution du problème sur GitHub](https://github.com/11ty/eleventy/issues/137)).
 
-Nous allons donc devoir déplacer nos fichiers du répertoire `_layouts` vers `_includes\layouts`, puis mettre à jour les références pour y incorporer le sous-dossier `layouts`. Nous pourrions mettre à jour la propriété `layout:` dans le front matter de chacun de nos fichiers de contenu, mais nous allons opter pour la [création d'alias](https://www.11ty.io/docs/layouts/#layout-aliasing) dans la configuration d'Eleventy :
+Nous allons donc devoir déplacer nos fichiers du répertoire `_layouts` vers `_includes\layouts`, puis mettre à jour les références pour y incorporer le sous-dossier `layouts`. Nous pourrions mettre à jour la propriété `layout:` dans le front matter de chacun de nos fichiers de contenu, mais nous allons opter pour la [création d'alias](https://www.11ty.dev/docs/layouts/#layout-aliasing) dans la configuration d'Eleventy :
 
 ```js
 module.exports = function(eleventyConfig) {
@@ -142,7 +142,7 @@ module.exports = function(eleventyConfig) {
 
 ### Déterminer le langage à utiliser pour les gabarits
 
-Par défaut Eleventy va transformer les fichiers Markdown (`.md`) avec Liquid, mais nous avons aussi besoin de dire à Eleventy comment procéder au traitement des autres fichiers qui utilisent des gabarits Liquid. Il existe pour cela [plusieurs manières de faire](https://www.11ty.io/docs/languages/#overriding-the-template-language), la plus simple étant de modifier les extensions des fichiers. Ici, quelques fichiers se trouvent dans notre dossier `api` que nous voulons traiter avec Liquid et exporter au format JSON. Pour cela nous ajoutons le suffixe `.liquid` à notre fichier (en conséquence `basic-syntax.json` devient `basic-syntax.json.liquid`), Eleventy saura alors quoi faire.
+Par défaut Eleventy va transformer les fichiers Markdown (`.md`) avec Liquid, mais nous avons aussi besoin de dire à Eleventy comment procéder au traitement des autres fichiers qui utilisent des gabarits Liquid. Il existe pour cela [plusieurs manières de faire](https://www.11ty.dev/docs/languages/#overriding-the-template-language), la plus simple étant de modifier les extensions des fichiers. Ici, quelques fichiers se trouvent dans notre dossier `api` que nous voulons traiter avec Liquid et exporter au format JSON. Pour cela nous ajoutons le suffixe `.liquid` à notre fichier (en conséquence `basic-syntax.json` devient `basic-syntax.json.liquid`), Eleventy saura alors quoi faire.
 
 ## Les variables
 
@@ -163,7 +163,7 @@ author:
 og_locale: "en_US"
 ```
 
-Le fichier de configuration d'Eleventy utilise JavaScript et n'est pas fait pour stocker de telles valeurs. Toutefois comme avec Jekyll, nous pouvons utiliser [des fichiers de données pour stocker des variables globales](https://www.11ty.io/docs/data-global/). Si nous ajoutons nos données relatives au site dans un fichier JSON situé dans le dossier `_data` et que nous le nommons `site.json`, nous pouvons continuer à utiliser l'espace de nom `site.*` et laisser nos variables telles quelles.
+Le fichier de configuration d'Eleventy utilise JavaScript et n'est pas fait pour stocker de telles valeurs. Toutefois comme avec Jekyll, nous pouvons utiliser [des fichiers de données pour stocker des variables globales](https://www.11ty.dev/docs/data-global/). Si nous ajoutons nos données relatives au site dans un fichier JSON situé dans le dossier `_data` et que nous le nommons `site.json`, nous pouvons continuer à utiliser l'espace de nom `site.*` et laisser nos variables telles quelles.
 
 ```json
 {
@@ -212,7 +212,7 @@ Espérons que ces différences entre les pages et les variables d'item disparais
 
 ### Les variables de pagination
 
-Alors qu'avec Jekyll, la pagination est limitée à lister des articles sur une page, Eleventy vous permet de [paginer n'importe quelles données ou documents de collections](https://www.11ty.io/docs/pagination/). Vu cette disparité, les changements sont plus importants, mais ce tableau liste la correspondance des variables équivalentes :
+Alors qu'avec Jekyll, la pagination est limitée à lister des articles sur une page, Eleventy vous permet de [paginer n'importe quelles données ou documents de collections](https://www.11ty.dev/docs/pagination/). Vu cette disparité, les changements sont plus importants, mais ce tableau liste la correspondance des variables équivalentes :
 
 | Jekyll                          | Eleventy                      |
 | :------------------------------ | :---------------------------- |
@@ -225,7 +225,7 @@ Alors qu'avec Jekyll, la pagination est limitée à lister des articles sur une 
 ## Les filtres
 
 Jekyll propose [quelques filtres supplémentaires](https://jekyllrb.com/docs/liquid/filters/), en plus de ceux fournis par défaut par Liquid.
-Il y en a un certain nombre — cet article ne peut pas tous les couvrir — mais vous pouvez les répliquer avec [l'option de configuration](https://www.11ty.io/docs/filters/) `addFilter` d'Eleventy. Convertissons les deux filtres utilisés par notre Guide Markdown : `jsonify` et `where`.
+Il y en a un certain nombre — cet article ne peut pas tous les couvrir — mais vous pouvez les répliquer avec [l'option de configuration](https://www.11ty.dev/docs/filters/) `addFilter` d'Eleventy. Convertissons les deux filtres utilisés par notre Guide Markdown : `jsonify` et `where`.
 
 Le filtre `jsonify` sert à exporter un objet ou une chaîne de caractères dans un format JSON valide. Comme JavaScript propose [une méthode JSON native](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) pour cela, nous pouvons l'utiliser dans notre filtre. La méthode `addFilter` prend deux paramètres en entrée : en premier le nom du filtre, en deuxième la fonction dans laquelle nous voulons passer le contenu pour le transformer :
 
@@ -295,7 +295,7 @@ Vous aurez peut-être remarqué dans l'exemple ci-dessus que LiquidJS s'attend �
 
 En outre, Eleventy ne supporte pas le tag `include_relative`, nous ne pouvons donc pas inclure des fichiers relativement à l'emplacement du fichier courant. Toutefois, LiquidJS nous laisse définir plusieurs chemins dans lesquels rechercher les fichiers à inclure via l'option `root`.
 
-Heureusement pour nous, Eleventy nous laisse [passer des options à LiquidJS](https://www.11ty.io/docs/languages/liquid/) :
+Heureusement pour nous, Eleventy nous laisse [passer des options à LiquidJS](https://www.11ty.dev/docs/languages/liquid/) :
 
 ```js
 eleventyConfig.setLiquidOptions({
@@ -309,7 +309,7 @@ eleventyConfig.setLiquidOptions({
 
 ## Les collections
 
-[Dans Jekyll les collections](https://jekyllrb.com/docs/collections/) permettent aux auteurs de créer les collections de documents de leur choix, en plus des pages et des articles. Eleventy propose [une fonctionnalité similaire](https://www.11ty.io/docs/collections/), mais qui permet de faire beaucoup plus de choses.
+[Dans Jekyll les collections](https://jekyllrb.com/docs/collections/) permettent aux auteurs de créer les collections de documents de leur choix, en plus des pages et des articles. Eleventy propose [une fonctionnalité similaire](https://www.11ty.dev/docs/collections/), mais qui permet de faire beaucoup plus de choses.
 
 ### Les collections dans Jekyll
 
@@ -373,13 +373,13 @@ eleventyConfig.addCollection('example', collection => {
 });
 ```
 
-Avec un peu de chance, cet exemple vous a fait comprendre [ce qu'il est possible de faire avec cette approche](https://www.11ty.io/docs/collections/#collection-api-methods).
+Avec un peu de chance, cet exemple vous a fait comprendre [ce qu'il est possible de faire avec cette approche](https://www.11ty.dev/docs/collections/#collection-api-methods).
 
 ## Utiliser les données de répertoire pour définir les paramètres par défaut
 
 Par défaut, Eleventy ne va pas toucher à la structure de vos fichiers de contenus quand il va générer le site. Dans le cas présent, cela signifie que
 `/_basic-syntax/lists.md` sera généré sous `/_basic-syntax/lists/index.html`.
-Comme dans Jekyll, nous pouvons [définir où les fichiers seront générés](https://www.11ty.io/docs/permalinks/) à l'aide de la propriété `permalink`. Par exemple si nous voulons que cette page devienne accessible sous `/basic-syntax/lists.html` nous pouvons ajouter :
+Comme dans Jekyll, nous pouvons [définir où les fichiers seront générés](https://www.11ty.dev/docs/permalinks/) à l'aide de la propriété `permalink`. Par exemple si nous voulons que cette page devienne accessible sous `/basic-syntax/lists.html` nous pouvons ajouter :
 
 ```yaml
 ---
@@ -390,7 +390,7 @@ permalink: /basic-syntax/lists.html
 ---
 ```
 
-Là encore, ce n'est pas quelque chose que vous voulez gérer au niveau de chaque fichier, et une fois de plus Eleventy propose des fonctionnalités qui peuvent vous aider : [les données de dossier](https://www.11ty.io/docs/data-template-dir/) et les [variables pour les permaliens](https://www.11ty.io/docs/permalinks/#use-data-variables-in-permalink).
+Là encore, ce n'est pas quelque chose que vous voulez gérer au niveau de chaque fichier, et une fois de plus Eleventy propose des fonctionnalités qui peuvent vous aider : [les données de dossier](https://www.11ty.dev/docs/data-template-dir/) et les [variables pour les permaliens](https://www.11ty.dev/docs/permalinks/#use-data-variables-in-permalink).
 
 Par exemple, pour parvenir au même résultat que précédemment pour tous les contenus stockés dans le dossier `_basic-syntax`, nous pouvons y créer un fichier JSON du même nom, `_basic-syntax/_basic-syntax.json` et y définir nos valeurs par défaut. Pour les permaliens, nous avons le droit d'utiliser une variable Liquid pour construire le chemin désiré :
 
@@ -423,7 +423,7 @@ Ajoutons également un fichier de données (`_content.json`) dans ce dossier. Co
 
 ## Les fichiers statiques
 
-Eleventy ne va transformer que les fichiers dont il connaît les gabarits. Maintenant nous pouvons aussi avoir des fichiers statiques qui n'ont pas besoin d'être convertis, mais que nous devons copier dans le dossier de destination. Pour cela, nous pouvons utiliser [la copie de fichier "passe-plat"](https://www.11ty.io/docs/copy/). Dans notre fichier de configuration, nous indiquons à Eleventy quels dossiers/fichiers copier via l'option `addPassthroughCopy`.
+Eleventy ne va transformer que les fichiers dont il connaît les gabarits. Maintenant nous pouvons aussi avoir des fichiers statiques qui n'ont pas besoin d'être convertis, mais que nous devons copier dans le dossier de destination. Pour cela, nous pouvons utiliser [la copie de fichier "passe-plat"](https://www.11ty.dev/docs/copy/). Dans notre fichier de configuration, nous indiquons à Eleventy quels dossiers/fichiers copier via l'option `addPassthroughCopy`.
 Puis nous activons cette fonctionnalité dans ce qui est retourné, en mettant `passthroughFileCopy` à `true` :
 
 ```js
@@ -464,6 +464,6 @@ Essayer de nouveaux outils et des technologies émergentes est toujours gratifia
 
 J'ai passé mon site sous Eleventy car la lenteur et la rigidité de Jekyll m'empêchaient de faire ce que je voulais. Mais j'ai également investi du temps dans cette migration. Après avoir lu ce guide, et en fonction des spécificités de votre projet, vous déciderez peut-être de garder Jekyll, surtout si c'est pour parvenir au même résultat. Et ce n'est pas un problème !
 
-Mais [ceux-là vont jusqu'à 11](https://www.11ty.io/docs/#sites-using-eleventy).
+Mais [ceux-là vont jusqu'à 11](https://www.11ty.dev/docs/#sites-using-eleventy).
 
 [^1]: L'information présentée ici est valable pour les versions 0.6.0 d'Eleventy et 3.8.5 de Jekyll.

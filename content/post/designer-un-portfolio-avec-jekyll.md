@@ -1,14 +1,13 @@
 ---
 title: Process de design d’un portfolio
-description: Les différentes étapes pour concevoir son portfolio avec Jekyll et GitHub
-  Pages par Kat Fukui, webdesigner chez Github.
+description: Les différentes étapes pour concevoir son portfolio avec Jekyll et GitHub Pages par Kat Fukui, webdesigner chez Github.
 date: 2016-11-10
+images:
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_800,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Process%20de%20design%20d%E2%80%99un%20portfolio/jamstatic/twitter-card.png
 source:
   author: Kat Fukui
   title: The Design Portfolio Workflow
   url: https://medium.com/@katfukui/the-design-portfolio-workflow-a94030d0b39e#.uut2a0ulw
-images:
-  - https://cdn-images-1.medium.com/max/800/1*5SbG467XN7stvnPDPyUR1g.png
 categories:
   - jekyll
 ---

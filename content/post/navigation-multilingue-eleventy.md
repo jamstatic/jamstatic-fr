@@ -2,8 +2,8 @@
 title: "Navigation multilingue avec Eleventy"
 description: "Une approche pour gérer la navigation sur un site Jamstack multilingue généré avec Eleventy."
 date: 2019-09-28
-images: 
-  - https://www.webstoemp.com/img/blogposts/languages-choices.jpg
+images:
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Navigation%20multilingue%20avec%20Eleventy/jamstatic/twitter-card.png
 categories:
   - eleventy
   - i18n
@@ -110,7 +110,7 @@ Voici le détail de ce que nous allons faire avec ce petit morceau de code:
 
 1. Boucler sur toutes les langues déclarées de notre site
 2. Définir la page d'accueil comme valeur par défaut de `translatedUrl`, valeur qui sera remplacée lorsqu'une traduction de contenu est trouvée.
-3. Dans cette boucle, parcourir tous les contenues du site. Eleventy nous fourni une méthode très pratique avec [`collections.all`](https://www.11ty.io/docs/collections/#the-special-all-collection). 
+3. Dans cette boucle, parcourir tous les contenues du site. Eleventy nous fourni une méthode très pratique avec [`collections.all`](https://www.11ty.dev/docs/collections/#the-special-all-collection). 
 4. Pour chaque contenu parcouru, vérifier si la clé `translationKey` correspond et si sa `locale` correspond au `code` de langue en cours. Si une correspondance est trouvée, alors définir `translatedUrl` avec l'URL de ce contenu.
 5. Utiliser les valeurs de `translatedUrl` pour créer les liens de notre sélecteur de langue.
 

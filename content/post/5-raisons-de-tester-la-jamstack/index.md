@@ -4,7 +4,8 @@ description:
   Référencement, performance, sécurité, automatisation, communauté grandissante,
   les raisons de passer au statique ne manquent pas.
 date: 2017-03-16
-commments: true
+images:
+- https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1280,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_72_ultrabold_line_spacing_-30:5%20raisons%20de%20tester%20la%20Jamstack/jamstatic/twitter-card.png
 source:
   author: Tom Bennet
   title: "Go static: 5 reasons to try Jamstack on your next project"
@@ -13,11 +14,6 @@ source:
 categories:
   - jamstack
   - headless
-author: ""
-lastmod:
-aliases: []
-canonical_url: ""
-keywords: []
 ---
 
 {{< intro >}}
@@ -158,11 +154,11 @@ tags, les catégories, les commentaires, les pages des auteurs, etc. peut avoir
 une incidence sur le fait qu'une page en cache est à jour ou pas. Avec un site
 Web statique, toutes les URLs retournent le _même_ fichier HTML à tous les
 utilisateurs et les mises à jour sont propagées dans le monde entier presque
-instantanèment. Tout contenu "dynamique" est alors géré côté client grâce à
+instantanément. Tout contenu "dynamique" est alors géré côté client grâce à
 l’utilisation de JavaScript et d’APIs comme [Disqus](https://disqus.com/) pour
 les commentaires ou [FormKeep](https://formkeep.com/) pour les formulaires.
 
-## 3. Securité
+## 3. Sécurité
 
 On va pouvoir passer rapidement sur ce point, car les sites Web statiques sont
 de véritables **forteresses**.
@@ -209,7 +205,7 @@ comme celui de WordPress mais qui ne connaissent pas Markdown et GitHub ?
 
 Le problème a été identifié il y a maintenant plusieurs années et beaucoup de
 solutions réjouissantes commencent à apparaître. Certaines sont
-extraodinairement simples. Si les éditeurs de vos contenus sont déjà familiers
+extraordinairement simples. Si les éditeurs de vos contenus sont déjà familiers
 avec
 [les bases de Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) -
 C’est-à-dire `# titre`, `**gras**`, `*italique*` — alors il n'y a aucune raison
@@ -246,7 +242,7 @@ Prenez le e-commerce par exemple. Pour les petits vendeurs — ceux qui se
 reposeraient typiquement sur WordPress et WooCommerce — un site statique est
 désormais une option parfaitement valable. [Snipcart](https://snipcart.com/) est
 un système de panier et de paiement basé sur JavaScript qui permet aux
-développeurs d’ajouter des fonctionnalités de e-commerce sur n'imporque quel
+développeurs d’ajouter des fonctionnalités de e-commerce sur n'importe quel
 site Web. L'inventaire des produits et des ventes est géré via le tableau de
 bord de Snipcart et son API permet l’intégration de systèmes de gestion
 d’inventaires, de livreurs, etc. Il existe d’autres solutions comme

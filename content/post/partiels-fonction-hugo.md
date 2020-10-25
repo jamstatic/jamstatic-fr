@@ -6,7 +6,7 @@ description: "Maintenant que les partiels peuvent retourner tout type de donnée
 categories:
   - hugo
 images:
-  - https://regisphilibert.com/blog/2019/12/hugo-partial-series-part-2-functions-with-returning-partials//images/featured.png
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Des%20fonctions%20dans%20nos%20partiels%20Hugo%20!/jamstatic/twitter-card.png
 source:
   author: "Régis Philibert"
   title: "The Full Partial Series Part 2: Returning partials!"

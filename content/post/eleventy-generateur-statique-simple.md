@@ -1,13 +1,13 @@
 ---
 title: "Un site web simple avec le plus simple des générateurs de site statique"
-date: 2018-01-24T20:40:44+01:00
 description: "Présentation d’Eleventy, le générateur de site statique le plus simple et le plus intuitif."
+date: 2018-01-24T20:40:44+01:00
+images:
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Un%2520site%2520web%2520simple%2520avec%2520le%2520plus%2520simple%2520des%2520g%25C3%25A9n%25C3%25A9rateurs%2520de%2520site%2520statique/jamstatic/twitter-card.png
 categories:
   - eleventy
-images:
-  - https://cdn-images-1.medium.com/max/800/1*u1v8ojapeWAgL2xjaJZ5rA.png
 source:
-  author: "Zach Leat"
+  author: "Zach Leatherman"
   title: "Making a Simple Web Site with the Simplest Static Site Generator, Level 1"
   url: "https://medium.com/@11ty/making-a-simple-web-site-with-the-simplest-static-site-generator-level-1-7fc6febca1"
 ---
@@ -33,7 +33,7 @@ Zach nous propose un premier aperçu de son fonctionnement.
 ---
 
 {{< figure
-src="https://cdn-images-1.medium.com/max/800/1*u1v8ojapeWAgL2xjaJZ5rA.png"
+src="https://res.cloudinary.com/jamstatic/image/upload/dpr_auto,f_auto,q_auto/v1603622564/jamstatic/1_u1v8ojapeWAgL2xjaJZ5rA.png"
 caption="" attr="Crédit : https://unsplash.com/@jogi"
 attrlink="https://unsplash.com/photos/uCsJqqtkDps" >}}
 
@@ -73,13 +73,13 @@ mkdir giffleball
 Ajoutons quelques images à notre site. Voici une sélection d’images d’oiseaux
 tirée de l’honorable site [bukk.it](https://bukk.it).
 
-{{< figure src="https://bukk.it/%e2%80%a6.jpg" caption=""
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/dpr_auto,f_auto,q_auto/jamstatic/e2_80_a6.jpg" caption=""
 attr="https://bukk.it/parrot.gif" attrlink="https://bukk.it/%e2%80%a6.jpg" >}}
 
-{{< figure src="https://bukk.it/%3f%3f%3f.jpg" caption=""
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/dpr_auto,f_auto,q_auto/jamstatic/3f_3f_3f.jpg" caption=""
 attr="https://bukk.it/parrot.gif" attrlink="https://bukk.it/%3f%3f%3f.jpg" >}}
 
-{{< figure src="https://bukk.it/parrot.gif" caption=""
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/dpr_auto,f_auto,q_auto/jamstatic/parrot.gif" caption=""
 attr="https://bukk.it/parrot.gif" attrlink="https://bukk.it/parrot.gif" >}}
 
 Sauvegardez ces images dans un dossier `img` à l’intérieur de notre répertoire

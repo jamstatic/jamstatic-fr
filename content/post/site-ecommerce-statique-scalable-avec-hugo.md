@@ -5,7 +5,7 @@ date: 2017-12-13T13:10:36+01:00
 categories:
   - hugo
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346937/cart.jpg
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Un%20site%20e-commerce%20statique%20et%20extensible%20avec%20Hugo/jamstatic/twitter-card.png
 source:
   author: "Chris Marshall"
   title: "Scalable Static Ecommerce with Hugo"
@@ -18,7 +18,7 @@ aliases:
 > Les générateurs de site statique sont-ils une solution viable pour les sites
 > de vente en ligne qui encaissent de fortes charges de trafic ?
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346937/cart.jpg"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346937/jamstatic/cart.jpg"
 alt="" >}}
 
 Les générateurs de site statique (GSS) attirent l’attention depuis quelques
@@ -363,7 +363,7 @@ pour bâtir une architecture ecommerce statique extensible. Une vue d’ensemble
 simplifiée de notre système pourrait ressembler à ça :
 
 {{< figure
-src="https://cdn-images-1.medium.com/max/800/1*n0-iGP2oqbfhiHZOstrLgg.png" >}}
+src="https://res.cloudinary.com/jamstatic/image/upload/dpr_auto,f_auto,q_auto/v1603638639/jamstatic/exemple-architecture-ecommerce.png" >}}
 
 - **ERP** : chargé de l’enregistrement des commandes, de la gestion du stock et
   des prix. Ces données sont transmises à la plate-forme de Ecommerce et
@@ -393,7 +393,7 @@ stock passe à 0 ou de 0 à un chiffre positif, alors il faut déclencher un
 changement. Et seuls les fichiers impactés doivent être déployés.
 
 {{< figure
-src="https://cdn-images-1.medium.com/max/800/1*7M-yRW33AfLA-ZUGMLVjRg.png" >}}
+src="https://res.cloudinary.com/jamstatic/image/upload/dpr_auto,f_auto,q_auto/v1603639120/jamstatic/deploiement-ecommerce.png" >}}
 
 Les changements relatifs au prix ou à la description du produit doivent eux
 toujours déclencher une génération, mais cela se produirait déjà moins souvent.

@@ -5,7 +5,7 @@ description: Les deux manières de créer des collections de documents avec le g
 categories:
   - eleventy
 images:
-  - https://cdn-images-1.medium.com/max/800/1*u1v8ojapeWAgL2xjaJZ5rA.png
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Les%20collections%20dans%20Eleventy/jamstatic/twitter-card.png
 source:
   author: Philip Borenstein
   title: Working with Collections
@@ -97,9 +97,9 @@ L'objet `collections` lui, ressemble à ça :
 ```
 
 Chaque propriété est un tableau d'[objets d'éléments de
-collection](https://www.11ty.io/docs/collections/#collection-item-data-structure)
+collection](https://www.11ty.dev/docs/collections/#collection-item-data-structure)
 (également appelés [objets
-modèle](https://www.11ty.io/docs/collections/#return-values) dans la
+modèle](https://www.11ty.dev/docs/collections/#return-values) dans la
 documentation).
 
 La collection spéciale `all` représente un tableau de tous les objets page
@@ -112,9 +112,9 @@ générés par Eleventy.
 | :---------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `inputPath`       | Chemin vers ce fichier incluant le répertoire source. <hr><code class="phony">./src/articles/finding-oz.md</code>                                                                                                                        |
 | `outputPath`      | Chemin du fichier généré. <hr><code class="phony">articles/finding-oz/index.html</code>                                                                                                                                                  |
-| `fileSlug`        | Version courte en fonction du nom et de l'emplacement du fichier. [En fonction des règles](https://www.11ty.io/docs/data/#fileslug). <hr><code class="phony">finding-oz</code>                                                           |
+| `fileSlug`        | Version courte en fonction du nom et de l'emplacement du fichier. [En fonction des règles](https://www.11ty.dev/docs/data/#fileslug). <hr><code class="phony">finding-oz</code>                                                           |
 | `data`            | Données du front matter de la page rendue. Les variables globales disponibles pour chaque page.                                                                                                                                          |
-| `date`            | La date du fichier au format UTC. [Voir les règles](https://www.11ty.io/docs/dates/). <hr><code class="phony">2019-01-27T13:52:12.000Z</code>                                                                                            |
+| `date`            | La date du fichier au format UTC. [Voir les règles](https://www.11ty.dev/docs/dates/). <hr><code class="phony">2019-01-27T13:52:12.000Z</code>                                                                                            |
 | `url`             | Chemin vers le contenu. N'inclus pas le protocole et le nom d'hôte. <hr><code class="phony">/articles/finding-oz/</code>                                                                                                                 |
 | `templateContent` | Le contenu généré de la page, n'inclut pas les balises enveloppantes de mise en page.<hr><code class="phony">&lt;p&gt;Comme la plupart des livres ... à propos du Magicien d'Oz&lt;/li&gt;\n&lt;/ul&gt;\n</code>                         |
 | `template`        | Toutes sortes de données analysées par le modèle. Des choses comme la configuration d'Eleventy, la configuration du moteur de rendu pour le markdown, et beaucoup de choses sur lesquelles nous ne devrions probablement pas nous baser. |
@@ -292,5 +292,5 @@ l'endroit où Eleventy construit les collections.
 </details>
 
 [sortable-src]: https://github.com/11ty/eleventy/blob/master/src/Util/Sortable.js
-[collection-methods]: https://www.11ty.io/docs/collections/#collection-api-methods
+[collection-methods]: https://www.11ty.dev/docs/collections/#collection-api-methods
 [template-collection]: https://github.com/11ty/eleventy/blob/master/src/TemplateCollection.js

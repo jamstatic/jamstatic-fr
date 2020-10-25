@@ -4,7 +4,7 @@ description: Le programme de la deuxième conférence consacrée à Jekyll, qui 
   le samedi 7 mai 2016.
 date: 2016-04-14
 images:
-  - http://d1qmdf3vop2l07.cloudfront.net/important-mantis.cloudvent.net/compressed/1bdce97b1a6815888e0dadf72f1b19c5.png
+ - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_800,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:JekyllConf%202016/jamstatic/twitter-card.png
 categories:
   - jekyll
 ---

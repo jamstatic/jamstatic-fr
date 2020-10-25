@@ -1,11 +1,11 @@
 ---
 title: "La gestion des assets avec Hugo"
-date: 2018-07-21T20:54:26+02:00
 description: "Depuis la version 0.43 Hugo offre une gestion des assets: Sass, minification, support de postCSS, concaténation des fichiers JS, et plus encore."
+date: 2018-07-21T20:54:26+02:00
 categories:
   - hugo
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1532283632/pipes.jpg
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:La%20gestion%20des%20assets%20avec%20Hugo/jamstatic/twitter-card.png
 ---
 
 {{< intro >}}
@@ -20,7 +20,7 @@ Hugo est surtout apprécié pour sa performance et son modèle de structuration 
 
 ## Traitement des assets
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1532283632/pipes.jpg" caption="" attr="Photo de Neil Cooper sur Unsplash" attrlink="https://unsplash.com/photos/KX2fCzuQoaQ" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/jamstatic/pipes.jpg" caption="" attr="Photo de Neil Cooper sur Unsplash" attrlink="https://unsplash.com/photos/KX2fCzuQoaQ" >}}
 
 Le principe est simple : tout ce qui se trouve dans le dossier `/assets` (que ce soit dans un thème ou pas) pourra être ensuite traité par des fonctions spécifiques aux assets. Pour les plus exigeants, ce chemin par défaut est paramétrable via la directive `assetDir` dans votre fichier de configuration.
 
