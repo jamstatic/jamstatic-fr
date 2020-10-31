@@ -13,8 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#2f91a7",
-    "background_color": "#2f91a7",
-    "start_url": "https://jamstatic.fr",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
     "display": "standalone"
 }
