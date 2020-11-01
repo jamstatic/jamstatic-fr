@@ -252,7 +252,7 @@ body {
 /* Posts */
 
 .post-header {
-  padding: $spacing-unit/$ms1;
+  padding: $spacing-unit/$ms4;
   border-radius: 1rem;
   margin: 0 0 $spacing-unit;
   background: rgba($brand-light, .1);
@@ -264,7 +264,7 @@ body {
 }
 
 .post-title {
-  line-height: $base-line / $ms2;
+  //line-height: $base-line / $ms2;
   color: $brand-color;
 }
 
