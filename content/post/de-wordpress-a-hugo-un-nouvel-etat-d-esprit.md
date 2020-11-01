@@ -471,6 +471,7 @@ Avec WordPress il vous faudrait :
 - Thèmes
   - Un thème santé
   - Un thème dentaire enfant du thème santé
+
 - Plugins
   - Un plugin thème santé saisonnier
   - Un plugin Mega Menu

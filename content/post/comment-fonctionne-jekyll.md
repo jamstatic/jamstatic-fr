@@ -1,10 +1,11 @@
 ---
 title: Comment marche Jekyll ?
-description: À partir du code source, nous pouvons mieux comprendre le process de
+description:
+  À partir du code source, nous pouvons mieux comprendre le process de
   génération au cœur de Jekyll.
 date: 2017-01-17
 images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Comment%2520marche%2520Jekyll%2520%253F/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Comment%2520marche%2520Jekyll%2520%253F/jamstatic/twitter-card.png
 source:
   author: Jack Phelan
   title: How does Jekyll work?
@@ -28,7 +29,7 @@ sera utile si vous songez à développer un plugin.
 
 {{< /intro >}}
 
-***
+---
 
 <style type="text/css">
 
@@ -38,8 +39,8 @@ sera utile si vous songez à développer un plugin.
 }
 .tab {
     display: inline-block;
-    padding: 10px;
-    border: 1px solid #e8e8e8;
+    padding: 8px 18px;
+    border: 1px solid #4A21CC;
     margin: 0;
     margin-left: -1px;
     position: relative;
@@ -47,35 +48,41 @@ sera utile si vous songez à développer un plugin.
     bottom: -1px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+    cursor: pointer;
 }
 .tab.tab-selected {
-    background-color: #eef;
-    border-bottom: 1px solid #eef;
+    background-color: #4A21CC;
+    color: white;
+    border-bottom: 1px solid #4A21CC;
 }
 
 table {
   font-size: 0.775em;
+  margin: 2em calc(50% - 50vw);
 }
 
-table, tr, td, th {
-  border: 1px solid white;
+table tr,
+table td,
+table th {
+  border: 1px solid rgba(35,27,48,.2);
   border-collapse: collapse;
   padding: .5em;
 }
 
 th, tr td:first-child {
   font-weight: bold;
-  background-color: #e8e8e8;
+  background-color: rgba(74,33,294,.75);
+  color: white;
 }
 
 .copied {
-  background-color: lightskyblue;
+  background-color: rgba(125,172,255,.2);
 }
 .transformed {
-  background-color: yellow;
+  background-color: rgba(204,204,32,.2);
 }
 .post-transformed {
-  background-color: mediumseagreen;
+  background-color: rgba(64,204,32,.2);
 }
 </style>
 
@@ -155,8 +162,8 @@ Donc si nous transformons l’article présent dans le thème par défaut de Jek
 ```markdown
 ---
 layout: post
-title:  "Bienvenue dans Jekyll !"
-date:   2016-08-17 13:50:36 +0100
+title: "Bienvenue dans Jekyll !"
+date: 2016-08-17 13:50:36 +0100
 categories: jekyll update
 ---
 
@@ -220,8 +227,10 @@ Talk][jekyll-talk].
 [jekyll-gh]: https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
 
-    </code></pre>
+</code></pre>
+
   </div>
+
   <div class="tab-content">
     <pre><code class="language-markdown">
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
@@ -249,7 +258,8 @@ Talk][jekyll-talk].
 [jekyll-gh]: https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
 
-  </code></pre>
+</code></pre>
+
   </div>
   <div class="tab-content">
   <pre><code class="language-markdown">
@@ -877,7 +887,5 @@ Voilà, maintenant vous en savez un peu plus sur les mécanismes internes de
 Jekyll !
 
 [^1]: Lorsque Jekyll omet un fichier, il se peut qu'il lise le fichier comme une donnée à laquelle vous pouvez accéder à l’aide de variables Liquid dans d’autres fichiers de modèles Liquid.
-
 [^2]: Il se peut très bien dans ce cas que vous ayez omis les entêtes YAML Front Matter.
-
 [^3]: Pour savoir où se trouve l’exécutable de Jekyll, lancez la commande `bundle show jekyll`.

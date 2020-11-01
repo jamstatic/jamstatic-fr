@@ -41,16 +41,19 @@ Asseyez-vous, mettez-vous à l'aise et appréciez ✌️
   - [Bonnes pratiques](#bonnes-pratiques)
   - [Chaîne de publication](#chaîne-de-publication)
   - [Historique](#historique)
+
 - [Bien démarrer](#bien-démarrer)
   - [Développement](#développement)
   - [Déploiement](#déploiement)
   - [Parties dynamiques](#parties-dynamiques)
   - [CMS](#cms)
-  - [Ressources](#ressources)
-    - [Services](#services)
-    - [Articles](#articles)
-    - [Vidéos](#vidéos)
-    - [Podcast](#podcast)
+
+- [Ressources](#ressources)
+  - [Services](#services)
+  - [Articles](#articles)
+  - [Vidéos](#vidéos)
+  - [Podcast](#podcast)
+
 - [À propos](#à-propos)
 
 ---
@@ -60,7 +63,6 @@ Asseyez-vous, mettez-vous à l'aise et appréciez ✌️
 ### Signification
 
 {{< figure src="/2020/10/05/la-jamstack-n-est-rapide-que-si-vous-la-rendez-rapide/jamstack-horizontal.svg" caption="JAM c'est pour JavaScript, APIs & Markup." >}}
-
 
 **JavaScript** \
 Les fonctionnalités dynamiques sont gérées par JavaScript. Vous êtes libres d'utiliser la bibliothèque ou le framework que vous voulez.

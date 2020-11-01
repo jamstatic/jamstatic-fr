@@ -45,13 +45,17 @@ régulièrement mis à jour qui ajoute un workflow de développement moderne à 
 **Sommaire**
 
 - [1. Configurer Hugo](#1-configurer-hugo)
+
 - [2. Configurer votre site](#2-configurer-votre-site)
   - [Mettre à jour un article](#mettre-à-jour-un-article)
   - [Créer un nouvel article](#créer-un-nouvel-article)
   - [Utiliser un thème](#utiliser-un-thème)
+
 - [3. Personnaliser votre site](#3-personnaliser-votre-site)
+
 - [4. Personnaliser votre thème](#4-personnaliser-votre-thème)
   - [CSS & Javascript personnalisé](#css--javascript-personnalisé)
+
 - [5. Prochaine étape](#5-prochaine-étape)
 
 ## 1. Configurer Hugo

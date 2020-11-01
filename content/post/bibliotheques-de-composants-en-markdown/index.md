@@ -46,26 +46,16 @@ texte.
 Mon workflow habituel de travail avec un traitement de texte ressemble un peu à ça :
 
 1. Sélectionner du texte que je veux copier dans une autre partie du document,
-
-1. S'apercevoir que l’application en a sélectionné un peu plus que ce que je lui avais demandé,
-
-1. Essayer de nouveau, laisser tomber et me résoudre à ajouter la partie manquante (ou supprimer la partie en trop) de la sélection visée plus tard,
-
-1. Copier-coller la sélection,
-
-1. S'apercevoir que le formatage du texte collé est quelque peu différent de l’orignal,
-
-1. Tenter de trouver le style prédéfini qui correspond au texte d’origine,
-
-1. Essayer d’appliquer le style,
-
-1. Laisser tomber et appliquer la police de caractère et la taille à la main,
-
-1. S'apercevoir qu'il y a un espace trop important au-dessus du texte collé, et appuyer sur “Backspace” pour le supprimer,
-
-1. S'apercevoir que la taille du texte a brusquement changé, car il a été associé au titre qui le précède et a hérité de ses propriétés,
-
-1. Réfléchir au sens de la vie.
+2. S'apercevoir que l’application en a sélectionné un peu plus que ce que je lui avais demandé,
+3. Essayer de nouveau, laisser tomber et me résoudre à ajouter la partie manquante (ou supprimer la partie en trop) de la sélection visée plus tard,
+4. Copier-coller la sélection,
+5. S'apercevoir que le formatage du texte collé est quelque peu différent de l’orignal,
+6. Tenter de trouver le style prédéfini qui correspond au texte d’origine,
+7. Essayer d’appliquer le style,
+8. Laisser tomber et appliquer la police de caractère et la taille à la main,
+9. S'apercevoir qu'il y a un espace trop important au-dessus du texte collé, et appuyer sur “Backspace” pour le supprimer,
+10. S'apercevoir que la taille du texte a brusquement changé, car il a été associé au titre qui le précède et a hérité de ses propriétés,
+11. Réfléchir au sens de la vie.
 
 Lorsque vous devez écrire de la documentation pour le web (comprenez
 [des bibliothèques de composants](https://www.smashingmagazine.com/taking-pattern-libraries-next-level/))

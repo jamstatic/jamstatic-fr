@@ -71,7 +71,7 @@ Avant cela, considérons d'abord qu'il existe en réalité deux types de génér
 - **Les générateurs de base** (qui ne sont pas basiques sous le capot) sont essentiellement une interface en ligne de commande (CLI) qui prend des données en entrée et produit du HTML, et peut souvent être étendue pour traiter divers ressources (ce que nous ne faisons pas ici).
 - **Les générateurs avancés** offrent quelque chose en plus de la sortie d'un site statique, comme le rendu côté serveur, des fonctions _serverless_ et l'intégration d'un framework. Ils ont tendance à être configurés pour être plus dynamiques par défaut.
 
-  J'en ai délibérément choisi trois de chaque type dans ce test. Les trois premiers à tomber dans le panier de base sont Eleventy, Hugo et Jekyll. Les trois autres sont basés sur un framework frontend et sont livrés avec des quantités d'outils variés. Gatsby et Next sont bâtis sur React, tandis que Nuxt est construit par dessus Vue.
+J'en ai délibérément choisi trois de chaque type dans ce test. Les trois premiers à tomber dans le panier de base sont Eleventy, Hugo et Jekyll. Les trois autres sont basés sur un framework frontend et sont livrés avec des quantités d'outils variés. Gatsby et Next sont bâtis sur React, tandis que Nuxt est construit par dessus Vue.
 
 | Générateurs Basiques | Générateurs Avancés |
 | :------------------- | :------------------ |

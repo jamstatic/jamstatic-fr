@@ -266,7 +266,6 @@ async getUserConfigCollectionsData() {
     this.configCollections || eleventyConfig.getCollections();
   for (let name in configCollections) {
     let ret = configCollections[name](this.collection);
-
     // work with arrays and strings returned from UserConfig.addCollection
     if (
       Array.isArray(ret) &&
@@ -278,7 +277,6 @@ async getUserConfigCollectionsData() {
     } else {
       collections[name] = ret;
     }
-
     debug(
       `Collection: collections.${name} size: ${collections[name].length}`
     );
