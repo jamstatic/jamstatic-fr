@@ -2,7 +2,10 @@
 .env
 .netlify
 .now
+
+#
 node_modules
+yarn.lock
 
 # Hugo
 public/
@@ -11,3 +14,5 @@ hugo_stats.json
 
 # VS Code
 .vscode/
+
+
