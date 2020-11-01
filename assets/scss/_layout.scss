@@ -20,7 +20,7 @@ body {
   background-color: $brand-color;
   border-top: $smallest solid rgba($light-contrast, 0.95);
   margin-bottom: $spacing-unit;
-  clip-path: polygon(0 0,100% 0,100% 80%,0% 100%);
+  //clip-path: polygon(0 0,100% 0,100% 80%,0% 100%);
 
   h1{
     margin: 0;
