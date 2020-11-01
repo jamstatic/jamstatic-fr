@@ -163,7 +163,7 @@ body {
   margin-left: 0;
 
   .post-item {
-    padding: $spacing-unit/$ms1;
+    padding: $spacing-unit/$ms4;
     border-radius: 1rem;
     margin-bottom: $base-line;
 
@@ -223,7 +223,7 @@ body {
 
 .post-link {
   display: block;
-  line-height: 1.1;
+  //line-height: 1.1;
   margin: 0 0 $base-line / $ms7;
   font-family: $title-font-family;
   font-weight: 700;
