@@ -29,7 +29,7 @@ body {
 
 .site-title {
   text-align: right;
-  padding: 0 0 $spacing-unit 0;
+  //padding: 0 0 $spacing-unit 0;
 
   svg {
     max-width: 320px;
@@ -95,7 +95,7 @@ body {
  * Page content
  */
 .page-content {
-  margin: $base-line*2 0;
+  //margin: $base-line*2 0;
 
   abbr[title] {
     text-decoration: none;
