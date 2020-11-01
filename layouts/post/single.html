@@ -27,13 +27,28 @@
           <span itemprop="name">
             {{- if .Params.author }}
               {{- if isset (index .Site.Data.authors .Params.author) "web" }}
-            <a class="post-author" rel="author" href="{{ (index .Site.Data.authors .Params.author).web }}">{{ (index .Site.Data.authors .Params.author).name }}</a>
+                <a
+                  class="post-author"
+                  rel="author"
+                  href="{{ (index .Site.Data.authors .Params.author).web }}"
+                  >{{ (index .Site.Data.authors .Params.author).name }}</a
+                >
+                {{ else }}
+                <a
+                  class="post-author"
+                  rel="author"
+                  href="https://github.com/{{ (index .Site.Data.authors .Params.author).github }}"
+                  >{{ (index .Site.Data.authors .Params.author).name }}</a
+                >
+              {{ end -}}
               {{ else }}
-            <a class="post-author" rel="author" href="https://github.com/{{ (index .Site.Data.authors .Params.author).github }}">{{ (index .Site.Data.authors .Params.author).name }}</a>
-              {{end -}}
-            {{ else }}
-            <a class="post-author" rel="author" href="{{ .Site.Data.authors.frank.web }}">{{ .Site.Data.authors.frank.name }}</a>
-            {{end -}}
+              <a
+                class="post-author"
+                rel="author"
+                href="{{ .Site.Data.authors.frank.web }}"
+                >{{ .Site.Data.authors.frank.name }}</a
+              >
+            {{ end -}}
           </span>
         </span>
       </p>
