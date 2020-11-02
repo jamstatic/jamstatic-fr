@@ -1,4 +1,17 @@
 <header class="site-header">
+  <nav>
+    <ul class="social-media-list">
+      <li>
+        {{- partialCached "icons/slack" . -}}
+      </li>
+      <li>
+        {{- partialCached "icons/twitter" . -}}
+      </li>
+      <li>
+        {{- partialCached "icons/github" . -}}
+      </li>
+    </ul>
+  </nav>
   <div class="wrapper">
     <div class="site-title">
       {{ if .IsHome }}

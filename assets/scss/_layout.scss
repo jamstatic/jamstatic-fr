@@ -15,21 +15,31 @@ body {
 }
 
 .site-header {
-  padding: $base-line 0;
+  padding: 0 0 $base-line;
   color: rgba(255, 255, 255, 0.9);
   background-color: $brand-color;
-  border-top: $smallest solid rgba($light-contrast, 0.95);
   margin-bottom: $spacing-unit;
-  //clip-path: polygon(0 0,100% 0,100% 80%,0% 100%);
 
-  h1{
+  h1 {
     margin: 0;
+  }
+
+  .social-media-list {
+    margin-top: 0;
+    padding: $spacing-unit/6;
+    text-align: right;
+    background-color: rgba($dark-contrast, 0.7);
+    border-bottom: 1px dotted rgba(white, 0.1);
+
+    .icon > svg {
+      width: 1em;
+    }
   }
 }
 
 .site-title {
+  padding: $spacing-unit/$ms5 0;
   text-align: right;
-  //padding: 0 0 $spacing-unit 0;
 
   svg {
     max-width: 320px;
@@ -52,7 +62,7 @@ body {
 .site-description {
   font-family: $title-font-family;
   font-size: $small;
-  padding-right: .75em;
+  padding-right: 0.75em;
   text-shadow: 0 1px 1px rgba($dark-contrast, 0.25),
     0 1px 25px rgba($dark-contrast, 0.25);
 }
@@ -68,13 +78,12 @@ body {
 
 .site-footer {
   position: relative;
-  padding: $spacing-unit * 2 0 $spacing-unit;
+  padding: $spacing-unit 0 $spacing-unit/2;
   background: rgba($brand-color, 1);
   border-bottom: $smallest solid rgba($light-contrast, 1);
   color: white;
   font-size: $small;
   text-align: center;
-  //clip-path: polygon(0 20%, 100% 0, 100% 100%, 0% 100%);
 
   a {
     color: white;
@@ -95,8 +104,6 @@ body {
  * Page content
  */
 .page-content {
-  //margin: $base-line*2 0;
-
   abbr[title] {
     text-decoration: none;
 
@@ -127,10 +134,10 @@ body {
   hr {
     background-image: linear-gradient(
       90deg,
-      rgba($brand-light, .25) 0,
+      rgba($brand-light, 0.25) 0,
       $brand-light 33%,
       $brand-light 66%,
-      rgba($brand-light, .25) 100%
+      rgba($brand-light, 0.25) 100%
     );
     border: none;
     height: 1.728px;
@@ -160,9 +167,10 @@ body {
 
 .post-list {
   list-style: none;
-  margin-left: 0;
+  margin: $spacing-unit * 2 0;
 
   .post-item {
+    background: rgba($brand-light, 0.1);
     padding: $spacing-unit/$ms4;
     border-radius: 1rem;
     margin-bottom: $base-line;
@@ -174,7 +182,7 @@ body {
     }
 
     &:hover {
-      background: rgba($brand-light, .1);
+      background: rgba($brand-light, 0.2);
     }
   }
 }
@@ -187,7 +195,6 @@ body {
   .post-author {
     color: $brand-color;
   }
-
 }
 
 .home .post-description {
@@ -216,7 +223,7 @@ body {
   font-weight: 400;
   text-align: right;
 
-  a{
+  a {
     color: $brand-secondary;
   }
 }
@@ -255,7 +262,7 @@ body {
   padding: $spacing-unit/$ms4;
   border-radius: 1rem;
   margin: 0 0 $spacing-unit;
-  background: rgba($brand-light, .1);
+  background: rgba($brand-light, 0.1);
   position: sticky;
 
   .post-title {
@@ -284,7 +291,7 @@ body {
 .post-intro {
   font-family: $title-font-family;
   line-height: $ms2;
-  font-size: 1.10em;
+  font-size: 1.1em;
   display: block;
   margin-bottom: $spacing-unit;
   font-weight: 400;
@@ -414,7 +421,7 @@ figcaption {
   color: $grey-light;
   text-align: right;
   background: rgba($brand-light, 0.15);
-  border-radius: .5em;
+  border-radius: 0.5em;
   border: 0;
   padding: $spacing-unit/2;
   margin-bottom: $base-line;
