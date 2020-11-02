@@ -26,10 +26,18 @@ figure {
  */
 
 body {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height}
+      $base-font-family,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: $text-color;
-  background-color: rgb(247,247,248);
-  background-image: linear-gradient(180deg, rgb(255, 255, 255) 0, rgb(247,247,248) 30%, rgb(255, 255, 255) 60%);
+  background-color: rgb(247, 247, 248);
+  background-image: linear-gradient(
+    180deg,
+    rgb(255, 255, 255) 0,
+    rgb(247, 247, 248) 30%,
+    rgb(255, 255, 255) 60%
+  );
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
@@ -105,13 +113,19 @@ h6 {
   font-weight: $title-font-weight;
 }
 
-strong, th {
+strong,
+th {
   font-weight: 800;
 }
 
-h1, h2, h3, h4, h5, .post-intro {
+h1,
+h2,
+h3,
+h4,
+h5,
+.post-intro {
   code {
-  font-weight: 700;
+    font-weight: 700;
   }
 }
 
@@ -133,30 +147,29 @@ a {
 
 /* Blockquotes */
 blockquote {
-  background-color: rgba($brand-light,.2);
-  border-radius: $base-em * $ms2;
+  background-color: rgba($brand-light, 0.1);
   padding: $spacing-unit;
   font-size: $base-em * $ms2;
   line-height: $ratio * $ms1;
   letter-spacing: -1px;
   font-style: italic;
+  font-weight: 800;
   color: $light-contrast;
-  border-bottom: 0.5rem solid $brand-light;
+  border-bottom: 0.25rem solid $light-contrast;
 
   > :last-child {
     margin-bottom: 0;
   }
-
 }
 
 /**
  * Code formatting
  */
 
-:not(pre)>code  {
+:not(pre) > code {
   background-color: #eef;
   border-radius: 3px;
-  display:inline-block;
+  display: inline-block;
   padding: 1px 5px;
 }
 
@@ -166,7 +179,7 @@ pre {
 }
 
 code {
-  font-family: 'Roboto Mono',monospace;
+  font-family: "Roboto Mono", monospace;
   font-size: $small;
 }
 
