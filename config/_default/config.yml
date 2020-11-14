@@ -55,6 +55,9 @@ params:
   social:
     twitter: jamstatic_fr
     GitHub: jamstatic
+  podcast:
+    url: https://anchor.fm/jamstatic
+    title: Le podcast de Jamstatic
   ghrepo: https://github.com/jamstatic/jamstatic-fr/
   branch: master
   images:
