@@ -106,7 +106,7 @@ Concentrons-nous donc sur la création du nouveau site à l’aide d’Hugo.
 Nous n'avons qu'à utiliser la ligne de commande prévue à cet effet:
 
 ```sh
-hugo site new snipcart-hugo
+hugo new site snipcart-hugo
 ```
 
 #### Architecture
