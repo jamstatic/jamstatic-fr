@@ -28,7 +28,7 @@ varier les mises en pages des différentes études de cas à l’aide de Jekyll.
 > effectuer de nombreux changements au sein d’un même modèle pour différents
 > articles sur le nouveau site de notre agence.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346708/canon-unleashprint-full.jpg"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346708/jamstatic/canon-unleashprint-full.jpg"
 attr="Extrait de la campagne Canon #unleashprint"
 attrlink="https://www.tmwunlimited.com/work/canon-unleashprint" >}}
 
@@ -119,15 +119,15 @@ page et qui modifie certains aspects de la présentation de la page.
 Grâce à tout cela, nous avons pu ajouter pas mal de personnalisation à notre
 nouveau site web, ci-dessous une sélection d’études de cas :
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346747/canon-unleashprint-fullpage.jpg" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346747/jamstatic/canon-unleashprint-fullpage.jpg" >}}
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346723/dogs-trust-fullpage.jpg"
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346723/jamstatic/dogs-trust-fullpage.jpg"
 attr="https://www.tmwunlimited.com/work/"
 attrlink="https://www.tmwunlimited.com/work/" >}}
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346706/lynx-fullpage.jpg" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346706/jamstatic/lynx-fullpage.jpg" >}}
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346792/lynx-calm-fullpage.jpg" >}}
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346792/jamstatic/lynx-calm-fullpage.jpg" >}}
 
 ### 👋
 
