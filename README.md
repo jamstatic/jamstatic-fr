@@ -3,7 +3,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5f02cf72-0ba6-4fd3-a606-29262d8d8606/deploy-status)](https://app.netlify.com/sites/jamstatic/deploys)
 [![Slack Channel](https://jamstatic.herokuapp.com/badge.svg)](https://jamstatic.herokuapp.com)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![Contributeurs](https://img.shields.io/badge/all_contributors-24-orange.svg?style=flat-square)](#contributeurs)
+[![Contributeurs](https://img.shields.io/badge/all_contributors-25-orange.svg?style=flat-square)](#contributeurs)
 <!-- ALL-CONTRIBUTORS-BADGE:END --> 
 
 
@@ -98,6 +98,7 @@ Merci à ces personnes extraordinaires ([emoji key](https://github.com/kentcdodd
     <td align="center"><a href="https://gitlab.com/yannicka"><img src="https://avatars0.githubusercontent.com/u/22885898?v=4" width="100px;" alt=""/><br /><sub><b>Yannick A.</b></sub></a><br /><a href="https://github.com/jamstatic/jamstatic-fr/pulls?q=is%3Apr+reviewed-by%3Ayannicka" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="https://zooly.surge.sh/"><img src="https://avatars1.githubusercontent.com/u/7328625?v=4" width="100px;" alt=""/><br /><sub><b>Hugo Torzuoli</b></sub></a><br /><a href="https://github.com/jamstatic/jamstatic-fr/pulls?q=is%3Apr+reviewed-by%3AHZooly" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="http://www.goodimpact.studio"><img src="https://avatars0.githubusercontent.com/u/11678850?v=4" width="100px;" alt=""/><br /><sub><b>Yaacov</b></sub></a><br /><a href="#a11y-yaaax" title="Accessibility">️️️️♿️</a></td>
+    <td align="center"><a href="https://blog.ticabri.com"><img src="https://avatars1.githubusercontent.com/u/701648?v=4" width="100px;" alt=""/><br /><sub><b>Enguerran</b></sub></a><br /><a href="https://github.com/jamstatic/jamstatic-fr/commits?author=enguerran" title="Documentation">📖</a></td>
   </tr>
 </table>
 
