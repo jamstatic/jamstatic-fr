@@ -15,10 +15,10 @@ podcast:
 ---
 
 {{< intro >}}
-
 Un premier épisode assez dense, pour cause d'actualité très fournie, et la volonté d’être aussi didactiques que possible. Dans cet épisode Nicolas Goutay explique, en quoi l’adoption d’un générateur qui n’embarque pas de framework JavaScript par défaut, va avoir un impact significatif sur la performance ressentie par une majorité de personnes qui utilisent un téléphone d’entrée de gamme.
-
 {{</ intro >}}
+
+{{ .TableOfContents }}
 
 ## Jamstatic ?
 
