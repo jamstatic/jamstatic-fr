@@ -4,7 +4,7 @@ description: "Passer de Gatsby à Eleventy afin de pouvoir concevoir un site web
 date: 2020-11-19
 draft: true
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Nicolas%2520Goutay%2520%253A%2520une%2520Jamstack%2520plus%2520l%25C3%25A9g%25C3%25A9re%2520et%2520performante/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Vers%20une%20Jamstack%20l%C3%A9g%C3%A8re%20et%20performante%252C%20avec%20Nicolas%20Goutay/jamstatic/twitter-card.png
 categories:
   - podcast
   - gatsby
