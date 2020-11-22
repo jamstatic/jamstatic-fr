@@ -102,5 +102,5 @@ La discussion continue sur [Slack](/slack) et [Twitter](https://twitter.com/jams
 ### Intervenants
 
 - [Frank Taillandier](https://frank.taillandier.me), Customer Success Manager chez [Forestry.io](https://forestry.io), initiateur de la communauté [jamstatic.fr](https://jamstatic.fr)
-- [Arnaud Ligny](https://arnaudligny.fr), consultant technique et développeur du générateur [Cecil](https://cecil.app/) écrit en PHP
+- [Arnaud Ligny](https://arnaudligny.fr), consultant technique web & e-commerce, créateur du générateur de site statique [Cecil](https://cecil.app)
 - [Nicolas Goutay](https://twitter.com/phacks), développeur web chez [Orbit](https://orbit.love/), organisateur des meetups [Jamstack Paris](https://jamstack.paris/), et de la conférence francophone [We Love Speed](https://www.welovespeed.com/2020/)
