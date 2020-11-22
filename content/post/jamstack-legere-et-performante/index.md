@@ -15,17 +15,15 @@ podcast:
 ---
 
 {{< intro >}}
-
 Un premier épisode assez dense, pour cause d'actualité très fournie, et la volonté d’être aussi didactiques que possible. Dans cet épisode Nicolas Goutay explique, en quoi l’adoption d’un générateur qui n’embarque pas de framework JavaScript par défaut, va avoir un impact significatif sur la performance ressentie par une majorité de personnes qui utilisent un téléphone d’entrée de gamme.
-
 {{</ intro >}}
 
 ## Jamstatic ?
 
-Jamstatic a été lancé avec la volonté de partager autour de la génération de sites statiques, nous suivons avec attention cet écosystème depuis près de 2015.
-Près de 80 articles ont été publiés depuis, plusieurs meetups ont eu lieu notamment sur Paris. Au vu des nombreuses discussions sur le Slack, nous avons décidé de nous essayer au format podcast, dans l’espoir de partager toujours plus sur les sites web modernes et performants.
+[Jamstatic](https://jamstatic.fr) a été lancé avec la volonté de partager autour de la génération de sites statiques, nous suivons avec attention cet écosystème depuis près de 2015.  
+Près de 80 articles ont été publiés depuis, plusieurs meetups ont eu lieu notamment sur Paris. Au vu des nombreuses discussions sur le [Slack](https://jamstatic.fr/slack/), nous avons décidé de nous essayer au format [podcast](https://anchor.fm/jamstatic/), dans l’espoir de partager toujours plus sur les sites web modernes et performants.
 
-Dans ce premier épisode Frank Taillandier et Arnaud Ligny reçoivent Nicolas Goutay, expert performance web, actuellement développeur chez [Orbit](https://orbit.love/), conférencier et organisateur des [meetups Jamstack parisiens](https://jamstack.paris). Fort d’une expérience avec React et Gatsby, le coût des frameworks JavaScript côté client a poussé Nicolas à privilégier des outils plus légers et plus adaptés aux sites de contenus.
+Dans ce premier épisode Frank Taillandier et Arnaud Ligny reçoivent Nicolas Goutay, expert performance web, actuellement développeur chez [Orbit](https://orbit.love), conférencier et organisateur des [meetups Jamstack parisiens](https://jamstack.paris). Fort d’une expérience avec React et Gatsby, le coût des frameworks JavaScript côté client a poussé Nicolas à privilégier des outils plus légers et plus adaptés aux sites de contenus.
 
 ## Actualités
 
@@ -99,7 +97,7 @@ Le statique moderne est toujours en plein évolution, beaucoup d'outils dans le 
 
 La discussion continue sur [Slack](/slack) et [Twitter](https://twitter.com/jamstatic_fr)…
 
-### Intervenants
+## Intervenants
 
 - [Frank Taillandier](https://frank.taillandier.me), Customer Success Manager chez [Forestry.io](https://forestry.io), initiateur de la communauté [jamstatic.fr](https://jamstatic.fr)
 - [Arnaud Ligny](https://arnaudligny.fr), consultant technique web & e-commerce, créateur du générateur de site statique [Cecil](https://cecil.app)
