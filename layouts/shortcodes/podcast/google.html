@@ -1,0 +1,5 @@
+
+{{ with .Get "url"}}
+  <a href="{{ . }}">{{- partialCached "svg/google-podcasts.svg" . -}}</a>
+{{ end }}  
+
