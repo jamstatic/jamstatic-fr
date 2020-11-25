@@ -20,8 +20,8 @@ Dans ce premier épisode de *Génération Statique* Frank Taillandier et Arnaud 
 <!--<iframe src="https://anchor.fm/jamstatic/embed/episodes/Vers-une-Jamstack-lgre-et-performante--avec-Nicolas-Goutay-emunhp"  width="100%" frameborder="0" scrolling="no"></iframe>-->
 
 <div>
-{{< podcast/apple url="https://podcasts.apple.com/fr/podcast/g%C3%A9n%C3%A9ration-statique/id1539806294#episodeGuid=2bb8821a-9aef-4136-a76d-4fad59dbbde6" >}}
-{{< podcast/google url="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy8zOWY0ZmEwNC9wb2RjYXN0L3Jzcw?sa=X&ved=0CAMQ4aUDahcKEwi43MqAkZ7tAhUAAAAAHQAAAAAQBA" >}} 
+{{< podcast/apple url="https://podcasts.apple.com/fr/podcast/g%C3%A9n%C3%A9ration-statique/id1539806294#episodeGuid=2bb8821a-9aef-4136-a76d-4fad59dbbde6" >}}&nbsp;
+{{< podcast/google url="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy8zOWY0ZmEwNC9wb2RjYXN0L3Jzcw?sa=X&ved=0CAMQ4aUDahcKEwi43MqAkZ7tAhUAAAAAHQAAAAAQBA" >}}&nbsp;
 {{< podcast/spotify url="https://open.spotify.com/episode/53HWoHsBUCjWGUcuGZH1R1?si=zNwGktbKRPyMtOk95JhIig" >}}
 </div>
 
