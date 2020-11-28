@@ -1,52 +1,57 @@
 {
   "name": "jamstatic.fr",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Jamstatic website",
-  "scripts": {
-    "algolia": "atomic-algolia",
-    "lint-md": "remark content/post --quiet --frail",
-    "format-html": "prettier --write layouts/**/*.html",
-    "contributors:add": "all-contributors add",
-    "contributors:generate": "all-contributors generate",
-    "contributors:check": "all-contributors check",
-    "update-browserslist-stats": "browserslist-ga-export --reportPath analytics-2020-02.csv"
-  },
+  "author": "Frank Taillandier",
+  "keywords": [
+    "hugo",
+    "algolia",
+    "tailwind"
+  ],
+  "homepage": "https://github.com/jamstatic/jamstatic-fr#readme",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jamstatic/jamstatic-fr.git"
   },
-  "keywords": [
-    "hugo",
-    "algolia"
-  ],
-  "author": "Frank Taillandier",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jamstatic/jamstatic-fr/issues"
   },
-  "homepage": "https://github.com/jamstatic/jamstatic-fr#readme",
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^2.3.0",
-    "all-contributors-cli": "^6.19.0",
-    "atomic-algolia": "^0.3.19",
-    "autoprefixer": "^9.8.6",
-    "postcss-cli": "^7.1.2"
+    "all-contributors-cli": "^6.19"
   },
   "devDependencies": {
-    "prettier": "^2.1.2",
+    "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/typography": "^0.3.1",
+    "atomic-algolia": "^0.3",
+    "autoprefixer": "^10.0.3",
+    "postcss": "^8.1.10",
+    "postcss-cli": "^8.0.0",
+    "postcss-purgecss": "^2.0.3",
+    "prettier": "^2.2.0",
     "prettier-plugin-go-template": "0.0.10",
-    "remark-cli": "^9.0.0",
-    "remark-frontmatter": "^3.0.0",
-    "remark-inline-links": "^5.0.0",
+    "remark-cli": "^9.0",
+    "remark-frontmatter": "^3.0",
+    "remark-inline-links": "^5.0",
     "remark-lint-code": "^2.0",
-    "remark-lint-first-heading-level": "^2.0.1",
-    "remark-lint-maximum-line-length": "^2.0.3",
-    "remark-lint-no-consecutive-blank-lines": "^3.0.0",
-    "remark-lint-no-empty-sections": "^4.0.0",
-    "remark-lint-no-leading-spaces": "^1.0.0",
-    "remark-preset-lint-consistent": "^4.0.0",
-    "remark-preset-lint-markdown-style-guide": "^4.0.0",
-    "remark-preset-lint-recommended": "^5.0.0",
-    "remark-squeeze-paragraphs": "^4.0"
+    "remark-lint-first-heading-level": "^2.0",
+    "remark-lint-maximum-line-length": "^2.0",
+    "remark-lint-no-consecutive-blank-lines": "^3.0",
+    "remark-lint-no-empty-sections": "^4.0",
+    "remark-lint-no-leading-spaces": "^1.0",
+    "remark-preset-lint-consistent": "^4.0",
+    "remark-preset-lint-markdown-style-guide": "^4.0",
+    "remark-preset-lint-recommended": "^5.0",
+    "remark-squeeze-paragraphs": "^4.0",
+    "tailwindcss": "^2.0.1"
+  },
+  "scripts": {
+    "algolia": "atomic-algolia",
+    "contributors:add": "all-contributors add",
+    "contributors:check": "all-contributors check",
+    "contributors:generate": "all-contributors generate",
+    "format-html": "prettier --write layouts/**/*.html",
+    "lint-md": "remark content/post --quiet --frail",
+    "update-browserslist-stats": "browserslist-ga-export --reportPath analytics-2020-02.csv"
   }
 }
