@@ -1,72 +1,30 @@
-<style>
-  form > div {
-    width: 20em;
-  }
-
-  form input:not([type="submit"]) {
-    display: block;
-  }
-
-  input,
-  textarea {
-    width: 15em;
-    padding: 0.3em;
-    border: 1px solid #555;
-    border-radius: 4px;
-    font-family: inherit;
-    font-size: inherit;
-    background: rgba(0, 0, 0, 0.02);
-  }
-
-  input[type="submit"] {
-    width: 5em;
-    padding: 0.3em 1em;
-    background: #2f91a7;
-    border: none;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  textarea {
-    resize: vertical;
-    min-height: 5em;
-  }
-
-  /* small screens */
-  @media (max-width: 600px) {
-    form {
-      flex-direction: column;
-    }
-    form p {
-      display: block;
-    }
-    label {
-      display: block;
-      width: auto;
-      text-align: left;
-    }
-  }
-</style>
-
-<form action="https://formspree.io/f/mleodylv" method="POST">
-  <div>
-    <p>
-      <label for="_replyto">
+<div class="mx-autp">
+  <form action="https://formspree.io/f/mleodylv" method="POST">
+    <p class="">
+      <label class="block" for="_replyto">
         Votre adresse email
-        <input type="text" name="_replyto" required />
+        <input class="block w-full border-transparent rounded bg-violet-50 focus:border-violet-50" type="text" name="_replyto" required />
       </label>
     </p>
 
     <p>
-      <label>
+      <label class="block">
         Votre addresse postale
-        <textarea name="adresse" required></textarea>
+        <textarea
+          class="block w-full border-transparent rounded bg-violet-100 focus:border-violet-50"
+          name="adresse"
+          rows= "4"
+          required
+        ></textarea>
       </label>
     </p>
 
     <p>
-      <input type="submit" value="Envoyer" />
+      <input
+        class="block px-3 py-2 text-lg font-semibold text-white border border-transparent cursor-pointer leading-6 rounded-md bg-violet-900 hover:bg-violet-700"
+        type="submit"
+        value="Envoyer"
+      />
     </p>
-  </div>
-</form>
+  </form>
+</div>

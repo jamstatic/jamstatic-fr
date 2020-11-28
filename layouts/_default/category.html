@@ -1,25 +1,71 @@
 {{ define "main" }}
-  <div class="nav">
-    <nav>
-      {{ $cats := first 8 (where site.Taxonomies.categories.ByCount "Count" ">" 3) }}
-      {{ delimit (apply $cats "partial" "category-link" ".") " · " }}
-    </nav>
-    <h1 class="center post-title">
-      Articles taggués <em class="tag cap">{{ .Title }}</em>
-    </h1>
-  </div>
+  <nav class="mb-8 text-center text-semibold">
+    {{ $cats := first 8 (where site.Taxonomies.categories.ByCount "Count" ">" 3) }}
+    {{ delimit (apply $cats "partial" "category-link" ".") " · " }}
+  </nav>
+  <h1
+    class="mb-8 text-2xl font-extrabold text-center text-violet-900 font-display"
+  >
+    Articles taggués <span class="capitalize text-rose-400">{{ .Title }}</span>
+  </h1>
   <hr />
-  <ul class="post-list">
+  <ul>
     {{ range .Data.Pages }}
-      <li class="post-item">
+      <li
+        class="p-4 my-8 rounded-lg bg-blue-50 bg-opacity-50 hover:bg-opacity-100"
+      >
         <a href="{{ .RelPermalink }}">
-          <h2 class="post-link">{{ .Title }}</h2>
-          <span class="post-meta"
-            >{{ $mymonths := .Site.Data.mois }}{{ .Date.Day }}
-            {{ index $mymonths (printf "%d" .Date.Month) }}
-            {{ .Date.Year }}</span
+          <h2
+            class="mb-2 text-4xl font-black font-display text-violet-900 hover:underline"
           >
-          <p class="post-description">{{ .Description }}</p>
+            {{ .Title }}
+          </h2>
+          <p class="mb-4 text-gray-400 font-body">
+            <time class="capitalize"
+              >{{ $mymonths := .Site.Data.mois }}{{ .Date.Day }}
+              {{ index $mymonths (printf "%d" .Date.Month) }}
+              {{ .Date.Year }}</time
+            >
+            •
+            <span aria-label="Temps de lecture">{{ .ReadingTime }} min</span>
+            •
+            <span
+              itemprop="author"
+              itemscope
+              itemtype="https://schema.org/Person"
+            >
+              <span itemprop="name">
+                {{- if .Params.author }}
+                  {{- if isset (index .Site.Data.authors .Params.author) "web" }}
+                    <a
+                      class="uppercase hover:text-rose-400"
+                      rel="author"
+                      href="{{ (index .Site.Data.authors .Params.author).web }}"
+                      >{{ (index .Site.Data.authors .Params.author).name }}</a
+                    >
+                    {{ else }}
+                    <a
+                      class="uppercase hover:text-rose-400"
+                      rel="author"
+                      href="https://github.com/{{ (index .Site.Data.authors .Params.author).github }}"
+                      >{{ (index .Site.Data.authors .Params.author).name }}</a
+                    >
+                  {{ end -}}
+                  {{ else }}
+                  <a
+                    class="uppercase hover:text-rose-400"
+                    rel="author"
+                    href="{{ .Site.Data.authors.frank.web }}"
+                    >{{ .Site.Data.authors.frank.name }}</a
+                  >
+                {{ end -}}
+              </span>
+            </span>
+          </p>
+
+          <p class="text-2xl text-gray-600">
+            {{ partial "content.html" .Description }}
+          </p>
         </a>
       </li>
     {{ end }}

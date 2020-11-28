@@ -31,7 +31,16 @@
     content="{{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ .Description }}{{ end }}"
   />
   {{- hugo.Generator }}
-  {{- if .Site.IsServer }}
+
+  {{ $options := dict "inlineImports" true }}
+  {{ $styles := resources.Get "css/styles.css" }}
+  {{ $styles = $styles | resources.PostCSS $options }}
+  {{ if  hugo.IsProduction }}
+    {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
+  {{ end }}
+  <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
+
+  {{/* {{- if .Site.IsServer }}
     {{- $cssOpts := (dict "targetPath" "assets/css/main.css" "enableSourceMap" true) -}}
     {{- $styles := resources.Get "scss/main.scss" | toCSS $cssOpts -}}
     <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen" />
@@ -45,6 +54,7 @@
     {{- $styles := resources.Get "scss/main.scss" | toCSS $cssOpts -}}
     <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen" />
   {{- end }}
+  */}}
   <link
     rel="alternate"
     href="{{ .Site.RSSLink | relURL }}"

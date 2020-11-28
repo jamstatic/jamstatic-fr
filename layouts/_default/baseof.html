@@ -3,12 +3,28 @@
   {{- partial "site/head" . -}}
 
   <body class="{{ .Kind }}">
+    <div class="sticky top-0 text-white bg-purple-900">
+      <nav class="p-3 bg-black bg-opacity-30">
+        <ul class="flex justify-end space-x-6">
+          <li class="w-4">
+            {{- partialCached "icons/podcast" . -}}
+          </li>
+          <li class="w-4">
+            {{- partialCached "icons/slack" . -}}
+          </li>
+          <li class="w-4">
+            {{- partialCached "icons/twitter" . -}}
+          </li>
+          <li class="w-4">
+            {{- partialCached "icons/github" . -}}
+          </li>
+        </ul>
+      </nav>
+    </div>
     {{- partial "site/header" . -}}
 
-    <div class="page-content">
-      <div class="wrapper">
+    <div class="container w-11/12 py-8 mx-auto lg:w-2/3 xl:w-1/2">
         {{ block "main" . }}{{ end }}
-      </div>
     </div>
 
     {{- partialCached "site/footer" . -}}

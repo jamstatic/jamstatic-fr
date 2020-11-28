@@ -1,12 +1,9 @@
 {{ $related := .Site.RegularPages.Related . | first 5 }}
 {{ with $related }}
-  <hr />
-  <div class="related">
-    <h3>Voir aussi</h3>
-    <ul>
+    <h3 class="text-3xl font-display text-rose-400">Voir aussi</h3>
+    <ul class="list-none">
       {{ range . }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        <li>🎗 <a class="text-2xl font-bold no-underline text-violet-900 hover:text-rose-400" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
       {{ end }}
     </ul>
-  </div>
 {{ end }}

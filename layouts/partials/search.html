@@ -88,11 +88,11 @@ const hitTemplate = function(hit) {
   }
 
   return `
-    <li class="post-item">
+    <li class="p-4 my-8 rounded-lg bg-blue-50 bg-opacity-50 hover:bg-opacity-100">
       <a href="${hit.relpermalink}">
-        <h2 class="post-link">${hit._highlightResult.title.value}</h2>
-        <span class="post-meta">${date}</span>
-        <p class="post-description">${hit.description}</p>
+        <h2 class="mb-2 text-4xl font-black font-display text-violet-900">${hit._highlightResult.title.value}</h2>
+        <span class="mb-4 text-gray-400 font-body">${date}</span>
+        <p class="text-2xl text-gray-800 font-body">${hit.description}</p>
       </a>
     </li>
   `;
@@ -122,16 +122,14 @@ search.start();
 
 <style>
   .ais-search-box {
+    max-width: 75%;
+    margin: 1rem auto 4rem;
     font-size: 1rem;
-    max-width: 100%;
-    margin: 1.2rem auto;
     display: block;
   }
 
   @media screen and (min-width: 45rem) {
     .ais-search-box {
-      max-width: 72%;
-      margin: 4.8rem auto;
     }
   }
 

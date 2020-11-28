@@ -3,15 +3,16 @@
 {{ end }}
 
 {{ define "main" }}
-  <main class="home">
+  <main>
     <div id="search-searchbar"></div>
-    <ul class="post-list" id="search-hits">
+    <ul id="search-hits">
       {{ range .Site.RegularPages }}
-        <li class="post-item">
+        <li class="p-4 my-8 rounded-lg bg-blue-50 bg-opacity-50 hover:bg-opacity-100">
           <a href="{{ .RelPermalink }}">
-            <h2 class="post-link">{{ partial "content.html" .Title . }}</h2>
-            <p class="post-meta">
+            <h2 class="mb-2 text-4xl font-black font-display text-violet-900 hover:underline">{{ partial "content.html" .Title . }}</h2>
+            <p class="mb-4 text-gray-400 font-body">
               <time
+                class="capitalize"
                 datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}"
                 itemprop="datePublished"
               >
@@ -24,7 +25,7 @@
                 {{ range $index, $category := .Params.categories }}
                   {{ if $index }}, {{ end }}
                   <a
-                    class="post-category"
+                    class="capitalize hover:text-rose-400"
                     href="{{ "categories/" | relURL }}{{ . | urlize }}"
                     >{{ . }}</a
                   >{{ end }}
@@ -42,14 +43,14 @@
                   {{- if .Params.author }}
                     {{- if isset (index .Site.Data.authors .Params.author) "web" }}
                       <a
-                        class="post-author"
+                        class="uppercase hover:text-rose-400"
                         rel="author"
                         href="{{ (index .Site.Data.authors .Params.author).web }}"
                         >{{ (index .Site.Data.authors .Params.author).name }}</a
                       >
                       {{ else }}
                       <a
-                        class="post-author"
+                        class="uppercase hover:text-rose-400"
                         rel="author"
                         href="https://github.com/{{ (index .Site.Data.authors .Params.author).github }}"
                         >{{ (index .Site.Data.authors .Params.author).name }}</a
@@ -57,7 +58,7 @@
                     {{ end -}}
                     {{ else }}
                     <a
-                      class="post-author"
+                      class="uppercase hover:text-rose-400"
                       rel="author"
                       href="{{ .Site.Data.authors.frank.web }}"
                       >{{ .Site.Data.authors.frank.name }}</a
@@ -66,7 +67,7 @@
                 </span>
               </span>
             </p>
-            <p class="post-description">
+            <p class="text-2xl text-gray-600">
               {{ partial "content.html" .Description }}
             </p>
           </a>

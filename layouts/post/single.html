@@ -1,11 +1,11 @@
 {{- define "main" }}
-  <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
+  <article class="mx-auto prose sm:prose-lg lg:prose-xl" itemscope itemtype="https://schema.org/BlogPosting">
+    <header class="p-4 mb-8 rounded-lg bg-blue-50 bg-opacity-75">
+      <h1 class="text-4xl font-bold font-display text-violet-900 xl:leading-tight" itemprop="name headline">
         {{- partial "content.html" .Title -}}
       </h1>
-      <p class="post-meta">
-        <time
+      <p class="mb-0 -mt-4 text-sm text-gray-400">
+        <time class="capitalize"
           datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}"
           itemprop="datePublished"
         >
@@ -17,7 +17,7 @@
           •
           {{ range $index, $category := .Params.categories }}
             {{ if $index }}, {{ end }}
-            <a href="{{ "categories/" | relURL }}{{ . | urlize }}"
+            <a class="no-underline capitalize text-violet-900 hover:text-rose-400" href="{{ "categories/" | relURL }}{{ . | urlize }}"
               >{{ . }}</a
             >{{ end }}
 
@@ -28,14 +28,14 @@
             {{- if .Params.author }}
               {{- if isset (index .Site.Data.authors .Params.author) "web" }}
                 <a
-                  class="post-author"
+                  class="no-underline uppercase text-violet-900 hover:text-rose-400"
                   rel="author"
                   href="{{ (index .Site.Data.authors .Params.author).web }}"
                   >{{ (index .Site.Data.authors .Params.author).name }}</a
                 >
                 {{ else }}
                 <a
-                  class="post-author"
+                  class="no-underline uppercase text-violet-900 hover:text-rose-400"
                   rel="author"
                   href="https://github.com/{{ (index .Site.Data.authors .Params.author).github }}"
                   >{{ (index .Site.Data.authors .Params.author).name }}</a
@@ -43,7 +43,7 @@
               {{ end -}}
               {{ else }}
               <a
-                class="post-author"
+                class="no-underline uppercase text-violet-900 hover:text-rose-400"
                 rel="author"
                 href="{{ .Site.Data.authors.frank.web }}"
                 >{{ .Site.Data.authors.frank.name }}</a
@@ -54,18 +54,21 @@
       </p>
     </header>
 
-    <div class="post-content" itemprop="articleBody">
+    <div class="font-body" itemprop="articleBody">
       {{- with .Params.Source }}
         {{- if and .url .title .author }}
-          <p class="post-source">
-            <em
-              >Source : <a href="{{ .url }}">{{ .title }}</a> de
-              {{ .author }}</em
-            >
+          <p class="text-base italic text-right text-gray-400">
+            Source : <a class="font-bold no-underline font-display text-rose-400 hover:underline" href="{{ .url }}">{{ .title }}</a> de
+              {{ .author }}
           </p>
-          <hr />
         {{- end }}
       {{- end }}
+
+      <div class="text-2xl text-gray-700 lead font-display">
+        {{ .Params.Excerpt | markdownify }}
+      </div>  
+
+      <hr/>
 
       {{- partial "content.html" .Content -}}
 
@@ -74,9 +77,6 @@
 
         {{- partial "related" . }}
 
-        {{- with .Params.Comments }}
-          {{ template "_internal/disqus.html" . }}
-        {{- end }}
       </footer>
     </div>
   </article>

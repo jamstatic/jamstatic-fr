@@ -1,38 +1,32 @@
-<footer class="site-footer">
-  <div class="wrapper">
-    <ul class="social-media-list">
-      <li>
-        {{- partialCached "icons/rss" . -}}
-      </li>
-      <li>
-        {{- partialCached "icons/twitter" . -}}
-      </li>
-      <li>
-        {{- partialCached "icons/podcast" . -}}
-      </li>
-      <li>
-        {{- partialCached "icons/slack" . -}}
-      </li>
-      <li>
-        {{- partialCached "icons/github" . -}}
-      </li>
-    </ul>
+<footer class="py-8 text-lg text-center text-white border border-b-8 bg-violet-900 border-violet-700">
+  <ul class="flex justify-center mb-8 space-x-8">
+    <li class="w-6">
+      {{- partialCached "icons/rss" . -}}
+    </li>
+    <li class="w-8">
+      {{- partialCached "icons/twitter" . -}}
+    </li>
+    <li class="w-8">
+      {{- partialCached "icons/podcast" . -}}
+    </li>
+    <li class="w-8">
+      {{- partialCached "icons/slack" . -}}
+    </li>
+    <li class="w-8">
+      {{- partialCached "icons/github" . -}}
+    </li>
+  </ul>
 
-    <p>
-      <small
-        >Contenus sous Licence
-        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr"
-          >CC BY-NC-SA 4.0</a
-        >
-        &middot; <a href="/a-propos/">À propos</a></small
-      >
-    </p>
-    <p>
-      <small
-        >Site généré par <a href="https://gohugo.io">Hugo</a>, éditable dans
-        <a href="https://forestry.io">Forestry</a> et déployé sur
-        <a href="https://netlify.com">Netlify</a></small
-      >
-    </p>
-  </div>
+  <p class="mb-4 text-base">
+    Contenus sous Licence
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr"
+      >CC BY-NC-SA 4.0</a
+    >
+    &middot; <a class="font-semibold underline hover:no-underline" href="/a-propos/">À propos</a>
+  </p>
+  <p class="text-base">
+    Site généré par <a class="font-semibold hover:underline" href="https://gohugo.io">Hugo</a>, éditable dans
+      <a class="font-semibold  hover:underline" href="https://forestry.io">Forestry</a> et déployé sur
+      <a class="font-semibold hover:underline" href="https://netlify.com">Netlify</a>
+  </p>
 </footer>
