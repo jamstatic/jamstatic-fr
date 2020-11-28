@@ -57,7 +57,8 @@ params:
     GitHub: jamstatic
   podcast:
     url: https://anchor.fm/jamstatic
-    title: Le podcast de Jamstatic
+    title: Génération Statique
+  opencollective: https://opencollective.com/jamstatic
   ghrepo: https://github.com/jamstatic/jamstatic-fr/
   branch: master
   images:
