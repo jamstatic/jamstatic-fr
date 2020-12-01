@@ -33,7 +33,7 @@
     "postcss-cli": "^7.1.2"
   },
   "devDependencies": {
-    "prettier": "^2.1.2",
+    "prettier": "^2.2.1",
     "prettier-plugin-go-template": "0.0.10",
     "remark-cli": "^9.0.0",
     "remark-frontmatter": "^3.0.0",
