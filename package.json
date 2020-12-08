@@ -21,6 +21,7 @@
     "all-contributors-cli": "^6.19"
   },
   "devDependencies": {
+    "@linthtml/linthtml": "^0.5.1",
     "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/typography": "^0.3.1",
     "atomic-algolia": "^0.3",
@@ -50,8 +51,10 @@
     "contributors:add": "all-contributors add",
     "contributors:check": "all-contributors check",
     "contributors:generate": "all-contributors generate",
+    "format-md": "prettier --write content/**/*.md",
     "format-html": "prettier --write layouts/**/*.html",
     "lint-md": "remark content/post --quiet --frail",
+    "lint-html": "linthtml **/*.html ",
     "update-browserslist-stats": "browserslist-ga-export --reportPath analytics-2020-02.csv"
   }
 }
