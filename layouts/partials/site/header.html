@@ -1,4 +1,4 @@
-<header class="text-white bg-violet-900">
+<header class="text-white bg-violet">
   <div class="pt-8 pb-12 mx-auto w-96 md:w-1/2 lg:w-2/5">
     {{ if .IsHome }}
       <h1>
@@ -9,7 +9,7 @@
         >{{ partial "svg/jamstatic-logo-violet.svg" }}</a
       >
     {{ end }}
-    <div class="pr-4 text-xs text-right lg:-mt-2 font-display md:text-sm lg:text-base">
+    <div class="pr-4 text-xs text-right text-white lg:-mt-2 font-display md:text-sm lg:text-base">
       {{ .Site.Params.description }}
     </div>
   </div>

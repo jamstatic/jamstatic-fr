@@ -7,9 +7,13 @@
     <div id="search-searchbar"></div>
     <ul id="search-hits">
       {{ range .Site.RegularPages }}
-        <li class="p-4 my-8 rounded-lg bg-blue-50 bg-opacity-50 hover:bg-opacity-100">
-          <a href="{{ .RelPermalink }}">
-            <h2 class="mb-2 text-4xl font-black font-display text-violet-900 hover:underline">{{ partial "content.html" .Title . }}</h2>
+        <li class="py-8 my-8 bg-opacity-50 rounded-lg">
+          <a class="block" href="{{ .RelPermalink }}">
+            <h2
+              class="mb-2 text-4xl font-black transition duration-200 font-display text-violet dark:text-violet-light hover:underline hover:text-violet-light xl:leading-snug"
+            >
+              {{ partial "content.html" .Title . }}
+            </h2>
             <p class="mb-4 text-gray-400 font-body">
               <time
                 class="capitalize"
@@ -20,58 +24,13 @@
                 {{- .Date.Day }} {{ index $mymonths (printf "%d" .Date.Month) }}
                 {{ .Date.Year -}}
               </time>
-              {{- if isset .Params "categories" }}
-                •
-                {{ range $index, $category := .Params.categories }}
-                  {{ if $index }}, {{ end }}
-                  <a
-                    class="capitalize hover:text-rose-400"
-                    href="{{ "categories/" | relURL }}{{ . | urlize }}"
-                    >{{ . }}</a
-                  >{{ end }}
-
-              {{- end }}
-              •
-              <span aria-label="Temps de lecture">{{ .ReadingTime }} min</span>
-              •
-              <span
-                itemprop="author"
-                itemscope
-                itemtype="https://schema.org/Person"
-              >
-                <span itemprop="name">
-                  {{- if .Params.author }}
-                    {{- if isset (index .Site.Data.authors .Params.author) "web" }}
-                      <a
-                        class="uppercase hover:text-rose-400"
-                        rel="author"
-                        href="{{ (index .Site.Data.authors .Params.author).web }}"
-                        >{{ (index .Site.Data.authors .Params.author).name }}</a
-                      >
-                      {{ else }}
-                      <a
-                        class="uppercase hover:text-rose-400"
-                        rel="author"
-                        href="https://github.com/{{ (index .Site.Data.authors .Params.author).github }}"
-                        >{{ (index .Site.Data.authors .Params.author).name }}</a
-                      >
-                    {{ end -}}
-                    {{ else }}
-                    <a
-                      class="uppercase hover:text-rose-400"
-                      rel="author"
-                      href="{{ .Site.Data.authors.frank.web }}"
-                      >{{ .Site.Data.authors.frank.name }}</a
-                    >
-                  {{ end -}}
-                </span>
-              </span>
             </p>
-            <p class="text-2xl text-gray-600">
+            <p class="text-2xl text-gray-600 dark:text-gray-300">
               {{ partial "content.html" .Description }}
             </p>
           </a>
         </li>
+        <hr class="border-gray-200 dark:border-gray-800">
       {{ end }}
     </ul>
   </main>

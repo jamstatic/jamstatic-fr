@@ -1,10 +1,10 @@
 {{- define "main" }}
-  <article class="prose-sm prose sm:prose-lg lg:prose-xl xl:prose-2xl">
-    <header>
-      <h1 class="my-8 text-5xl font-extrabold font-display text-violet-900">{{- .Title -}}</h1>
-    </header>
-    <main class="font-body">
-      {{- .Content -}}
-    </main>
-  </article>
+<article class="prose-sm prose sm:prose-lg lg:prose-xl xl:prose-2xl">
+  <header>
+    <h1 class="my-8 text-5xl font-extrabold font-display text-violet-dark">
+      {{- .Title -}}
+    </h1>
+  </header>
+  <main class="font-body">{{- .Content -}}</main>
+</article>
 {{- end }}
