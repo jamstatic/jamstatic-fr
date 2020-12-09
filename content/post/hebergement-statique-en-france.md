@@ -30,7 +30,7 @@ L'émergence de solutions dédiées au déploiement automatisé de sites statiqu
 
 Les offres dédiées Jamstack sont un terreau d'innovation, on a vu ainsi arriver les développements atomiques (une URL pour chaque commit), les intégrations au workflow Git avec mise à disposition d'un lien de prévisualisation lors de la soumission d'une modification sur le dépôt Git, l'ajout simplifié de fonctions Lambda, etc.
 
-Matthias et Hubert nous confient que le statique ne représente pas plus de 5% des projets actuellement chez les hébergeurs plus généralistes, et rappellent que le besoin applicatif représente encore leur cœur de leur activité. Les documentations respectives des ces services sont générées avec Hugo et les deux hébergeurs permettent de pousser via Git. L'automatisation et l'expérience utilisateur n'est pas aussi poussée mais le workflow est similaire. On commence néanmoins à réfléchir à l'amélioration de la DX (Developer Experience), via l'amélioration des outils en ligne de commande dans un premier temps.
+Matthias et Hubert nous confient que le statique ne représente pas plus de 5% des projets actuellement chez les hébergeurs plus généralistes, et rappellent que le besoin applicatif représente encore leur cœur de leur activité. Les documentations respectives des ces services sont générées avec Hugo et les deux hébergeurs permettent de pousser via Git. L'automatisation et l'expérience utilisateur n'est pas aussi poussée mais le workflow est similaire. On commence néanmoins à réfléchir à l'amélioration de la DX (*Developer Experience*), via l'amélioration des outils en ligne de commande dans un premier temps.
 
 L'UX n'est cependant pas le premier facteur de choix des entreprises françaises, qui veulent avant tout pouvoir héberger au plus près de leurs utilisateurs quand elles visent le marché français.
 
@@ -46,11 +46,10 @@ Les gros acteurs comme AWS ne sont pas non plus à l'abri de pannes, comme [on a
 
 Chez Clever Cloud, on peut déjà déployer des fonctions en mode PaaS (Platform as a Service), voire des *functions as a service* (FaaS) avec support de Web Assembly. Lors du développement de sa documentation en mode Jamstack Alwaysdata a pu expérimenté le besoin en fonctions dynamiques comme l'envoi de mail, un besoin qu'il est toujours possible de combler en développant soi-même la fonction manquante ou en se reposant sur des services et des APis externes.
 
-Arnaud souligne qu'il est peut-être plus rassurant pour des entreprises de pouvoir stocker leurs fonctions métier dans son Cloud privé afin de maîtriser sa stack. "La valeur ajoutée de notre métier c'est l'accompagnement et la gestion de la complexité" commente Matthias.
+Arnaud souligne qu'il est peut-être plus rassurant pour des entreprises de pouvoir stocker leurs fonctions métier dans son Cloud privé afin de maîtriser son environnement. "La valeur ajoutée de notre métier c'est l'accompagnement et la gestion de la complexité" commente Matthias.
 
 Cette complexité est aussi présente chez des acteurs comme AWS, et on est pas à l'abri pour autant d'un certain degré d'enfermement propriétaire lorsqu'on développe son application pour tourner sur ces plate-formes.
 
 Les problématiques de protections des données, la volonté de ne pas dépendre d'entreprises étrangères qui ne sont pas soumises aux mêmes règles fiscales, des choix éthiques liés aux politiques énergétiques sont autant de critères qui entrent de plus en plus dans le processus de décision.
 
-Le déploiement automatisé systématique c'est très pratique dans plein de cas, mais au prix de quel coût énergétique ? Il reste encore aux différents outils (CMS, plate-forme de déploiement) à donner plus de maîtrise (et de métriques) pour nous permettre de pouvoir estimer correctement l'empreinte énergétique de nos workflows et de l'infrastructure utilisée.
-
+Le déploiement automatisé systématique c'est très pratique dans plein de cas, mais au prix de quel coût énergétique ? Il reste encore aux différents outils (CMS, plate-forme de déploiement) à donner plus de maîtrise (et de métriques) pour nous permettre de pouvoir estimer correctement l'empreinte énergétique de son *workflow* et de l'infrastructure utilisée.
