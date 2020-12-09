@@ -3,7 +3,7 @@ title: "Utiliser WordPress comme CMS pour vos sites statiques"
 date: 2018-01-09T15:50:46+01:00
 description: "Grâce à son API REST WordPress fait aussi CMS headless. Stefan Baumgartner montre comment récupérer les contenus pour générer un site statique avec Metalsmith."
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Utiliser%20WordPress%20pour%20vos%20sites%20statiques/jamstatic/twitter-card.png 
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Utiliser%20WordPress%20pour%20vos%20sites%20statiques/jamstatic/twitter-card.png
 categories:
   - jamstack
   - headless
@@ -112,15 +112,15 @@ const apiURL = "/wp-json/wp/v2/posts";
 const url = `${mainURL}${apiURL}?_embed&per_page=100`;
 
 fetch(url) /* 1 */
-  .then(res => {
+  .then((res) => {
     const noPages = res.headers.get("X-WP-TotalPages"); /* 2 */
     const pagesToFetch = new Array(noPages - 1)
       .fill(0)
       .map((el, id) => fetch(`${url}&page=${id + 2}`)); /* 3 */
     return Promise.all([res, ...pagesToFetch]); /* 4 */
   })
-  .then(results => Promise.all(results.map(el => el.json()))) /* 5 */
-  .then(pages => [].concat(...pages)); /* 6 */
+  .then((results) => Promise.all(results.map((el) => el.json()))) /* 5 */
+  .then((pages) => [].concat(...pages)); /* 6 */
 ```
 
 1.  Nous téléchargeons les 100 premiers articles de notre blog. Si notre blog

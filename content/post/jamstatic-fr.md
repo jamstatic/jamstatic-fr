@@ -1,23 +1,16 @@
 ---
 title: Lancement de Jamstatic France
 description: Les actualités autour de la Jamstack et des générateurs de site statique
+excerpt: |
+  Ce site a pour but de relayer les actualités de la communauté [Jamstack](https://jamstack.org/) en français.
 date: 2016-04-01
----
-
-{{< intro >}}
-
-Ce site a pour but de relayer les actualités de la communauté
-[Jamstack](https://jamstack.org/) en français.
-
-{{< /intro >}}
-
 ---
 
 ## À propos de Jamstatic
 
-Nous observons actuellement un vrai engouement pour l’utilisation des générateurs de site statique. 
-Du fait de son utilisation par [Github Pages](https://pages.github.com/), [Jekyll](http://jekyllrb.com/) est encore très populaire. 
-Beaucoup d’autres générateurs comme [Hugo](http://gohugo.io/) ou [Eleventy](https://11ty.dev/) connaissent une forte progression. 
+Nous observons actuellement un vrai engouement pour l’utilisation des générateurs de site statique.
+Du fait de son utilisation par [Github Pages](https://pages.github.com/), [Jekyll](http://jekyllrb.com/) est encore très populaire.
+Beaucoup d’autres générateurs comme [Hugo](http://gohugo.io/) ou [Eleventy](https://11ty.dev/) connaissent une forte progression.
 Sans parler de l'engouement autour de frameworks comme [Next.js](https://nextjs.org/) ou [Nuxt.js](https://nuxtjs.org/).
 
 On observe un bouillonnement aussi bien de la communauté qui a lancé de nombreux

@@ -3,7 +3,7 @@ title: Process de design d’un portfolio
 description: Les différentes étapes pour concevoir son portfolio avec Jekyll et GitHub Pages par Kat Fukui, webdesigner chez Github.
 date: 2016-11-10
 images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_800,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Process%20de%20design%20d%E2%80%99un%20portfolio/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_800,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Process%20de%20design%20d%E2%80%99un%20portfolio/jamstatic/twitter-card.png
 source:
   author: Kat Fukui
   title: The Design Portfolio Workflow
@@ -489,5 +489,4 @@ src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*qKtPxbGF11
 caption="" >}}
 
 [^1]: [Installez Ruby et Jekyll à l’aide d’Homebrew sous Mac](https://gist.github.com/DirtyF/5d2bde5c682101b7b5d90708ad333bf3).
-
 [^2]: Le plugin [jekyll-atom](https://github.com/Arcath/jekyll-atom/) facilite la création de posts en respectant cette convention.

@@ -61,7 +61,7 @@ Voici l'arborescence de fichiers avec laquelle nous allons travailler. C'est une
 
 La première consiste à créer nos locales à l'aide [des fichiers de données pour les répertoires](https://www.11ty.dev/docs/data-template-dir/).
 
-Pour cela il nous suffit d'ajouter les fichiers `en.json` and `fr.json` dans nos répertoires de langues.  Dans chacun d'entre eux, nous définissons une clé `locale`. Elle va permettre d'accéder aux valeurs correspondantes dans tous les fichiers de layout présents dans les sous-répertoires d'un dossier de langue.
+Pour cela il nous suffit d'ajouter les fichiers `en.json` and `fr.json` dans nos répertoires de langues. Dans chacun d'entre eux, nous définissons une clé `locale`. Elle va permettre d'accéder aux valeurs correspondantes dans tous les fichiers de layout présents dans les sous-répertoires d'un dossier de langue.
 
 Par exemple, notre fichier `fr.json` contient :
 
@@ -81,7 +81,7 @@ Pour ce faire, nous allons insérer le code suivant dans notre fichier de config
 
 ```js
 // date filter (localized)
-eleventyConfig.addNunjucksFilter("date", function(date, format, locale) {
+eleventyConfig.addNunjucksFilter("date", function (date, format, locale) {
   locale = locale ? locale : "en";
   moment.locale(locale);
   return moment(date).format(format);
@@ -98,17 +98,17 @@ Maintenant que nos dates sont automatiquement localisées, passons aux collectio
 
 ## Localisation des collections
 
-Nous allons pouvoir tirer parti de notre arborescence de fichiers pour créer des collections dans Eleventy. Le plus simple est encore de créer une collection par langue. Nous utilisons pour cela la fonction [`getFilteredByGlob`](https://www.11ty.dev/docs/collections/#getfilteredbyglob(-glob-)) dans notre fichier `eleventy.js`.
+Nous allons pouvoir tirer parti de notre arborescence de fichiers pour créer des collections dans Eleventy. Le plus simple est encore de créer une collection par langue. Nous utilisons pour cela la fonction [`getFilteredByGlob`](<https://www.11ty.dev/docs/collections/#getfilteredbyglob(-glob-)>) dans notre fichier `eleventy.js`.
 
 ```js
-module.exports = function(eleventyConfig) {
-  eleventyConfig.addCollection("posts_en", function(collection) {
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addCollection("posts_en", function (collection) {
     return collection.getFilteredByGlob("./src/en/posts/*.md");
   });
 };
 
-module.exports = function(eleventyConfig) {
-  eleventyConfig.addCollection("posts_fr", function(collection) {
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addCollection("posts_fr", function (collection) {
     return collection.getFilteredByGlob("./src/fr/posts/*.md");
   });
 };
@@ -120,7 +120,7 @@ Plutôt que d'ajouter une variable `permalink` dans le front matter de chaque fi
 
 ```js
 {
-  permalink: "/{{ locale }}/blog/{{ page.fileslug }}/index.html"
+  permalink: "/{{ locale }}/blog/{{ page.fileslug }}/index.html";
 }
 ```
 
@@ -171,12 +171,12 @@ module.exports = {
   twitter: "@handle",
   en: {
     metaTitle: "Title in english",
-    metaDescription: "Description in english"
+    metaDescription: "Description in english",
   },
   fr: {
     metaTitle: "Titre en français",
-    metaDescription: "Description en français"
-  }
+    metaDescription: "Description en français",
+  },
 };
 ```
 
@@ -247,7 +247,7 @@ module.exports = {
     addressNumber: "42",
     addressPostcode: "1000",
     addressCity: "Bruxelles",
-    directionsLabel: "Itinéraire"
+    directionsLabel: "Itinéraire",
   },
   en: {
     addressTitle: "Address",
@@ -255,8 +255,8 @@ module.exports = {
     addressNumber: "42",
     addressPostcode: "1000",
     addressCity: "Brussels",
-    directionsLabel: "Directions"
-  }
+    directionsLabel: "Directions",
+  },
 };
 ```
 

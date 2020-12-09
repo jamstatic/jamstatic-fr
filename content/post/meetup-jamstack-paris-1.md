@@ -3,7 +3,7 @@ title: "Meetup Jamstack Paris #1"
 description: "Résumé des deux présentations dédiées à Gatsby."
 date: 2019-01-28T18:45:24+01:00
 images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Meetup%20Jamstack%20Paris%20%231/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Meetup%20Jamstack%20Paris%20%231/jamstatic/twitter-card.png
 categories:
   - gatsby
   - meetup

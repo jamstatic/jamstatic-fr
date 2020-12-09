@@ -5,7 +5,7 @@ description: Les deux manières de créer des collections de documents avec le g
 categories:
   - eleventy
 images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Les%20collections%20dans%20Eleventy/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Les%20collections%20dans%20Eleventy/jamstatic/twitter-card.png
 source:
   author: Philip Borenstein
   title: Working with Collections
@@ -44,8 +44,8 @@ Un modèle avec le front matter suivant va générer des pages dans les collecti
 title: Finding Oz
 category: Culture
 tags:
-- books
-- reviews
+  - books
+  - reviews
 ---
 . . .
 ```
@@ -112,9 +112,9 @@ générés par Eleventy.
 | :---------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `inputPath`       | Chemin vers ce fichier incluant le répertoire source. <hr><code class="phony">./src/articles/finding-oz.md</code>                                                                                                                        |
 | `outputPath`      | Chemin du fichier généré. <hr><code class="phony">articles/finding-oz/index.html</code>                                                                                                                                                  |
-| `fileSlug`        | Version courte en fonction du nom et de l'emplacement du fichier. [En fonction des règles](https://www.11ty.dev/docs/data/#fileslug). <hr><code class="phony">finding-oz</code>                                                           |
+| `fileSlug`        | Version courte en fonction du nom et de l'emplacement du fichier. [En fonction des règles](https://www.11ty.dev/docs/data/#fileslug). <hr><code class="phony">finding-oz</code>                                                          |
 | `data`            | Données du front matter de la page rendue. Les variables globales disponibles pour chaque page.                                                                                                                                          |
-| `date`            | La date du fichier au format UTC. [Voir les règles](https://www.11ty.dev/docs/dates/). <hr><code class="phony">2019-01-27T13:52:12.000Z</code>                                                                                            |
+| `date`            | La date du fichier au format UTC. [Voir les règles](https://www.11ty.dev/docs/dates/). <hr><code class="phony">2019-01-27T13:52:12.000Z</code>                                                                                           |
 | `url`             | Chemin vers le contenu. N'inclus pas le protocole et le nom d'hôte. <hr><code class="phony">/articles/finding-oz/</code>                                                                                                                 |
 | `templateContent` | Le contenu généré de la page, n'inclut pas les balises enveloppantes de mise en page.<hr><code class="phony">&lt;p&gt;Comme la plupart des livres ... à propos du Magicien d'Oz&lt;/li&gt;\n&lt;/ul&gt;\n</code>                         |
 | `template`        | Toutes sortes de données analysées par le modèle. Des choses comme la configuration d'Eleventy, la configuration du moteur de rendu pour le markdown, et beaucoup de choses sur lesquelles nous ne devrions probablement pas nous baser. |
@@ -128,20 +128,20 @@ est la fonction qui transforme des tags en collections.
 
 {{< highlight js "linenos=inline,hl_lines=10-11,linenostart=146" >}}
 async getTaggedCollectionsData() {
-  let collections = {};
-  collections.all = this.createTemplateMapCopy(
-    this.collection.getAllSorted()
-  );
-  debug(`Collection: collections.all size: ${collections.all.length}`);
+let collections = {};
+collections.all = this.createTemplateMapCopy(
+this.collection.getAllSorted()
+);
+debug(`Collection: collections.all size: ${collections.all.length}`);
 
-  let tags = this.getAllTags();
-  for (let tag of tags) {
-    collections[tag] = this.createTemplateMapCopy(
-      this.collection.getFilteredByTag(tag)
-    );
-    debug(`Collection: collections.${tag} size: ${collections[tag].length}`);
-  }
-  return collections;
+let tags = this.getAllTags();
+for (let tag of tags) {
+collections[tag] = this.createTemplateMapCopy(
+this.collection.getFilteredByTag(tag)
+);
+debug(`Collection: collections.${tag} size: ${collections[tag].length}`);
+}
+return collections;
 }
 {{</ highlight >}}
 
@@ -160,12 +160,16 @@ Par exemple, voici comment créer une collection nommée `articles` constituée 
 générées à partir de modèles présents dans le dossier `src/articles/` :
 
 ```js
-eleventyConfig.addCollection("articles",
-  collection => collection
+eleventyConfig.addCollection("articles", (collection) =>
+  collection
     .getAllSorted()
-    .filter(item => item.url
-                 && ! item.inputPath.includes('index.njk')
-                 && item.inputPath.startsWith('./src/articles/')))
+    .filter(
+      (item) =>
+        item.url &&
+        !item.inputPath.includes("index.njk") &&
+        item.inputPath.startsWith("./src/articles/")
+    )
+);
 ```
 
 La fonction `addCollection()` prend deux paramètres[^addcollection] :
@@ -173,28 +177,29 @@ La fonction `addCollection()` prend deux paramètres[^addcollection] :
 - le nom de la collection (une chaîne de caractères)
 - une fonction qui prend une `collection` en paramètre.
 
-[^addcollection]: `addCollection()` ne fait rien d'autre qu'associer la fonction
-qui construit la collection au nom de la collection.
-La fonction qui construit la collection est elle-même appelée plus tard dans
-[`getUserConfigCollectionsData()`](https://github.com/11ty/eleventy/blob/7cac4ac0b6b99dd79d07ab94d1a443c276fe73db/src/TemplateMap.js#L167-L191).
+[^addcollection]:
+    `addCollection()` ne fait rien d'autre qu'associer la fonction
+    qui construit la collection au nom de la collection.
+    La fonction qui construit la collection est elle-même appelée plus tard dans
+    [`getUserConfigCollectionsData()`](https://github.com/11ty/eleventy/blob/7cac4ac0b6b99dd79d07ab94d1a443c276fe73db/src/TemplateMap.js#L167-L191).
 
-      ```js
-      addCollection(name, callback) {
-        name = this.getNamespacedName(name);
+    ```js
+    addCollection(name, callback) {
+      name = this.getNamespacedName(name);
 
-        if (this.collections[name]) {
-          throw new UserConfigError(
-            `config.addCollection(${name}) already exists. Try a different name for your collection.`
-          );
-        }
-
-        this.collections[name] = callback;
+      if (this.collections[name]) {
+        throw new UserConfigError(
+          `config.addCollection(${name}) already exists. Try a different name for your collection.`
+        );
       }
-      ```
+
+      this.collections[name] = callback;
+    }
+    ```
 
 Vous pourriez penser que le paramètre collection est un tableau d'objets de
-modèle  comme l'objet `collections` basé sur les tags. Ce paramètre est en fait
-une instance  d'une [`TemplateCollection`][template-collection], qui dérive de
+modèle comme l'objet `collections` basé sur les tags. Ce paramètre est en fait
+une instance d'une [`TemplateCollection`][template-collection], qui dérive de
 [`Sortable`][sortable-src], et ressemble à ceci :
 
 ```json
@@ -218,7 +223,7 @@ Utilisez plutôt les [méthodes suivantes][collection-methods] pour accéder aux
 <div class="table-caption">collection api methods</div>
 
 | Méthode                     | Description                                                                                    |
-| :---------------------------| :--------------------------------------------------------------------------------------------- |
+| :-------------------------- | :--------------------------------------------------------------------------------------------- |
 | `getAll()`                  | Récupérer tous les éléments dans un ordre spécifique.                                          |
 | `getAllSorted()`            | Récupérer tous les éléments dans l'ordre.                                                      |
 | `getFilteredByTag(tagName)` | Récupérer tous les éléments qui possèdent un tag spécifique.                                   |
@@ -238,16 +243,18 @@ Par exemple, voici comment vous créeriez une collection constituée d'un tablea
 de toutes les catégories :
 
 ```js
-module.exports = function(collection) {
-  let catSet = new Set()
+module.exports = function (collection) {
+  let catSet = new Set();
 
-  collection.getAllSorted().forEach(item =>
-        typeof item.data.category === "string"
-    &&  catSet.add(item.data.category))
+  collection
+    .getAllSorted()
+    .forEach(
+      (item) =>
+        typeof item.data.category === "string" && catSet.add(item.data.category)
+    );
 
-  return [...catSet]
+  return [...catSet];
 };
-
 ```
 
 <details style="margin-top: 1em" id=getUserConfigCollectionsData>
@@ -261,32 +268,33 @@ est la fonction qui appelle ce qui est retourné par la fonction `addCollection(
 
 {{< highlight js "hl_lines=6" >}}
 async getUserConfigCollectionsData() {
-  let collections = {};
-  let configCollections =
-    this.configCollections || eleventyConfig.getCollections();
-  for (let name in configCollections) {
-    let ret = configCollections[name](this.collection);
-    // work with arrays and strings returned from UserConfig.addCollection
-    if (
-      Array.isArray(ret) &&
-      ret.length &&
-      ret[0].inputPath &&
-      ret[0].outputPath
-    ) {
-      collections[name] = this.createTemplateMapCopy(ret);
-    } else {
-      collections[name] = ret;
-    }
-    debug(
-      `Collection: collections.${name} size: ${collections[name].length}`
-    );
-  }
-  return collections;
+let collections = {};
+let configCollections =
+this.configCollections || eleventyConfig.getCollections();
+for (let name in configCollections) {
+let ret = configCollections[name](this.collection);
+// work with arrays and strings returned from UserConfig.addCollection
+if (
+Array.isArray(ret) &&
+ret.length &&
+ret[0].inputPath &&
+ret[0].outputPath
+) {
+collections[name] = this.createTemplateMapCopy(ret);
+} else {
+collections[name] = ret;
+}
+debug(
+`Collection: collections.${name} size: ${collections[name].length}`
+);
+}
+return collections;
 }
 {{< /highlight >}}
 
 `getUserConfigCollectionsData()` est appelé dans `TemplateMap.cache()` qui est
 l'endroit où Eleventy construit les collections.
+
 </details>
 
 [sortable-src]: https://github.com/11ty/eleventy/blob/master/src/Util/Sortable.js

@@ -4,6 +4,6 @@ description: Formulaire de collecte des adresses pour l'envoi d'autocollants jam
 sitemap: false
 ---
 
-Vous souhaitez recevoir un échantillon?
+Vous avez contribué sur [notre OpenCollective](https://opencollective.com/jamstatic) et vous souhaitez recevoir un autocollant.
 
 {{< stickers >}}

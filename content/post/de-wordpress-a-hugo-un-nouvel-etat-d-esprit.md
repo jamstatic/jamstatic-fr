@@ -4,7 +4,7 @@ date: 2019-02-06T17:12:14+01:00
 lastmod: 2019-05-03T158:12:14+01:00
 description: "Comparons le fonctionnement de WordPress et de Hugo pour vous aider à vous familiariser avec ce nouvel environnement et vous imprégner de sa philosophie."
 images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:De%20WordPress%20%C3%A0%20Hugo%20%3A%20adopter%20un%20nouvel%20%C3%A9tat%20d'esprit/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:De%20WordPress%20%C3%A0%20Hugo%20%3A%20adopter%20un%20nouvel%20%C3%A9tat%20d'esprit/jamstatic/twitter-card.png
 categories:
   - hugo
 source:
@@ -17,7 +17,7 @@ Dans cet article, nous n'allons pas migrer un site de WordPress vers Hugo, nous 
 
 Nous allons soigneusement comparer les concepts d'Hugo et son vocabulaire avec ceux de WordPress, avec lesquels vous êtes déjà familier, afin que la courbe d'apprentissage soit un peu moins rude.
 
-Nous allons partir de `the_post()`, `the_loop` et de la hiérarchie de modèle,  pour mieux comprendre comment Hugo fonctionne !
+Nous allons partir de `the_post()`, `the_loop` et de la hiérarchie de modèle, pour mieux comprendre comment Hugo fonctionne !
 
 ## De WordPress à Hugo
 
@@ -57,6 +57,7 @@ Donc pour créer une page de type recette, vous pouvez soit écrire le front mat
 title: De délicieux cupcakes
 type: recette
 ---
+
 ```
 
 Ou vous reposer sur la structure de votre arborescence et laisser faire la magie :
@@ -122,7 +123,6 @@ title: À propos
 layout: about
 ---
 À propos de moi !
-
 ```
 
 ```txt
@@ -136,7 +136,7 @@ layouts
 
 Une bonne pratique WordPress consiste à utiliser la fonction `get_template_parts` pour inclure un fichier de votre thème. Cela permet d'hériter des variables globales définies par WordPress (`$post`, `$wp_query`, etc.) mais c'est tout.
 
-Dans Hugo, on parle de fichiers partiels. Ce sont des fichiers stockés dans  `layouts/partials` qui seront chargés lors de l'appel à la fonction `partial`.
+Dans Hugo, on parle de fichiers partiels. Ce sont des fichiers stockés dans `layouts/partials` qui seront chargés lors de l'appel à la fonction `partial`.
 
 Le truc à savoir c'est que cette fonction prend comme paramètre un périmètre ou un contexte. Par défaut aucune information relative à votre page se sera transmise dans le fichier partiel.
 
@@ -162,7 +162,7 @@ Dans WordPress, les données relatives à un article sont accessibles depuis les
 
 Hugo de son côté vous fourni un objet qui comprend des [variables et des méthodes](https://gohugo.io/variables/page/#readout) appelé le contexte de page et stocké dans le fameux point (`.`) mentionné plus tôt.
 
-Dans Hugo, les équivalents aux expressions WordPress citées un peu plus haut sont `.Permalink`,  `.Title` , `.Content`, `.Date`.
+Dans Hugo, les équivalents aux expressions WordPress citées un peu plus haut sont `.Permalink`, `.Title` , `.Content`, `.Date`.
 
 Vous vous rappelez du fichier partiel de toute à l'heure ? Et bien une fois le contexte de page précisé, vous avez accès à toutes les variables de la page dans ce fichier :
 
@@ -272,6 +272,7 @@ Et voici son élégante variante avec Hugo :
   </h2>
 {{ end }}
 ```
+
 {{< notice >}}
 Pour apprendre comment filtrer et ordonner les collections de pages dans Hugo,
 reportez-vous à la documentation de [range](https://gohugo.io/templates/introduction/#example-1-using-context), [where](https://gohugo.io/functions/where/#readout) et comment [ordonner le contenu](https://gohugo.io/templates/lists/#order-content).
@@ -430,6 +431,7 @@ Je sais! Moi aussi je ne me lasse pas de ces instructions sur deux lignes !
 Vous pouvez lancer des traitements d'images, soit à l'aide des tuyaux d'Hugo ou des [ressources de page](https://gohugo.io/content-management/page-resources/#readout).
 
 {{< notice >}}
+
 - [La révolution des tuyaux d'Hugo](https://regisphilibert.com/blog/2018/07/hugo-pipes-and-asset-processing-pipeline/)
 - [Traitement des images responsive avec Hugo](https://laurakalbag.com/processing-responsive-images-with-hugo/) | [Laura Kalbag](https://twitter.com/laurakalbag)
 - [Cache-bust et concatenation de fichiers JS/SCSS avec Hugo](https://blog.fullstackdigital.com/how-to-cache-bust-and-concatenate-js-and-sass-files-with-hugo-in-2018-9266fd3c411e) | [Ben Bozzay](https://twitter.com/BenBozzay)
@@ -469,6 +471,7 @@ Prenons pour exemple un projet fictif de clinique dentaire, où personne ne veut
 Avec WordPress il vous faudrait :
 
 - Thèmes
+
   - Un thème santé
   - Un thème dentaire enfant du thème santé
 
@@ -523,7 +526,7 @@ Au revoir WPML! 🥳
 
 Hugo gère nativement [le multilingue](https://gohugo.io/content-management/multilingual/#readout), y compris l'`i18n` et la traduction de chaînes de caractères.
 
-Reportez-vous à l'article complet de Régis Philibert  [sur la gestion multilingue dans Hugo]({{< ref "contenu-multilingue-avec-hugo" >}}).
+Reportez-vous à l'article complet de Régis Philibert [sur la gestion multilingue dans Hugo]({{< ref "contenu-multilingue-avec-hugo" >}}).
 
 ### Menus
 
@@ -562,7 +565,7 @@ Dans l'exemple ci-dessus, votre lien de navigation vers votre page _À propos_ a
 En plus de cela, les deux menus incluent un lien externe _Blog_ qui pointe vers votre ancien blog tumblr.
 
 Contrairement à WordPress, il n'y a pas de notion d'emplacement de menu.
-Vous appelez votre objet où vous voulez dans votre gabarit de page avec  `.Site.Menus.main`, `.Site.Menus.footer` or `.Site.Menus.cequevousvoulez` et vous bouclez ensuite dessus avec `range`.
+Vous appelez votre objet où vous voulez dans votre gabarit de page avec `.Site.Menus.main`, `.Site.Menus.footer` or `.Site.Menus.cequevousvoulez` et vous bouclez ensuite dessus avec `range`.
 
 Encore une fois allez voir la [doc](https://gohugo.io/templates/menu-templates/#readout) pour apprendre à ajouter des menus dans vos gabarits de page, c'est une grande avancée par rapport aux bons vieux _Walkers_ (ici c'est plus 🏃‍♀️).
 
@@ -584,6 +587,7 @@ vous écrivez :
 ```go-html-template
 {{ with .Params.subtitle }}{{ . }}{{ end }}
 ```
+
 .................................................... ☝️ Vous allez l'aimer ce point !
 
 ### Les options génériques du site
@@ -594,7 +598,7 @@ Et bien une fois de plus, si vous avez pratiqué WordPress après 2013, il y a d
 
 Hugo vous propose deux manière de faire. Vous pouvez ajouter des variables personnalisés comme `tagline` à l'objet `Params` dans le fichier de configuration principal de votre site et les récupérer avec `.Site.Params.tagline` par exemple.
 
-Si vous avez des ensembles de données plus complexes, vous pouvez ajouter des fichiers  `yaml|toml|json` dans votre dossier `data/`. Tout ce qui s'y trouve sera agrégé dans un objet bien pratique `.Site.Data` accessible dans vos gabarits.
+Si vous avez des ensembles de données plus complexes, vous pouvez ajouter des fichiers `yaml|toml|json` dans votre dossier `data/`. Tout ce qui s'y trouve sera agrégé dans un objet bien pratique `.Site.Data` accessible dans vos gabarits.
 
 Donc si vous voulez que vos contributeurs puissent gérer les liens vers les réseaux sociaux ainsi que des options génériques, vous pouvez ajouter deux fichiers dans le répertoire `data`.
 
@@ -628,6 +632,7 @@ Et dans votre fichier partiel…
 </ul>
 {{ end }}
 ```
+
 {{< notice >}}
 [Utilisation des fichiers de données dans Hugo par l'exemple](https://novelist.xyz/tech/hugo-data-files/) | [Peter Y. Chuang](https://twitter.com/peterychuang)
 {{</notice >}}

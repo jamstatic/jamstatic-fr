@@ -1,6 +1,12 @@
 ---
 title: "La fonction .Scratch d’Hugo"
 description: Pendant longtemps, la fonction Scratch a été le seul moyen d'écraser des variables en Go Templating. Elle reste toujours le meilleur moyen d'enrichir votre contexte de page ou de shortcode dans Hugo.
+excerpt: |
+  Si vous avez aimé l’article de
+  [Régis Philibert](https://regisphilibert.com/) à propos de [la gestion du
+  contexte](/2018/02/08/hugo-le-point-sur-le-contexte/) dans les fichiers
+  de gabarits de page, vous devriez tout autant apprécier cette
+  explication par l’exemple de la fonction <code>.Scratch</code> du langage de templating d'Hugo. Ça vous démange ? Voyons tout cela en détail.
 date: 2018-02-09T20:50:50+01:00
 lastmod: 2018-08-29T10:09:47-05:00
 images:
@@ -11,18 +17,6 @@ source:
   author: Régis Philibert
   title: "Hugo .Scratch explained"
   url: https://regisphilibert.com/blog/2017/04/hugo-scratch-explained-variable/
----
-
-{{< intro >}}
-
-Si vous avez aimé l’article de
-[Régis Philibert](https://regisphilibert.com/) à propos de [la gestion du
-contexte]({{< relref "hugo-le-point-sur-le-contexte.md" >}}) dans les fichiers
-de gabarits de page, vous devriez tout autant apprécier cette
-explication par l’exemple de la fonction `.Scratch` du langage de templating d'Hugo. Ça vous démange ? Voyons tout cela en détail.
-
-{{< /intro >}}
-
 ---
 
 {{< notice update >}} Vous êtes ici pour apprendre à écraser une variable dans un gabarit de page ? Bonne nouvelle, vous n'avez plus besoin de la fonction `.Scratch` pour cela depuis la version 0.48 d'Hugo. Malgré cela, `.Scratch` reste encore utile pour plein d'autres choses ! {{< /notice >}}

@@ -5,7 +5,7 @@ lastmod: "2018-01-17 10:10:00 +0100"
 description: >
   Un guide complet pour installer et créer un thème pour Jekyll par David Darnes.
 images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Cr%C3%A9er%20votre%20premier%20th%C3%A8me%20pour%20Jekyll/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Cr%C3%A9er%20votre%20premier%20th%C3%A8me%20pour%20Jekyll/jamstatic/twitter-card.png
 source:
   lang: en
   title: "Making your first Jekyll theme: Part 1"
@@ -370,35 +370,35 @@ Pour le moment nous avons donc la structure suivante :
 
 Voyons à quoi servent les différents dossiers et fichiers présents :
 
--  `_includes` : vide pour le moment, il sert à stocker les fichiers de gabarits
-   partiels,
+- `_includes` : vide pour le moment, il sert à stocker les fichiers de gabarits
+  partiels,
 
--  `_layouts` : contient pour le moment trois exemples de gabarits :
-   `default.html`, `post.html` and `page.html`,
+- `_layouts` : contient pour le moment trois exemples de gabarits :
+  `default.html`, `post.html` and `page.html`,
 
--  `_sass` : vide pour le moment, destiné à stocker vos fichiers Sass,
+- `_sass` : vide pour le moment, destiné à stocker vos fichiers Sass,
 
--  `assets` : également vide pour le moment, ce dossier contiendra tous les
-   fichiers statiques dont vous aurez besoin pour votre site : CSS, JS, polices
-   de caractères, images, etc. C’est dans ce dossier que nous placerons le
-   fichier de styles principal `styles.scss` qui génèrera un fichier `styles.css`
-   auquel nous ferons référence dans notre modèle de page,
+- `assets` : également vide pour le moment, ce dossier contiendra tous les
+  fichiers statiques dont vous aurez besoin pour votre site : CSS, JS, polices
+  de caractères, images, etc. C’est dans ce dossier que nous placerons le
+  fichier de styles principal `styles.scss` qui génèrera un fichier `styles.css`
+  auquel nous ferons référence dans notre modèle de page,
 
--  le fichier `Gemfile` - qui indique à Bundler quelles gems sont nécessaires, et
-   qui pointe vers le fichier `.gemspec`,
+- le fichier `Gemfile` - qui indique à Bundler quelles gems sont nécessaires, et
+  qui pointe vers le fichier `.gemspec`,
 
--  le fichier `mon-super-theme.gemspec` dans lequel nous stockons toutes les
-   inforamtions relatives à notre thème, ainsi que les gems dont il dépend. On y
-   définira le numéro de version ainsi que la liste des fichiers de notre thème
-   défini à l’aide de `spec.files`. Vous n'avez pas besoin d’éditer cette liste,
-   qui respecte déjà la
-   [convention standard des thèmes Jekyll](https://jekyllrb.com/docs/themes/#creating-a-gem-based-theme),
+- le fichier `mon-super-theme.gemspec` dans lequel nous stockons toutes les
+  inforamtions relatives à notre thème, ainsi que les gems dont il dépend. On y
+  définira le numéro de version ainsi que la liste des fichiers de notre thème
+  défini à l’aide de `spec.files`. Vous n'avez pas besoin d’éditer cette liste,
+  qui respecte déjà la
+  [convention standard des thèmes Jekyll](https://jekyllrb.com/docs/themes/#creating-a-gem-based-theme),
 
--  des fichiers `LICENSE.txt` et `README.md` qui contiendront le fichier de
-   licence de votre theme ainsi qu'un fichier README pour les instructions
-   d’installation et d’utilisation de votre thème. Nous avons vu plus haut qu'il
-   est important de
-   [bien documenter votre thème](#trucs-et-astuces-pour-créer-un-super-thème).
+- des fichiers `LICENSE.txt` et `README.md` qui contiendront le fichier de
+  licence de votre theme ainsi qu'un fichier README pour les instructions
+  d’installation et d’utilisation de votre thème. Nous avons vu plus haut qu'il
+  est important de
+  [bien documenter votre thème](#trucs-et-astuces-pour-créer-un-super-thème).
 
 Voilà pour la structure d’un thème - tout le reste, comme les exemples de
 contenu qui vous pourriez fournir devraient être ignorés par les fichiers
@@ -485,7 +485,7 @@ votre thème. Dans mon cas ça donne :
 
 ```yaml
 plugins:
-    - jekyll-remote-theme
+  - jekyll-remote-theme
 
 remote_theme: daviddarnes/alembic
 ```

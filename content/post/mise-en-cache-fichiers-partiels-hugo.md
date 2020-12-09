@@ -4,7 +4,7 @@ description: "Apprenez à optimiser le cache des fichiers partiels pour reduire 
 date: 2019-12-03T18:10:24+01:00
 lastmod: 2019-12-07T18:13:54+01:00
 images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Gestion%20du%20cache%20des%20fichiers%20partiels%20avec%20Hugo/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Gestion%20du%20cache%20des%20fichiers%20partiels%20avec%20Hugo/jamstatic/twitter-card.png
 categories:
   - hugo
 source:
@@ -67,7 +67,7 @@ Le code de notre menu Hugo contient souvent quelque chose comme :
 
 Le code ci-dessus parle quasiment de lui-même. Notre projet comporte un menu principal avec cinq entrées, chacune pointant vers une section du site. Pour rendre active l'entrée **Blog** du menu lorsqu'on se trouve sur une page de la section Blog, nous comparons la section de la page visitée (`$currentPage.Section`) avec celle de l'entrée de menu (`.Page.Section`).
 
-Avec le `{{ partialCached "header.html" . }}` actuel, Hugo va maintenant évaluer une seule fois la condition de ce `if` et appliquer son résultat à toutes les pages suivantes générées,  et ce quelle que soit leur section.
+Avec le `{{ partialCached "header.html" . }}` actuel, Hugo va maintenant évaluer une seule fois la condition de ce `if` et appliquer son résultat à toutes les pages suivantes générées, et ce quelle que soit leur section.
 
 Heureusement il y a les variantes de partiel.
 
@@ -77,7 +77,7 @@ Nous savons que notre entête va seulement être modifié cinq fois, en fonction
 
 Contrairement à la fonction `partial`, les arguments de `partialCached` ne se limitent pas au contexte.
 
-Pour nos cas d'utilisation, il est clair que la variante est la  `.Section` de la page courante, nous pouvons donc écrire ceci :
+Pour nos cas d'utilisation, il est clair que la variante est la `.Section` de la page courante, nous pouvons donc écrire ceci :
 
 ```go-html-template
 {{ partialCached "navigation.html" . .Section }}
@@ -162,9 +162,10 @@ Nous avons maintenant une chaîne de caractères que nous pouvons passer comme v
 
 Grâce à cela, nous sommes maintenant assurés qu'Hugo ne génèrera qu'une seule variante par combinaison d'auteurs, soit 7 au maximum.
 
-{{< notice info >}}
- ### Pourquoi ordonner les auteurs ?
- En les classant par ordre alphabétique, nous nous assurons de ne pas créer des variantes inutiles, et ce que quel que soit l'ordre dans lequel les auteurs ont été listés dans le front matter.
+{{< notice >}}
+### Pourquoi ordonner les auteurs ?
+
+En les classant par ordre alphabétique, nous nous assurons de ne pas créer des variantes inutiles, et ce que quel que soit l'ordre dans lequel les auteurs ont été listés dans le front matter.
 {{< /notice >}}
 
 {{< notice tip >}}

@@ -6,7 +6,7 @@ description: "Maintenant que les partiels peuvent retourner tout type de donnée
 categories:
   - hugo
 images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Des%20fonctions%20dans%20nos%20partiels%20Hugo%20!/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Des%20fonctions%20dans%20nos%20partiels%20Hugo%20!/jamstatic/twitter-card.png
 source:
   author: "Régis Philibert"
   title: "The Full Partial Series Part 2: Returning partials!"
@@ -84,6 +84,7 @@ Ici ☝️ la valeur `.Params.temperature` sera ignorée et c'est 😎 qui sera 
   {{ return . }}
 {{ end }}
 ```
+
 Même chose ici ☝️, `return` doit se trouver à la racine et ne peut pas être appelé dans une instruction imbriquée.
 
 ### 🚫 Pas de multiples instructions `return`
@@ -128,6 +129,7 @@ Tout comme pour `if`, `with`, `range` et leurs amis, ce qui suit `return` n'a pa
 ```go-html-template
 {{ return gt .Params.temperature 50 }}
 ```
+
 ☝️ Cette notation est valide et retournera un booléen.
 {{< /notice >}}
 
@@ -149,7 +151,7 @@ Là où ça devient intéressant c'est qu'on peut stocker la valeur retournée !
 
 Du moins celles que j'ai adoptées…
 
-Pour bien distinguer mes partiels classiques de ceux qui retournent des valeurs de tous types, j'ai pris pour habitude de ranger ces derniers dans le dossier  `layouts/partials/func/`. Cela a au moins le mérite de les isoler des partiels plus conventionnels, sans avoir non plus à avoir à taper beaucoup plus de caractères lors de leur appel.
+Pour bien distinguer mes partiels classiques de ceux qui retournent des valeurs de tous types, j'ai pris pour habitude de ranger ces derniers dans le dossier `layouts/partials/func/`. Cela a au moins le mérite de les isoler des partiels plus conventionnels, sans avoir non plus à avoir à taper beaucoup plus de caractères lors de leur appel.
 
 ```go-html-template
 {{ partial "func/emoji.html" . }}
@@ -174,6 +176,7 @@ Enfin, j'aime bien utiliser la casse _CamelCase_ ainsi qu'un verbe autant que po
   Emoji: {{ . }}
 {{ end }}
 ```
+
 ## Coder nos partiels de fonction
 
 Bien, la partie théorique était intéressante, maintenant il est temps de faire craquer quelques articulations et de nous mettre à taper au clavier ! Ensemble nous allons essayer de répondre à un besoin de base : _lister les termes des taxonomies de nos projets Hugo de manière efficace_.
@@ -188,6 +191,7 @@ tags:
   - Paris
   - Musée
 ---
+
 ```
 
 Pour les lister sous forme de liens cliquables, vous devez construire vous même ces dits liens, en vous basant sur ces chaînes transformées en URLs ou en récupérant l'objet page à l'aide de `.GetPage` ou `.Site.Taxonomies`.
@@ -221,9 +225,10 @@ Quant à l'appel de ce type de partiel, il devrait être aussi concis que cela :
 {{/* 5. */}
 {{ return $tag }}
 ```
+
 1. Nous commençons par initialiser notre _variable retournée_ à sa valeur par défaut
 2. `site.Taxonomies.tags` retourne une collection de tous les tags du site avec leur objet `.Page`. Le _point_ représente le contexte de notre partiel, ici le nom de notre tag, que nous transformons en URL pour correspondre à sa clef dans `site.Taxonomies.tags`.
-3. Nous avons de fortes chances de tomber sur une  `.Page`, mais `with` ajoute une vérification supplémentaire et nous permet en plus de changer de contexte.
+3. Nous avons de fortes chances de tomber sur une `.Page`, mais `with` ajoute une vérification supplémentaire et nous permet en plus de changer de contexte.
 4. Nous stockons le tag de la page dans notre _variable retournée_.
 5. 🎉
 
@@ -271,7 +276,7 @@ Nous mettons donc notre partiel à jour :
 {{ return $return }}
 ```
 
-1. Maintenant que nous passons un argument `term`, nommer notre variable retournée `$term` pourrait prêter à confusion. Appelons la maintenant `$return`  pour bien marquer que c'est **la** _variable retournée_.
+1. Maintenant que nous passons un argument `term`, nommer notre variable retournée `$term` pourrait prêter à confusion. Appelons la maintenant `$return` pour bien marquer que c'est **la** _variable retournée_.
 2. Si aucun argument `.term` n'est présent, la _variable retournée_ devrait rester vide. Avant d'aller plus loin, nous faisons appel à `with` pour nous assurer que `.term` est bien défini et nous stockons cette valeur initiale afin de pouvoir y accéder quelque que soit notre contexte. Ces quelques lignes sont d'ailleurs une très bonne illustration de changements de contexte !
 3. 🎉
 
@@ -301,6 +306,7 @@ C'est l'occasion idéale de voir comment appeler un _partiel de fonction_ depuis
 {{/* 6. */}}
 {{ return $return }}
 ```
+
 1. Nous voulons être sûrs de pouvoir parcourir la valeur de notre variable retournée à l'aide de la fonction `range`. Afin de nous assurer de retourner un tableau (`slice`), nous initialisons notre variable avec un tableau vide.
 2. La fonction `range` ne bronchera pas avec un tableau vide, mais tout autre type de valeur entraînerait une erreur de génération. Il est donc toujours plus sage de tester à l'aide d'un `with`, sauf si vous êtes vraiment sûrs de retourner un tableau.
 3. Nous appelons notre précédent partiel de fonction, mais cette fois nous le mettons en cache. Pour les variantes, nous utilisons les deux valeurs de ses arguments.
@@ -336,7 +342,7 @@ Bien entendu ! Nous pourrions :
 
 Après avoir vu les bases, nous avons pu développer deux partiels de fonction qui nous aideront grandement dans la maintenance de l'affichage des taxonomies de notre site.
 
-Et si nous avons besoin d’afficher seulement certains articles ou bien tous les articles mais en excluant certains tags ? Cela se passera dans la fonction `GetTags` et pas ailleurs !  Et si dans une prochaine version Hugo introduit un moyen plus efficace de gérer les termes d’une taxonomie ? Nous ajusterons notre fonction `GetTerm` !
+Et si nous avons besoin d’afficher seulement certains articles ou bien tous les articles mais en excluant certains tags ? Cela se passera dans la fonction `GetTags` et pas ailleurs ! Et si dans une prochaine version Hugo introduit un moyen plus efficace de gérer les termes d’une taxonomie ? Nous ajusterons notre fonction `GetTerm` !
 
 Avec ses _partiels de fonction_, Hugo répond enfin à la séparation des problématiques de templating et de gestion des données, en permettant la réutilisabilité et le typage de données !
 

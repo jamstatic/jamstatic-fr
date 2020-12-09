@@ -4,13 +4,13 @@ description: Traduction française de l’entretien publié le 11 mars 2016 sur 
 date: 2016-04-19
 author: bertrand
 images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_60,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Entretien%20avec%20Parker%20Moore%20de%20Jekyll/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_60,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Entretien%20avec%20Parker%20Moore%20de%20Jekyll/jamstatic/twitter-card.png
 categories:
   - jekyll
 source:
   title: Interview with Parker Moore from Jekyll
   url: https://www.netlify.com/blog/2016/03/11/interview-with-parker-moore-from-jekyll
-  author:  Aaron Autrand
+  author: Aaron Autrand
   lang: en
 ---
 
@@ -42,6 +42,7 @@ développement du service Github Pages. Mon travail consiste aussi à maintenir
 Jekyll et à faire grandir la communauté autour du projet.
 
 ### Peux-tu nous dire comment tu as été amené à t'impliquer dans Jekyll et ce qui
+
 s'est passé depuis pour aboutir à la mise en ligne de la version 3.0 de Jekyll
 ?
 
@@ -93,6 +94,7 @@ encore et encore. Je changeais la couleur de fond avec un attribut… je faisais
 tous ces trucs bêtes et ordinaires.
 
 ### Quelle fut ta première rencontre avec les générateurs de site statique modernes
+
 ?
 
 Je ne me souviens pas plus loin que de mon expérience avec Jekyll à Cornell. Je
@@ -104,6 +106,7 @@ plus d’étoiles sur Github et avait l’air d’être le plus populaire. Les g
 emprunté cette direction.
 
 ### C'était donc une question de masse critique ? Il y avait pas mal de gens, donc
+
 tu savais que c'était vivant et actif.
 
 Tu sors dans les endroits branchés en général non ? Je me suis dit qu'il y
@@ -155,6 +158,7 @@ lexique. Quelque chose qui explique tout ça très bien, sans utiliser de mots q
 font peur.
 
 ### En tant que mainteneur de Jekyll, qu'aimerais-tu dire, communiquer à ceux qui
+
 s'intéressent aux technologies autour du web statique moderne ? La tribune est à
 toi.
 

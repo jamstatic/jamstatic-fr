@@ -19,6 +19,7 @@ On assiste depuis quelques années à [une mouvance statique](https://frank.tail
 Sur ce site vous trouverez l'actualité relative aux principaux générateurs, tels que [Eleventy](/categories/eleventy/ "Catégorie Eleventy"), [Hugo](/categories/hugo/ "Catégorie Hugo"), [Next.js](/categories/nextjs/ "Catégorie Next.js") ou encore [Gatsby](/categories/gatsby/ "Catégorie Gatsby"), des exemples d'utilisation, des traductions d'articles de référence, des retours d'expérience, des entretiens et bien plus encore.
 
 Nous échangeons également beaucoup sur [notre Slack](https://jamstatic.fr/slack), n'hésitez à nous rejoindre !
+
 ## Nous soutenir
 
 <script src='https://opencollective.com/jamstatic/banner.js'></script>
@@ -44,4 +45,3 @@ L'ensemble des billets est publié en sous licence [Creative Commons Attribution
 - [Régis Philibert](https://regisphilibert.com/fr/)
 - [Boris Schapira](https://boris.schapira.dev)
 - [Frank Taillandier](https://frank.taillandier.me)
-

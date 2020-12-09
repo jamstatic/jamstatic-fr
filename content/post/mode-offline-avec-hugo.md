@@ -7,7 +7,7 @@ source:
   url: https://gohugohq.com/howto/go-offline-with-service-worker/
   lang: en
 images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Passez%20en%20mode%20hors-connexion%20avec%20un%20Service%20Worker%20et%20Hugo%20!/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Passez%20en%20mode%20hors-connexion%20avec%20un%20Service%20Worker%20et%20Hugo%20!/jamstatic/twitter-card.png
 categories:
   - hugo
 ---
@@ -39,29 +39,29 @@ de le rendre ultra-performant.
 Si vous n'avez pas encore entendu parler des Service Workers et que vous voulez
 en savoir plus sur le sujet, merci de consulter les liens suivants :
 
--  **[Votre première Progressive Web App](https://developers.google.com/web/fundamentals/getting-started/codelabs/your-first-pwapp/)**
+- **[Votre première Progressive Web App](https://developers.google.com/web/fundamentals/getting-started/codelabs/your-first-pwapp/)**
   publié sur Google Developers
 
--  **[L'API Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)**
+- **[L'API Service Worker](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)**
   publié sur MDN Mozilla Developer Network
 
--  **[Service Worker Revolution](https://ponyfoo.com/articles/serviceworker-revolution)**
+- **[Service Worker Revolution](https://ponyfoo.com/articles/serviceworker-revolution)**
   publié chez Ponyfoo
 
--  **[Tout ce que vous devez savoir pour créer vos premières applications hors-ligne](https://github.com/pazguille/offline-first)** sur Github
+- **[Tout ce que vous devez savoir pour créer vos premières applications hors-ligne](https://github.com/pazguille/offline-first)** sur Github
 
 Maintenant que vous avez lu tout ça — ou du moins que vous avez compris de quoi
 il en retourne — voici ce que nous allons faire :
 
--  **Installer un Service Worker** à partir d’un exemple dans Hugo.
+- **Installer un Service Worker** à partir d’un exemple dans Hugo.
 
--  **Afficher une page hors-connexion personnalisée** en cas de panne de réseau
+- **Afficher une page hors-connexion personnalisée** en cas de panne de réseau
   ou si la page n'est pas en cache
 
--  **Afficher une page d’erreur 404 personnalisée** en cas de requêtes HHTP
+- **Afficher une page d’erreur 404 personnalisée** en cas de requêtes HHTP
   retournant une erreur client de type 4xx
 
--  **Ajouter un fichier `manifest.json`** pour définir l’apparence de
+- **Ajouter un fichier `manifest.json`** pour définir l’apparence de
   l’application Web sur mobile.
 
 ## Prérequis
@@ -145,13 +145,13 @@ Le fichier **layouts/404.html** :
 
 ```html
 <html>
- <head>
-  <title>{{ .Title }}</title>
- </head>
- <body>
+  <head>
+    <title>{{ .Title }}</title>
+  </head>
+  <body>
     <h1>{{ .Title }}</h1>
     {{ .Content }}
- </body>
+  </body>
 </html>
 ```
 
@@ -162,11 +162,11 @@ de démarrage au chargement du site depuis l’écran d’accueil.
 
 Les tailles suivantes sont recommandées :
 
--  128px × 128px
--  144px × 144px
--  152px × 152px
--  192px × 192px
--  256px × 256px
+- 128px × 128px
+- 144px × 144px
+- 152px × 152px
+- 192px × 192px
+- 256px × 256px
 
 Pour les générer rapidement, vous pouvez utiliser un service comme
 [favicomatic.com](http://www.favicomatic.com/).
@@ -260,7 +260,7 @@ Pour que le navigateur soit en mesure de détecter votre `manifest.json`, ajoute
 le bout du code suivant dans le `<head>` de vos modèles :
 
 ```html
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="/manifest.json" />
 ```
 
 ### Installation du Service Worker
@@ -633,7 +633,7 @@ const BASE_CACHE_FILES = [
   "/script.js",
   "/search.json",
   "/manifest.json",
-  "/favicon.png"
+  "/favicon.png",
 ];
 ```
 
@@ -643,11 +643,7 @@ défaut
 #### Fichiers en mode hors-connexion
 
 ```js
-const OFFLINE_CACHE_FILES = [
-    '/style.css',
-    '/script.js',
-    '/offline/index.html',
-];
+const OFFLINE_CACHE_FILES = ["/style.css", "/script.js", "/offline/index.html"];
 ```
 
 Listez dans ce tableau les fichiers nécessaires pour l’affichage de votre page
@@ -656,11 +652,7 @@ Listez dans ce tableau les fichiers nécessaires pour l’affichage de votre pag
 #### Fichiers en cas d’erreur 4xx
 
 ```js
-const NOT_FOUND_CACHE_FILES = [
-    '/style.css',
-    '/script.js',
-    '/404.html',
-];
+const NOT_FOUND_CACHE_FILES = ["/style.css", "/script.js", "/404.html"];
 ```
 
 Listez dans ce tableau les fichiers nécessaires pour l’affichage de votre page
@@ -669,7 +661,7 @@ d’erreur 404.
 #### Page hors-connexion
 
 ```js
-const OFFLINE_PAGE = '/offline/index.html';
+const OFFLINE_PAGE = "/offline/index.html";
 ```
 
 C’est la page qui sera affichée quand le visiteur sera déconnecté du réseau ou
@@ -678,7 +670,7 @@ que la page n'est pas déjà en cache.
 #### Page d’erreur
 
 ```js
-const NOT_FOUND_PAGE = '/404.html';
+const NOT_FOUND_PAGE = "/404.html";
 ```
 
 Le chemin de la page qui sera affichée en cas d’erreur de type 4xx.
@@ -691,7 +683,7 @@ const MAX_TTL = {
   html: 3600,
   json: 86400,
   js: 86400,
-  css: 86400
+  css: 86400,
 };
 ```
 
@@ -716,11 +708,11 @@ jour du cache par le Service Worker.
 
 ```js
 const CACHE_BLACKLIST = [
-    (str) => {
-        // str = URL de la ressource
-        // Appliquez cette règle lorsque vous ne voulez pas mettre des fichiers externes en cache
-        return !str.startsWith('https://votresiteweb.tld');
-    },
+  (str) => {
+    // str = URL de la ressource
+    // Appliquez cette règle lorsque vous ne voulez pas mettre des fichiers externes en cache
+    return !str.startsWith("https://votresiteweb.tld");
+  },
 ];
 ```
 
@@ -733,19 +725,17 @@ dans votre fichier JavaScript généré :
 
 ```html
 <script>
-    if('serviceWorker' in navigator) {
-        navigator.serviceWorker
-            .register('/sw.js', { scope: '/' })
-            .then(function(registration) {
-                console.log('Service Worker enregistré');
-            });
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .register("/sw.js", { scope: "/" })
+      .then(function (registration) {
+        console.log("Service Worker enregistré");
+      });
 
-        navigator.serviceWorker
-            .ready
-            .then(function(registration) {
-                console.log('Service Worker prêt');
-            });
-    }
+    navigator.serviceWorker.ready.then(function (registration) {
+      console.log("Service Worker prêt");
+    });
+  }
 </script>
 ```
 

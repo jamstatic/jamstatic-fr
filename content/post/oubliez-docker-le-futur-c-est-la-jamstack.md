@@ -6,7 +6,7 @@ lastmod: 2018-01-26T01:09:11+01:00
 categories:
   - jamstack
 images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Oubliez%20Docker%252C%20le%20futur%20c'est%20la%20Jamstack/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Oubliez%20Docker%252C%20le%20futur%20c'est%20la%20Jamstack/jamstatic/twitter-card.png
 source:
   author: "Mike Carlisle"
   title: "Forget Docker, the future is Jamstack"

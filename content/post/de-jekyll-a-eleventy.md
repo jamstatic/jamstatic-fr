@@ -4,7 +4,7 @@ date: 2019-09-07T10:59:06+02:00
 lastmod: 2019-09-07T12:24:06+02:00
 description: "Retour d'expérience du passage de Jekyll à Eleventy."
 images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:De%20Jekyll%20%C3%A0%20Eleventy/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:De%20Jekyll%20%C3%A0%20Eleventy/jamstatic/twitter-card.png
 categories:
   - eleventy
   - jekyll
@@ -52,12 +52,12 @@ Nunjucks n'offre pas de filtres `date` et `limit`, je les ai donc ajoutés dans 
 const moment = require("moment");
 
 // limit filter
-eleventyConfig.addNunjucksFilter("limit", function(array, limit) {
+eleventyConfig.addNunjucksFilter("limit", function (array, limit) {
   return array.slice(0, limit);
 });
 
 // date filter
-eleventyConfig.addNunjucksFilter("date", function(date, format) {
+eleventyConfig.addNunjucksFilter("date", function (date, format) {
   return moment(date).format(format);
 });
 ```
@@ -110,24 +110,24 @@ Pour créer les deux collections et permettre à Eleventy de générer les fichi
 ```js
 const moment = require("moment");
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   // blogpost collection
-  eleventyConfig.addCollection("blogposts", function(collection) {
+  eleventyConfig.addCollection("blogposts", function (collection) {
     return collection.getFilteredByGlob("./src/blogposts/*.md");
   });
 
   // projects collection
-  eleventyConfig.addCollection("projects", function(collection) {
+  eleventyConfig.addCollection("projects", function (collection) {
     return collection.getFilteredByGlob("./src/projects/*.md");
   });
 
   // limit filter
-  eleventyConfig.addNunjucksFilter("limit", function(array, limit) {
+  eleventyConfig.addNunjucksFilter("limit", function (array, limit) {
     return array.slice(0, limit);
   });
 
   // date filter
-  eleventyConfig.addNunjucksFilter("date", function(date, format) {
+  eleventyConfig.addNunjucksFilter("date", function (date, format) {
     return moment(date).format(format);
   });
 
@@ -135,8 +135,8 @@ module.exports = function(eleventyConfig) {
   return {
     dir: {
       input: "src",
-      output: "dist"
-    }
+      output: "dist",
+    },
   };
 };
 ```
@@ -150,12 +150,13 @@ J'ai donc utilisé un fichier `./src/_data/site.js` pour définir des variables 
 ```js
 module.exports = {
   title: "Webstoemp",
-  description: "Webstoemp is the portfolio and blog of Jérôme Coupé, a designer and front-end developer from Brussels, Belgium.",
+  description:
+    "Webstoemp is the portfolio and blog of Jérôme Coupé, a designer and front-end developer from Brussels, Belgium.",
   url: "https://www.webstoemp.com",
   baseUrl: "/",
   author: "Jerôme Coupé",
   authorTwitter: "@jeromecoupe",
-  buildTime: new Date()
+  buildTime: new Date(),
 };
 ```
 
@@ -220,7 +221,7 @@ J'utilise un layout dédié pour afficher le détail de chaque article de blog. 
       </div>
     </div>
 
-    <div class="c-blogpost__body  l-container  l-container--narrow">
+    <div class="c-blogpost__body  l-container l-container--narrow">
 
       <header>
         <p class="c-suptitle  c-suptitle--dark"><time datetime="{{ page.date | date('Y-M-DD') }}">{{ page.date | date("MMMM Do, YYYY") }}</time></p>

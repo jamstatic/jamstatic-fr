@@ -1,11 +1,13 @@
 ---
 title: "Passer au statique : 5 raisons de tester la Jamstack sur votre prochain projet"
-description:
-  Référencement, performance, sécurité, automatisation, communauté grandissante,
-  les raisons de passer au statique ne manquent pas.
+description: >
+  Référencement, performance, sécurité, automatisation, communauté grandissante, les raisons de passer au statique ne manquent pas.
 date: 2017-03-16
+excerpt: |
+  Adopter une stack de développement Web moderne pour pouvoir
+  générer des sites statiques présente bien des avantages et Tom Bennet en a listé cinq des principaux. Si vous n'aviez encore jamais entendu parlé de la Jamstack, cet article donne un aperçu global du processus et de l’écosystème actuel ainsi que des gains engendrés. Vous trouverez également des lectures pour approfondir votre connaissance sur le sujet.
 images:
-- https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1280,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_72_ultrabold_line_spacing_-30:5%20raisons%20de%20tester%20la%20Jamstack/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1280,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_72_ultrabold_line_spacing_-30:5%20raisons%20de%20tester%20la%20Jamstack/jamstatic/twitter-card.png
 source:
   author: Tom Bennet
   title: "Go static: 5 reasons to try Jamstack on your next project"
@@ -14,19 +16,6 @@ source:
 categories:
   - jamstack
   - headless
----
-
-{{< intro >}}
-
-Adopter une stack de développement Web moderne pour pouvoir
-générer des sites statiques présente bien des avantages et Tom Bennet en a listé
-cinq des principaux. Si vous n'aviez encore jamais entendu parlé de la Jamstack,
-cet article donne un aperçu global du processus et de l’écosystème actuel ainsi
-que des gains engendrés. Vous trouverez également des lectures pour approfondir
-votre connaissance sur le sujet.
-
-{{< /intro >}}
-
 ---
 
 Que ce soit pour mettre en place un blog, configurer un site de e-commerce ou

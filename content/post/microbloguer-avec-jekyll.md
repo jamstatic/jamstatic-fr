@@ -3,9 +3,9 @@ title: Microbloguer avec Jekyll
 description: "Un microblog est un blog qui publie des articles courts, le plus souvent sans titre. Rejoignez la communauté IndieWeb et configurez votre site pour pour publier vos notes pour ensuite les envoyer sur Twitter."
 date: 2018-09-07 14:26:04 +0000
 images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Microbloguer%20avec%20Jekyll/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Microbloguer%20avec%20Jekyll/jamstatic/twitter-card.png
 categories:
-- jekyll
+  - jekyll
 source:
   author: Fiona Voss
   title: Microblogging in Jekyll
@@ -37,10 +37,11 @@ Voici à quoi ressemble le fichier Markdown d'une note. Ça ressemble à un post
 ```md
 ---
 layout: post
-date: '2018-03-25T00:05:43.780Z'
-title: ''
-slug: '343'
+date: "2018-03-25T00:05:43.780Z"
+title: ""
+slug: "343"
 ---
+
 Je poste sur mon site Jekyll depuis mon téléphone à l'aide de l'application iOS Micro.blog. Maintenant je peux représenter le web indépendant à la RailsConf !
 ```
 
@@ -95,10 +96,10 @@ C'est une application qui crée un point d'accès Micropub pour les sites Jekyll
 J'ai dû d'abord ajouter quelques lignes de code dans la balise `<head>` pour l'authentification :
 
 ```html
-<link rel="authorization_endpoint" href="https://indieauth.com/auth">
-<link rel="token_endpoint" href="https://tokens.indieauth.com/token">
-<link href="https://twitter.com/fionajvoss" rel="me">
-<link href="https://github.com/FionaVoss" rel="me">
+<link rel="authorization_endpoint" href="https://indieauth.com/auth" />
+<link rel="token_endpoint" href="https://tokens.indieauth.com/token" />
+<link href="https://twitter.com/fionajvoss" rel="me" />
+<link href="https://github.com/FionaVoss" rel="me" />
 ```
 
 Les deux premières lignes indiquent à Micropub quel service d'authentification
@@ -107,14 +108,17 @@ manière à ce que je puisse m'authentifier avec [IndieAuth.com](https://indieau
 
 L'un ou l'autre des profils aurait suffit, je n'ai pas vraiment besoin des deux liens. J'ai aussi dû ajouter l'URL de mon site à mes biographies Twitter et GitHub.
 
-`webpage-micropub-to-github` est auto-hébergé, donc j'ai du ensuite déployé ma propre instance de cette application. Tout ce que j'ai eu à faire a été de cliquer sur le bouton "Deployer sur Heroku" dans  [README](https://github.com/voxpelli/webpage-micropub-to-github/blob/master/README.md) et de configurer quelques variables d'environnement, dont mon pseudonyme GitHub, ma clef d'API et le nom de mon dépôt. J'ai forké le dépôt même si ce n'était pas nécessaire puisque je n'ai fait aucune modification de code dans l'application.
+`webpage-micropub-to-github` est auto-hébergé, donc j'ai du ensuite déployé ma propre instance de cette application. Tout ce que j'ai eu à faire a été de cliquer sur le bouton "Deployer sur Heroku" dans [README](https://github.com/voxpelli/webpage-micropub-to-github/blob/master/README.md) et de configurer quelques variables d'environnement, dont mon pseudonyme GitHub, ma clef d'API et le nom de mon dépôt. J'ai forké le dépôt même si ce n'était pas nécessaire puisque je n'ai fait aucune modification de code dans l'application.
 
-Petite précision : pour configurer la variable optionnelle `MICROPUB_LAYOUT_NAME` j'ai du entré la valeur `"posts"`, entre guillemets; sans quoi ça faisait planter l'application. Même chose pour `MICROPUB_FILENAME_STYLE`, que j'ai défini à  `"notes/_posts/:year-:month-:day-:slug"` pour que mes posts aillent dans la catégorie Notes.
+Petite précision : pour configurer la variable optionnelle `MICROPUB_LAYOUT_NAME` j'ai du entré la valeur `"posts"`, entre guillemets; sans quoi ça faisait planter l'application. Même chose pour `MICROPUB_FILENAME_STYLE`, que j'ai défini à `"notes/_posts/:year-:month-:day-:slug"` pour que mes posts aillent dans la catégorie Notes.
 
 Une fois déployée, j'ai dû lier l'application dans ma balise `<head>` pour indiquer à micropub où poster:
 
 ```html
-<link rel="micropub" href="https://jekyll-micropub-to-github.herokuapp.com/micropub/main">
+<link
+  rel="micropub"
+  href="https://jekyll-micropub-to-github.herokuapp.com/micropub/main"
+/>
 ```
 
 Enfin, j'ai dû ajouter l'URL de mon site web dans mes préférences Micro.blog et suivre le processus d'authentification d'IndieAuth, qui consiste en tout en pour tout à m'authentifier avec mon compte Twitter.

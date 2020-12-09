@@ -4,18 +4,17 @@ date: 2019-07-11
 lastmod: 2019-07-12T12:42:35.000+00:00
 author: anthony
 categories:
-- gatsby
-- headless
+  - gatsby
+  - headless
 images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Pour%2520des%2520sites%2520web%2520modernes%252C%2520direction%2520le%2520maillage%2520de%2520contenus/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Pour%2520des%2520sites%2520web%2520modernes%252C%2520direction%2520le%2520maillage%2520de%2520contenus/jamstatic/twitter-card.png
 source:
   author: Sam Bhagwat
-  title: 'Delivering Modern Website Experiences: The Journey to a Content Mesh'
+  title: "Delivering Modern Website Experiences: The Journey to a Content Mesh"
   url: https://www.gatsbyjs.org/blog/2018-10-04-journey-to-the-content-mesh/
   lang: en
-
-
 ---
+
 Les systèmes de gestion de contenu (CMS) sont nés pour rendre l'édition de contenu de sites _possible_. Ils sont maintenant ré-imaginés pour la rendre _fantastique_.
 
 Au début des années 2000, publier sur le web était difficile. Le CMS s'est petit à petit imposé comme l'application unique pour stocker les contenus, générer les sites et les servir aux utilisateurs finaux.

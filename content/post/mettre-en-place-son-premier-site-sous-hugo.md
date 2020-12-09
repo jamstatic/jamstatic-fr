@@ -9,7 +9,7 @@ source:
   title: "Up & Running With Hugo Part I: Building Your First Site"
   url: https://forestry.io/blog/up-and-running-with-hugo/
 images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Mettre%20en%20place%20son%20premier%20site%20sous%20Hugo/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Mettre%20en%20place%20son%20premier%20site%20sous%20Hugo/jamstatic/twitter-card.png
 ---
 
 {{< intro >}}
@@ -47,6 +47,7 @@ régulièrement mis à jour qui ajoute un workflow de développement moderne à 
 - [1. Configurer Hugo](#1-configurer-hugo)
 
 - [2. Configurer votre site](#2-configurer-votre-site)
+
   - [Mettre à jour un article](#mettre-à-jour-un-article)
   - [Créer un nouvel article](#créer-un-nouvel-article)
   - [Utiliser un thème](#utiliser-un-thème)
@@ -54,6 +55,7 @@ régulièrement mis à jour qui ajoute un workflow de développement moderne à 
 - [3. Personnaliser votre site](#3-personnaliser-votre-site)
 
 - [4. Personnaliser votre thème](#4-personnaliser-votre-thème)
+
   - [CSS & Javascript personnalisé](#css--javascript-personnalisé)
 
 - [5. Prochaine étape](#5-prochaine-étape)
@@ -122,9 +124,9 @@ départ. Ouvrez le fichier `hugo/content/posts/example.md` dans votre éditeur d
 texte. Il est composé d’un en-tête _front matter_ avec un champ titre et d’un
 texte d’exemple au format markdown.
 
-```markdown
+````markdown
 ---
-title:  "Bienvenue dans Hugo !"
+title: "Bienvenue dans Hugo !"
 ---
 
 Vous trouverez la source de cet article dans le répertoire `content/posts`.
@@ -133,7 +135,9 @@ Pour ajouter un nouvel article, placez un nouveau fichier dans le dossier
 `content/posts` en respectant la nomenclature `titre-de-l-article.md` et
 ajoutez les métadonnées nécessaires dans l’en-tête de page Front Matter.
 Jetez un œil au fichier source de cet article pour voir comment ça marche.
+
 <!--more-->
+
 Hugo also offers powerful support for code snippets:
 
     ```go
@@ -155,9 +159,9 @@ repo][hugo-gh]. If you have questions, you can ask them on [Hugo
 Community][hugo-community].
 
 [hugo-docs]: https://gohugo.io/documentation/
-[hugo-gh]:   https://github.com/gohugoio/hugo
+[hugo-gh]: https://github.com/gohugoio/hugo
 [hugo-community]: https://discourse.gohugo.io/
-```
+````
 
 Cet article n'a pas de date ! Essayez d’en définir une en ajoutant l’entrée
 suivante dans l’en-tête _Front Matter_ de l’article:
@@ -199,6 +203,7 @@ title: "Mon Premier Article"
 date: "2018-03-09T14:24:17-04:00"
 draft: true
 ---
+
 ```
 
 Ce fichier comporte un en-tête Front Matter (des métadonnées structurées
@@ -210,7 +215,8 @@ changements :
 
 ```md
 ## Bienvenue
-Pratique ce modèle de projet *Hugo*. j'espère que vous appréciez ce guide !
+
+Pratique ce modèle de projet _Hugo_. j'espère que vous appréciez ce guide !
 ```
 
 Vous pouvez voir l’article mis à jour dans votre navigateur à l’adresse
@@ -285,10 +291,10 @@ avez probablement envie de le personnaliser.
 Nous allons commencer par éditer les paramètres du site dans le fichier
 `hugo/config.toml`. Mettez à jour les valeurs suivantes comme bon vous semble :
 
--  `title = "Hugo Boilerplate"`
--  `description = "Bien démarrer avec Hugo`
--  `metadescription = "Utilisé dans la balise meta 'description' pour l’accueil et les pages d’index, faute de quoi c'est l’entrée 'description' du front matter de la page qui sera utilisé"`
--  `author = "VOTRE_NOM"`
+- `title = "Hugo Boilerplate"`
+- `description = "Bien démarrer avec Hugo`
+- `metadescription = "Utilisé dans la balise meta 'description' pour l’accueil et les pages d’index, faute de quoi c'est l’entrée 'description' du front matter de la page qui sera utilisé"`
+- `author = "VOTRE_NOM"`
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346962/casper-theme-default-config.png" alt="" caption="Le thème Casper avec du contenu et les styles par défaut" >}}
 
@@ -350,7 +356,8 @@ texte et repérez les lignes suivantes :
 Ajoutez en dessous la ligne suivante :
 
 ```html
-<link rel="stylesheet" type="text/css" href="{{ "css/styles.min.css" | relURL}}" />
+<link rel="stylesheet" type="text/css" href="{{ "css/styles.min.css" | relURL}}"
+/>
 ```
 
 Ensuite, recopions le fichier partiel `footer.html` dans le dossier
@@ -409,9 +416,9 @@ si vous souhaitez repartir de zéro.
 Pour en apprendre un peu plus sur Hugo, reportez-vous aux sections suivantes de
 la documentation officielle :
 
--  [L'organisation des contenus dans Hugo](https://gohugo.io/content-management/organization/)
--  [Introduction au langage de templating d’Hugo](https://gohugo.io/templates/introduction/)
--  [Les options de configuration d’Hugo](https://gohugo.io/getting-started/configuration/)
+- [L'organisation des contenus dans Hugo](https://gohugo.io/content-management/organization/)
+- [Introduction au langage de templating d’Hugo](https://gohugo.io/templates/introduction/)
+- [Les options de configuration d’Hugo](https://gohugo.io/getting-started/configuration/)
 
 Nous verrons dans un prochain article comment configurer le versionnement avec
 Git pour faciliter l’intégration continue et le déploiement chez différents

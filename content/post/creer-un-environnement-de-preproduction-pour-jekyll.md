@@ -7,7 +7,7 @@ source:
   title: Creating a staging environment for Jekyll
   url: https://eduardoboucas.com/blog/2017/02/22/jekyll-staging-environment.html
 images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Cr%C3%A9er%20un%20environnement%20de%20pr%C3%A9production%20pour%20Jekyll/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Cr%C3%A9er%20un%20environnement%20de%20pr%C3%A9production%20pour%20Jekyll/jamstatic/twitter-card.png
 categories:
   - jekyll
 ---

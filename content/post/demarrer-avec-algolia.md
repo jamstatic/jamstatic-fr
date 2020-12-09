@@ -5,7 +5,7 @@ description: "Jess West vous dit comment indexer et intégrer une recherche perf
 categories:
   - algolia
 images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_60,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Bien%20d%C3%A9marrer%20avec%20Algolia/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_60,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Bien%20d%C3%A9marrer%20avec%20Algolia/jamstatic/twitter-card.png
 source:
   author: "Jessica West"
   title: "Getting Started with Algolia"
@@ -76,11 +76,11 @@ const data_url =
 function indexData(data_url) {
   return axios
     .get(data_url, {})
-    .then(function(response) {
+    .then(function (response) {
       console.log(response.data[0]);
       return;
     })
-    .catch(function(error) {
+    .catch(function (error) {
       console.warn(error);
     });
 }
@@ -112,13 +112,13 @@ notre appel `axios.get`.
 function indexData(data_url) {
   return axios
     .get(data_url, {})
-    .then(response => {
+    .then((response) => {
       return dataToAlgoliaObject(response.data);
     })
-    .then(function(response) {
+    .then(function (response) {
       return;
     })
-    .catch(function(error) {
+    .catch(function (error) {
       console.warn(error);
     });
 }
@@ -138,7 +138,7 @@ function dataToAlgoliaObject(data_points) {
       name: data_point.name,
       rating: data_point.rating,
       image_path: data_point.image_path,
-      alternative_name: data_point.alternative_name
+      alternative_name: data_point.alternative_name,
     };
     algoliaObjects.push(algoliaObject);
   }
@@ -159,17 +159,17 @@ l’envoi de nos données.
 function indexData(data_url) {
   return axios
     .get(data_url, {})
-    .then(response => {
+    .then((response) => {
       return dataToAlgoliaObject(response.data);
     })
-    .then(async response => {
+    .then(async (response) => {
       await sendDataToAlgolia(response);
       return;
     })
-    .then(function(response) {
+    .then(function (response) {
       return;
     })
-    .catch(function(error) {
+    .catch(function (error) {
       console.warn(error);
     });
 }
@@ -209,16 +209,16 @@ faire cela dans l’interface d’administration ou avec du code. Je préfère l
 deuxième méthode, voyons ensemble comment faire cela. Nous avons _beaucoup_
 d’options mais tenons nous en pour le moment aux options de base :
 
--  _searchableAttributes_: listez ce que vous voulez pouvoir rechercher dans
-   l’objet Algolia que vous avez crée
+- _searchableAttributes_: listez ce que vous voulez pouvoir rechercher dans
+  l’objet Algolia que vous avez crée
 
--  _attributesToHighlight_: mettre en surbrillance le champ recherché
+- _attributesToHighlight_: mettre en surbrillance le champ recherché
 
--  _customRanking_: choisissez la façon donc vous voulez afficher vos données,
-   `desc()` ou `asc()`
+- _customRanking_: choisissez la façon donc vous voulez afficher vos données,
+  `desc()` ou `asc()`
 
--  _attributesToRetrieve_: les attributs à afficher dans les résultats de
-   recherche
+- _attributesToRetrieve_: les attributs à afficher dans les résultats de
+  recherche
 
 ```javascript
 async function configureAlgoliaIndex() {
@@ -226,7 +226,7 @@ async function configureAlgoliaIndex() {
     searchableAttributes: ["name"],
     attributesToHighlight: ["name"],
     customRanking: ["desc(rating)"],
-    attributesToRetrieve: ["name", "rating", "image_path"]
+    attributesToRetrieve: ["name", "rating", "image_path"],
   });
 }
 ```
@@ -238,10 +238,10 @@ effectué.
 function indexData(data_url) {
   return axios
     .get(data_url, {})
-    .then(response => {
+    .then((response) => {
       return dataToAlgoliaObject(response.data);
     })
-    .then(async response => {
+    .then(async (response) => {
       await sendDataToAlgolia(response);
       return;
     })
@@ -249,10 +249,10 @@ function indexData(data_url) {
       await configureAlgoliaIndex();
       return;
     })
-    .then(function(response) {
+    .then(function (response) {
       return;
     })
-    .catch(function(error) {
+    .catch(function (error) {
       console.warn(error);
     });
 }
@@ -277,21 +277,21 @@ ces données du serveur au client ou bien vous pouvez utiliser les clefs. Pour
 faire au plus simple, nous allons utiliser les clefs ici.
 
 ```javascript
-$(document).ready(function() {
+$(document).ready(function () {
   var instantsearch = window.instantsearch;
 
   // création d’une instance d’instantsearch
   // avec notre identifiant d’application et notre clef d’API
-    var search = instantsearch({
-      appId: Cookies.get('app_id'),
-      apiKey: Cookies.get('search_api_key'),
-      indexName: Cookies.get('index_name'),
-      urlSync: true,
-      searchParameters: {
-        hitsPerPage: 3
-      }
-    });
+  var search = instantsearch({
+    appId: Cookies.get("app_id"),
+    apiKey: Cookies.get("search_api_key"),
+    indexName: Cookies.get("index_name"),
+    urlSync: true,
+    searchParameters: {
+      hitsPerPage: 3,
+    },
   });
+});
 ```
 
 Connectons maintenant notre _input_ de recherche à notre code HTML pour que les
@@ -301,7 +301,7 @@ gens aient une barre de recherche.
 search.addWidget(
   instantsearch.widgets.searchBox({
     container: "#search-box",
-    placeholder: "Rechercher vos acteurs préférés"
+    placeholder: "Rechercher vos acteurs préférés",
   })
 );
 ```
@@ -316,15 +316,13 @@ search.addWidget(
     hitsPerPage: 12,
     templates: {
       empty: `<div class="col-md-12" style="text-align: center;"> Nous n'avons pas trouvé de résultats correspondants à votre recherche <em>\"{{query}}\"</em></div`,
-      item: function(hit) {
+      item: function (hit) {
         try {
           return `
               <div class="col-md-4" style="text-align: center;">
                 <p>
                   <h3 class="hit-text">${hit._highlightResult.name.value}</h3>
-                  <img src="https://image.tmdb.org/t/p/w45/${
-                    hit.image_path
-                  }" height="50" width="50">
+                  <img src="https://image.tmdb.org/t/p/w45/${hit.image_path}" height="50" width="50">
                 </p>
                 <p>
                   Rating: ⭐️ ${hit.rating}
@@ -336,8 +334,8 @@ search.addWidget(
           console.warn("Couldn't render hit", hit, e);
           return "";
         }
-      }
-    }
+      },
+    },
   })
 );
 ```
@@ -348,7 +346,7 @@ la fois, ajoutons donc une pagination aux résultats que nous renvoyons.
 ```javascript
 search.addWidget(
   instantsearch.widgets.pagination({
-    container: "#pagination"
+    container: "#pagination",
   })
 );
 ```

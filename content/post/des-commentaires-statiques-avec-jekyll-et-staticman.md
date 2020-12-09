@@ -1,6 +1,7 @@
 ---
 title: Des commentaires statiques avec Jekyll et Staticman
-description: Utilisation de Staticman pour ajouter des commentaires et des notifications
+description:
+  Utilisation de Staticman pour ajouter des commentaires et des notifications
   de réponses sur un site statique sous Jekyll
 date: 2016-12-09
 source:
@@ -9,7 +10,7 @@ source:
   url: https://mademistakes.com/articles/improving-jekyll-static-comments/
   lang: en
 images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1000,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Des%20commentaires%20statiques%20avec%20Jekyll%20et%20Staticman/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1000,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Des%20commentaires%20statiques%20avec%20Jekyll%20et%20Staticman/jamstatic/twitter-card.png
 categories:
   - jekyll
 ---
@@ -114,11 +115,16 @@ billet.
 Pour faire une requête `POST` correcte à Staticman, l’attribut `action` de mon
 formulaire de commentaire avait besoin d’une petite mise à jour. Remplacer `v1`
 par `v2` dans
-[**_includes/page__comments.html**](https://github.com/mmistakes/made-mistakes-jekyll/blob/f0074b7b9e64b6d4b63dd13a371cedc576dae49d/src/_includes/page__comments.html#L34),
+[**\_includes/page\_\_comments.html**](https://github.com/mmistakes/made-mistakes-jekyll/blob/f0074b7b9e64b6d4b63dd13a371cedc576dae49d/src/_includes/page__comments.html#L34),
 puis suffixer avec `/comments`[^property] et le tour était joué pour moi.
 
 ```html
-<form id="comment-form" class="page__form js-form form" method="post" action="https://api.staticman.net/v2/entry/{{ site.repository }}/{{ site.staticman.branch }}/comments">
+<form
+  id="comment-form"
+  class="page__form js-form form"
+  method="post"
+  action="https://api.staticman.net/v2/entry/{{ site.repository }}/{{ site.staticman.branch }}/comments"
+></form>
 ```
 
 [^property]: Les propriétés de site sont optionnelles. Se reporter à la documentation de Staticman pour plus de détails sur comment [connecter vos formulaires](https://staticman.net/docs/#step-3-hook-up-your-forms).
@@ -142,7 +148,7 @@ formulaire dans un champ caché.
 [^parent-field]: Staticman nomme ce champ `_parent` dans les entrées.
 
 ```html
-<input type="hidden" id="comment-parent" name="options[parent]" value="">
+<input type="hidden" id="comment-parent" name="options[parent]" value="" />
 ```
 
 ### Mise à jour des boucles Liquid
@@ -172,17 +178,17 @@ similaires à ceux-ci :
 message: Ceci est le message du commentaire parent
 name: Prénom Nom
 email: md5g1bb3r15h
-date: '2016-11-30T22:03:15.286Z'
+date: "2016-11-30T22:03:15.286Z"
 ```
 
 #### Exemple de commentaire enfant
 
 ```yaml
-_parent: '7'
+_parent: "7"
 message: Ceci est un message de commentaire enfant
 name: Prénom Nom
 email: md5g1bb3r15h
-date: '2016-11-02T05:08:43.280Z'
+date: "2016-11-02T05:08:43.280Z"
 ```
 
 Comme vous pouvez le voir ci-dessus, le commentaire "enfant" a une donnée
@@ -210,7 +216,7 @@ Malheureusement, le code suivant n'a pas marché :
 ```html
 <article id="comment-1" class="js-comment comment">
   <div class="comment__avatar">
-    <img src="" alt="">
+    <img src="" alt="" />
   </div>
   <h3 class="comment__author-name"></h3>
   <div class="comment__timestamp">
@@ -384,137 +390,233 @@ suite.
 
 ```html
 <section class="page__reactions">
-  {% if site.repository and site.staticman.branch %}
-    {% if site.data.comments[page.slug] %}
-      <!-- Start static comments -->
-      <div id="comments" class="js-comments">
-        <h2 class="page__section-label">
-          {% if site.data.comments[page.slug].size > 1 %}
-            {{ site.data.comments[page.slug] | size }}
-          {% endif %}
-          Commentaires
-        </h2>
-        {% assign comments = site.data.comments[page.slug] | where_exp:"item","item._parent == nil" %}
-        {% for comment in comments %}
-          {% assign index   = forloop.index %}
-          {% assign p       = comment._parent %}
-          {% assign parent  = p | to_integer %}
-          {% assign avatar  = comment.avatar %}
-          {% assign email   = comment.email %}
-          {% assign name    = comment.name %}
-          {% assign url     = comment.url %}
-          {% assign date    = comment.date %}
-          {% assign message = comment.message %}
-          {% include comment.html index=index parent=parent avatar=avatar email=email name=name url=url date=date message=message %}
-        {% endfor %}
-      </div>
-      <!-- End static comments -->
-    {% endif %}
-
-    {% unless page.comments_locked == true %}
-    <!-- Début du nouveau formulaire de commentaire -->
-    <div id="respond">
-      <h2 class="page__section-label">Laisser un commentaire <small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | absolute_url }}#respond" style="display:none;">Annuler la réponse</a></small></h2>
-      <p class="instruct"><a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a> est autorisé. Les adresses mail ne seront pas affichées.</p>
-      <form id="comment-form" class="page__form js-form form" method="post" action="https://api.staticman.net/v2/entry/{{ site.repository }}/{{ site.staticman.branch }}/comments">
-        <fieldset>
-          <label for="comment-form-message"><strong>Commentaire</strong> <span class="required">*</span></label>
-          <textarea type="text" rows="6" id="comment-form-message" name="fields[message]" spellcheck="true"></textarea>
-        </fieldset>
-        <fieldset>
-          <label for="comment-form-name"><strong>Nom</strong> <span class="required">*</span></label>
-          <input type="text" id="comment-form-name" name="fields[name]" spellcheck="false" />
-        </fieldset>
-        <fieldset>
-          <label for="comment-form-email"><strong>Email</strong> <small>(utilisé pour l’image <a href="https://en.gravatar.com/">Gravatar</a> et les notifications de réponses)</small></label>
-          <input type="email" id="comment-form-email" name="fields[email]" spellcheck="false" />
-        </fieldset>
-        <fieldset>
-          <label for="comment-form-url"><strong>Site</strong> <small>(optionnel)</small></label>
-          <input type="url" id="comment-form-url" name="fields[url]" spellcheck="false" />
-        </fieldset>
-        <fieldset class="hidden" style="display:none;">
-          <input type="hidden" name="options[origin]" value="{{ page.url | absolute_url }}">
-          <input type="hidden" id="comment-parent" name="options[parent]" value="">
-          <input type="hidden" id="comment-post-id" name="options[slug]" value="{{ page.slug }}">
-          <label for="comment-form-location">Laissez vierge si vous êtes un humain</label>
-          <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off"/>
-        </fieldset>
-        <!-- Début du message d’alerte du formulaire de commentaire -->
-        <p class="hidden js-notice">
-          <span class="js-notice-text"></span>
-        </p>
-        <!-- Fin du message d’alerte du formulaire de commentaire -->
-        <fieldset>
-          <button type="submit" id="comment-form-submit" class="btn btn--large">Soumettre mon commentaire</button>
-          <label for="comment-form-reply">
-            <input type="checkbox" id="comment-form-reply" name="options[subscribe]" value="email">
-            M’informer des nouveaux commentaires par mail.
-          </label>
-        </fieldset>
-      </form>
-    </div>
-    <!-- Fin du nouveau formulaire de commentaire -->
-    {% else %}
-      <p><em>Les commentaires sont fermés. Si vous avez une question concernant le contenu de cette page, vous pouvez <a href="{{ site.url }}/contact/">me contacter</a>.</em></p>
-    {% endunless %}
-  {% endif %}
+  {% if site.repository and site.staticman.branch %} {% if
+  site.data.comments[page.slug] %}
+  <!-- Start static comments -->
+  <div id="comments" class="js-comments">
+    <h2 class="page__section-label">
+      {% if site.data.comments[page.slug].size > 1 %} {{
+      site.data.comments[page.slug] | size }} {% endif %} Commentaires
+    </h2>
+    {% assign comments = site.data.comments[page.slug] |
+    where_exp:"item","item._parent == nil" %} {% for comment in comments %} {%
+    assign index = forloop.index %} {% assign p = comment._parent %} {% assign
+    parent = p | to_integer %} {% assign avatar = comment.avatar %} {% assign
+    email = comment.email %} {% assign name = comment.name %} {% assign url =
+    comment.url %} {% assign date = comment.date %} {% assign message =
+    comment.message %} {% include comment.html index=index parent=parent
+    avatar=avatar email=email name=name url=url date=date message=message %} {%
+    endfor %}
+  </div>
+  <!-- End static comments -->
+  {% endif %} {% unless page.comments_locked == true %}
+  <!-- Début du nouveau formulaire de commentaire -->
+  <div id="respond">
+    <h2 class="page__section-label">
+      Laisser un commentaire
+      <small
+        ><a
+          rel="nofollow"
+          id="cancel-comment-reply-link"
+          href="{{ page.url | absolute_url }}#respond"
+          style="display:none;"
+          >Annuler la réponse</a
+        ></small
+      >
+    </h2>
+    <p class="instruct">
+      <a href="https://daringfireball.net/projects/markdown/syntax">Markdown</a>
+      est autorisé. Les adresses mail ne seront pas affichées.
+    </p>
+    <form
+      id="comment-form"
+      class="page__form js-form form"
+      method="post"
+      action="https://api.staticman.net/v2/entry/{{ site.repository }}/{{ site.staticman.branch }}/comments"
+    >
+      <fieldset>
+        <label for="comment-form-message"
+          ><strong>Commentaire</strong> <span class="required">*</span></label
+        >
+        <textarea
+          type="text"
+          rows="6"
+          id="comment-form-message"
+          name="fields[message]"
+          spellcheck="true"
+        ></textarea>
+      </fieldset>
+      <fieldset>
+        <label for="comment-form-name"
+          ><strong>Nom</strong> <span class="required">*</span></label
+        >
+        <input
+          type="text"
+          id="comment-form-name"
+          name="fields[name]"
+          spellcheck="false"
+        />
+      </fieldset>
+      <fieldset>
+        <label for="comment-form-email"
+          ><strong>Email</strong>
+          <small
+            >(utilisé pour l’image
+            <a href="https://en.gravatar.com/">Gravatar</a> et les notifications
+            de réponses)</small
+          ></label
+        >
+        <input
+          type="email"
+          id="comment-form-email"
+          name="fields[email]"
+          spellcheck="false"
+        />
+      </fieldset>
+      <fieldset>
+        <label for="comment-form-url"
+          ><strong>Site</strong> <small>(optionnel)</small></label
+        >
+        <input
+          type="url"
+          id="comment-form-url"
+          name="fields[url]"
+          spellcheck="false"
+        />
+      </fieldset>
+      <fieldset class="hidden" style="display:none;">
+        <input
+          type="hidden"
+          name="options[origin]"
+          value="{{ page.url | absolute_url }}"
+        />
+        <input
+          type="hidden"
+          id="comment-parent"
+          name="options[parent]"
+          value=""
+        />
+        <input
+          type="hidden"
+          id="comment-post-id"
+          name="options[slug]"
+          value="{{ page.slug }}"
+        />
+        <label for="comment-form-location"
+          >Laissez vierge si vous êtes un humain</label
+        >
+        <input
+          type="text"
+          id="comment-form-location"
+          name="fields[hidden]"
+          autocomplete="off"
+        />
+      </fieldset>
+      <!-- Début du message d’alerte du formulaire de commentaire -->
+      <p class="hidden js-notice">
+        <span class="js-notice-text"></span>
+      </p>
+      <!-- Fin du message d’alerte du formulaire de commentaire -->
+      <fieldset>
+        <button type="submit" id="comment-form-submit" class="btn btn--large">
+          Soumettre mon commentaire
+        </button>
+        <label for="comment-form-reply">
+          <input
+            type="checkbox"
+            id="comment-form-reply"
+            name="options[subscribe]"
+            value="email"
+          />
+          M’informer des nouveaux commentaires par mail.
+        </label>
+      </fieldset>
+    </form>
+  </div>
+  <!-- Fin du nouveau formulaire de commentaire -->
+  {% else %}
+  <p>
+    <em
+      >Les commentaires sont fermés. Si vous avez une question concernant le
+      contenu de cette page, vous pouvez
+      <a href="{{ site.url }}/contact/">me contacter</a>.</em
+    >
+  </p>
+  {% endunless %} {% endif %}
 </section>
 ```
 
 #### `_includes/comment.html`
 
 ```html
-<article id="comment{% if p %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endif %}" class="js-comment comment {% if include.name == site.author.name %}admin{% endif %} {% if p %}child{% endif %}">
+<article
+  id="comment{% if p %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endif %}"
+  class="js-comment comment {% if include.name == site.author.name %}admin{% endif %} {% if p %}child{% endif %}"
+>
   <div class="comment__avatar">
     {% if include.avatar %}
-      <img src="{{ include.avatar }}" alt="{{ include.name | escape }}">
+    <img src="{{ include.avatar }}" alt="{{ include.name | escape }}" />
     {% elsif include.email %}
-      <img src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60" srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=120 2x" alt="{{ include.name | escape }}">
+    <img
+      src="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=60"
+      srcset="https://www.gravatar.com/avatar/{{ include.email }}?d=mm&s=120 2x"
+      alt="{{ include.name | escape }}"
+    />
     {% else %}
-      <img src="{{ site.url }}/assets/images/avatar-60.png" srcset="{{ site.url }}/assets/images/avatar-120.png 2x" alt="{{ include.name | escape }}">
+    <img
+      src="{{ site.url }}/assets/images/avatar-60.png"
+      srcset="{{ site.url }}/assets/images/avatar-120.png 2x"
+      alt="{{ include.name | escape }}"
+    />
     {% endif %}
   </div>
   <h3 class="comment__author-name">
     {% unless include.url == blank %}
-      <a rel="external nofollow" href="{{ include.url }}">
-        {% if include.name == site.author.name %}<svg class="icon"><use xlink:href="#icon-mistake"></use></svg> {% endif %}{{ include.name }}
-      </a>
-    {% else %}
-      {% if include.name == site.author.name %}<svg class="icon"><use xlink:href="#icon-mistake"></use></svg> {% endif %}{{ include.name }}
-    {% endunless %}
+    <a rel="external nofollow" href="{{ include.url }}">
+      {% if include.name == site.author.name %}<svg class="icon">
+        <use xlink:href="#icon-mistake"></use>
+      </svg>
+      {% endif %}{{ include.name }}
+    </a>
+    {% else %} {% if include.name == site.author.name %}<svg class="icon">
+      <use xlink:href="#icon-mistake"></use>
+    </svg>
+    {% endif %}{{ include.name }} {% endunless %}
   </h3>
   <div class="comment__timestamp">
-    {% if include.date %}
-      {% if include.index %}<a href="#comment{% if p %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endif %}" title="Permalink to this comment">{% endif %}
-      <time datetime="{{ include.date | date_to_xmlschema }}">{{ include.date | date: '%B %d, %Y' }}</time>
-      {% if include.index %}</a>{% endif %}
-    {% endif %}
+    {% if include.date %} {% if include.index %}<a
+      href="#comment{% if p %}{{ index | prepend: '-' }}{% else %}{{ include.index | prepend: '-' }}{% endif %}"
+      title="Permalink to this comment"
+      >{% endif %}
+      <time datetime="{{ include.date | date_to_xmlschema }}"
+        >{{ include.date | date: '%B %d, %Y' }}</time
+      >
+      {% if include.index %}</a
+    >{% endif %} {% endif %}
   </div>
-  <div class="comment__content">
-    {{ include.message | markdownify }}
-  </div>
+  <div class="comment__content">{{ include.message | markdownify }}</div>
   {% unless p or page.comments_locked == true %}
-    <div class="comment__reply">
-      <a rel="nofollow" class="btn" href="#comment-{{ include.index }}" onclick="return addComment.moveForm('comment-{{ include.index }}', '{{ include.index }}', 'respond’, '{{ page.slug }}')">Reply to {{ include.name }}</a>
-    </div>
+  <div class="comment__reply">
+    <a
+      rel="nofollow"
+      class="btn"
+      href="#comment-{{ include.index }}"
+      onclick="return addComment.moveForm('comment-{{ include.index }}', '{{ include.index }}', 'respond’, '{{ page.slug }}')"
+      >Reply to {{ include.name }}</a
+    >
+  </div>
   {% endunless %}
 </article>
 
-{% capture i %}{{ include.index }}{% endcapture %}
-{% assign replies = site.data.comments[page.slug] | where_exp:"item","item._parent == i" %}
-{% for reply in replies %}
-  {% assign index   = forloop.index | prepend: '-' | prepend: include.index %}
-  {% assign p       = reply._parent %}
-  {% assign parent  = p | to_integer %}
-  {% assign avatar  = reply.avatar %}
-  {% assign email   = reply.email %}
-  {% assign name    = reply.name %}
-  {% assign url     = reply.url %}
-  {% assign date    = reply.date %}
-  {% assign message = reply.message %}
-  {% include comment.html index=index parent=parent avatar=avatar email=email name=name url=url date=date message=message %}
-{% endfor %}
+{% capture i %}{{ include.index }}{% endcapture %} {% assign replies =
+site.data.comments[page.slug] | where_exp:"item","item._parent == i" %} {% for
+reply in replies %} {% assign index = forloop.index | prepend: '-' | prepend:
+include.index %} {% assign p = reply._parent %} {% assign parent = p |
+to_integer %} {% assign avatar = reply.avatar %} {% assign email = reply.email
+%} {% assign name = reply.name %} {% assign url = reply.url %} {% assign date =
+reply.date %} {% assign message = reply.message %} {% include comment.html
+index=index parent=parent avatar=avatar email=email name=name url=url date=date
+message=message %} {% endfor %}
 ```
 
 ### HTML et JavaScript pour la réponse à un commentaire
@@ -543,9 +645,11 @@ pour m'en tenir à ça.
 
 ```html
 {% unless p %}
-  <div class="comment__reply">
-    <a rel="nofollow" class="btn" href="#comment-{{ include.index }}">Répondre à {{ include.name }}</a>
-  </div>
+<div class="comment__reply">
+  <a rel="nofollow" class="btn" href="#comment-{{ include.index }}"
+    >Répondre à {{ include.name }}</a
+  >
+</div>
 {% endunless %}
 ```
 
@@ -616,7 +720,11 @@ Pour terminer, ajoutons deux champs au formulaire de commentaire.
 le fichier `staticman.yml`:
 
 ```html
-<input type="hidden" name="options[origin]" value="{{ page.url | absolute_url }}">
+<input
+  type="hidden"
+  name="options[origin]"
+  value="{{ page.url | absolute_url }}"
+/>
 ```
 
 **Champ 2:** Un `input` de type case à cocher pour s'inscrire aux notifications
@@ -624,7 +732,12 @@ par mail.
 
 ```html
 <label for="comment-form-reply">
-  <input type="checkbox" id="comment-form-reply" name="options[subscribe]" value="email">
+  <input
+    type="checkbox"
+    id="comment-form-reply"
+    name="options[subscribe]"
+    value="email"
+  />
   Me prévenir par mail des nouveaux commentaires.
 </label>
 ```

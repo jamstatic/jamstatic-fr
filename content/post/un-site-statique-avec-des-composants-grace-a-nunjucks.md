@@ -104,9 +104,7 @@ bouts de HTML destinés à être utilisés sur toutes nos pages.
 
 ```html
 <footer>
-  <p>
-    Ceci est un simple pied de page, les gens. Circulez, y’a rien à voir.
-  </p>
+  <p>Ceci est un simple pied de page, les gens. Circulez, y’a rien à voir.</p>
 </footer>
 ```
 
@@ -269,17 +267,17 @@ L'idée générale est de **séparer les données et le balisage**. Cela nous do
 des bénéfices concrets et assez clairs :
 
 1. Si nous devons changer le HTML, nous pouvons le faire dans la macro et le
-    changement sera reporté partout où la macro est utilisée.
+   changement sera reporté partout où la macro est utilisée.
 
 2. La donnée n'est pas mélangée avec le balisage
 
 3. La donnée pourrait venir de n'importe où ! Nous pouvons passer la donnée
-    directement lors de l’appel comme nous l’avons fait ci-dessus. Ou bien nous
-    pouvons référencer des données en JSON et boucler dessus. Je suis sûr qu'on
-    pourrait mettre en place un système dans lequel des données JSON proviennent
-    d’un [CMS headless]({{< relref "cms-headless.md" >}}), d’un processus de
-    génération, d’une fonction serverless, d’une tâche cron ou de ce que vous
-    voulez.
+   directement lors de l’appel comme nous l’avons fait ci-dessus. Ou bien nous
+   pouvons référencer des données en JSON et boucler dessus. Je suis sûr qu'on
+   pourrait mettre en place un système dans lequel des données JSON proviennent
+   d’un [CMS headless]({{< relref "cms-headless.md" >}}), d’un processus de
+   génération, d’une fonction serverless, d’une tâche cron ou de ce que vous
+   voulez.
 
 Maintenant que nous avons juste ce dont nous avons besoin, des cartes répétables
 qui combinent des données et du balisage :

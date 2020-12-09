@@ -1,13 +1,14 @@
 ---
 title: Présentation d’Eleventy, un nouveau générateur de site statique
 date: 2018-02-18 10:23:07 +0100
-description: Zach Leatherman explique pourquoi il a développé Eleventy, un générateur de
+description:
+  Zach Leatherman explique pourquoi il a développé Eleventy, un générateur de
   site statique basé sur JavaScript, particulièrement flexible et qui sait se faire
   oublier.
 categories:
-- eleventy
+  - eleventy
 images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Eleventy%252C%20un%20nouveau%20g%C3%A9n%C3%A9rateur%20de%20site%20statique/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Eleventy%252C%20un%20nouveau%20g%C3%A9n%C3%A9rateur%20de%20site%20statique/jamstatic/twitter-card.png
 source:
   author: Zach Leatherman
   title: Introducing Eleventy
@@ -41,9 +42,9 @@ Encore un générateur de site statique ? Oui. Mais pourquoi ? Bonne question.
 
 Eleventy a été créé pour trois raisons :
 
--  Flexibilité
--  Parier sur JavaScript
--  Ce n'est pas un framework JavaScript
+- Flexibilité
+- Parier sur JavaScript
+- Ce n'est pas un framework JavaScript
 
 ## Flexibilité
 
@@ -70,16 +71,16 @@ Eleventy sait gérer les deux côte-à-côte. Bien joué Linda._
 
 Eleventy supporte actuellement :
 
--  HTML
--  [Markdown](https://github.com/markdown-it/markdown-it)
--  [Liquid](https://www.npmjs.com/package/liquidjs) (used by Jekyll)
--  [Nunjucks](https://mozilla.github.io/nunjucks/)
--  [Handlebars](https://github.com/wycats/handlebars.js)
--  [Mustache](https://github.com/janl/mustache.js/)
--  [EJS](https://www.npmjs.com/package/ejs)
--  [Haml](https://github.com/tj/haml.js)
--  [Pug](https://github.com/pugjs/pug)
--  JavaScript Template Literals (ES2015)
+- HTML
+- [Markdown](https://github.com/markdown-it/markdown-it)
+- [Liquid](https://www.npmjs.com/package/liquidjs) (used by Jekyll)
+- [Nunjucks](https://mozilla.github.io/nunjucks/)
+- [Handlebars](https://github.com/wycats/handlebars.js)
+- [Mustache](https://github.com/janl/mustache.js/)
+- [EJS](https://www.npmjs.com/package/ejs)
+- [Haml](https://github.com/tj/haml.js)
+- [Pug](https://github.com/pugjs/pug)
+- JavaScript Template Literals (ES2015)
 
 ### Flexibilité de l’arborescence de répertoires
 

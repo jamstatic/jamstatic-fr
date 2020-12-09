@@ -3,7 +3,7 @@ title: "Un site web simple avec le plus simple des générateurs de site statiqu
 description: "Présentation d’Eleventy, le générateur de site statique le plus simple et le plus intuitif."
 date: 2018-01-24T20:40:44+01:00
 images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Un%2520site%2520web%2520simple%2520avec%2520le%2520plus%2520simple%2520des%2520g%25C3%25A9n%25C3%25A9rateurs%2520de%2520site%2520statique/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Un%2520site%2520web%2520simple%2520avec%2520le%2520plus%2520simple%2520des%2520g%25C3%25A9n%25C3%25A9rateurs%2520de%2520site%2520statique/jamstatic/twitter-card.png
 categories:
   - eleventy
 source:
@@ -109,20 +109,20 @@ Créons une liste avec des liens vers nos images GIF dans le fichier `index.html
 :
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8">
-  <title>Giffleball</title>
- </head>
- <body>
-  <h1>Giffleball</h1>
-  <ul>
-   <li><a href="img/???.jpg">???.jpg</a></li>
-   <li><a href="img/….jpg">….jpg</a></li>
-   <li><a href="img/parrot.gif">parrot.gif</a></li>
-  </ul>
- </body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Giffleball</title>
+  </head>
+  <body>
+    <h1>Giffleball</h1>
+    <ul>
+      <li><a href="img/???.jpg">???.jpg</a></li>
+      <li><a href="img/….jpg">….jpg</a></li>
+      <li><a href="img/parrot.gif">parrot.gif</a></li>
+    </ul>
+  </body>
 </html>
 ```
 
@@ -230,7 +230,7 @@ L'utilisation d’un moteur de rendu présente plusieurs avantages :
 
 ```html
 {% for filename in images %}
-   <li><a href="img/{{ filename | url_encode }}">{{ filename }}</a></li>
+<li><a href="img/{{ filename | url_encode }}">{{ filename }}</a></li>
 {% endfor %}
 ```
 
@@ -252,7 +252,7 @@ s'ajoutent dans le fichier de configuration — un fichier `.eleventy.js` — cr
 en un. Il devrait ressembler à ça :
 
 ```js
-module.exports = function(eleventyConfig) {};
+module.exports = function (eleventyConfig) {};
 ```
 
 Si vous ne le nommez pas `.eleventy.js`, chaque fois que vous allez lancer la
@@ -264,8 +264,8 @@ Ajoutons notre filtre à l’aide de la méthode `.addFilter`. Appelons-le
 `filesize` et commençons par lui faire retourner un texte tout bête :
 
 ```js
-module.exports = function(eleventyConfig) {
-  eleventyConfig.addFilter("filesize", function(path) {
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addFilter("filesize", function (path) {
     return "0 KB";
   });
 };
@@ -279,9 +279,9 @@ pour le moment :
 
 ```html
 <ul>
-{% for filename in images %}
- <li><a href="img/{{ filename | url_encode }}">{{ filename }}</a></li>
-{% endfor %}
+  {% for filename in images %}
+  <li><a href="img/{{ filename | url_encode }}">{{ filename }}</a></li>
+  {% endfor %}
 </ul>
 ```
 
@@ -291,10 +291,13 @@ créé le nôtre, ajoutons un appel à notre petit filtre maison, comme ceci :
 
 ```html
 <ul>
-{% for filename in images %}
-{% capture path %}img/{{ filename }}{% endcapture %}
- <li><a href="img/{{ filename | url_encode }}">{{ filename }}</a> {{ path | filesize }}</li>
-{% endfor %}
+  {% for filename in images %} {% capture path %}img/{{ filename }}{% endcapture
+  %}
+  <li>
+    <a href="img/{{ filename | url_encode }}">{{ filename }}</a> {{ path |
+    filesize }}
+  </li>
+  {% endfor %}
 </ul>
 ```
 
@@ -347,9 +350,9 @@ Ce qui produit :
 
 ```html
 <ul>
- <li><a href="img/%3F%3F%3F.jpg">???.jpg</a> 0 KB</li>
- <li><a href="img/%E2%80%A6.jpg">….jpg</a> 0 KB</li>
- <li><a href="img/parrot.gif">parrot.gif</a> 0 KB</li>
+  <li><a href="img/%3F%3F%3F.jpg">???.jpg</a> 0 KB</li>
+  <li><a href="img/%E2%80%A6.jpg">….jpg</a> 0 KB</li>
+  <li><a href="img/parrot.gif">parrot.gif</a> 0 KB</li>
 </ul>
 ```
 
@@ -364,8 +367,8 @@ simplement retourner systématiquement `"0 KB"`. Modifiez votre fichier
 ```js
 const fs = require("fs");
 
-module.exports = function(eleventyConfig) {
-  eleventyConfig.addFilter("filesize", function(path) {
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addFilter("filesize", function (path) {
     let stat = fs.statSync(path);
     if (stat) {
       return (stat.size / 1024).toFixed(2) + " KB";
@@ -405,8 +408,8 @@ Utlisons-le pour coder notre filtrer dans le fichier `.eleventy.js`:
 const fs = require("fs");
 const filesize = require("file-size");
 
-module.exports = function(eleventyConfig) {
-  eleventyConfig.addFilter("filesize", function(path) {
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addFilter("filesize", function (path) {
     let stat = fs.statSync(path);
     if (stat) {
       return filesize(stat.size).human();
@@ -420,9 +423,9 @@ Ce qui nous donne :
 
 ```html
 <ul>
- <li><a href="img/%3F%3F%3F.jpg">???.jpg</a> 44.52 KiB</li>
- <li><a href="img/%E2%80%A6.jpg">….jpg</a> 55.39 KiB</li>
- <li><a href="img/parrot.gif">parrot.gif</a> 2.05 KiB</li>
+  <li><a href="img/%3F%3F%3F.jpg">???.jpg</a> 44.52 KiB</li>
+  <li><a href="img/%E2%80%A6.jpg">….jpg</a> 55.39 KiB</li>
+  <li><a href="img/parrot.gif">parrot.gif</a> 2.05 KiB</li>
 </ul>
 ```
 

@@ -3,6 +3,11 @@ title: "Comparaison des temps de compilation des générateurs de site statique"
 date: 2020-10-31T08:38:15+01:00
 lastmod: 2020-10-31T14:38:15+01:00
 description: "Comment se comportent les principaux générateurs quand il s'agit de compiler 1, 1 000 ou 64 000 fichiers?"
+excerpt: |
+  Le temps de compilation d'un site est un critère parmi tant d'autres.
+  Si ces premiers tests comparatifs de performance pure ne sont pas représentatifs de ce que à quoi vous pouvez vous attendre dans le contexte de vos projets, ils vous donneront quand même un premier ordre d'idée. Partir sur un framework a un coût en temps de compilation.
+ 
+  Jekyll n'est intrinsèquement pas plus lent qu'Eleventy, tout dépend de votre projet. Gatsby sera le plus pénalisant sur de gros sites, Next.js est le framework qui s'en sort le mieux, et Hugo l'emporte haut la main et demeure intouchable dès qu'il s'agit de vitesse de compilation.
 author: frank
 categories:
   - eleventy
@@ -16,12 +21,6 @@ source:
   title: Comparing Static Site Generator Build Times
   url: https://css-tricks.com/comparing-static-site-generator-build-times/
 ---
-
-{{% intro  %}}
-Le temps de compilation d'un site est un critère parmi tant d'autres.
-Si ces premiers tests comparatifs de performance pure ne sont pas représentatifs de ce que à quoi vous pouvez vous attendre dans le contexte de vos projets, ils vous donneront quand même un premier ordre d'idée. Partir sur un framework a un coût en temps de compilation.
-Jekyll n'est intrinsèquement pas plus lent qu'Eleventy, tout dépend de votre projet. Gatsby sera le plus pénalisant sur de gros sites, Next.js est le framework qui s'en sort le mieux, et Hugo l'emporte haut la main et demeure intouchable dès qu'il s'agit de vitesse de compilation.
-{{% /intro %}}
 
 Il y a tant de [générateurs de sites statiques (SSG)](https://jamstack.org/generators/). C'est fatiguant de devoir décider par où commencer. Bien qu'une abondance d'articles utiles puisse aider à se repérer dans les options (populaires), ils ne facilitent pas la décision comme par magie.
 

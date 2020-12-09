@@ -5,7 +5,7 @@ description: >
   Bud Parr, créateur et gérant de l’agence The New Dynamic, partage son expérience
   et sa vision sur l’écosystème actuel de la Jamstack.
 images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1000,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Entretien%20avec%20Bud%20Parr%20de%20The%20New%20Dynamic/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1000,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Entretien%20avec%20Bud%20Parr%20de%20The%20New%20Dynamic/jamstatic/twitter-card.png
 source:
   lang: en
   title: Interview with Bud Parr, Jamstack engineer

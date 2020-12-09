@@ -4,10 +4,10 @@ description: Le web au secours de la modernisation du procéde de publication de
 author: antoine
 date: 2017-01-23 15:37:00
 images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Publier%20des%20livres%20avec%20un%20g%C3%A9n%C3%A9rateur%20de%20site%20statique/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Publier%20des%20livres%20avec%20un%20g%C3%A9n%C3%A9rateur%20de%20site%20statique/jamstatic/twitter-card.png
 source:
   url: https://www.thenewdynamic.org/article/2017/01/26/interview-with-eric-gardner-getty/
-  title:  Interview with Eric Gardner, Getty Publications
+  title: Interview with Eric Gardner, Getty Publications
   lang: en
 ---
 
@@ -148,5 +148,4 @@ nous aurons un peu affiné notre procédé, je prévois de faire un peu plus
 d’"évangélisation" 😉
 
 [^1]: NdT: Des éditeurs comme Sublime ou Atom sont aussi puissants et encore plus accessibles.
-
 [^2]: NdT: Le projet [GitBook](https://www.gitbook.com) adopte cette démarche.

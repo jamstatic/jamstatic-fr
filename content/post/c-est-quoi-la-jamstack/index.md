@@ -41,6 +41,17 @@ Asseyez-vous, mettez-vous à l'aise et appréciez ✌️
   - [Bonnes pratiques](#bonnes-pratiques)
   - [Chaîne de publication](#chaîne-de-publication)
   - [Historique](#historique)
+- [Bien démarrer](#bien-démarrer)
+  - [Développement](#développement)
+  - [Déploiement](#déploiement)
+  - [Parties dynamiques](#parties-dynamiques)
+  - [CMS](#cms)
+  - [Ressources](#ressources)
+    - [Services](#services)
+    - [Articles](#articles)
+    - [Vidéos](#vidéos)
+    - [Podcast](#podcast)
+- [À propos](#à-propos)
 
 - [Bien démarrer](#bien-démarrer)
   - [Développement](#développement)
@@ -176,7 +187,7 @@ La plupart des frameworks ne génèrent pas de fichiers HTML statiques par défa
 Vous devez héberger le résultat de la compilation de votre site. Il existe de fantastiques services qui font cela gratuitement et simplement.
 
 - [Netlify](https://netlify.com/)
-- [Zeit](https://zeit.co/)
+- [Vercel](https://vercel.com/)
 - [Github Pages](https://pages.github.com/)
 
 [Voir plus de services de déploiement](https://www.thenewdynamic.org/tools/hosting-deployment/)

@@ -90,7 +90,7 @@ Une fois le montage effectué, nous pouvons accéder aux icônes SVG situées da
 
 ```go-html-template
 {{ with resources.Get "icons/cart.svg" }}
-  <div class="fill-current w-4">
+  <div class="w-4 fill-current">
     {{ .Content | safeHTML }}
   </div>
 {{ end }}
