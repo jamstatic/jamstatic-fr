@@ -35,15 +35,32 @@ module.exports = {
         dark: {
           css: {
             color: theme("colors.gray.300"),
+            code: {
+              color: theme("colors.indigo.300"),
+            },
+            strong: {
+              color: theme("colors.gray.300"),
+            },
             a: {
-              color: theme("colors.violet-indigo.400"),
+              color: theme("colors.blue.500"),
               "&:hover": {
-                color: theme("colors.violet-indigo.500"),
+                color: theme("colors.blue.300"),
               },
             },
             h2: {
-              color: theme("colors.violet.light"),
+              color: theme("colors.blue.500"),
             },
+            h3: {
+              color: theme("colors.blue.500"),
+            },
+            h4: {
+              color: theme("colors.blue.500"),
+            },
+            blockquote: {
+              color: theme("colors.blue.500"),
+              background: theme("colors.gray.800"),
+              borderColor: theme("colors.gray.700"),
+            }
           },
         },
       }),
@@ -55,7 +72,7 @@ module.exports = {
         dark: "#26153f",
       },
       brand: '#300A66',
-      "violet-indigo": {
+      indigo: {
         50:  "#f7f9fc",
         100: "#f1f1fb",
         200: "#e0dbf8",
@@ -96,8 +113,20 @@ module.exports = {
         900: "#18181B",
       },
       rose: "#ff4863",
+      rose: {
+        '50':  '#fcf9f8',
+        '100': '#fdeef2',
+        '200': '#fbcfe4',
+        '300': '#faa7cd',
+        '400': '#fb6ea5',
+        '500': '#fc437c',
+        '600': '#ff4863',
+        '700': '#de1f47',
+        '800': '#b31a39',
+        '900': '#8f162e',
+      },
       blue: "#7DACFF",
-      malibu: {
+      blue: {
         default: "#80AEFF",
         100: "#E5EFFF",
         200: "#CCDFFF",

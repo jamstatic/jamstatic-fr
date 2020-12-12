@@ -1,76 +1,71 @@
 {{- define "main" }}
-  <article
-    class="mx-auto prose sm:prose-lg lg:prose-xl dark:prose-dark"
-    itemscope
-    itemtype="https://schema.org/BlogPosting"
-  >
-    <header class="my-8">
+
+    <header class="p-4 mt-6 mb-8 dark:bg-gray-800 bg-opacity-50 rounded-lg">
       <h1
-        class="text-4xl font-bold font-display text-violet dark:text-violet-light xl:leading-snug"
+        class="mb-4 text-4xl font-bold font-display text-violet dark:text-blue-500 leading-tight"
         itemprop="name headline"
       >
         {{- partial "content.html" .Title -}}
       </h1>
-      <p class="mb-0 -mt-6 text-base text-gray-400">
-        <time
-          class="capitalize"
-          datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}"
-          itemprop="datePublished"
-        >
-          {{- $mymonths := .Site.Data.mois }}
-          {{- .Date.Day }} {{ index $mymonths (printf "%d" .Date.Month) }}
-          {{ .Date.Year -}}
-        </time>
-        {{- if isset .Params "categories" }}
-          •
-          {{ range $index, $category := .Params.categories }}
-            {{ if $index }}, {{ end }}
-            <a
-              class="no-underline capitalize transition duration-200 text-violet dark:text-violet-light hover:underline hover:text-violet-light dark:hover:text-violet-indigo-600"
-              href="{{ "categories/" | relURL }}{{ . | urlize }}"
-              >{{ . }}</a
-            >{{ end }}
-
-        {{- end }}
-        • <span aria-label="Temps de lecture">{{ .ReadingTime }} min</span> •
+      
+      <div class="mb-4 flex items-center space-x-1 text-base text-gray-400">
+        
         <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-          <span itemprop="name">
-            {{- if .Params.author }}
+          {{- if .Params.author }}
+            <img class="inline w-8 h-8 rounded-full" src="https://github.com/{{ (index .Site.Data.authors .Params.author).github }}.png" />
               {{- if isset (index .Site.Data.authors .Params.author) "web" }}
+              <span itemprop="name">
                 <a
-                  class="no-underline capitalize transition duration-200 text-violet dark:text-violet-light hover:underline hover:text-violet-light dark:hover:text-violet-indigo-600"
+                  class="no-underline capitalize transition duration-200 text-violet hover:text-violet-light dark:text-blue-500 hover:underline dark:hover:text-blue-300"
                   rel="author"
                   href="{{ (index .Site.Data.authors .Params.author).web }}"
-                  >{{ (index .Site.Data.authors .Params.author).name }}</a
-                >
+                  >{{ (index .Site.Data.authors .Params.author).name }}
+                </a>
                 {{ else }}
                 <a
-                  class="no-underline capitalize transition duration-200 text-violet dark:text-violet-light hover:underline hover:text-violet-light dark:hover:text-violet-indigo-600"
+                  class="no-underline capitalize transition duration-200 text-violet dark:text-blue-500 hover:underline hover:text-violet-light dark:hover:text-blue-300"
                   rel="author"
                   href="https://github.com/{{ (index .Site.Data.authors .Params.author).github }}"
                   >{{ (index .Site.Data.authors .Params.author).name }}</a
                 >
               {{ end -}}
-              {{ else }}
-              <a
-                class="no-underline capitalize transition duration-200 text-violet dark:text-violet-light hover:underline hover:text-violet-light dark:hover:text-violet-indigo-600"
-                rel="author"
-                href="{{ .Site.Data.authors.frank.web }}"
-                >{{ .Site.Data.authors.frank.name }}</a
-              >
-            {{ end -}}
-          </span>
+            </span>
+          {{ end -}}
         </span>
+        <span>&middot;</span>
+        <span>
+          <time
+          class="capitalize"
+          datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}"
+          itemprop="datePublished"
+          >
+          {{- $mymonths := .Site.Data.mois }}
+          {{- .Date.Day }} {{ index $mymonths (printf "%d" .Date.Month) }}
+          {{ .Date.Year -}}
+        </time></span>
+        <span>&middot;</span>
+        <svg class="inline w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span>Lecture <span aria-label="Temps de lecture">{{ .ReadingTime }} min.</span>
+      </div>        
+      <p class="mb-4 text-gray-400">
+        {{- if isset .Params "categories" }}
+          {{ range $index, $category := .Params.categories }}
+            {{ if $index }}, {{ end }}
+            <a
+              class="no-underline capitalize transition duration-200 text-violet dark:text-blue-500 hover:underline hover:text-violet-light dark:hover:text-blue-300"
+              href="{{ "categories/" | relURL }}{{ . | urlize }}"
+              >#{{ . }}</a
+            >{{ end }}
+        {{- end }}
       </p>
-    </header>
-    
-    <div class="font-body" itemprop="articleBody">
       {{- with .Params.Source }}
         {{- if and .url .title .author }}
-          <p class="text-base italic text-right text-gray-400">
+          <p class="text-base italic text-gray-400">
             Source :
             <a
-              class="no-underline font-display text-rose hover:underline"
+              class="no-underline font-display font-medium text-rose dark:text-rose-100 hover:underline"
               href="{{ .url }}"
               >{{ .title }}</a
             >
@@ -79,11 +74,19 @@
           </p>
         {{- end }}
       {{- end }}
+    </header>
+    <article
+    class="mx-auto prose sm:prose-lg lg:prose-xl dark:prose-dark"
+    itemscope
+    itemtype="https://schema.org/BlogPosting"
+  >
+    <div class="font-body" itemprop="articleBody">
+      
 
-      <hr class="dark:border-gray-800">
+      <!--<hr class="dark:border-gray-800">-->
 
       {{ if .Params.excerpt }}
-      <div class="text-2xl text-gray-700 dark:text-gray-300 lead font-display">
+      <div class="text-xl text-gray-700 dark:text-gray-300 lead font-display">
         {{ .Params.Excerpt | markdownify }}
       </div>
       <hr class="dark:border-gray-800">

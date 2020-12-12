@@ -3,9 +3,9 @@
   {{- partial "site/head" . -}}
 
   <body class="{{ .Kind }} dark:bg-gray-900">
-    <div class="sticky top-0 z-auto text-white bg-violet-dark">
-      <nav class="p-3">
-        <ul class="flex justify-end space-x-6">
+    <div class="sticky top-0 z-10 text-white bg-violet-light">
+      <nav class="py-2 px-4">
+        <ul class="flex justify-end space-x-4">
           <li class="w-6">{{- partialCached "icons/podcast" . -}}</li>
           <li class="w-6">{{- partialCached "icons/slack" . -}}</li>
           <li class="w-6">{{- partialCached "icons/twitter" . -}}</li>
