@@ -2,6 +2,7 @@
 title: "Contenu multilingue avec Hugo"
 description: "Comment gérer les traductions dans plusieurs langues avec Hugo."
 date: 2018-08-17T11:36:38+02:00
+author: regis
 images:
  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1000,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Contenu%2520multilingue%2520avec%2520Hugo/jamstatic/twitter-card.png
 categories:

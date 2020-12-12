@@ -2,6 +2,7 @@
 title: "À la recherche de la plate-forme de déploiement continu parfaite"
 date: 2018-08-26T18:26:33+02:00
 description: "Travis, Circle, Drone, GitLab, Jenkins : choisissez la solution d'intégration et de déploiement continu qui vous convient le mieux."
+author: frank
 tags:
   - CI/CD
 images:

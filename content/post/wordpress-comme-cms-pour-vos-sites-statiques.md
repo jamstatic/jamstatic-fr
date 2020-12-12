@@ -2,6 +2,7 @@
 title: "Utiliser WordPress comme CMS pour vos sites statiques"
 date: 2018-01-09T15:50:46+01:00
 description: "Grâce à son API REST WordPress fait aussi CMS headless. Stefan Baumgartner montre comment récupérer les contenus pour générer un site statique avec Metalsmith."
+author: frank
 images:
   - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Utiliser%20WordPress%20pour%20vos%20sites%20statiques/jamstatic/twitter-card.png
 categories:

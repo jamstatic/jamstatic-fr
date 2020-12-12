@@ -1,7 +1,8 @@
 ---
 title: Les templates Hugo pour les designers WordPress
 description: Découvrons les bases du générateur de site Hugo en le comparant à son ancêtre gbien connu WordPress.
-date: "2017-10-01 13:45:36 +0200"
+date: 2017-10-01 13:45:36 +0200
+author: frank
 source:
   author: Leon Barnard
   title: Hugo Templates for WordPress Designers

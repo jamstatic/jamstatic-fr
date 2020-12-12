@@ -1,6 +1,7 @@
 ---
 title: "Navigation multilingue avec Eleventy"
 description: "Une approche pour gérer la navigation sur un site Jamstack multilingue généré avec Eleventy."
+author: jerome
 date: 2019-09-28
 images:
   - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Navigation%20multilingue%20avec%20Eleventy/jamstatic/twitter-card.png

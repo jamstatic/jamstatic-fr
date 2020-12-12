@@ -1,6 +1,7 @@
 ---
 title: "La fonction .Scratch d’Hugo"
 description: Pendant longtemps, la fonction Scratch a été le seul moyen d'écraser des variables en Go Templating. Elle reste toujours le meilleur moyen d'enrichir votre contexte de page ou de shortcode dans Hugo.
+author: regis
 excerpt: |
   Si vous avez aimé l’article de
   [Régis Philibert](https://regisphilibert.com/) à propos de [la gestion du

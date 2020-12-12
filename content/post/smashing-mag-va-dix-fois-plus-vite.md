@@ -2,6 +2,7 @@
 title: Smashing Magazine est maintenant 10 fois plus rapide
 description: Sachant que leur site pouvait aller six fois plus vite en tirant parti d’un CDN global, Smashing a opté pour une architecture décentralisée et s'est adjoint les services de Netlify pour les aider à migrer.
 date: 2017-03-17T13:44:01+02:00
+author: frank
 source:
   author: Chris Bach
   title: Smashing Magazine just got 10x faster

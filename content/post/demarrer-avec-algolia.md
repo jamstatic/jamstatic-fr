@@ -1,7 +1,8 @@
 ---
 title: "Bien démarrer avec Algolia"
-date: 2018-03-19T21:13:46+01:00
 description: "Jess West vous dit comment indexer et intégrer une recherche performante pour son site."
+date: 2018-03-19T21:13:46+01:00
+author: frank
 categories:
   - algolia
 images:

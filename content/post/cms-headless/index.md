@@ -1,7 +1,8 @@
 ---
 title: C’est quoi un CMS headless ?
-date: 2017-12-15T16:40:50+01:00
 description: Un CMS headless s'occupe uniquement de vous aider à modéliser et à saisir vos contenus pour les fournir au terminal de votre choix.
+author: frank
+date: 2017-12-15T16:40:50+01:00
 images:
  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:C%E2%80%99est%20quoi%20un%20CMS%20headless%20%3F/jamstatic/twitter-card.png
 categories:

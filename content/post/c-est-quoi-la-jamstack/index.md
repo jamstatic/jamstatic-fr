@@ -1,8 +1,9 @@
 ---
 title: C'est quoi la Jamstack au juste ?
+description: Un petit pense-bête pour expliquer les concepts de la Jamstack et encourager davantage de personnes à adopter cette approche.
+author: frank
 date: 2019-02-07 19:12:14 +0000
 lastmod: 2019-02-28 08:17:42 +0000
-description: Un petit pense-bête pour expliquer les concepts de la Jamstack et encourager davantage de personnes à adopter cette approche.
 images:
  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1280,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:C'est%20quoi%20la%20Jamstack%20%3F/jamstatic/twitter-card.png
 source:

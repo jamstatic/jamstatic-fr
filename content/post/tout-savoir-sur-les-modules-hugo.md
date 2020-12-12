@@ -1,6 +1,7 @@
 ---
 title: "Tout ce que vous devez savoir sur les modules Hugo"
 description: "Les modules Hugo permettent d'utiliser des fichiers stockés dans n'importe quel dépôt Git dans vos projets."
+author: frank
 date: 2020-09-05T13:55:22+02:00
 lastmod: 2020-09-05T13:55:22+02:00
 categories:

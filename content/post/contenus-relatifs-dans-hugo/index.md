@@ -2,6 +2,7 @@
 title: "Entretenir de bonnes relations avec Hugo"
 date: 2018-04-04T22:25:16+02:00
 description: "Définissez des relations entre vos différents types de contenus dans Hugo de façon performante."
+author: regis
 images:
  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Entretenir%2520de%2520bonnes%2520relations%2520avec%2520Hugo/jamstatic/twitter-card.png
 categories:

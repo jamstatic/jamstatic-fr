@@ -1,6 +1,7 @@
 ---
 title: "Consommer l'API GraphQL d'un CMS headless avec Eleventy"
 description: "Eleventy permet de récupérer les données d'une API GraphQL pour générer des pages statiques, en lieu et place des fichiers Markdown."
+author: jerome
 date: 2019-09-08T23:00:48+02:00
 lastmod: 2019-09-08T23:00:48+02:00
 images:

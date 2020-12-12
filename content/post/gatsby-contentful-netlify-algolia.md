@@ -1,8 +1,9 @@
 ---
 title: Gatsby + Contentful + Netlify et Algolia
-date: 2017-12-05
 description: >
   Retour d’expérience sur la mise en place d’un site statique à l’aide de Contentful, Gatsby, Algolia et Netlify pour une qualité et un coût défiant toute concurrence.
+author: frank
+date: 2017-12-05
 images:
   - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_600,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Gatsby%20%2B%20Contentful%20%2B%20Netlify%20%2B%20Algolia/jamstatic/twitter-card.png
 source:

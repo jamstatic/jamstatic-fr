@@ -2,6 +2,7 @@
 title: Un site ecommerce statique (très performant) avec Hugo
 description: "Un exemple de site de ecommerce statique avec Hugo, Snipcart et Netlify."
 date: 2017-08-28 14:00:00 +02:00
+author: frank
 source:
   author: Charles Ouellet
   title: "Hugo Tutorial: How to Build & Host a (Very Fast) Static E-Commerce Site"

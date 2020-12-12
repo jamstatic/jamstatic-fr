@@ -1,6 +1,7 @@
 ---
 title: "Oubliez Docker, le futur c'est la Jamstack"
 description: À l'heure où les entreprises se débattent pour devenir plus agiles et rester pertinentes, elles peuvent compter sur les dernières évolutions des technologies.
+author: frank
 date: 2018-12-07T01:21:13+01:00
 lastmod: 2018-01-26T01:09:11+01:00
 categories:

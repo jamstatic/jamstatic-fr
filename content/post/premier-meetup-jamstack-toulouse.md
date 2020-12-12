@@ -2,6 +2,7 @@
 title: "Meetup Jamstack Toulouse"
 description: "Deux présentations de Netlify et Algolia lors premier meetup Jamstack en France."
 date: 2018-03-17T09:24:53+01:00
+author: frank
 categories:
   - meetup
   - algolia

@@ -2,6 +2,7 @@
 title: "Un site statique avec des composants à l’aide de Nunjucks"
 description: "Apprenez à construire un site statique avec des composants à l’aide d’un préprocesseur HTML."
 date: 2018-03-13T20:21:48+01:00
+author: frank
 images:
   - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Un%20site%20statique%20avec%20des%20composants%20%C3%A0%20l%E2%80%99aide%20de%20Nunjucks/jamstatic/twitter-card.png
 source:

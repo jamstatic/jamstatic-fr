@@ -1,13 +1,14 @@
 ---
 title: "Git-based, API-first headless CMS : lequel choisir ?"
 description: Les différences à connaître entre les headless CMS qui reposent sur Git et ceux qui fournissent une API.
+date: 2019-10-30T09:26:33.000+00:00
+author: frank
 excerpt: |
   L'agence [Bejamas](https://bejamas.io) s'est spécialisée dans le développement de sites Jamstack. Après avoir testé différentes solutions, elle se penche dans cet article sur les différences entre les CMS basés sur Git et ceux basés sur des APIs. L'article a le mérite de donner un aperçu des avantages et des inconvénients des deux types de plates-formes.
 
   Dans les faits la dichotomie n'est pas aussi binaire qu'on pourrait le penser. En effet, rien n'empêche un CMS qui communique avec l'<abbr title="Interface de Programmation Applicative">API</abbr> d'une plate-forme Git de vous permettre d'accéder à votre tour à ces contenus via une <abbr title="Interface de Programmation Applicative">API</abbr> de votre cru. Générer des fichiers JSON, les générateurs actuels comme [Hugo](/categories/hugo) ou [Eleventy](/categories/eleventy) font ça [très](https://github.com/regisphilibert/juliette-hugo-component "Composant de thème Hugo pour exposer une API") [bien](https://forestry.io/blog/add-functionality-to-your-hugo-site-with-theme-components/ "Autre composant de thème Hugo pour exposer une API"). On peut considérer que les CMS basés sur des APIs offrent un confort d'utilisation en fournissant une API et sa documentation par défaut. Une iso fonctionnalité demandera naturellement un effort supplémentaire si vous devez développer vous-même votre API. À vous de peser le pour et le contre de l'approche <abbr title="Do It Yourself">DIY</abbr>, qui peut soit dit en passant tout à fait être réutilisable de projet en projet.
   
   Il vous faut aussi prendre en compte dans l'équation _votre_ workflow éditorial, la taille de _votre_ site (et donc le temps nécessaire à la génération d'une nouvelle version) ainsi que _votre_ fréquence de publication. Autant de paramètres qui doivent peser dans le choix d'un [headless](/categories/headless) CMS. On rappellera que les CMS headless ne présentent aucun des inconvénients des CMS traditionnels, que ce soit en terme de workflow de développement, de performance ou de sécurité, et qu'ils offrent plus de flexibilité et une meilleure productivité, une fois l'investissement initial consenti.
-date: 2019-10-30T09:26:33.000+00:00
 images:
   - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1180,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Git-based%20vs.%20API-first%20headless%20CMS%20%3A%20lequel%20choisir%20%3F/jamstatic/twitter-card.png
 categories:

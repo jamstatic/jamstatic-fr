@@ -5,6 +5,7 @@ description: >-
   Eleventy. Longtemps utilisateur du très populaire Jekyll écrit en Ruby,
   il a décidé de passer à la vitesse supérieure avec Eleventy, écrit en JS.
 date: 2018-12-12
+author: frank
 images:
  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Passer%2520de%2520Jekyll%2520%25C3%25A0%2520Eleventy/jamstatic/twitter-card.png
 source:

@@ -1,6 +1,7 @@
 ---
 title: Des bibliothèques de composants avec Shadow DOM en Markdown
 description: Apprenez à inclure facilement des démos de composants dans du Markdown, à l’aide des shortcodes de Hugo et de l’encapsulation Shadow DOM.
+author: frank
 date: 2017-09-02
 images:
  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1280,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Des%20biblioth%C3%A8ques%20de%20composants%20avec%20Shadow%20DOM%20en%20Markdown/jamstatic/twitter-card.png

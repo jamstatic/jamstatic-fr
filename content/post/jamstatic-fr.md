@@ -1,6 +1,7 @@
 ---
 title: Lancement de Jamstatic France
 description: Les actualités autour de la Jamstack et des générateurs de site statique
+author: frank
 excerpt: |
   Ce site a pour but de relayer les actualités de la communauté [Jamstack](https://jamstack.org/) en français.
 date: 2016-04-01

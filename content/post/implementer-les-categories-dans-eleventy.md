@@ -1,6 +1,7 @@
 ---
 title: "Implémenter les catégories dans Eleventy"
 description: "Comment créer une collection afin de pouvoir travailler avec des catégories dans le générateur Eleventy."
+author: frank
 date: 2019-02-05T09:15:06+01:00
 lastmod: 2019-02-06T09:10:26+01:00
 images:

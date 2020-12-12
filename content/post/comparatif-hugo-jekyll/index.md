@@ -1,7 +1,8 @@
 ---
 title: Hugo ou Jekyll ? Six critères de comparaison
-date: 2018-04-06 18:10:03 +0000
 description: Jekyll et Hugo sont parmi les générateurs de site statiques les plus populaires. Quel est celui qu'il vous faut ?
+author: frank
+date: 2018-04-06 18:10:03 +0000
 categories:
 - hugo
 - jekyll

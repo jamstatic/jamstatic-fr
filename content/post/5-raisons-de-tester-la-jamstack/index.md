@@ -2,6 +2,7 @@
 title: "Passer au statique : 5 raisons de tester la Jamstack sur votre prochain projet"
 description: >
   Référencement, performance, sécurité, automatisation, communauté grandissante, les raisons de passer au statique ne manquent pas.
+author: frank
 date: 2017-03-16
 excerpt: |
   Adopter une stack de développement Web moderne pour pouvoir

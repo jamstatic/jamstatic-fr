@@ -2,6 +2,7 @@
 title: "Un site web simple avec le plus simple des générateurs de site statique"
 description: "Présentation d’Eleventy, le générateur de site statique le plus simple et le plus intuitif."
 date: 2018-01-24T20:40:44+01:00
+author: frank
 images:
   - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Un%2520site%2520web%2520simple%2520avec%2520le%2520plus%2520simple%2520des%2520g%25C3%25A9n%25C3%25A9rateurs%2520de%2520site%2520statique/jamstatic/twitter-card.png
 categories:

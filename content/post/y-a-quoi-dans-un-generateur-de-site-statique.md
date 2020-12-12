@@ -2,6 +2,7 @@
 title: Qu’y a-t-il dans un générateur de site statique ?
 description: Jetons un coup d’œil au fonctionnement interne de Harp, un générateur de site statique écrit en JavaScript
 date: 2017-02-09T15:21:52Z
+author: frank
 source:
   author: Brian Rinaldi
   title: What Really Makes a Static Site Generator?

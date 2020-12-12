@@ -4,6 +4,7 @@ description:
   Jamstatic fédère la communauté Jamstack française autour d'articles et
   d'évènements à propos des générateurs statiques, des CMS headless et des API tierces.
 date: 2016-04-01
+author: frank
 ---
 
 Ce site s'adresse à toutes celles et tous ceux qui s'intéressent de près ou de loin aux générateurs de sites statiques et à l'ensemble de son écosystème : API, CMS headless, services de déploiement, etc.

@@ -3,6 +3,7 @@ title: "Jamstack pour les clients"
 date: 2019-12-10T13:54:24+01:00
 lastmod: 2019-12-14T15:24:18+01:00
 description: "Comment communiquer clairement et efficacement les avantages de la Jamstack à vos prospects et vos clients ?"
+author: frank
 categories:
   - jamstack
 images:

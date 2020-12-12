@@ -1,6 +1,7 @@
 ---
 title: Présentation d’Eleventy, un nouveau générateur de site statique
 date: 2018-02-18 10:23:07 +0100
+author: frank
 description:
   Zach Leatherman explique pourquoi il a développé Eleventy, un générateur de
   site statique basé sur JavaScript, particulièrement flexible et qui sait se faire

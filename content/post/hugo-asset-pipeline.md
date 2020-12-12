@@ -2,6 +2,7 @@
 title: "La gestion des assets avec Hugo"
 description: "Depuis la version 0.43 Hugo offre une gestion des assets: Sass, minification, support de postCSS, concaténation des fichiers JS, et plus encore."
 date: 2018-07-21T20:54:26+02:00
+author: frank
 categories:
   - hugo
 images:

@@ -2,6 +2,7 @@
 title: "Les startups de l’écosystème Jamstack"
 description: "Les capital risqueurs de la Silicon Valley misent sur les startups qui forment l'écosytème de la Jamstack."
 date: 2018-05-31T20:21:08+02:00
+author: frank
 categories:
   - jamstack
 images:

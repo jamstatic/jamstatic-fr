@@ -3,6 +3,7 @@ title: Questions à Bjørn Erik Pedersen, le développeur d’Hugo
 description: >
   Bjørn Erik Pedersen répond à nos questions sur Hugo, le gestionnaire de sites statiques ultra-rapide.
 date: 2017-10-03 13:45:36 +0200
+author: frank
 images:
   - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Questions%20%C3%A0%20Bj%C3%B8rn%20Erik%20Pedersen%252C%20le%20d%C3%A9veloppeur%20d%E2%80%99Hugo/jamstatic/twitter-card.png
 categories:

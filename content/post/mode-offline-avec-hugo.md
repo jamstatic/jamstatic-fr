@@ -2,6 +2,7 @@
 title: Passez en mode hors-connexion avec un Service Worker et Hugo !
 description: Permettez aux visiteurs de consulter votre site statique en mode hors-connexion à l’aide d’un Service Worker
 date: 2017-03-11 17:04:00 +02:00
+author: frank
 source:
   title: Go offline! Service Worker and Hugo
   url: https://gohugohq.com/howto/go-offline-with-service-worker/

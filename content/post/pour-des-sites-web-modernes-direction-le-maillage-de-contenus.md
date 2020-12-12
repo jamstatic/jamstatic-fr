@@ -2,7 +2,8 @@
 title: Pour des sites web modernes, direction le maillage de contenus
 date: 2019-07-11
 lastmod: 2019-07-12T12:42:35.000+00:00
-author: anthony
+author: frank
+draft: true
 categories:
   - gatsby
   - headless

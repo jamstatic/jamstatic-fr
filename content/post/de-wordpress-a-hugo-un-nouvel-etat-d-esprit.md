@@ -1,8 +1,9 @@
 ---
 title: "De WordPress à Hugo : adopter un nouvel état d'esprit"
+description: "Comparons le fonctionnement de WordPress et de Hugo pour vous aider à vous familiariser avec ce nouvel environnement et vous imprégner de sa philosophie."
+author: regis
 date: 2019-02-06T17:12:14+01:00
 lastmod: 2019-05-03T158:12:14+01:00
-description: "Comparons le fonctionnement de WordPress et de Hugo pour vous aider à vous familiariser avec ce nouvel environnement et vous imprégner de sa philosophie."
 images:
   - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:De%20WordPress%20%C3%A0%20Hugo%20%3A%20adopter%20un%20nouvel%20%C3%A9tat%20d'esprit/jamstatic/twitter-card.png
 categories:

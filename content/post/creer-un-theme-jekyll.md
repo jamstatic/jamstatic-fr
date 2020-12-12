@@ -1,9 +1,10 @@
 ---
 title: Créer votre premier thème pour Jekyll
-date: "2017-10-03 13:45:36 +0100"
-lastmod: "2018-01-17 10:10:00 +0100"
 description: >
   Un guide complet pour installer et créer un thème pour Jekyll par David Darnes.
+author: frank
+date: "2017-10-03 13:45:36 +0100"
+lastmod: "2018-01-17 10:10:00 +0100"
 images:
   - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Cr%C3%A9er%20votre%20premier%20th%C3%A8me%20pour%20Jekyll/jamstatic/twitter-card.png
 source:

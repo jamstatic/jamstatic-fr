@@ -2,6 +2,7 @@
 title: Créer un environnement de préproduction pour Jekyll
 description: Netlify vous permet de créer simplement un environnement de préproduction pour votre site statique.
 date: 2017-02-23
+author: frank
 source:
   author: Eduardo Boucas
   title: Creating a staging environment for Jekyll

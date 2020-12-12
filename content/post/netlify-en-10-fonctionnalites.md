@@ -2,7 +2,9 @@
 title: "Netlify en 10 fonctionnalités"
 description: "Déployez et hébergez gratuitement vos sites statiques comme les pros : CDN, HTTPS, CI, environnements de build, formulaires, tests A/B, et bien plus."
 date: 2018-01-07T21:05:43+01:00
+author: frank
 categories:
+  - deploiement
 images:
   - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Netlify%20en%2010%20fonctionnalit%C3%A9s/jamstatic/twitter-card.png
 source:

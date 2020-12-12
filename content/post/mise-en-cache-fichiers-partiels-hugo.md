@@ -1,6 +1,7 @@
 ---
 title: "Gestion du cache des fichiers partiels avec Hugo"
 description: "Apprenez à optimiser le cache des fichiers partiels pour reduire plus encore vos temps de génération avec Hugo."
+author: regis
 date: 2019-12-03T18:10:24+01:00
 lastmod: 2019-12-07T18:13:54+01:00
 images:

@@ -1,7 +1,8 @@
 ---
 title: "Les collections dans Eleventy"
-date: 2019-01-29T08:54:22+01:00
 description: Les deux manières de créer des collections de documents avec le générateur de site statique Eleventy.
+date: 2019-01-29T08:54:22+01:00
+author: frank
 categories:
   - eleventy
 images:

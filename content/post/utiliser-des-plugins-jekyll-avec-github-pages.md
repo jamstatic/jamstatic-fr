@@ -1,6 +1,7 @@
 ---
 title: Utiliser des plugins Jekyll sur GitHub Pages
 description: Automatiser la publication d'un site Jekyll sur GitHub Pages quels que soient les plugins utilisés.
+author: frank
 date: 2016-09-18T13:51:13+02:00
 lastmod: 2010-09-18T13:51:13+02:00
 images:
