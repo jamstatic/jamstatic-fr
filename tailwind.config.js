@@ -30,6 +30,12 @@ module.exports = {
               borderColor: theme("colors.malibu.default"),
               padding: ".5em",
             },
+            pre: {
+              background:"rgba(128, 174, 255, 0.1)",
+            },
+            "pre code": {
+              color:theme("colors.black-grape.500"),
+            },
           },
         },
         dark: {

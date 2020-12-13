@@ -20,7 +20,7 @@ Cet article vous propose de vous mettre la main à la pâte et après avoir vu c
 
 ### Initialiser votre projet en tant que module
 
-{{< notice info >}}
+{{< notice >}}
 
 #### Tout est module
 

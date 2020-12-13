@@ -13,14 +13,7 @@
   />
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin />
-  {{- if ne .IsHome true }}
-    <link rel="stylesheet" href="{{ "assets/css/chroma.css" | relURL }}" />
-    <link
-      href="{{ "assets/css/chroma.css" | relURL }}"
-      rel="preload"
-      as="style"
-    />
-  {{- end }}
+
   <title>
     {{ block "title" . }}{{- if .IsHome }}{{ .Site.Params.Description }} ·
     {{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} ·
@@ -39,22 +32,13 @@
     {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
   {{ end }}
   <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
-
-  {{/* {{- if .Site.IsServer }}
-    {{- $cssOpts := (dict "targetPath" "assets/css/main.css" "enableSourceMap" true) -}}
-    {{- $styles := resources.Get "scss/main.scss" | toCSS $cssOpts -}}
-    <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen" />
-    {{- else if hugo.IsProduction -}}
-    {{- $cssOpts := (dict "targetPath" "assets/css/main.css") -}}
-    {{- $styles := resources.Get "scss/main.scss" | toCSS $cssOpts | postCSS | minify | fingerprint | resources.PostProcess -}}
-    <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen" />
-    <link href="{{ $styles.Permalink }}" rel="preload" as="style" />
-    {{- else }}
-    {{- $cssOpts := (dict "targetPath" "assets/css/main.css") -}}
-    {{- $styles := resources.Get "scss/main.scss" | toCSS $cssOpts -}}
-    <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen" />
-  {{- end }}
-  */}}
+  <link href="{{ $styles.RelPermalink }}" rel="preload" as="style" />
+  <link rel="stylesheet" href="{{ "assets/css/chroma.css" | relURL }}" />
+  <link
+      href="{{ "assets/css/chroma.css" | relURL }}"
+      rel="preload"
+      as="style"
+  />
   <link
     rel="alternate"
     href="{{ .Site.RSSLink | relURL }}"

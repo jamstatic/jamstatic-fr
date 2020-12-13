@@ -1,6 +1,6 @@
 {{- define "main" }}
 
-    <header class="p-4 mt-6 mb-8 dark:bg-gray-800 bg-opacity-50 rounded-lg">
+    <header class="p-4 mt-6 mb-8 bg-blue-100 dark:bg-gray-800 bg-opacity-50 rounded-lg">
       <h1
         class="mb-4 text-4xl font-bold font-display text-violet dark:text-blue-500 leading-tight"
         itemprop="name headline"
@@ -16,14 +16,14 @@
               {{- if isset (index .Site.Data.authors .Params.author) "web" }}
               <span itemprop="name">
                 <a
-                  class="no-underline capitalize transition duration-200 text-violet hover:text-violet-light dark:text-blue-500 hover:underline dark:hover:text-blue-300"
+                  class="no-underline capitalize transition duration-200 text-violet hover:text-indigo-700 dark:text-blue-500 hover:underline dark:hover:text-blue-300"
                   rel="author"
                   href="{{ (index .Site.Data.authors .Params.author).web }}"
                   >{{ (index .Site.Data.authors .Params.author).name }}
                 </a>
                 {{ else }}
                 <a
-                  class="no-underline capitalize transition duration-200 text-violet dark:text-blue-500 hover:underline hover:text-violet-light dark:hover:text-blue-300"
+                  class="no-underline capitalize transition duration-200 text-violet hover:underline hover:text-indigo-700 dark:text-blue-500 dark:hover:text-blue-300"
                   rel="author"
                   href="https://github.com/{{ (index .Site.Data.authors .Params.author).github }}"
                   >{{ (index .Site.Data.authors .Params.author).name }}</a
@@ -44,12 +44,10 @@
           {{ .Date.Year -}}
         </time></span>
         <span>&middot;</span>
-        <svg class="inline w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
+        {{- partial "svg/reading-time.svg" . -}}
         <span>Lecture <span aria-label="Temps de lecture">{{ .ReadingTime }} min.</span>
       </div>        
-      <p class="mb-4 text-gray-400">
+      <p class="text-gray-400">
         {{- if isset .Params "categories" }}
           {{ range $index, $category := .Params.categories }}
             {{ if $index }}, {{ end }}
@@ -62,10 +60,10 @@
       </p>
       {{- with .Params.Source }}
         {{- if and .url .title .author }}
-          <p class="text-base italic text-gray-400">
+          <p class="mt-4 text-base italic text-black-grape-400 dark:text-black-grape-200">
             Source :
             <a
-              class="no-underline font-display font-medium text-rose dark:text-rose-100 hover:underline"
+              class="no-underline font-display font-semibold text-rose hover:underline"
               href="{{ .url }}"
               >{{ .title }}</a
             >

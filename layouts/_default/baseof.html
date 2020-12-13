@@ -21,10 +21,7 @@
 
     {{- partialCached "site/footer" . -}} 
     
-    {{ if and .IsHome hugo.IsProduction }}
-      {{- partialCached "search.html" . -}} 
-    {{ else }} 
-      {{- partialCached "site/scripts" . -}} 
-    {{ end }}
+    {{- partialCached "site/scripts" . -}} 
+
   </body>
 </html>
