@@ -12,8 +12,10 @@
           <div class="mb-2">
             <div class="flex items-center">
               {{- if .Params.author }}
-              <img class="w-8 h-8 mr-2 rounded-full" src="https://github.com/{{ (index .Site.Data.authors .Params.author).github }}.png" />
-
+              {{- if isset (index .Site.Data.authors .Params.author) "avatar" }}
+              <img class="w-8 h-8 mr-2 rounded-full" rel="preload" src="
+              {{ .Site.Params.cloudinary }}/w_64,f_auto/jamstatic/author/{{ (index .Site.Data.authors .Params.author).avatar }}" width="32" height="32" />
+              {{ end -}}
               {{- if isset (index .Site.Data.authors .Params.author) "web" }}
                 <a
                   class="text-base no-underline capitalize transition duration-200 text-black-grape-400 dark:text-blue-500 hover:underline hover:text-violet-light dark:hover:text-blue-300"
