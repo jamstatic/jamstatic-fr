@@ -1,0 +1,30 @@
+
+{{ with .Get "number"}}
+  <script type="text/javascript">
+  const number = {{ . }};
+  fetch("{{ $.Site.Params.rssPodcast }}")
+  .then(response => response.text())
+  .then(data => {
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(data, "application/xml");
+    const items = xml.getElementsByTagName('item');
+    if (items) {
+      let episode = null;
+      for(let i = 0; i < items.length; i++) {
+        const n = items[i].getElementsByTagName('itunes:episode');
+        if(n.length > 0 && +n[0].textContent === +number) {
+          episode = items[i];
+        }
+      }
+      if (episode) {
+        const title = episode.getElementsByTagName('title')[0].textContent.replace("<![CDATA[", "").replace("]]>", "");
+        const dt = episode.getElementsByTagName('pubDate')[0].textContent;
+        const image = episode.getElementsByTagName('itunes:image')[0].getAttribute('href');
+        console.log(title, dt, image);
+      }
+
+    }
+  })
+  .catch(console.error);
+  </script>
+{{ end }}
