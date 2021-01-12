@@ -58,7 +58,6 @@ params:
   podcast:
     url: https://anchor.fm/jamstatic
     title: Le podcast de Jamstatic
-  rssPodcast: https://anchor.fm/s/39f4fa04/podcast/rss
   ghrepo: https://github.com/jamstatic/jamstatic-fr/
   branch: master
   images:
@@ -78,6 +77,7 @@ params:
     appId: TLI4UDRZDR
     indexName: jamstatic
     searchOnlyApiKey: 5af8d385eec1e00ac16d0963c630b6ac
+  rssPodcast: https://anchor.fm/s/39f4fa04/podcast/rss
 
 related:
   threshold: 80

@@ -15,8 +15,6 @@ podcast:
 Dans ce deuxième épisode de _Génération Statique_ Frank Taillandier et Arnaud Ligny reçoivent Matthias Dugué, en charge des relations avec les développeurs chez [Alwaysdata](https://alwaysdata.com), et Hubert Sablonnière, développeur web chez [Clever Cloud](https://www.clever-cloud.com). Avec eux nous évoquons la différence entre les plate-formes françaises et les géants américains du Cloud, quand il s'agit de déployer des sites Jamstack.
 {{</ intro >}}
 
-{{< player number="1" >}}
-
 <iframe src="https://anchor.fm/jamstatic/embed/episodes/Hberger-du-statique-en-France-enhc1t" height="174px" width="100%" frameborder="0" scrolling="no"></iframe>
 
 <div>

@@ -1,8 +1,15 @@
-
 {{ with .Get "number"}}
   <script type="text/javascript">
-  const number = {{ . }};
-  fetch("{{ $.Site.Params.rssPodcast }}")
+    const number = {{ . }};
+    document.addEventListener('DOMContentLoaded', function() {
+      initPlayer(number, "{{ $.Site.Params.rssPodcast }}");
+    });
+  </script>
+{{ end }}
+
+<script type="text/javascript">
+const initPlayer = function(number, url) {
+  fetch(url)
   .then(response => response.text())
   .then(data => {
     const parser = new DOMParser();
@@ -26,5 +33,5 @@
     }
   })
   .catch(console.error);
-  </script>
-{{ end }}
+  }
+</script>
