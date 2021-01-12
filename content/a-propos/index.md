@@ -27,6 +27,7 @@ L'ensemble des billets est publié en sous licence [Creative Commons Attribution
 
 * [Pierre Burgy](https://strapi.io)
 * [Jérôme Coupé](https://www.webstoemp.com)
+* [Patrick Faramaz](https://www.goodmotion.fr)
 * [Antoine Fauchié](https://www.quaternum.net)
 * [Jean-Yves Gastaud](https://gastaud.io)
 * [Nicolas Goutay](https://phacks.dev)
