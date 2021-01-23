@@ -9,7 +9,7 @@
       {{ range .Site.RegularPages }}
         <li class="post-item">
           <a href="{{ .RelPermalink }}">
-            <h2 class="post-link">{{ partial "content.html" .Title . }}</h2>
+            <h2 class="post-link">{{ .Title }}</h2>
             <p class="post-meta">
               <time
                 datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}"
@@ -67,7 +67,7 @@
               </span>
             </p>
             <p class="post-description">
-              {{ partial "content.html" .Description }}
+              {{ .Description }}
             </p>
           </a>
         </li>
