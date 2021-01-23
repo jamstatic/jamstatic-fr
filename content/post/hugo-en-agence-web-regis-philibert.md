@@ -29,6 +29,8 @@ Si vous vous intéressez à [Hugo](/categories/hugo/), il y a de grandes chance 
 
 ## Son parcours
 
+{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/e_auto_color,f_auto,g_auto,q_auto/v1611427506/jamstatic/regis-philibert.png" caption="Rex, Regis: Hugo et Orbi" attr="" attrlink="" >}}
+
 Régis est développeur web front-end depuis plus de 10 ans. Après avoir développé pas mal de sites web avec WordPress, Hugo est petit à petit devenu son outil de prédilection depuis quelques années pour développer des sites pré-rendus et servis depuis des CDNs.
 
 Quand [Smashing Magazine est passé sous Hugo]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}}), ça a été le déclic. Régis a rapidement été conquis par les fonctionnalités d'Hugo, comme [les ressources associées aux pages](https://regisphilibert.com/blog/2018/01/hugo-page-resources-and-how-to-use-them/), il a rapidement commencé à collaborer au projet, maintenu par [Bjørn Erik Pedersen]({{< relref "interview-hugo-lead-developer" >}}), et notamment à la documentation.
@@ -39,13 +41,13 @@ Lors de son apprentissage, Régis en a profité pour écrire à propos de concep
 
 La [gestion des assets native d'Hugo]({{< relref "hugo-asset-pipeline.md" >}}), qui permet de se passer d'outils comme Webpack, Parcel, Gulp ou Rollup pour compiler CSS, Sass ou transpiler du JavaScript moderne avec **zéro configuration**. Pour cela Hugo intègre des librairies Go comme [esbuild](https://esbuild.github.io/), ce qui permet de bénéficier d'une [rapidité de compilation inégalée]({{< relref "comparatif-performance-generateurs-de-site-statique" >}}).
 
-[Les modules Hugo]({{< relref "tout-savoir-sur-les-modules-hugo" >}}), basés sur les modules Go,  procurent un système de dépendances, qui ne nécessite pas de publier des paquets sur un registre, et qui peut aller récupérer des fichiers directement depuis un dépôt Git. Couplé au système de fichier unifié d'Hugo et à ses conventions de nommage, vos sites peuvent partager autant de dépendances(themes, partiels, icônes, assets, contenus, etc.) que nécessaire.
+[Les modules Hugo]({{< relref "tout-savoir-sur-les-modules-hugo" >}}), basés sur les modules Go,  procurent un système de dépendances, qui ne nécessite pas de publier des paquets sur un registre, et qui peut aller récupérer des fichiers directement depuis un dépôt Git. Couplé au système de fichiers unifiés d'Hugo et à ses conventions de nommage, vos sites peuvent partager autant de dépendances(themes, partiels, icônes, assets, contenus, etc.) que nécessaire.
 
-On peut par exemple pointer Hugo vers un thème hébergé sur GitHub. Lors de la compilation Hugo va rapatrier, fusionner et mettre en cache le thème dans son système de fichier unifié. Les possibilités avec les modules sont infinies. [L'agence The New Dynamic](https://www.thenewdynamic.com/) a développé de nombreux [modules open source pour Hugo](https://www.thenewdynamic.com/open-source/), comme [le module pour Imgix](https://www.thenewdynamic.com/article/hugo-module-imgix/) afin d'automatiser le traitement et l'optimisation d'images, etc.
+On peut par exemple pointer Hugo vers un thème hébergé sur GitHub. Lors de la compilation Hugo va rapatrier, fusionner et mettre en cache le thème dans son système de fichiers unifiés. [L'agence The New Dynamic](https://www.thenewdynamic.com/) a développé de nombreux [modules open source pour Hugo](https://www.thenewdynamic.com/open-source/), dont [un module pour Imgix](https://www.thenewdynamic.com/article/hugo-module-imgix/) afin d'automatiser le traitement et l'optimisation d'images, si crucial pour un chargement de page performant.
 
-Hugo est livré sous forme de fichier binaire et intègre beaucoup de fonctionnalités, comme la gestion des taxonomies, nativement pour que vous n'ayez pas ) réinventer la roue. Contrairement à des générateurs impératifs comme Eleventy, qui n'imposent rien par défaut et vous demande d'implementer *votre* solution.
+Hugo est livré sous forme de fichier binaire et se doit donc d'intègrer beaucoup des fonctionnalités attendues nativement, comme la gestion des taxonomies, pour que vous n'ayez pas à réinventer la roue. Contrairement à des générateurs impératifs comme Eleventy, qui n'imposent rien par défaut et vous demandent d'implementer *votre* solution.
 
-Depuis 2018, Régis a rejoint The New Dynamic, l'agence web fondée par Bud Parr, un membre très actif de la communauté, via notamment la création d'un Slack que fréquente quelques uns des acteurs de la Jamstack. Bud est un précurseur du développement de site statiques à l'aide de générateurs pour ses clients et il a franchi le pas il y a près de 10 ans.
+Depuis 2018, Régis a rejoint [The New Dynamic](https://www.thenewdynamic.com/), l'agence web fondée par Bud Parr basée à New-York, un membre très actif de la communauté Jamstack, via notamment la création dès 2013 d'un Slack que fréquente encore quelques-uns des développeurs les plus actifs. Bud est un précurseur du développement de site statiques à l'aide de générateurs pour ses clients et il a franchi le pas il y a déjà près de 10 ans. TND ne vend pas une technologie mais des résultats et une manière de collaborer sur le long terme.
 
 Parmi ses projets, on retrouve beaucoup de sites de contenus, de sites vitrines, de landing pages, de documentation (comme celle d'Hugo dont il a développé le thème), voire des [sites de e-commerce avec SnipCart]({{< relref "un-site-ecommerce-statique-avec-hugo" >}}).
 
@@ -55,15 +57,15 @@ Un des besoin récurrent est l'intégration d'une recherche, pour cela les forma
 
 Les clients sont satisfaits, leurs sites sont rapides, stables et performants. Les mises en production se font rapidement, généralement en moins d'une minute, grâce à la mise en cache des fichiers générés sur le réseau de CDN de Netlify.
 
-Afin de proposer de la composition de page aux éditeurs, il est possible de définir des blocs avec des variables, au travers de CMS comme [Forestry](https://www.forestry.io/docs/settings/fields/blocks/). Go HTML Templating offre des [fonctions](https://gohugo.io/functions/) dédiées la manipulation de structure de données (tableaux, listes, dictionnaires) qui vont permettre de développer des fonctionnalités à partir de cette manipulation de données.
+Afin de proposer de la composition de page aux éditeurs, il est possible de définir des blocs avec des variables, au travers de CMS comme [Forestry](https://www.forestry.io/docs/settings/fields/blocks/). Go HTML Templating offre des [fonctions](https://gohugo.io/functions/) dédiées la manipulation de structure de données de base (tableaux, listes, dictionnaires) qui vont permettre de développer des fonctionnalités plus avancées, comme le chargement à la demande du visiteur d'un type de contenu.
 
-Il est aussi de possible de [générer du JSON](https://forestry.io/blog/build-a-json-api-with-hugo/) pour tous types de contenus, et donc de proposer une API en lecture seule. Une fonctionnalité à faible coût mais qui ouvre pas mal de possibilités en terme de développement.
+Il est aussi de possible de [générer du JSON](https://forestry.io/blog/build-a-json-api-with-hugo/) pour tous types de contenus, et par là même de proposer une API en lecture seule. Une fonctionnalité à faible coût mais qui ouvre pas mal de possibilités en terme de développement.
 
-[Netlify permet de faire des redirections en fonction de la région ou du pays de l'utilisateur](https://www.netlify.com/blog/2020/10/30/easy-localization-with-netlify-redirects-and-rewrites/), il est donc possible d'afficher certains contenus pour la France, et d'autres pour le Canada, pratique quand vous développer des sites internationaux. Hugo sait parfaitement [gérer des contenus dans plusieurs langues]({{< relref "contenu-multilingue-avec-hugo" >}}).
+[Netlify permet de faire des redirections en fonction de la région ou du pays de l'utilisateur](https://www.netlify.com/blog/2020/10/30/easy-localization-with-netlify-redirects-and-rewrites/), il est donc possible d'afficher certains contenus pour la France, et d'autres pour le Canada, pratique quand vous développez des sites internationaux. Hugo sait parfaitement [gérer des contenus dans plusieurs langues]({{< relref "contenu-multilingue-avec-hugo" >}}).
 
-Hugo gagne en fonctionnalités sans faire aucune concession sur la performance, grâce à des tests automatisés et à l'excellent travail du développeur principal. Les performances sont encore plus impressionnantes sur les processeurs récents comme le M1 d'Apple, qui devrait être supporté dans la prochaine version de [Go 1.16](https://tip.golang.org/doc/go1.16) actuellement encore en bêta.
+Hugo gagne en fonctionnalités au gré des versions sans faire aucune concession sur la performance, grâce à des tests automatisés et à l'excellent travail du développeur principal. Les performances sont encore plus impressionnantes sur les processeurs récents tel que l'Apple Sillicon, qui devrait être supporté dans la prochaine version de [Go 1.16](https://tip.golang.org/doc/go1.16) actuellement encore en bêta.
 
-Au final, Hugo demande bien moins de maintenance et ne nécessite pas forcément d'être mis à jour, sauf si on souhaite refactoriser certaines parties pour bénéficier des dernières fonctionnalités comme la transpilation JavaScript.
+Au final, Hugo demande bien moins de maintenance et ne nécessite pas forcément d'être mis à jour, sauf si on souhaite refactoriser certaines parties pour bénéficier des dernières fonctionnalités comme la transpilation JavaScript par exemple.
 
 Il est toujours possible de développer avec Vue ou React, pour certaines pages dynamiques comme la recherche, dans ce cas on peut toujours avoir recours à l'écosystème de Node.js 😨
 
@@ -75,15 +77,15 @@ Aujourd'hui Hugo ne fonctionne qu'avec des fichiers locaux, et ne peut pas tirer
 
 La documentation officielle est une documentation de référence, mais ne comporte pas de tutoriels ou d'HOW-TOs sur des fonctionnalités avancées qui permettraient une adoption plus rapide. Il ne tient qu'à la communauté de contribuer, tout ne peut pas venir pas de la core team.
 
-Hugo comme Eleventy, sont d'excellents points d'entrée pour apprendre le développement front-end, car il n'y a aucun surcharge, de plus Hugo fonctionne parfaitement en mode hors-ligne.
+Hugo comme Eleventy, sont d'excellents points d'entrée pour apprendre le développement front-end, car il n'y a besoin de rien d'autre, de plus Hugo fonctionne parfaitement en mode hors-ligne.
 
 ## Liens
 
 - [Le site de Régis Philibert](https://regisphilibert.com/)
-- Le blog de l'agence The New Dynamic
-- Le site communautaire The New Dynamic
+- [L'agence The New Dynamic](https://www.thenewdynamic.com/)
+- [Le site communautaire The New Dynamic](https://www.tnd.dev/)
 
-### Actualités
+### Dans l'actu
 
 - [Le chapitre Jamstack du Web Alamanac 2020 de HTTP Archive](https://almanac.httparchive.org/en/2020/jamstack)
 - [AWS Amplify Admin UI](https://aws.amazon.com/fr/blogs/aws/aws-amplify-admin-ui-helps-you-develop-app-backends-no-cloud-experience-required/) ([Démo en vidéo](https://www.youtube.com/watch?v=p33Q9cT_dNQ))
