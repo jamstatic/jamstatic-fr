@@ -5,20 +5,19 @@ lastmod: 2021-01-23T14:18:34+01:00
 draft: true
 description: "Un entretien avec Régis Philibert, développeur web et expert du générateur de site statique Hugo."
 author: frank
-
 categories:
   - podcast
   - hugo
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Des%20nouvelles%20d'Hugo%20avec%20R%C3%A9gis%20Philibert/jamstatic/twitter-card.png
+  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Hugo%2520en%2520agence%2520web%252C%2520avec%2520R%25C3%25A9gis%2520Philibert/jamstatic/twitter-card.png
 ---
 
-Dans cet entretien, Régis revient sur son parcours, son adoption puis son travail avec Hugo en agence, ses fonctionnalités préférées, les challenges qu'il a du relevé et ce qui rend ce
+Dans cet entretien, [Régis Philibert](https://twitter.com/regisphilibert) revient sur son parcours, son adoption puis son travail avec Hugo en agence au quotidien, ses fonctionnalités préférées, les challenges qu'il a du relevé et ce qui rend ce
 générateur si agréable à l'utilisation.
 
-Si vous vous intéressez à [Hugo](/categories/hugo/), il y a de grandes chance que vous ayez déjà lu ici même un des articles de Régis Philibert ayant pour but de vous faire progresser dans votre apprentissage.
+Si vous vous intéressez à [Hugo](/categories/hugo/), il y a de grandes chance que vous ayez déjà lu ici-même un des articles de Régis ayant pour but de vous faire progresser dans votre apprentissage.
 
-<!-- {{< player number=2 >}}
+<!-- {{< player number=3 >}}
 
 <div>
 
@@ -30,59 +29,57 @@ Si vous vous intéressez à [Hugo](/categories/hugo/), il y a de grandes chance 
 
 ## Son parcours
 
-Régis est développeur web front-end depuis plus de 10 ans. Après avoir développé pas mal de sites web avec WordPress, Hugo est devenu son outil de prédilection depuis quelques années pour servir des sites statiques.
+Régis est développeur web front-end depuis plus de 10 ans. Après avoir développé pas mal de sites web avec WordPress, Hugo est petit à petit devenu son outil de prédilection depuis quelques années pour développer des sites pré-rendus et servis depuis des CDNs.
 
-Quand [Smashing Magazine est passé sour Hugo]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}}), ça a été le déclic. Régis a rapidement été conquis par les fonctionnalités d'Hugo, comme [les ressources associées aux pages](https://regisphilibert.com/blog/2018/01/hugo-page-resources-and-how-to-use-them/) a rapidement commencé à collaborer au projet, maintenu par [Bjørn Erik Pedersen]({{< relref "interview-hugo-lead-developer" >}}), et notamment à la documentation.
+Quand [Smashing Magazine est passé sous Hugo]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}}), ça a été le déclic. Régis a rapidement été conquis par les fonctionnalités d'Hugo, comme [les ressources associées aux pages](https://regisphilibert.com/blog/2018/01/hugo-page-resources-and-how-to-use-them/), il a rapidement commencé à collaborer au projet, maintenu par [Bjørn Erik Pedersen]({{< relref "interview-hugo-lead-developer" >}}), et notamment à la documentation.
 
 Lors de son apprentissage, Régis en a profité pour écrire à propos de concepts fondamentaux comme la [gestion du contexte]({{< relref "hugo-le-point-sur-le-contexte" >}}) ou une [introduction à la syntaxe du templating]({{< relref "de-wordpress-a-hugo-un-nouvel-etat-d-esprit" >}}), à connaître quand on veut maîtriser les bases. Le [forum de discussion d'Hugo](https://discourse.gohugo.io/) regorge d'informations et s'avère un complément indispensable à [la documentation de référence](https://gohugo.io/documentation/).
 
 ## Ses fonctionnalités préférées
 
-La [gestion des assets native d'Hugo]({{< relref "hugo-asset-pipeline.md" >}}), qui permet de se passer d'outils comme Webpack, Parcel, Gulp ou Rollup pour compiler CSS, Sass ou transpiler du JavaScript moderne avec zéro configuration. Pour cela Hugo intègre des librairies Go comme [esbuild](https://esbuild.github.io/), ce qui permet de bénéficier d'une rapide inégalée.
+La [gestion des assets native d'Hugo]({{< relref "hugo-asset-pipeline.md" >}}), qui permet de se passer d'outils comme Webpack, Parcel, Gulp ou Rollup pour compiler CSS, Sass ou transpiler du JavaScript moderne avec **zéro configuration**. Pour cela Hugo intègre des librairies Go comme [esbuild](https://esbuild.github.io/), ce qui permet de bénéficier d'une [rapidité de compilation inégalée]({{< relref "comparatif-performance-generateurs-de-site-statique" >}}).
 
-La deuxième fonctionnalité ce sont [les modules Hugo]({{< relref "tout-savoir-sur-les-modules-hugo" >}}), basés sur les modules Go, qui procurent un système de dépendances, qui ne nécessite pas de publier des paquets sur un registre, et qui peut aller récupérer des fichiers directement depuis un dépôt Git.
+[Les modules Hugo]({{< relref "tout-savoir-sur-les-modules-hugo" >}}), basés sur les modules Go,  procurent un système de dépendances, qui ne nécessite pas de publier des paquets sur un registre, et qui peut aller récupérer des fichiers directement depuis un dépôt Git. Couplé au système de fichier unifié d'Hugo et à ses conventions de nommage, vos sites peuvent partager autant de dépendances(themes, partiels, icônes, assets, contenus, etc.) que nécessaire.
 
-On peut par exemple pointer Hugo vers un thème Hugo hébergé sur GitHub et Hugo va rapatrier et et fusionner le tout dans un système de fichier unifié. Les possibilités avec les modules sont infinies, [l'agence The New Dynamic](https://www.thenewdynamic.com/) a par exemple développé de nombreux [modules open source pour Hugo](https://www.thenewdynamic.com/open-source/), comme [le module pour Imgix](https://www.thenewdynamic.com/article/hugo-module-imgix/) afin d'automatiser le traitement et l'optimisation d'images, etc.
+On peut par exemple pointer Hugo vers un thème hébergé sur GitHub. Lors de la compilation Hugo va rapatrier, fusionner et mettre en cache le thème dans son système de fichier unifié. Les possibilités avec les modules sont infinies. [L'agence The New Dynamic](https://www.thenewdynamic.com/) a développé de nombreux [modules open source pour Hugo](https://www.thenewdynamic.com/open-source/), comme [le module pour Imgix](https://www.thenewdynamic.com/article/hugo-module-imgix/) afin d'automatiser le traitement et l'optimisation d'images, etc.
 
-Hugo est livré sous forme de fichier binaire et intègre beaucoup de fonctionnalités nativement pour que vous n'ayez rien à coder. Contrairement à des générateurs impératifs comme Eleventy, qui par défaut ne propose rien. Par exemple Hugo intègre une gestion des taxonomies, alors qu'avec Eleventy, il est de la responsabilité du développeur d'implémenter cette gestion.
+Hugo est livré sous forme de fichier binaire et intègre beaucoup de fonctionnalités, comme la gestion des taxonomies, nativement pour que vous n'ayez pas ) réinventer la roue. Contrairement à des générateurs impératifs comme Eleventy, qui n'imposent rien par défaut et vous demande d'implementer *votre* solution.
 
-Depuis 2018, Régis a rejoint l'agence de Bud Parr, un membre très actif de la communauté via The New Dynamic, dans laquelle on retrouve quelques uns des acteurs de la Jamstack, et qui développe des sites statiques professionnellement depuis près de 10 ans.
+Depuis 2018, Régis a rejoint The New Dynamic, l'agence web fondée par Bud Parr, un membre très actif de la communauté, via notamment la création d'un Slack que fréquente quelques uns des acteurs de la Jamstack. Bud est un précurseur du développement de site statiques à l'aide de générateurs pour ses clients et il a franchi le pas il y a près de 10 ans.
 
-Parmi les projets, on retrouve beaucoup de sites de contenus, de sites vitrines, de landing pages, de documentation (comme celle d'Hugo), voire des [sites de e-commerce avec SnipCart]({{< relref "un-site-ecommerce-statique-avec-hugo" >}}).
-
-PROBLEME de SON Régis (ECHO)
+Parmi ses projets, on retrouve beaucoup de sites de contenus, de sites vitrines, de landing pages, de documentation (comme celle d'Hugo dont il a développé le thème), voire des [sites de e-commerce avec SnipCart]({{< relref "un-site-ecommerce-statique-avec-hugo" >}}).
 
 ### Les défis relevés
 
-Un besoin récurrent est d'intégrer une recherche, et pour cela les formats de sortie d'Hugo permettent de générer facilement des indexes au format JSON, ou des exports au format CSV. Pour les formulaires, on doit passer par un service tiers comme [FormSpree](https://formspree.io/) ou [Netlify Forms](https://www.netlify.com/products/forms/).
+Un des besoin récurrent est l'intégration d'une recherche, pour cela les formats de sortie d'Hugo permettent de générer des indexes au format JSON, ou des exports au format CSV. Pour les formulaires, on passera par un service tiers comme [FormSpree](https://formspree.io/) ou [Netlify Forms](https://www.netlify.com/products/forms/).
 
 Les clients sont satisfaits, leurs sites sont rapides, stables et performants. Les mises en production se font rapidement, généralement en moins d'une minute, grâce à la mise en cache des fichiers générés sur le réseau de CDN de Netlify.
 
-Afin de proposer de la composition de page, il est possible de définir des blocs avec des variables, au travers de CMS comme Forestry. Go HTML Templating permet la manipulation de structure de données (tableaux, listes, dictionnaires).
+Afin de proposer de la composition de page aux éditeurs, il est possible de définir des blocs avec des variables, au travers de CMS comme [Forestry](https://www.forestry.io/docs/settings/fields/blocks/). Go HTML Templating offre des [fonctions](https://gohugo.io/functions/) dédiées la manipulation de structure de données (tableaux, listes, dictionnaires) qui vont permettre de développer des fonctionnalités à partir de cette manipulation de données.
 
-Il est aussi de possible de générer du JSON pour tous les types de contenus, et donc de proposer une API en lecture seule.
+Il est aussi de possible de [générer du JSON](https://forestry.io/blog/build-a-json-api-with-hugo/) pour tous types de contenus, et donc de proposer une API en lecture seule. Une fonctionnalité à faible coût mais qui ouvre pas mal de possibilités en terme de développement.
 
-Netlify permet de faire des redirections en fonction de la région ou du pays de l'utilisateur, il est donc possible d'afficher certains contenus pour la France, et d'autres pour le Canada, pratique quand vous développer des sites internationaux. Hugo sait parfaitement [gérer des contenus dans plusieurs langues]({{< relref "contenu-multilingue-avec-hugo" >}}).
+[Netlify permet de faire des redirections en fonction de la région ou du pays de l'utilisateur](https://www.netlify.com/blog/2020/10/30/easy-localization-with-netlify-redirects-and-rewrites/), il est donc possible d'afficher certains contenus pour la France, et d'autres pour le Canada, pratique quand vous développer des sites internationaux. Hugo sait parfaitement [gérer des contenus dans plusieurs langues]({{< relref "contenu-multilingue-avec-hugo" >}}).
 
-Hugo gagne en fonctionnalités sans faire aucune concession sur la performance, grâce à des tests automatisés et à l'excellent travail du développeur principal qui est très expérimentés. Les performances sont encore meilleures bien entendues sur processeurs récents comme les Apple M1.
+Hugo gagne en fonctionnalités sans faire aucune concession sur la performance, grâce à des tests automatisés et à l'excellent travail du développeur principal. Les performances sont encore plus impressionnantes sur les processeurs récents comme le M1 d'Apple, qui devrait être supporté dans la prochaine version de [Go 1.16](https://tip.golang.org/doc/go1.16) actuellement encore en bêta.
 
-Au final, Hugo demande bien moins de maintenance et ne nécessite pas d'être mis à jour, sauf si on souhaite refactoriser certaines parties pour
+Au final, Hugo demande bien moins de maintenance et ne nécessite pas forcément d'être mis à jour, sauf si on souhaite refactoriser certaines parties pour bénéficier des dernières fonctionnalités comme la transpilation JavaScript.
 
-### Les limites ?
+Il est toujours possible de développer avec Vue ou React, pour certaines pages dynamiques comme la recherche, dans ce cas on peut toujours avoir recours à l'écosystème de Node.js 😨
 
-Aujourd'hui Hugo ne fonctionne qu'avec des fichiers locaux, et ne peut pas tirer parti de données tierces fournies par des APIs. Hugo ne sait pas encore générer des pages et il faut encore passer des fonctions serverless, mais cela fait partie des choses qu'on devrait voir arriver un de ces jours.
+### Les limites actuelles ?
 
-Il est toujours possible de développeur avec Vue ou React, certaines pages dynamiques comme la recherche, dans ce cas il faudra avoir recours à l'écosystème de Node.js.
+Aujourd'hui Hugo ne fonctionne qu'avec des fichiers locaux, et ne peut pas tirer parti de données tierces fournies par des APIs. Hugo ne sait pas encore générer des pages sans passer par des fonctions serverless, mais cela fait partie des choses qu'on devrait voir arriver un de ces jours 🤞.
 
 ## Apprendre Hugo
 
-La documentation officielle est une documentation de référence, mais ne comporte pas de tutoriels ou d'HOWTOs sur des fonctionnalités avancées qui permettraient une adoption plus rapide. Il ne tient qu'à la communauté.
+La documentation officielle est une documentation de référence, mais ne comporte pas de tutoriels ou d'HOW-TOs sur des fonctionnalités avancées qui permettraient une adoption plus rapide. Il ne tient qu'à la communauté de contribuer, tout ne peut pas venir pas de la core team.
 
-Hugo comme Eleventy, sont d'excellents points d'entrée pour apprendre le développement front-end, car il n'y a aucun surcharge, et il marche très bien en ligne de commande en hors-ligne.
+Hugo comme Eleventy, sont d'excellents points d'entrée pour apprendre le développement front-end, car il n'y a aucun surcharge, de plus Hugo fonctionne parfaitement en mode hors-ligne.
 
 ## Liens
 
-- Le blog de Régis Philibert
+- [Le site de Régis Philibert](https://regisphilibert.com/)
 - Le blog de l'agence The New Dynamic
 - Le site communautaire The New Dynamic
 
