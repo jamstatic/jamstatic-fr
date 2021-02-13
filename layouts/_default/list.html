@@ -6,8 +6,9 @@
   <main>
     <div id="search-searchbar"></div>
     <ul id="search-hits">
-      {{ range .Site.RegularPages }}
-        <li class="p-4 my-6 transition duration-300 transform bg-blue-100 bg-opacity-50 rounded-lg hover:scale-105 dark:bg-gray-800">
+      {{ range (where .Site.RegularPages "Section" "post") }}
+
+      <li class="p-4 mb-8 transition duration-300 transform bg-blue-100 bg-opacity-50 rounded-lg hover:scale-105 dark:bg-gray-800">
           
           <div class="mb-2">
             <div class="flex items-center">
@@ -37,10 +38,10 @@
             <h2
               class="mb-2 text-3xl font-black transition duration-200 font-display text-violet dark:text-blue-500 hover:underline dark:hover:text-blue-300 xl:leading-snug"
             >
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            <a href="{{ .RelPermalink }}">{{ partial "content.html" .Title }}</a>
             </h2>
             <p class="mb-4 text-2xl text-gray-600 dark:text-gray-300">
-              <a href="{{ .RelPermalink }}">{{ .Description }}</a>
+              <a href="{{ .RelPermalink }}">{{ partial "content.html" .Description }}</a>
             </p>
             <div class="flex items-center space-x-1 text-sm text-black-grape-200 dark:text-blue-500">
             <span>
@@ -59,7 +60,6 @@
             <span>Lecture {{ .ReadingTime }} min.</span>
           </div>
         </li>
-        {{/*  <hr class="border-gray-200 dark:border-gray-800">  */}}
       {{ end }}
     </ul>
   </main>
