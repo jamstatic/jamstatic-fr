@@ -26,13 +26,14 @@
   },
   "homepage": "https://github.com/jamstatic/jamstatic-fr#readme",
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^2.3.0",
     "all-contributors-cli": "^6.19.0",
     "atomic-algolia": "^0.3.19",
     "autoprefixer": "^9.8.6",
-    "postcss-cli": "^7.1.2"
+    "postcss-cli": "^8.3.1"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.0",
+    "postcss": "^8.2.6",
     "prettier": "^2.2.1",
     "prettier-plugin-go-template": "0.0.10",
     "remark-cli": "^9.0.0",
