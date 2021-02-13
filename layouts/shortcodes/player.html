@@ -5,18 +5,18 @@
     });
     </script>
 {{ end }}
-<div id="jfr-player-container" style="visibility: hidden;" class="flex">
-  <div>
+<div class="flex" id="jfr-player-container" style="visibility: hidden;">
+  <div class="w-1/4">
     <img class="player-image" src="" />
   </div>
-  <div>
+  <div class="px-4 flex-1">
     <h3 class="player-title"></h3>
     <p class="player-date"></p>
-    <audio id="jfr-player" controls>
-      <source src="" type="audio/mp3" />
-    </audio>
   </div>
 </div>
+<audio id="jfr-player" controls>
+  <source src="" type="audio/mp3" />
+</audio>
 <link rel="stylesheet" href="https://cdn.plyr.io/3.6.3/plyr.css" />
 <script src="https://cdn.plyr.io/3.6.3/plyr.js" async></script>
 <script type="text/javascript">

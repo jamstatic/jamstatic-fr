@@ -19,12 +19,10 @@ Dans ce deuxième épisode de _Génération Statique_ Frank Taillandier et Arnau
 
 <!-- <iframe src="https://anchor.fm/jamstatic/embed/episodes/Hberger-du-statique-en-France-enhc1t" height="174px" width="100%" frameborder="0" scrolling="no"></iframe> -->
 
-<div>
-
+<div class="mt-4 flex">
 {{< podcast/apple url="https://podcasts.apple.com/fr/podcast/g%C3%A9n%C3%A9ration-statique/id1539806294#episodeGuid=720d517e-7fa9-4699-9ca1-44c479f060b2" >}}&nbsp;
 {{< podcast/google url="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy8zOWY0ZmEwNC9wb2RjYXN0L3Jzcw/episode/NzIwZDUxN2UtN2ZhOS00Njk5LTljYTEtNDRjNDc5ZjA2MGIy?sa=X&ved=0CAQQ8qgGahcKEwiIqpWIh7_tAhUAAAAAHQAAAAAQAQ" >}}&nbsp;
 {{< podcast/spotify url="https://open.spotify.com/episode/1CSXBJ0p3xub84Jcikg8rQ?si=1BoY8hzATbO2dOsPV-yQ-Q" >}}
-
 </div>
 
 L'émergence de solutions dédiées au déploiement automatisé de sites statiques est principalement l'apanage de sociétés américaines (Netlify, Vercel, Amazon, Microsoft, Digital Ocean, etc.). La bataille a commencé outre-atlantique pour s'arroger les parts de marché, maintenant que Netlify revendique plus d'un million d'utilisateurs. Il existe des hébergeurs en France, mais pas uniquement dédié à du déploiement automatisé de statique sur des CDNs.
