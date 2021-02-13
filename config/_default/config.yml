@@ -79,6 +79,7 @@ params:
     appId: TLI4UDRZDR
     indexName: jamstatic
     searchOnlyApiKey: 5af8d385eec1e00ac16d0963c630b6ac
+  rssPodcast: https://anchor.fm/s/39f4fa04/podcast/rss
 
 related:
   threshold: 80

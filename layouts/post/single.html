@@ -1,11 +1,11 @@
 {{- define "main" }}
-
+  <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
     <header class="p-4 mt-6 mb-8 bg-blue-100 dark:bg-gray-800 bg-opacity-50 rounded-lg">
       <h1
         class="mb-4 text-4xl font-bold font-display text-violet dark:text-blue-500 leading-tight"
         itemprop="name headline"
       >
-        {{- partial "content.html" .Title -}}
+        {{- .Title -}}
       </h1>
       
       <div class="mb-4 flex items-center space-x-1 text-base text-gray-400">
@@ -77,9 +77,8 @@
     class="mx-auto prose sm:prose-lg lg:prose-xl dark:prose-dark"
     itemscope
     itemtype="https://schema.org/BlogPosting"
-  >
+    >
     <div class="font-body" itemprop="articleBody">
-      
 
       <!--<hr class="dark:border-gray-800">-->
 
@@ -90,7 +89,7 @@
       <hr class="dark:border-gray-800">
       {{ end }}
 
-      {{- partial "content.html" .Content -}}
+      {{- .Content -}}
 
       <footer>
         {{- partial "page-edit" . }}

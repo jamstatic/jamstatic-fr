@@ -1,0 +1,111 @@
+{{ with .Get "number"}}
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      initPlayer({{ . }}, "{{ $.Site.Params.rssPodcast }}");
+    });
+    </script>
+{{ end }}
+<div id="jfr-player-container" style="visibility: hidden;" class="flex">
+  <div>
+    <img class="player-image" src="" />
+  </div>
+  <div>
+    <h3 class="player-title"></h3>
+    <p class="player-date"></p>
+    <audio id="jfr-player" controls>
+      <source src="" type="audio/mp3" />
+    </audio>
+  </div>
+</div>
+<link rel="stylesheet" href="https://cdn.plyr.io/3.6.3/plyr.css" />
+<script src="https://cdn.plyr.io/3.6.3/plyr.js" async></script>
+<script type="text/javascript">
+/** find episode in XML by number */
+const findEpisode = function(data, number) {
+  if (!data) return null;
+  const parser = new DOMParser();
+  const xml = parser.parseFromString(data, "application/xml");
+  // all items episode
+  const items = xml.getElementsByTagName('item');
+  let episode = null;
+  if (items) {
+    // search episode by number
+    for(let i = 0; i < items.length; i++) {
+      const n = items[i].getElementsByTagName('itunes:episode');
+      if(n.length > 0 && +n[0].textContent === +number) {
+        episode = items[i];
+      }
+    }
+  }
+  return episode;
+}
+
+/** remove CDATA */
+const cleanString = function(string) {
+  return string.replace("<![CDATA[", "").replace("]]>", "");
+}
+
+/** get data in item episode */
+const getData = function(episode) {
+  if(!episode) return null;
+   // get all data for episode
+  const title = episode.getElementsByTagName('title');
+  const dt = episode.getElementsByTagName('pubDate');
+  const link = episode.getElementsByTagName('link');
+  const enclosure = episode.getElementsByTagName('enclosure');
+  const image = episode.getElementsByTagName('itunes:image');
+  return {
+    title: title[0]?cleanString(title[0].textContent): null,
+    dt: dt[0]?dt[0].textContent: null,
+    link: link[0]? link[0].textContent: null,
+    enclosure: enclosure[0]? enclosure[0].getAttribute('url'): null,
+    image: image[0]? image[0].getAttribute('href'): null
+  }
+}
+
+/** populate the player with episode infos */
+const populatePlayer = function(episode) {
+  if (!episode) return null;
+  const episodeData = getData(episode);
+  // find container and player
+  const playerContainer = document.getElementById('jfr-player-container');
+  const playerHTML = document.getElementById('jfr-player');
+  // no player
+  if(!playerHTML) return;
+  playerHTML.src = episodeData.enclosure;
+  // show player
+  playerContainer.style.visibility = 'visible';
+  // init plyr
+  const player = new Plyr('#jfr-player');
+  // populate player
+  const img = playerContainer.querySelector('.player-image');
+  const title = playerContainer.querySelector('.player-title');
+  const date = playerContainer.querySelector('.player-date');
+  // image
+  img.src = episodeData.image;
+  // title
+  title.textContent = episodeData.title;
+  // date
+  if(episodeData.dt) {
+      const d = new Date(episodeData.dt);
+      date.textContent = d.toLocaleDateString('fr-FR', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      });
+  }
+}
+
+/** init player */
+const initPlayer = function(number, url) {
+  fetch(url)
+  .then(response => response.text())
+  .then(data => {
+    // find episode
+    const episode = findEpisode(data, number);
+    // populate
+    populatePlayer(episode);
+  })
+  .catch(console.error);
+  }
+</script>
