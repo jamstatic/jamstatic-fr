@@ -1,18 +1,21 @@
-.DS_Store
-.env
-.netlify
-.now
-
-#
-node_modules
-yarn.lock
-
 # Hugo
 public/
 resources/_gen/
 hugo_stats.json
 
-# VS Code
-.vscode/
+# Deploy
+.env
+.netlify
+.now
 
+# Node
+node_modules
+yarn.lock
+
+# macOS
+.DS_Store
+
+# Editeurs
+.vscode/
+.idea/
 
