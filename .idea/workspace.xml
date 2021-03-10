@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51d0b271-e845-47fa-b57b-06f0c32bee95" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/content/post/11000-pages-statiques/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/authors/patrickF.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/post/11000-pages-statiques/10991articles.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/post/11000-pages-statiques/39mindeploy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/post/11000-pages-statiques/4mindeploy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/post/11000-pages-statiques/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/post/11000-pages-statiques/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/authors/patrickF.yml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +47,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1615314699468</updated>
-      <workItem from="1615314703183" duration="3602000" />
+      <workItem from="1615314703183" duration="4570000" />
+      <workItem from="1615386467112" duration="1326000" />
     </task>
     <servers />
   </component>
@@ -60,5 +65,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
