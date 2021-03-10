@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="51d0b271-e845-47fa-b57b-06f0c32bee95" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/post/11000-pages-statiques/10991articles.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/post/11000-pages-statiques/39mindeploy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/post/11000-pages-statiques/4mindeploy.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/content/post/11000-pages-statiques/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/content/post/11000-pages-statiques/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/authors/patrickF.yml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +29,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -48,8 +45,16 @@
       <option name="presentableId" value="Default" />
       <updated>1615314699468</updated>
       <workItem from="1615314703183" duration="4570000" />
-      <workItem from="1615386467112" duration="1326000" />
+      <workItem from="1615386467112" duration="3688000" />
     </task>
+    <task id="LOCAL-00001" summary="Resolve conflict">
+      <created>1615388077258</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615388077258</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -66,5 +71,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Resolve conflict" />
+    <option name="LAST_COMMIT_MESSAGE" value="Resolve conflict" />
   </component>
 </project>

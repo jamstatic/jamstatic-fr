@@ -27,7 +27,7 @@ Mais avant d'investir de l'énergie humaine et de l'argent dans cette grosse mig
 
 ## Choix des générateurs et du CMS Headless
 
-Côté CMS, le choix est déjà arrêté sur [Craft CMS](https://craftcms.com/).  C'est un CMS qui propose une très bonne expérience pour l'édition et surtout, il permet un mode headless avec des fonctionnalités très intéressantes par défaut. On y retrouve notamment: un mode prévisualisation, une API GraphQL et des webhooks. Parfait pour fonctionner avec un site statique.
+Côté CMS, le choix est déjà arrêté sur [Craft CMS](https://craftcms.com/). C'est un CMS qui propose une très bonne expérience pour l'édition et surtout, il permet un mode headless avec des fonctionnalités très intéressantes par défaut. On y retrouve notamment: un mode prévisualisation, une API GraphQL et des webhooks. Parfait pour fonctionner avec un site statique.
 
 Le mode prévisualisation offre une bonne expérience aux responsables du contenu. Il est très important pour une complète adoption par l'équipe de pouvoir éditer du contenu et vérifier le rendu immédiatement.
 
@@ -35,6 +35,25 @@ Comme le mode prévisualisation est un prérequis, cela élimine déjà tous les
 On s'oriente donc sur deux solutions qui offrent la possibilité de fonctionner dans ce mode. C'est donc Nuxt.js et Next.js qui sont retenus.
 
 Gastby aurait pu être utilisé aussi grâce à la nouvelle route API mais nous souhaitons conserver des process de build assez rapide. D'expérience, je connais bien Gatsby et je sais qu'il est le moins performant — ce POC précède l'annonce de la version 3.0 annoncée comme plus rapide.
+
+{{< notice info >}}
+### Next.js
+
+[Next.js](https://nextjs.org/) est un framework JavaScript basé sur React. Il permet de générer des applications React sous 3 modes de rendu : SSR (rendu serveur), hybride (statique dynamique) et 100% statique (export des pages sous forme HTML)  
+Uniquement dans le mode hybride, il offre les fonctionnalités suivantes : le mode preview (prévisualiser des pages non générées), la regénération statique incrémental (la (re)génération de page existante ou non, sous forme de fichier statique).
+
+{{< /notice >}}
+
+{{< notice info >}}
+### Nuxt.js
+
+Nuxt.js est un framework JavaScript basé sur Vue.js. Il permet de générer des applications Vue.js sous 3 modes de rendu : SSR (rendu serveur), SPA (single page application) et 100% statique (export des HTML).
+Il propose également un système de preview, mais dans le mode 100% statique. À ce jour, il ne propose pas de système de génération de page dynamique comme Next.js.  
+
+Rien de confirmé pour le moment, mais la version 3 de Nuxt.js devrait proposer une fonctionnalité équivalente.
+
+{{< /notice >}}
+
 
 ## Commençons avec Next.js
 
@@ -91,7 +110,7 @@ Donc pour le moment, Next.js est retenu pour la migration des premiers sites. On
 
 L'idée de générer au build les *X* derniers articles pour accélérer le chargement des articles récents est évoqué. Nous n’excluons pas que certaines pages très anciennes ne soient peut-être jamais visitées et donc jamais générées.
 
-Pour résumer, si vous souhaitez créer un site statique comportant un grand nombre de pages (media, e-commerce), Next.js semble être pour le moment la seule solution. Oui Hugo est très rapide pour créer un site, mais clairement là, le problème est dans le poids à uploader sur le serveur.
+Pour résumer, si vous souhaitez créer un site statique comportant un grand nombre de pages (media, e-commerce), Next.js semble être pour le moment la seule solution.
 
 ## Prototype privé
 
