@@ -5,7 +5,7 @@
       "avatar_url": "https://avatars3.githubusercontent.com/u/103008?v=4",
       "contributions": [
         "financial",
-        "audio", 
+        "audio",
         "blog",
         "code",
         "design",
@@ -28,7 +28,7 @@
       "profile": "https://arnaudligny.fr",
       "contributions": [
         "financial",
-        "audio", 
+        "audio",
         "code",
         "maintenance",
         "infra",
@@ -93,6 +93,8 @@
       "avatar_url": "https://avatars2.githubusercontent.com/u/46760?v=4",
       "profile": "https://www.goodmotion.fr",
       "contributions": [
+        "financial",
+        "audio",
         "code",
         "blog"
       ]
