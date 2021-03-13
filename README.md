@@ -99,7 +99,7 @@ Merci à ces personnes extraordinaires ([emoji key](https://github.com/kentcdodd
     <td align="center"><a href="https://zooly.surge.sh/"><img src="https://avatars1.githubusercontent.com/u/7328625?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hugo Torzuoli</b></sub></a><br /><a href="https://github.com/jamstatic/jamstatic-fr/pulls?q=is%3Apr+reviewed-by%3AHZooly" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="http://www.goodimpact.studio"><img src="https://avatars0.githubusercontent.com/u/11678850?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Yaacov</b></sub></a><br /><a href="#a11y-yaaax" title="Accessibility">️️️️♿️</a></td>
     <td align="center"><a href="https://blog.ticabri.com"><img src="https://avatars1.githubusercontent.com/u/701648?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Enguerran</b></sub></a><br /><a href="https://github.com/jamstatic/jamstatic-fr/commits?author=enguerran" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://www.goodmotion.fr"><img src="https://avatars2.githubusercontent.com/u/46760?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Patrick Faramaz</b></sub></a><br /><a href="https://github.com/jamstatic/jamstatic-fr/commits?author=ipatate" title="Code">💻</a></td>
+    <td align="center"><a href="https://www.goodmotion.fr"><img src="https://avatars2.githubusercontent.com/u/46760?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Patrick Faramaz</b></sub></a><br /><a href="https://github.com/jamstatic/jamstatic-fr/commits?author=ipatate" title="Code">💻</a> <a href="#blog-ipatate" title="Blogposts">📝</a></td>
   </tr>
 </table>
 
