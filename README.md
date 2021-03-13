@@ -4,8 +4,7 @@
 [![Slack Channel](https://jamstatic.herokuapp.com/badge.svg)](https://jamstatic.herokuapp.com)
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![Contributeurs](https://img.shields.io/badge/all_contributors-26-orange.svg?style=flat-square)](#contributeurs)
-<!-- ALL-CONTRIBUTORS-BADGE:END --> 
-
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Vous utilisez Jekyll, Hugo, Eleventy ou tout autre générateur de site statique, vous
 voulez échanger avec la communauté francophone et vous tenir informé de
@@ -55,7 +54,7 @@ gh pr create
 
 ## Production
 
-Chaque commit dans la branche `master` génère un déploiement en production.
+Chaque commit dans la branche `master` génère un déploiement, qui est ensuite poussé manuellement en production via l'interface de Netlify.
 
 Si vous souhaitez contribuer, proposer des articles, vous pouvez ouvrir une issue ou soumettre directement une pull request :heart:
 
