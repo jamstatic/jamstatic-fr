@@ -36,6 +36,8 @@ On s'oriente donc sur deux solutions qui offrent la possibilité de fonctionner 
 
 Gastby aurait pu être utilisé aussi grâce à la nouvelle route API mais nous souhaitons conserver des process de build assez rapide. D'expérience, je connais bien Gatsby et je sais qu'il est le moins performant — ce prototype précède l'annonce de la version 3.0 annoncée comme plus rapide.
 
+Pour être 100% honnête, cet [article](https://jamstatic.fr/2020/10/31/comparatif-performance-generateurs-de-site-statique/) a mis de côté Gastby au profit de Next.js dès le départ. 
+
 {{< notice info >}}
 ### Next.js
 
@@ -47,7 +49,7 @@ Uniquement dans le mode hybride, il offre les fonctionnalités suivantes : le mo
 {{< notice info >}}
 ### Nuxt.js
 
-Nuxt.js est un framework JavaScript basé sur Vue.js. Il permet de générer des applications Vue.js sous trois modes de rendu : SSR (rendu serveur), SPA (single page application) et 100% statique (export des pages HTML).
+[Nuxt.js](https://fr.nuxtjs.org/) est un framework JavaScript basé sur Vue.js. Il permet de générer des applications Vue.js sous trois modes de rendu : SSR (rendu serveur), SPA (single page application) et 100% statique (export des pages HTML).
 Il propose également un système de prévisualisation, mais dans le mode 100% statique. À ce jour, il ne propose pas de système de génération de page dynamique comme Next.js.  
 
 Rien de confirmé pour le moment, mais la version 3.0 de Nuxt.js devrait proposer une fonctionnalité équivalente.
@@ -109,7 +111,8 @@ Donc pour le moment, Next.js est retenu pour la migration des premiers sites. On
 
 L'idée de générer au build les *X* derniers articles pour accélérer le chargement des articles récents est évoqué. Nous n’excluons pas que certaines pages très anciennes ne soient peut-être jamais visitées et donc jamais générées.
 
-Pour résumer, si vous souhaitez créer un site statique comportant un grand nombre de pages (media, e-commerce), Next.js semble être pour le moment la seule solution.
+Finalement, pour remplir le périmètre requis pour le projet : le mode prévisualisation, un processus de publication simple et automatique, aucune gestion de serveur et certaines pages accessibles uniquement par des abonnés ; Next.js semble être pour le moment la meilleure solution.
+
 
 ## Prototype privé
 
