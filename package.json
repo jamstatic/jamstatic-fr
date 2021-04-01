@@ -18,13 +18,14 @@
     "url": "https://github.com/jamstatic/jamstatic-fr/issues"
   },
   "devDependencies": {
+    "all-contributors-cli": "^6.20.0",
+    "atomic-algolia": "^0.3.19",
     "@linthtml/linthtml": "^0.5.1",
     "@tailwindcss/forms": "^0.2.1",
     "@tailwindcss/typography": "^0.3.1",
     "atomic-algolia": "^0.3",
-    "autoprefixer": "^10.0.3",
+    "autoprefixer": "^10.2.5",
     "postcss": "^8.1.10",
-    "postcss-cli": "^8.0.0",
     "postcss-purgecss": "^2.0.3",
     "prettier": "^2.2.0",
     "prettier-plugin-go-template": "0.0.10",
@@ -42,6 +43,9 @@
     "remark-preset-lint-recommended": "^5.0",
     "remark-squeeze-paragraphs": "^4.0",
     "tailwindcss": "^2.0.1"
+  },
+  "dependencies": {
+    "postcss-cli": "^8.3.1"
   },
   "scripts": {
     "algolia": "atomic-algolia",

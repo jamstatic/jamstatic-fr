@@ -4,9 +4,13 @@
     {
       "avatar_url": "https://avatars3.githubusercontent.com/u/103008?v=4",
       "contributions": [
+        "financial",
+        "audio",
         "blog",
         "code",
         "design",
+        "infra",
+        "maintenance",
         "eventOrganizing",
         "translation",
         "tutorial",
@@ -18,11 +22,29 @@
       "profile": "https://frank.taillandier.me"
     },
     {
+      "login": "Narno",
+      "name": "Arnaud Ligny",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/80580?v=4",
+      "profile": "https://arnaudligny.fr",
+      "contributions": [
+        "financial",
+        "audio",
+        "code",
+        "maintenance",
+        "infra",
+        "blog",
+        "translation",
+        "talk"
+      ]
+    },
+    {
       "login": "phacks",
       "name": "Nicolas Goutay",
       "avatar_url": "https://avatars1.githubusercontent.com/u/2587348?v=4",
       "profile": "https://phacks.dev/",
       "contributions": [
+        "financial",
+        "audio",
         "translation",
         "blog",
         "eventOrganizing",
@@ -36,10 +58,45 @@
       "avatar_url": "https://avatars2.githubusercontent.com/u/1480503?v=4",
       "profile": "https://regisphilibert.com",
       "contributions": [
+        "audio",
         "blog",
         "tutorial",
         "review",
         "code"
+      ]
+    },
+    {
+      "avatar_url": "https://avatars0.githubusercontent.com/u/284742?v=4",
+      "contributions": [
+        "financial",
+        "review",
+        "blog"
+      ],
+      "login": "borisschapira",
+      "name": "Boris Schapira",
+      "profile": "https://boris.schapira.dev"
+    },
+    {
+      "avatar_url": "https://avatars2.githubusercontent.com/u/78213?v=4",
+      "contributions": [
+        "financial",
+        "review",
+        "blog"
+      ],
+      "login": "nhoizey",
+      "name": "Nicolas Hoizey",
+      "profile": "https://nicolas-hoizey.com/"
+    },
+    {
+      "login": "ipatate",
+      "name": "Patrick Faramaz",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/46760?v=4",
+      "profile": "https://www.goodmotion.fr",
+      "contributions": [
+        "financial",
+        "audio",
+        "code",
+        "blog"
       ]
     },
     {
@@ -50,20 +107,6 @@
       "contributions": [
         "blog",
         "review"
-      ]
-    },
-    {
-      "login": "Narno",
-      "name": "Arnaud Ligny",
-      "avatar_url": "https://avatars0.githubusercontent.com/u/80580?v=4",
-      "profile": "https://arnaudligny.fr",
-      "contributions": [
-        "code",
-        "blog",
-        "translation",
-        "talk",
-        "infra",
-        "maintenance"
       ]
     },
     {
@@ -81,29 +124,9 @@
       "avatar_url": "https://avatars3.githubusercontent.com/u/1499325?v=4",
       "profile": "http://gastaud.io",
       "contributions": [
-        "code",
+        "plugin",
         "review"
       ]
-    },
-    {
-      "avatar_url": "https://avatars0.githubusercontent.com/u/284742?v=4",
-      "contributions": [
-        "review",
-        "blog"
-      ],
-      "login": "borisschapira",
-      "name": "Boris Schapira",
-      "profile": "https://boris.schapira.dev"
-    },
-    {
-      "avatar_url": "https://avatars2.githubusercontent.com/u/78213?v=4",
-      "contributions": [
-        "review",
-        "blog"
-      ],
-      "login": "nhoizey",
-      "name": "Nicolas Hoizey",
-      "profile": "https://nicolas-hoizey.com/"
     },
     {
       "avatar_url": "https://avatars2.githubusercontent.com/u/6869488?v=4",
@@ -239,6 +262,7 @@
       "avatar_url": "https://avatars0.githubusercontent.com/u/11678850?v=4",
       "profile": "http://www.goodimpact.studio",
       "contributions": [
+        "financial",
         "a11y"
       ]
     },
@@ -249,15 +273,6 @@
       "profile": "https://blog.ticabri.com",
       "contributions": [
         "doc"
-      ]
-    },
-    {
-      "login": "ipatate",
-      "name": "Patrick Faramaz",
-      "avatar_url": "https://avatars2.githubusercontent.com/u/46760?v=4",
-      "profile": "https://www.goodmotion.fr",
-      "contributions": [
-        "code"
       ]
     }
   ],
