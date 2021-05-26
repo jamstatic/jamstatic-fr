@@ -95,14 +95,7 @@ fields:
   default: true
 pages:
 - content/post/5-raisons-de-tester-la-jamstack/index.md
-- content/post/bibliotheques-de-composants-en-markdown.md
-- content/post/cms-headless.md
 - content/post/comment-fonctionne-jekyll.md
-- content/post/comparatif-hugo-jekyll.md
-- content/post/configurer-netlify-cms-pour-jekyll.md
-- content/post/construire-un-blog-statique-avec-gatsby-et-strapi.md
-- content/post/contenus-relatifs-dans-hugo.md
-- content/post/creer-des-mises-en-page-dynamiques-avec-jekyll.md
 - content/post/creer-un-environnement-de-preproduction-pour-jekyll.md
 - content/post/creer-un-theme-jekyll.md
 - content/post/creer-un-theme-pour-jekyll.md
@@ -131,7 +124,6 @@ pages:
 - content/post/premier-meetup-jamstack-toulouse.md
 - content/post/presentation-eleventy.md
 - content/post/produire-des-livres-avec-le-statique.md
-- content/post/scratch-hugo.md
 - content/post/site-ecommerce-statique-scalable-avec-hugo.md
 - content/post/smashing-mag-va-dix-fois-plus-vite.md
 - content/post/startups-jamstack.md
