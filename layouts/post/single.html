@@ -26,6 +26,11 @@
         <span itemprop="author" itemscope itemtype="https://schema.org/Person">
           <span itemprop="name">
             {{- if .Params.author }}
+
+              {{ range .Params.author }}
+                {{ . }}
+              {{ end }}
+
               {{- if isset (index .Site.Data.authors .Params.author) "web" }}
                 <a
                   class="post-author"
