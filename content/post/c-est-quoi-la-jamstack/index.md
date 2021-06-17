@@ -81,7 +81,7 @@ Les principaux bénéfices apportés par la Jamstack sont :
 : Plus besoin de se soucier des vulnérabilités du serveur ou de la base de données
 
 **Un coût bien moindre**
-L'hébergement de fichiers statiques est moins cher [voire gratuit](https://netlify.com/)
+: L'hébergement de fichiers statiques est moins cher [voire gratuit](https://netlify.com/)
 
 **Une meilleure expérience de développement**
 : Les développeurs front end peuvent se focaliser sur la partie client, sans être dépendants d'une architecture monolithique. Cela se traduit en général par un développement plus rapide et plus ciblé.
