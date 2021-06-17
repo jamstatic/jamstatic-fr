@@ -8,14 +8,15 @@ images:
 source:
   author: Pedro Duarte
   title: WTF is Jamstack?
-  url: https://jamstack.wtf/
+  url: https://jamstack.wtf
 categories:
   - jamstack
 ---
 
 {{< intro >}}
 
-[Pedro Duarte](https://twitter.com/peduarte) a lancé [https://jamstack.wtf](https://jamstack.wtf) un mini-site afin de donner une vue d'ensemble de la Jamstack. Nous vous proposons ici sa traduction en français afin de permettre à toujours plus de développeurs d'adopter cette façon de travailler.
+[Pedro Duarte](https://twitter.com/peduarte) a lancé [jamstack.wtf](https://jamstack.wtf) un mini-site afin de donner une vue d'ensemble de la Jamstack.  
+Nous vous proposons ici sa traduction en français afin de permettre à toujours plus de développeurs de mieux comprendre et d'adopter cette approche.
 
 {{< /intro >}}
 
@@ -23,15 +24,11 @@ categories:
 
 La Jamstack révolutionne notre manière de travailler en proposant une expérience de développement plus simple, de meilleures performances, des coûts bien moins élevés et une grande scalabilité.
 
-Vous vous demandez peut-être ; oui OK, mais comment ? pourquoi ? c'est quoi au juste ?
+Vous vous demandez peut-être : oui OK, mais comment ? pourquoi ? c'est quoi au juste ?
 
-C'est la raison d'être de cette page [https://jamstack.wtf](https://jamstack.wtf/).
+C'est la raison d'être de cette page [jamstack.wtf](https://jamstack.wtf).
 
 Le but de ce guide est de présenter de manière claire le concept de la Jamstack et d'inciter d'autres développeurs à adopter cette approche.
-
-Le contenu ci-dessous est tiré du site ci-dessus 👆
-
-Asseyez-vous, mettez-vous à l'aise et appréciez ✌️
 
 ---
 
@@ -64,29 +61,29 @@ Asseyez-vous, mettez-vous à l'aise et appréciez ✌️
 
 {{< figure src="/2020/10/05/la-jamstack-n-est-rapide-que-si-vous-la-rendez-rapide/jamstack-horizontal.svg" caption="JAM c'est pour JavaScript, APIs & Markup." >}}
 
-**JavaScript** \
-Les fonctionnalités dynamiques sont gérées par JavaScript. Vous êtes libres d'utiliser la bibliothèque ou le framework que vous voulez.
+**JavaScript**
+: Les fonctionnalités dynamiques sont gérées par JavaScript. Vous êtes libres d'utiliser la bibliothèque ou le framework que vous voulez.
 
-**APIs** \
-Les opérations côté serveur sont abstraites sous forme d'APIs réutilisables, accessibles en HTTPS à l'aide de JavaScript. Ces opérations peuvent être déléguées à des services tiers ou bien à vos propres fonctions.
+**API**
+: Les opérations côté serveur sont abstraites sous forme d'API réutilisables, accessibles en HTTPS à l'aide de JavaScript. Ces opérations peuvent être déléguées à des services tiers ou bien à vos propres fonctions.
 
-**Markup** \
-Les sites web sont servis sous forme de fichiers HTML statiques. Ces fichiers peuvent être générés à partir de fichiers source, comme du Markdown, à l'aide d'un générateur de site statique.
+**Markup**
+: Les sites web sont servis sous forme de fichiers HTML statiques. Ces fichiers peuvent être générés à partir de fichiers source, comme du Markdown, à l'aide d'un générateur de site statique.
 
 ### Bénéfices
 
 Les principaux bénéfices apportés par la Jamstack sont :
 
-**Une performance accrue** \
+**Une performance accrue**
 Servir du code généré et des assets à partir d'un CDN
 
-**Une meilleure sécurité** \
+**Une meilleure sécurité**
 Plus besoin de se soucier des vulnérabilités du serveur ou de la base de données
 
-**Un coût bien moindre** \
+**Un coût bien moindre**
 L'hébergement de fichiers statiques est moins cher [voire gratuit](https://netlify.com/)
 
-**Une meilleure expérience de développement** \
+**Une meilleure expérience de développement**
 Les développeurs front end peuvent se focaliser sur la partie client, sans être dépendants d'une architecture monolithique. Cela se traduit en général par un développement plus rapide et plus ciblé.
 
 **Redimensionnement à la volée** \
@@ -101,7 +98,7 @@ Puisque tous les fichiers et les assets sont générés en amont, ils peuvent ê
 
 [En savoir plus](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/)
 
-**Déploiement atomique** \
+**Déploiement atomique**
 Chaque déploiement est une photographie complète du site. Vous disposez ainsi d'une version consistante du site à l'échelle mondiale.
 
 [En savoir plus](https://buddy.works/blog/introducing-atomic-deployments#what-are-atomic-deployments)
