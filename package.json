@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.0.3",
-    "postcss": "^8.2.6",
+    "postcss": "^8.2.15",
     "prettier": "^2.3.0",
     "prettier-plugin-go-template": "0.0.10",
     "remark-cli": "^9.0.0",
