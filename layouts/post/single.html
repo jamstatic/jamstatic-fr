@@ -33,7 +33,7 @@
                   href="{{ (index .Site.Data.authors .Params.author).web }}"
                   >{{ (index .Site.Data.authors .Params.author).name }}</a
                 >
-                {{ else }}
+              {{ else }}
                 <a
                   class="post-author"
                   rel="author"
@@ -41,7 +41,7 @@
                   >{{ (index .Site.Data.authors .Params.author).name }}</a
                 >
               {{ end -}}
-              {{ else }}
+            {{ else }}
               <a
                 class="post-author"
                 rel="author"
