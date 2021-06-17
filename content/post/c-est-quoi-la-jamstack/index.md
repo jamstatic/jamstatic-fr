@@ -154,7 +154,7 @@ Vous êtes libres de choisir votre GSS.
    - [Next.js](https://nextjs.org/)
    - [Hugo](https://gohugo.io/)
 
-[Voir davantage de générateurs](https://www.staticgen.com/)
+   [Voir davantage de générateurs](https://www.staticgen.com/)
 
 **Framework frontend**
 :  La plupart des frameworks ne génèrent pas de fichiers HTML statiques par défaut, toutefois c'est possible si vous connaissez bien vos outils, cela demande plus d'expérience et de maintenance.
