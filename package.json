@@ -35,7 +35,7 @@
     "@fullhuman/postcss-purgecss": "^4.0.3",
     "postcss": "^8.2.15",
     "prettier": "^2.3.2",
-    "prettier-plugin-go-template": "0.0.10",
+    "prettier-plugin-go-template": "0.0.11",
     "remark-cli": "^9.0.0",
     "remark-frontmatter": "^3.0.0",
     "remark-inline-links": "^5.0.0",
