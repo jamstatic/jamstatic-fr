@@ -37,7 +37,7 @@
     "prettier": "^2.3.2",
     "prettier-plugin-go-template": "0.0.11",
     "remark-cli": "^9.0.0",
-    "remark-frontmatter": "^3.0.0",
+    "remark-frontmatter": "^4.0.0",
     "remark-inline-links": "^5.0.0",
     "remark-lint-code": "^2.0",
     "remark-lint-first-heading-level": "^2.0.1",
