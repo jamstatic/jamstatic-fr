@@ -41,7 +41,7 @@
     "remark-inline-links": "^5.0.0",
     "remark-lint-code": "^2.0",
     "remark-lint-first-heading-level": "^2.0.1",
-    "remark-lint-maximum-line-length": "^2.0.3",
+    "remark-lint-maximum-line-length": "^3.0.1",
     "remark-lint-no-consecutive-blank-lines": "^3.0.0",
     "remark-lint-no-empty-sections": "^4.0.0",
     "remark-lint-no-leading-spaces": "^1.0.0",
