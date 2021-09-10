@@ -1,26 +1,27 @@
 ---
-title: "Héberger du statique en France avec Matthias Dugué et Hubert Sablonnière"
-description: "Quelles différences entre les plate-formes françaises et les géants américains du Cloud, quand il s’agit de déployer des sites Jamstack ?"
+title: Héberger du statique en France avec Matthias Dugué et Hubert Sablonnière
+description: Quelles différences entre les plate-formes françaises et les géants américains
+  du cloud quand il s’agit de déployer des sites Jamstack ?
 date: 2020-12-08
 images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1000,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:H%25C3%25A9berger%2520du%2520statique%2520en%2520France%2520avec%2520Matthias%2520Dugu%25C3%25A9%2520et%2520Hubert%2520Sablonni%25C3%25A8re/jamstatic/twitter-card.png
+- https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1000,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:H%25C3%25A9berger%2520du%2520statique%2520en%2520France%2520avec%2520Matthias%2520Dugu%25C3%25A9%2520et%2520Hubert%2520Sablonni%25C3%25A8re/jamstatic/twitter-card.png
 categories:
-  - podcast
-  - deploiement
+- podcast
+- deploiement
 podcast:
   url: https://anchor.fm/jamstatic/episodes/Hberger-du-statique-en-France-enhc1t
----
+author: podcast
+lastmod: 2021-09-10T00:00:00+02:00
+commments: true
 
+---
 {{< intro >}}
 Dans ce deuxième épisode de _Génération Statique_ Frank Taillandier et Arnaud Ligny reçoivent Matthias Dugué, en charge des relations avec les développeurs chez [Alwaysdata](https://alwaysdata.com), et Hubert Sablonnière, développeur web chez [Clever Cloud](https://www.clever-cloud.com). Avec eux nous évoquons la différence entre les plate-formes françaises et les géants américains du Cloud, quand il s'agit de déployer des sites Jamstack.
 {{</ intro >}}
 
 {{< player number=2 >}}
 
-<!--<iframe src="https://anchor.fm/jamstatic/embed/episodes/Hberger-du-statique-en-France-enhc1t" height="174px" width="100%" frameborder="0" scrolling="no"></iframe>-->
-{{< podcast/apple url="https://podcasts.apple.com/fr/podcast/g%C3%A9n%C3%A9ration-statique/id1539806294#episodeGuid=720d517e-7fa9-4699-9ca1-44c479f060b2" >}}&nbsp;
-{{< podcast/google url="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy8zOWY0ZmEwNC9wb2RjYXN0L3Jzcw/episode/NzIwZDUxN2UtN2ZhOS00Njk5LTljYTEtNDRjNDc5ZjA2MGIy?sa=X&ved=0CAQQ8qgGahcKEwiIqpWIh7_tAhUAAAAAHQAAAAAQAQ" >}}&nbsp;
-{{< podcast/spotify url="https://open.spotify.com/episode/1CSXBJ0p3xub84Jcikg8rQ?si=1BoY8hzATbO2dOsPV-yQ-Q" >}}
+<!--<iframe src="https://anchor.fm/jamstatic/embed/episodes/Hberger-du-statique-en-France-enhc1t" height="174px" width="100%" frameborder="0" scrolling="no"></iframe>-->{{< podcast/apple url="https://podcasts.apple.com/fr/podcast/g%C3%A9n%C3%A9ration-statique/id1539806294#episodeGuid=720d517e-7fa9-4699-9ca1-44c479f060b2" >}}  {{< podcast/google url="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy8zOWY0ZmEwNC9wb2RjYXN0L3Jzcw/episode/NzIwZDUxN2UtN2ZhOS00Njk5LTljYTEtNDRjNDc5ZjA2MGIy?sa=X&ved=0CAQQ8qgGahcKEwiIqpWIh7_tAhUAAAAAHQAAAAAQAQ" >}}  {{< podcast/spotify url="https://open.spotify.com/episode/1CSXBJ0p3xub84Jcikg8rQ?si=1BoY8hzATbO2dOsPV-yQ-Q" >}}
 
 L'émergence de solutions dédiées au déploiement automatisé de sites statiques est principalement l'apanage de sociétés américaines (Netlify, Vercel, Amazon, Microsoft, Digital Ocean, etc.). La bataille a commencé outre-atlantique pour s'arroger les parts de marché, maintenant que Netlify revendique plus d'un million d'utilisateurs. Il existe des hébergeurs en France, mais pas uniquement dédié à du déploiement automatisé de statique sur des CDNs.
 
