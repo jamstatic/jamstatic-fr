@@ -14,3 +14,4 @@ Vous souhaitez recevoir un échantillon de nos magnifiques stickers?
 {{< stickers >}}
 
 [Participer aux frais](https://opencollective.com/jamstatic) 🙏
+
