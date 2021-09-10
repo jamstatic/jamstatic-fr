@@ -17,15 +17,10 @@ Dans ce deuxième épisode de _Génération Statique_ Frank Taillandier et Arnau
 
 {{< player number=2 >}}
 
-<!-- <iframe src="https://anchor.fm/jamstatic/embed/episodes/Hberger-du-statique-en-France-enhc1t" height="174px" width="100%" frameborder="0" scrolling="no"></iframe> -->
-
-<div>
-
+<!--<iframe src="https://anchor.fm/jamstatic/embed/episodes/Hberger-du-statique-en-France-enhc1t" height="174px" width="100%" frameborder="0" scrolling="no"></iframe>-->
 {{< podcast/apple url="https://podcasts.apple.com/fr/podcast/g%C3%A9n%C3%A9ration-statique/id1539806294#episodeGuid=720d517e-7fa9-4699-9ca1-44c479f060b2" >}}&nbsp;
 {{< podcast/google url="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy8zOWY0ZmEwNC9wb2RjYXN0L3Jzcw/episode/NzIwZDUxN2UtN2ZhOS00Njk5LTljYTEtNDRjNDc5ZjA2MGIy?sa=X&ved=0CAQQ8qgGahcKEwiIqpWIh7_tAhUAAAAAHQAAAAAQAQ" >}}&nbsp;
 {{< podcast/spotify url="https://open.spotify.com/episode/1CSXBJ0p3xub84Jcikg8rQ?si=1BoY8hzATbO2dOsPV-yQ-Q" >}}
-
-</div>
 
 L'émergence de solutions dédiées au déploiement automatisé de sites statiques est principalement l'apanage de sociétés américaines (Netlify, Vercel, Amazon, Microsoft, Digital Ocean, etc.). La bataille a commencé outre-atlantique pour s'arroger les parts de marché, maintenant que Netlify revendique plus d'un million d'utilisateurs. Il existe des hébergeurs en France, mais pas uniquement dédié à du déploiement automatisé de statique sur des CDNs.
 
@@ -45,7 +40,7 @@ Il n'est pas aisé de pour nos hébergeurs français plus modestes de rivaliser 
 
 Les gros acteurs comme AWS ne sont pas non plus à l'abri de pannes, comme [on a pu le voir encore recemment](https://www.theverge.com/2020/11/25/21719396/amazon-web-services-aws-outage-down-internet).
 
-Chez Clever Cloud, on peut déjà déployer des fonctions en mode PaaS (Platform as a Service), voire des _functions as a service_ (FaaS) avec support de Web Assembly. Lors du développement de sa documentation en mode Jamstack Alwaysdata a pu expérimenté le besoin en fonctions dynamiques comme l'envoi de mail, un besoin qu'il est toujours possible de combler en développant soi-même la fonction manquante ou en se reposant sur des services et des APis externes.
+Chez Clever Cloud, on peut déjà déployer des fonctions en mode PaaS (Platform as a Service), voire des _functions as a service_ (FaaS) avec support de Web Assembly. Lors du développement de sa documentation en mode Jamstack Alwaysdata a pu expérimenté le besoin en fonctions dynamiques comme l'envoi de mail, un besoin qu'il est toujours possible de combler en développant soi-même la fonction manquante ou en se reposant sur des services et des API externes.
 
 Arnaud souligne qu'il est peut-être plus rassurant pour des entreprises de pouvoir stocker leurs fonctions métier dans son Cloud privé afin de maîtriser son environnement. "La valeur ajoutée de notre métier c'est l'accompagnement et la gestion de la complexité" commente Matthias.
 
