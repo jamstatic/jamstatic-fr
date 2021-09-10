@@ -38,7 +38,7 @@ L’ensemble des billets est publié en sous licence [Creative Commons Attributi
 * [Boris Schapira](https://boris.schapira.dev)
 * [Frank Taillandier](https://frank.taillandier.me)
 
-## Adminsitrateurs
+## Administrateurs
 
 * [Arnaud Ligny](https://arnaudligny.fr)
 * [Frank Taillandier](https://frank.taillandier.me)
