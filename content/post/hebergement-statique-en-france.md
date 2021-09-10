@@ -1,5 +1,5 @@
 ---
-title: Héberger du statique en France avec Matthias Dugué et Hubert Sablonnière
+title: Héberger du statique en France, avec Matthias Dugué et Hubert Sablonnière
 description: Quelles différences entre les plate-formes françaises et les géants américains
   du cloud quand il s’agit de déployer des sites Jamstack ?
 date: 2020-12-08
@@ -12,7 +12,7 @@ podcast:
   url: https://anchor.fm/jamstatic/episodes/Hberger-du-statique-en-France-enhc1t
 author: podcast
 lastmod: 2021-09-10T00:00:00+02:00
-commments: true
+commments: false
 
 ---
 {{< intro >}}
