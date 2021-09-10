@@ -42,4 +42,3 @@ L’ensemble des billets est publié en sous licence [Creative Commons Attributi
 
 * [Arnaud Ligny](https://arnaudligny.fr)
 * [Frank Taillandier](https://frank.taillandier.me)
-
