@@ -20,14 +20,9 @@ podcast:
 Dans ce premier épisode de *Génération Statique* Frank Taillandier et Arnaud Ligny reçoivent Nicolas Goutay, expert performance web, actuellement développeur chez [Orbit](https://orbit.love), conférencier et organisateur des [meetups Jamstack parisiens](https://jamstack.paris). Fort d’une expérience avec React et Gatsby, le coût des frameworks JavaScript côté client a poussé Nicolas à privilégier des outils plus légers et plus adaptés aux sites de contenus.
 {{</ intro >}}
 
-{{< player number=1 >}}
+{{< player episode=1 >}}
 
-<div class="flex space-x-2">
-<div>
-{{< podcast/apple url="https://podcasts.apple.com/fr/podcast/g%C3%A9n%C3%A9ration-statique/id1539806294#episodeGuid=2bb8821a-9aef-4136-a76d-4fad59dbbde6" >}}</div>
-<div>{{< podcast/google url="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy8zOWY0ZmEwNC9wb2RjYXN0L3Jzcw?sa=X&ved=0CAMQ4aUDahcKEwi43MqAkZ7tAhUAAAAAHQAAAAAQBA" >}}</div>
-<div>{{< podcast/spotify url="https://open.spotify.com/episode/53HWoHsBUCjWGUcuGZH1R1?si=zNwGktbKRPyMtOk95JhIig" >}}</div>
-</div>
+{{< podcast apple="1000500179298" google="MmJiODgyMWEtOWFlZi00MTM2LWE3NmQtNGZhZDU5ZGJiZGU2" spotify="53HWoHsBUCjWGUcuGZH1R1" >}}
 
 ## Introduction
 
