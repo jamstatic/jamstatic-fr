@@ -11,6 +11,10 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            h1: {
+              color: theme("colors.violet.DEFAULT"),
+              fontFamily: "Poppins",
+            },
             h2: {
               color: theme("colors.violet.DEFAULT"),
               fontFamily: "Poppins",
@@ -52,6 +56,9 @@ module.exports = {
               "&:hover": {
                 color: theme("colors.blue.300"),
               },
+            },
+            h1: {
+              color: theme("colors.blue.500"),
             },
             h2: {
               color: theme("colors.blue.500"),
@@ -120,16 +127,16 @@ module.exports = {
       },
       rose: "#ff4863",
       rose: {
-        '50':  '#fcf9f8',
-        '100': '#fdeef2',
-        '200': '#fbcfe4',
-        '300': '#faa7cd',
-        '400': '#fb6ea5',
-        '500': '#fc437c',
-        '600': '#ff4863',
-        '700': '#de1f47',
-        '800': '#b31a39',
-        '900': '#8f162e',
+        50:  '#fcf9f8',
+        100: '#fdeef2',
+        200: '#fbcfe4',
+        300: '#faa7cd',
+        400: '#fb6ea5',
+        500: '#fc437c',
+        600: '#ff4863',
+        700: '#de1f47',
+        800: '#b31a39',
+        900: '#8f162e',
       },
       blue: "#7DACFF",
       blue: {
