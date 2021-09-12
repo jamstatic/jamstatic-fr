@@ -1,4 +1,3 @@
-
 {{ with .Get "url"}}
-  <a href="{{ . }}">{{- partial "svg/apple-podcasts.svg" . -}}</a>
-{{ end }}  
+  <a href="{{ . }}">{{- partialCached "svg/apple-podcasts.svg" . -}}</a>
+{{ end }}
