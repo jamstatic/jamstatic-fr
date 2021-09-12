@@ -7,15 +7,12 @@
     <div id="search-searchbar"></div>
     <ul id="search-hits">
       {{ range (where .Site.RegularPages "Section" "post") }}
-
       <li class="p-4 mb-8 transition duration-300 transform bg-blue-100 bg-opacity-50 rounded-lg hover:scale-105 dark:bg-gray-800">
-          
           <div class="mb-2">
             <div class="flex items-center">
               {{- if .Params.author }}
-              {{- if isset (index .Site.Data.authors .Params.author) "avatar" }}
-              <img class="w-8 h-8 mr-2 rounded-full" rel="preload" src="
-              {{ .Site.Params.cloudinary }}/w_64,f_auto/jamstatic/author/{{ (index .Site.Data.authors .Params.author).avatar }}" width="32" height="32" />
+              {{- if isset (index .Site.Data.authors .Params.author) "github" }}
+              <img class="w-8 h-8 mr-2 rounded-full" rel="preload" src="https://github.com/{{ (index .Site.Data.authors .Params.author).github }}.png" width="32" height="32" />
               {{ end -}}
               {{- if isset (index .Site.Data.authors .Params.author) "web" }}
                 <a
@@ -33,7 +30,7 @@
                 >
               {{ end -}}
             {{ end -}}
-            </div>          
+            </div>
           </div>
             <h2
               class="mb-2 text-3xl font-black transition duration-200 font-display text-violet dark:text-blue-500 hover:underline dark:hover:text-blue-300 xl:leading-snug"

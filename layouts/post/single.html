@@ -7,29 +7,31 @@
       >
         {{- .Title -}}
       </h1>
-      
-      <div class="mb-4 flex items-center space-x-1 text-base text-gray-400">
-        
+
+      <div class="mb-4 md:flex items-center space-x-1 text-base text-gray-400">
+
         <span itemprop="author" itemscope itemtype="https://schema.org/Person">
           {{- if .Params.author }}
-            <img class="inline w-8 h-8 rounded-full" src="https://github.com/{{ (index .Site.Data.authors .Params.author).github }}.png" />
-              {{- if isset (index .Site.Data.authors .Params.author) "web" }}
-              <span itemprop="name">
-                <a
-                  class="no-underline capitalize transition duration-200 text-violet hover:text-indigo-700 dark:text-blue-500 hover:underline dark:hover:text-blue-300"
-                  rel="author"
-                  href="{{ (index .Site.Data.authors .Params.author).web }}"
-                  >{{ (index .Site.Data.authors .Params.author).name }}
-                </a>
-                {{ else }}
-                <a
-                  class="no-underline capitalize transition duration-200 text-violet hover:underline hover:text-indigo-700 dark:text-blue-500 dark:hover:text-blue-300"
-                  rel="author"
-                  href="https://github.com/{{ (index .Site.Data.authors .Params.author).github }}"
-                  >{{ (index .Site.Data.authors .Params.author).name }}</a
-                >
-              {{ end -}}
-            </span>
+          {{- if isset (index .Site.Data.authors .Params.author) "github" }}
+          <img class="inline w-8 h-8 rounded-full" src="https://github.com/{{ (index .Site.Data.authors .Params.author).github }}.png" width="32" height="32" />
+          {{ end -}}
+          <span itemprop="name">
+            {{- if isset (index .Site.Data.authors .Params.author) "web" }}
+            <a
+              class="no-underline capitalize transition duration-200 text-violet hover:text-indigo-700 dark:text-blue-500 hover:underline dark:hover:text-blue-300"
+              rel="author"
+              href="{{ (index .Site.Data.authors .Params.author).web }}"
+              >{{ (index .Site.Data.authors .Params.author).name }}
+            </a>
+            {{ else }}
+            <a
+              class="no-underline capitalize transition duration-200 text-violet hover:underline hover:text-indigo-700 dark:text-blue-500 dark:hover:text-blue-300"
+              rel="author"
+              href="https://github.com/{{ (index .Site.Data.authors .Params.author).github }}"
+              >{{ (index .Site.Data.authors .Params.author).name }}</a
+            >
+            {{ end -}}
+          </span>
           {{ end -}}
         </span>
         <span>&middot;</span>
@@ -46,7 +48,7 @@
         <span>&middot;</span>
         {{- partial "svg/reading-time.svg" . -}}
         <span>Lecture <span aria-label="Temps de lecture">{{ .ReadingTime }} min.</span>
-      </div>        
+      </div>
       <p class="text-gray-400">
         {{- if isset .Params "categories" }}
           {{ range $index, $category := .Params.categories }}
@@ -73,17 +75,13 @@
         {{- end }}
       {{- end }}
     </header>
-    <article
-    class="mx-auto prose sm:prose-lg lg:prose-xl dark:prose-dark"
-    itemscope
-    itemtype="https://schema.org/BlogPosting"
-    >
+    <article class="mx-auto prose sm:prose-lg lg:prose-xl dark:prose-dark" itemscope itemtype="https://schema.org/BlogPosting">
     <div class="font-body" itemprop="articleBody">
 
       <!--<hr class="dark:border-gray-800">-->
 
       {{ if .Params.excerpt }}
-      <div class="text-xl text-gray-700 dark:text-gray-300 lead font-display">
+      <div class="prose-xl">
         {{ .Params.Excerpt | markdownify }}
       </div>
       <hr class="dark:border-gray-800">
