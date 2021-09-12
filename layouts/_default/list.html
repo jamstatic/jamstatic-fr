@@ -19,6 +19,9 @@
             {{ else }}
             <a class="text-base no-underline capitalize transition duration-200 text-black-grape-400 dark:text-blue-500 hover:underline dark:hover:text-blue-300" rel="author" href="https://github.com/{{ (index .Site.Data.authors .Params.author).github }}">{{ (index .Site.Data.authors .Params.author).name }}</a>
             {{ end -}}
+            {{- if .Params.source }}
+            <span class="ml-2 text-sm text-gray-400">(traducteur·trice)</span>
+            {{ end -}}
           {{ end -}}
           </div>
         </div>
