@@ -1,25 +1,12 @@
 <!-- Including InstantSearch.js library and styling -->
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.css"
-/>
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch-theme-algolia.min.css"
-/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch-theme-algolia.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.js"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.min.js"></script>
 <script>
   moment.locale("fr", {
-    months: "janvier_février_mars_avril_mai_juin_juillet_août_septembre_octobre_novembre_décembre".split(
-      "_"
-    ),
-    monthsShort: "janv._févr._mars_avr._mai_juin_juil._août_sept._oct._nov._déc.".split(
-      "_"
-    ),
+    months: "janvier_février_mars_avril_mai_juin_juillet_août_septembre_octobre_novembre_décembre".split("_"),
+    monthsShort: "janv._févr._mars_avr._mai_juin_juil._août_sept._oct._nov._déc.".split("_"),
     monthsParseExact: true,
     weekdays: "dimanche_lundi_mardi_mercredi_jeudi_vendredi_samedi".split("_"),
     weekdaysShort: "dim._lun._mar._mer._jeu._ven._sam.".split("_"),
@@ -91,18 +78,36 @@
       date = moment.unix(hit.date).locale("fr").format("LL");
     }
 
+    /*return `
+      <li class="py-8 my-8">
+        <a href="${hit.relpermalink}">
+          <h2 class="mb-2 text-4xl font-black transition duration-200 font-display text-violet-dark dark:text-violet hover:underline dark:hover:text-violet-400">${hit._highlightResult.title.value}</h2>
+          <p class="mb-4 text-gray-400 font-body">
+            ${date}
+          </p>
+          <p class="text-2xl text-gray-600 dark:text-gray-300">${hit.description}</p>
+        </a>
+      </li>
+      <hr class="dark:border-gray-800">
+    `;*/
+
     return `
-    <li class="py-8 my-8">
-      <a href="${hit.relpermalink}">
-        <h2 class="mb-2 text-4xl font-black transition duration-200 font-display text-violet-dark dark:text-violet hover:underline dark:hover:text-violet-400">${hit._highlightResult.title.value}</h2>
-        <p class="mb-4 text-gray-400 font-body">
-          ${date}
+      <li class="p-4 mb-8 transition duration-300 transform bg-blue-100 bg-opacity-50 rounded-lg hover:scale-105 dark:bg-gray-800">
+        <h2 class="mb-2 text-3xl font-black transition duration-200 font-display text-violet dark:text-blue-500 hover:underline dark:hover:text-blue-300 xl:leading-snug">
+          <a href="${hit.relpermalink}">${hit._highlightResult.title.value}</a>
+        </h2>
+        <p class="mb-4 text-2xl text-gray-600 dark:text-gray-300">
+          <a href="${hit.relpermalink}">${hit.description}</a>
         </p>
-        <p class="text-2xl text-gray-600 dark:text-gray-300">${hit.description}</p>
-      </a>
-    </li>
-    <hr class="dark:border-gray-800">
-  `;
+        <div class="flex items-center space-x-1 text-sm text-black-grape-200 dark:text-blue-500">
+          <span>
+            <time class="capitalize" itemprop="datePublished">
+              ${date}
+            </time>
+          </span>
+        </div>
+      </li>
+    `;
   };
 
   // Adding searchbar and results widgets
@@ -135,10 +140,10 @@
     display: block;
   }
 
-  @media screen and (min-width: 45rem) {
+  /*@media screen and (min-width: 45rem) {
     .ais-search-box {
     }
-  }
+  }*/
 
   .ais-Highlight {
     color: #ff4863;

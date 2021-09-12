@@ -19,9 +19,13 @@
       {{ block "main" . }}{{ end }}
     </div>
 
-    {{- partialCached "site/footer" . -}} 
-    
-    {{- partialCached "site/scripts" . -}} 
+    {{- partialCached "site/footer" . -}}
+
+    {{ if and .IsHome hugo.IsProduction }}
+      {{- partialCached "search.html" . -}}
+    {{ else }}
+      {{- partialCached "site/scripts" . -}}
+    {{ end }}
 
   </body>
 </html>
