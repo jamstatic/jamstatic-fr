@@ -1,34 +1,14 @@
 {{ define "main" }}
 <nav class="mb-8 text-center text-semibold">
-  {{ $cats := first 8 (where site.Taxonomies.categories.ByCount "Count" ">" 3)}} 
+  {{ $cats := first 8 (where site.Taxonomies.categories.ByCount "Count" ">" 3)}}
   {{ delimit (apply $cats "partial" "category-link" ".") " · " }}
 </nav>
-<h1
-  class="mb-8 text-4xl font-extrabold text-center text-violet-dark font-display"
->
+<h1 class="mb-8 text-4xl font-extrabold text-center text-violet-dark font-display">
   Articles taggués <span class="capitalize text-rose-400">{{ .Title }}</span>
 </h1>
-<ul>
+<ul id="search-hits">
   {{ range .Data.Pages }}
-  <li class="py-8 my-8">
-    <a href="{{ .RelPermalink }}">
-      <h2
-        class="mb-2 text-4xl font-black font-display text-violet-dark dark:text-violet hover:underline"
-      >
-        {{ partial "content.html" .Title }}
-      </h2>
-      <p class="mb-4 text-gray-400 dark:text-gray-200 font-body">
-        <time class="capitalize">
-          {{ $mymonths := .Site.Data.mois }} {{ .Date.Day }} {{ index $mymonths (printf "%d" .Date.Month) }} {{ .Date.Year }}
-        </time>
-      </p>
-
-      <p class="text-2xl text-gray-600">
-        {{ partial "content.html" .Description }}
-      </p>
-    </a>
-  </li>
-  <hr class="dark:border-gray-800">
+  {{- partial "post.html" . -}}
   {{ end }}
 </ul>
 {{ end }}

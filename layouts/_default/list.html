@@ -7,43 +7,7 @@
     <div id="search-searchbar"></div>
     <ul id="search-hits">
       {{ range (where .Site.RegularPages "Section" "post") }}
-      <li class="p-4 mb-8 transition duration-300 transform bg-blue-100 bg-opacity-50 rounded-lg hover:scale-105 dark:bg-gray-800">
-        <div class="mb-2">
-          <div class="flex items-center">
-          {{- if .Params.author }}
-            {{- if isset (index .Site.Data.authors .Params.author) "github" }}
-            <img class="w-8 h-8 mr-2 rounded-full" rel="preload" src="https://github.com/{{ (index .Site.Data.authors .Params.author).github }}.png" width="32" height="32" />
-            {{ end -}}
-            {{- if isset (index .Site.Data.authors .Params.author) "web" }}
-            <a class="text-base no-underline capitalize transition duration-200 text-black-grape-400 dark:text-blue-500 hover:underline dark:hover:text-blue-300" rel="author" href="{{ (index .Site.Data.authors .Params.author).web }}">{{ (index .Site.Data.authors .Params.author).name }}</a>
-            {{ else }}
-            <a class="text-base no-underline capitalize transition duration-200 text-black-grape-400 dark:text-blue-500 hover:underline dark:hover:text-blue-300" rel="author" href="https://github.com/{{ (index .Site.Data.authors .Params.author).github }}">{{ (index .Site.Data.authors .Params.author).name }}</a>
-            {{ end -}}
-            {{- if .Params.source }}
-            <span class="ml-2 text-sm text-gray-400">(traducteur·trice)</span>
-            {{ end -}}
-          {{ end -}}
-          </div>
-        </div>
-        <h2 class="mb-2 text-3xl font-black transition duration-200 font-display text-violet dark:text-blue-500 hover:underline dark:hover:text-blue-300 xl:leading-snug">
-          <a href="{{ .RelPermalink }}">{{ partial "content.html" .Title }}</a>
-        </h2>
-        <p class="mb-4 text-2xl text-gray-600 dark:text-gray-300">
-          <a href="{{ .RelPermalink }}">{{ partial "content.html" .Description }}</a>
-        </p>
-        <div class="flex items-center space-x-1 text-sm text-black-grape-200 dark:text-blue-500">
-          <span>
-            <time class="capitalize" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}" itemprop="datePublished">
-              {{- $mymonths := .Site.Data.mois }}
-              {{- .Date.Day }} {{ index $mymonths (printf "%d" .Date.Month) }}
-              {{ .Date.Year -}}
-            </time>
-          </span>
-          <span class="inline">&middot;</span>
-          {{- partial "svg/reading-time.svg" . -}}
-          <span>Lecture {{ .ReadingTime }} min.</span>
-        </div>
-      </li>
+      {{- partial "post.html" . -}}
       {{ end }}
     </ul>
   </main>
