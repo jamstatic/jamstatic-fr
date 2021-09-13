@@ -4,21 +4,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.Description }}{{ else }}{{ .Description }}{{ end }}" />
     <title>
-      {{ block "title" . }}{{- if .IsHome }}{{ .Site.Params.Description }} ·
-      {{ .Site.Title }}{{ else }}{{ with .Title }}{{ . }} ·
-      {{ end }}{{ .Site.Title }}{{ end }}{{ end }}
+      {{- block "title" . }}{{- if .IsHome }}{{ .Site.Params.Description -}} ·
+      {{- .Site.Title }}{{ else }}{{ with .Title }}{{ . -}} ·
+      {{- end }}{{ .Site.Title }}{{ end }}{{ end -}}
     </title>
-    {{- hugo.Generator }}
+    {{ hugo.Generator }}
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Roboto&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Roboto&display=swap" rel="preload" as="style" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin />
-    {{ $options := dict "inlineImports" true }}
-    {{ $styles := resources.Get "css/styles.css" }}
-    {{ $styles = $styles | resources.PostCSS $options }}
-    {{ if  hugo.IsProduction }}
-      {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
-    {{ end }}
+    {{ $options := dict "inlineImports" true -}}
+    {{- $styles := resources.Get "css/styles.css" -}}
+    {{- $styles = $styles | resources.PostCSS $options -}}
+    {{- if  hugo.IsProduction }}
+      {{- $styles = $styles | minify | fingerprint | resources.PostProcess -}}
+    {{- end -}}
     <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
     <link href="{{ $styles.RelPermalink }}" rel="preload" as="style" />
     <link rel="stylesheet" href="{{ "assets/css/chroma.css" | relURL }}" />
@@ -26,7 +26,7 @@
     <link rel="alternate" href="{{ .Site.RSSLink | relURL }}" title="{{ .Site.Title }}" type="application/atom+xml" />
     <link rel="alternate" href="{{ "feed.json" | relURL }}" title="{{ .Site.Title }}" type="application/json" />
     <link rel="canonical" href="{{ .Permalink }}" />
-    {{- template "_internal/opengraph.html" . -}}
+    {{ template "_internal/opengraph.html" . -}}
     {{- template "_internal/twitter_cards.html" . -}}
     {{- partialCached "head/favicons.html" . -}}
   </head>
