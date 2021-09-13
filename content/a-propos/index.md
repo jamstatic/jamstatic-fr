@@ -29,21 +29,26 @@ Nous échangeons également beaucoup sur [notre Slack](https://jamstatic.fr/slac
 
 L'ensemble des billets est publié en sous licence [Creative Commons Attribution Share Alike](https://creativecommons.org/licenses/by-sa/4.0/) et le code source du site web est disponible sur [GitHub](https://github.com/jamstatic/jamstatic-fr).
 
-**Charte graphique**
+## Contributeurs
+
+- [Pierre Burgy](https://strapi.io)
+- [Jérôme Coupé](https://www.webstoemp.com)
+- [Patrick Faramaz](https://www.goodmotion.fr)
+- [Antoine Fauchié](https://www.quaternum.net)
+- [Jean-Yves Gastaud](https://gastaud.io)
+- [Nicolas Goutay](https://phacks.dev)
+- [Bertrand Keller](https://bertrandkeller.info)
+- [Nicolas Hoizey](https://nicolas-hoizey.com)
+- [Arnaud Ligny](https://arnaudligny.fr)
+- [Régis Philibert](https://regisphilibert.com/fr/)
+- [Boris Schapira](https://boris.schapira.dev)
+- [Frank Taillandier](https://frank.taillandier.me)
+
+## Charte graphique
 
 - [Cécile Ricordeau](https://www.cecillie.fr)
 
-**Contributeurs**
+## Administrateurs
 
-* [Pierre Burgy](https://strapi.io)
-* [Jérôme Coupé](https://www.webstoemp.com)
-* [Patrick Faramaz](https://www.goodmotion.fr)
-* [Antoine Fauchié](https://www.quaternum.net)
-* [Jean-Yves Gastaud](https://gastaud.io)
-* [Nicolas Goutay](https://phacks.dev)
-* [Bertrand Keller](https://bertrandkeller.info)
-* [Nicolas Hoizey](https://nicolas-hoizey.com)
-* [Arnaud Ligny](https://arnaudligny.fr)
-* [Régis Philibert](https://regisphilibert.com/fr/)
-* [Boris Schapira](https://boris.schapira.dev)
-* [Frank Taillandier](https://frank.taillandier.me)
+- [Arnaud Ligny](https://arnaudligny.fr)
+- [Frank Taillandier](https://frank.taillandier.me)
