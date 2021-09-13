@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}" prefix="og: http://ogp.me/ns#">
   {{- partial "site/head" . -}}
-
   <body class="{{ .Kind }} dark:bg-gray-900">
     <div class="sticky top-0 z-10 text-white bg-violet-light">
       <nav class="py-2 px-4">
@@ -14,18 +13,14 @@
       </nav>
     </div>
     {{- partial "site/header" . -}}
-
     <div class="container w-11/12 py-8 mx-auto lg:w-2/3 xl:w-1/2">
       {{ block "main" . }}{{ end }}
     </div>
-
     {{- partialCached "site/footer" . -}}
-
     {{ if and .IsHome hugo.IsProduction }}
       {{- partialCached "search.html" . -}}
     {{ else }}
       {{- partialCached "site/scripts" . -}}
     {{ end }}
-
   </body>
 </html>
