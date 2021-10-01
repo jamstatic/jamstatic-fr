@@ -29,7 +29,7 @@
     "all-contributors-cli": "^6.20.0",
     "atomic-algolia": "^0.3.19",
     "autoprefixer": "^10.3.1",
-    "postcss-cli": "^8.3.1"
+    "postcss-cli": "^9.0.1"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.0.3",
