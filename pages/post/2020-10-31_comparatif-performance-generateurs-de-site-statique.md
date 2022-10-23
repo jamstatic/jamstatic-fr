@@ -1,9 +1,9 @@
 ---
 title: "Comparaison des temps de compilation des générateurs de site statique"
-description: "Comment se comportent les principaux générateurs quand il s'agit de compiler 1, 1 000 ou 64 000 fichiers?"
+description: "Comment se comportent les principaux générateurs quand il s'agit de compiler 1, 1 000 ou 64 000 fichiers ?"
 author: frank
 date: 2020-10-31T08:38:15+01:00
-lastmod: 2020-10-31T14:38:15+01:00
+updated: 2020-10-31T14:38:15+01:00
 excerpt: |
   Le temps de compilation d'un site est un critère parmi tant d'autres.
   Si ces premiers tests comparatifs de performance pure ne sont pas représentatifs de ce que à quoi vous pouvez vous attendre dans le contexte de vos projets, ils vous donneront quand même un premier ordre d'idée. Partir sur un framework a un coût en temps de compilation.
@@ -21,31 +21,36 @@ source:
   title: Comparing Static Site Generator Build Times
   url: https://css-tricks.com/comparing-static-site-generator-build-times/
 ---
+:::note
+Le temps de compilation d’un site est un critère parmi tant d’autres. Si ces premiers tests comparatifs de performance pure ne sont pas représentatifs de ce que à quoi vous pouvez vous attendre dans le contexte de vos projets, ils vous donneront quand même un premier ordre d’idée. Partir sur un framework a un coût en temps de compilation.
+
+Jekyll n’est intrinsèquement pas plus lent qu’Eleventy, tout dépend de votre projet. Gatsby sera le plus pénalisant sur de gros sites, Next.js est le framework qui s’en sort le mieux, et Hugo l’emporte haut la main et demeure intouchable dès qu’il s’agit de vitesse de compilation.
+:::
 
 Il y a tant de [générateurs de sites statiques (SSG)](https://jamstack.org/generators/). C'est fatiguant de devoir décider par où commencer. Bien qu'une abondance d'articles utiles puisse aider à se repérer dans les options (populaires), ils ne facilitent pas la décision comme par magie.
 
 Je me suis efforcé de faciliter cette décision. Un de mes collègues a construit une [fiche d'évaluation du générateur de site statique](https://www.ample.co/blog/questions-to-ask-before-choosing-a-static-site-generator). Elle donne un très bon aperçu de nombreux choix de SSG populaires. Ce qui manque, c'est la façon dont ils fonctionnent réellement dans la pratique.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,dpr_2.0,f_auto,q_auto,w_1980/v1604155807/jamstatic/ssg-comparison-cheatsheet.png" alt="" attr="Comparatif des principaux générateurs" attrlink="https://www.ample.co/blog/questions-to-ask-before-choosing-a-static-site-generator" >}}
+![Comparatif des principaux générateurs](../../assets/images/post/2020-10-31_comparatif-performance-generateurs-de-site-statique/ssg-comparison-cheatsheet.png "[Comparatif des principaux générateurs](https://www.ample.co/blog/questions-to-ask-before-choosing-a-static-site-generator)")
 
-Tous les générateurs de sites statiques ont en commun le fait qu'ils prennent des données en entrée, les font passer par un moteur de template et produisent des fichiers HTML. Nous appelons généralement ce processus « la compilation ».
+Tous les générateurs de sites statiques ont en commun le fait qu'ils prennent des données en entrée, les font passer par un moteur de template et produisent des fichiers HTML. Nous appelons généralement ce processus « la compilation ».
 
 Il y a trop de nuances, de contexte et de paramètres à considérer pour pouvoir comparer les performances des différents générateurs pendant le processus de compilation pour les afficher sur une feuille de calcul - et c'est ainsi que commence notre test de comparaison des temps de compilation des générateurs de sites statiques les plus courants.
 
-Il ne s'agit pas seulement de déterminer quel générateur est le plus rapide. [Hugo](https://gohugo.io/) a déjà cette réputation. Je veux dire, ils l'écrivent sur leur site web - Le framework le plus rapide au monde pour le développement de sites web - donc ça doit être vrai !
+Il ne s'agit pas seulement de déterminer quel générateur est le plus rapide. [Hugo](https://gohugo.io) a déjà cette réputation. Je veux dire, ils l'écrivent sur leur site web - Le framework le plus rapide au monde pour le développement de sites web - donc ça doit être vrai !
 
 Il s'agit d'une comparaison des temps de compilation de plusieurs SSG populaires et, plus important encore, d'analyser en détail ces temps de compilation. Choisir aveuglément le plus rapide ou discréditer le plus lent serait une erreur. Voyons ensemble pourquoi.
 
 ## Les tests
 
-Le processus de test est conçu pour démarrer de manière simple - avec seulement quelques générateurs populaires et un format de données simple. Une base sur laquelle on pourra s'appuyer pour tester d'autres générateurs et affiner les données. Pour le moment, le test comprend six des générateurs les plus populaires :
+Le processus de test est conçu pour démarrer de manière simple - avec seulement quelques générateurs populaires et un format de données simple. Une base sur laquelle on pourra s'appuyer pour tester d'autres générateurs et affiner les données. Pour le moment, le test comprend six des générateurs les plus populaires :
 
-- [Eleventy](https://www.11ty.dev/)
-- [Gatsby](https://www.gatsbyjs.com/)
-- [Hugo](https://gohugo.io/)
-- [Jekyll](https://jekyllrb.com/)
-- [Next](https://nextjs.org/)
-- [Nuxt](https://nuxtjs.org/)
+- [Eleventy](https://www.11ty.dev)
+- [Gatsby](https://www.gatsbyjs.com)
+- [Hugo](https://gohugo.io)
+- [Jekyll](https://jekyllrb.com)
+- [Next](https://nextjs.org)
+- [Nuxt](https://nuxtjs.org)
 
 Chaque test utilise l'approche et les conditions suivantes :
 
@@ -106,23 +111,23 @@ Ruby est tristement célèbre pour sa lenteur. Il est devenu plus performant ave
 
 Au début, je pense que nous verrons Jekyll comme étant assez rapide, peut-être même impossible à distinguer de Eleventy. Mais au fur et à mesure que nous arriverons aux milliers de fichiers, la performance en prendra un coup. Mon sentiment est qu'il peut y avoir un moment où Jekyll devient le plus lent des six. Nous allons pousser jusqu'à la barre des 100 000 pour en être sûrs.
 
-{{< figure src="https://i2.wp.com/css-tricks.com/wp-content/uploads/2020/10/jekyll-hand-chart.jpg?w=862&ssl=1" alt="Les résultats auxquels on pourrait s'attendre, Hugo le plus rapide et Next.js le plus lent" >}}
+![Les résultats auxquels on pourrait s'attendre, Hugo le plus rapide et Next.js le plus lent](https://i2.wp.com/css-tricks.com/wp-content/uploads/2020/10/jekyll-hand-chart.jpg?w=862&ssl=1 "Les résultats auxquels on pourrait s'attendre, Hugo le plus rapide et Next.js le plus lent")
 
-## Les résultats sont arrivés !
+## Les résultats sont arrivés
 
-Le code de ces tests se trouve sur [GitHub](https://github.com/seancdavis/ssg-build-performance-tests). Il y a aussi [un site qui montre les résultats relatifs](https://ssg-build-performance-tests.netlify.app/).
+Le code de ces tests se trouve sur [GitHub](https://github.com/seancdavis/ssg-build-performance-tests). Il y a aussi [un site qui montre les résultats relatifs](https://ssg-build-performance-tests.netlify.app).
 
 Après de nombreuses itérations pour établir les bases sur lesquelles ces tests pourraient être effectués, j'ai fini par réaliser une série de 10 tests dans trois ensembles de données différents :
 
 - **Basique** : Un seul fichier, pour comparer les temps de génération de base
 - **Petits sites** : De 1 à 1024 fichiers, en doublant le nombre de fichiers à chaque fois (pour faciliter la détermination de l'échelle linéaire des générateurs)
-- **Grands sites** : De 1 000 à 64 000 fichiers, en doublant le nombre de fichiers à chaque passage. Au départ, je voulais aller jusqu'à 128 000 fichiers, mais j'ai rencontré des problèmes avec certains des frameworks. 64 000 ont fini par suffire pour donner une idée de la manière dont les différents acteurs allaient évoluer avec des sites toujours plus importants.
+- **Grands sites** : De 1 000 à 64 000 fichiers, en doublant le nombre de fichiers à chaque passage. Au départ, je voulais aller jusqu'à 128 000 fichiers, mais j'ai rencontré des problèmes avec certains des frameworks. 64 000 ont fini par suffire pour donner une idée de la manière dont les différents acteurs allaient évoluer avec des sites toujours plus importants.
 
-{{< figure src="https://i1.wp.com/css-tricks.com/wp-content/uploads/2020/10/base-build-times.jpg" alt="Performance de base, Hugo est largement vainqueur">}}
+![Performance de base, Hugo est largement vainqueur](https://i1.wp.com/css-tricks.com/wp-content/uploads/2020/10/base-build-times.jpg "Performance de base, Hugo est largement vainqueur")
 
-{{< figure src="https://i2.wp.com/css-tricks.com/wp-content/uploads/2020/10/build-small-sites.jpg" alt="Génération sur des petits sites (< 1024 fichiers) : Hugo est de loin le plus rapide, Gatsby devient plus lent dès 128 fichiers">}}
+![Génération sur des petits sites (< 1024 fichiers) : Hugo est de loin le plus rapide, Gatsby devient plus lent dès 128 fichiers](https://i2.wp.com/css-tricks.com/wp-content/uploads/2020/10/build-small-sites.jpg "Génération sur des petits sites (< 1024 fichiers) : Hugo est de loin le plus rapide, Gatsby devient plus lent dès 128 fichiers")
 
-{{< figure src="https://i1.wp.com/css-tricks.com/wp-content/uploads/2020/10/build-large-sites.jpg" alt="Génération de gros sites (entre 1000 et 64000 fichiers): Hugo est de loin le plus rapide, Gatsby est exponentiellement plus lent" >}}
+![Génération de gros sites (entre 1000 et 64000 fichiers): Hugo est de loin le plus rapide, Gatsby est exponentiellement plus lent](https://i1.wp.com/css-tricks.com/wp-content/uploads/2020/10/build-large-sites.jpg "Génération de gros sites (entre 1000 et 64000 fichiers): Hugo est de loin le plus rapide, Gatsby est exponentiellement plus lent")
 
 ## Synthèse des résultats
 
@@ -150,9 +155,9 @@ Ce qui compte vraiment, c'est _votre niveau de tolérance à l'attente en échan
 
 Par exemple, si vous allez générer un grand site à forte charge d'images avec Gatsby, vous allez le payer avec des délais de génération plus longs, mais on vous donne aussi un immense ensemble de plugins et une base sur laquelle construire un site solide, organisé et basé sur des composants. Faites de même avec Jekyll, et il vous faudra beaucoup plus d'efforts pour rester organisé et efficace tout au long du processus, même si vos générations peuvent être plus rapides.
 
-Au [boulot](https://www.ample.co/), je développe généralement [des sites avec Gatsby](https://www.ample.co/blog/the-case-for-gatsby) (ou Next, selon le niveau d'interactivité dynamique requis). Nous avons travaillé avec le framework Gatsby pour construire un noyau sur lequel nous pouvons rapidement créer des sites web très personnalisés, riches en images, avec une abondance de composants. Nos temps de génération augementent au fur et à mesure que les sites se développent, mais c'est à ce moment que nous devenons créatifs en mettant en place des [micro frontend](https://micro-frontends.org/), en déchargeant le traitement des images, en mettant en place des aperçus de contenu, ainsi que de nombreuses autres optimisations.
+Au [boulot](https://www.ample.co), je développe généralement [des sites avec Gatsby](https://www.ample.co/blog/the-case-for-gatsby) (ou Next, selon le niveau d'interactivité dynamique requis). Nous avons travaillé avec le framework Gatsby pour construire un noyau sur lequel nous pouvons rapidement créer des sites web très personnalisés, riches en images, avec une abondance de composants. Nos temps de génération augementent au fur et à mesure que les sites se développent, mais c'est à ce moment que nous devenons créatifs en mettant en place des [micro frontend](https://micro-frontends.org), en déchargeant le traitement des images, en mettant en place des aperçus de contenu, ainsi que de nombreuses autres optimisations.
 
-[De mon côté](https://www.seancdavis.com/), je préfère travailler avec Eleventy. En général, je ne fais qu'écrire du code, et mes besoins sont beaucoup plus simples. (J'aime me considérer comme un bon client pour moi-même.) J'ai le sentiment d'avoir plus de contrôle sur les fichiers en sortie, ce qui me permet d'obtenir plus facilement les performances de 💯 côté client, et c'est important pour moi.
+[De mon côté](https://www.seancdavis.com), je préfère travailler avec Eleventy. En général, je ne fais qu'écrire du code, et mes besoins sont beaucoup plus simples. (J'aime me considérer comme un bon client pour moi-même.) J'ai le sentiment d'avoir plus de contrôle sur les fichiers en sortie, ce qui me permet d'obtenir plus facilement les performances de 💯 côté client, et c'est important pour moi.
 
 En fin de compte, il ne s'agit pas _seulement_ de ce qui est rapide ou lent. Il s'agit de savoir ce qui fonctionne le mieux pour vous et combien de temps vous êtes prêt à attendre.
 
