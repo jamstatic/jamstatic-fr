@@ -1,7 +1,7 @@
 ---
 title: "Vers une Jamstack légère et performante, avec Nicolas Goutay"
 description: "Passer de Gatsby à Eleventy afin de pouvoir concevoir un site web plus performant et accessible à tous."
-author: frank
+author: podcast
 excerpt: |
   Dans ce premier épisode de *Génération Statique* Frank Taillandier et Arnaud Ligny reçoivent Nicolas Goutay, expert performance web, actuellement développeur chez [Orbit](https://orbit.love), conférencier et organisateur des [meetups Jamstack parisiens](https://jamstack.paris). Fort d’une expérience avec React et Gatsby, le coût des frameworks JavaScript côté client a poussé Nicolas à privilégier des outils plus légers et plus adaptés aux sites de contenus.
 date: 2020-11-19
@@ -15,14 +15,11 @@ categories:
 podcast:
   url: https://anchor.fm/jamstatic/episodes/Vers-une-Jamstack-lgre-et-performante--avec-Nicolas-Goutay-emunhp
 ---
-
-{{< intro >}}
+:::intro
 Dans ce premier épisode de *Génération Statique* Frank Taillandier et Arnaud Ligny reçoivent Nicolas Goutay, expert performance web, actuellement développeur chez [Orbit](https://orbit.love), conférencier et organisateur des [meetups Jamstack parisiens](https://jamstack.paris). Fort d’une expérience avec React et Gatsby, le coût des frameworks JavaScript côté client a poussé Nicolas à privilégier des outils plus légers et plus adaptés aux sites de contenus.
-{{</ intro >}}
+:::
 
-{{< player episode=1 >}}
-
-{{< podcast apple="1000500179298" google="MmJiODgyMWEtOWFlZi00MTM2LWE3NmQtNGZhZDU5ZGJiZGU2" spotify="53HWoHsBUCjWGUcuGZH1R1" >}}
+<iframe src="https://anchor.fm/jamstatic/embed/episodes/Vers-une-Jamstack-lgre-et-performante--avec-Nicolas-Goutay-emunhp/a-a3um11n"  width="100%" frameborder="0" scrolling="no"></iframe>
 
 ## Introduction
 
@@ -32,7 +29,7 @@ Près de 80 articles ont été publiés depuis sur le site web, plusieurs meetup
 
 ## Bataille d'égo de CEO
 
-[La dernière Jamstack Conf](https://jamstackconf.com/2020/october/) a eu lieu en ligne, on en retiendra surtout la joute verbale entre Matt Biilmann le CEO de [Netlify](https://www.netlify.com/), à l’origine de l’appellation Jamstack, et Matt Mullenweg, le CEO d’[Automattic](https://automattic.com/) venu défendre WordPress. Richard McManus de The New Stack [revient sur cet échange](https://thenewstack.io/jamstack-vs-wordpress-round-2-the-two-matts-debate/) qui ne manquait pas de piquant. Pour se démarquer et faire augmenter l'adoption de leur plate-forme pour le déploiement de sites Jamstack, la stratégie de Netlify est d’attaquer les faiblesses bien connues de WordPress, notamment en matière de maintenance et de sécurité, mais c’était sans compter sur le répondant de Matt Mullenweg qui a très bien défendu l’approche intégrée de WordPress.com, qui répond justement à cette problématique, tout en gardant un CMS open source.
+[La dernière Jamstack Conf](https://jamstackconf.com/2020/october/) a eu lieu en ligne, on en retiendra surtout la joute verbale entre Matt Biilmann le CEO de [Netlify](https://www.netlify.com), à l’origine de l’appellation Jamstack, et Matt Mullenweg, le CEO d’[Automattic](https://automattic.com) venu défendre WordPress. Richard McManus de The New Stack [revient sur cet échange](https://thenewstack.io/jamstack-vs-wordpress-round-2-the-two-matts-debate/) qui ne manquait pas de piquant. Pour se démarquer et faire augmenter l'adoption de leur plate-forme pour le déploiement de sites Jamstack, la stratégie de Netlify est d’attaquer les faiblesses bien connues de WordPress, notamment en matière de maintenance et de sécurité, mais c’était sans compter sur le répondant de Matt Mullenweg qui a très bien défendu l’approche intégrée de WordPress.com, qui répond justement à cette problématique, tout en gardant un CMS open source.
 
 ## L'API de WordPress pour le blog de Gatsby
 
@@ -40,13 +37,13 @@ Gatsby, un des deux frameworks React majeurs qui permet de générer des applica
 
 ## Les annonces de la première Next.js conf
 
-L’autre framework React qui a le vent en poupe c’est [Next.js](https://nextjs.org/). La première [conférence](https://nextjs.org/conf/schedule) du framework hybride qui permet de faire du statique _et_ du SSR a eu lieu fin octobre.
+L’autre framework React qui a le vent en poupe c’est [Next.js](https://nextjs.org). La première [conférence](https://nextjs.org/conf/schedule) du framework hybride qui permet de faire du statique *et* du SSR a eu lieu fin octobre.
 
 Beaucoup d’annonces de la part de Vercel, notamment la mise à disposition d’un outil de monitoring de métriques de performance (les [Core Web Vitals](https://web.dev/vitals/#core-web-vitals)) mesurées depuis leur CDN auprès des utilisateurs, sans avoir à ajouter la moindre ligne de JS à son site.
 
 Ces [métriques](https://web.dev/metrics/) poussées par Google permettent de démontrer la performance de sites développés avec Next.js et déployés sur les CDN de Vercel. Ils ont d’ailleurs aussi à l’occasion sorti un premier exemple de site e-commerce et annonce bientôt supporter de s'interfacer avec l'API de Shopify. Quand on connaît l’importance de la performance sur les taux de conversions en e-commerce, on se dit que la bataille va faire rage dans ce secteur. On notera que la plate-forme de déploiement Gatsby Cloud permet aussi de mesurer son score Lighthouse standard, des indicateurs "un peu fourre-tout", selon Nicolas.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1600/v1605969846/jamstatic/vercel-analytics.png" caption="Le tableau de bord des métriques de performance utilisateur de Vercel affiche un score d'expérience réelle, ici pour les 3/4 des utilisateurs de téléphone mobile sur un site généré avec Next.js." >}}
+![Le tableau de bord des métriques de performance utilisateur de Vercel affiche un score d'expérience réelle, ici pour les 3/4 des utilisateurs de téléphone mobile sur un site généré avec Next.js.](../../assets/images/post/2020-11-19_jamstack-legere-et-performante/vercel-analytics.png "Le tableau de bord des métriques de performance utilisateur de Vercel affiche un score d'expérience réelle, ici pour les 3/4 des utilisateurs de téléphone mobile sur un site généré avec Next.js.")
 
 Également développé en partenariat avec les équipes de Google, Next.js dispose maintenant d’un [composant Image](https://vercel.com/docs/next.js/image-optimization) qui va grandement aider les développeurs dans la gestion des images responsive pour les servir dans des formats optimisés sur leurs CDN. Gatsby dispose déjà d’un composant image qui retaille les images au build et les charge automatiquement au scroll. On voit que la concurrence est rude entre les deux frameworks et que c’est la performance ressentie côté utilisateur qui est moteur dans ces innovations. C’est une très bonne chose pour le web et pour faciliter le travail les développeurs qui ont maintenant à leur disposition des abstractions dont le but est d’éviter de servir des images non optimisées.
 
@@ -54,7 +51,7 @@ Devant la popularité croissante de Next.js, Netlify n’a d’autre choix pour 
 
 ## Gatsby simplifie la génération de pages
 
-Gatsby de son côté n'est pas en reste et continue de progresser, le framework vient d'annoncer [une nouvelle API de routing basée sur le système de fichiers](https://www.gatsbyjs.com/blog/fs-route-api)…à la Next.js ou Nuxt.js. Votre fichier `/about.js` sera servi en tant que `/about/`. Nicolas précise que Gatsby demande un peu plus d'investissement initial mais que le résultat final sera similaire.
+Gatsby de son côté n'est pas en reste et continue de progresser, le framework vient d'annoncer [une nouvelle API de routing basée sur le système de fichiers](https://www.gatsbyjs.com/blog/fs-route-api)… à la Next.js ou Nuxt.js. Votre fichier `/about.js` sera servi en tant que `/about/`. Nicolas précise que Gatsby demande un peu plus d'investissement initial mais que le résultat final sera similaire.
 
 ## Nuxt.js de plus en plus statique
 
@@ -62,13 +59,13 @@ Nuxt.js, est désormais capable de [générer un site entièrement statique](htt
 
 Le projet initié par les deux frères Chopin, Alexandre et Sébastien, a annoncé sa première levée de fonds et propulse maintenant des sites majeurs comme lequipe.fr. On se réjouit de la progresssion du framework Vue.js.
 
-Stocker ses contenus sous forme de fichiers Markdown, JSON, YAML, est très courant et c’est une bonne chose que tous les framework JS continuent de faciliter le travail à ce niveau-là. Frank rappelle que des CMS basés sur Git comme [Forestry](https://forestry.io/) interagissent avec votre dépôt et proposent une interface de rédaction épurée ainsi que la possibilité de modéliser ses contenus, via du front matter ou des fichiers de données. Une flexibilité vraiment appréciable, et accessible au plus grand nombre.
+Stocker ses contenus sous forme de fichiers Markdown, JSON, YAML, est très courant et c’est une bonne chose que tous les framework JS continuent de faciliter le travail à ce niveau-là. Frank rappelle que des CMS basés sur Git comme [Forestry](https://forestry.io) interagissent avec votre dépôt et proposent une interface de rédaction épurée ainsi que la possibilité de modéliser ses contenus, via du front matter ou des fichiers de données. Une flexibilité vraiment appréciable, et accessible au plus grand nombre.
 
 Des frameworks bien pratiques, de plus en plus versatiles, capables de travailler avec des fichiers locaux comme avec des API distantes. Ces frameworks JavaScript facilitent le développement par composition, ce paradgime explique en partie leur adoption de plus en plus massive.
 
 ## Hugo de mieux en mieux outillé pour le JavaScript
 
-Enfin Hugo, [le générateur de loin le plus rapide]({{< relref "comparatif-performance-generateurs-de-site-statique" >}} ) pour transformer ses fichiers source en site web, [continue d'intégrer](https://gohugo.io/news/0.78.0-relnotes/) des outils issus de l'écosystème [JavaScript](https://gohugo.io/hugo-pipes/js/), après la transpilation via [Babel](https://gohugo.io/hugo-pipes/babel/), la gestion de dépendances [npm](https://gohugo.io/news/0.75.0-relnotes/), on peut aussi maintenant empaqueter son JavaScript à la vitesse de la lumière avec [esbuld](https://esbuild.github.io). Les développeurs peuvent découper leurs projets en modules réutilisables et bénéficier d'un _bundler_ lui aussi bien plus rapide que webpack ou parcel.
+Enfin Hugo, [le générateur de loin le plus rapide](../comparatif-performance-generateurs-de-site-statique) pour transformer ses fichiers source en site web, [continue d'intégrer](https://gohugo.io/news/0.78.0-relnotes/) des outils issus de l'écosystème [JavaScript](https://gohugo.io/hugo-pipes/js/), après la transpilation via [Babel](https://gohugo.io/hugo-pipes/babel/), la gestion de dépendances [npm](https://gohugo.io/news/0.75.0-relnotes/), on peut aussi maintenant empaqueter son JavaScript à la vitesse de la lumière avec [esbuld](https://esbuild.github.io). Les développeurs peuvent découper leurs projets en modules réutilisables et bénéficier d'un *bundler* lui aussi bien plus rapide que webpack ou parcel.
 
 ## Tailwind 2.0
 
@@ -80,19 +77,17 @@ De son côté, mine de rien [Eleventy le générateur volontairement simple]({{<
 
 ## Comment ne pas faire subir le coût des frameworks à ses visiteurs ?
 
-Dans son article sur https://orbit.love/blog/towards-a-lightweight-jamstack (prochainement disponible en français), Nicolas rappelle que l'expérience de développement proposée par les frameworks JavaScript se fait au détriment de la performance expérimentée par vos visiteurs.
+Dans son article sur <https://orbit.love/blog/towards-a-lightweight-jamstack> (prochainement disponible en français), Nicolas rappelle que l'expérience de développement proposée par les frameworks JavaScript se fait au détriment de la performance expérimentée par vos visiteurs.
 
 Nicolas a longtemps utilisé React pour beaucoup de projets en agence. Très attentif à la performance finale ressentie par les visiteurs, Nicolas sait que cela demande d'implémenter beaucoup de bonnes pratiques: la gestion des images, l'implémentation de Service Workers, le rendu côté serveur. "Encore faut-il en avoir le temps, l'expertise et la connaissance" précise Nicolas. Gatsby s'est positionné comme un framework React qui peut se connecter à n'importe quelle source de données via son API GraphQL et qui implémente les bonnes pratiques de webperf par défaut, générant une Progressive Web App en sortie.
 
 Gatsby peut aussi précharger les pages dès qu'un visiteur s'apprête à cliquer sur un lien, ce qui va donner une impression d'instantanéité du chargement de la page. C'est ce parti-pris sur la performance qui a plu à Nicolas, qui fait que le développeur est incité à servir un site optimisé.
 
-Nicolas rappelle néanmoins que la taille du JavaScript livré sur le site a un impact énorme sur l'expérience utilisateur (et de plus en plus sur le SEO). Même 30 kilobits de JavaScript vont impacter le temps que met un site à être interactif. Cela peut se mesurer en terme de “clics rageux” (_rage clicks_) où les utilisateurs croient pouvoir interagir avec la page qui semble chargée, alors que le navigateur est toujours en train d'interpréter le code JavaScript embarqué.
+Nicolas rappelle néanmoins que la taille du JavaScript livré sur le site a un impact énorme sur l'expérience utilisateur (et de plus en plus sur le SEO). Même 30 kilobits de JavaScript vont impacter le temps que met un site à être interactif. Cela peut se mesurer en terme de “clics rageux” (*rage clicks*) où les utilisateurs croient pouvoir interagir avec la page qui semble chargée, alors que le navigateur est toujours en train d'interpréter le code JavaScript embarqué.
 
 Tout le monde ne dispose pas du dernier modèle de téléphone ultra-puissant et un site comme celui du Washington Post peut mettre près de 40 secondes à s'afficher sur un téléphone d'entrée de gamme.
 
-<div class="w-1/2 mx-auto">
-{{< tweet 1322556145626718208 >}}
-</div>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Even worse, the Washington Post.<br><br>This video is 30 seconds long, because that&#39;s how long it took the Redmi to load an article. The iPhone did it in 1-2 seconds. <a href="https://t.co/gfaK676SHo">pic.twitter.com/gfaK676SHo</a></p>&mdash; Josh W. Comeau 🎃 (@JoshWComeau) <a href="https://twitter.com/JoshWComeau/status/1322556145626718208?ref_src=twsrc%5Etfw">October 31, 2020</a></blockquote>
 
 On surveillera le [First Input Delay](https://web.dev/fid/) dans ses métriques, même si comme le dit Nicolas "cela reste une approximation synthétique et imparfaite". Idéalement testez sur autre chose que le dernier iPhone avec une connexion 4G qui dépote.
 
@@ -108,7 +103,7 @@ Le changement de philosophie peut se résumer à qui pilote, en React c'est le J
 
 > L'approche est très rafraichissante, elle permet de se recentrer sur une des primitives du web, le HTML, et de pouvoir soigner la qualité du code servi à l'utilisateur — Nicolas Goutay
 
-Mozilla adopte [cette approche légère](https://hacks.mozilla.org/2020/10/to-eleventy-and-beyond/) sur https://extensionworkshop.com/.
+Mozilla adopte [cette approche légère](https://hacks.mozilla.org/2020/10/to-eleventy-and-beyond/) sur <https://extensionworkshop.com/>.
 
 On notera que certains sites Eleventy utilisent les Web Components et que GitHub a développé [un framework pour embarquer des Web Components dans les applications Ruby on Rails](https://github.com/github/view_component). Là encore, il faudrait dédier une émission complète sur ce sujet. C'est quelque chose à surveiller de près.
 
