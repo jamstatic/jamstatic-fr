@@ -1,0 +1,22 @@
+{% set pages = site.pages.all %}
+{% if page.pages is defined %}
+  {% set pages = page.pages %}
+{% endif %}
+{% if page.pagination.pages is defined %}
+  {% set pages = page.pagination.pages %}
+{% endif %}
+
+{% extends '_default/page.html.twig' %}
+
+{% block content %}
+  {% block header %}{% endblock %}
+  <main>
+    <ul>
+    {% for p in pages %}
+      <li>
+        {{ include('partials/post.html.twig', {in_list: true}) }}
+      </li>
+    {% endfor %}
+    </ul>
+  </main>
+{% endblock %}
