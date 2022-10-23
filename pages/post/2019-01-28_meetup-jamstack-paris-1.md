@@ -9,12 +9,9 @@ categories:
   - gatsby
   - meetup
 ---
-
-{{< intro >}}
+:::intro
 Au programme du premier meetup Jamstack Paris, un retour d'expérience sur la migration d'un site Angular vers Gatsby, et un exemple de développement en live d'un plugin Gatsby. [Les vidéos sont en ligne](https://www.youtube.com/channel/UC66eQOycjMnaqzpbRUhEK2w).
-{{< /intro >}}
-
----
+:::
 
 Dans la première présentation, [Louis Lafont](https://twitter.com/dot_louis), développeur front-end chez [MonBanquet](https://monbanquet.fr/), présente la stack qu'il a choisi pour la refonte du site, à savoir [Gatsby](https://gatsbyjs.org) pour la partie front, [Contentful](https://www.contentful.com/) pour la gestion de contenu et [Netlify](https://www.netlify.com/) pour héberger le tout.
 
@@ -24,7 +21,7 @@ Et le tout pour la modique somme de **zéro euro** 😲, puisque Gatsby et ses p
 
 Tous le monde est ravi, la prochaine étape sera de s'attaquer à l'authentification utilisateur et d'ajouter un gestion de panier 💳 e-commerce.
 
-<figure>{{< youtube xLQ4to7Ubn0 >}}</figure>
+[Louis Lafont — Pourquoi et comment migrer son site vers la JAMstack Gatsby, Contentful et Netlify ?](https://www.youtube.com/watch?v=xLQ4to7Ubn0)
 
 ---
 
@@ -34,7 +31,7 @@ Grand amateur de disques vinyles, Nicolas comme tout bon nerd a enregistré sa c
 
 L'application récupére les références des _releases_ sur Discogs pour pouvoir ensuite générer une tracklist de chaque album via l'API de YouTube. Pour contourner la limitation de Discogs, Nicolas a donc eu l'idée d'utiliser Gatsby et de générer son application au build, quitte a espacer les appels à l'API pour pouvoir tout récupérer. Pour cela il a donc développé [un plugin Gatsby source](https://www.gatsbyjs.org/docs/create-source-plugin/), qui va lui permettre de créer facilement des noeuds, qui pourront être ensuite requêter dans GraphQL. La démo permet d'apprécier encore une fois la _developer experience_ offerte par Gatsby, avec notamment une gestion automatique de la documentation de tous les attributs des noeuds.
 
-<figure>{{< youtube 7pbFDBXiuAA >}}</figure>
+[Nicolas Goutay — Pourquoi, et comment, créer son propre plugin Gatsby ?](https://www.youtube.com/watch?v=7pbFDBXiuAA)
 
 ---
 
