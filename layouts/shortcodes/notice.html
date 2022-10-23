@@ -1,8 +1,0 @@
-<div class="bg-black-grape-100 dark:bg-black-grape-500 bg-opacity-50 px-4 py-1 border-l-4 border-black-grape-200 dark:border-black-grape-400
-	{{ if .IsNamedParams }}
-		{{ with .Get "type" }}{{.}}{{ end }}"
-	{{ else }}
-		{{ with .Get 0 }}{{.}}{{ end }}"
-	{{ end }}
-role="alert">{{- .Inner | markdownify -}}
-</div>
