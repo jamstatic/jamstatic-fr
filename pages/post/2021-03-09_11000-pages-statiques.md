@@ -11,10 +11,7 @@ categories:
   - headless
   - nuxtjs
 ---
-
-{{< intro >}}
 Les sites statiques pour un site de média c'est l'idéal. Rapide, léger, sécurisé, tout semble coller sur le papier. Mais est-il possible de créer un site statique avec un grand nombre de pages ?
-{{</ intro >}}
 
 ## Le contexte
 
@@ -27,7 +24,7 @@ Mais avant d'investir de l'énergie humaine et de l'argent dans cette grosse mig
 
 ## Choix des générateurs et du CMS Headless
 
-Côté CMS, le choix est déjà arrêté sur [Craft CMS](https://craftcms.com/). C'est un CMS qui propose une très bonne expérience pour l'édition et surtout, il permet un mode headless avec des fonctionnalités très intéressantes par défaut. On y retrouve notamment: un mode prévisualisation, une API GraphQL et des webhooks. Parfait pour fonctionner avec un site statique.
+Côté CMS, le choix est déjà arrêté sur [Craft CMS](https://craftcms.com). C'est un CMS qui propose une très bonne expérience pour l'édition et surtout, il permet un mode headless avec des fonctionnalités très intéressantes par défaut. On y retrouve notamment: un mode prévisualisation, une API GraphQL et des webhooks. Parfait pour fonctionner avec un site statique.
 
 Le mode prévisualisation offre une bonne expérience aux responsables du contenu. Il est très important pour une complète adoption par l'équipe de pouvoir éditer du contenu et vérifier le rendu immédiatement.
 
@@ -36,25 +33,22 @@ On s'oriente donc sur deux solutions qui offrent la possibilité de fonctionner 
 
 Gastby aurait pu être utilisé aussi grâce à la nouvelle route API mais nous souhaitons conserver des process de build assez rapide. D'expérience, je connais bien Gatsby et je sais qu'il est le moins performant — ce prototype précède l'annonce de la version 3.0 annoncée comme plus rapide.
 
-Pour être 100% honnête, cet [article](https://jamstatic.fr/2020/10/31/comparatif-performance-generateurs-de-site-statique/) a mis de côté Gastby au profit de Next.js dès le départ. 
+Pour être 100% honnête, cet [article](https://jamstatic.fr/2020/10/31/comparatif-performance-generateurs-de-site-statique/) a mis de côté Gastby au profit de Next.js dès le départ.
 
-{{< notice info >}}
+:::info
 ### Next.js
 
-[Next.js](https://nextjs.org/) est un framework JavaScript basé sur React. Il permet de générer des applications React sous trois modes de rendu : SSR (rendu serveur), hybride (statique dynamique) et 100% statique (export des pages sous forme HTML)  
+[Next.js](https://nextjs.org) est un framework JavaScript basé sur React. Il permet de générer des applications React sous trois modes de rendu : SSR (rendu serveur), hybride (statique dynamique) et 100% statique (export des pages sous forme HTML).  
 Uniquement dans le mode hybride, il offre les fonctionnalités suivantes : le mode prévisualisation des pages non générées, la regénération statique incrémentale (la (re)génération de pages existantes ou non, sous forme de fichiers statiques).
+:::
 
-{{< /notice >}}
-
-{{< notice info >}}
+:::info
 ### Nuxt.js
 
-[Nuxt.js](https://fr.nuxtjs.org/) est un framework JavaScript basé sur Vue.js. Il permet de générer des applications Vue.js sous trois modes de rendu : SSR (rendu serveur), SPA (single page application) et 100% statique (export des pages HTML).
+[Nuxt.js](https://fr.nuxtjs.org) est un framework JavaScript basé sur Vue.js. Il permet de générer des applications Vue.js sous trois modes de rendu : SSR (rendu serveur), SPA (single page application) et 100% statique (export des pages HTML).  
 Il propose également un système de prévisualisation, mais dans le mode 100% statique. À ce jour, il ne propose pas de système de génération de page dynamique comme Next.js.  
-
 Rien de confirmé pour le moment, mais la version 3.0 de Nuxt.js devrait proposer une fonctionnalité équivalente.
-
-{{< /notice >}}
+:::
 
 ## Commençons avec Next.js
 
@@ -68,19 +62,19 @@ Durant le développement, je travaillais avec un échantillon d'une centaine de 
 
 Il est temps de tester avec les 11 000 pages. Et là, patatras !  L'API a du mal à suivre les requêtes. Eh oui, 11 000 pages, c'est autant de requêtes pour générer chaque page dans un temps très court. Évidemment, à ce stade, rien n'est optimisé du côté du CMS mais c'est un premier blocage dans la génération des pages.
 
-Pour optimiser les appels vers l'API, je fais un système de cache qui permet d'utiliser les fichiers du cache au lieu d'appeler l'API. Je génère le cache juste avant le build.
+Pour optimiser les appels vers l'API, je fais un système de cache qui permet d'utiliser les fichiers du cache au lieu d'appeler l'API. Je génère le cache juste avant le build.  
 Tout fonctionne parfaitement. Les 11 000 pages prennent entre 5 et 8 minutes pour être créées.
 
 ## La surprise ou le blocage qu'on attendait pas
 
-Bon OK, le temps de build des 11 000 pages est un petit peu long. Si on doit attendre à chaque fois entre 5 et 10 minutes pour avoir une nouvelle version en ligne, ce n’est pas top.  
+Bon OK, le temps de build des 11 000 pages est un petit peu long. Si on doit attendre à chaque fois entre 5 et 10 minutes pour avoir une nouvelle version en ligne, ce n’est pas top.
 
 Mais là où nous avons été surpris, c'est quand nous avons testé le déploiement sur Vercel.  
 Une chose que j'avais oubliée, c'est que 11 000 pages, c'est entre 400 et 500 Mb. Et en upload, ça prend du temps. Beaucoup de temps !
 
 Clairement, au début, j'ai cru a un bug. J'ai coupé le déploiement au bout de 39 minutes. Oui, vous avez bien lu, 39 minutes. Et non, ce n’était pas un bug : j'ai testé sur Netlify, via FTP avec une connexion fibre, ça prend bien une bonne quarantaine de minutes !
 
-{{< figure src="39mindeploy.png" >}}
+![39 minutes de temps de déploiement](/images/post/11000-pages-statiques/39mindeploy.png "39 minutes de temps de déploiement")
 
 Le constat est simple. Impossible de faire du full statique sur un très grand nombre de pages. Le statique ne s'y prête pas du tout. D'autant que les futurs sites doivent atteindre le double, voire le triple en quantité de pages.
 
@@ -94,12 +88,13 @@ Ensuite, vous donnez un tableau vide comme valeur `paths` de la fonction `getSta
 
 Résultat, un **temps de génération entre deux et quatres minutes** pour un site statique hybride de 10 991 articles !
 
-{{< figure src="10991articles.png" >}}
-{{< figure src="4mindeploy.png" >}}
+![10991 articles](/images/post/11000-pages-statiques/10991articles.png "10991 articles")
+
+![4 minutes de temps de déploiement](/images/post/11000-pages-statiques/4mindeploy.png "4 minutes de temps de déploiement")
 
 Cerise sur le gâteau, en utilisant le paramètre `revalidate`, on peut régénérer la page (temps en secondes) sans relancer un build. Cela veut dire qu'en cas de mise à jour de contenu, il n'est pas nécessaire de relancer un build !
 
-{{< youtube Dj-rKHmLp5w >}}
+[Next JS - Incremental Static Regeneration (français)](https://www.youtube.com/watch?v=Dj-rKHmLp5w)
 
 ## La solution retenue
 
@@ -107,13 +102,12 @@ Bien que Nuxt.js ne propose pas de mode hybride comme Next.js pour le moment, no
 
 Nous avons hâte de découvrir plus en détail la version 3 de Nuxt.js avec le moteur Nitro, qui doit normalement permettre un mode hybride.
 
-Donc pour le moment, Next.js est retenu pour la migration des premiers sites. On utilisera le mode hybride avec une génération des pages à la demande en utilisant un `fallback` en `blocking` pour être 100% SEO compatible.  
+Donc pour le moment, Next.js est retenu pour la migration des premiers sites. On utilisera le mode hybride avec une génération des pages à la demande en utilisant un `fallback` en `blocking` pour être 100% SEO compatible.
 
 L'idée de générer au build les *X* derniers articles pour accélérer le chargement des articles récents est évoqué. Nous n’excluons pas que certaines pages très anciennes ne soient peut-être jamais visitées et donc jamais générées.
 
 Finalement, pour remplir le périmètre requis pour le projet : le mode prévisualisation, un processus de publication simple et automatique, aucune gestion de serveur et certaines pages accessibles uniquement par des abonnés ; Next.js semble être pour le moment la meilleure solution.
 
-
 ## Prototype privé
 
-Le projet est confidentiel et le code privé. Je ne peux pas fournir les données pour faire des tests
+Le projet est confidentiel et le code privé. Je ne peux pas fournir les données pour faire des tests.
