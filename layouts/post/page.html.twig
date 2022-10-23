@@ -8,15 +8,18 @@
 	<main class="mx-auto prose sm:prose-lg lg:prose-xl dark:prose-dark" itemprop="articleBody">
 		{{ page.content }}
 	</main>
-  <footer class="mx-auto prose sm:prose-lg lg:prose-xl dark:prose-dark mt-4">
-    <button>
-      ✏️ <a href="https://github.com/jamstatic/jamstatic-fr/edit/master/pages/post/{{ page.filepath }}" title="Éditer le contenu sur GitHub" class="no-underline hover:underline">Éditer cet article</a>
+  <footer class="mx-auto prose sm:prose-lg lg:prose-xl dark:prose-dark mt-10">
+    <button class="flex items-center space-x-1">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"/>
+      </svg>
+      <a href="https://github.com/jamstatic/jamstatic-fr/edit/master/pages/post/{{ page.filepath }}" title="Proposer une correction de cette article sur GitHub" class="no-underline hover:underline">Proposer une correction</a>
     </button>
     {% if page.categories|default(0) > 0 %}
     <hr class="my-2 dark:border-gray-800">
     <h3 class="text-2xl font-display text-rose dark:text-rose-400">Voir aussi</h3>
     <ul>
-    {% for related in site.pages|filter(r => page.categories[0] in r.categories|default({}) and r.id != page.id) %}
+    {% for related in site.pages|filter(r => page.categories[0] in r.categories|default({}) and r.id != page.id)|slice(0, 5) %}
       <li><a class="text-xl font-bold no-underline transition duration-200 text-violet hover:text-violet-light dark:text-blue-500 dark:hover:text-blue-300" href="{{ url(related) }}">{{ related.title }}</a></li>
     {% endfor %}
     </ul>
