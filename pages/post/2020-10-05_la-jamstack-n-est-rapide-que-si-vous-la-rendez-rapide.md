@@ -5,10 +5,9 @@ date: 2020-10-05
 author: arnaud
 excerpt: |
   [Nicolas Hoizey](https://nicolas-hoizey.com) partage ici sa vision de la Jamstack et le fait que celle-ci n’est performante que si vous faites véritablement en sorte qu’elle le soit. À noter que depuis la parution de son article, Netlify a supprimé les majuscules de Jamstack afin de moins insister sur l'acronyme à l'origine de cette appelation qui suscite encore trop souvent une incompréhension. Encore heureux qu'en 2020 on puisse encore générer du HTML sans passer par un framework JS !
-images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:La%2520Jamstack%2520n'est%2520rapide%2520que%2520si%2520vous%2520y%2520veillez/jamstatic/twitter-card.png
+images: https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:La%2520Jamstack%2520n'est%2520rapide%2520que%2520si%2520vous%2520y%2520veillez/jamstatic/twitter-card.png
 categories:
-- jamstack
+ - jamstack
 source:
   author: Nicolas Hoizey
   title: JAMstack is fast only if you make it so
@@ -17,12 +16,15 @@ source:
 canonical_url: https://nicolas-hoizey.com/articles/2020/05/05/jamstack-is-fast-only-if-you-make-it-so/
 typora-root-url: ../../static
 ---
+:::intro
+[Nicolas Hoizey](https://nicolas-hoizey.com) partage ici sa vision de la Jamstack et le fait que celle-ci n’est performante que si vous faites véritablement en sorte qu’elle le soit. À noter que depuis la parution de son article, Netlify a supprimé les majuscules de Jamstack afin de moins insister sur l'acronyme à l'origine de cette appelation qui suscite encore trop souvent une incompréhension. Encore heureux qu'en 2020 on puisse encore générer du HTML sans passer par un framework JS !
+:::
 
 La Jamstack se présente souvent comme un excellent moyen de fournir des sites performants. C'est même le premier avantage répertorié sur [jamstack.wtf](https://jamstack.wtf), un guide[^1] pour "comprendre le concept de Jamstack simplement, de manière à encourager d'autres développeurs à adopter ce workflow". Mais trop de sites Jamstack sont encore trop lents.
 
 Vous avez peut-être vu les diatribes fréquentes d'[Alex Russell](https://infrequently.org) à propos de Gatsby :
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Looking across the full set of traces, modern Gatsby seems to produce pages that take 2-3x as long as they should to become interactive. <br><br>This is not OK. Gatsby/NPM/React regressively tax access to content.<br><br>In less generous moments, I&#39;d go as far as to say it&#39;s unethical.</p>&mdash; Alex Russell (@slightlylate) <a href="https://twitter.com/slightlylate/status/1184959830819106816">October 17, 2019</a></blockquote><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Looking across the full set of traces, modern Gatsby seems to produce pages that take 2-3x as long as they should to become interactive. <br><br>This is not OK. Gatsby/NPM/React regressively tax access to content.<br><br>In less generous moments, I&#39;d go as far as to say it&#39;s unethical.</p>&mdash; Alex Russell (@slightlylate) <a href="https://twitter.com/slightlylate/status/1184959830819106816">October 17, 2019</a></blockquote>
 
 Gatsby est une cible facile (parmi tant d'autres) car il n'est actuellement pas optimisé pour être performant par défaut, malgré ce qui est [présenté](https://store.gatsbyjs.org/product/gatsby-sticker-6-pack). Il est possible de corriger cela, notamment avec [ce plugin](https://www.gatsbyjs.org/packages/gatsby-plugin-no-javascript/), et je pense que de bons développeurs React peuvent améliorer les choses, mais cela devrait être le cas **par défaut**, et non après coup.
 
@@ -86,17 +88,17 @@ C’est aussi quelque chose que je n’aime pas vraiment dans la tendance actuel
 
 Voici pour l’exemple ce que vous pouvez voir sur [jamstack.wtf](https://jamstack.wtf/) (simplifié) :
 
-{{< figure src="jamstack-horizontal.svg" caption="Jamstack version aplatie" >}}
+![Jamstack version aplatie](../../assets/images/post/2020-10-05_la-jamstack-n-est-rapide-que-si-vous-la-rendez-rapide/jamstack-horizontal.svg "Jamstack version aplatie")
 
 Comme suggéré par [Yann](https://twitter.com/yann_yinn), j’aimerais commencer par utiliser cette meilleure présentation :
 
-{{< figure src="jamstack-vertical.svg" caption="Jamstack version empilée" >}}
+![Jamstack version empilée](../../assets/images/post/2020-10-05_la-jamstack-n-est-rapide-que-si-vous-la-rendez-rapide/jamstack-vertical.svg "Jamstack version empilée")
 
 Cela rend plus évident qu’il s’agit d’une pile de choses, très utile pour une « pile » (NDT : « stack » peut être traduit « pile » en français).
 
 Mais j’aimerais suggérer cette modification :
 
-{{< figure src="ajmstack.svg" caption="JavaScript fait la liaison" >}}
+![JavaScript fait la liaison](../../assets/images/post/2020-10-05_la-jamstack-n-est-rapide-que-si-vous-la-rendez-rapide/ajmstack.svg "JavaScript fait la liaison")
 
 Bien sûr, cela se lit **AJMstack** au lieu de Jamstack, donc je parie que je n’aurais pas de succès dans la promotion… 🤷‍♂️
 
@@ -106,8 +108,8 @@ Cela permet de présenter cela comme une excellente plate-forme d’amélioratio
 
 Voici la **Mstack** :
 
-{{< figure src="mstack.svg" caption="mstack" >}}
+![Mstack](../../assets/images/post/2020-10-05_la-jamstack-n-est-rapide-que-si-vous-la-rendez-rapide/mstack.svg "Mstack")
 
 Assurez-vous déjà que cette « couche » soit au top, et ensuite améliorez-la avec du JavaScript et des APIs au besoin.
 
-[^1]: Il existe une [version française]({{< relref "c-est-quoi-la-jamstack.md" >}}) de ce guide.
+[^1]: Il existe une [version française](../c-est-quoi-la-jamstack.md) de ce guide.
