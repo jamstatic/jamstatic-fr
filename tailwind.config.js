@@ -1,10 +1,11 @@
 module.exports = {
-  important: true,
-  mode: "all",
-  experimental: {
-    // See https://github.com/tailwindlabs/tailwindcss/pull/2159
-    // applyComplexClasses: true,
-  },
+  content: [
+    './layouts/**/*.html.twig',
+    './themes/**/layouts/**/*.html.twig',
+  ],
+  safelist: [
+    'anchorjs-link'
+  ],
   darkMode: "media",
   theme: {
     extend: {
@@ -35,10 +36,10 @@ module.exports = {
               padding: ".5em",
             },
             pre: {
-              background:"rgba(128, 174, 255, 0.1)",
+              background: "rgba(128, 174, 255, 0.1)",
             },
             "pre code": {
-              color:theme("colors.black-grape.500"),
+              color: theme("colors.black-grape.500"),
             },
           },
         },
@@ -86,7 +87,7 @@ module.exports = {
       },
       brand: '#300A66',
       indigo: {
-        50:  "#f7f9fc",
+        50: "#f7f9fc",
         100: "#f1f1fb",
         200: "#e0dbf8",
         300: "#cebef6",
@@ -127,7 +128,7 @@ module.exports = {
       },
       rose: "#ff4863",
       rose: {
-        50:  '#fcf9f8',
+        50: '#fcf9f8',
         100: '#fdeef2',
         200: '#fbcfe4',
         300: '#faa7cd',
@@ -160,22 +161,11 @@ module.exports = {
       current: "currentColor",
     },
   },
-  variants: {
-    extend: {
-      typography: ['dark']
-    }
-  },
-  purge: {
-    enabled: process.env.HUGO_ENVIRONMENT === "production",
-    content: ["./hugo_stats.json"],
-    options: {
-      //safelist: [ 'pl-1', 'pl-3' ],
-      defaultExtractor: (content) => {
-        let els = JSON.parse(content).htmlElements;
-        els = els.tags.concat(els.classes, els.ids);
-        return els;
-      },
-    },
-  },
-  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography')({
+      //className: 'markdown',
+      className: 'prose',
+    }),
+  ],
 };
