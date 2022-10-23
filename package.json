@@ -3,10 +3,12 @@
   "version": "0.3.0",
   "description": "Jamstatic website",
   "author": "Frank Taillandier",
-  "contributors": [{
-    "name": "Arnaud Ligny",
-    "url": "https://arnaudligny.fr"
-  }],
+  "contributors": [
+    {
+      "name": "Arnaud Ligny",
+      "url": "https://arnaudligny.fr"
+    }
+  ],
   "homepage": "https://github.com/jamstatic/jamstatic-fr#readme",
   "license": "MIT",
   "repository": {
@@ -20,11 +22,9 @@
     "@tailwindcss/forms": "^0.5",
     "@tailwindcss/typography": "^0.5",
     "all-contributors-cli": "^6.24",
-    "atomic-algolia": "^0.3",
     "tailwindcss": "^3.2"
   },
   "scripts": {
-    "algolia": "atomic-algolia",
     "contributors:add": "all-contributors add",
     "contributors:check": "all-contributors check",
     "contributors:generate": "all-contributors generate"
