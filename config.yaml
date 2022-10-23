@@ -1,7 +1,0 @@
-# For Forestry
-metaDataFormat: yaml
-# Allow HTML in Markdown
-markup:
-  goldmark:
-    renderer:
-      unsafe: true
