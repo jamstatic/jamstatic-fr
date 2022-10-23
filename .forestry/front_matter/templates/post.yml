@@ -25,13 +25,13 @@ fields:
   type: tag_list
   hidden: false
   default:
-  - 
-- name: images
-  label: Images
+  -
+- name: image
+  label: Image
   type: image_gallery
   hidden: false
   default:
-  - "/assets/images///"
+  - "/assets/images/post/"
 - name: source
   label: Source
   type: field_group
@@ -57,34 +57,18 @@ fields:
     hidden: false
     default: ''
   hidden: false
-  default: 
+  default:
 - name: author
   label: Author
   type: text
   hidden: false
-  default: Frank Taillandier
-- name: lastmod
-  label: Lastmod
+- name: updated
+  label: Updated
   type: datetime
   hidden: false
   default: now
-- name: commments
-  label: Commments
-  type: boolean
-  hidden: false
-  default: ''
 - name: aliases
   label: Aliases
-  type: list
-  hidden: false
-  default: ''
-- name: canonical_url
-  label: Canonical url
-  type: text
-  hidden: false
-  default: ''
-- name: keywords
-  label: Keywords
   type: list
   hidden: false
   default: ''
@@ -93,52 +77,3 @@ fields:
   type: boolean
   hidden: false
   default: true
-pages:
-- content/post/5-raisons-de-tester-la-jamstack/index.md
-- content/post/bibliotheques-de-composants-en-markdown.md
-- content/post/cms-headless.md
-- content/post/comment-fonctionne-jekyll.md
-- content/post/comparatif-hugo-jekyll.md
-- content/post/configurer-netlify-cms-pour-jekyll.md
-- content/post/construire-un-blog-statique-avec-gatsby-et-strapi.md
-- content/post/contenus-relatifs-dans-hugo.md
-- content/post/creer-des-mises-en-page-dynamiques-avec-jekyll.md
-- content/post/creer-un-environnement-de-preproduction-pour-jekyll.md
-- content/post/creer-un-theme-jekyll.md
-- content/post/creer-un-theme-pour-jekyll.md
-- content/post/demarrer-avec-algolia.md
-- content/post/des-commentaires-statiques-avec-jekyll-et-staticman.md
-- content/post/designer-un-portfolio-avec-jekyll.md
-- content/post/eleventy-generateur-statique-simple.md
-- content/post/entretien-avec-parker-moore.md
-- content/post/entretien-bud-parr.md
-- content/post/entretien-michael-rose.md
-- content/post/frank-taillandier-utilise-jekyll.md
-- content/post/gatsby-contentful-netlify-algolia.md
-- content/post/gatsby-contre-next.js.md
-- content/post/gestion-images-responsive-avec-jekyll-cloudinary.md
-- content/post/hugo-le-point-sur-le-contexte.md
-- content/post/interview-hugo-lead-developer.md
-- content/post/interview-kyle-matthews-gatsby.md
-- content/post/jamstatic-fr.md
-- content/post/jekyll-3-3-est-dispo.md
-- content/post/jekyllconf-2016.md
-- content/post/mettre-en-place-son-premier-site-sous-hugo.md
-- content/post/migration-de-jekyll-a-hugo.md
-- content/post/mode-offline-avec-hugo.md
-- content/post/netlify-en-10-fonctionnalites.md
-- content/post/pour-des-sites-web-modernes-direction-le-maillage-de-contenus.md
-- content/post/premier-meetup-jamstack-toulouse.md
-- content/post/presentation-eleventy.md
-- content/post/produire-des-livres-avec-le-statique.md
-- content/post/scratch-hugo.md
-- content/post/site-ecommerce-statique-scalable-avec-hugo.md
-- content/post/smashing-mag-va-dix-fois-plus-vite.md
-- content/post/startups-jamstack.md
-- content/post/templates-hugo-designers-wordpress.md
-- content/post/un-site-ecommerce-statique-avec-hugo.md
-- content/post/un-site-statique-avec-des-composants-grace-a-nunjucks.md
-- content/post/utiliser-des-plugins-jekyll-avec-github-pages.md
-- content/post/vincent-voyer-algolia.md
-- content/post/wordpress-comme-cms-pour-vos-sites-statiques.md
-- content/post/y-a-quoi-dans-un-generateur-de-site-statique.md
