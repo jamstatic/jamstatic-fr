@@ -1,0 +1,77 @@
+title: Jamastatic
+baseline: Sites statiques et architectures découplées
+baseurl: https://jamstatic.fr/
+description: Jamastatic, la communauté des sites statiques et des architectures découplées.
+author:
+  name: Jamastatic
+  url: https://jamstatic.fr
+image: images/twitter-card.png
+language: fr
+languages:
+  - code: fr
+    locale: fr
+podcast:
+  title: Génération Statique
+  url: https://anchor.fm/jamstatic
+#
+paths:
+  - section: post
+    path: :year/:month/:day/:slug
+body:
+  images:
+    responsive:
+      enabled: true
+    webp:
+      enabled: true
+    caption:
+      enabled: true
+  links:
+    embed:
+      enabled: true
+output:
+  formats:
+    - name: atom
+      mediatype: application/atom+xml
+      filename: index
+      extension: xml
+      exclude: [redirect, paginated]
+    - name: algolia
+      mediatype: application/json
+      filename: algolia
+      extension: json
+      exclude: [redirect, paginated]
+
+#
+email: contact@jamstatic.fr
+author:
+  name: Frank Taillandier
+  url: https://frank.taillandier.me
+  avatar: https://github.com/DirtyF.png
+  GitHub: DirtyF
+social:
+  twitter: jamstatic_fr
+  GitHub: jamstatic
+podcast:
+  url: https://anchor.fm/jamstatic
+  title: Génération Statique
+cloudinary: https://res.cloudinary.com/jamstatic/image/upload
+opencollective: https://opencollective.com/jamstatic
+ghrepo: https://github.com/jamstatic/jamstatic-fr/
+branch: master
+#
+algolia:
+  vars:
+    - title
+    - description
+    - summary
+    - date
+    - publishdate
+    - expirydate
+    - permalink
+    - relpermalink
+  params:
+    - categories
+  appId: TLI4UDRZDR
+  indexName: jamstatic
+  searchOnlyApiKey: 5af8d385eec1e00ac16d0963c630b6ac
+rssPodcast: https://anchor.fm/s/39f4fa04/podcast/rss
