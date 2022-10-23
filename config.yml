@@ -14,6 +14,8 @@ podcast:
   title: Génération Statique
   url: https://anchor.fm/jamstatic
 #
+pagination:
+  enabled: false
 paths:
   - section: post
     path: :year/:month/:day/:slug
@@ -35,43 +37,21 @@ output:
       filename: index
       extension: xml
       exclude: [redirect, paginated]
-    - name: algolia
-      mediatype: application/json
-      filename: algolia
-      extension: json
-      exclude: [redirect, paginated]
 
-#
-email: contact@jamstatic.fr
-author:
-  name: Frank Taillandier
-  url: https://frank.taillandier.me
-  avatar: https://github.com/DirtyF.png
-  GitHub: DirtyF
-social:
-  twitter: jamstatic_fr
-  GitHub: jamstatic
-podcast:
-  url: https://anchor.fm/jamstatic
-  title: Génération Statique
-cloudinary: https://res.cloudinary.com/jamstatic/image/upload
-opencollective: https://opencollective.com/jamstatic
-ghrepo: https://github.com/jamstatic/jamstatic-fr/
-branch: master
-#
-algolia:
-  vars:
-    - title
-    - description
-    - summary
-    - date
-    - publishdate
-    - expirydate
-    - permalink
-    - relpermalink
-  params:
-    - categories
-  appId: TLI4UDRZDR
-  indexName: jamstatic
-  searchOnlyApiKey: 5af8d385eec1e00ac16d0963c630b6ac
-rssPodcast: https://anchor.fm/s/39f4fa04/podcast/rss
+#email: contact@jamstatic.fr
+#author:
+#  name: Frank Taillandier
+#  url: https://frank.taillandier.me
+#  avatar: https://github.com/DirtyF.png
+#  GitHub: DirtyF
+#social:
+#  twitter: jamstatic_fr
+#  GitHub: jamstatic
+#podcast:
+#  url: https://anchor.fm/jamstatic
+#  title: Génération Statique
+#cloudinary: https://res.cloudinary.com/jamstatic/image/upload
+#opencollective: https://opencollective.com/jamstatic
+#ghrepo: https://github.com/jamstatic/jamstatic-fr/
+#branch: master
+#rssPodcast: https://anchor.fm/s/39f4fa04/podcast/rss
