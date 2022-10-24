@@ -1,67 +1,67 @@
-        <header class="p-4 mb-8 bg-blue-100 bg-opacity-50 rounded-lg dark:bg-gray-800{% if in_list|default(false) == true %} hover:scale-105 transition duration-300 transform{% endif %}">
-          {# author #}
-          <div class="mb-2">
-            <div class="flex items-center">
-            {% if p.author|default %}
-              {% if site.data.authors[p.author].name|default and site.data.authors[p.author].github|default %}
-              {% set avatar = asset('https://github.com/' ~ site.data.authors[p.author].github ~ '.png?size=64') %}
-              <img class="w-8 h-8 mr-2 rounded-full" rel="preload" src="{{ url(avatar) }}" width="32" height="32" alt="{{ site.data.authors[p.author].name }}" />
-              {% endif %}
-              {% if site.data.authors[p.author].web|default %}
-              <a class="text-base no-underline capitalize text-black-grape-400 dark:text-blue-500 hover:underline dark:hover:text-blue-300" rel="author" href="{{ site.data.authors[p.author].web }}">{{ site.data.authors[p.author].name }}</a>
-              {% else %}
-              <a class="text-base no-underline capitalize text-black-grape-400 dark:text-blue-500 hover:underline dark:hover:text-blue-300" rel="author" href="https://github.com/{{ site.data.authors[p.author].github }}">{{ site.data.authors[p.author].name }}</a>
-              {% endif %}
-              {% if p.source|default %}
-              <span class="ml-2 text-sm text-black-grape-200 dark:text-blue-500">(traducteur·trice)</span>
-              {% endif %}
-            {% endif %}
-            </div>
-          </div>
-          {# title #}
-          {% if in_list|default(false) == true %}
-          <h2 class="mb-2 text-3xl font-display font-black xl:leading-snug text-violet dark:text-blue-500 dark:hover:text-blue-300">
-            <a href="{{ url(p) }}" class="hover:underline">{{ p.title }}</a>
-          </h2>
-          {% else %}
-          <h1 class="mb-2 text-3xl font-display font-black xl:leading-snug text-violet dark:text-blue-500 dark:hover:text-blue-300">
-            {{ p.title }}
-          </h1>
-          {% endif %}
-          {# meta #}
-          <div class="flex flex-wrap items-center space-x-1 text-sm text-black-grape-200 dark:text-blue-500">
-            {# date #}
-            <span>
-              <time class="capitalize" datetime="{{ p.date|date('c') }}" itemprop="datePublished">
-                {{ p.date|format_date('long') }}
-              </time>
-            </span>
-            <span class="inline">&middot;</span>
-            <span class="flex items-center space-x-1">{{ include('partials/svg/reading-time.svg') }}</span><span>Lecture {{ readtime(p.content) }} min</span>
-            {# categories #}
-            {% if p.categories|default %}
-              <span class="inline">&middot;</span>
-              <span class="flex items-center space-x-1">{{ include('partials/svg/icon-tag.svg') }}
-              {% for category in p.categories %}
-                <a class="capitalize no-underline hover:underline hover:text-violet-light dark:hover:text-blue-300" href="{{ url('categories/' ~ category) }}">{{ category|title }}</a>{% if not loop.last %}, {% endif %}
-              {% endfor %}
-              </span>
-            {% endif %}
-          </div>
-          {# source #}
-          {% if page.source|default %}
-            {% if page.source.url|default and page.source.title|default and page.source.author|default %}
+            <header class="p-4 mb-8 bg-blue-100 bg-opacity-50 rounded-lg dark:bg-gray-800{% if in_list|default(false) == true %} hover:scale-105 transition duration-300 transform{% endif %}">
+              {#- author ~#}
+              <div class="mb-2">
+                <div class="flex items-center">
+                {%- if p.author|default ~%}
+                  {%- if site.data.authors[p.author].name|default and site.data.authors[p.author].github|default -%}
+                  {%- set avatar = asset('https://github.com/' ~ site.data.authors[p.author].github ~ '.png?size=64') ~%}
+                  <img class="w-8 h-8 mr-2 rounded-full" rel="preload" src="{{ url(avatar) }}" width="32" height="32" alt="{{ site.data.authors[p.author].name }}" />
+                  {%- endif -%}
+                  {%- if site.data.authors[p.author].web|default ~%}
+                  <a class="text-base no-underline capitalize text-black-grape-400 dark:text-blue-500 hover:underline dark:hover:text-blue-300" rel="author" href="{{ site.data.authors[p.author].web }}">{{ site.data.authors[p.author].name }}</a>
+                  {%- else ~%}
+                  <a class="text-base no-underline capitalize text-black-grape-400 dark:text-blue-500 hover:underline dark:hover:text-blue-300" rel="author" href="https://github.com/{{ site.data.authors[p.author].github }}">{{ site.data.authors[p.author].name }}</a>
+                  {%- endif -%}
+                  {%- if p.source|default ~%}
+                  <span class="ml-2 text-sm text-black-grape-200 dark:text-blue-500">(traducteur·trice)</span>
+                  {%- endif ~%}
+                {%- endif ~%}
+                </div>
+              </div>
+              {#- title ~#}
+              {%- if in_list|default(false) == true ~%}
+              <h2 class="mb-2 text-3xl font-display font-black xl:leading-snug text-violet dark:text-blue-500 dark:hover:text-blue-300">
+                <a href="{{ url(p) }}" class="hover:underline">{{ p.title }}</a>
+              </h2>
+              {%- else ~%}
+              <h1 class="mb-2 text-3xl font-display font-black xl:leading-snug text-violet dark:text-blue-500 dark:hover:text-blue-300">
+                {{ p.title }}
+              </h1>
+              {%- endif ~%}
+              {#- meta ~#}
+              <div class="flex flex-wrap items-center space-x-1 text-sm text-black-grape-200 dark:text-blue-500">
+                {#- date ~#}
+                <span>
+                  <time class="capitalize" datetime="{{ p.date|date('c') }}" itemprop="datePublished">
+                    {{ p.date|format_date('long') }}
+                  </time>
+                </span>
+                <span class="inline">&middot;</span>
+                <span class="flex items-center space-x-1">{{ include('partials/svg/reading-time.svg')|spaceless }}</span><span>Lecture {{ readtime(p.content) }} min</span>
+                {#- categories ~#}
+                {%- if p.categories|default ~%}
+                <span class="inline">&middot;</span>
+                <span class="flex items-center space-x-1">{{ include('partials/svg/icon-tag.svg')|spaceless }}
+                {%- for category in p.categories ~%}
+                  <a class="capitalize no-underline hover:underline hover:text-violet-light dark:hover:text-blue-300" href="{{ url('categories/' ~ category) }}">{{ category|title }}</a>{% if not loop.last %}, {% endif %}
+                {%- endfor ~%}
+                </span>
+                {%- endif ~%}
+              </div>
+              {#- source ~#}
+              {%- if page.source|default -%}
+                {%- if page.source.url|default and page.source.title|default and page.source.author|default ~%}
               <p class="mt-2 text-base italic text-black-grape-400 dark:text-black-grape-200">
                 Source :
                 <a class="no-underline font-display font-semibold text-rose hover:underline" href="{{ page.source.url }}">{{ page.source.title }}</a>
                 par {{ page.source.author }}.
               </p>
-            {% endif %}
-          {% endif %}
-          {# description #}
-          {% if in_list|default(false) == true %}
-          <p class="mt-2 text-2xl text-gray-600 dark:text-gray-300">
-            <a href="{{ url(p) }}">{{ p.description|default }}</a>
-          </p>
-          {% endif %}
-        </header>
+                {%- endif -%}
+              {%- endif ~%}
+              {#- description ~#}
+              {%- if in_list|default(false) == true ~%}
+              <p class="mt-2 text-2xl text-gray-600 dark:text-gray-300">
+                <a href="{{ url(p) }}">{{ p.description|default }}</a>
+              </p>
+              {%- endif ~%}
+            </header>

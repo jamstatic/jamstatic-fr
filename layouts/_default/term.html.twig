@@ -2,7 +2,7 @@
 
 {% extends '_default/list.html.twig' %}
 
-  {%- block header ~%}
+{% block header %}
   <header>
     <nav class="mb-8 text-center text-semibold">
     {%- for category in site.taxonomies['categories']|filter(c => c != page.term and c|length > 3)|slice(0, 8) ~%}
@@ -14,4 +14,4 @@
       Catégorie <span class="capitalize text-rose-400">{{ page.title|title }}</span>
     </h1>
   </header>
-  {%- endblock ~%}
+{% endblock %}

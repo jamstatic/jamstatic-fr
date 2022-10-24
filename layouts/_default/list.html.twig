@@ -9,14 +9,14 @@
 {% extends '_default/page.html.twig' %}
 
 {% block content %}
-  {% block header %}{% endblock %}
-  <main>
-    <ul>
-    {% for p in pages %}
-      <li>
-        {{ include('partials/post.html.twig', {in_list: true}) }}
-      </li>
-    {% endfor %}
-    </ul>
-  </main>
+      {%- block header %}{% endblock ~%}
+      <main>
+        <ul>
+        {%- for p in pages ~%}
+          <li>
+            {{~ include('partials/post.html.twig', {in_list: true}) ~}}
+          </li>
+        {%- endfor ~%}
+        </ul>
+      </main>
 {% endblock %}
