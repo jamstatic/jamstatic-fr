@@ -35,3 +35,7 @@ figure figcaption {
 blockquote p {
   @apply my-2 !important;
 }
+
+summary::-webkit-details-marker {
+  display: none;
+}
