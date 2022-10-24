@@ -112,4 +112,4 @@ Voici la **Mstack** :
 
 Assurez-vous déjà que cette « couche » soit au top, et ensuite améliorez-la avec du JavaScript et des APIs au besoin.
 
-[^1]: Il existe une [version française](../c-est-quoi-la-jamstack.md) de ce guide.
+[^1]: Il existe une [version française](page:post/c-est-quoi-la-jamstack) de ce guide.
