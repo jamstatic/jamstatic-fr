@@ -33,7 +33,7 @@ On s'oriente donc sur deux solutions qui offrent la possibilité de fonctionner 
 
 Gastby aurait pu être utilisé aussi grâce à la nouvelle route API mais nous souhaitons conserver des process de build assez rapide. D'expérience, je connais bien Gatsby et je sais qu'il est le moins performant — ce prototype précède l'annonce de la version 3.0 annoncée comme plus rapide.
 
-Pour être 100% honnête, cet [article](https://jamstatic.fr/2020/10/31/comparatif-performance-generateurs-de-site-statique/) a mis de côté Gastby au profit de Next.js dès le départ.
+Pour être 100% honnête, cet [article](page:post/comparatif-performance-generateurs-de-site-statique) a mis de côté Gastby au profit de Next.js dès le départ.
 
 :::info
 ### Next.js
