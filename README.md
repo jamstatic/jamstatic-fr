@@ -18,12 +18,12 @@ Vous pouvez :
 
 ## Développement
 
-Le site est développé avec [Hugo](https://gohugo.io).
+Le site est généré avec [Cecil](https://cecil.app).
 
-Pour installer Hugo sur macOS:
+Pour télécharger Cecil:
 
 ```bash
-brew install hugo
+curl -LO https://cecil.app/cecil.phar
 ```
 
 Pour clôner le dépôt sur sa machine:
@@ -35,14 +35,14 @@ git clone https://github.com/jamstatic/jamstatic-fr.git
 Pour créer un nouvel article:
 
 ```bash
-git switch ---create post/nouvel-article
-hugo new post/nouvel-article.md
+git switch --create post/nouvel-article
+cecil new:page post/nouvel-article.md
 ```
 
 ### Prévisualiser en local
 
 ```bash
-hugo server -D --environment development
+php cecil.phar serve -v
 ```
 
 ### Ouvrir une pull request
@@ -50,6 +50,13 @@ hugo server -D --environment development
 ```bash
 git commit -am "chore: nouvel article"
 gh pr create
+```
+
+### Modifier la feuille de styles Tailwind CSS
+
+```bash
+npm install
+npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/styles.css
 ```
 
 ## Production
@@ -107,5 +114,5 @@ Merci à ces personnes extraordinaires ([emoji key](https://github.com/kentcdodd
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-Ce projet suit la specification [all-contributors](https://github.com/kentcdodds/all-contributors).
-Les contributions en tout genre sont les bienvenues !
+Ce projet suit la specification [all-contributors](https://github.com/kentcdodds/all-contributors).  
+Toutes les contributions sont les bienvenues !
