@@ -255,9 +255,9 @@ module.exports = function(eleventyConfig) {
   // Autres configs...
 ```
 
-{{< notice info >}}
+:::info
 Ici je n'utilise pas de filtre d’assainissement du HTML car j'ai remarqué que les données sont contenues dans un champ `text` qui est déjà nettoyé. C'est peut-être nouveau ou bien ce n'est pas valable pour toutes les webmentions. Je mettrais cet article à jour si je dois l'ajouter.
-{{< /notice >}}
+:::
 
 ## Afficher les mentions
 
@@ -332,18 +332,19 @@ Nous pouvons afficher les réponses à l'aide de ce nouveau fichier partiel pour
     {% endif %}
 
     {% if webmention.published %}
-        <time class="postlist-date" datetime="{{ webmention.published }}">
-            {{ webmention.published | readableDateFromISO }}
-        </time>
+      <time class="postlist-date" datetime="{{ webmention.published }}">
+        {{ webmention.published | readableDateFromISO }}
+      </time>
     {% endif %}
   </div>
   <div>
-      {{ webmention.content.text }}
+    {{ webmention.content.text }}
   </div>
 </article>
 ```
 
 ## Sautons courageusement dans l’inconnu…
+
 Ça fonctionne ? Nous allons enfin pouvoir tester. Commencez par lancer la commande `npm run build` pour générer une liste initiale de webmentions qui sera sauvegardée dans le fichier `_cache/webmentions.json`. Puis lancer votre serveur de développement local pour vérifier que ça marche ! Bien entendu, vous devrez au moins avoir une webmention associée à un article pour voir quelque chose. 😁
 
 Vous pouvez voir le résultat de ma propre implémentation sur mon [site](https://sia.codes/posts/webmentions-eleventy-in-depth/#webmentions). Bon courage ! Dites moi si vous trouvez des anomalies ou des erreurs dans cet article !
