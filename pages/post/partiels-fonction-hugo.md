@@ -14,7 +14,7 @@ source:
   url: "https://regisphilibert.com/blog/2019/12/hugo-partial-series-part-2-functions-with-returning-partials/"
 ---
 
-![](https://regisphilibert.com/blog/2019/12/hugo-partial-series-part-2-functions-with-returning-partials//images/featured.png)
+![Des fonctions dans nos partiels Hugo](https://regisphilibert.com/blog/2019/12/hugo-partial-series-part-2-functions-with-returning-partials//images/featured.png "Des fonctions dans nos partiels Hugo")
 
 Comme nous l'avons déjà vu dans différents articles dont celui sur la [mise en cache des fichiers partiels]({{< relref "/post/mise-en-cache-fichiers-partiels-hugo" >}}), jusqu'ici le moteur de _templating_ d'Hugo se concentrait principalement sur la génération de fichiers. Résultat : même si les fichiers partiels étaient très utiles pour afficher tout un tas de trucs, jusqu'à récemment, ils ne permettaient pas de retourner une valeur typée.
 
