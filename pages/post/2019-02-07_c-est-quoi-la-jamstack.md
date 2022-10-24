@@ -13,20 +13,15 @@ source:
 categories:
   - jamstack
 ---
-
-{{< intro >}}
-
+:::intro
 [Pedro Duarte](https://twitter.com/peduarte) a lancé [https://jamstack.wtf](https://jamstack.wtf) un mini-site afin de donner une vue d'ensemble de la Jamstack. Nous vous proposons ici sa traduction en français afin de permettre à toujours plus de développeurs d'adopter cette façon de travailler.
-
-{{< /intro >}}
-
----
+:::
 
 La Jamstack révolutionne notre manière de travailler en proposant une expérience de développement plus simple, de meilleures performances, des coûts bien moins élevés et une grande scalabilité.
 
 Vous vous demandez peut-être ; oui OK, mais comment ? pourquoi ? c'est quoi au juste ?
 
-C'est la raison d'être de cette page [https://jamstack.wtf](https://jamstack.wtf/).
+C'est la raison d'être de cette page [https://jamstack.wtf](https://jamstack.wtf).
 
 Le but de ce guide est de présenter de manière claire le concept de la Jamstack et d'inciter d'autres développeurs à adopter cette approche.
 
@@ -74,7 +69,7 @@ Asseyez-vous, mettez-vous à l'aise et appréciez ✌️
 
 ### Signification
 
-{{< figure src="/2020/10/05/la-jamstack-n-est-rapide-que-si-vous-la-rendez-rapide/jamstack-horizontal.svg" caption="JAM c'est pour JavaScript, APIs & Markup." >}}
+![JAM c'est pour JavaScript, APIs & Markup.](../../assets/images/post/2020-10-05_la-jamstack-n-est-rapide-que-si-vous-la-rendez-rapide/jamstack-horizontal.svg "JAM c'est pour JavaScript, APIs & Markup.")
 
 **JavaScript** \
 Les fonctionnalités dynamiques sont gérées par JavaScript. Vous êtes libres d'utiliser la bibliothèque ou le framework que vous voulez.
@@ -96,7 +91,7 @@ Servir du code généré et des assets à partir d'un CDN
 Plus besoin de se soucier des vulnérabilités du serveur ou de la base de données
 
 **Un coût bien moindre** \
-L'hébergement de fichiers statiques est moins cher [voire gratuit](https://netlify.com/)
+L'hébergement de fichiers statiques est moins cher [voire gratuit](https://netlify.com)
 
 **Une meilleure expérience de développement** \
 Les développeurs front end peuvent se focaliser sur la partie client, sans être dépendants d'une architecture monolithique. Cela se traduit en général par un développement plus rapide et plus ciblé.
@@ -137,7 +132,7 @@ Votre serveur est notifié lorsqu'une nouvelle génération est requise, typique
 
 Voici à quoi ressemblerait la chaîne de publication Jamstack idéale.
 
-{{< figure src="chaine-publication.svg">}}
+![Chaine de publication](../../assets/images/post/2019-02-07_c-est-quoi-la-jamstack/chaine-publication.svg "Chaine de publication")
 
 ### Historique
 
