@@ -31,37 +31,7 @@ Asseyez-vous, mettez-vous à l'aise et appréciez ✌️
 
 ---
 
-- [C'est quoi la Jamstack ?](#cest-quoi-la-jamstack-)
-  - [Signification](#signification)
-  - [Bénéfices](#bénéfices)
-  - [Bonnes pratiques](#bonnes-pratiques)
-  - [Chaîne de publication](#chaîne-de-publication)
-  - [Historique](#historique)
-- [Bien démarrer](#bien-démarrer)
-  - [Développement](#développement)
-  - [Déploiement](#déploiement)
-  - [Parties dynamiques](#parties-dynamiques)
-  - [CMS](#cms)
-  - [Ressources](#ressources)
-    - [Services](#services)
-    - [Articles](#articles)
-    - [Vidéos](#vidéos)
-    - [Podcast](#podcast)
-- [À propos](#à-propos)
-
-- [Bien démarrer](#bien-démarrer)
-  - [Développement](#développement)
-  - [Déploiement](#déploiement)
-  - [Parties dynamiques](#parties-dynamiques)
-  - [CMS](#cms)
-
-- [Ressources](#ressources)
-  - [Services](#services)
-  - [Articles](#articles)
-  - [Vidéos](#vidéos)
-  - [Podcast](#podcast)
-
-- [À propos](#à-propos)
+[toc]
 
 ---
 
