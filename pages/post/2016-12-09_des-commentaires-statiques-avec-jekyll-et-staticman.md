@@ -13,7 +13,6 @@ source:
 categories:
   - jekyll
 ---
-
 :::intro
 [Michael Rose](https://github.com/mmistakes), l’auteur du [thème Jekyll Minimal Mistakes](https://mademistakes.com/work/minimal-mistakes-jekyll-theme/), revient sur les détails de l’implémentation de commentaires statiques — les commentaires sont versionnés au format YAML dans le dépôt GitHub — à l’aide de [Staticman](https://eduardoboucas.com/blog/2016/08/10/staticman.html), un service open-source développé par [Eduardo Bouças](https://eduardoboucas.com), qui permet d’insérer des contenus générés par les utilisateurs sur un site plus si statique que ça, proposant ainsi une alternative à Disqus au même titre que [Jekyll AWS comment](https://github.com/ummels/jekyll-aws-comments).
 :::
@@ -25,8 +24,6 @@ Depuis que j'ai quitté Disqus pour [un système de commentaires statiques](http
 ## Passer à la version 2 de Staticman
 
 Pour tirer parti de ces nouvelles fonctionnalités, il était nécessaire de migrer les paramètres de Staticman du fichier `_config.yml` de Jekyll vers un nouveau fichier `staticman.yml`[^staticman-yml]. Comme il n'y a eu aucun changement dans les paramètres, la transition vers la version 2 était grandement simplifiée.
-
-
 
 ```yaml
 comments:
