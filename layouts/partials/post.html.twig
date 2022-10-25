@@ -50,11 +50,10 @@
               </div>
               {#- source ~#}
               {%- if page.source|default -%}
-                {%- if page.source.url|default and page.source.title|default and page.source.author|default ~%}
+                {%- if page.source.url|default ~%}
               <p class="mt-2 text-base italic text-black-grape-400 dark:text-black-grape-200">
-                Source :
-                <a class="no-underline font-display font-semibold text-rose hover:underline" href="{{ page.source.url }}">{{ page.source.title }}</a>
-                par {{ page.source.author }}.
+                Source : <a class="no-underline font-display font-semibold text-rose hover:underline" href="{{ page.source.url }}">{{ page.source.title|default(page.source.url) }}</a>
+                {%- if page.source.author|default %}par {{ page.source.author }}{% endif ~%}
               </p>
                 {%- endif -%}
               {%- endif ~%}
