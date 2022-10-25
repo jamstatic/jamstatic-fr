@@ -5,8 +5,6 @@ description: >
 author: frank
 date: "2017-10-03 13:45:36 +0100"
 lastmod: "2018-01-17 10:10:00 +0100"
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Cr%C3%A9er%20votre%20premier%20th%C3%A8me%20pour%20Jekyll/jamstatic/twitter-card.png
 source:
   lang: en
   title: "Making your first Jekyll theme: Part 1"
@@ -15,9 +13,7 @@ source:
 categories:
   - jekyll
 ---
-
-{{< intro >}}
-
+:::intro
 Si vous êtes designer web, que vous savez écrire des pages HTML,
 les mettre en forme avec CSS, voire les enrichir avec du JavaScript, vous
 n'aurez aucun mal à développer des thèmes pour Jekyll. Le langage de templating
@@ -28,12 +24,9 @@ des gems Ruby, rien de bien sorcier. Dans cet article,
 [David Darnes](https://darn.es/), développeur du thème
 [Alembic](https://alembic.darn.es), explique comment utiliser une 💎 gem de
 thème pour Jekyll, puis comment développer la vôtre.
+:::
 
-{{< /intro >}}
-
----
-
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,q_auto,w_1028/v1523345884/jamstatic/making-jekyll-theme-intro.jpg" alt="" >}}
+![](https://res.cloudinary.com/jamstatic/image/upload/c_scale,q_auto,w_1028/v1523345884/jamstatic/making-jekyll-theme-intro.jpg)
 
 Tout site correctement structuré permet de présenter facilement ses contenus à
 l’aide d’un thème, à l’image de ce que souhaite son propriétaire ou son
@@ -133,8 +126,7 @@ Pour des exemples plus avancés
 
 ## Quels thèmes puis-je utiliser ?
 
-{{< figure
-src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_862/v1603642926/jamstatic/making-jekyll-theme-slices.jpg" >}}
+![](https://res.cloudinary.com/jamstatic/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_862/v1603642926/jamstatic/making-jekyll-theme-slices.jpg)
 
 De nouvelles gems de thèmes arrivent régulièrement. Il existe des annuaires de
 thèmes pour Jekyll, mais ils recensent également les anciens types de thèmes
@@ -183,12 +175,11 @@ Voici quelques trucs à garder en tête quand on développe son propre thème,
 surtout que vous souhaitez qu'il soit utilisé par d’autres utilisateurs de
 Jekyll (et de Sitelaf) :
 
-1.  **Testez votre thème :** Vous ne testerez jamais assez. Le meilleur moyen
+1. **Testez votre thème :** Vous ne testerez jamais assez. Le meilleur moyen
     est encore de suivre votre propre documentation et de repartir de zéro.
     Testez votre thème avec différentes sortes de contenus. Les thèmes doivent
     pouvoir habiller différents types et différentes tailles de contenus.
-
-2.  **Fournissez une bonne documentation :** Tout bon thème s'accompagne d’une
+2. **Fournissez une bonne documentation :** Tout bon thème s'accompagne d’une
     documentation claire et détaillée. C’est même un prérequis spécifique si
     vous souhaitez soumettre votre thème sur des marketplaces comme ThemeForest.
     Assurez-vous que le processus d’installation soit simple à suivre et que
@@ -196,16 +187,14 @@ Jekyll (et de Sitelaf) :
     mieux pour garder la
     [documentation de l’utilisation d’Alembic](https://github.com/daviddarnes/alembic#alembic)
     à jour.
-
-3.  **Évitez les choses trop complexes :** J'ai vu beaucoup de thèmes WordPress
+3. **Évitez les choses trop complexes :** J'ai vu beaucoup de thèmes WordPress
     échouer, car ils voulaient trop en faire. Ce n'est pas forcément simple mais
     essayez de trouver un juste équilibre entre le nombre d’options proposées et
     celles activées par défaut. Vous ne voulez pas générer de frustration chez
     les gens en vous éloignant trop de l’aspect de la démo. De plus, Jekyll est
     un générateur de site statique qui prône la simplicité, votre thème devrait
     s'en inspirer.
-
-4.  **Définissez un usage :** Concevoir un thème susceptible de plaire au plus
+4. **Définissez un usage :** Concevoir un thème susceptible de plaire au plus
     grand monde _et_ à un certaine type d’industrie peut s'avérer difficile. Je
     ne dis pas qu'il faut faire faire quelque chose de très spécifique pour
     l’agence immobilière du coin de la rue, mais peut-être quelque chose en
@@ -213,8 +202,7 @@ Jekyll (et de Sitelaf) :
     génériques qui essaient de répondre à un maximum d’attentes, et vous feriez
     peut-être bien de ne pas essayer d’aller sur ce terrain mais à la rencontre
     d’une audience plus ciblée.
-
-5.  **Concevez avec l’extensibilité en tête :** Il est fort probable que les
+5. **Concevez avec l’extensibilité en tête :** Il est fort probable que les
     utilisateurs de votre thème veuillent le personnaliser, essayez de concevoir
     votre thème de façon standard. Nommez vos modèles et vos fichiers en
     fonction [des conventions](https://jekyllrb.com/docs/structure/), et
@@ -417,8 +405,7 @@ vous affranchir de cette limitation, même chose chez
 
 ## Ajouter des contenus d’exemple
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_862/v1523346121/sample_content.png"
-alt="Exemple de contenu du thème Alembic" >}}
+![Exemple de contenu du thème Alembic](https://res.cloudinary.com/jamstatic/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_862/v1523346121/sample_content.png)
 
 Nous venons d’ajouter un fichier `index.html` pour vérifier que la génération
 fonctionne comme prévu. On pourrait aussi s'en servir pour tester des contenus
@@ -467,8 +454,7 @@ connexion à RubyGems.org. Une fois connecté, votre gem est mise en ligne et
 rendue publique ! Et voilà, vous venez de publier votre première gem de thème
 pour Jekyll. Elle dispose maintenant de sa propre URL.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_862/v1523346185/sample_rubygems_page.png"
-alt="Exemple de page Rubygems" >}}
+![Exemple de page Rubygems](https://res.cloudinary.com/jamstatic/image/upload/c_scale,dpr_auto,f_auto,q_auto,w_862/v1523346185/sample_rubygems_page.png "Exemple de page Rubygems")
 
 ## Les thèmes distants sur GitHub Pages
 
