@@ -6,19 +6,14 @@ date: 2018-12-07T01:21:13+01:00
 lastmod: 2018-01-26T01:09:11+01:00
 categories:
   - jamstack
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Oubliez%20Docker%252C%20le%20futur%20c'est%20la%20Jamstack/jamstatic/twitter-card.png
 source:
   author: "Mike Carlisle"
   title: "Forget Docker, the future is Jamstack"
   url: "https://hackernoon.com/forget-docker-the-future-is-jamstack-aae5bcaf4616"
 ---
-
-{{< intro >}}
+:::intro
 La popularité croissante des architectures décentralisées s'explique par l'évolution de l'offre de services disponibles. Que ce soit pour héberger du code source, gérer ses contenus, fournir une authentification, une gestion des paiements, etc. faire appel à des services distants fait de plus en plus sens pour les entreprises dont l'informatique n'est pas le coeur de métier mais simplement un moyen de fournir un service à leurs clients.
-{{< /intro >}}
-
----
+:::
 
 À l'heure où les entreprises se débattent pour devenir plus agiles et rester
 pertinentes, elles peuvent compter sur les dernières évolutions des
@@ -81,7 +76,7 @@ Des fonctions exécutées depuis le Cloud peuvent fournir des capacités de
 services additionnelles au besoin, et peuvent être elles aussi être écrites en
 JavaScript.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/v1548402220/jamstatic/exemple-architecture-jamstack.png" caption="Exemple d'architecture Jamstack" >}}
+![Exemple d'architecture Jamstack](https://res.cloudinary.com/jamstatic/image/upload/v1548402220/jamstatic/exemple-architecture-jamstack.png "Exemple d'architecture Jamstack.")
 
 ### Pourquoi la Jamstack ?
 
