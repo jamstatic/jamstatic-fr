@@ -2,8 +2,6 @@
 title: "Un site statique de 11 000 pages, c'est possible ?"
 description: "Les sites statiques pour un site de média c'est l'idéal. Rapide, léger, sécurisé, tout semble coller sur le papier. Mais est-il possible de créer un site statique avec un grand nombre de pages ?"
 date: 2021-03-09 14:00:00
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:G%C3%A9n%C3%A9rer%20un%20site%20statique%20de%2011%20000%20pages/jamstatic/twitter-card.png
 author: patrickF
 categories:
   - deploiement
