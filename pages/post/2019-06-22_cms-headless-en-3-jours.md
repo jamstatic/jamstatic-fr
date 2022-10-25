@@ -3,8 +3,6 @@ title: Intégrer un CMS en 3 jours
 description: Retour d’expérience suite à l’intégration de Netlify CMS à un site Jekyll
 author: arnaud
 date: 2019-06-22
-images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Int%C3%A9grer%20un%20CMS%20en%203%20jours/jamstatic/twitter-card.png
 categories:
   - cms
   - headless
@@ -16,7 +14,7 @@ source:
   lang: en
 ---
 
-![](netlify-cms-blog-featured-image-02.png)
+![Image d'illustration de l'article](../../assets/images/post/2019-06-22_cms-headless-en-3-jours/netlify-cms-blog-featured-image-02.png "Image d'illustration « netlify cms »")
 
 Imaginons que vous soyez en train de créer la prochaine grande startup ou d'organiser un super évènement — la première question que tout le monde va vous poser est : « C'est quoi le site web ? ».
 
@@ -194,7 +192,7 @@ collections:
 
 Cela définira une nouvelle collection qui apparaîtra à gauche de l’interface utilisateur de l’administration du CMS, et créera une page “Menu de navigation” au sein de cette collection. À l’intérieur se trouvent des champs qui définissent les entrées de navigation du site qui incluent chacune un nom, une URL, etc. Nous définissons le type de donnée et l’interface d’édition des champs à l'aide de [widgets](https://www.netlifycms.org/docs/widgets/). Lorsqu'une modification est apportée, elle sera enregistrée dans le fichier `_data/nav.yml` de votre projet.
 
-![](Screen-Shot-2019-05-29-at-4.14.23-PM.png)
+![Gestion du menu de navigation depuis Netlify CMS](../../assets/images/post/2019-06-22_cms-headless-en-3-jours/Screen-Shot-2019-05-29-at-4.14.23-PM.png "Gestion du menu de navigation depuis Netlify CMS")
 
 Voici un exemple de ce à quoi peut resembler un fichier de données :
 
@@ -272,7 +270,7 @@ collections:
 
 Ceci définit une nouvelle collection appelée “Pages” qui contiendra de nombreux fichiers stockés dans le dossier `/_pages/` de votre projet. Les fichiers seront nommés en fonction du modèle définit dans le champ _slug_, lequel est configuré pour prendre la valeur de la variable pas forcément très explicite `{{slug}}`. Ne vous inquiétez pas, dans ce cas, cela signifie simplement que nous utiliserons la valeur par défaut, à savoir le contenu du champ `Titre`. Vous pouvez configurer cela de différentes façons pour y inclure une date ou tout autre élément selon votre besoin, mais dans le cas de notre exemple c’est parfait.
 
-![](Screen-Shot-2019-05-29-at-4.17.02-PM.png)
+![Liste des pages dans Netlify CMS](../../assets/images/post/2019-06-22_cms-headless-en-3-jours/Screen-Shot-2019-05-29-at-4.17.02-PM.png "Liste des pages dans Netlify CMS")
 
 Veuillez noter les champs `permalink` et `preview_path`. Nous utiliserons le champ _permalink_ pour définir le chemin d’accès à notre page dans Jekyll, et le champ de _preview_ permet à Netlify CMS de savoir comment pointer vers la bonne URL de prévisualisation (déploiement de branches :+1:).
 
@@ -362,7 +360,7 @@ collections:
 
 Ici nous avons étendu notre collection de pages afin d’y inclure un widget de liste à type de variable qui contient différents types d’objets que l’éditeur de contenu pourra ajouter dynamiquement et réorganiser depuis l’administration du CMS.
 
-![](Screen-Shot-2019-05-29-at-4.19.06-PM.png)
+![Edition de contenu depuis Netlify CMS](../../assets/images/post/2019-06-22_cms-headless-en-3-jours/Screen-Shot-2019-05-29-at-4.19.06-PM.png "Edition de contenu depuis Netlify CMS")
 
 Créons maintenant un nouveau template pour le rendu de nos widgets :
 
