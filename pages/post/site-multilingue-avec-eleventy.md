@@ -7,19 +7,14 @@ lastmod: 2019-09-07T14:27:07+02:00
 categories:
   - eleventy
   - i18n
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Un%20site%20multilingue%20avec%20Eleventy/jamstatic/twitter-card.png
 source:
   author: "Jérôme Coupé"
   title: "Multilingual sites with Eleventy"
   url: "https://www.webstoemp.com/blog/multilingual-sites-eleventy/"
 ---
-
-{{< intro >}}
+:::intro
 Eleventy n'offre pas de fonctionnalités natives liées au multilinguisme et à la localisation, cela ne nous empêche aucunement de développer une bonne gestion du multilingue à l'aide de fichiers de données globales, de collections en utilisant Nunjucks comme langage de templating.
-{{< /intro >}}
-
----
+:::
 
 Afin d'illustrer notre propos, nous allons développer un blog multilingue tout ce qu'il y a de plus classique.
 
