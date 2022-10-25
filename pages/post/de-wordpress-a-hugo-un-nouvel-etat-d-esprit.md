@@ -4,8 +4,6 @@ description: "Comparons le fonctionnement de WordPress et de Hugo pour vous aide
 author: regis
 date: 2019-02-06T17:12:14+01:00
 lastmod: 2019-05-03T158:12:14+01:00
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:De%20WordPress%20%C3%A0%20Hugo%20%3A%20adopter%20un%20nouvel%20%C3%A9tat%20d'esprit/jamstatic/twitter-card.png
 categories:
   - hugo
 source:
@@ -13,7 +11,6 @@ source:
   title: "From WordPress to Hugo, a mindset transition"
   url: "https://regisphilibert.com/blog/2019/01/from-wordpress-to-hugo-a-mindset-transition/"
 ---
-
 Dans cet article, nous n'allons pas migrer un site de WordPress vers Hugo, nous allons voir comment passer des habitudes que vous avez prises avec WordPress à celles d'Hugo.
 
 Nous allons soigneusement comparer les concepts d'Hugo et son vocabulaire avec ceux de WordPress, avec lesquels vous êtes déjà familier, afin que la courbe d'apprentissage soit un peu moins rude.
@@ -94,15 +91,15 @@ Tout ce qui se trouve dans le dossier `layouts`, que ce soit celui de votre proj
 
 En plus des conventions sur les noms de fichier, Hugo se base aussi sur l'arborescence des dossiers pour savoir quel modèle appliquer.
 
-{{< notice info >}}
+:::info
 Comme évoqué précédemment, WordPress se base sur le fichier `archive.php` pour la mise en page de la liste d'articles de blog. Hugo se base lui sur un fichier `list.html` pour remplir cette fonction.
-{{</ notice >}}
+:::
 
 De nombreux paramètres dont `Kind`, `Type`, le format en sortie, la langue, les termes de taxonomie, peuvent déterminer le modèle qu'il faudra utiliser pour une page donnée.
 
-{{< notice info >}}
+:::info
 La meilleure approche pour comprendre la logique de l'organisation des modèles avec Hugo est encore de [lire la documentation officielle](https://gohugo.io/templates/lookup-order/) à ce sujet.
-{{</ notice >}}
+:::
 
 ### Les modèles de page personnalisés
 
@@ -151,9 +148,9 @@ Le point ci-dessus .............☝️ correspond à la page courante.
 
 Le contexte de la page courante comprend toutes les variables de page dont vous aurez besoin dans votre fichier partiel et dans tous vos modèles, nous allons y venir.
 
-{{< notice info >}}
+:::info
 Comprendre le contexte dans Hugo, c'est la clé. Si ce n'est pas encore clair pour vous, 👉 lisez [Hugo, le point sur le contexte]({{< relref "/post/hugo-le-point-sur-le-contexte" >}})
-{{</ notice >}}
+:::
 
 ## La boucle et les données
 
@@ -274,10 +271,10 @@ Et voici son élégante variante avec Hugo :
 {{ end }}
 ```
 
-{{< notice >}}
+:::
 Pour apprendre comment filtrer et ordonner les collections de pages dans Hugo,
 reportez-vous à la documentation de [range](https://gohugo.io/templates/introduction/#example-1-using-context), [where](https://gohugo.io/functions/where/#readout) et comment [ordonner le contenu](https://gohugo.io/templates/lists/#order-content).
-{{</ notice >}}
+:::
 
 ## Les shortcodes
 
@@ -327,9 +324,9 @@ On écrira dans son fichier Markdown :
 
 Nous avons opté pour l'utilisation de la _position_… car il n'y a qu'un seul paramètre 🤷
 
-{{< notice >}}
+:::
 [Tirer parti des shortcodes d'Hugo](https://jpescador.com/blog/leverage-shortcodes-in-hugo/) | [Julio Pescador](https://twitter.com/julio_pescador)
-{{< /notice >}}
+:::
 
 ## Paramètres
 
@@ -383,9 +380,9 @@ Et c'est tout ! Du moment que ces fichiers de gabarit contiennent le code qui va
 
 Je vous conseille vivement d'aller éplicher la documentation sur [les formats de sortie](https://gohugo.io/templates/output-formats#readout), grâce à eux vous pourrez ajouter une API à votre site où un fichier `.ics` pour vos évènements, ou qui sait ce dont vous aurez besoin sur votre prochain projet !
 
-{{< notice >}}
+:::
 [Bâtir une API JSON avec les formats de sortie personnalisés d'Hugo](https://forestry.io/blog/build-a-json-api-with-hugo/)
-{{</ notice >}}
+:::
 
 ## Traitement des assets
 
@@ -431,14 +428,12 @@ Je sais! Moi aussi je ne me lasse pas de ces instructions sur deux lignes !
 
 Vous pouvez lancer des traitements d'images, soit à l'aide des tuyaux d'Hugo ou des [ressources de page](https://gohugo.io/content-management/page-resources/#readout).
 
-{{< notice >}}
-
+:::
 - [La révolution des tuyaux d'Hugo](https://regisphilibert.com/blog/2018/07/hugo-pipes-and-asset-processing-pipeline/)
 - [Traitement des images responsive avec Hugo](https://laurakalbag.com/processing-responsive-images-with-hugo/) | [Laura Kalbag](https://twitter.com/laurakalbag)
 - [Cache-bust et concatenation de fichiers JS/SCSS avec Hugo](https://blog.fullstackdigital.com/how-to-cache-bust-and-concatenate-js-and-sass-files-with-hugo-in-2018-9266fd3c411e) | [Ben Bozzay](https://twitter.com/BenBozzay)
 - [Les ressources de page d'Hugo](https://regisphilibert.com/blog/2018/01/hugo-page-resources-and-how-to-use-them/)
-
-{{</ notice >}}
+:::
 
 ## Thèmes et Plugins VS Composants de Thème
 
@@ -472,7 +467,6 @@ Prenons pour exemple un projet fictif de clinique dentaire, où personne ne veut
 Avec WordPress il vous faudrait :
 
 - Thèmes
-
   - Un thème santé
   - Un thème dentaire enfant du thème santé
 
@@ -505,9 +499,9 @@ L'exemple ci-dessus déclare les composants de thèmes à utiliser ainsi que leu
 
 C'est tout. Si vous devez écraser n'importe quel des composants des fichiers de gabarit, il vous suffit de placer un fichier homonyme dans le dossier `layouts` à la racine de votre projet (à condition que les chemins soient identiques bien entendu).
 
-{{< notice >}}
+:::
 [Trucs et astuces pour développer un thème pour Hugo](https://medium.com/@jeffmcmorris/tips-and-tricks-for-building-a-theme-in-hugo-4806bdd747d7) | [Jeff McMorris](https://medium.com/@jeffmcmorris)
-{{</ notice >}}
+:::
 
 ## On en parle de l'interface du CMS ou pas ?
 
@@ -634,9 +628,9 @@ Et dans votre fichier partiel…
 {{ end }}
 ```
 
-{{< notice >}}
+:::
 [Utilisation des fichiers de données dans Hugo par l'exemple](https://novelist.xyz/tech/hugo-data-files/) | [Peter Y. Chuang](https://twitter.com/peterychuang)
-{{</notice >}}
+:::
 
 ### Commentaires
 
@@ -648,12 +642,10 @@ Heureusement il existe un support natif de [Disqus](https://disqus.com/) [prêt 
 
 Et si vous n'êtes pas fans de Disqus, il existe bien d'autres solutions, qui ne demandent souvent qu'une simple balise script et le balisage correspondant.
 
-{{< notice >}}
-
+:::
 - [Remplacer Disqus avec les commentaires Github](http://donw.io/post/github-comments/) | [Don Williamson](https://twitter.com/Donzanoid)
 - [Hugo + Staticman : réponses imbriquées et notifications par email](https://networkhobo.com/2017/12/30/hugo-staticman-nested-replies-and-e-mail-notifications/) | [Dan C Williams](https://twitter.com/dancwilliams)
-
-{{</notice >}}
+:::
 
 ### Formulaires
 
@@ -676,12 +668,10 @@ Comme pour tout ce qui est dynamique, rien de natif dans un générateur de site
 - [Lunr.js](https://github.com/olivernn/lunr.js) 🆓
 - [Algolia](https://www.algolia.com/) et leur incroyable widget [InstantSearch.js](https://community.algolia.com/instantsearch.js/) (🆓 pour les sites de petite et moyenne tailles)
 
-{{< notice >}}
-
+:::
 - [Recherche sur Bleve avec Hugo](http://blevesearch.com/news/Site-Search/)
 - [Recherche côté client pour Hugo avec Fuse.js](https://gist.github.com/eddiewebb/735feb48f50f0ddd65ae5606a1cb41ae) | [Eddie Webb](https://twitter.com/edwardawebb/)
-
-{{</ notice >}}
+:::
 
 ## Conclusion
 
