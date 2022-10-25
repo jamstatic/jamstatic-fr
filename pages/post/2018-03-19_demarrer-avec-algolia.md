@@ -54,7 +54,7 @@ Et récupérez ensuite vos identifiants dans votre
 Une fois que c'est fait, ajoutez-les dans ce que vous utilisez pour stocker vos
 variables d’environnement (un fichier `.env` par exemple) de manière à ce que
 votre application sache comment se connecter à votre application Algolia et à
-son index. Et voilà ! Le plus dur est fait !
+son index. Et voilà ! Le plus dur est fait !
 
 ## Connecter votre source de données
 
@@ -141,7 +141,7 @@ function dataToAlgoliaObject(data_points) {
 ```
 
 _Deuxième étape :_ Maintenant que nous avons créé nos objets, ils sont prêts à
-être envoyés à Algolia !
+être envoyés à Algolia !
 
 Changeons quelques trucs dans notre fonction `indexData`. Nous pouvons chaîner
 notre appel avec un `.then` grâce la structure de notre promesse axios et
@@ -200,18 +200,12 @@ Nous avons des données dans notre index ! Maintenant, nous voulons dire à
 Algolia comment nous voulons que ces données soient utilisées. Nous pouvons
 faire cela dans l’interface d’administration ou avec du code. Je préfère la
 deuxième méthode, voyons ensemble comment faire cela. Nous avons _beaucoup_
-d’options mais tenons nous en pour le moment aux options de base :
+d’options mais tenons nous en pour le moment aux options de base :
 
-- _searchableAttributes_: listez ce que vous voulez pouvoir rechercher dans
-  l’objet Algolia que vous avez crée
-
+- _searchableAttributes_: listez ce que vous voulez pouvoir rechercher dans l’objet Algolia que vous avez crée
 - _attributesToHighlight_: mettre en surbrillance le champ recherché
-
-- _customRanking_: choisissez la façon donc vous voulez afficher vos données,
-  `desc()` ou `asc()`
-
-- _attributesToRetrieve_: les attributs à afficher dans les résultats de
-  recherche
+- _customRanking_: choisissez la façon donc vous voulez afficher vos données, `desc()` ou `asc()`
+- _attributesToRetrieve_: les attributs à afficher dans les résultats de recherche
 
 ```javascript
 async function configureAlgoliaIndex() {
