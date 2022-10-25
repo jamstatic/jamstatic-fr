@@ -3,8 +3,6 @@ title: Process de design d’un portfolio
 description: Les différentes étapes pour concevoir son portfolio avec Jekyll et GitHub Pages par Kat Fukui, webdesigner chez Github.
 date: 2016-11-10
 author: frank
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_800,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Process%20de%20design%20d%E2%80%99un%20portfolio/jamstatic/twitter-card.png
 source:
   author: Kat Fukui
   title: The Design Portfolio Workflow
@@ -12,19 +10,14 @@ source:
 categories:
   - jekyll
 ---
-
-{{< intro >}}
-
+:::intro
 [The Design Portfolio Workflow](https://medium.com/@katfukui/the-design-portfolio-workflow-a94030d0b39e#.uut2a0ulw)
 de @katmeister, s'adresse aux webdesigners curieux de se frotter un peu à la
 ligne de commande et à Jekyll. Nous espérons qu'il vous permettra de faire vos
 premiers pas avec Jekyll, d’apprécier la liberté et la souplesse qu'il procure
 et qui sait de pouvoir ensuite
 [développer des thèmes pour Jekyll]({{< relref "creer-un-theme-pour-jekyll.md" >}}). 😊
-
-{{< /intro >}}
-
----
+:::
 
 ## Un guide complet pour coder et déployer un site, tout en ligne de commande
 
@@ -45,9 +38,7 @@ J'espère aussi que cet article montre aux designers curieux du code que ce n'es
 pas la peine d’avoir peur des outils modernes de développement web. Ça vous
 branche ? Allez, c'est parti !
 
-{{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*HaArgKPM5NEVxucSnAVkpQ/RS/w704.jpeg?&ssl=1"
-caption="Ce type, OK ?" >}}
+![Ce type, OK ?](../../assets/images/twitter-card-empty.png "Ce type, OK ?")
 
 ## C’est quoi Jekyll ?
 
@@ -58,9 +49,7 @@ pouvez déposer sur votre site hébergé. Chaque entrée de portfolio est trait�
 comme un article de blog et est extrêmement simple à créer et à éditer. Jekyll
 inclus également un serveur web de test et supporte Sass.
 
-{{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*pUi-rGl2BFZ2HuVMj_HsiA/RS/w704.gif?&ssl=1"
-caption="Liz, j'ai été là-bas et c'est incroyable." >}}
+![Liz, j'ai été là-bas et c'est incroyable](../../assets/images/twitter-card-empty.png "Liz, j'ai été là-bas et c'est incroyable.")
 
 Rapide ✔ Propre ✔ Simple ✔ Complet ✔
 
@@ -72,9 +61,7 @@ C’est assez fascinant pour vous ? Développons et déployons un site ensemble
 faire une démonstration du processus de travail. Premièrement, nous allons lancer
 le terminal et travailler avec la ligne de commande.
 
-{{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*-novrtLzHXbmEmpM10a7Qg/RS/w704.png?&ssl=1"
-caption="Le terminal" >}}
+![Le terminal](../../assets/images/twitter-card-empty.png "Le terminal")
 
 Même si vous n'avez pas beaucoup l’habitude de taper des commandes, vous vous en
 sortirez en connaissant les bases, comme se déplacer dans les dossiers de votre
@@ -104,9 +91,7 @@ La commande `jekyll serve` lance un serveur web local pour prévisualiser votre
 site à l’adresse [http://localhost:4000](http://localhost:4000). Je vais garder
 cet onglet ouvert dans mon navigateur.
 
-{{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*BrFV6ggy3qaZsfUQnojCVQ/RS/w704.png?&ssl=1"
-caption="Le thème par défaut de Jekyll" >}}
+![Le thème par défaut de Jekyll](../../assets/images/twitter-card-empty.png "Le thème par défaut de Jekyll.")
 
 ## Plongeons dans les fichiers
 
@@ -119,9 +104,7 @@ C’est bien documenté et les paquets de la communauté sont assez mortels -
 [bezier-curve-editor](https://atom.io/packages/bezier-curve-editor) pour n'en
 citer que quelques-uns.
 
-{{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*18hVdarzmkx6KkSvty5Uaw/RS/w704.png?&ssl=1"
-caption="Le dossier mon-site ouvert dans Atom" >}}
+![Le dossier mon-site ouvert dans Atom](../../assets/images/twitter-card-empty.png "Le dossier mon-site ouvert dans Atom.")
 
 Pour ce guide, je vais utiliser [Atom](https://atom.io/). Vous remarquerez le
 panneau avec l’arborescence de fichier sur la gauche. Laissez-moi vous la
@@ -165,9 +148,7 @@ Vous pouvez définir
 [n'importe quel paramètre](http://jekyllrb.com/docs/configuration/) global de
 votre portfolio dedans. Ouvrons-le et personnalisons tout ça !
 
-{{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*fF_CWur2wd6DS7uQDGX6ew/RS/w704.png?&ssl=1"
-caption="Remplissez vos infos !" >}}
+![Remplissez vos infos !](../../assets/images/twitter-card-empty.png "Remplissez vos infos !")
 
 J'ai ajouté un paramètre _permalink_ pour définir comment je voulais construire
 les URLs du site (sinon par défaut la date de l’article est présente). J'ai
@@ -178,9 +159,7 @@ serveur de Jekyll. Donc une fois les changements effectués, arrêtez le serveur
 en ligne de commande avec le raccourci `ctrl-c`. Entez à nouveau `jekyll serve`
 et jetez un coup d’œil à localhost !
 
-{{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*uDszfYceRXqPFeI7Xm6m0w/RS/w704.png?&ssl=1"
-caption="Les variables globales sont appliquées !" >}}
+![Les variables globales sont appliquées !](../../assets/images/twitter-card-empty.png "Les variables globales sont appliquées !")
 
 Cette flexibilité c'est ce qui rend Jekyll si fun et simple à mettre en œuvre.
 Voyons comment ce concept est aussi valable pour nos articles.
@@ -194,9 +173,7 @@ fichier Markdown en utilisant la convention `ANNEE-MOIS-JOUR-titre`[^2]. Le
 fichier de mon article est donc nommé
 `2016-11-10-livraison-nourriture-chats.markdown`.
 
-{{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*kkyEEvzkXYwHlvstT7Tytg/RS/w704.png?&ssl=1"
-caption="YAML front matter" >}}
+![YAML front matter](../../assets/images/twitter-card-empty.png "YAML front matter.")
 
 Vous remarquerez une portion de contenu en haut de l’introduction de l’article
 sur Jekyll. Copions-la dans notre nouvel article et voyons ensemble ses pouvoirs
@@ -210,17 +187,13 @@ balises Liquid, que nous allons voir très bientôt
 
 Éditons notre front matter en haut de l’article entre les triples tirets :
 
-{{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*CJkHCXOIOLYrssnP4zgtiw/RS/w704.png?&ssl=1"
-caption="C’est ici que nous définissons le titre, la date et la catégorie" >}}
+![C’est ici que nous définissons le titre, la date et la catégorie](../../assets/images/twitter-card-empty.png "C’est ici que nous définissons le titre, la date et la catégorie.")
 
 Jekyll possède quelques variables front matter prédéfinies, mais c'est en créant
 vos propres variables dans vos modèles que vous en tirerez le plus parti !
 Regardons comment notre premier article utilise les variables front matter :
 
-{{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*-QBd-5OFh48-eCVM1sJMhA/RS/w704.png?&ssl=1"
-caption="Ça marche !" >}}
+![Ça marche !](../../assets/images/twitter-card-empty.png "Ça marche !")
 
 ## Liquid
 
@@ -234,9 +207,7 @@ d’assigner des chaines de caractères à des variables. Les trucs entre `{{ }}
 Si vous ouvrez le fichier `post.html` dans le dossier `_layouts`, nous pouvons
 le voir en action.
 
-{{< figure
-src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523348258/default-layout.png"
-caption="" >}}
+![](../../assets/images/twitter-card-empty.png)
 
 En préfixant nos variables avec `page`, Liquid va rechercher dans votre page les
 entrées front matter correspondantes entre les triples tirets. Si elles
@@ -247,24 +218,20 @@ HTML. Cool, non ?
 Et si nous ajoutons encore quelques variables à nous dans le front matter pour
 épicer un peu nos articles :
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347068/post-front-matter.png" caption="" >}}
+![](../../assets/images/twitter-card-empty.png)
 
 Maintenant que nous disposons de toutes ces super variables, comment
 pouvons-nous les utiliser ? Modifions notre modèle de mise en page `post.html`
 en utilisant les variables `page.type` et `page.intro` :
 
-{{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*kndQjfPKY_2GF10ZE2Vobg/RS/w704.png?&ssl=1"
-caption="Regardez ce qui est en violet" >}}
+![Regardez ce qui est en violet](../../assets/images/twitter-card-empty.png "Regardez ce qui est en violet.")
 
 Cool ! Vous pouvez bien entendu utiliser CSS comme à votre habitude pour mettre
 en forme tous les rendus de vos chouettes balises. Essayons d’autres trucs. Et
 si nous ajoutions des vignettes pour chaque article sur la page `index.html` ?
 Et leur légende aussi peut-être.
 
-{{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*h4YbEuULViTNp3ixMtpxKg/RS/w704.png?&ssl=1"
-caption="Front matter c'est de la bombe !" >}}
+![Front matter c'est de la bombe !](../../assets/images/twitter-card-empty.png "Front matter c'est de la bombe !")
 
 Hé, c'est pas trop mal. Je suis sûr que vous pouvez déjà voir comment Jekyll va
 automatiser votre site en utilisant Liquid et YAML.
@@ -277,18 +244,14 @@ brut en HTML. Je me suis rendu-compte qu'écrire à l’aide de la syntaxe Markd
 me permet de mieux me concentrer sur mon contenu, plutôt que de penser quelles
 balises fermer.
 
-{{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*h1nmOO9BWVno52HIGqkyyQ/RS/w704.png?&ssl=1"
-caption="" >}}
+![](../../assets/images/twitter-card-empty.png)
 
 La beauté de Markdown c'est que vous pouvez toujours utiliser HTML si vous en
 avez besoin. Pour forcer le rendu de Markdown à l’intérieur de balises HTML,
 ajoutez `markdown=1` et le tour est joué ! Le meilleur des deux mondes. Voici un
 extrait de l’article une fois généré :
 
-{{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*X7jkghcRXQKIH2BSCIxvVQ/RS/w704.png?&ssl=1"
-caption="Ne voudrions-nous pas vivre de Purring Cat ?" >}}
+![Ne voudrions-nous pas vivre de Purring Cat ?](../../assets/images/twitter-card-empty.png "Ne voudrions-nous pas vivre de Purring Cat ?")
 
 ## Un autre exemple d’article en .md
 
@@ -309,9 +272,7 @@ que nous avons un peu de contenu avec lequel travailler, ajoutons un peu de
 style ! Vous pouvez recopier le CSS ou le Sass de votre portfolio existant ou
 repartir de zéro.
 
-{{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*9nHxZAUcaEIoPxYPB9UwQg/RS/w704.jpeg?&ssl=1"
-caption="" >}}
+![](../../assets/images/twitter-card-empty.png)
 
 ## Sass
 
@@ -378,43 +339,24 @@ dépôt distant sur GitHub et poussons notre premier commit.
 Maintenant que nous avons initialisé Git pour notre portfolio, configurons un
 dépôt distant sur GitHub.
 
-1.  [Créez-vous un compte](https://github.com/join), si vous n'en possédez pas
+1. [Créez-vous un compte](https://github.com/join), si vous n'en possédez pas
     encore.
-
-2.  Créez un [nouveau dépôt](https://github.com/new).
-
-{{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*kFGsk6bcyTe6-_c2-G0GzQ/RS/w704.png?&ssl=1"
-caption="Dans le coin en haut à droite" >}}
-
-3.  Donnez un nom et ajoutez une description à votre dépôt. Créez le dépôt !
-
-{{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*_kV4Itznh62DLnpdKBCGSA/RS/w704.png?&ssl=1"
-caption="" >}}
-
-4.  Maintenant que vous avez créé le dépôt, vous allez voir cette page
-    s'afficher sur GitHub :
-
-{{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*73bT5OREQUaVsdTpqfbA-w/RS/w704.jpeg?&ssl=1"
-caption="" >}}
-
-C’est la partie "publier un dépôt existant en ligne de commande" qui nous
+2. Créez un [nouveau dépôt](https://github.com/new).  
+   ![Dans le coin en haut à droite](../../assets/images/twitter-card-empty.png "Dans le coin en haut à droite.")
+3. Donnez un nom et ajoutez une description à votre dépôt. Créez le dépôt !  
+   ![](../../assets/images/twitter-card-empty.png)
+4. Maintenant que vous avez créé le dépôt, vous allez voir cette page s'afficher sur GitHub :  
+   ![](../../assets/images/twitter-card-empty.png)
+   C’est la partie "publier un dépôt existant en ligne de commande" qui nous
 intéresse. Je vais copier-coller ces commandes dans le terminal.
 `git remote add origin` connecte les deux dépôts pour permettre le déploiement.
 `git push` pousse les commits locaux dans votre dépôt distant !
-
-5.  Actualisez la page de votre dépôt distant et félicitez-vous ! ON A RÉUSSI.
+5. Actualisez la page de votre dépôt distant et félicitez-vous ! ON A RÉUSSI.
     Maintenant le monde entier peut admirer notre super portfolio !
 
-{{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*47y0QjcanT-aWr1CscE6sA/RS/w704.png?&ssl=1"
-caption="" >}}
+![](../../assets/images/twitter-card-empty.png)
 
-Voici un
-[guide pour débutant très sympa](http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1)
-pour des explications plus détaillées.
+Voici un [guide pour débutant très sympa](http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1) pour des explications plus détaillées.
 
 ## GitHub Pages
 
@@ -445,9 +387,7 @@ pointer vers le port 4000. En gros, vous allez taper un truc comme
 
 ## Système de grille
 
-{{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*9nraqBzaZDQU9de3zH5Klw/RS/w704.png?&ssl=1"
-caption="" >}}
+![](../../assets/images/twitter-card-empty.png)
 
 Pour un portfolio, un système de grille léger est facile à implémenter et il ne
 se met pas en travers de votre CSS. J'utilise [Jeet](http://jeet.gs/) parce que
@@ -458,8 +398,10 @@ chouettes, comme [Neat](http://neat.bourbon.io/) ou
 ## Rythme vertical
 
 {{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*h8vVPQhl-HT5AqIlTRoA8g/RS/w704.png?&ssl=1"
+src=""
 caption="Typecast" >}}
+
+![Typecast](../../assets/images/twitter-card-empty.png "Typecast.")
 
 Le rythme vertical c'est l’espacement constant et la mise à l’échelle des
 paragraphes, des marges externes et internes, des tailles de police et des
@@ -485,9 +427,7 @@ moi. Créer et redesigner votre portfolio devrait être fun et enrichissant, alo
 
 ### [Voir la démo en action](http://katfukui.com/my-site/)
 
-{{< figure
-src="https://img.readitlater.com/i/cdn-images-1.medium.com/max/1600/1*qKtPxbGF11Ekq_B9hFRmhg/RS/w704.png?&ssl=1"
-caption="" >}}
+![](../../assets/images/twitter-card-empty.png)
 
 [^1]: [Installez Ruby et Jekyll à l’aide d’Homebrew sous Mac](https://gist.github.com/DirtyF/5d2bde5c682101b7b5d90708ad333bf3).
 [^2]: Le plugin [jekyll-atom](https://github.com/Arcath/jekyll-atom/) facilite la création de posts en respectant cette convention.
