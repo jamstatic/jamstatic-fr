@@ -3,8 +3,6 @@ title: Héberger du statique en France, avec Matthias Dugué et Hubert Sablonni�
 description: Quelles différences entre les plate-formes françaises et les géants américains
   du cloud quand il s’agit de déployer des sites Jamstack ?
 date: 2020-12-08
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1000,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:H%25C3%25A9berger%2520du%2520statique%2520en%2520France%2520avec%2520Matthias%2520Dugu%25C3%25A9%2520et%2520Hubert%2520Sablonni%25C3%25A8re/jamstatic/twitter-card.png
 categories:
   - podcast
   - deploiement
