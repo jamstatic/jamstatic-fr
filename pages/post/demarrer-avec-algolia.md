@@ -5,24 +5,18 @@ date: 2018-03-19T21:13:46+01:00
 author: frank
 categories:
   - algolia
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_60,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Bien%20d%C3%A9marrer%20avec%20Algolia/jamstatic/twitter-card.png
 source:
   author: "Jessica West"
   title: "Getting Started with Algolia"
   url: "https://dev.to/algolia/getting-started-with-algolia-4lnp"
 ---
 
-{{< intro >}}
-
+:::intro
 Algolia fait tout pour faciliter l’ajout d’une recherche
 performante sur votre site. Jessica West le prouve une fois de plus en nous
 décrivant pas-à-pas les étapes nécessaires pour y parvenir, ici en vanilla JS
 avec InstantSearch.
-
-{{< /intro >}}
-
----
+:::
 
 Salut 👋 ! Ça vous est déjà arrivé de développer entièrement un moteur de
 recherche ? Avez-vous déjà redouté que votre Product Manager vous dise "tu sais
@@ -50,9 +44,7 @@ fonctionnelle sur votre site.
 
 ## Obtenir vos clefs d’API
 
-{{< figure
-src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,dpr_2.0,f_auto,q_auto,w_880/v1603620867/jamstatic/algoliaAPIkeysMarkedUp.png"
-caption="Les différentes clés d’API d’Algolia" >}}
+![Les différentes clés d’API d’Algolia](https://res.cloudinary.com/jamstatic/image/upload/c_scale,dpr_2.0,f_auto,q_auto,w_880/v1603620867/jamstatic/algoliaAPIkeysMarkedUp.png "Les différentes clés d’API d’Algolia")
 
 Commencez par créer un compte chez [Algolia](https://www.algolia.com/cc/devto).
 Et récupérez ensuite vos identifiants dans votre
@@ -365,7 +357,6 @@ allez voir
 la remixer et vous aurez tout ce code et une application basique qui tourne en
 moins de 5 minutes.
 
-{{< figure
-src="https://res.cloudinary.com/jamstatic/image/upload/v1603621048/jamstatic/45e6d35c-2e10-4020-8ad3-d5f1b9d3aae6_2Fezgif.com-gif-maker.gif" >}}
+![](https://res.cloudinary.com/jamstatic/image/upload/v1603621048/jamstatic/45e6d35c-2e10-4020-8ad3-d5f1b9d3aae6_2Fezgif.com-gif-maker.gif)
 
-😉 J'espère que cette lecture vous a plu et vous aura été utile !
+😉 J'espère que cette lecture vous a plu et vous aura été utile !
