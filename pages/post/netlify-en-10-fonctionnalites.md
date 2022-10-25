@@ -5,16 +5,13 @@ date: 2018-01-07T21:05:43+01:00
 author: frank
 categories:
   - deploiement
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Netlify%20en%2010%20fonctionnalit%C3%A9s/jamstatic/twitter-card.png
+  - netlify
 source:
   author: Phil Hawksworth
   title: "10 Netlify features to surprise and delight"
   url: "https://medium.com/netlify/10-netlify-features-to-surprise-and-delight-225e846b7b21"
 ---
-
-{{< intro >}}
-
+:::intro
 En l’espace de quelques années [Netlify](https://www.netlify.com/)
 est devenu un acteur incontournable de l’écosystème Jamstack - ils sont
 d’ailleurs à l’origine de cette appellation - et des sites statiques. Nous
@@ -28,13 +25,10 @@ mise en production et de fournir tous les outils modernes nécessaires à des
 stratégies de déploiement agiles à tout un chacun, sans avoir besoin pour cela
 d’être un devops confirmé. Ce n'est pas simplement une solution pour héberger
 vos sites statiques à moindre frais, [le passage de Smashing Magazine à une
-architecture Jamstack]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}})
+architecture Jamstack](page:post/smashing-mag-va-dix-fois-plus-vite)
 hébergée par Netlify a montré que ça pouvait aller bien au delà en faisant appel
 à différentes APIs et microservices.
-
-{{< /intro >}}
-
----
+:::
 
 [Phil Hawksworth](https://twitter.com/philhawksworth), nouvellement en charge
 des relations avec les développeurs chez Netlify a publié une liste de
@@ -42,7 +36,7 @@ fonctionnalités disponibles quelle que soit
 [la formule utilisée](https://www.netlify.com/pricing/), même celle entièrement
 gratuite.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/dpr_auto,f_auto,q_auto/v1603628397/jamstatic/paperplane.png" alt="" >}}
+![](https://res.cloudinary.com/jamstatic/image/upload/dpr_auto,f_auto,q_auto/v1603628397/jamstatic/paperplane.png)
 
 ## Mais d’abord, comment démarrer simplement
 
@@ -54,10 +48,7 @@ La manière la plus simple d’héberger un site chez Netlify est de
 [glisser-déposer un dossier](https://www.netlify.com/docs/manual-deploys/)
 contenant vos fichiers dans un navigateur sur https://app.netlify.com.
 
-<figure>
-  {{< youtube fiw2P-UAlII >}}
-  <figcaption>Déploiement facile par glisser-déposer sur Netlify</figcaption>
-</figure>
+[Déploiement facile par glisser-déposer sur Netlify](https://www.youtube.com/watch?v=fiw2P-UAlII)
 
 Vous pouvez aussi déployer directement grâce à
 [l’utilitaire en ligne de commande](https://www.netlify.com/docs/cli/), mais je
@@ -132,8 +123,7 @@ Netlify vous permet de garder le contrôle sur la façon dont vous déployez. Vo
 pouvez choisir de déployer uniquement la branche de production, toutes vos
 branches, ou seulement certaines branches.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/dpr_auto,f_auto,q_auto/v1523347027/jamstatic/controle-deploiement-continu.png"
-caption="Paramètres du déploiement continu" >}}
+![Paramètres du déploiement continu](https://res.cloudinary.com/jamstatic/image/upload/dpr_auto,f_auto,q_auto/v1523347027/jamstatic/controle-deploiement-continu.png "Paramètres du déploiement continu.")
 
 Une fois déployée, chaque branche sera accessible depuis un sous-domaine généré
 en fonction du nom de la branche utilisée. Ça donne un truc comme ça :
@@ -155,8 +145,7 @@ trafic de votre site entre les différentes branches de votre choix.
 Vous pouvez partager le trafic de votre site en autant de branches que vous le
 souhaitez et définir le pourcentage de trafic attribué à chacune des branches.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347053/jamstatic/split-testing.png"
-caption="La configuration du split testing chez Netlify" >}}
+![La configuration du split testing chez Netlify](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347053/jamstatic/split-testing.png "La configuration du split testing chez Netlify.")
 
 Cette fonctionnalité me bluffe. Elle rend les différents types de tests A/B
 vraiment trivial à mettre en place. Si vous tirez déjà parti du déploiement de
@@ -215,7 +204,7 @@ vos déploiements sur Netlify.
 
 Par exemple :
 
-{{< gist philhawksworth 61715131c5d229c06f161e82e93db803 >}}
+[Example de fichier de configuration Netlify](https://gist.github.com/philhawksworth/61715131c5d229c06f161e82e93db803)
 
 Vous trouverez plus d’informations à ce sujet dans la
 [documentation des contextes de déploiement](https://www.netlify.com/docs/continuous-deployment/#deploy-contexts).
@@ -247,8 +236,7 @@ La configuration se fait en un clic (bon ok peut-être trois, mais ça m'a pris
 moins d’une minute). En plus le certificat est renouvelé automatiquement, pour
 que vous n'ayez pas à le faire tous les ans.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347047/jamstatic/ssl-config.png"
-caption="La configuration de SSL chez Netlify avec renouvellement automatique des certificats grâce à Let’s Encrypt" >}}
+![La configuration de SSL chez Netlify avec renouvellement automatique des certificats grâce à Let’s Encrypt](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347047/jamstatic/ssl-config.png "La configuration de SSL chez Netlify avec renouvellement automatique des certificats grâce à Let’s Encrypt.")
 
 ### 7. Lancer des tests avec l’intégration continue de Netlify
 
@@ -304,7 +292,7 @@ même de rendre d’autres ressources accessibles au travers d’un proxy.
 
 Voici un exemple :
 
-{{< gist philhawksworth 7b12a0785266f8dcf1960d2df93dfc59 >}}
+[Exemple simple de fichier Netlify _redirects](https://gist.github.com/philhawksworth/7b12a0785266f8dcf1960d2df93dfc59)
 
 Vous voulez des _splats_, des _placeholders_, des paramètres de requêtes et plus
 encore ? Jetez un œil à la
@@ -333,7 +321,7 @@ de définir votre politique de sécurité en matière de contenu (CSP), vos opti
 `X-Frame` et plein d’autres choses toutes aussi importantes pour vous aider à
 contrôler la sécurité de votre site.
 
-{{< gist philhawksworth d1deda75c8bc3d025e7d62639f904222 >}}
+[Exemple simple de fichier Netlify _headers](https://gist.github.com/philhawksworth/d1deda75c8bc3d025e7d62639f904222)
 
 Bénéficier d’une telle granularité pour ce type de contrôle est souvent bien
 plus complexe que cela. Il me semble que cette fonctionnalité rend accessible le
