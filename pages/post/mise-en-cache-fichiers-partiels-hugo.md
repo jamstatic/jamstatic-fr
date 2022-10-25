@@ -4,8 +4,6 @@ description: "Apprenez à optimiser le cache des fichiers partiels pour reduire 
 author: regis
 date: 2019-12-03T18:10:24+01:00
 lastmod: 2019-12-07T18:13:54+01:00
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Gestion%20du%20cache%20des%20fichiers%20partiels%20avec%20Hugo/jamstatic/twitter-card.png
 categories:
   - hugo
 source:
@@ -13,13 +11,11 @@ source:
   title: "The Full Partial Series Part 1: Caching!"
   url: "https://regisphilibert.com/blog/2019/12/hugo-partial-series-part-1-caching-with-partialcached/"
 ---
-
-{{< figure src="https://regisphilibert.com/blog/2019/12/hugo-partial-series-part-1-caching-with-partialcached/images/featured.png" caption="" attr="" attrlink="" >}}
+![Illustration des partiels d'Hugo](https://regisphilibert.com/blog/2019/12/hugo-partial-series-part-1-caching-with-partialcached/images/featured.png "Illustration des partiels d'Hugo")
 
 Les fichiers partiels sont parmi les modèles de fichiers les plus utilisés pour la maintenance de sites Hugo. C'est eux qui nous permettent d'isoler nos composants, inclusions, ou autres morceaux de code et même plus récemment nos fonctions.
 
-Nous n'allons pas revenir dans cet article sur les bases des
-[partiels](https://gohugo.io/templates/partials/) comme leur _contexte_ que nous avons déjà [détaillé auparavant]({{< relref "/post/hugo-le-point-sur-le-contexte" >}}).
+Nous n'allons pas revenir dans cet article sur les bases des [partiels](https://gohugo.io/templates/partials/) comme leur _contexte_ que nous avons déjà [détaillé auparavant](page:post/hugo-le-point-sur-le-contexte).
 
 Nous allons voir comme tirer parti au mieux des fonctionnalités de ces fichiers, bien au-delà des inclusions habituelles. Nous verrons comment Hugo peut mettre en cache vos fichiers partiels pour réduire le temps de génération, comment les utiliser comme des fonctions, nous verrons enfin quelles sont les meilleures pratiques à adopter en termes d'organisation et de commentaires pour nous assurer de leur pérennité.
 
@@ -155,23 +151,24 @@ Nous avons maintenant une chaîne de caractères que nous pouvons passer comme v
 
 ```go-html-template
 {{ with .Params.authors }}
-	{{ $authors := sort . }}
-	{{ $variant := printf "%x" $authors }}
-	{{ partialCached "authors-box.html" . $variant }}
+  {{ $authors := sort . }}
+  {{ $variant := printf "%x" $authors }}
+  {{ partialCached "authors-box.html" . $variant }}
 {{ end }}
 ```
 
 Grâce à cela, nous sommes maintenant assurés qu'Hugo ne génèrera qu'une seule variante par combinaison d'auteurs, soit 7 au maximum.
 
-{{< notice >}}
+:::
+
 ### Pourquoi ordonner les auteurs ?
 
 En les classant par ordre alphabétique, nous nous assurons de ne pas créer des variantes inutiles, et ce que quel que soit l'ordre dans lequel les auteurs ont été listés dans le front matter.
-{{< /notice >}}
+:::
 
-{{< notice tip >}}
+:::tip
 Cette solution pour utiliser les variantes marche pour les listes et les tableaux associatifs simples. Effectuez des tests si vous l'utiliser pour des structures de données imbriquées plus complexes.
-{{< /notice >}}
+:::
 
 ## Et les langues ? 🇫🇷🇬🇧
 
@@ -184,11 +181,10 @@ Dans un contexte multilingue, si nous repensons à notre partiel pour l'entête 
 Mais ce n'est pas la peine de le faire, car par défaut Hugo va générer autant de caches de partiels que de langues déclarées.
 Dans notre cas de figure, Hugo va donc calculer le balisage de notre entête dix fois.
 
-{{< notice title="🧮" >}}
-La règle d'or pour connaître le "calcul" du nombre de partiels est :
-
+:::🧮
+La règle d'or pour connaître le "calcul" du nombre de partiels est :  
 `partiel x variantes x langues`
-{{< /notice >}}
+:::
 
 ## Améliorer votre temps de génération ⏱️
 
@@ -206,4 +202,4 @@ Ces options vous aideront à identifier les principaux goulots d'étranglement, 
 
 Lorsque vous créez ou maintenez un projet Hugo, vous devez toujours garder en tête que chaque ligne de code peut réduire potentiellement le temps de génération. Laissez Hugo faire le gros du travail seulement quelques fois et non systématiquement!
 
-Allez donc jeter un œil à vos fichiers partiels, créez vos propres variantes, et économisez du temps et de l'argent en vous reposant autant que possible sur `partialCached`!
+Allez donc jeter un œil à vos fichiers partiels, créez vos propres variantes, et économisez du temps et de l'argent en vous reposant autant que possible sur `partialCached` !
