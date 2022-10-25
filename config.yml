@@ -27,6 +27,10 @@ body:
       enabled: true
     caption:
       enabled: true
+    remote:
+      fallback:
+        enabled: true
+        path: images/no-image.png
   links:
     embed:
       enabled: true
