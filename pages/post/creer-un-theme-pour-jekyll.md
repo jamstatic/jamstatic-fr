@@ -10,9 +10,7 @@ images:
 categories:
   - jekyll
 ---
-
-{{< intro >}}
-
+:::intro
 Depuis la version 3.2, les webdesigners ont la possibilité de
 créer des thèmes pour Jekyll. Le support des thèmes sous forme de gem est encore
 récent mais les premiers thèmes commencent à arriver. Nous allons voir dans cet
@@ -20,10 +18,7 @@ article que l’opération est assez triviale si vous êtes déjà familiarisé 
 Jekyll et Git. Packager un thème se fait en quelques minutes grâce à
 l’utilisation de `bundler`. Voyons ensemble à quoi ressemble le workflow de
 création de thème pour Jekyll.
-
-{{< /intro >}}
-
----
+:::
 
 ## Prérequis
 
@@ -344,10 +339,8 @@ structures de thèmes accessibles sur Github, notamment :
 
 - [Minima](https://github.com/jekyll/minima), le thème par défaut de Jekyll,
   idéal pour se familiariser avec la structure que nous venons de voir,
-
 - [Alembic](https://github.com/daviddarnes/alembic/) un bon point de départ un
   plus complet proposé par David Darnes
-
 - [Minimal mistakes](https://github.com/mmistakes/minimal-mistakes/), le thème
   très complet de Michael Rose, qui utilise des collections et tout un tas
   d’autres fonctionnalités plus avancées de Jekyll.
