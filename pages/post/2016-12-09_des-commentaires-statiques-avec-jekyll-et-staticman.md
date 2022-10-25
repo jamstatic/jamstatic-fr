@@ -504,7 +504,7 @@ Rien de bien surprenant ici, `name=options[subscribe]` and `value="email"` sont 
 
 Si tout est correctement configuré, l’utilisateur devrait recevoir un mail dès qu'un nouveau commentaire est posté sur le billet ou la page auxquels il s'est abonné.
 
-![Staticman reply email notification](https://mademistakes.com/static/0b3e2f77d709c1514da8240a2928cfec/929af/staticman-email-notification.png "Exemple d’un mail de notification 'Nouvelle réponse' de Staticman.")
+![Staticman reply email notification](https://mademistakes.com/static/0b3e2f77d709c1514da8240a2928cfec/929af/staticman-email-notification.png "Exemple d’un mail de notification « Nouvelle réponse » de Staticman.")
 
 Voilà, vous avez mis en place un système de commentaires basé sur des fichiers statiques dans Jekyll et qui gère les commentaires imbriqués et les notifications de réponse. Maintenant j'aimerais gagner une minute de temps de génération pour pouvoir ajouter les nouveaux commentaires encore plus vite 😦.
 
