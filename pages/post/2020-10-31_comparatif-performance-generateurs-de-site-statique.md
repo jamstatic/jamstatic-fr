@@ -14,8 +14,6 @@ categories:
   - jekyll
   - hugo
   - gatsby
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Performance%20des%20g%C3%A9n%C3%A9rateurs%20de%20site%20statique/jamstatic/twitter-card.png
 source:
   author: Sean C Davis
   title: Comparing Static Site Generator Build Times
