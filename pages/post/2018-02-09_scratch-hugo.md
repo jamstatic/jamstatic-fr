@@ -10,8 +10,6 @@ excerpt: |
   explication par l’exemple de la fonction <code>.Scratch</code> du langage de templating d'Hugo. Ça vous démange ? Voyons tout cela en détail.
 date: 2018-02-09T20:50:50+01:00
 lastmod: 2018-08-29T10:09:47-05:00
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:La%20fonction%20.Scratch%20d%E2%80%99Hugo/jamstatic/twitter-card.png
 categories:
   - hugo
 source:
@@ -20,7 +18,9 @@ source:
   url: https://regisphilibert.com/blog/2017/04/hugo-scratch-explained-variable/
 ---
 
-{{< notice update >}} Vous êtes ici pour apprendre à écraser une variable dans un gabarit de page ? Bonne nouvelle, vous n'avez plus besoin de la fonction `.Scratch` pour cela depuis la version 0.48 d'Hugo. Malgré cela, `.Scratch` reste encore utile pour plein d'autres choses ! {{< /notice >}}
+:::update
+Vous êtes ici pour apprendre à écraser une variable dans un gabarit de page ? Bonne nouvelle, vous n'avez plus besoin de la fonction `.Scratch` pour cela depuis la version 0.48 d'Hugo. Malgré cela, `.Scratch` reste encore utile pour plein d'autres choses !
+:::
 
 Le contexte de Page d'Hugo n'est pas seulement la source d'information la plus importante pour vos pages, c'est aussi la source de données principale de tous vos templates. Plus souvent qu'il n'y paraît, vous aurez à ajouter vos propres variables personnalisées en plus de celles définies par défaut.
 
@@ -30,9 +30,9 @@ Avec la fonction **.Scratch** d'Hugo, n'importe quelle [Page](https://gohugo.io/
 
 Scratch a été ajouté à l'origine pour contourner une [limitation](https://github.com/golang/go/issues/10608) du langage de templating de Go, qui empêchait d'écraser des variables. Elle s'est rapidement enrichie d'autres méthodes et constitue désormais une fonctionnalité d'Hugo à part entière.
 
-{{< notice info >}}
+:::info
 À des fins de lisibilité, les extraits de code qui suivent ont des commentaires incompatibles avec le langage de template de Go. Reportez vous à la [doc](http://gohugo.io/templates/introduction/#comments) pour comment commenter dans Hugo.
-{{< /notice >}}
+:::
 
 ### `.Scratch.Set`
 
@@ -206,8 +206,7 @@ Très bon cas de figure, continuons notre chemin.
 ### `.Scratch` dans un fichier partiel
 
 Comme je l’expliquais plus tôt, comme `.Scratch` fait partie de l’objet page
-généralement passé en tant que contexte ([le fameux point]({{< relref
-"hugo-le-point-sur-le-contexte.md" >}})) à l’appel de la fonction
+généralement passé en tant que contexte ([le fameux point](page:post/hugo-le-point-sur-le-contexte)) à l’appel de la fonction
 `partial`.Déplaçons le bout de code qui stocke nos classes dans un fichier
 partiel pour gagner en lisibilité :
 
@@ -315,10 +314,10 @@ Dans notre fichier partiel nous pouvons toujours faire appel à Scratch :
 {{ $brandScratch := newScratch }}
 {{ $brandScratch.Set "brand_image" "default.jpg" }}
 {{ with .image_src }}
-	{{ $brandScratch.Set "brand_image" "." }}
+  {{ $brandScratch.Set "brand_image" "." }}
 {{ end }}
 <div class="brand {{ .class }}">
-	<img src="{{ $brandScratch.Get "brand_image" }}" alt="{{ .alt }}" />
+  <img src="{{ $brandScratch.Get "brand_image" }}" alt="{{ .alt }}" />
 </div>
 ```
 

@@ -10,21 +10,15 @@ source:
 images:
   - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Qu%E2%80%99y%20a-t-il%20dans%20un%20g%C3%A9n%C3%A9rateur%20de%20site%20statique%20%3F/jamstatic/twitter-card.png
 ---
-
-{{< intro >}}
-
-Après être aller regarder [sous le capot de Jekyll]({{< relref
-"comment-fonctionne-jekyll.md" >}}) et toujours dans l’idée de continuer à nous
+:::intro
+Après être aller regarder [sous le capot de Jekyll](page:post/comment-fonctionne-jekyll) et toujours dans l’idée de continuer à nous
 familiariser avec différents générateurs de site statique, voici la traduction
 d’un [article de Brian Rinaldi paru chez
 CSS-tricks](https://css-tricks.com/really-makes-static-site-generator/), qui
 nous entraîne cette fois-ci dans les entrailles de [Harp](https://harpjs.com/),
 un générateur de fichiers statiques développé en JavaScript, qui résume bien le
 périmètre fonctionnel de ces outils.
-
-{{< /intro >}}
-
----
+:::
 
 Je parle beaucoup des générateurs de site statique, mais je parle toujours de
 comment _utiliser_ des générateurs de site statique. Ils sont souvent perçus
@@ -54,25 +48,20 @@ En vérité, un générateur de site statique c'est un concept très simple. Les
 ingrédients clefs d’un générateur de site statique sont typiquement :
 
 - Un (ou des) langage(s) de gabarit pour créer les modèles de pages/articles,
-
 - Un langage de balisage léger (en général Markdown) pour rédiger le contenu,
-
 - Un langage de balisage structurel (souvent YAML) pour définir la configuration
   et les métadonnées (par exemple
   "[front matter](https://jekyllrb.com/docs/frontmatter/)"),
-
 - Un ensemble de règles et de structure pour organiser et nommer les fichiers
   qui seront exportés/compilés, les fichiers qui ne le seront pas et comment ces
   fichiers seront traités (par exemple préfixer un fichier ou un fichier avec un
   tiret bas(`_`) signifie qu'il ne sera pas recopié avec les fichiers du site
   final ou encore tous les articles vont dans un dossier `posts`),
-
 - Un moyen de compiler les modèles et le balisage en HTML (le support pour des
   préprocesseurs CSS ou JavaScript est également fréquemment inclus),
-
 - Un serveur local pour tester.
 
-C’est tout. Si vous vous dites "Hé… mais je pourrais en développer un !" vous
+C’est tout. Si vous vous dites "Hé… mais je pourrais en développer un !" vous
 avez sûrement raison. Les choses se compliquent quand vous commencez à ajouter
 des fonctionnalités, comme la plupart des générateurs de site statique le font.
 
@@ -327,16 +316,14 @@ assembler ces pièces comme voulu par Harp). Terraform est constitué d’un nom
 de fichiers qui définissent ces processeurs pour JavaScript, CSS/feuilles de
 style et modèles (qui ici comprennent Markdown).
 
-{{< figure
-src="https://cdn.css-tricks.com/wp-content/uploads/2017/02/terraform-1.jpg" >}}
+![](https://cdn.css-tricks.com/wp-content/uploads/2017/02/terraform-1.jpg)
 
 Dans chacun de ces dossiers se trouve un dossier `processors` qui renferme le
 code pour chacun des processeurs spécifiques que Terraform (C’est-à-dire Harp)
 supporte. Par exemple, dans le dossier des modèles se trouvent les fichiers qui
 permettent de compiler les fichiers EJS, Jade, and Markdown.
 
-{{< figure
-src="https://cdn.css-tricks.com/wp-content/uploads/2017/02/terraform_processors.png" >}}
+![](https://cdn.css-tricks.com/wp-content/uploads/2017/02/terraform_processors.png)
 
 Je ne vais pas aller creuser le code de chacun d’entre eux, mais pour la
 plupart, ils se reposent sur des modules npm externes qui gèrent le processeur
@@ -509,8 +496,7 @@ pourrait vous intéresser. Mon rapport, simplement intitulé
 est gratuit et essaie d’aborder l’historique, le paysage actuel et les
 fondamentaux des générateurs de site statique.
 
-{{< figure
-src="https://cdn.css-tricks.com/wp-content/uploads/2017/02/books-1.jpg" alt="" >}}
+![](https://cdn.css-tricks.com/wp-content/uploads/2017/02/books-1.jpg)
 
 Le livre que j'ai coécrit avec
 [Raymond Camden](https://twitter.com/raymondcamden) s'appelle

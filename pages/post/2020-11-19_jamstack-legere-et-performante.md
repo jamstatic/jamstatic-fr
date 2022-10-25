@@ -63,7 +63,7 @@ Des frameworks bien pratiques, de plus en plus versatiles, capables de travaille
 
 ## Hugo de mieux en mieux outillé pour le JavaScript
 
-Enfin Hugo, [le générateur de loin le plus rapide](../comparatif-performance-generateurs-de-site-statique) pour transformer ses fichiers source en site web, [continue d'intégrer](https://gohugo.io/news/0.78.0-relnotes/) des outils issus de l'écosystème [JavaScript](https://gohugo.io/hugo-pipes/js/), après la transpilation via [Babel](https://gohugo.io/hugo-pipes/babel/), la gestion de dépendances [npm](https://gohugo.io/news/0.75.0-relnotes/), on peut aussi maintenant empaqueter son JavaScript à la vitesse de la lumière avec [esbuld](https://esbuild.github.io). Les développeurs peuvent découper leurs projets en modules réutilisables et bénéficier d'un *bundler* lui aussi bien plus rapide que webpack ou parcel.
+Enfin Hugo, [le générateur de loin le plus rapide](page:post/comparatif-performance-generateurs-de-site-statique) pour transformer ses fichiers source en site web, [continue d'intégrer](https://gohugo.io/news/0.78.0-relnotes/) des outils issus de l'écosystème [JavaScript](https://gohugo.io/hugo-pipes/js/), après la transpilation via [Babel](https://gohugo.io/hugo-pipes/babel/), la gestion de dépendances [npm](https://gohugo.io/news/0.75.0-relnotes/), on peut aussi maintenant empaqueter son JavaScript à la vitesse de la lumière avec [esbuld](https://esbuild.github.io). Les développeurs peuvent découper leurs projets en modules réutilisables et bénéficier d'un *bundler* lui aussi bien plus rapide que webpack ou parcel.
 
 ## Tailwind 2.0
 
@@ -71,7 +71,7 @@ Enfin Hugo, [le générateur de loin le plus rapide](../comparatif-performance-g
 
 ## Eleventy en route vers le million de téléchargements
 
-De son côté, mine de rien [Eleventy le générateur volontairement simple]({{< relref "eleventy-generateur-statique-simple" >}}) de Zach Leatherman se rapproche doucement du million de téléchargements npm, l’engouement est réel chez les développeurs front adeptes des choses bien faites, et souhaitant garder un contrôle total sur le JavaScript livré. C'est d'ailleurs ce qui a plu à Nicolas Goutay, qui détaille [l'approche plus légére privilégiée pour développer le nouveau site d'Orbit](https://orbit.love/blog/towards-a-lightweight-jamstack), avec Eleventy, Tailwind CSS et Alpine.js.
+De son côté, mine de rien [Eleventy le générateur volontairement simple](page/post/eleventy-generateur-statique-simple) de Zach Leatherman se rapproche doucement du million de téléchargements npm, l’engouement est réel chez les développeurs front adeptes des choses bien faites, et souhaitant garder un contrôle total sur le JavaScript livré. C'est d'ailleurs ce qui a plu à Nicolas Goutay, qui détaille [l'approche plus légére privilégiée pour développer le nouveau site d'Orbit](https://orbit.love/blog/towards-a-lightweight-jamstack), avec Eleventy, Tailwind CSS et Alpine.js.
 
 ## Comment ne pas faire subir le coût des frameworks à ses visiteurs ?
 

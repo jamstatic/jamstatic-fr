@@ -6,17 +6,13 @@ date: 2018-04-06 18:10:03 +0000
 categories:
 - hugo
 - jekyll
-images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_800,c_fit,co_white,g_north_west,x_120,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Hugo%20ou%20Jekyll%20%3F%20Six%20crit%C3%A8res%20de%20comparaison/jamstatic/twitter-card.png
 source:
   author: Chris Macrae
   title: Hugo or Jekyll? 6 Factors You Should Know
   url: https://forestry.io/blog/hugo-and-jekyll-compared/
   lang: en
-
 ---
-{{< figure
-src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,dpr_2.0,f_auto,q_auto,w_862/v1603620676/jamstatic/hugo-jekyll-compared.png" >}}
+[](https://res.cloudinary.com/jamstatic/image/upload/c_scale,dpr_2.0,f_auto,q_auto,w_862/v1603620676/jamstatic/hugo-jekyll-compared.png)
 
 Choisir les bons outils pour bâtir un site web n'est pas chose aisée de nos
 jours. Il y a tellement d’options ! Générer un site statique est une de ces
@@ -33,7 +29,7 @@ avantages et les inconvénients de ces deux générateurs. Après avoir lu cet
 article, vous saurez clairement lequel des deux est le bon pour démarrer votre
 projet.
 
-_<strong>Version courte :</strong> Jekyll est un générateur de site statique
+**Version courte :** Jekyll est un générateur de site statique
 flexible et parfait pour débuter. Hugo a une courbe d’apprentissage un peu plus
 élevée, mais il est très rapide et intègre plein de fonctionnalités. Lisez la
 suite pour en apprendre plus sur les différences entre ces deux outils._
@@ -183,30 +179,26 @@ une bonne partie des choses qu'on pourrait attendre d’un site web moderne comm
 
 [^core]: NdT: La philosophie de Jekyll est de garder un cœur [réduit et extensible](https://jekyllrb.com/philosophy#5-small--extensible)
 
--  la gestion des menus,
--  la génération de sitemap XML[^core-plugin],
--  la génération d’un flux RSS/Atom[^core-plugin],
--  la gestion des scripts Analytics,
--  la gestion des commentaires,
--  la gestion multilingue/i18n,
--  et bien plus…
+- la gestion des menus,
+- la génération de sitemap XML[^core-plugin],
+- la génération d’un flux RSS/Atom[^core-plugin],
+- la gestion des scripts Analytics,
+- la gestion des commentaires,
+- la gestion multilingue/i18n,
+- et bien plus…
 
 [^core-plugin]: NdT: L'équipe de Jekyll maintient des plugins qui permettent de [générer un sitemap XML](https://github.com/jekyll/jekyll-sitemap), générer [un flux ATOM pour les articles](https://github.com/jekyll/jekyll-feed), les [balises-meta pour le SEO](https://github.com/jekyll/jekyll-seo-tag). La plupart des thèmes comme [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) supportent l’insertion de scripts Google Analytics ou Disqus et la gestion des menus via des fichiers YAML.
 
 Pour cela il faudra utiliser des plugins Jekyll tiers, qui sont de cinq types :
 
--  les **générateurs**, qui permettent de compléter et de modifier le processus
+- les **générateurs**, qui permettent de compléter et de modifier le processus
    de génération de Jekyll,
-
--  les **convertisseurs**, qui permettent d’ajouter le support de nouveaux
+- les **convertisseurs**, qui permettent d’ajouter le support de nouveaux
    formats de fichiers,
-
--  les **commandes**, qui permettent d’étendre les options de la ligne de
+- les **commandes**, qui permettent d’étendre les options de la ligne de
    commande de Jekyll,
-
--  les **tags**, qui permettent d’ajouter de nouvelles balises Liquid,
-
--  les **filtres**, qui permettent de modifier le rendu des balises Liquid et des
+- les **tags**, qui permettent d’ajouter de nouvelles balises Liquid,
+- les **filtres**, qui permettent de modifier le rendu des balises Liquid et des
    variables.
 
 Par exemple, Forestry a dévelopé le
@@ -233,7 +225,7 @@ vous ayez une équipe qui fasse une centaine de modifications par semaine sur
 votre site, votre blog ou votre documentation…
 
 Cela représente potentiellement plus de 10 heures de perdues lors de la
-génération chaque année !
+génération chaque année !
 
 ### Jekyll en résumé
 
@@ -245,13 +237,10 @@ statique en pesant les pour et les contre.
 
 - Un **moteur de gabarits simple.** Les gabarits de page de Jekyll sont très
   semblables à la syntaxe qu'on trouve dans WordPress ou Craft.
-
 - Un **large choix de thèmes.** Il existe plein de thèmes prêt à l’emploi pour
   Jekyll.
-
 - Un **large choix de plugins.** Il existe des dizaines de plugins pour ajouter
   les fonctionnalités dont vous avez besoin.
-
 - **Intégration dans GitHub Pages.** Installer un site avec Jekyll et GitHub
   Pages est un jeu d’enfant.
 
@@ -260,7 +249,6 @@ statique en pesant les pour et les contre.
 - Une **génération lente.** Si vous développez un petit site, ce n'est pas un
   problème. Mais les sites plus importants pourraient voir les temps de
   génération augmenter.
-
 - Un **manque de fonctionnalités natives.** Les fonctionnalités de premier ordre
   sont mieux supportées et intégrées. Ce point fait défaut à Jekyll.[^plugins]
 
@@ -310,7 +298,7 @@ Dans Hugo, dans les contenus destinés à être générés sont stockés dans le
 dossier `content` de votre projet. Vous pouvez utiliser différents formats:
 **Markdown, Mark,** et **HTML** sont supportés par défaut, et il existe des
 extensions tierces pour supporter **Asciidoc**
-and **reStructuredText**[^extensions].
+and **reStructuredText**[^extensions].
 
 Hugo supporte aussi **TOML, YAML, et JSON** pour le Front Matter, alors que
 Jekyll ne supporte que le YAML.
@@ -401,7 +389,7 @@ Par exemple avec la fonctionnalité d’exports personnalisés, vous pouvez gén
 en même temps : votre site statique, sa version alternative pour Google AMP,
 ainsi que des fichiers JSON prêts à être consommés par une application mobile.
 
-Parmi les fonctionnalités bien pratiques d’Hugo on peut citer :
+Parmi les fonctionnalités bien pratiques d’Hugo on peut citer :
 
 - La gestion des menus,
 - La génération de Sitemap XML,
@@ -411,12 +399,10 @@ Parmi les fonctionnalités bien pratiques d’Hugo on peut citer :
 - La gestion du multilingue/i18n
 - Les formats d’export personnalisés
 
-{{< notice tip >}}
-
+:::tip
 Envie de passer à Hugo, mais encore sous Jekyll?
 [Hugo peut importer votre site Jekyll en ligne de commande !](https://gohugo.io/commands/hugo_import_jekyll/)
-
-{{< /notice >}}
+:::
 
 ### Performance
 
@@ -441,13 +427,10 @@ statique en pesant le pour et le contre.
 **Pour :**
 
 - **Extrêmement rapide.** Des temps de génération de l’ordre de la seconde.
-
 - **Extrêmement versatile.** Plein de fonctionnalités par défaut pour des sites
   web d’entreprises.
-
 - **Paré pour l’entreprise** Avec le support des exports multiples et des sites
   multilingues, vous êtes opérationnel !
-
 - **Une communauté florissante.** Il est facile d’avoir de l’aide. Posez une
   question sur le forum et vous _aurez_ une réponse.
 
@@ -455,18 +438,15 @@ statique en pesant le pour et le contre.
 
 - **Pas d’extensions.** Hugo ne prend pas les plugins en charge, il n'est donc
   pas possible d’ajouter des fonctionnalités personnalisées.
-
 - **Une syntaxe de gabarit compliquée.** Bien que le moteur de gabarits d’Hugo
   soit versatile, il est assez peu intuitif et compliqué pour les débutants.
 
-{{< notice tip >}}
-
+:::tip
 Reportez-vous au
 [guide de Forestry pour développer avec Hugo](https://forestry.io/docs/guides/developing-with-hugo/)
 pour apprendre comment développer un site avec Hugo et le connecter au CMS
 Forestry.
-
-{{< /notice >}}
+:::
 
 ## En résumé
 
@@ -487,11 +467,10 @@ pour vous aider :
 - **Jekyll** est un excellent choix, si vous êtes familier avec l’écosystème de
   Ruby ou si vous êtes débutant, grâce à son moteur de templating très simple et
   à ses nombreux plugins.
-
 - **Hugo** est génial pour les sites web avec beaucoup de contenus. Il comble
   son manque d’extensibilité par un lot de fonctionnalités embarquées et une
   vitesse inégalée par aucun autre générateur de site statique.
 
-[^hugo]: Hugo a été depuis principalement développé par [Bjørn Erik Pedersen]({{< relref "interview-hugo-lead-developer.md" >}}).
+[^hugo]: Hugo a été depuis principalement développé par [Bjørn Erik Pedersen](page:post/interview-hugo-lead-developer).
 
 [^extensions]: NdT: à l’heure actuelle comme ces extensions ne reposent pas sur des librairies natives en Go, vous perdrez donc le gain de performance apporté par Hugo.

@@ -105,8 +105,7 @@ Parmi les sites que je connais et que j'aime bien il y a
 
 Il y en a plein d’autres qui arrivent. Par exemple,
 [Smashing Magazine](https://www.smashingmagazine.com) a annoncé qu'ils étaient
-en train de travailler sur une [refonte entièrement basée sur Hugo]({{< relref
-"smashing-mag-va-dix-fois-plus-vite.md" >}}).
+en train de travailler sur une [refonte entièrement basée sur Hugo](page:post/smashing-mag-va-dix-fois-plus-vite).
 
 ![La nouvelle version de Smashing Magazine](https://thenewdynamic.imgix.net/screenshot-smashing-mag-hugo.jpg?w=700 "[La nouvelle version de Smashing Magazine](https://www.smashingmagazine.com)")
 

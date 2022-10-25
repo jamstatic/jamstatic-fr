@@ -5,23 +5,16 @@ date: 2018-07-21T20:54:26+02:00
 author: frank
 categories:
   - hugo
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:La%20gestion%20des%20assets%20avec%20Hugo/jamstatic/twitter-card.png
 ---
-
-{{< intro >}}
-
+:::intro
 Depuis la [version 0.43](https://gohugo.io/news/0.43-relnotes/), Hugo comble un des reproches qui lui a souvent été fait, le manque de solution native pour gérer les assets, à savoir la génération de fichiers CSS et JS pour la production — et le développement). Cette nouvelle possibilité fait d'Hugo une solution toujours plus performante pour le développement de sites statiques.
-
-{{< /intro >}}
-
----
+:::
 
 Hugo est surtout apprécié pour sa performance et son modèle de structuration de contenu, mais en ce qui concerne le traitement des fichiers CSS et JS, il fallait jusqu'ici avoir recours à l'écosystème `npm`, tout ça pour simplement pouvoir compiler des fichiers Sass, voire concaténer et minifier des fichiers JS. C'est désormais une dépendance dont on pourra se passer. Vous pouvez dire adieu à Webpack, Gulp et à votre `package.json` jamais à jour.
 
 ## Traitement des assets
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/jamstatic/pipes.jpg" caption="" attr="Photo de Neil Cooper sur Unsplash" attrlink="https://unsplash.com/photos/KX2fCzuQoaQ" >}}
+![Photo de Neil Cooper](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/jamstatic/pipes.jpg "Photo de [Neil Cooper](https://unsplash.com/photos/KX2fCzuQoaQ)")
 
 Le principe est simple : tout ce qui se trouve dans le dossier `/assets` (que ce soit dans un thème ou pas) pourra être ensuite traité par des fonctions spécifiques aux assets. Pour les plus exigeants, ce chemin par défaut est paramétrable via la directive `assetDir` dans votre fichier de configuration.
 
@@ -72,7 +65,7 @@ On notera qu'il existe maintenant deux versions des binaires d'Hugo, celle avec 
 
 Si vous utilisez Netlify pour générer automatiquement votre site à chaque commit, sachez que la version _extended_ n'est pas encore disponible à l'heure où j'écris ces lignes.
 
-La génération des fichiers CSS et des fichiers JS n'est pas quelque chose que vous avez forcément besoin de lancer à _chaque_ build, ou à chaque fois qu'un contributeur édite un fichier Markdown dans votre [headless CMS]({{< relref "cms-headless.md" >}}).
+La génération des fichiers CSS et des fichiers JS n'est pas quelque chose que vous avez forcément besoin de lancer à _chaque_ build, ou à chaque fois qu'un contributeur édite un fichier Markdown dans votre [headless CMS](page:post/cms-headless).
 
 En fonction de votre contexte vous pouvez choisir de :
 

@@ -208,7 +208,7 @@ Voici une sélection de ressources sur la Jamstack qui comporte des matériaux d
 - [Débuter avec la Jamstack? Tout ce que vous devez savoir pour bien démarrer](https://snipcart.com/blog/jamstack)
 - [Quel est le concept derrière la Jamstack](https://www.quora.com/What-is-the-concept-behind-Jamstack)
 - [Développement web moderne avec la Jamstack](https://bejamas.io/blog/jamstack-modern-web-development/)
-- [Smashing Magazine va dix fois plus vite]({{< relref "post/smashing-mag-va-dix-fois-plus-vite.md" >}})
+- [Smashing Magazine va dix fois plus vite](page:post/smashing-mag-va-dix-fois-plus-vite)
 - [Ghost avec la Jamstack](https://blog.ghost.org/jamstack/)
 - [Jamstack avec Gatsby, Netlify et Netlify CMS](https://medium.com/netlify/jamstack-with-gatsby-netlify-and-netlify-cms-a300735e2c5d)
 

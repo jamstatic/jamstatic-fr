@@ -3,18 +3,14 @@ title: Questions à Vincent Voyer, ingénieur fullstack chez Algolia
 description: Présentation d’Algolia, un service de recherche personnalisé pour votre site web.
 author: frank
 date: 2017-07-05 12:34:00 +02:00
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1180,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Questions%20%C3%A0%20Vincent%20Voyer%20ing%C3%A9nieur%20fullstack/jamstatic/twitter-card.png
 categories:
   - algolia
 ---
-
-{{< intro >}}
-
+:::intro
 Sur un site généré, l’interactivité est reléguée côté client, au navigateur,
 donc à JavaScript. Si vous souhaitez intégrer une partie dynamique sur votre
 site _statique_, il faudra donc faire appel à une API externe. C’est tout le
-concept de la [JAMStack]({{< relref "5-raisons-de-tester-la-jamstack" >}})
+concept de la [JAMStack](page:post/5-raisons-de-tester-la-jamstack)
 dont nous parlons sur ce blog. Et c'est typiquement le cas si vous souhaitez
 intégrer un moteur de recherche sur votre site généré. Heureusement pour nous,
 en ce qui concerne la recherche, [Algolia](https://www.algolia.com/) propose une
@@ -31,15 +27,11 @@ Nous sommes donc allés interroger Vincent Voyer, ingénieur JavaScript fullStac
 chez Algolia pour qu'il nous en dise un peu plus sur ce service en pleine
 croissance qui a réussi en l’espace de quelque temps à conquérir la communauté
 des développeurs web.
-
-{{< /intro >}}
-
----
+:::
 
 Frank: **Bonjour Vincent, on va peut-être commencer par te présenter ?**
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346898/vincent-voyer.jpg"
-caption="Vincent Voyer, développeur JS chez Algolia" >}}
+![Vincent Voyer, développeur JS chez Algolia](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346898/vincent-voyer.jpg "Vincent Voyer, développeur JS chez Algolia.")
 
 **Vincent Voyer** : Donc moi je suis Vincent Voyer, sur Twitter j'étais zeroload
 maintenant je suis [vvoyer](https://twitter.com/vvoyer), je suis développeur
@@ -70,7 +62,7 @@ Algolia. Ils me disent qu'ils recrutent. Je me dis je pourrais faire un petit
 test avec Algolia pour faire un moteur de recherche de paquets npm.
 
 Du coup j'ai fait ça, en fin d’année 2014, un petit test de recherche de paquets
-npm : j'ai pris 300 000 paquets npm, j’ai créé un index de recherche
+npm : j'ai pris 300 000 paquets npm, j’ai créé un index de recherche
 Algolia avec. J'ai commencé à faire les premières requêtes, ça prenait 4
 millisecondes.
 
@@ -319,7 +311,7 @@ live-reload, c'est à nous de le faire. Ce qui est possible aussi c'est qu'avec
 notre expérience avec MetalSmith, on se fasse nous-mêmes notre propre générateur
 de site statique pour Algolia.
 
-Frank: **Dans le monde des sites statiques, on a beaucoup parlé de [la refonte de Smashing Magazine]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}}) dernièrement dont la recherche a été développée avec Algolia, ça marche très bien. Le site est généré avec Hugo, un générateur écrit en Go, or, il n'y a pas de plugin natif Algolia pour Hugo, même si vous fournissez un client pour votre API en Go**
+Frank: **Dans le monde des sites statiques, on a beaucoup parlé de [la refonte de Smashing Magazine](page:post/smashing-mag-va-dix-fois-plus-vite) dernièrement dont la recherche a été développée avec Algolia, ça marche très bien. Le site est généré avec Hugo, un générateur écrit en Go, or, il n'y a pas de plugin natif Algolia pour Hugo, même si vous fournissez un client pour votre API en Go**
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347081/algolia-smashing.png"
 caption="La recherche de la nouvelle version de Smashing Magazine avec Algolia" >}}

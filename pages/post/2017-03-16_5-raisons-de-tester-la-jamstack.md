@@ -133,8 +133,7 @@ avec
 ont montré que même avec un site dynamique très optimisé (et une solide
 stratégie de cache), le temps de début de chargement était en moyenne **six fois
 plus rapide** avec une version statique distribuée via CDN. Smashing Magazine
-ont d’ailleurs [migré vers la Jamstack et Netlify]({{< relref
-"post/smashing-mag-va-dix-fois-plus-vite.md" >}}) à l’occasion de leur refonte.
+ont d’ailleurs [migré vers la Jamstack et Netlify](page:post/smashing-mag-va-dix-fois-plus-vite) à l’occasion de leur refonte.
 
 La mise en cache s'en retrouve grandement simplifiée. Avec WordPress (ou
 n'importe quel CMS dynamique) les URLs peuvent retourner différents contenus en

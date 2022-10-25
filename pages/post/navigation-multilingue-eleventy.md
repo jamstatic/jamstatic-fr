@@ -25,7 +25,7 @@ Ici, nous utilisons [Eleventy](/categories/eleventy), mais l'approche serait sim
 Pour parvenir à nos fins, il nous faut :
 
 1. Pouvoir boucler sur les différents langages utilisés sur le site
-2. Nous assurer que chaque contenu dispose d'une clé `locale` dont la valeur correspond au code de langue utilisé pour ce même contenu. Si vous avez besoin de vous rafraîchir la mémoire, relisez [comment faire avec les fichiers de données de répertoire avec Eleventy]({{< relref "post/site-multilingue-avec-eleventy.md" >}}).
+2. Nous assurer que chaque contenu dispose d'une clé `locale` dont la valeur correspond au code de langue utilisé pour ce même contenu. Si vous avez besoin de vous rafraîchir la mémoire, relisez [comment faire avec les fichiers de données de répertoire avec Eleventy](page:post/site-multilingue-avec-eleventy).
 3. Définir une clé commune unique nommée `translationKey` pour relier les traductions d'un contenu entre elles.
 
 ## Les langues du site

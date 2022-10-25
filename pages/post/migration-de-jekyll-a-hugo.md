@@ -16,7 +16,7 @@ Si vous faites du développement front-end, du CSS, du SVG et
 autres joyeusetés, vous connaissez sans doute déjà la talentueuse
 [Sara Soueidan](https://www.sarasoueidan.com/). Il se trouve que Sara a travaillé
 récemment sur la refonte de Smashing Magazine et [la migration de WordPress à
-Hugo]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}}). Cette mission lui
+Hugo](page:post/smashing-mag-va-dix-fois-plus-vite). Cette mission lui
 a permis de se familiariser avec Hugo et de découvrir au passage le service
 offert par [Netlify](https://www.netlify.com/), la nouvelle référence en termes
 d’hébergement d’applications statiques. Fatiguée des faibles temps de
@@ -120,7 +120,7 @@ Mais ce qui m'a fait adopté Hugo plus que toute autre option, c'est de voir
 comparé à Jekyll. Non seulement chaque billet de blog que j'ai pu lire y est
 allé d’une comparaison qui atteste ce fait, mais j'ai aussi pu faire
 l’expérience de cette vitesse pour la première fois lorsque j'ai travaillé sur
-la [refonte de Smashing Magazine]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}}).
+la [refonte de Smashing Magazine](page:post/smashing-mag-va-dix-fois-plus-vite).
 
 La nouvelle version de Smashing Magazine (actuellement accessible via
 [next.smashingmagazine.com](https://next.smashingmagazine.com)) utilise Hugo

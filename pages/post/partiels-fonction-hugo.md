@@ -6,8 +6,6 @@ description: "Maintenant que les partiels peuvent retourner tout type de donnée
 author: regis
 categories:
   - hugo
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Des%20fonctions%20dans%20nos%20partiels%20Hugo%20!/jamstatic/twitter-card.png
 source:
   author: "Régis Philibert"
   title: "The Full Partial Series Part 2: Returning partials!"
@@ -16,7 +14,7 @@ source:
 
 ![Des fonctions dans nos partiels Hugo](https://regisphilibert.com/blog/2019/12/hugo-partial-series-part-2-functions-with-returning-partials//images/featured.png "Des fonctions dans nos partiels Hugo")
 
-Comme nous l'avons déjà vu dans différents articles dont celui sur la [mise en cache des fichiers partiels]({{< relref "/post/mise-en-cache-fichiers-partiels-hugo" >}}), jusqu'ici le moteur de _templating_ d'Hugo se concentrait principalement sur la génération de fichiers. Résultat : même si les fichiers partiels étaient très utiles pour afficher tout un tas de trucs, jusqu'à récemment, ils ne permettaient pas de retourner une valeur typée.
+Comme nous l'avons déjà vu dans différents articles dont celui sur la [mise en cache des fichiers partiels](page:post/mise-en-cache-fichiers-partiels-hugo), jusqu'ici le moteur de _templating_ d'Hugo se concentrait principalement sur la génération de fichiers. Résultat : même si les fichiers partiels étaient très utiles pour afficher tout un tas de trucs, jusqu'à récemment, ils ne permettaient pas de retourner une valeur typée.
 
 Tout a changé à partir de la version `0.55.0` d'Hugo qui a introduit l'instruction `return` dans l'API de la fonction `partial` ! Les partiels sont tout à coup devenus des fonctions réutilisables qui peuvent être appelées par des fichiers de modèles plus conventionnels.
 

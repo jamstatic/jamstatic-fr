@@ -3,15 +3,11 @@ title: C’est quoi un CMS headless ?
 description: Un CMS headless s'occupe uniquement de vous aider à modéliser et à saisir vos contenus pour les fournir au terminal de votre choix.
 author: frank
 date: 2017-12-15T16:40:50+01:00
-images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:C%E2%80%99est%20quoi%20un%20CMS%20headless%20%3F/jamstatic/twitter-card.png
 categories:
   - cms
   - headless
 ---
-
-Dans les architectures [Jamstack]({{< relref
-"5-raisons-de-tester-la-jamstack/" >}}), chaque service est assuré par un
+Dans les architectures [Jamstack](page:post/5-raisons-de-tester-la-jamstack), chaque service est assuré par un
 outil spécifique qui va se contenter de faire une chose et une seule, si
 possible de son mieux. L'édition de contenus pourra par exemple être confiée à
 un CMS _headless_ — qui contrairement à un CMS dynamique classique comme
@@ -19,8 +15,7 @@ WordPress ou Drupal ne sera pas chargé de la gestion des modèles, puisque c'es
 le rôle du générateur de site statique, ni du rendu, puisque les pages HTML
 générées seront ensuite directement servies depuis un CDN.
 
-Si les architectures Jamstack sont très [performantes]({{< relref
-"smashing-mag-va-dix-fois-plus-vite.md" >}}), il n'en reste pas moins que tous
+Si les architectures Jamstack sont très [performantes](page:post/smashing-mag-va-dix-fois-plus-vite), il n'en reste pas moins que tous
 les intervenants doivent pouvoir contribuer au produit quel que soit leur
 profil. Une interface conviviale pour l’édition de contenus est donc un passage
 souvent obligé si vous voulez vous assurer que tout le monde y trouve son
@@ -66,10 +61,10 @@ Si vous utilisez un générateur de site statique, le CMS headless est donc une
 pièce supplémentaire que vous pourriez vouloir ajouter à votre architecture,
 comme d’habitude cela dépend du projet.
 
-[Distinguons les CMS headless]({{< relref "post/git-based-cms-vs-api-first-cms.md">}}) qui vous permettent de
+[Distinguons les CMS headless](page:post/git-based-cms-vs-api-first-cms) qui vous permettent de
 modifier les fichiers de votre dépôt Git
 ([Forestry](https://forestry.io), [Siteleaf](https://siteleaf.com), [Netlify
-CMS]({{< relref "configurer-netlify-cms-pour-jekyll.md" >}}), etc.) de ceux qui mettent vos contenus à disposition via une API
+CMS](page:post/configurer-netlify-cms-pour-jekyll), etc.) de ceux qui mettent vos contenus à disposition via une API
 ([Contentful](https://www.contentful.com/), [Prismic](https://prismic.io/),
 [Directus](https://getdirectus.com/), [GraphCMS](https://graphcms.com/), etc.).
 

@@ -182,7 +182,7 @@ lequel j'évolue ;)
 Il est possible que beaucoup pensent que c'est juste pour faire de petits sites
 perso. Avec tous les services qui arrivent comme [Netlify](https://netlify.com)
 et les lancements de site visibles comme
-[Smashing Magazine avec Hugo]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}}),
+[Smashing Magazine avec Hugo](page:post/smashing-mag-va-dix-fois-plus-vite),
 je ne pense pas que ça soit le cas. Donc c'est peut-être qu'il faut juste
 continuer de faire passer le mot que les générateurs de site statique sont un
 ensemble d’outils puissants qui permettent de monter en charge.

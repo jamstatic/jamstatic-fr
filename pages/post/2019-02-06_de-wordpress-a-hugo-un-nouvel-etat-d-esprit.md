@@ -149,7 +149,7 @@ Le point ci-dessus .............☝️ correspond à la page courante.
 Le contexte de la page courante comprend toutes les variables de page dont vous aurez besoin dans votre fichier partiel et dans tous vos modèles, nous allons y venir.
 
 :::info
-Comprendre le contexte dans Hugo, c'est la clé. Si ce n'est pas encore clair pour vous, 👉 lisez [Hugo, le point sur le contexte]({{< relref "/post/hugo-le-point-sur-le-contexte" >}})
+Comprendre le contexte dans Hugo, c'est la clé. Si ce n'est pas encore clair pour vous, 👉 lisez [Hugo, le point sur le contexte](page:post/hugo-le-point-sur-le-contexte)
 :::
 
 ## La boucle et les données

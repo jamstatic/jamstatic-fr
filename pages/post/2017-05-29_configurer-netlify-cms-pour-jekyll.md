@@ -18,7 +18,7 @@ categories:
 
 Les outils de gestion de contenus connectés aux générateurs de
 site statique continuent d’évoluer. Lors de [la refonte de Smashing
-Magazine]({{< relref "smashing-mag-va-dix-fois-plus-vite.md" >}}), Netlify la
+Magazine](page:post/smashing-mag-va-dix-fois-plus-vite), Netlify la
 startup basée à San Francisco spécialisée dans l’hébergement et le déploiement
 de sites statiques a développé un [CMS headless](https://www.netlifycms.org/)
 pour faciliter la contribution des rédacteurs. Ce

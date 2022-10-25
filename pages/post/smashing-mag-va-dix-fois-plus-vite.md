@@ -8,15 +8,12 @@ source:
   title: Smashing Magazine just got 10x faster
   url: https://www.netlify.com/blog/2017/03/16/smashing-magazine-just-got-10x-faster/
   lang: en
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Smashing%20Magazine%20est%20maintenant%2010%20fois%20plus%20rapide/jamstatic/twitter-card.png
 categories:
   - hugo
   - netlify
   - cms
 ---
-
-{{< intro >}}
+:::intro
 La refonte de Smashing Magazine à l’aide d’un générateur de site
 statique et d’APIs tierces comme Algolia constitue un petit évènement pour le
 développement Web moderne. Smashing est en effet un des sites les plus consultés
@@ -27,11 +24,9 @@ sites statiques, qui a accompagné Smashing dans cette aventure. En traduisant
 [l’article paru sur leur blog](https://www.netlify.com/blog/2017/03/16/smashing-magazine-just-got-10x-faster/),
 nous continuons à promouvoir ces solutions dans l’espoir que cela vous incite à
 adopter à votre tour ce type d’architectures dans certains de vos projets.
-{{% /intro %}}
+:::
 
----
-
-{{< youtube rB4Cl5LSe2c >}}
+[](https://www.youtube.com/watch?v=rB4Cl5LSe2c)
 
 ## Écouter l’épopée de Smashing Magazine
 
@@ -60,10 +55,8 @@ Web moderne :
 
 - Les sites basés sur la Jamstack tirent partie de la puissance des CDN pour
   bénéficier d’une vitesse et d’une performance impossibles à battre.
-
 - Tout est versionné dans Git, pas besoin de bases de données à répliquer, pas
   d’installation compliquée.
-
 - Le code est pré-généré avec la Jamstack, les régénérations sont automatisées,
   les modifications ne seront pas en production avant la prochaine régénération…
   pour ne citer que quelques exemples.
@@ -92,18 +85,15 @@ de ce qu'il pouvait proposer. Même en utilisant la plupart des plugins de cache
 disponibles, il était clair que WordPress ne fonctionnait pas comme il fallait
 puisqu'il y avait des problèmes avec **chacun des plugins de cache**.
 
-{{< figure
-src="https://cdn.netlify.com/3e5d615c43e682e4601dcfcd7eb8ee15357be6d9/63741/img/blog/gif_1.gif" caption="Vitaly Friedman : nous avions des problèmes de cache avec chacun des plugins de cache WordPress existants" >}}
+![Vitaly Friedman : nous avions des problèmes de cache avec chacun des plugins de cache WordPress existants](https://cdn.netlify.com/3e5d615c43e682e4601dcfcd7eb8ee15357be6d9/63741/img/blog/gif_1.gif "Vitaly Friedman : nous avions des problèmes de cache avec chacun des plugins de cache WordPress existants.")
 
 **Si** Netlify voulait relever le défi, il fallait bien comprendre les priorités
 cruciales pour Smashing :
 
 - L'accès à une **plate-forme unifiée** — un endroit qui regroupe les différents
   outils techniques utilisés pour la gestion du site,
-
 - La liberté de produire **un design** qu'ils aiment sans avoir à subir les
   contraintes imposées par WordPress et les autres outils,
-
 - Le site le **plus performant** possible en se focalisant sur la fiabilité et
   la rapidité.
 
@@ -117,8 +107,10 @@ Smashing magazine serait la parfaite étude de cas pour montrer que l’utilisat
 de la Jamstack constitue **la** manière de développer des sites.
 
 {{< figure
-src="https://cdn.netlify.com/8847cc537164cc098d3f77f8db225c41f14430a5/e553b/img/blog/gif_4.gif"
+src=""
 caption="Mathias Biilmann : Smashing avait besoin d’un générateur, d’un CMS, de commentaires, d’une plate-forme de E-commerce, d’une gestion des abonnements et des paiements" >}}
+
+![Mathias Biilmann : Smashing avait besoin d’un générateur, d’un CMS, de commentaires, d’une plate-forme de E-commerce, d’une gestion des abonnements et des paiements](https://cdn.netlify.com/8847cc537164cc098d3f77f8db225c41f14430a5/e553b/img/blog/gif_4.gif "Mathias Biilmann : Smashing avait besoin d’un générateur, d’un CMS, de commentaires, d’une plate-forme de E-commerce, d’une gestion des abonnements et des paiements.")
 
 Cela signifie que Smashing avait beaucoup de besoins. Il fallait créer un outil
 de build pour le magazine, un gestionnaire de contenus pour les milliers
@@ -146,13 +138,10 @@ consisté à développer les APIS open source suivantes :
 
 - **GoTell** — une API et un outil de build pour la gestion d’un grand nombre de
   commentaires,
-
 - **GoCommerce** — une petite API en Go pour les sites e-commerce pour la
   gestion des commandes et des paiements,
-
 - **GoJoin** — une API qui intègre les abonnements Stripe pour les Single Page
   Apps et les sites,
-
 - **GoTrue** — une petite API open-source écrite en Go qui peut agir comme une
   API de service indépendante pour la gestion des inscriptions et des
   authentifications. Elle est basée sur OAuth2 et JWT et peut gérer les
@@ -169,9 +158,7 @@ Une des tâches les plus importantes liées au travail pour Smashing a été san
 conteste le projet de gestionnaire de contenus open source
 **[Netlify CMS](https://www.netlifycms.org/)**.
 
-{{< figure
-src="https://cdn.netlify.com/f938aee2d1bd841ea4fe599a3af0f4e9bbba6b3c/024d0/img/blog/netlifycms.svg"
-caption="Un CMS qui unifie le travail des auteurs, des éditeurs et des développeurs" >}}
+![Un CMS qui unifie le travail des auteurs, des éditeurs et des développeurs](https://cdn.netlify.com/f938aee2d1bd841ea4fe599a3af0f4e9bbba6b3c/024d0/img/blog/netlifycms.svg "Un CMS qui unifie le travail des auteurs, des éditeurs et des développeurs.")
 
 Loin de ses cousins bouffis et monolithiques comme WordPress, nous voulions que
 le CMS de Netlify permette aux éditeurs de contenus de bénéficier du processus
@@ -198,9 +185,7 @@ temps de début de chargement de 800ms à 80ms. Les visiteurs de Smashing vont
 maintenant bénéficier d’une expérience plus fluide grâce à de meilleures
 intégrations, une vitesse accrue et une meilleure performance.
 
-{{< figure
-src="https://cdn.netlify.com/f1e06365a29be3cfcf08b8f1a82fc902cb9a75cf/ec035/img/blog/gif_2.gif"
-caption="Le temps de début de chargement est bien plus rapide qu'auparavant" >}}
+![Le temps de début de chargement est bien plus rapide qu'auparavant](https://cdn.netlify.com/f1e06365a29be3cfcf08b8f1a82fc902cb9a75cf/ec035/img/blog/gif_2.gif "Le temps de début de chargement est bien plus rapide qu'auparavant.")
 
 Smashing possède désormais la plate-forme unifiée dont ils rêvaient. Ils gèrent
 maintenant à partir **d’un seul et même endroit** tous les solides besoins de

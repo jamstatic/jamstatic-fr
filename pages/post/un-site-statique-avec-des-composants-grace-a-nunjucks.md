@@ -3,16 +3,12 @@ title: "Un site statique avec des composants à l’aide de Nunjucks"
 description: "Apprenez à construire un site statique avec des composants à l’aide d’un préprocesseur HTML."
 date: 2018-03-13T20:21:48+01:00
 author: frank
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Un%20site%20statique%20avec%20des%20composants%20%C3%A0%20l%E2%80%99aide%20de%20Nunjucks/jamstatic/twitter-card.png
 source:
   author: "Chris Coyier"
   title: "Building A Static Site With Components Using Nunjucks"
   url: "https://www.smashingmagazine.com/2018/03/static-site-with-nunjucks/"
 ---
-
-{{< intro >}}
-
+:::intro
 La philosophie de la génération de site statique à l’aide d’un langage de
 templating et d’un langage de balisage léger comme Markdown continue d’être
 déclinée à l’envi. Le même principe est repris ici par Chris Coyier, le créateur
@@ -27,10 +23,7 @@ configuration puisque c'est un service en ligne payant qui est utilisé ici, mai
 on pourrait tout aussi bien utiliser le générateur open source
 [Eleventy](/categories/eleventy) par exemple, qui utilise aussi
 [Nunjucks](https://mozilla.github.io/nunjucks/).
-
-{{< /intro >}}
-
----
+:::
 
 Il est de plus en plus courant de nos jours de bâtir des sites avec des
 composants et c'est une très bonne idée. Plutôt que de construire les pages les
@@ -267,16 +260,13 @@ Puis vous les appelez comme bon vous semble :
 L'idée générale est de **séparer les données et le balisage**. Cela nous donne
 des bénéfices concrets et assez clairs :
 
-1. Si nous devons changer le HTML, nous pouvons le faire dans la macro et le
-   changement sera reporté partout où la macro est utilisée.
-
+1. Si nous devons changer le HTML, nous pouvons le faire dans la macro et le changement sera reporté partout où la macro est utilisée.
 2. La donnée n'est pas mélangée avec le balisage
-
 3. La donnée pourrait venir de n'importe où ! Nous pouvons passer la donnée
    directement lors de l’appel comme nous l’avons fait ci-dessus. Ou bien nous
    pouvons référencer des données en JSON et boucler dessus. Je suis sûr qu'on
    pourrait mettre en place un système dans lequel des données JSON proviennent
-   d’un [CMS headless]({{< relref "cms-headless.md" >}}), d’un processus de
+   d’un [CMS headless](page:post/cms-headless), d’un processus de
    génération, d’une fonction serverless, d’une tâche cron ou de ce que vous
    voulez.
 
@@ -330,16 +320,13 @@ de manière sympa et efficace. Ce site sera simple à mettre à jour par la suit
 
 - Le projet final est un microsite nommé _Le pouvoir du Serverless pour les
   développeurs Front-End_ (<https://thepowerofserverless.info/>).
-
 - L'hébergement de fichier statique fait partie selon moi du mouvement
   serverless.
-
 - Tout le code est visible (et vous pouvez même en faire une copie pour vous)
   [directement dans CodePen](https://codepen.io/chriscoyier/project/editor/ZepgLg).
   Il est maintenu, généré et
   [hébergé](https://blog.codepen.io/projects/custom-domains/) entièrement sur
   CodePen à l’aide de [CodePen Projects](https://codepen.io/pro/projects).
-
 - CodePen Projects s'occupe de toute la partie
   [Nunjucks](https://mozilla.github.io/nunjucks/) dont nous avons parlé ici,
   ainsi que de la compilation Sass et de l’hébergement des images, que j'ai

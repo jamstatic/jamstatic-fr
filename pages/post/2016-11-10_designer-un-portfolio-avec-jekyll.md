@@ -16,7 +16,7 @@ de @katmeister, s'adresse aux webdesigners curieux de se frotter un peu à la
 ligne de commande et à Jekyll. Nous espérons qu'il vous permettra de faire vos
 premiers pas avec Jekyll, d’apprécier la liberté et la souplesse qu'il procure
 et qui sait de pouvoir ensuite
-[développer des thèmes pour Jekyll]({{< relref "creer-un-theme-pour-jekyll.md" >}}). 😊
+[développer des thèmes pour Jekyll](page:post/creer-un-theme-pour-jekyll). 😊
 :::
 
 ## Un guide complet pour coder et déployer un site, tout en ligne de commande

@@ -163,6 +163,6 @@ addCollection("categories", makeCategories);
 
 Nous avons maintenant un moyen de créer une collection, qui contient elle-même ses propres collections. Cela me permet de ranger mes articles dans des@ endroits distincts.
 
-[^1]: Ça c'est ce que je dis _maintenant_. Ma première motivation était de comprendre [comment marchent les collections]({{< relref "/post/les-collections-dans-eleventy" >}}).]
+[^1]: Ça c'est ce que je dis _maintenant_. Ma première motivation était de comprendre [comment marchent les collections](page:post/les-collections-dans-eleventy).]
 [^2]: Vous l'appelez comme vous voulez. Il se trouve que j'aime bien "categories".
 [^explication]: Ce `if (Array.isArray(categories[category]))` est vraiment stupide. N'existe-t-il pas un moyen d'ajouter un élément dans un tableau et de le créer au passage s'il n'existe pas ?

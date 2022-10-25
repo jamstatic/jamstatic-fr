@@ -4,24 +4,16 @@ description: Automatiser la publication d'un site Jekyll sur GitHub Pages quels 
 author: frank
 date: 2016-09-18T13:51:13+02:00
 lastmod: 2010-09-18T13:51:13+02:00
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1180,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Utiliser%20des%20plugins%20Jekyll%20sur%20GitHub%20Pages/jamstatic/twitter-card.png
 categories:
   - jekyll
 ---
-
-{{< intro >}}
-
+:::intro
 La popularité de Jekyll est en partie due à son support natif par GitHub Pages.
 Si cette solution gratuite est bien pratique, elle n’en reste pas moins limitée
 en termes de support de plugins Jekyll et ce pour des raisons de sécurité. Si
-vous voulez utiliser des plugins comme [jekyll-cloudinary]({{< relref
-"gestion-images-responsive-avec-jekyll-cloudinary.md" >}}) ou
+vous voulez utiliser des plugins comme [jekyll-cloudinary](page:post/gestion-images-responsive-avec-jekyll-cloudinary) ou
 [jekyll-assets](https://github.com/jekyll/jekyll-assets), il va falloir utiliser GitHub Actions ou générer votre site localement avant de le pousser en ligne.
-
-{{< /intro >}}
-
----
+:::
 
 **Mise à jour**: GitHub Actions permet maintenant de [publier un site Jekyll quels que soient les plugins utilisés](https://jekyllrb.com/docs/continuous-integration/github-actions/).
 
@@ -70,7 +62,7 @@ git push -u origin source
 Maintenant que vous avez créé la branche `source`, vous pouvez en faire la
 branche par _défaut_ dans GitHub :
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346483/default-branch-github.png" alt="Paramétrage des branches dans GitHub" >}}
+[Paramétrage des branches dans GitHub](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346483/default-branch-github.png "Paramétrage des branches dans GitHub.")
 
 ### Publication automatique
 
@@ -82,7 +74,7 @@ contenu suivant [^1] :
 
 [^1]: Les tâches utilisées dans ce billet ont été écrites par [Ixti](http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html), le créateur du plugin `jekyll-assets`.
 
-{{< gist DirtyF 24cb9c96b64173ecd85578f38bcc940d >}}
+[](https://gist.github.com/DirtyF/24cb9c96b64173ecd85578f38bcc940d)
 
 Maintenant vous pouvez simplement lancer la commande `rake publish` pour générer
 et publier votre site sur GitHub Pages.
@@ -106,7 +98,7 @@ publier sur GitHub. Jetez également un coup d’œil au [fichier Rakefile de
 Jekyll][jekyll-rakefile] pour une implémentation alternative de la tâche
 `rake site:publish`.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346531/octojekyll.png" alt="OctoJekyll" >}}
+![OctoJekyll](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346531/octojekyll.png "OctoJekyll.")
 
 Enfin, sachez qu'il existe d’autres solutions d’hébergement comme
 [GitLab Pages](https://pages.gitlab.io/), [Netlify](https://www.netlify.com),

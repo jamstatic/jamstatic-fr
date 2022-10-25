@@ -4,8 +4,6 @@ description: >
   Retour d’expérience sur la mise en place d’un site statique à l’aide de Contentful, Gatsby, Algolia et Netlify pour une qualité et un coût défiant toute concurrence.
 author: frank
 date: 2017-12-05
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_600,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Gatsby%20%2B%20Contentful%20%2B%20Netlify%20%2B%20Algolia/jamstatic/twitter-card.png
 source:
   lang: en
   title: Gatsby + Contentful + Netlify (and Algolia)
@@ -17,9 +15,7 @@ categories:
   - headless
   - algolia
 ---
-
-{{< intro >}}
-
+:::intro
 Le passage d’un CMS traditionnel comme WordPress à un processus moderne de
 développement faisant appel à différents services dans le Cloud et à des
 générateurs de site statique open source peut sembler encore risqué. C’est sans
@@ -28,11 +24,8 @@ partager votre enthousiasme, afin de montrer que non seulement c'est possible,
 mais que ça peut se faire sans douleur et à moindre coût. Le témoignage de
 [Josh Weaver](https://twitter.com/3cordguy) sur la migration d’un site de
 documentation vient s'ajouter à la longue liste des heureux convertis à la
-[Jamstack]({{< relref "5-raisons-de-tester-la-jamstack/" >}}).
-
-{{< /intro >}}
-
----
+[Jamstack](page:post/5-raisons-de-tester-la-jamstack).
+:::
 
 Gatsby connaît un vif succès et une
 [adoption](https://github.com/gatsbyjs/gatsby#showcase) croissante depuis peu et
@@ -65,7 +58,7 @@ mettre le nez dans le code.
 Je sais que ce n'est pas bien de formuler des hypothèses, mais je vais quand
 même partir du principe que si vous lisez ceci c'est que vous en savez déjà un
 peu sur
-[les avantages offerts par les sites statiques et la Jamstack]({{< relref "5-raisons-de-tester-la-jamstack/" >}}).
+[les avantages offerts par les sites statiques et la Jamstack](page/post/5-raisons-de-tester-la-jamstack).
 Si ce n'est pas le cas, allez faire un tour sur
 [https://jamstack.org/](https://jamstack.org/) pour comprendre en détail
 pourquoi le développement web, à défaut d’une meilleure formule, "revient aux
@@ -111,15 +104,13 @@ depuis l’outil, mais sans WordPress. L'expérience de rédaction ne pouvait do
 pas se résumer à la création d’un fichier et à enregistrer les changements dans
 un dépôt Git.
 
-{{< notice tip >}}
-
+:::tip
 Il existe un plugin
 [Gatsby-Source-WordPress](https://www.gatsbyjs.org/packages/gatsby-source-wordpress/)
 qui récupère le contenu via l’API de WordPress. Toutefois, en ce qui me
 concerne, ce n'était pas vraiment souhaitable, car je voulais éviter d’avoir à
 héberger un CMS traditionnel.
-
-{{< /notice >}}
+:::
 
 Contentful est un CMS headless hébergé avec une expérience utilisateur
 fantastique. C’est comme avoir une interface comme WordPress, sauf que vous êtes
@@ -154,7 +145,7 @@ Notre documentation est composée de 40 entrées et chaque entrée comporte
 plusieurs articles. Notre gros challenge était de concevoir une navigation par
 entrée.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346549/jamstatic/rollcall-docs.png"alt="Navigation documentation" >}}
+![Navigation documentation](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346549/jamstatic/rollcall-docs.png "Navigation documentation.")
 
 La façon dont Gastby gère les données permet de résoudre facilement ce genre de
 problématique, car il est très simple de récupérer des données depuis des
@@ -178,8 +169,7 @@ médias, le contenu désigne les pages, les articles, tous vos contenus texte et
 vos fichiers Markdown) à l’aide de requêtes GraphQL directement dans vos
 fichiers de gabarits de page.
 
-{{< notice tip >}}
-
+:::tip
 J'ai mis en place un blog pour ma femme à l’aide de Gatsby
 avant de travailler sur ce site de documentation, j'avais donc un peu
 d’expérience dans l’utilisation des APIs de Gatsby. Mais je me considère encore
@@ -187,8 +177,7 @@ comme un grand débutant dès qu'il s'agit de travailler avec GraphQL.
 Heureusement pour moi, les tutos de Gatsby et de la communauté sont excellents
 et répondent aux questions qu'on peut se poser, ainsi qu'à celles liées à
 l’utilisation globale.
-
-{{< /notice >}}
+:::
 
 À l’aide d’une seule requête GraphQL, j'ai été capable de récupérer toutes les
 entrées et les articles relatifs définis dans mon modèle de contenu dans
@@ -277,8 +266,7 @@ votre site toutes les 24 heures et mettre à jour l’index pour vous. Vous ajou
 une balise script qui relie votre champ de rechercher à leur API. Vous affinez
 les styles avec un peu de CSS et hop, c'est terminé.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346556/jamstatic/algolia-search.png"
-caption="Algolia DocSearch FTW" >}}
+![Algolia DocSearch FTW](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346556/jamstatic/algolia-search.png "Algolia DocSearch FTW.")
 
 Et ça marchait bien mieux que mon implémentation. Je me suis senti tout bête
 d’avoir dû fournir autant d’efforts pour rien, car j'ai réalisé que la réponse
@@ -323,19 +311,12 @@ extra :
 
 - Formule gratuite dans le cadre de projets personnels ou commerciaux (c'est
   vraiment une super offre gratuite),
-
 - activation du HTTPS en un clic grâce à Let's Encrypt,
-
 - réseau de CDN ultra-rapide,
-
 - support des noms de domaines personnalisés,
-
 - déploiements automatiques
-
 - un moteur de génération intégré super cool,
-
 - [et bien plus…](https://www.netlify.com/features/)
-
 - Et si je vous dis que tout ça est GRATUIT ?
 
 Voyons maintenant son utilisation avec Gatsby.
@@ -363,7 +344,7 @@ les avantages de pré-téléchargement de Gatsby aident aussi à ce que votre si
 obtienne de bons scores aux tests de performances. Tout ça sans n'avoir rien à
 faire.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346563/jamstatic/webpage-test.png" alt="Indicateurs de performance de la page" >}}
+![Indicateurs de performance de la page](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346563/jamstatic/webpage-test.png "Indicateurs de performance de la page.")
 
 Pour boucler la boucle, nous avions besoin de pouvoir déclencher une nouvelle
 génération du site à chaque édition ou ajout de contenu depuis Contentful. Une
@@ -374,7 +355,7 @@ une requête quand une action est effectuée sur un contenu ou qu'un contenu est
 crée. Parfait, à l’aide de ce hook Contentful va pouvoir indiquer à Netlify
 quand il y a un changement, et Netlify va générer le site et le déployer.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346571/jamstatic/netlify-build-webhook.png" alt="Déclenchement de la génération par webhook" >}}
+![Déclenchement de la génération par webhook](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346571/jamstatic/netlify-build-webhook.png "Déclenchement de la génération par webhook.")
 
 C’est l’association rêvée au paradis de la Jamstack.
 

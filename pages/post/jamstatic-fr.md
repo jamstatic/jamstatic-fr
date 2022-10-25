@@ -21,7 +21,7 @@ publications.
 
 Nous relayons et agrégeons en français ce qui se passe à divers endroits
 de la toile autour des générateurs de site statique et de [la stack JavaScript,
-APIs & Markup]({{< relref "5-raisons-de-tester-la-jamstack" >}}).
+APIs & Markup](page:post/5-raisons-de-tester-la-jamstack).
 
 ## Actualités
 

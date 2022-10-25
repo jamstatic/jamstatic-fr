@@ -3,23 +3,16 @@ title: Optimisation du temps de compilation de Jekyll
 description: Comment diviser par quinze le temps de génération de son site.
 date: 2018-11-28 00:00:00 +0000
 author: boris
-images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Optimisation%2520du%2520temps%2520de%2520compilation%2520de%2520Jekyll/jamstatic/twitter-card.png
 categories:
 - jekyll
-
 ---
-{{< intro >}}
-
+:::intro
 Il y a trois ans, fatigué par WordPress et de sa galaxie de plugins douteux, j'ai décidé de migrer vers un générateur de site statique. Après quelques essais avec diverses solutions, j'ai opté pour Jekyll, dont la communauté me semblait plus mature.
 
 Trois ans plus tard, je commence à comprendre les forces et les faiblesses de la solution, mais je reste loin d'en maîtriser tous les mystères. Je l'ai bidouillée pour publier du contenu multilingue, j'ai développé mes propres plugins, j'ai intégré des éléments d'architecture piochés chez des amis… Disons que je suis désormais assez à l'aise.
 
 Par contre, à force de manipulations, mon Jekyll ressemblait moins au célèbre docteur qu'au monstre de Frankenstein&nbsp;: un assemblage de portions de code grossièrement liées entre elles par des liens fragiles, se déplaçant lentement en gémissant… En un mot comme en cent&nbsp;: mon <em lang="en">build</em> était lent.
-
-{{< /intro >}}
-
----
+:::
 
 ## TL;DR
 
@@ -123,7 +116,7 @@ Elle est basée sur une clé front matter `i18n-key` qui me permet de faire se c
 
 [Ashwin Maroli](https://github.com/ashmaroli), l'un des membres de la <em lang="en">Jekyll Plugin Core Team</em>, travaille sur un plugin qui utilise une convention d'organisation des fichiers pour trouver les traductions, ce qui devrait considérablement améliorer les choses&nbsp;: [jekyll-locale](https://github.com/ashmaroli/jekyll-locale). J'ai essayé d'implémenter le plugin sur mon blog mais j'ai rencontré quelques impondérables lors de cette première tentative. J'y reviendrai plus tard, une fois que j'aurais simplifié mon organisation des contenus. J'aurais également besoin que certains autres plugins soit modifiés pour être compatibles, comme [jekyll-paginate-v2 de Sverrir Sigmundarson](https://github.com/sverrirs/jekyll-paginate-v2), qui me sert pour la pagination.
 
-Je ne manquerai pas d'en parler quand j'attaquerai à nouveau ce chantier
+Je ne manquerai pas d'en parler quand j'attaquerai à nouveau ce chantier.
 
 ---
 

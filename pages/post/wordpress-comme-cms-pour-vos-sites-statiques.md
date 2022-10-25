@@ -3,23 +3,17 @@ title: "Utiliser WordPress comme CMS pour vos sites statiques"
 date: 2018-01-09T15:50:46+01:00
 description: "Grâce à son API REST WordPress fait aussi CMS headless. Stefan Baumgartner montre comment récupérer les contenus pour générer un site statique avec Metalsmith."
 author: frank
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Utiliser%20WordPress%20pour%20vos%20sites%20statiques/jamstatic/twitter-card.png
 categories:
   - jamstack
   - headless
-keywords:
   - wordpress
-  - cms
-  - headless
 source:
   author: "Stefan Baumgartner"
   title: "WordPress as CMS for your JAMStack sites"
   url: https://fettblog.eu/wordpress-and-jamstack-sites/
 ---
-
-{{< intro >}}
-La mode est au [CMS headless]({{< relref "cms-headless.md" >}}),
+:::intro
+La mode est au [CMS headless](page:post/cms-headless),
 comprenez au découplage du back et du front. WordPress n'échappe pas à la règle.
 Même si son API REST ne permet pas encore de faire tout ce qu'on voudrait, il
 est tout à fait possible d’aller récupérer les contenus entrés par les
@@ -27,14 +21,10 @@ utilisateurs dans l’interface d’administration qu'ils affectionnent tant pou
 ensuite les passer à la moulinette d’un générateur de site statique. Stefan
 Baumgartner a testé pour vous avec [Metalsmith](http://www.metalsmith.io/),
 voici comment il a procédé.
-{{< /intro >}}
+:::
 
----
-
-La toute-puissante [JAMStack]({{< relref
-"5-raisons-de-tester-la-jamstack/" >}}) offre des sites web statiques rapides
-et sécurisés, et avec des systèmes de gestion de contenu [headless]({{< relref
-"cms-headless.md" >}}) ils deviennent même faciles à éditer ! Toutefois il peut
+La toute-puissante [JAMStack](page:post/5-raisons-de-tester-la-jamstack) offre des sites web statiques rapides
+et sécurisés, et avec des systèmes de gestion de contenu [headless](page:post/cms-headless) ils deviennent même faciles à éditer ! Toutefois il peut
 arriver que de temps à autre, vous vous retrouviez devant un blog WordPress avec
 tellement d’articles (et d’auteurs qui ont peur du changement !) pour que la
 raison vous pousse à ne pas le migrer. Mais WordPress aussi fonctionne en
@@ -124,22 +114,17 @@ fetch(url) /* 1 */
   .then((pages) => [].concat(...pages)); /* 6 */
 ```
 
-1.  Nous téléchargeons les 100 premiers articles de notre blog. Si notre blog
+1. Nous téléchargeons les 100 premiers articles de notre blog. Si notre blog
     WordPress contient moins de 100 articles, nous n'avons plus rien à
     télécharger.
-
-2.  L'entête `X-WP-TotalPages` nous indique combien il nous reste de pages à
+2. L'entête `X-WP-TotalPages` nous indique combien il nous reste de pages à
     télécharger.
-
-3.  Nous créons un tableau de promesses pour les pages à télécharger, nous
+3. Nous créons un tableau de promesses pour les pages à télécharger, nous
     commençons à la page 2 (la page 1 a déjà été téléchargée)
-
-4.  `Promise.all` nous permet de passer le premier résultat et tous les suivants
+4. `Promise.all` nous permet de passer le premier résultat et tous les suivants
     issus de notre tableau `pagesToFetch`.
-
-5.  Appel de promesse suivant : convertir tous les résultats en JSON.
-
-6.  Et enfin nous convertissons tous nos résultats dans un seul et unique
+5. Appel de promesse suivant : convertir tous les résultats en JSON.
+6. Et enfin nous convertissons tous nos résultats dans un seul et unique
     tableau qui contient toutes les données des articles de notre blog.
 
 L'appel `.then` suivant contiendra un tableau avec toutes les entrées du blog.
@@ -189,14 +174,13 @@ const wordpress = (url) => (files, smith, done) => { /* 1 */
 }
 ```
 
-1.  L'interface pour les plugins Metalsmith est `(files, metalsmith, done)`. Le
+1. L'interface pour les plugins Metalsmith est `(files, metalsmith, done)`. Le
     premier paramètre désigne l’ensemble des fichiers qui doivent être
     transformés en HTML. Le deuxième paramètre est l’objet Metalsmith. Le
     troisième paramètre est une fonction de callback. C’est particulièrement
     utile pour les opérations asynchrones. Appelez `done` lorsque votre plugin a
     fini son travail.
-
-2.  Une fois que nous avons tous les articles à partir des appels à l’API (voir
+2. Une fois que nous avons tous les articles à partir des appels à l’API (voir
     ci-dessus), nous avons transformé quelque peu les données. D'abord, nous
     devons modifier les permaliens de WordPress pour que Metalsmith puisse s'y
     retrouver. Nous utilisons le package `URL` de Node pour récupérer l’URL
@@ -205,17 +189,14 @@ const wordpress = (url) => (files, smith, done) => { /* 1 */
     `index.html`. De cette manière nous créons tout un tas de dossiers avec un
     seul fichier HTML dedans. Nous obtenons ainsi de belles URLs pour nos sites
     statiques.
-
-3.  Ensuite, nous créons des paires clé-valeur pour l’objet fichier. Chaque
+3. Ensuite, nous créons des paires clé-valeur pour l’objet fichier. Chaque
     valeur correspond à une entrée dans le tableau `post` que nous avons
     récupéré plus tôt. Nous précisons ensuite le gabarit à utiliser et indiquons
     le contenu (le plugin `metalsmith-layouts` a besoin de ces deux valeurs pour
     fonctionner).
-
-4.  Après ça, nous stockons cette valeur dans le chemin relatif que nous avons
+4. Après ça, nous stockons cette valeur dans le chemin relatif que nous avons
     défini plus tôt.
-
-5.  Une fois qu'on a fait ça pour tous les articles, nous appelons la fonction
+5. Une fois qu'on a fait ça pour tous les articles, nous appelons la fonction
     de callback `done` pour indiquer la fin du traitement par nos plugins.
 
 Parfait. En quelques lignes de code nous avons dit à Metalsmith d’étendre les

@@ -110,7 +110,7 @@ En dehors de la performance, il fonctionne de la même manière que les
 générateurs en Ruby ou en NodeJS avec lesquels vous êtes peut-être déjà
 familiers : du Markdown et des méta-données (en YAML, TOML ou JSON) transformés
 à l’aide de modèles. Sara Soueidan a écrit une [excellente introduction aux
-principales fonctionnalités d’Hugo]({{< relref "migration-de-jekyll-a-hugo.md" >}}).
+principales fonctionnalités d’Hugo](page:post/migration-de-jekyll-a-hugo).
 
 Pour moi la fonctionnalité qui tue dans Hugo c'est son
 [implémentation des snippets de code](https://gohugo.io/extras/shortcodes/). Les
