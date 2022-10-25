@@ -3,11 +3,10 @@ title: "Meetup Jamstack Paris #1"
 description: "Résumé des deux présentations dédiées à Gatsby."
 date: 2019-01-28T18:45:24+01:00
 author: frank
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Meetup%20Jamstack%20Paris%20%231/jamstatic/twitter-card.png
 categories:
-  - gatsby
   - meetup
+  - jamstack
+  - gatsby
 ---
 :::intro
 Au programme du premier meetup Jamstack Paris, un retour d'expérience sur la migration d'un site Angular vers Gatsby, et un exemple de développement en live d'un plugin Gatsby. [Les vidéos sont en ligne](https://www.youtube.com/channel/UC66eQOycjMnaqzpbRUhEK2w).
