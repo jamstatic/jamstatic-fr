@@ -3,8 +3,6 @@ title: "Navigation multilingue avec Eleventy"
 description: "Une approche pour gérer la navigation sur un site Jamstack multilingue généré avec Eleventy."
 author: jerome
 date: 2019-09-28
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Navigation%20multilingue%20avec%20Eleventy/jamstatic/twitter-card.png
 categories:
   - eleventy
   - i18n
@@ -18,7 +16,7 @@ source:
 
 Développer un site multilingue avec un générateur de site statique est à la portée de tous dès lors que l'on dispose d'un langage de templating, de données structurées et d'un système permettant de contrôler les URLs, ce que proposent la plupart des générateurs de sites statiques.
 
-Il existe beaucoup d'[articles sur le sujet](/categories/i18n), comme celui que nous avons publié sur [la gestion d'un site multilingue avec Eleventy]({{< relref "post/site-multilingue-avec-eleventy.md" >}}). Hugo dispose d'[une documentation très claire](https://gohugo.io/content-management/multilingual/) sur le sujet, de [nombreux](https://www.sylvaindurand.org/making-jekyll-multilingual/) [articles](https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/) en font de même pour Jekyll.
+Il existe beaucoup d'[articles sur le sujet](/categories/i18n), comme celui que nous avons publié sur [la gestion d'un site multilingue avec Eleventy](page:post/site-multilingue-avec-eleventy). Hugo dispose d'[une documentation très claire](https://gohugo.io/content-management/multilingual/) sur le sujet, de [nombreux](https://www.sylvaindurand.org/making-jekyll-multilingual/) [articles](https://forestry.io/blog/creating-a-multilingual-blog-with-jekyll/) en font de même pour Jekyll.
 
 Notre but ici est de rediriger depuis une page écrite dans une langue donnée vers les traductions disponibles pour cette même page. Si aucune traduction n'existe pour une page, alors nous redirigerons vers la page d'accueil dans la langue demandée.
 
