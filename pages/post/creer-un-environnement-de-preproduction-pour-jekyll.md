@@ -7,14 +7,10 @@ source:
   author: Eduardo Boucas
   title: Creating a staging environment for Jekyll
   url: https://eduardoboucas.com/blog/2017/02/22/jekyll-staging-environment.html
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Cr%C3%A9er%20un%20environnement%20de%20pr%C3%A9production%20pour%20Jekyll/jamstatic/twitter-card.png
 categories:
   - jekyll
 ---
-
-{{< intro >}}
-
+:::intro
 Dans son article, [Eduardo Boucas](https://eduardoboucas.com/) révèle comment il
 a mis simplement en place [un site de préproduction pour Jekyll grâce à Netlify](https://eduardoboucas.com/blog/2017/02/22/jekyll-staging-environment.html).
 Ce blog est également déployé et hébergé grâce à Netlify. La nouvelle version de
@@ -25,10 +21,7 @@ deux sites dans Netlify pour bénéficier d’une prévisualisation sur une URL
 dédiée. L'article d’Eduardo aborde néanmoins l’utilisation des variables
 d’environnements et utilise Jekyll comme exemple, la technique reste bien
 entendu valable pour d’autres générateurs comme Hugo, Hexo et les autres.
-
-{{< /intro >}}
-
----
+:::
 
 Un environnement de préproduction ou de _staging_ est une infrastructure de test
 qui s'approche autant que possible de la configuration d’un site de production.
@@ -50,16 +43,10 @@ copie basique de cette infrastructure de manière à faire passer notre contenu
 par un site distinct, avec une URL distincte. La démarche ressemblerait à
 quelque chose comme :
 
-1.  Pousser les changements sur GitHub
-
-2.  Le site de préproduction est régénéré, l’URL de préproduction peut être
-    utilisée pour prévisualiser le nouvel état
-
-3.  Créer une pull request de la préproduction vers la production pour
-    répercuter les changements
-
-4.  Le site de production est régénéré, l’URL de production reflète le nouvel
-    état du site
+1. Pousser les changements sur GitHub
+2. Le site de préproduction est régénéré, l’URL de préproduction peut être utilisée pour prévisualiser le nouvel état
+3. Créer une pull request de la préproduction vers la production pour répercuter les changements
+4. Le site de production est régénéré, l’URL de production reflète le nouvel état du site
 
 Pour que notre système fonctionne uniquement avec GitHub Pages nous allons avoir
 besoin de deux dépôts, puisqu'on ne peut pas servir deux sites à partir d’un
@@ -90,9 +77,7 @@ Pour commencer à utiliser Netlify, rendez-vous sur
 Cliquez sur `Ajoutez un nouveau projet`, sélectionnez GitHub et sélectionnez le
 dépôt qui dans lequel se trouve votre site.
 
-{{< figure
-src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523360891/configure-netlify.png"
-caption="Netlify : Configuration du dépôt" >}}
+![Netlify : Configuration du dépôt](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523360891/configure-netlify.png "Netlify : Configuration du dépôt")
 
 Dans l’onglet `Paramètres de base`, sélectionnez votre branche de préproduction
 (par exemple `dev`). Pour un site avec Jekyll, le dossier de publication par
@@ -111,9 +96,7 @@ un nom de domaine personnalisé pour ce site, pour cela vous devrez configurer
 votre DNS. Si vous avez choisi `dev-example-com` comme nom pour votre site, il
 vous faudra un CNAME qui pointe vers `dev-example-com.netlify.com`.
 
-{{< figure
-src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523361029/config-panel-netlify.png"
-caption="Netlify: le panneau de configuration" >}}
+![Netlify: le panneau de configuration](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523361029/config-panel-netlify.png "Netlify: le panneau de configuration")
 
 ## Configuration de Jekyll
 
@@ -157,4 +140,4 @@ bientôt pour des raisons que je dévoilerai dans un prochain article)
 
 Et voilà, vous avez maintenant un environnement de préproduction simple avec
 intégration continue pour un site statique et tout ça gratuitement. Pas mal,
-non ?
+non ?
