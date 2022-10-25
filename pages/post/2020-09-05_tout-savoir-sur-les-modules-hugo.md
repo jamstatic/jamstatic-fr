@@ -6,8 +6,6 @@ date: 2020-09-05T13:55:22+02:00
 lastmod: 2020-09-05T13:55:22+02:00
 categories:
   - hugo
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_64,y_120,l_text:poppins_78_ultrabold_line_spacing_-30:Tout%20ce%20que%20vous%20devez%20savoir%20sur%20les%20modules%20Hugo/jamstatic/twitter-card.png
 source:
   author: "Régis Philibert"
   title: "Hugo Modules: everything you need to know!"
