@@ -11,7 +11,7 @@ Ce site s'adresse à toutes celles et tous ceux qui s'intéressent de près ou d
 
 Une architecture à base de pages statiques enrichies par des appels à des API est une bonne manière de concevoir et de déployer des sites web performants et sécurisés.
 
-Cette approche est marketée par la société Netlify sous le nom [Jamstack]({{< relref "post/5-raisons-de-tester-la-jamstack" >}}) afin de simplifier la compréhension de leur service, mais ils sont loin d'être les seuls à proposer des services d'intégration continue et de déploiement sur CDN.
+Cette approche est marketée par la société Netlify sous le nom [Jamstack](page:post/5-raisons-de-tester-la-jamstack) afin de simplifier la compréhension de leur service, mais ils sont loin d'être les seuls à proposer des services d'intégration continue et de déploiement sur CDN.
 
 Ce qui nous intéresse ici, plus que le recours à des services bien pratiques il est vrai, c'est d'abord de répondre aux enjeux d'aujourd'hui : concilier des outils de développement qui adoptent une approche par composition, automatiser les déploiements, pour mieux se concentrer sur notre cœur de métier : le front, et ainsi pouvoir délivrer de sites utilisables, y compris avec une connexion 3G instable.
 
