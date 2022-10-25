@@ -20,8 +20,7 @@ C’est fou tout ce qu'on peut faire avec un générateur de site, des APis et d
 Dans cet exemple nous utiliserons le service [Snipcart](https://snipcart.com/) pour la gestion du panier d’achat et [Hugo](https://gohugo.io/) pour générer le site à la vitesse de l’éclair.
 :::
 
-> Pressé ? Passez directement au [tutoriel](#tutoriel) ou
-> [à la démo et au code dispo sur GitHub](#demo-repo).
+> Pressé ? Passez directement au [tutoriel](#tutoriel) ou [à la démo et au code dispo sur GitHub](#demo-repo).
 
 Il est temps de nous plonger à nouveau dans le monde en perpétuel mouvement de la [Jamstack](https://frank.taillandier.me/2016/05/21/la-jamstack/) et du développement web statique. Nos articles précédents sur la gestion d’un site e-commerce avec des générateurs de site statique comme [Middleman](https://snipcart.com/blog/static-site-e-commerce-integrating-snipcart-with-middleman) et [Jekyll](https://snipcart.com/blog/static-site-e-commerce-part-2-integrating-snipcart-with-jekyll) ont eu pas mal de succès, alors pourquoi s'arrêter en si bon chemin ?
 
