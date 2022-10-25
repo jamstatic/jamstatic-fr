@@ -24,9 +24,9 @@ Depuis que j'ai quitté Disqus pour [un système de commentaires statiques](http
 
 ## Passer à la version 2 de Staticman
 
-Pour tirer parti de ces nouvelles fonctionnalités, il était nécessaire de migrer les paramètres de Staticman du fichier `_config.yml` de Jekyll vers un nouveau fichier `staticman.yml` [^staticman-yml]. Comme il n'y a eu aucun changement dans les paramètres, la transition vers la version 2 était grandement simplifiée.
+Pour tirer parti de ces nouvelles fonctionnalités, il était nécessaire de migrer les paramètres de Staticman du fichier `_config.yml` de Jekyll vers un nouveau fichier `staticman.yml`[^staticman-yml]. Comme il n'y a eu aucun changement dans les paramètres, la transition vers la version 2 était grandement simplifiée.
 
-[^staticman-yml]: Un des avantages du nouveau fichier de configuration c'est qu'on peut utiliser Staticman avec d’autres générateurs de site statique. La `v2` ne vous oblige plus à utiliser un fichier `_config.yml` spécifique à Jekyll.
+
 
 ```yaml
 comments:
@@ -77,8 +77,6 @@ Pour faire une requête `POST` correcte à Staticman, l’attribut `action` de m
 ></form>
 ```
 
-[^property]: Les propriétés de site sont optionnelles. Se reporter à la documentation de Staticman pour plus de détails sur comment [connecter vos formulaires](https://staticman.net/docs/#step-3-hook-up-your-forms).
-
 ## Ajout du support des fils de commentaires
 
 Réussir à faire marcher les commentaires imbriqués s'est révélé assez pénible. Plusieurs erreurs Liquid, plusieurs tentatives avant d’arriver à faire marcher des boucles `for` à l’intérieur d’autres boucles `for`, des filtres de tableau qui pétaient des trucs et tout un tas de galères font que j'ai mis un moment avant de m'en sortir.
@@ -86,8 +84,6 @@ Réussir à faire marcher les commentaires imbriqués s'est révélé assez pén
 ### Ajout d’un identifiant au parent
 
 Pour imbriquer correctement les réponses, j'avais besoin de pouvoir déterminer leur hiérarchie. La `v2` de Staticman possède un nouveau champ nommé `options[parent]`[^parent-field] qui peut être utilisé pour aider à établir cette relation. Avant d’aller plus loin, ajoutons déjà cet identifiant à mon formulaire dans un champ caché.
-
-[^parent-field]: Staticman nomme ce champ `_parent` dans les entrées.
 
 ```html
 <input type="hidden" id="comment-parent" name="options[parent]" value="" />
@@ -283,8 +279,6 @@ Malheureusement le filtre `where_exp` s'est révélé problématique une fois de
 `Liquid Exception: Liquid error (line 47): Nesting too deep in /_layouts/page.html`.
 
 Après avoir brièvement songé un moment au film **Inception**, j'ai appliqué un filtre `inspect` pour m'aider à m'en sortir avec la boucle `replies`. J'en ai conclu que la condition `where_exp` échouait[^integer-string] parce que je tentais de comparer un entier avec une chaîne de caractères 😳.
-
-[^integer-string]: `15` n'est pas la même chose que `'15'`. Ces guillemets simples font toute la différence…
 
 Pour résoudre cela, j'ai placé une balise `capture` autour de la variable d’index pour la convertir en chaîne de caractères. Puis j'ai modifié la condition du filtre `where_exp` afin de comparer `_parent` avec cette nouvelle variable `{{ i }}` --- pour corriger le problème et me permettre de passer à la suite.
 
@@ -508,10 +502,18 @@ Pour terminer, ajoutons deux champs au formulaire de commentaire.
 
 Rien de bien surprenant ici, `name=options[subscribe]` and `value="email"` sont ajoutés au champ pour associer les données d’abonnement avec l’adresse mail.
 
-[^origin]: Cette URL sera ajoutée dans la notification par mail envoyée aux abonnés pour leur permettre d’ouvrir directement la page.
-
 Si tout est correctement configuré, l’utilisateur devrait recevoir un mail dès qu'un nouveau commentaire est posté sur le billet ou la page auxquels il s'est abonné.
 
-![Staticman reply email notification](https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_1024/v1523365018/staticman-email-notification.png "Exemple d’un mail de notification \"Nouvelle réponse\" de Staticman.")
+![Staticman reply email notification](https://mademistakes.com/static/0b3e2f77d709c1514da8240a2928cfec/929af/staticman-email-notification.png "Exemple d’un mail de notification 'Nouvelle réponse' de Staticman.")
 
 Voilà, vous avez mis en place un système de commentaires basé sur des fichiers statiques dans Jekyll et qui gère les commentaires imbriqués et les notifications de réponse. Maintenant j'aimerais gagner une minute de temps de génération pour pouvoir ajouter les nouveaux commentaires encore plus vite 😦.
+
+[^staticman-yml]: Un des avantages du nouveau fichier de configuration c'est qu'on peut utiliser Staticman avec d’autres générateurs de site statique. La `v2` ne vous oblige plus à utiliser un fichier `_config.yml` spécifique à Jekyll.
+
+[^property]: Les propriétés de site sont optionnelles. Se reporter à la documentation de Staticman pour plus de détails sur comment [connecter vos formulaires](https://staticman.net/docs/#step-3-hook-up-your-forms).
+
+[^parent-field]: Staticman nomme ce champ `_parent` dans les entrées.
+
+[^integer-string]: `15` n'est pas la même chose que `'15'`. Ces guillemets simples font toute la différence…
+
+[^origin]: Cette URL sera ajoutée dans la notification par mail envoyée aux abonnés pour leur permettre d’ouvrir directement la page.
