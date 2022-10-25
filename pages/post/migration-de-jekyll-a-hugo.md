@@ -3,8 +3,6 @@ title: Passer de Jekyll+Github Pages à Hugo+Netlify
 description: Le détail de la migration du blog de Sara Soueidan de Jekyll à Hugo et son passage de GitHub Pages à Netlify.
 date: 2017-06-07
 author: frank
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Passer%20de%20Jekyll%2BGithub%20Pages%20%C3%A0%20Hugo%2BNetlify/jamstatic/twitter-card.png
 source:
   url: https://www.sarasoueidan.com/blog/jekyll-ghpages-to-hugo-netlify/
   title: Migrating from Jekyll+Github Pages to Hugo+Netlify
@@ -13,9 +11,7 @@ source:
 categories:
   - hugo
 ---
-
-{{< intro >}}
-
+:::intro
 Si vous faites du développement front-end, du CSS, du SVG et
 autres joyeusetés, vous connaissez sans doute déjà la talentueuse
 [Sara Soueidan](https://www.sarasoueidan.com/). Il se trouve que Sara a travaillé
@@ -33,10 +29,7 @@ Go. Elle nous livre ici en détails le récit de cette migration qu'elle est bie
 contente d’avoir menée à bien. Puisse le partage de son périple vous épargner de
 subir les mêmes écueils et vous aider à commencer à vous familiariser avec les
 concepts d’Hugo.
-
-{{< /intro >}}
-
----
+:::
 
 Ces derniers mois, travailler sur mon site web s'est révélé être de plus en plus
 pénible, que ce soit pour continuer à le développer, itérer sur son design,
@@ -138,8 +131,7 @@ site est bien plus petit que Smashing Magazine, je savais que je n'avais aucun
 souci à me faire. Si Smashing Magazine pouvait être compilé aussi rapidement,
 pourquoi pas mon blog ?
 
-{{< notice info >}}
-
+:::info
 Veuillez prendre note que cet article n'est en aucun cas
 destiné à constituer un guide exhaustif sur Hugo. Il me reste encore beaucoup de
 choses à comprendre, je suis donc mal placée pour écrire un tel guide. Vous
@@ -151,8 +143,7 @@ pas une comparaison entre Hugo et Jekyll. C’est davantage une introduction à
 Hugo qui comporte quelques astuces. Si vous envisagez d’adopter Hugo comme
 nouveau générateur de site statique, j'espère que vous trouverez quelques trucs
 utiles pour avoir un système fonctionnel.
-
-{{< /notice >}}
+:::
 
 ### Configurer Hugo
 
@@ -208,8 +199,7 @@ les cheveux pas mal de fois. Mais croyez-moi, le résultat final prouve que ça
 valait **vraiment** le coup. Au passage, j'ai beaucoup appris. C’est ce que je
 vais partager avec vous dans la prochaine section.
 
-{{< notice tip >}}
-
+:::tip
 **Astuce** : Vous appartenez peut-être à une autre catégorie
 de développeur fainéant, vous préférez peut-être partir d’un modèle standard qui
 vous fournit la configuration dont vous avez besoin et qui est prêt pour que
@@ -220,8 +210,7 @@ contient tout ce qu'il faut, il y a même Webpack et Gulp de correctement
 configurés pour pouvoir faire tourner votre site. La structure de ce thème
 standard est légèrement différente de ce que je vais vous montrer, mais pas tant
 que ça.
-
-{{< /notice >}}
+:::
 
 ### Se plonger dans Hugo : quelques détails techniques
 
@@ -244,8 +233,7 @@ j'ai trouvé et qui m'ont également bien aidé. Prenez cet article comme un
 pense-bête, un ensemble de rappels, une note à mon futur moi à laquelle je
 devrai revenir si jamais j'ai besoin de revoir les bases.
 
-{{< notice info >}}
-
+:::info
 Notez bien que vous finirez sûrement par ne pas utiliser le
 même processus ou la même arborescence de fichiers que moi. Il est en effet peu
 probable que vous ayez exactement les mêmes types de contenus que moi. Il se
@@ -254,16 +242,13 @@ j'utilise actuellement, et c'est tant mieux. Et si vous êtes déjà un pro de H
 et que vous repérez des choses qui pourraient être réalisées d’une meilleure
 façon, ne vous gênez pas pour partager vos manières de faire avec le reste
 d’entre nous pour que nous puissions tous apprendre de vous.
-
-{{< /notice >}}
+:::
 
 #### La structure des dossiers d’Hugo
 
 La structure du répertoire de mon site en local ressemble actuellement à ça :
 
-{{< figure
-src="https://d33wubrfki0l68.cloudfront.net/4aa07c8129bdae37f8c6510453f274a32ac664c0/09ca5/images/article-assets/hugo-netlify/hugo-folder-structure.png"
-caption="Structure de dossiers pour Hugo" >}}
+![Structure de dossiers pour Hugo](https://d33wubrfki0l68.cloudfront.net/4aa07c8129bdae37f8c6510453f274a32ac664c0/09ca5/images/article-assets/hugo-netlify/hugo-folder-structure.png "Structure de dossiers pour Hugo.")
 
 Les dossiers que vous pouvez voir sur l’image ci-dessus, à l’exception du
 dossier `node_modules` sont ceux générés pour vous par Hugo lorsque vous
@@ -289,8 +274,7 @@ Le dossier `static` est destiné à héberger les contenus statiques comme les
 images, les fichiers CSS et JS mais aussi les fichiers audio, vidéo, les slides
 de présentations, etc. Je passe pas mal de temps à travailler dans ce dossier.
 
-{{< notice info >}}
-
+:::info
 Après être intervenue sur le redesign de Smashing Magazine,
 j'ai appris que votre structure peut-être différente de celle présentée plus
 haut. C’est à peu près la même chose mais si vous utilisez un modèle comme
@@ -302,8 +286,7 @@ Webpack sur mon site vu le peu de JS que j'utilise, mais si vous en avez
 l’utilité, je vous recommande d’utiliser leur template pour Hugo. Et perso, je
 préfère commencer de zéro pour apprendre et comprendre comment tout ça marche.
 Faites comme bon vous semble.
-
-{{< /notice >}}
+:::
 
 #### Créer et mettre en page du contenu
 
@@ -320,16 +303,14 @@ Puisque je voulais m'imprégner d’un nouvel environnement et que la plupart de
 documentation et des ressources dédiées à Hugo utilisent le format `toml`, c'est
 le format que j'ai utilisé. Jekyll utilise `yaml`.[^2]
 
-{{< notice info >}}
-
+:::info
 Je ne rentrerai pas ici sur les différences entre les deux
 formats, la documentation d’Hugo et Google sont vos amis. Personnellement ça m'a
 pris un peu de temps pour apprendre à utiliser toutes ces nouvelles syntaxes
 (TOML, les modèles de template en Go, etc.) avant de me sentir à l’aise.
 Néanmoins la courbe d’apprentissage est assez rapide, ne vous laissez donc pas
 intimider par ces nouvelles syntaxes si tout cela est nouveau pour vous.
-
-{{< /notice >}}
+:::
 
 ##### Définir (ou déclarer) les types de contenu
 
@@ -348,8 +329,8 @@ date = …
 +++
 ```
 
-{{< marker >}}La valeur `type` peut prendre pratiquement n'importe quelle
-valeur{{< /marker >}}, et c'est là où on peut se rendre compte du pouvoir
+La valeur `type` peut prendre pratiquement n'importe quelle
+valeur, et c'est là où on peut se rendre compte du pouvoir
 d’Hugo. Vous pouvez définir autant de types de contenus que vous voulez. Par
 exemple, j'utilise actuellement cinq types de contenus pour mon site :
 _statique_ (pour les pages comme "À propos" et "Travailler avec moi"), _blog_
@@ -357,14 +338,12 @@ _statique_ (pour les pages comme "À propos" et "Travailler avec moi"), _blog_
 _études de cas_ et _bureau_ (un nouveau type d’articles à paraître bientôt). Je
 peux créer autant de types de contenu que je veux.
 
-{{< notice update >}}
-
+:::update
 Il est possible de créer des sous-sections de contenu
 depuis la version 0.24 d’Hugo ! Cela vous permet par exemple de créer des
 sous-sections _design_ et _développement_ dans la section _articles_ et bien
 plus. C’est une fonctionnalité intéressante.
-
-{{< /notice >}}
+:::
 
 C’est une des choses que j'aime chez Hugo comparativement à Jekyll qui, _à ma
 connaissance_, n'offre pas de fonctionnalité similaire.[^3]
@@ -372,9 +351,7 @@ connaissance_, n'offre pas de fonctionnalité similaire.[^3]
 La capture d’écran ci-contre montre à quoi ressemble mon dossier `/content/` en
 ce moment :
 
-{{< figure
-src="https://d33wubrfki0l68.cloudfront.net/32450b106a26b69980db6e73094c9411c5734a61/ff4f7/images/article-assets/hugo-netlify/content-types.png"
-caption="Le contenu du dossier `content` de mon site" >}}
+![Le contenu du dossier `content` de mon site](https://d33wubrfki0l68.cloudfront.net/32450b106a26b69980db6e73094c9411c5734a61/ff4f7/images/article-assets/hugo-netlify/content-types.png "Le contenu du dossier `content` de mon site.")
 
 Les pages statiques sont créées dans des fichiers individuels au format Markdown
 à la racine du dossier `/content/`. Les autres types de contenus qui auraient
@@ -427,9 +404,7 @@ auquel nous afficherons la liste de tous les articles). Le dossier
 `/content/blog/` hébergera également tous les billets de blog. La capture
 d’écran suivante montre cela de façon plus visuelle :
 
-{{< figure
-src="https://d33wubrfki0l68.cloudfront.net/37bc25dc5366c0b251c5b2c50edd8ca246b85f4f/36428/images/article-assets/hugo-netlify/section-type.png"
-caption="Le contenu du dossier `/content/blog/`" >}}
+![Le contenu du dossier `/content/blog/`](https://d33wubrfki0l68.cloudfront.net/37bc25dc5366c0b251c5b2c50edd8ca246b85f4f/36428/images/article-assets/hugo-netlify/section-type.png "Le contenu du dossier `/content/blog/`.")
 
 Chaque type de contenu qui utilise cette arborescence de dossiers (ou chaque
 _section_ de contenu) comporte une page d’index qui commence par un tiret bas
@@ -492,8 +467,8 @@ voici à quoi il ressemble :
 {{ partial "footer.html" . }}
 ```
 
-{{< marker >}}`{{ .Content }}` récupère le contenu de la page correspondante
-dans le dossier `/content/`.{{< /marker >}} Donc ici ça récupère le contenu de
+`{{ .Content }}` récupère le contenu de la page correspondante
+dans le dossier `/content/`. Donc ici ça récupère le contenu de
 la page d’accueil à partir du fichier `/contents/_index.md`.
 
 En outre, j'appelle l’entête ainsi que le pied de page à l’aide de fichiers
@@ -553,8 +528,7 @@ utilisent ce type pour les pages statiques.
 La variable `page` indique à Hugo quel modèle de mise en page présent dans le
 répertoire `/layouts/` utiliser.
 
-{{< notice info >}}
-
+:::info
 Il est bon de noter également que Hugo utilisera automatiquement ce modèle même
 si je ne lui dis pas. Je me rappelle tout de même avoir eu quelques prises de
 tête au début quand j'essayais de comprendre comment utiliser les modèles pour
@@ -567,8 +541,7 @@ quelques jours pour en comprendre assez et pour oser écrire à son sujet. Quand
 j'avais peur de casser une fois de plus ma mise en page. Mais maintenant que
 j'en sais davantage, il est bon de signaler que vous n'avez pas vraiment besoin
 de la variable `page` ici.
-
-{{< /notice >}}
+:::
 
 Le `title` est utilisé comme intitulé de lien dans le menu. (Sur mon site le
 menu situé en haut de page contient une entrée "About & Interviews").
@@ -577,24 +550,22 @@ Je vous ai déjà dit que la `description` est utilisée dans le fichier partiel
 qui gère l’entête de page, cette description apparait ensuite dans l’onglet de
 votre navigateur.
 
-{{< marker >}}La variable `menu` indique à Hugo que cette page doit avoir une
-entrée dans le menu principal.{{< /marker >}}
+La variable `menu` indique à Hugo que cette page doit avoir une
+entrée dans le menu principal.
 
-{{< marker >}}La variable `weight` est très utile pour vous aider à définir
-l’ordre d’affichage des liens dans le menu.{{< /marker >}} Si vous ne l’utilisez
+La variable `weight` est très utile pour vous aider à définir
+l’ordre d’affichage des liens dans le menu. Si vous ne l’utilisez
 pas, Hugo utilisera son propre ordre par défaut – qui n'était pas celui que je
 souhaitais pour mon site. Vous pouvez également définir des valeurs négatives
 pour cette variable.
 
-{{< notice info >}}
-
+:::info
 Pour faire court, je vous renvoie une fois de plus à la
 documentation d’Hugo pour ce qui est de l’utilisation et de la configuration du
 menu principal. J'ajoute que certains aspects sont encore assez confus pour moi,
 mais comme je suis arrivée à faire ce que je voulais maintenant : je ne touche
 plus à rien, j'ai trop peur de casser un truc. Une fois de plus. 😂
-
-{{< /notice >}}
+:::
 
 Toutes les autres pages statiques sont créées de la même manière. La seule chose
 qui change c'est le titre, la description et leur ordre dans le menu. Elles
@@ -616,15 +587,13 @@ appel aux fichiers partiels d’entête et de bas de page. Notez la correspondan
 entre le type `static` et le dossier `static` situé dans `layouts` qui contient
 le modèle de mise en page.
 
-{{< notice info >}}
-
+:::info
 Vous n'avez pas à écrire tout le HTML dans le fichier
 Markdown. Vous pouvez mettre toute la structure du HTML, comme les conteneurs,
 etc. dans le modèle de mise en page et n'avoir que le texte dans le fichier
 Markdown. Si j'ai procédé de la sorte, c'est juste que ça me convient bien comme
 ça.
-
-{{< /notice >}}
+:::
 
 ##### Les archétypes de contenu
 
@@ -672,7 +641,7 @@ défaut les valeurs de ces variables seront vierges, prêtes à être renseigné
 La capture d’écran suivante montre les variables front matter que j'ai définis
 pour l’archétype `etudes-de-cas` :
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346514/archetype-hugo.png" caption="Les variables définies pour l’archétype des études de cas. À chaque fois que je demande à Hugo de créer une nouvelle étude de cas pour moi, il va automatiquement ajouter ces variables front matter. Ces variables sont ensuite utilisées par le modèle HTML de la page d’études de cas." >}}
+![](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346514/archetype-hugo.png "Les variables définies pour l’archétype des études de cas. À chaque fois que je demande à Hugo de créer une nouvelle étude de cas pour moi, il va automatiquement ajouter ces variables front matter. Ces variables sont ensuite utilisées par le modèle HTML de la page d’études de cas.")
 
 Notez aussi que les autres archétypes que j'ai définis dans le répertoire
 `archetypes` qui correspondent aux quatre autres types de section qui figurent
@@ -764,9 +733,7 @@ celle que nous avons dans `/content/`.
 
 C’est toujours pas clair ? Alors regardez ce que ça donne pour mon site :
 
-{{< figure
-src="https://d33wubrfki0l68.cloudfront.net/1e4417080932df239c9a7eae7ded8f0ad59eb2ea/7ae87/images/article-assets/hugo-netlify/layouts.png"
-caption="La structuration des répertoires pour le contenu et les modèles de mon site." >}}
+![](https://d33wubrfki0l68.cloudfront.net/1e4417080932df239c9a7eae7ded8f0ad59eb2ea/7ae87/images/article-assets/hugo-netlify/layouts.png "La structuration des répertoires pour le contenu et les modèles de mon site.")
 
 Attardons-nous à nouveau quelques instants sur la section blog. Au répertoire
 `/content/blog/` correspond le répertoire `/layouts/blog/`.
@@ -853,13 +820,11 @@ partiel pour la gestion de la pagination.
 {{ partial "pagination.html" . }}
 ```
 
-{{< notice info >}}
-
+:::info
 Ne faites pas attention au code HTML de cette boucle, ça fait
 un moment que je n'ai pas travaillé sur mon site, il aurait bien besoin de
 quelques améliorations. Le balisage sera bientôt mis à jour.
-
-{{< /notice >}}
+:::
 
 C’est la partie `{{ range .Paginator.Pages }}` qui est vraiment importante ici.
 {{< marker >}}Chaque `.Paginator` que vous utilisez dans une page d’index de
@@ -870,16 +835,14 @@ cinq plus récents. Une boucle similaire dans le fichier
 `layouts/workshops/index.html` bouclerait sur les ateliers stockés dans le
 dossier `/content/workshops/` et afficherait la liste des ateliers dans l’index.
 
-{{< notice info >}}
-
+:::info
 Je confonds encore quelques variables globales du site et des
 variables de page dans Hugo. Ce que j'ai pour le moment me suffit, et si jamais
 j'avais besoin de plus de flexibilité, d’options ou de fonctionnalités, il
 faudra que je me replonge de nouveau dans la documentation pour arriver à tirer
 de la logique d’Hugo plus qu'une simple boucle. Vous devriez en faire de
 même.
-
-{{< /notice >}}
+:::
 
 Et pour ce qui est du fichier partiel `pagination.html`, le mien ressemble pour
 le moment à ça :
@@ -956,9 +919,9 @@ blog, mais avec une différence importante :
 {{ end }}
 ```
 
-En résumé : {{< marker >}}`.Site.Pages` boucle sur toutes les pages de votre
+En résumé : `.Site.Pages` boucle sur toutes les pages de votre
 site. En d’autres termes, cela va lister tous les fichiers Markdown contenus
-dans le dossier `/content/`.{{< /marker >}} Pour indiquer à Hugo de n'afficher
+dans le dossier `/content/`. Pour indiquer à Hugo de n'afficher
 que les fichiers situés dans la section `/content/blog/`, on “filtre” les pages
 en précisant le `"Type" "blog"`. On procédera également de la sorte pour une
 page d’archive d’une autre section, en utilisant le nom de la section comme
@@ -999,20 +962,15 @@ Un hébergement gratuit et rapide ! Woohoo !
 La configuration de votre site se fait en quelques clics :
 
 - Créer un compte sur [netlify.com](https://netlify.com)
-
 - Relier son compte Netlify à son dépôt de code. Le mien est hébergé sur GitHub,
   j'ai pu le connecter depuis l’interface de Netlify.
-
 - Spécifier le dossier de destination ainsi que la commande de build,
   respectivement `public` et `hugo` dans mon cas. (Voir les captures d’écrans
   ci-dessous)
-
 - Configuration de votre nom de domaine. Cela demande de faire quelques
   changements de DNS.
-
 - Cela m'a demandé seulement 3 clics pour bénéficier d’un certificat SSL
   renouvelé automatiquement et d’une connexion HTTPS pour mon site.
-
 - Et… c'est tout.
 
 Je devrais probablement mentionner le fait que j'ai rencontré quelques
@@ -1029,7 +987,6 @@ Quelques bons trucs à savoir :
   conflits, ne versionnez pas votre dossier de destination dans votre dépôt. Le
   mien n'est présent que sur ma machine. Je rencontrais des problèmes de rendus
   avec certains templates quand je le versionnais auparavant.
-
 - Vérifiez bien la version d’Hugo que vous utilisez (`hugo version`) et celle
   utilisée par Netlify. Au début j'ai eu droit à des erreurs de build qui
   empêchaient le déploiement, car ma version était plus récente que celle de
@@ -1039,16 +996,12 @@ Quelques bons trucs à savoir :
 
 Voici en partie à quoi ressemble mon tableau de bord Netlify :
 
-{{< figure
-src="https://d33wubrfki0l68.cloudfront.net/9827bd9472d1606e4262dc9207669478e50a48c2/76bd7/images/article-assets/hugo-netlify/netlify-dashboard.png"
-caption="Paramètres de déploiement et variables environnement dans le tableau de bord de Netlify." >}}
+![](https://d33wubrfki0l68.cloudfront.net/9827bd9472d1606e4262dc9207669478e50a48c2/76bd7/images/article-assets/hugo-netlify/netlify-dashboard.png "Paramètres de déploiement et variables environnement dans le tableau de bord de Netlify.")
 
 J'aime aussi le fait que Netlify propose des options pour optimiser et assembler
 les assets pour vous, afin d’améliorer les performances globales de votre site.
 
-{{< figure
-src="https://d33wubrfki0l68.cloudfront.net/341e3023bff0c722f41c37b91c18c9d04fa612c5/35119/images/article-assets/hugo-netlify/netlify-dashboard-2.png"
-caption="Options d’optimisation des assets dans le tableau de bord de Netlify" >}}
+![](https://d33wubrfki0l68.cloudfront.net/341e3023bff0c722f41c37b91c18c9d04fa612c5/35119/images/article-assets/hugo-netlify/netlify-dashboard-2.png "Options d’optimisation des assets dans le tableau de bord de Netlify.")
 
 J'ai constaté quelques améliorations et plus de A verts sur la page de résultats
 sur [webpagetest.org](https://webpagetest.org) alors qu'ils étaient rouges
@@ -1074,20 +1027,15 @@ quelques années et que j'avais jusqu'ici remis à plus tard, en partie à cause
 la situation dans laquelle je me trouvais précédemment avec Jekyll :
 
 - **Lancer une mailing-list.** C’est prévu d’ici la fin du mois.
-
 - Une nouvelle section pour les articles qui ne rentrent pas dans la section des
   articles techniques.
-
 - Améliorer la qualité du code du site pour ne plus être embarrassée et rendre
   le dépôt public sur Github.
-
 - **Rendre le site disponible en mode offline.** Et le rendre encore plus
   _rapide_.
-
 - Il y aura une **FAQ** mais pas au format des AMA (Ask Me Anything) qu'on
   trouve sur GitHub. Il y a des aspects que je n'aime pas dans ce format. Plus
   d’informations et de détails dès que la lettre d’information paraîtra.
-
 - **Écrire plus régulièrement.** Je laisse beaucoup trop d’idées de côté que je
   devrais transformer en articles de blog. Je me suis promise d’écrire plus
   souvent, même si ces idées d’articles ne sont pas aussi poussées que

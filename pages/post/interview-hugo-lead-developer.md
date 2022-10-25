@@ -4,14 +4,10 @@ description: >
   Bjørn Erik Pedersen répond à nos questions sur Hugo, le gestionnaire de sites statiques ultra-rapide.
 date: 2017-10-03 13:45:36 +0200
 author: frank
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Questions%20%C3%A0%20Bj%C3%B8rn%20Erik%20Pedersen%252C%20le%20d%C3%A9veloppeur%20d%E2%80%99Hugo/jamstatic/twitter-card.png
 categories:
   - hugo
 ---
-
-{{< intro >}}
-
+:::intro
 [Hugo](https://gohugo.io) est rapidement devenu l’un des
 gestionnaires de sites statiques les plus populaires comme en attestent ses
 bientôt [50 000 étoiles sur GitHub](https://github.com/gohugoio/hugo).
@@ -28,13 +24,9 @@ l’<abbr aria-label="internationalisation">i18n</abbr>, les exports personnalis
 nouveautés se succèdent à un rythme soutenu. Depuis la v0.14,
 [Bjørn Erik Pedersen](https://github.com/bep) dirige les développements, il a
 gentiment accepté de répondre à nos questions.
+:::
 
-{{< /intro >}}
-
----
-
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346509/hugo-bjorn-erik-pedersen.jpg"
-attr="Bjørn Erik Pedersen" attrlink="https://github.com/bep" >}}
+![Bjørn Erik Pedersen](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346509/hugo-bjorn-erik-pedersen.jpg "[Bjørn Erik Pedersen](https://github.com/bep)")
 
 ## Bonjour Bjørn Erik, comment t'es-tu retrouvé impliqué dans Hugo ?
 
@@ -101,9 +93,7 @@ vous-même.
 
 ## Quels sont les sites les plus visibles qui utilisent Hugo ?
 
-{{< figure
-src="https://thenewdynamic.imgix.net/showcase/labs-us-gov-hugo.jpg?w=700"
-attrlink="https://labs.usa.gov" attr="https://labs.usa.gov/" >}}
+![](https://thenewdynamic.imgix.net/showcase/labs-us-gov-hugo.jpg?w=700 "https://labs.usa.gov")
 
 Parmi les sites que je connais et que j'aime bien il y a
 [labs.usa.gov](https://labs.usa.gov/), [netlify.com](https://www.netlify.com),
@@ -118,10 +108,7 @@ Il y en a plein d’autres qui arrivent. Par exemple,
 en train de travailler sur une [refonte entièrement basée sur Hugo]({{< relref
 "smashing-mag-va-dix-fois-plus-vite.md" >}}).
 
-{{< figure
-src="https://thenewdynamic.imgix.net/screenshot-smashing-mag-hugo.jpg?w=700"
-attrlink="https://www.smashingmagazine.com"
-attr="La nouvelle version de Smashing Magazine" >}}
+![La nouvelle version de Smashing Magazine](https://thenewdynamic.imgix.net/screenshot-smashing-mag-hugo.jpg?w=700 "[La nouvelle version de Smashing Magazine](https://www.smashingmagazine.com)")
 
 ## Comment se porte le projet actuellement ?
 

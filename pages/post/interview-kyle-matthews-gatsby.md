@@ -3,8 +3,6 @@ title: Questions à Kyle Mathews, créateur de Gatsby un générateur pour les s
 description: Entretien avec Kyle Mathews, le créateur de Gatsby, un générateur de site statique basé sur React.
 date: 2017-07-11 10:00:00 +02:00
 author: frank
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Questions%20%C3%A0%20Kyle%20Mathews%20le%20cr%C3%A9ateur%20de%20Gatsby/jamstatic/twitter-card.png
 source:
   title: Q&A with Kyle Mathews, Creator of React-Based Static Site Generator Gatsby
   url: https://www.infoq.com/news/2017/07/gatsby-kyle-mathews-interview
@@ -12,9 +10,7 @@ source:
 categories:
   - gatsby
 ---
-
-{{< intro >}}
-
+:::intro
 Après deux ans de développement, Gatsby vient de passer en version
 1.0. Ce générateur intègre beaucoup d’outils notamment React et GraphQL et
 permet déjà d’interagir avec les versions headless des CMS WordPress et Drupal.
@@ -24,10 +20,7 @@ une popularité grandissante. Nous en publions ici la retranscription en
 français, car nous pensons que Gatsby devrait séduire la communauté JavaScript
 et devenir un des outils phares pour développer des applications Web très
 performantes.
-
-{{< /intro >}}
-
----
+:::
 
 Après avoir travaillé pour différentes startups, Kyle Mathews a démissionné pour
 se consacrer à l’un de ses projets personnels
@@ -58,8 +51,7 @@ Mathews.
 > remarque que cliquer sur des liens sur un site fait avec Gatsby, c'est comme
 > naviguer sur un site en local
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346952/architecture-gatsby.png"
-caption="Vue d’ensemble de Gatsby" >}}
+![Vue d’ensemble de Gatsby](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346952/architecture-gatsby.png "Vue d’ensemble de Gatsby")
 
 Dans une interview à InfoQ, Mathews parle des motivations pour lesquelles il
 développe Gastby et de son avenir.
@@ -138,6 +130,4 @@ plugins devrait permettre à la communauté de combler les manques et il en exis
 déjà plus d’une trentaine qui permettent d’utiliser des technologies comme Sass,
 Typescript ou Preact.
 
-Pour en savoir plus, rendez-vous sur
-[le dépôt GitHub](https://github.com/gatsbyjs/gatsby) ou
-[le site de Gatsby](https://www.gatsbyjs.org/).
+Pour en savoir plus, rendez-vous sur [le dépôt GitHub](https://github.com/gatsbyjs/gatsby) ou [le site de Gatsby](https://www.gatsbyjs.org/).

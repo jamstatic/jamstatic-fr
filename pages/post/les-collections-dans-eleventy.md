@@ -5,31 +5,24 @@ date: 2019-01-29T08:54:22+01:00
 author: frank
 categories:
   - eleventy
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Les%20collections%20dans%20Eleventy/jamstatic/twitter-card.png
 source:
   author: Philip Borenstein
   title: Working with Collections
   url: https://www.pborenstein.com/articles/collections/
 ---
-
-{{< intro >}}
-
+:::intro
 Le générateur de site statique open source [Eleventy](/categories/eleventy) est à la différence d'autres générateurs — comme Jekyll ou Hugo — beaucoup moins
 opiniâtre. Là où ces deux générateurs vont imposer _la_ manière dont vous pouvez
 créer des collections de documents (appelées sections de contenu dans Hugo),
 Eleventy lui vous laisse le choix.
-
-{{% /intro %}}
-
----
+:::
 
 Dans Eleventy les `collections` permettent de grouper des articles selon divers
 critères. Une collection pourrait désigner une série d'articles. Un autre
 collection pourrait regrouper les articles à propos de livres. Une troisième
 collection pourrait rassembler tous les contenus d'un même répertoire.
 
-Eleventy vous permet de créer des collections de deux manières :
+Eleventy vous permet de créer des collections de deux manières :
 
 - [implicitement](#), à l'aide de tags dans le front matter
 - [explicitement](#), avec la fonction `addCollection()`

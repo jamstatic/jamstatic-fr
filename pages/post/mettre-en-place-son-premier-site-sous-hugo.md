@@ -9,12 +9,8 @@ source:
   author: Chris Macrae
   title: "Up & Running With Hugo Part I: Building Your First Site"
   url: https://forestry.io/blog/up-and-running-with-hugo/
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Mettre%20en%20place%20son%20premier%20site%20sous%20Hugo/jamstatic/twitter-card.png
 ---
-
-{{< intro >}}
-
+:::intro
 Pour créer un nouveau projet avec Hugo, [Forestry](https://forestry.io) propose
 un kit de démarrage en libre téléchargement. Que vous ayez déjà utilisé le
 générateur de site statique Hugo ou pas, ce kit est intéressant, car il propose
@@ -22,10 +18,7 @@ une configuration complète et un workflow de développement moderne basé sur l
 outils de l’écosystème de `npm`.
 [Chris Macrae](https://twitter.com/chrisdmacrae) nous montre comment s'en servir
 pour créer votre premier site en moins de 30 minutes.
-
-{{< /intro >}}
-
----
+:::
 
 [Hugo](https://gohugo.io), le générateur de site statique écrit en Go, a pris la
 communauté de vitesse. Il présente tous les avantages d’un générateur de site
@@ -45,21 +38,7 @@ régulièrement mis à jour qui ajoute un workflow de développement moderne à 
 
 **Sommaire**
 
-- [1. Configurer Hugo](#1-configurer-hugo)
-
-- [2. Configurer votre site](#2-configurer-votre-site)
-
-  - [Mettre à jour un article](#mettre-à-jour-un-article)
-  - [Créer un nouvel article](#créer-un-nouvel-article)
-  - [Utiliser un thème](#utiliser-un-thème)
-
-- [3. Personnaliser votre site](#3-personnaliser-votre-site)
-
-- [4. Personnaliser votre thème](#4-personnaliser-votre-thème)
-
-  - [CSS & Javascript personnalisé](#css--javascript-personnalisé)
-
-- [5. Prochaine étape](#5-prochaine-étape)
+[toc]
 
 ## 1. Configurer Hugo
 
@@ -169,13 +148,11 @@ suivante dans l’en-tête _Front Matter_ de l’article:
 
 `date: "YYYY-MM-DDTHH:MM:SS-00:00"`
 
-{{< notice tip >}}
-
+:::tip
 _Remplacez_ `YYYY-MM-DDTHH:MM:SS-00:00` avec une date valide, comme…
 `2018-01-01T12:42:00-00:00`. Si votre date se situe dans le futur, Hugo ne
 générera pas cet article en production.
-
-{{< /notice >}}
+:::
 
 Sauvegardez vos changements puis affichez l’article mis à jour dans votre
 navigateur à l’adresse [http://localhost:3000/](http://localhost:3000/). La date
@@ -186,11 +163,11 @@ affichée devant le titre de l’article devrait avoir été mise à jour.
 Maintenant essayons de créer un nouvel article. Nous utiliserons pour cela la
 commande fournie avec Hugo pour générer un nouvel article. Dans notre projet,
 Hugo est déclaré comme une dépendance NPM, nous pouvons donc l’utiliser avec la
-commande :
+commande :
 
 `npm run hugo -- <command> --<param>`
 
-Créez votre premier article en lançant :
+Créez votre premier article en lançant :
 
 `npm run hugo -- new posts/mon-premier-article.md`
 
@@ -212,7 +189,7 @@ relatives à la page) dont on peut tirer parti dans les gabarits de page. Sous l
 _front matter_, nous pouvons ajouter du contenu au format markdown :
 
 Ajoutez par exemple le contenu suivant dans le fichier et sauvegardez vos
-changements :
+changements :
 
 ```md
 ## Bienvenue
@@ -246,7 +223,7 @@ Ensuite, mettez à jour la configuration du site aves les options de
 configuration spécifiques au thème.
 
 Ouvrez le fichier `hugo/config.toml` dans votre éditeur de texte favori et
-remplacer son contenu par celui-ci :
+remplacer son contenu par celui-ci :
 
 ```toml
 baseURL= "/"
@@ -275,7 +252,7 @@ Reportez-vous à la
 pour prendre connaissance de toutes les options de configuration disponibles.
 
 Pour finir, supprimez les exemples de gabarits de page fournis avec notre modèle
-de départ. Pour cela lancez la commande :
+de départ. Pour cela lancez la commande :
 
 ```sh
 rm -r hugo/layouts/
@@ -397,25 +374,23 @@ fichier `src/css/styles.css` et ajoutez le code suivant à la fin du fichier :
 
 {{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346973/capser-theme-final.jpg" alt="" caption="Le résultat final" >}}
 
-Admirez le résultat final dans votre navigateur !
+Admirez le résultat final dans votre navigateur !
 
 ## 5. Prochaine étape
 
-Vous êtes maintenant prêt·e à commencer à créer un site statique avec Hugo !
+Vous êtes maintenant prêt·e à commencer à créer un site statique avec Hugo !
 
 Vous pouvez continuer à utiliser le thème Casper ou repartir du début en
 utilisant les modèles du répertoire `hugo/layouts/`.
 
-{{< notice tip >}}
-
+:::tip
 Les fichiers des modèles de gabarits de page se trouvent dans le
 [_dépôt de notre kit de démarrage_](https://github.com/forestryio-templates/hugo-boilerplate/tree/master/hugo/layouts)
 si vous souhaitez repartir de zéro.
-
-{{< /notice >}}
+:::
 
 Pour en apprendre un peu plus sur Hugo, reportez-vous aux sections suivantes de
-la documentation officielle :
+la documentation officielle :
 
 - [L'organisation des contenus dans Hugo](https://gohugo.io/content-management/organization/)
 - [Introduction au langage de templating d’Hugo](https://gohugo.io/templates/introduction/)

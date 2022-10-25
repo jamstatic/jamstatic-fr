@@ -4,8 +4,6 @@ description: "Comment créer une collection afin de pouvoir travailler avec des 
 author: frank
 date: 2019-02-05T09:15:06+01:00
 lastmod: 2019-02-06T09:10:26+01:00
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Impl%C3%A9menter%20les%20cat%C3%A9gories%20dans%20Eleventy/jamstatic/twitter-card.png
 categories:
   - eleventy
 source:

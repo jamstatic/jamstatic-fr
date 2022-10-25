@@ -3,8 +3,6 @@ title: "Hugo, le point sur le contexte"
 description: "Exemples de gestion du contexte et signification du point dans les templates Hugo."
 date: 2018-02-08T17:27:39+01:00
 author: regis
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Hugo%252C%2520le%2520point%2520sur%2520le%2520contexte/jamstatic/twitter-card.png
 categories:
   - hugo
 source:
@@ -12,9 +10,7 @@ source:
   title: Hugo, the scope, the context and the dot
   url: https://regisphilibert.com/blog/2018/02/hugo-the-scope-the-context-and-the-dot/
 ---
-
-{{< intro >}}
-
+:::intro
 Le [contexte](https://gohugo.io/templates/introduction/#context-aka-the-dot),
 c'est un concept assez perturbant quand on commence à vouloir développer des
 modèles de page pour Hugo. Il est facile de s'emmêler les pinceaux pour accéder à
@@ -22,10 +18,7 @@ ses [variables](https://golang.org/pkg/text/template/#hdr-Variables). Au travers
 de quelques exemples très simples, [Régis
 Philibert](https://regisphilibert.com/tags/hugo/) se propose de nous aider à y
 voir plus clair.
-
-{{< /intro >}}
-
----
+:::
 
 **Mais pourquoi ma variable n'est pas accessible ici et ici ?** 🙄
 

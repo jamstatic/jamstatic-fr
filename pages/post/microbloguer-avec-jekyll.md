@@ -3,8 +3,6 @@ title: Microbloguer avec Jekyll
 description: "Un microblog est un blog qui publie des articles courts, le plus souvent sans titre. Rejoignez la communauté IndieWeb et configurez votre site pour pour publier vos notes pour ensuite les envoyer sur Twitter."
 date: 2018-09-07 14:26:04 +0000
 author: frank
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Microbloguer%20avec%20Jekyll/jamstatic/twitter-card.png
 categories:
   - jekyll
 source:
@@ -12,12 +10,10 @@ source:
   title: Microblogging in Jekyll
   url: http://fionavoss.blog/2018/04/01/microblogging-in-jekyll/
 ---
-
-{{< intro >}}
+:::intro
 Garder la main sur ses contenus est devenu une préoccupation pour beaucoup, on a pu le voir récemment avec l'annonce de Medium qui a décidé d'arrêter le support des noms de domaine personnalisés. Versionner ses contenus dans un format texte est la raison première de l'existence des générateurs comme Jekyll.
-Et si pour être un peu plus indépendant des plate-formes des réseaux sociaux qui se nourrissent de nos données, on commençait par publier sur son site, quitte à republier automatiquement ensuite sur Medium ou Twitter ? Fiona Voss a tenté l'expérience et ça marche très bien ! 🎉{{< /intro >}}
-
----
+Et si pour être un peu plus indépendant des plate-formes des réseaux sociaux qui se nourrissent de nos données, on commençait par publier sur son site, quitte à republier automatiquement ensuite sur Medium ou Twitter ? Fiona Voss a tenté l'expérience et ça marche très bien ! 🎉
+:::
 
 Un microblog est un blog sur lequel figurent des articles courts, le plus souvent sans titre. Jusqu'à récemment je pensais que Twitter ou Tumblr étaient les seules plate-formes sur lesquelles les gens pouvaient microbloguer. Il s'avère que les membres enthousiastes de la vibrante communauté de l'[IndieWeb](https://indieweb.org/) microbloguent sur leurs sites web. À mon tour, j'ai décidé de faire de même et de configurer mon site pour pouvoir microbloguer.
 

@@ -5,20 +5,13 @@ description:
   filtres pour les URLs et bien plus encore.
 date: 2016-10-07
 author: frank
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1000,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Les%20nouveaut%C3%A9s%20de%20Jekyll%203.3/jamstatic/twitter-card.png
 categories:
   - jekyll
 ---
-
-{{< intro >}}
-
+:::intro
 Plein de nouveautés pour vous simplifier la vie dans la version
 3.3 de Jekyll. On retiendra trois fonctionnalités à tester en priorité.
-
-{{< /intro >}}
-
----
+:::
 
 ## Les thèmes peuvent désormais fournir des assets statiques et dynamiques dans le dossier `/assets`
 

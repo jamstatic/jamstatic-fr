@@ -5,19 +5,17 @@ description:
   le samedi 7 mai 2016.
 date: 2016-04-14
 author: frank
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_800,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:JekyllConf%202016/jamstatic/twitter-card.png
 categories:
   - jekyll
 ---
 
-{{< intro >}} [JekyllConf](https://jekyllconf.com/) est la première conférence
+:::intro
+[JekyllConf](https://jekyllconf.com/) est la première conférence
 entièrement consacrée à Jekyll. C’est une conférence en ligne, gratuite et
 ouverte à tous, preuve de la volonté de partage qui anime la communauté. Elle
 aura lieu le samedi 7 mai 2016 à partir de 19h heure française, les vidéos
-seront mises en ligne peu après. {{< /intro >}}
-
----
+seront mises en ligne peu après.
+:::
 
 La première édition avait rassemblé Tom Preston-Werner, Parker Moore, Brandon
 Mathis ou Ben Balter, respectivement créateurs et mainteneurs de Jekyll,

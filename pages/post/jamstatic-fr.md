@@ -6,7 +6,6 @@ excerpt: |
   Ce site a pour but de relayer les actualités de la communauté [Jamstack](https://jamstack.org/) en français.
 date: 2016-04-01
 ---
-
 ## À propos de Jamstatic
 
 Nous observons actuellement un vrai engouement pour l’utilisation des générateurs de site statique.
