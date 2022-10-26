@@ -314,14 +314,14 @@ assembler ces pièces comme voulu par Harp). Terraform est constitué d’un nom
 de fichiers qui définissent ces processeurs pour JavaScript, CSS/feuilles de
 style et modèles (qui ici comprennent Markdown).
 
-![](https://cdn.css-tricks.com/wp-content/uploads/2017/02/terraform-1.jpg)
+![img](../../assets/images/2017-02-09_y-a-quoi-dans-un-generateur-de-site-statique/terraform-1.jpg)
 
 Dans chacun de ces dossiers se trouve un dossier `processors` qui renferme le
 code pour chacun des processeurs spécifiques que Terraform (C’est-à-dire Harp)
 supporte. Par exemple, dans le dossier des modèles se trouvent les fichiers qui
 permettent de compiler les fichiers EJS, Jade, and Markdown.
 
-![](https://cdn.css-tricks.com/wp-content/uploads/2017/02/terraform_processors.png)
+![img](../../assets/images/2017-02-09_y-a-quoi-dans-un-generateur-de-site-statique/terraform_processors.png)
 
 Je ne vais pas aller creuser le code de chacun d’entre eux, mais pour la
 plupart, ils se reposent sur des modules npm externes qui gèrent le processeur
@@ -494,10 +494,6 @@ pourrait vous intéresser. Mon rapport, simplement intitulé
 est gratuit et essaie d’aborder l’historique, le paysage actuel et les
 fondamentaux des générateurs de site statique.
 
-![](https://cdn.css-tricks.com/wp-content/uploads/2017/02/books-1.jpg)
+![img](../../assets/images/2017-02-09_y-a-quoi-dans-un-generateur-de-site-statique/books-1.jpg)
 
-Le livre que j'ai coécrit avec
-[Raymond Camden](https://twitter.com/raymondcamden) s'appelle
-[Travailler avec les sites statiques](http://shop.oreilly.com/product/0636920051879.do)
-et est disponible en prépublication, mais devrait bientôt être disponible en
-version papier.
+Le livre que j'ai coécrit avec [Raymond Camden](https://twitter.com/raymondcamden) s'appelle [Travailler avec les sites statiques](http://shop.oreilly.com/product/0636920051879.do) et est disponible en prépublication, mais devrait bientôt être disponible en version papier.
