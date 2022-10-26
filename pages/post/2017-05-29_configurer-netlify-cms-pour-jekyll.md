@@ -76,7 +76,8 @@ Si vous souhaitez donner l’accès à plusieurs collaborateurs, rendez-vous sur
 
 ## Et voilà !
 
-Félicitations, vous venez d’ajouter une interface d’administration pour la gestion de vos contenus gérés à l’aide d’un générateur de site statique. Vos collaborateurs peuvent se focaliser sur la rédaction et l’édition de contenus, sans avoir à se préoccuper des commandes Git ou du déploiement, tout est automatisé ! Vous bénéficiez d’un workflow de publication de type Kanban si vous le désirez et Netlify va jusqu'à générer une [URL unique de prévisualisation](https://www.youtube.com/watch?v=s_4UL9oAcVE){embed=false} accessible depuis GitHub pour chaque pull-request créée. Elle est pas belle la vie ?
+Félicitations, vous venez d’ajouter une interface d’administration pour la gestion de vos contenus gérés à l’aide d’un générateur de site statique. Vos collaborateurs peuvent se focaliser sur la rédaction et l’édition de contenus, sans avoir à se préoccuper des commandes Git ou du déploiement, tout est automatisé ! Vous bénéficiez d’un workflow de publication de type Kanban si vous le désirez et Netlify va jusqu'à générer une [URL unique de prévisualisation](https://www.youtube.com/watch?v=s_4UL9oAcVE){embed=false}
+accessible depuis GitHub pour chaque pull-request créée. Elle est pas belle la vie ?
 
 ![Lors de la sauvegarde d’un nouvel article, une pull request est créée sur GitHub avec un lien vers une URL de prévisualisation](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346656/pull-request-netlify-cms.png "Lors de la sauvegarde d’un nouvel article, une pull request est créée sur GitHub avec un lien vers une URL de prévisualisation.")
 
