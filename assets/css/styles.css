@@ -1675,18 +1675,9 @@ select {
   text-transform: capitalize;
 }
 
-.italic {
-  font-style: italic;
-}
-
 .text-black-grape-400 {
   --tw-text-opacity: 1;
   color: rgb(78 62 112 / var(--tw-text-opacity));
-}
-
-.text-black-grape-200 {
-  --tw-text-opacity: 1;
-  color: rgb(177 163 204 / var(--tw-text-opacity));
 }
 
 .text-violet {
@@ -1762,28 +1753,14 @@ figure figcaption {
   max-width: 100%;
 }
 
-.note,
-.note-info {
+.note {
   margin-bottom: 1rem;
   border-left-width: 4px;
-  --tw-border-opacity: 1;
-  border-color: rgb(177 163 204 / var(--tw-border-opacity));
-  background-color: rgb(230 225 239 / var(--tw-bg-opacity));
   --tw-bg-opacity: 0.5;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-}
-
-@media (prefers-color-scheme: dark) {
-  .note,
-.note-info {
-    --tw-border-opacity: 1;
-    border-color: rgb(78 62 112 / var(--tw-border-opacity));
-    --tw-bg-opacity: 1;
-    background-color: rgb(35 27 49 / var(--tw-bg-opacity));
-  }
 }
 
 .note :is(h1, h2, h3, h4, h5, h6) {
@@ -1794,6 +1771,66 @@ figure figcaption {
 .note p {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.note-intro {
+  --tw-border-opacity: 1;
+  border-color: rgb(177 163 204 / var(--tw-border-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  .note-intro {
+    --tw-border-opacity: 1;
+    border-color: rgb(78 62 112 / var(--tw-border-opacity));
+  }
+}
+
+.note-info {
+  --tw-border-opacity: 1;
+  border-color: rgb(177 163 204 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(230 225 239 / var(--tw-bg-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  .note-info {
+    --tw-border-opacity: 1;
+    border-color: rgb(78 62 112 / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(35 27 49 / var(--tw-bg-opacity));
+  }
+}
+
+.note-tip {
+  --tw-border-opacity: 1;
+  border-color: rgb(204 223 255 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 239 255 / var(--tw-bg-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  .note-tip {
+    --tw-border-opacity: 1;
+    border-color: rgb(153 190 255 / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(128 174 255 / var(--tw-bg-opacity));
+  }
+}
+
+.note-important {
+  --tw-border-opacity: 1;
+  border-color: rgb(251 207 228 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 238 242 / var(--tw-bg-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  .note-important {
+    --tw-border-opacity: 1;
+    border-color: rgb(251 110 165 / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(252 67 124 / var(--tw-bg-opacity));
+  }
 }
 
 blockquote p {
