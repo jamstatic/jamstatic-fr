@@ -16,13 +16,15 @@
             <a href="https://github.com/jamstatic/jamstatic-fr/edit/master/pages/post/{{ page.filepath }}" title="Proposer une correction de cette article sur GitHub" class="no-underline hover:underline">Proposer une correction</a>
           </button>
           {%- if page.categories|default(0) > 0 ~%}
-          <hr class="my-2 dark:border-gray-800">
-          <h3 class="text-2xl font-display text-rose dark:text-rose-400">Dans la même catégorie</h3>
-          <ul>
-          {%- for related in site.pages|filter(r => page.categories[0] in r.categories|default({}) and r.id != page.id)|slice(0, 5) ~%}
-            <li><a class="text-xl font-bold no-underline transition duration-200 text-violet hover:text-violet-light dark:text-blue-500 dark:hover:text-blue-300" href="{{ url(related) }}">{{ related.title }}</a></li>
-          {%- endfor ~%}
-          </ul>
+          <aside>
+            <hr class="my-2 dark:border-gray-800">
+            <div class="text-2xl font-bold font-display text-rose dark:text-rose-400">Dans la même catégorie</div>
+            <ul>
+            {%- for related in site.pages|filter(r => page.categories[0] in r.categories|default({}) and r.id != page.id)|slice(0, 5) ~%}
+              <li><a class="text-xl font-bold no-underline transition duration-200 text-violet hover:text-violet-light dark:text-blue-500 dark:hover:text-blue-300" href="{{ url(related) }}">{{ related.title }}</a></li>
+            {%- endfor ~%}
+            </ul>
+          </aside>
           {%- endif ~%}
         </footer>
       </article>
