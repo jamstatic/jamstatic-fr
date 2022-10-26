@@ -7,8 +7,6 @@ source:
   author: Brian Rinaldi
   title: What Really Makes a Static Site Generator?
   url: https://css-tricks.com/really-makes-static-site-generator/
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:Qu%E2%80%99y%20a-t-il%20dans%20un%20g%C3%A9n%C3%A9rateur%20de%20site%20statique%20%3F/jamstatic/twitter-card.png
 ---
 :::intro
 Après être aller regarder [sous le capot de Jekyll](page:post/comment-fonctionne-jekyll) et toujours dans l’idée de continuer à nous
