@@ -3,8 +3,6 @@ title: Gérer les images responsive dans Jekyll avec le plugin Cloudinary
 description: Nicolas Hoizey présente les fonctionnalités de gestion d’images responsive offertes par le plugin Cloudinary qu'il a développé pour Jekyll.
 date: 2016-08-31
 author: nhoizey
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:G%C3%A9rer%20les%20images%20responsive%20dans%20Jekyll%20avec%20le%20plugin%20Cloudinary/jamstatic/twitter-card.png
 source:
   author: Nicolas Hoizey
   url: http://cloudinary.com/blog/how_i_used_cloudinary_to_solve_responsive_image_needs_in_my_jekyll_website_and_shared_the_magic_in_a_plugin
@@ -12,17 +10,7 @@ source:
 categories:
   - jekyll
 ---
-
-{{< intro >}}
-
-J'ai récemment mis à jour
-[mon site perso](https://nicolas-hoizey.com) avec
-[la version 3.0 de Jekyll](https://jekyllrb.com/news/2015/10/26/jekyll-3-0-released/)
-et j'en ai profité pour changer quelques outils.
-
-{{< /intro >}}
-
----
+J'ai récemment mis à jour [mon site perso](https://nicolas-hoizey.com) avec [la version 3.0 de Jekyll](https://jekyllrb.com/news/2015/10/26/jekyll-3-0-released/) et j'en ai profité pour changer quelques outils.
 
 Les plugins que j'utilisais ne répondaient pas à mes exigences pour les images
 responsive, j'ai donc décidé de trouver d’autres moyens de satisfaire ces
@@ -66,8 +54,7 @@ fonctionnalités et décider si je continuais ou si j'allais voir ailleurs.
 
 Les fonctions principales que je cherchais et que fournit Cloudinary sont :
 
-- **[La possibilité d’utiliser le service comme un proxy](http://cloudinary.com/documentation/upload_images#auto_fetching_remote_images)
-  :** les images originales sont stockées sur mon serveur, mais toutes les
+- **[La possibilité d’utiliser le service comme un proxy](http://cloudinary.com/documentation/upload_images#auto_fetching_remote_images):** les images originales sont stockées sur mon serveur, mais toutes les
   images servies à mes visiteurs le sont depuis Cloudinary, générées à la volée
   à partir des originales. Encore mieux, je n'ai pas besoin d’uploader les
   images originales - Cloudinary les récupère automatiquement à partir de mes
@@ -81,8 +68,7 @@ Les fonctions principales que je cherchais et que fournit Cloudinary sont :
   possibilité de faire de la direction artistique avancée à l’aide des
   [fonctionnalités de recadrage automagiques de Cloudinary](http://cloudinary.com/blog/introducing_smart_cropping_intelligent_quality_selection_and_automated_responsive_images).
 
-- **[Optimisation du format des images](http://cloudinary.com/documentation/image_transformations#automatic_format_selection)
-  :** Si je publie des images JPEG dans mes billets, Cloudinary peut envoyer des
+- **[Optimisation du format des images](http://cloudinary.com/documentation/image_transformations#automatic_format_selection):** Si je publie des images JPEG dans mes billets, Cloudinary peut envoyer des
   images au format WebP aux visiteurs s'il est supporté par leur navigateur. Le
   mois dernier, deux tiers des images servies par Cloudinary à mes visiteurs
   étaient au format WebP, que Cloudinary génère et sert pour moi
@@ -173,35 +159,16 @@ cloudinary:
 ```
 
 - `cloud_name: …` votre ID personnel Cloudinary
-
 - `presets:` englobe la liste des préréglages que vous définissez pour vote site
-
-- `logo:` est le nom d’un des préréglages, que j'utilise dans le tag Liquid
-  avant le nom du fichier image
-
+- `logo:` est le nom d’un des préréglages, que j'utilise dans le tag Liquid avant le nom du fichier image
 - `min_width: 80` définit la largeur minimum d’image générée
-
 - `max_width: 400` définit la largeur maximale d’image générée
-
-- `fallback_max_width: 200` définit la largeur de l’image de la solution de
-  repli (`src`)
-
+- `fallback_max_width: 200` définit la largeur de l’image de la solution de repli (`src`)
 - `steps: 3` définit le nombre d’images à générer
-
-- `sizes: '(min-width: 50rem) 13rem, (min-width: 40rem) 25vw, 45vw'` définit
-  l’attribut `sizes` de l’image responsive, qui dépend du design et des
-  breakpoints
-
-- `figure: never` empêche la génération d’un bloc
-  `<figure>`/`<img>`/`<figcaption>` (Je n'en veux généralement pas sur les
-  logos)
-
-- `attributes:` englobe la liste d’attributs à toujours ajouter aux éléments
-  `<figure>` et/ou `<img>`
-
-- `class: logo` ajoute l’attribut `class` ayant pour valeur `logo`, que
-  j'utilise dans mon CSS pour m'assurer que le logo ne prenne pas plus d’un
-  quart de la largeur de son conteneur et le fait flotter à droite.
+- `sizes: '(min-width: 50rem) 13rem, (min-width: 40rem) 25vw, 45vw'` définit l’attribut `sizes` de l’image responsive, qui dépend du design et des breakpoints
+- `figure: never` empêche la génération d’un bloc `<figure>`/`<img>`/`<figcaption>` (Je n'en veux généralement pas sur les logos)
+- `attributes:` englobe la liste d’attributs à toujours ajouter aux éléments `<figure>` et/ou `<img>`
+- `class: logo` ajoute l’attribut `class` ayant pour valeur `logo`, que j'utilise dans mon CSS pour m'assurer que le logo ne prenne pas plus d’un quart de la largeur de son conteneur et le fait flotter à droite.
 
 Vous pouvez définir toutes ces règles pour autant de préréglages dont vous aurez
 besoin.
