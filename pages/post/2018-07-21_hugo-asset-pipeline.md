@@ -5,6 +5,7 @@ date: 2018-07-21T20:54:26+02:00
 author: frank
 categories:
   - hugo
+typora-copy-images-to: ../../assets/images/post/${filename}
 ---
 :::intro
 Depuis la [version 0.43](https://gohugo.io/news/0.43-relnotes/), Hugo comble un des reproches qui lui a souvent été fait, le manque de solution native pour gérer les assets, à savoir la génération de fichiers CSS et JS pour la production — et le développement). Cette nouvelle possibilité fait d'Hugo une solution toujours plus performante pour le développement de sites statiques.

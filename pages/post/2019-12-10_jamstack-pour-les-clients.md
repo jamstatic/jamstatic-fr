@@ -11,7 +11,6 @@ source:
   title: "Jamstack for clients"
   url: "https://bejamas.io/blog/jamstack-for-clients/"
 ---
-
 Savoir choisir les bon outils pour un projet représente une part importante de ce qui fait le succès d'une agence de développement web. S'il est facile de s'enthousiasmer sur les dernières technologies en vogue, il est plus difficile d'expliquer à son client les bénéfices de la technologie que nous lui suggérons d'adopter.
 
 De mon point de vue de commercial, bien qu'ils soient de bonne compagnie, les développeurs ont souvent du mal à expliquer les concepts techniques, les solutions et les bénéfices, en des termes simples. Principalement à cause du fait qu'ils parlent surtout un langage technique et qu'ils prennent leurs connaissances trop souvent pour acquises.

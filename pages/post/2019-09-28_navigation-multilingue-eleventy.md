@@ -11,7 +11,6 @@ source:
   title: Language switcher for multilingual Jamstack sites
   url: https://www.webstoemp.com/blog/language-switcher-multilingual-jamstack-sites/
 ---
-
 ## Mise en place
 
 Développer un site multilingue avec un générateur de site statique est à la portée de tous dès lors que l'on dispose d'un langage de templating, de données structurées et d'un système permettant de contrôler les URLs, ce que proposent la plupart des générateurs de sites statiques.

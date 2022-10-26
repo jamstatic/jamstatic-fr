@@ -11,6 +11,7 @@ source:
   title: Hugo or Jekyll? 6 Factors You Should Know
   url: https://forestry.io/blog/hugo-and-jekyll-compared/
   lang: en
+typora-copy-images-to: ../../assets/images/post/${filename}
 ---
 [](https://res.cloudinary.com/jamstatic/image/upload/c_scale,dpr_2.0,f_auto,q_auto,w_862/v1603620676/jamstatic/hugo-jekyll-compared.png)
 

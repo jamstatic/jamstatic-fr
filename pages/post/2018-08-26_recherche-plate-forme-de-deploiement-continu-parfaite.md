@@ -4,24 +4,19 @@ date: 2018-08-26T18:26:33+02:00
 description: "Travis, Circle, Drone, GitLab, Jenkins : choisissez la solution d'intégration et de déploiement continu qui vous convient le mieux."
 author: frank
 categories: deploiement
-images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:À la recherche de la plate-forme de déploiement continu parfaite/jamstatic/twitter-card.png
 source:
   author: "DJ Walker"
   title: "In Search of the Best Continuous Deployment Service"
   url: "https://forestry.io/blog/5-options-for-automating-your-software-deployments/"
 aliases:
   - /2018/08/26/recherche-plate-forme-de-developpement-continu-parfaite/
+typora-copy-images-to: ../../assets/images/post/${filename}
 ---
-
-{{< intro >}}
+:::intro
 L'automatisation est une des composantes qui permet de bien travailler en versionnant son projet et en configurant une publication automatique. Cette bonne pratique issue du développement permet de s'assurer que tout le monde peut contribuer et que les changements seront bien publiés. DJ Walker a pris le temps de passer en revue différents services pour vous, c'est parti pour la visite guidée.
-{{< /intro >}}
+:::
 
----
-
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_868/v1535462763/steps-building.jpg"
-caption="Photo by Samuel Zeller on Unsplash" >}}
+![Photo by Samuel Zeller on Unsplash](https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_868/v1535462763/steps-building.jpg "Photo by Samuel Zeller on Unsplash.")
 
 Nous vous avons déjà parlé des [avantages du déploiement automatique,](https://forestry.io/blog/automate-deploy-w-circle-ci/) et plus particulièrement de ceux des sites statiques. L'intégration continue et le déploiement continu sont la stratégie qu'on retrouve le plus souvent quand il s'agit de gérer la publication logicielle. Il existe une multitude d'options pour la mise en place de pipelines CI/CD, avec leurs forces et leurs faiblesses. Quelle est celle qui est faite pour vous ? Dans cet article, nous nous penchons sur cinq services différents  avec lesquels vous pouvez développer, tester et déployer votre code.
 
@@ -54,9 +49,9 @@ Le fait que ce soit à la fois hautement configurable et simple à intégrer ave
 
 On ne peut pas connecter de projets GitLab à CircleCI pour le moment.
 
-{{< notice info >}}
+:::info
 Lire comment [déployer un site statique avec CircleCI](https://forestry.io/blog/automate-deploy-w-circle-ci/).
-{{< /notice >}}
+:::
 
 ## TravisCI
 
@@ -74,9 +69,9 @@ TravisCI promet d'être gratuit à vie pour les projets open source. TravisCI tr
 
 Avec TravisCI, vos builds doivent tourner dans un environnement Ubuntu. Vous pouvez installer Docker dans cet environnement pour récupérer des images, mais c'est la solution la plus verbeuse de toutes. De plus, vous ne pouvez utiliser TravisCI que si vos projets sont hébergés sur GitHub.
 
-{{< notice info >}}
+:::info
 [Guide de démarrage TravisCI](https://docs.travis-ci.com/user/getting-started/)
-{{< /notice >}}
+:::
 
 ## Drone
 
@@ -92,7 +87,9 @@ Drone propose des [matrices de builds](http://docs.drone.io/matrix-builds/) pour
 
 Drone est un arrivant relativement récent, et sa documentation aurait besoin d'un peu d'amour.
 
-{{< notice info >}} [Bien démarrer avec Drone CI](http://docs.drone.io/getting-started/) {{< /notice >}}
+:::info
+[Bien démarrer avec Drone CI](http://docs.drone.io/getting-started/)
+:::
 
 ## GitLab CI
 
@@ -102,17 +99,19 @@ Si vous utilisez GitLab pour héberger votre code, vous avez déjà accès aux o
 
 ### On aime
 
-GitLab CI est compatible avec toutes les versions de GitLab : vous pouvez l'utiliser sur gitlab.com ou sur votre instance GitLab hébergée. Le composant d'intégration continue de GitLab est écrit en Go, il est donc facile à exécuter sur les systèmes d'exploitation majeurs, y compris Windows et MacOS. Vous pouvez même [lancer vos tests d'intégration en local sur votre machine](https://gitlab.com/gitlab-org/gitlab-runner/issues/312) !.
+GitLab CI est compatible avec toutes les versions de GitLab : vous pouvez l'utiliser sur gitlab.com ou sur votre instance GitLab hébergée. Le composant d'intégration continue de GitLab est écrit en Go, il est donc facile à exécuter sur les systèmes d'exploitation majeurs, y compris Windows et MacOS. Vous pouvez même [lancer vos tests d'intégration en local sur votre machine](https://gitlab.com/gitlab-org/gitlab-runner/issues/312) !.
 
 ### On est pas super fan
 
 Forcément pour utiliser GitLab CI, vous devez héberger votre code source avec GitLab, le fait de pouvoir héberger vous-même votre suite logicielle devrait vous rassurer si vous avez peur d'être trop dépendant d'un service tiers.
 
-{{< notice info >}} [GitLab CI : guide de démarrage rapide](https://docs.gitlab.com/ee/ci/quick_start/) {{< /notice >}}
+:::info
+[GitLab CI : guide de démarrage rapide](https://docs.gitlab.com/ee/ci/quick_start/)
+:::
 
 ## Jenkins
 
-{{< figure src="jenkins.svg" >}}
+![](jenkins.svg)
 
 Jenkins est un serveur d'intégration et de déploiement continu que vous installez et lancer sur votre propre serveur. Le projet Jenkins [a débuté en 2004](https://www.cloudbees.com/jenkins/about) et aujourd'hui c'est une solution adoptée par les entreprises qui souhaitent posséder leur propre infrastructure de CI.
 
@@ -130,9 +129,9 @@ Le fait de pouvoir faire tourner ses builds sur n'importe quel système d'exploi
 
 Pas grand-chose à redire à ce niveau : Jenkins peut faire à peu près tout ce que vous voulez ! Toutefois, il se peut que les petites équipes n'aient peut-être pas envie de devoir se coltiner la maintenance et l'hébergement de leur propre serveur d'intégration continue.
 
-{{< notice info >}}
+:::info
 [Jenkins : Guide de démarrage](https://www.jenkins.io/doc/pipeline/tour/getting-started/)
-{{< /notice >}}
+:::
 
 ## Choisir l'outil qui vous convient le mieux
 

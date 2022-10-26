@@ -3,8 +3,6 @@ title: "Contenu multilingue avec Hugo"
 description: "Comment gérer les traductions dans plusieurs langues avec Hugo."
 date: 2018-08-17T11:36:38+02:00
 author: regis
-images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1000,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Contenu%2520multilingue%2520avec%2520Hugo/jamstatic/twitter-card.png
 categories:
   - hugo
   - i18n 
@@ -12,8 +10,8 @@ source:
   author: "Régis Philibert"
   title: "Hugo Multilingual Part 1: Content translation"
   url: "https://regisphilibert.com/blog/2018/08/hugo-multilingual-part-1-managing-content-translation/"
+typora-copy-images-to: ../../assets/images/post/${filename}
 ---
-
 Hugo gère parfaitement le multilingue par défaut et permet ainsi de facilement traduire les contenus et les chaînes de caractères pour la localisation. Tout est pensé pour que la gestion de langues supplémentaires soit aussi simple que possible pour les développeurs et les contributeurs, ils peuvent ainsi se focaliser sur l'essentiel.
 
 Voyons ensemble comment configurer un projet Hugo multilingue et traduire votre contenu.
@@ -118,17 +116,17 @@ Il est également possible d'affecter un dossier à chaque langue pour y dépose
 ```yaml
 languages:
   en:
-	languageName: English
-	weight: 1
-	contentDir: content/english
+    languageName: English
+    weight: 1
+    contentDir: content/english
   fr:
-	languageName: Français
-	weight: 2
-	contentDir: content/french
+    languageName: Français
+    weight: 2
+    contentDir: content/french
   es:
-	languageName: Español
-	weight: 3
-	contentDir: content/spanish
+    languageName: Español
+    weight: 3
+    contentDir: content/spanish
 ```
 
 Vous pouvez spécifier un chemin relatif à votre projet ou un chemin absolu. L'utilisation d'un chemin absolu signifie que vos dossiers de traduction ne se trouvent pas forcément dans votre projet, mais ailleurs sur votre ordinateur.
@@ -198,9 +196,9 @@ Pour indiquer aux moteurs de recherche qu'il existe des traductions de contenu, 
 
 ```go-html-template
 {{ if .IsTranslated }}
-	{{ range .Translations }}
-	<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
-	{{ end }}
+  {{ range .Translations }}
+  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+  {{ end }}
 {{ end }}
 ```
 
@@ -210,17 +208,17 @@ On peut utiliser la même logique pour ajouter un sélecteur de langue qui ne s'
 
 ```go-html-template
 {{ if .IsTranslated }}
-	<nav class="LangNav">
-	{{ range .Translations }}
-		<a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
-	{{ end}}
-	</nav>
+  <nav class="LangNav">
+  {{ range .Translations }}
+    <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+  {{ end}}
+  </nav>
 {{ end }}
 ```
 
-{{< notice tip >}}
+:::tip
 L'objet `.Language` est disponible pour toutes les pages. En plus des paramètres principaux de langues, il contient les valeurs personnalisées définir dans la configuration des langues comme la description et le pseudo twitter dans notre exemple.
-{{< /notice >}}
+:::
 
 ## Les bundles de page
 
@@ -296,9 +294,9 @@ content
     └── header.es.jpg
 ```
 
-{{< notice tip >}}
+:::tip
 Comme la fonction `.GetMatch` teste la valeur `.Title` d'une ressource, qui correspond par défaut à son nom de fichier (langue incluse), faites bien attention si vous vous basez sur les nomenclatures de fichier de bien englober toutes les ressources quelle que soit leur langue, comme ceci : `.Resources.GetMatch "header*.jpg"`
-{{< /notice >}}
+:::
 
 ## Configurer nos URLs
 
@@ -339,8 +337,8 @@ La convention pour la traduction des chaînes de caractères avec Hugo ressemble
 
 Ce dossier peut se trouver à la racine de votre projet ou d'un thème.
 
--   `i18n/en.yaml` ✅
--   `themes/academic/i18n/en.yaml` ✅
+- `i18n/en.yaml` ✅
+- `themes/academic/i18n/en.yaml` ✅
 
 Pour nos trois langues, ça ressemble à quelque chose comme :
 
@@ -372,9 +370,9 @@ Comme vous pouvez le voir dans l'exemple ci-dessus, tout ce dont nous avons beso
 
 Ensuite dans nos modèles de page, [la fonction i18n](https://gohugo.io/functions/i18n/#readout) d'Hugo se charge du reste.
 
-1.  Elle va tester si la clé passée en argument existe et retourner la traduction correspondante si elle existe.
-2.  Si la clé n'existe pas pour la langue courante dans le fichier, elle affichera la traduction de la langue par défaut.
-3.  Si la clé n'existe pas pour la langue par défaut, elle retourne une chaîne vide.
+1. Elle va tester si la clé passée en argument existe et retourner la traduction correspondante si elle existe.
+2. Si la clé n'existe pas pour la langue courante dans le fichier, elle affichera la traduction de la langue par défaut.
+3. Si la clé n'existe pas pour la langue par défaut, elle retourne une chaîne vide.
 
 ```go-html-template
 <header>
@@ -497,10 +495,10 @@ This story has only one Mouse.
 <hr>
 ```
 
-{{< notice tip >}}
-Vous pensez peut-être déjà au cas où il n'y a pas de souris quand le total est `0` ?
+:::tip
+Vous pensez peut-être déjà au cas où il n'y a pas de souris quand le total est `0` ?  
 Comme [expliqué plus bas](#traduction-des-chaînes-avec-le-système-de-fichier-d-hugo), cela ne sera pas possible 🙅‍♂️.
-{{< /notice >}}
+:::
 
 ### Inclusion du contexte dans la traduction
 
@@ -533,7 +531,7 @@ C'est le même principe que le contexte d'un fichier partiel.
 
 Lorsque vous passez un contexte en paramètre d'`i18n`, vous devez garder certaines choses en tête :
 
-1.  `i18n` ne pourra évaluer ce paramètre comme un nombre (puisque ce n'en est pas un), donc impossible de mettre cette chaîne au pluriel à l'aide de `one` et `other`.
+1. `i18n` ne pourra évaluer ce paramètre comme un nombre (puisque ce n'en est pas un), donc impossible de mettre cette chaîne au pluriel à l'aide de `one` et `other`.
 2. Si cette chaîne est appelée à différents endroits, assurez-vous de toujours lui passer le même contexte ou bien utilisez `with` comme nous l'avons fait ci-dessus, si vous ne voulez pas vous retrouver avec une erreur bien moche du type `can't evaluate field`.
 
 ### Traduction des chaînes avec le système de fichier d'Hugo
@@ -571,10 +569,10 @@ Si nous pouvons deviner sans mal le nombre correspondant au pluriel de `zero` ou
 
 Heureusement, nous pouvons nous reposer sur Hugo et [go-i18n](https://github.com/nicksnyder/go-i18n) de [Nick Snyder](https://github.com/nicksnyder) pour nous aider à assembler toutes les pièces du puzzle.
 
-{{< notice info >}}
+:::info
 Voici tous les pluriels supportés pour l'ensemble des langues :
 `zero` `one` `two` `few` `many` `other`
-{{< /notice >}}
+:::
 
 Mais, cela ne veut pas dire pour autant que vous pouvez les utiliser en anglais.
 

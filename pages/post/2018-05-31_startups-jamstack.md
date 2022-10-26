@@ -9,6 +9,7 @@ source:
   author: "CRV"
   title: "The Jamstack Startup Landscape"
   url: "https://medium.com/@CRVVC/the-jamstack-startup-landscape-c06cc3cdb917"
+typora-copy-images-to: ../../assets/images/post/${filename}
 ---
 :::intro
 Devant la tendance croissante de l'adoption d'outils et de services web modernes pour gérer les sites ou les applications web, les investisseurs de la Silicon Valley misent assez tôt sur les startups issus de cet écosystème : Netlify, Algolia, Contentful et plus récemment Gatsby ont tous levé quelques millions de dollars pour les aider dans leur développement. Et ce n'est que le début, les annonces de financement devraient se poursuivre dans les prochains mois.

@@ -3,8 +3,6 @@ title: Développer un blog statique avec Gatsby et Strapi
 description: Découvrez comment développer un blog en utilisant Gatsby et Strapi en quelques minutes.
 date: 2018-04-26
 author: pierre
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1200,c_fit,co_white,g_north_west,x_60,y_80,l_text:poppins_78_ultrabold_line_spacing_-30:D%25C3%25A9velopper%2520un%2520blog%2520statique%2520avec%2520Gatsby%2520et%2520Strapi/jamstatic/twitter-card.png
 categories:
   - gatsby
   - cms
@@ -13,12 +11,13 @@ source:
   url: https://strapi.io/blog/building-a-static-website-using-gatsby-and-strapi
   author: Pierre Burgy
   title: Building a Static Blog using Gatsby and Strapi
-canonical_url: https://strapi.io/blog/building-a-static-website-using-gatsby-and-strapi
+canonical:
+  url: https://strapi.io/blog/building-a-static-website-using-gatsby-and-strapi
+typora-copy-images-to: ../../assets/images/post/${filename}
 ---
-
-{{< notice info >}}
+:::info
 Une nouvelle version de ce tutoriel a été publié en Février 2020 sur [https://strapi.io/blog/build-a-static-blog-with-gatsby-and-strapi](https://strapi.io/blog/build-a-static-blog-with-gatsby-and-strapi)
-{{</ notice >}}
+:::
 
 ## Introduction
 
@@ -36,7 +35,7 @@ Les sites Web statiques et PWA ont tous les deux de solides avantages, ce qui no
 
 D'après ses créateurs, [Gatsby](https://www.gatsbyjs.org) est un "_blazing-fast website framework for React_". Il permet aux développeurs de créer des sites construits avec React en quelques minutes. Que vous vouliez développer un blog ou un site vitrine, Gatsby devrait correspondre à vos besoins.
 
-{{<figure src="gatsby.svg" link="https://www.gatsbyjs.org">}}
+![https://www.gatsbyjs.org](gatsby.svg "https://www.gatsbyjs.org")
 
 Étant donné que Gatsby utilise React, les pages générées ne sont jamais rechargées, ce qui rend le site extrêmement rapide. De nombreux plugins sont disponibles pour permettre aux développeurs de gagner du temps et de récupérer la donnée depuis n'importe quelle source (fichiers Markdown, CMS, etc.). Gatsby est fortement basé sur le concept de la ["node" interface](https://www.gatsbyjs.org/docs/node-interface/), qui est le centre du système de données de Gatsby.
 
@@ -46,7 +45,7 @@ Créé par [Kyle Mathews](https://twitter.com/kylemathews), le projet a été of
 
 [Strapi](https://strapi.io) est le Content Management Framework le plus avancé sur la technologie Node.js. À mi-chemin entre un famework Nodejs et un Headless CMS (API-first), il permet d'économiser des semaines de développement.
 
-{{< figure src="strapi.svg" link="https://strapi.io">}}
+![https://strapi.io](strapi.svg "https://strapi.io")
 
 Grâce à son système extensible de plugin, il propose de nombreuses fonctionnalités : panel d'administration, authentification et gestion des permissions, gestion de contenu, générateur d'API, etc.
 
@@ -72,7 +71,7 @@ Installez Strapi via npm :
 npm i strapi@alpha -g
 ```
 
-_Note_ : Strapi v3 est encore en version alpha, mais cela ne posera aucun problème pour la réalisation de ce tutoriel.
+_Note_ : Strapi v3 est encore en version alpha, mais cela ne posera aucun problème pour la réalisation de ce tutoriel.
 
 #### Création d'un projet Strapi
 
@@ -180,7 +179,7 @@ gatsby develop
 
 ### Installation du plugin source Strapi
 
-Lorsque l'on crée un site statique, la donnée peut venir de différentes sources : fichiers Markdown, fichiers CSV, un site WordPress (utilisant le plugin JSON REST API), etc.
+Lorsque l'on crée un site statique, la donnée peut venir de différentes sources : fichiers Markdown, fichiers CSV, un site WordPress (utilisant le plugin JSON REST API), etc.
 
 Gatsby l'a bien compris. C'est pourquoi ses créateurs ont décidé de construire une couche spécifique et indépendante : le Data layer. Le système entier repose sur [GraphQL](http://graphql.org).
 
@@ -520,7 +519,7 @@ Dernière étape : redémarrez le serveur et visitez la page auteur depuis la pa
 
 ## Conclusion
 
-Félicitations ! Vous avez créé un blog super rapide et facile à maintenir !
+Félicitations ! Vous avez créé un blog super rapide et facile à maintenir !
 
 Étant donné que le contenu est géré dans Strapi, les auteurs peuvent écrire leurs articles depuis une vraie interface et vous, en tant que développeur, n'avez qu'à recompiler le site pour mettre à jour le contenu.
 

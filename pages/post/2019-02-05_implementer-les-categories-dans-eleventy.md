@@ -11,7 +11,6 @@ source:
   title: "Implementing Categories"
   url: "https://www.pborenstein.com/articles/categories/"
 ---
-
 Je veux disposer de catégories dans Eleventy afin de pouvoir dispatcher
 mes articles dans divers domaines génériques [^1]. L'idée c'est que tous les
 articles sur les livres aillent dans la catégorie "Culture", les articles

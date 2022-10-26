@@ -2,8 +2,6 @@
 title: "Vers une Jamstack légère et performante, avec Nicolas Goutay"
 description: "Passer de Gatsby à Eleventy afin de pouvoir concevoir un site web plus performant et accessible à tous."
 author: podcast
-excerpt: |
-  Dans ce premier épisode de *Génération Statique* Frank Taillandier et Arnaud Ligny reçoivent Nicolas Goutay, expert performance web, actuellement développeur chez [Orbit](https://orbit.love), conférencier et organisateur des [meetups Jamstack parisiens](https://jamstack.paris). Fort d’une expérience avec React et Gatsby, le coût des frameworks JavaScript côté client a poussé Nicolas à privilégier des outils plus légers et plus adaptés aux sites de contenus.
 date: 2020-11-19
 categories:
   - podcast

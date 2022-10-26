@@ -2,8 +2,6 @@
 title: "De Jekyll à Eleventy"
 description: "Retour d'expérience du passage de Jekyll à Eleventy."
 author: jerome
-excerpt: |
-  Eleventy n'en finit pas de faire des émules, il séduit par sa simplicité et sa flexibilité, [Jérôme Coupé](https://www.webstoemp.com) a sauté le pas à son tour et il est très satisfait de son choix.
 date: 2019-09-07T10:59:06+02:00
 lastmod: 2019-09-07T12:24:06+02:00
 categories:
@@ -14,6 +12,10 @@ source:
   title: "From Jekyll to Eleventy"
   url: "https://www.webstoemp.com/blog/from-jekyll-to-eleventy/"
 ---
+:::intro
+Eleventy n'en finit pas de faire des émules, il séduit par sa simplicité et sa flexibilité, [Jérôme Coupé](https://www.webstoemp.com) a sauté le pas à son tour et il est très satisfait de son choix.
+:::
+
 Jekyll est un générateur que je continue d'apprécier, d'utiliser et de suivre, néanmoins quand j'ai enfin eu le temps de mettre à jour [mon site](https://www.webstoemp.com), j'ai choisi de partir sur Eleventy.
 
 ## Choisir un générateur de site

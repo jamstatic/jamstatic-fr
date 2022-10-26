@@ -13,7 +13,6 @@ source:
   url: https://www.dwolla.com/updates/implementing-netlify-cms/
   lang: en
 ---
-
 ![Image d'illustration de l'article](../../assets/images/post/2019-06-22_cms-headless-en-3-jours/netlify-cms-blog-featured-image-02.png "Image d'illustration « netlify cms »")
 
 Imaginons que vous soyez en train de créer la prochaine grande startup ou d'organiser un super évènement — la première question que tout le monde va vous poser est : « C'est quoi le site web ? ».

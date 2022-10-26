@@ -9,8 +9,8 @@ source:
   author: "Jessica West"
   title: "Getting Started with Algolia"
   url: "https://dev.to/algolia/getting-started-with-algolia-4lnp"
+typora-copy-images-to: ../../assets/images/post/${filename}
 ---
-
 :::intro
 Algolia fait tout pour faciliter l’ajout d’une recherche
 performante sur votre site. Jessica West le prouve une fois de plus en nous

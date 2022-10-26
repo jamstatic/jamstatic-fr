@@ -3,26 +3,20 @@ title: "Entretenir de bonnes relations avec Hugo"
 date: 2018-04-04T22:25:16+02:00
 description: "Définissez des relations entre vos différents types de contenus dans Hugo de façon performante."
 author: regis
-images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Entretenir%2520de%2520bonnes%2520relations%2520avec%2520Hugo/jamstatic/twitter-card.png
 categories:
   - hugo
 source:
   author: "Régis Philibert"
   title: "Better Relationships in Hugo with Hugo's Related Content"
   url: "https://regisphilibert.com/blog/2018/04/hugo-optmized-relashionships-with-related-content/"
+typora-copy-images-to: ../../assets/images/post/${filename}
 ---
-
-{{< intro >}}
-
+:::intro
 Même s'il est le plus rapide des générateurs de site statiques,
 Hugo continue de s'améliorer et de proposer de nouvelles fonctionnalités pour
 nous simplifier la vie. [Régis Philibert](https://regisphilibert.com/) a testé
 pour vous la gestion des contenus relatifs apparus dans la version `0.27`.
-
-{{< /intro >}}
-
----
+:::
 
 Je me suis enfin décidé à améliorer la façon dont je gère les relations entre
 les contenus dans mes projets en utilisant la fonctionnalité dédiée aux contenus
@@ -48,16 +42,13 @@ commence à coder.
 
 Copier-coller la biographie de tous mes personnages dans WordPress m'a pris pas
 mal de temps, mais je me retrouve maintenant avec le projet idéal pour tester de
-nouveaux outils : l’API Rest de WordPress, AngularJS et plus récemment Hugo !
+nouveaux outils : l’API Rest de WordPress, AngularJS et plus récemment Hugo !
 
 Avec un millier d’entrées qui partagent des relations saines, c'est le projet
 parfait pour tester une nouvelle manière de gérer nos relations.
 
--  Chacun des quelque 1300 personnages apparaît dans quelques romans. La liste
-   des romans où il apparaît est affichée sur la page de chaque personnage.
-
--  Dans chacun des 20 romans apparaissent de nombreux personnages. Sur la page de
-   chaque roman figure tous les personnages qui y apparaissent.
+- Chacun des quelque 1300 personnages apparaît dans quelques romans. La liste des romans où il apparaît est affichée sur la page de chaque personnage.
+- Dans chacun des 20 romans apparaissent de nombreux personnages. Sur la page de chaque roman figure tous les personnages qui y apparaissent.
 
 ## Statut des relations avant _Related Content_: c'est compliqué
 
@@ -90,7 +81,7 @@ donc mieux déclarer les **quelques** romans dans lesquels ils apparaissent
 plutôt que de lister les **nombreux** personnages pour chaque roman.
 
 Par exemple pour le personnage d’_Eugène Rougon_, qui figure dans 4 romans, cela
-donne :
+donne :
 
 ```yaml
 title: Rougon (Eugène)
@@ -102,27 +93,25 @@ novel:
 ```
 
 Maintenant dans le Front Matter du roman, nous avons juste à ajouter une clef
-d’identifiant. Pour le roman « Son Excellence Eugène Rougon » dans lequel
-apparaît ce bon vieil Eugène nous ajoutons :
+d’identifiant. Pour le roman « Son Excellence Eugène Rougon » dans lequel
+apparaît ce bon vieil Eugène nous ajoutons :
 
 ```yaml
 title: Son excellence Eugène Rougon
 id: excellence
 ```
 
-{{< notice >}}
-
+:::
 Nous pourrions choisir un identifiant existant comme le nom de
 fichier, mais je préfère un identifiant unique, facile à lire et à écrire.
-
-{{</notice >}}
+:::
 
 #### Les relations dans nos gabarits de page
 
 Sur
 [la page d’Eugène](https://rougon-macquart.com/personnage/2010-03-15-rougon-eugene/)
 nous voulons afficher les romans dans lesquels il apparaît. Nous pouvons
-utiliser `intersect` pour construire notre liste :
+utiliser `intersect` pour construire notre liste :
 
 ```go-html-template
 {{ $characters := where .Site.Pages.ByTitle ".Params.novel" "intersect" (slice .Params.id) }}
@@ -141,12 +130,11 @@ plusieurs comme si nous étions en 2016 !
 
 Car cela a le mérite de fonctionner mais…
 
-1.  `interesect` ? `where "in"` ? N’en faisons-nous pas un peu trop ?
+1. `interesect` ? `where "in"` ? N’en faisons-nous pas un peu trop ?
 
-2.  🐌 Le temps de génération est **7 fois** supérieur à la moyenne : ~7
-    secondes pour 1300 pages.
+2. 🐌 Le temps de génération est **7 fois** supérieur à la moyenne : ~7 secondes pour 1300 pages.
 
-3.  💩 C’est moche.
+3. 💩 C’est moche.
 
 OK… mais que pouvons-nous y faire ? 🤷‍♂️
 
@@ -157,8 +145,8 @@ Rien… enfin jusqu'à la version 0.27 d’Hugo.
 [Les contenus relatifs natifs](https://gohugo.io/content-management/related/)
 ont fait leur apparition dans Hugo 0.27 en novembre 2017.
 
-Ils ont été conçus pour aider à ajouter facilement une section **« Vous aimerez
-aussi : »** dans les thèmes et les projets tout en gardant un maximum de
+Ils ont été conçus pour aider à ajouter facilement une section **« Vous aimerez
+aussi : »** dans les thèmes et les projets tout en gardant un maximum de
 contrôle sur l’algorithme de pondération. Vous pouvez définir plusieurs facteurs
 ou index en leur affectant leur propre niveau d’importance. Les tags, le mois de
 publication, les auteurs, tout ce qui peut vous aider à construire une liste de
@@ -201,7 +189,7 @@ liste déjà les romans à l’aide d’une clef qui correspond au nom de notre 
 
 Par contre, nos romans utilisent `id` pour s'identifier, il faut changer ça car
 ils doivent également utiliser le même nom d’index. Donc l’entête Front Matter
-de notre roman devient :
+de notre roman devient :
 
 ```yaml
 title: Son Excellence Eugène Rougon
@@ -209,7 +197,7 @@ novel: excellence # 'id’ précédemment
 ```
 
 Bien, nos romans et nos personnages partagent maintenant un `.Page.Param` commun
-qui utilise le nom de notre index nouvellement déclaré : `novel`.
+qui utilise le nom de notre index nouvellement déclaré : `novel`.
 
 #### _Related Content_ dans les gabarits de page
 
@@ -220,7 +208,7 @@ si vous souhaitez en apprendre davantage.
 
 **.Related** _permet de récupérer toutes les pages relatives d’une page donnée
 en fonction des index et du poids déclarés dans le fichier de configuration.
-Elle prend un seul paramètre en argument : la page donnée._
+Elle prend un seul paramètre en argument : la page donnée._
 
 **.RelatedIndices** _permet de récupérer toutes les pages qui comportent un ou
 plusieurs index donnés. Le premier paramètre est la page donnée, les autres
@@ -233,8 +221,8 @@ index comme des tags ou un auteur viennent interférer dans notre relation
 existante.
 
 Dans le gabarit de page de détail d’un roman comme "Son Excellence Eugène
-Rougon", nous pouvons lister tous ses « characters », en anglais dans le texte,
-de la façon suivante :
+Rougon", nous pouvons lister tous ses « characters », en anglais dans le texte,
+de la façon suivante :
 
 ```go-html-template
 {{ $characters := where (.Site.RegularPages.RelatedIndices . "novel" ) "Type" "personnage" }}
@@ -244,7 +232,7 @@ _Le premier paramètre c'est le contexte de notre page, le second c'est notre
 fameux index_.
 
 Et pour la page de présentation d’un personnage comme Eugène, pour récupérer
-toutes ses « novels » :
+toutes ses « novels » :
 
 ```go-html-template
 {{ $novels := where (.Site.RegularPages.RelatedIndices . "novel" ) "Type" "roman" }}
@@ -259,16 +247,14 @@ Et qu'avons-nous gagné outre un code plus propre ?
 
 Le temps de génération n'excède maintenant pas les 1.5s. Dans le mille Émile !
 
-{{< notice info >}}
-
+:::info
 Si vous êtes curieux, vous pouvez cloner le
 [repo](https://github.com/regisphilibert/rougon) et vous en donner à cœur joie
 avec la commande `hugo --templateMetrics`. Vous pouvez même passer sur la
 branche
 [`oldRelationship`](https://github.com/regisphilibert/rougon/tree/oldRelationships)
 et comparer avec l’implémentation précédente des relations.
-
-{{</ notice >}}
+:::
 
 ## Conclusion
 

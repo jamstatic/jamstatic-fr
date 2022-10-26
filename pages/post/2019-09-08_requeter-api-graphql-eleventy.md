@@ -4,8 +4,6 @@ description: "Eleventy permet de récupérer les données d'une API GraphQL pour
 author: jerome
 date: 2019-09-08T23:00:48+02:00
 lastmod: 2019-09-08T23:00:48+02:00
-images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Consommer%2520l'API%2520GraphQL%2520d'un%2520CMS%2520headless%2520avec%2520Eleventy/jamstatic/twitter-card.png
 categories:
   - eleventy
   - headless 
@@ -14,7 +12,6 @@ source:
   title: Consuming a headless CMS GraphQL API with Eleventy
   url: "https://www.webstoemp.com/blog/headless-cms-graphql-api-eleventy/"
 ---
-
 ## Les différents types de CMS headless
 
 Si vous avez besoin d'ajouter un [CMS headless](/2017/12/15/cms-headless/) à votre site web, vous avez le choix entre deux approches : soit le contenu est versionné dans votre dépôt Git, soit il est accessible via une API tierce.

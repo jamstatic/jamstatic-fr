@@ -11,7 +11,6 @@ source:
   title: "Hugo Modules: everything you need to know!"
   url: https://www.thenewdynamic.com/article/hugo-modules-everything-from-imports-to-create/
 ---
-
 Les modules Hugo, apparus dans la version [0.56.0](https://gohugo.io/news/0.56.0-relnotes/), ajoutent un puissant système de dépendances dont vous auriez tort de vous passer. Ils permettent de rappatrier des fichiers stockés dans des dépôts Git dans vos projets. Les cas d'utilisation vont du simple usage d'un thème complet, à celui de sélection de composants de thèmes distants, comme des icônes, ou au partage de composants réutilisables (modèles, fichiers partiels, shortcodes, etc.) entre plusieurs projets.
 
 Cet article vous propose de vous mettre la main à la pâte et après avoir vu comment **importer** un ou plusieurs modules dans votre site, nous développerons notre propre module!
@@ -331,6 +330,7 @@ module:
 Vous pouvez consulter [le dépôt de notre module d'exemple pour cet article](https://github.com/regisphilibert/hugo-module-icons).
 
 :::info
+
 #### Pense-bête
 
 Nous avons vu les commandes `hugo mod init` et `hugo mod get -u`. Ces deux commandes sont aussi très utiles:
