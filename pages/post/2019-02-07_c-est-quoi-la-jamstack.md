@@ -39,59 +39,59 @@ Asseyez-vous, mettez-vous à l'aise et appréciez ✌️
 
 ![JAM c'est pour JavaScript, APIs & Markup.](../../assets/images/post/2020-10-05_la-jamstack-n-est-rapide-que-si-vous-la-rendez-rapide/jamstack-horizontal.svg "JAM c'est pour JavaScript, APIs & Markup.")
 
-**JavaScript** \
+**JavaScript**  
 Les fonctionnalités dynamiques sont gérées par JavaScript. Vous êtes libres d'utiliser la bibliothèque ou le framework que vous voulez.
 
-**APIs** \
+**APIs**  
 Les opérations côté serveur sont abstraites sous forme d'APIs réutilisables, accessibles en HTTPS à l'aide de JavaScript. Ces opérations peuvent être déléguées à des services tiers ou bien à vos propres fonctions.
 
-**Markup** \
+**Markup**  
 Les sites web sont servis sous forme de fichiers HTML statiques. Ces fichiers peuvent être générés à partir de fichiers source, comme du Markdown, à l'aide d'un générateur de site statique.
 
 ### Bénéfices
 
 Les principaux bénéfices apportés par la Jamstack sont :
 
-**Une performance accrue** \
+**Une performance accrue**  
 Servir du code généré et des assets à partir d'un CDN
 
-**Une meilleure sécurité** \
+**Une meilleure sécurité**  
 Plus besoin de se soucier des vulnérabilités du serveur ou de la base de données
 
-**Un coût bien moindre** \
+**Un coût bien moindre**  
 L'hébergement de fichiers statiques est moins cher [voire gratuit](https://netlify.com)
 
-**Une meilleure expérience de développement** \
+**Une meilleure expérience de développement**  
 Les développeurs front end peuvent se focaliser sur la partie client, sans être dépendants d'une architecture monolithique. Cela se traduit en général par un développement plus rapide et plus ciblé.
 
-**Redimensionnement à la volée** \
+**Redimensionnement à la volée**  
 Si votre site devient viral ou est soumis à un pic d'activité, le CDN compensera sans problèmes.
 
 ### Bonnes pratiques
 
 Les astuces suivantes vous aideront à tirer le meilleur parti de la stack.
 
-**Réseau de distribution de contenu (CDN)** \
+**Réseau de distribution de contenu (CDN)**  
 Puisque tous les fichiers et les assets sont générés en amont, ils peuvent être servis sur un CDN. Cela procure une meilleure performance et un redimensionnement à la volée.
 
 [En savoir plus](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/)
 
-**Déploiement atomique** \
+**Déploiement atomique**  
 Chaque déploiement est une photographie complète du site. Vous disposez ainsi d'une version consistante du site à l'échelle mondiale.
 
 [En savoir plus](https://buddy.works/blog/introducing-atomic-deployments#what-are-atomic-deployments)
 
-**Invalidation du cache** \
+**Invalidation du cache**  
 Une fois votre site généré poussé en ligne, le CDN va invalider son cache. Cela signifie que la nouvelle version est instantanément disponible partout.
 
 [En savoir plus](https://www.netlify.com/blog/2015/09/11/instant-cache-invalidation/)
 
-**Tout est versionné** \
+**Tout est versionné**  
 Votre code vit dans un système de gestion de versions tel que Git. Les principaux avantages sont : l'historique des changements de chaque fichier et de chaque collaborateur ainsi que la traçabilité.
 
 [En savoir plus](https://www.atlassian.com/git/tutorials/what-is-version-control)
 
-**Générations automatiques** \
+**Générations automatiques**  
 Votre serveur est notifié lorsqu'une nouvelle génération est requise, typiquement à l'aide de webhooks. Le serveur génère le projet, met à jour les CDNs et le site est en ligne.
 
 [En savoir plus](https://www.agilealliance.org/glossary/automated-build)
@@ -104,19 +104,19 @@ Voici à quoi ressemblerait la chaîne de publication Jamstack idéale.
 
 ### Historique
 
-**2015** \
+**2015**  
 Les générateurs statiques sont de plus en plus en vogue, grâce à des générateurs populaires comme Jekyll.
 
-**2016** \
+**2016**  
 Quelques développeurs pensent que les sites statiques n'ont pas à être forcément statiques, le terme "Jamstack" fait son apparition.
 
-**2017** \
+**2017**  
 La révolution du web moderne commence à prioriser la performance, le redimensionnement à la volée et l'expérience de développement. Le terme Jamstack est adopté par un groupe de développeurs plus important et les premières entreprises commencent à annoncer des projets basés sur la Jamstack.
 
-**2018** \
+**2018**  
 Des outils comme Netlify, Gatsby et Contentful contribuent à promouvoir le terme et la communauté grandit vite. C'est aussi l'année de la première conférence Jamstack.
 
-[Source: SnipCart](https://snipcart.com/blog/jamstack)
+[Source : Snipcart](https://snipcart.com/blog/jamstack)
 
 ---
 
@@ -126,10 +126,10 @@ C'est à vous de décider comment générer vos fichiers HTML. Les trois approch
 
 ### Développement
 
-**À la main** \
+**À la main**  
 Une méthode simple et efficace d'écrire du HTML, c'est idéal pour les pages super simples.
 
-**Générateurs de site statique** \
+**Générateurs de site statique**  
 La plupart des sites Jamstack sont propulsés par un générateur de site statique.
 Vous êtes libres de choisir votre GSS.
 
@@ -139,7 +139,7 @@ Vous êtes libres de choisir votre GSS.
 
 [Voir davantage de générateurs](https://www.staticgen.com/)
 
-**Framework frontend** \
+**Framework frontend**  
 La plupart des frameworks ne génèrent pas de fichiers HTML statiques par défaut, toutefois c'est possible si vous connaissez bien vos outils, cela demande plus d'expérience et de maintenance.
 
 - [React](http://reactjs.org/)
@@ -160,19 +160,19 @@ Vous devez héberger le résultat de la compilation de votre site. Il existe de 
 
 Les sites Jamstack n'ont pas à être entièrement statiques. Il existe des services formidables pour vous aider à insérer des parties dynamiques dans votre projet.
 
-**Fonctions personnalisées** \
+**Fonctions personnalisées**  
 Vous pouvez également abstraire vos propres fonctions pour en faire des APIs réutilisables. Pour cela vous pouvez utiliser [les fonctions AWS lambda](https://aws.amazon.com/lambda/features/) ou [les fonctions Netlify](https://functions.netlify.com/examples/)
 
-**Commentaires** \
+**Commentaires**  
 Beaucoup de sites Jamstack intègrent des sections pour les commentaires, principalement sur des blogs.
 
-**Formulaires** \
+**Formulaires**  
 Un excellent moyen d'interagir avec votre audience.
 
-**E-Commerce** \
+**E-Commerce**  
 Mettre en place une boutique en ligne sur un site Jamstack n'a jamais été aussi simple.
 
-**Recherche** \
+**Recherche**  
 Reposez-vous sur des services tiers pour intégrer des fonctionnalités de recherche.
 
 [Voir plus de services pour les sites statiques](https://github.com/agarrharr/awesome-static-website-services#e-commerce)
@@ -212,10 +212,10 @@ Voici une sélection de ressources sur la Jamstack qui comporte des matériaux d
 
 #### Vidéos
 
-- [L'essor de la Jamstack, présentation de Mathias Biilmann](https://www.youtube.com/watch?v=uWTMEDEPw8c)
-- [La nouvelle stack Front-end, présentation de Mathias Biilmann](https://vimeo.com/163522126)
+- [L'essor de la Jamstack, présentation de Mathias Biilmann](https://www.youtube.com/watch?v=uWTMEDEPw8c){embed=false}
+- [La nouvelle stack Front-end, présentation de Mathias Biilmann](https://vimeo.com/163522126){embed=false}
 - [Une sélection de vidéos par The New Dynamic](https://www.thenewdynamic.org/video/)
-- [Comment freeCodeCamp sert des millions d'apprenants en utilisant la Jamstack](https://www.youtube.com/watch?v=e5H7CI3yqPY)
+- [Comment freeCodeCamp sert des millions d'apprenants en utilisant la Jamstack](https://www.youtube.com/watch?v=e5H7CI3yqPY){embed=false}
 
 #### Podcast
 
@@ -225,5 +225,4 @@ Voici une sélection de ressources sur la Jamstack qui comporte des matériaux d
 
 ## À propos
 
-Cette page a été mise en place par [@peduarte](https://twitter.com/peduarte) et
-présentée au [meetup Jamstack de Londres](https://www.meetup.com/Jamstack-London/events/257961818/) — ([voir les slides](https://speakerdeck.com/peduarte/jamstack-cheatsheet)).
+Cette page a été mise en place par [@peduarte](https://twitter.com/peduarte) et présentée au [meetup Jamstack de Londres](https://www.meetup.com/Jamstack-London/events/257961818/) — ([voir les slides](https://speakerdeck.com/peduarte/jamstack-cheatsheet)).
