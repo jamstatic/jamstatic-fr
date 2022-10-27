@@ -1,53 +1,34 @@
 {
   "name": "jamstatic.fr",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "Jamstatic website",
-  "scripts": {
-    "algolia": "atomic-algolia",
-    "lint-md": "remark content/post --quiet --frail",
-    "format-html": "prettier --write layouts/**/*.html",
-    "contributors:add": "all-contributors add",
-    "contributors:generate": "all-contributors generate",
-    "contributors:check": "all-contributors check",
-    "update-browserslist-stats": "browserslist-ga-export --reportPath analytics-2020-02.csv"
-  },
+  "author": "Frank Taillandier",
+  "contributors": [
+    {
+      "name": "Arnaud Ligny",
+      "url": "https://arnaudligny.fr"
+    }
+  ],
+  "homepage": "https://github.com/jamstatic/jamstatic-fr#readme",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jamstatic/jamstatic-fr.git"
   },
-  "keywords": [
-    "hugo",
-    "algolia"
-  ],
-  "author": "Frank Taillandier",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jamstatic/jamstatic-fr/issues"
   },
-  "homepage": "https://github.com/jamstatic/jamstatic-fr#readme",
-  "dependencies": {
-    "all-contributors-cli": "^6.20",
-    "atomic-algolia": "^0.3",
-    "autoprefixer": "^10.3",
-    "postcss-cli": "^8.0"
-  },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^4.0",
-    "postcss": "^8.3",
-    "prettier": "^2.4",
-    "prettier-plugin-go-template": "0.0",
-    "remark-cli": "^10.0",
-    "remark-frontmatter": "^4.0",
-    "remark-inline-links": "^6.0",
-    "remark-lint-code": "^2.0",
-    "remark-lint-first-heading-level": "^3.1",
-    "remark-lint-maximum-line-length": "^3.1",
-    "remark-lint-no-consecutive-blank-lines": "^4.1",
-    "remark-lint-no-empty-sections": "^4.0",
-    "remark-lint-no-leading-spaces": "^1.0",
-    "remark-preset-lint-consistent": "^5.1",
-    "remark-preset-lint-markdown-style-guide": "^5.1",
-    "remark-preset-lint-recommended": "^6.1",
-    "remark-squeeze-paragraphs": "^5.0"
+    "@tailwindcss/forms": "^0.5",
+    "@tailwindcss/typography": "^0.5",
+    "all-contributors-cli": "^6.24",
+    "tailwindcss": "^3.2"
+  },
+  "scripts": {
+    "build": "curl -sSOL https://cecil.app/build.sh && bash ./build.sh",
+    "serve": "cecil serve --config=config/dev.yml",
+    "contributors:add": "all-contributors add",
+    "contributors:check": "all-contributors check",
+    "contributors:generate": "all-contributors generate"
   }
 }

@@ -1,25 +1,16 @@
 [build]
-  publish = "public"
-  command = "hugo --gc --minify"
+  publish = "_site"
+  command = "curl -sSOL https://cecil.app/build.sh && bash ./build.sh"
 
 [build.environment]
-  GO_VERSION = "1.16.2"
-  HUGO_VERSION = "0.82.0"
-  NODE_VERSION = "12.18.3"
+  PHP_VERSION = "8.0"
+  CECIL_CACHE_DIR = "/opt/build/cache/"
 
 [context.production.environment]
-  HUGO_ENV = "production"
-  HUGO_ENABLEGITINFO = "true"
+  CECIL_ENV = "production"
 
-[context.deploy-preview]
-  command = "hugo --gc --minify -D -E -F -b $DEPLOY_PRIME_URL"
 [context.deploy-preview.environment]
-  HUGO_ENV = "development"
-
-[context.branch-deploy]
-  command = "hugo --gc --minify -D -E -F -b $DEPLOY_PRIME_URL"
-[context.branch-deploy.environment]
-  HUGO_ENV = "development"
+  CECIL_ENV = "preview"
 
 [[redirects]]
   from = "/slack"

@@ -1,12 +1,8 @@
-# Hugo
-public/
-resources/_gen/
-hugo_stats.json
-
-# Deploy
-.env
-.netlify
-.now
+# Cecil
+_site/
+.cecil/
+.cache/
+vendor/
 
 # Node
 node_modules
@@ -18,4 +14,3 @@ yarn.lock
 # Editeurs
 .vscode/
 .idea/
-

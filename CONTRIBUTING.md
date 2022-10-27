@@ -17,8 +17,8 @@ Si la ligne de commande vous rebute, vous pouvez toujours utiliser [GitHub Deskt
 git clone git@github.com:jamstatic/jamstatic-fr.git && cd jamstatic.fr
 # Se positionner sur une nouvelle branche de travail
 git switch --create post/mon-nouvel-article
-# Créer un nouvel article dans Hugo
-hugo new post/mon-nouvel-article.md
+# Créer un nouvel article
+cecil new:page post/mon-nouvel-article.md
 ```
 
 ## Soumettre un article à la relecture
@@ -31,4 +31,4 @@ Il est aussi possible de vous ouvrir un accès au [CMS Forestry](https://forestr
 
 ## Contact
 
-Une question? [Rejoignez-nous sur Slack](https://jamstatic.herokuapp.com), nous nous ferons un plaisir de vous répondre. :blush:
+Une question? [Rejoignez-nous sur Slack](https://jamstatic.fr/slack/), nous nous ferons un plaisir de vous répondre. :blush:

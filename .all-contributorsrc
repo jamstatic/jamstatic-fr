@@ -22,19 +22,29 @@
       "profile": "https://frank.taillandier.me"
     },
     {
-      "login": "Narno",
+      "login": "ArnaudLigny",
       "name": "Arnaud Ligny",
-      "avatar_url": "https://avatars0.githubusercontent.com/u/80580?v=4",
-      "profile": "https://arnaudligny.fr",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80580?v=4",
+      "profile": "https://arnaudligny.fr/",
       "contributions": [
-        "financial",
+        "a11y",
+        "question",
         "audio",
-        "code",
-        "maintenance",
-        "infra",
         "blog",
-        "translation",
-        "talk"
+        "bug",
+        "code",
+        "content",
+        "data",
+        "design",
+        "doc",
+        "ideas",
+        "infra",
+        "maintenance",
+        "mentoring",
+        "projectManagement",
+        "review",
+        "talk",
+        "translation"
       ]
     },
     {

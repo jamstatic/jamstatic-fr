@@ -1,8 +1,0 @@
-<div class="notice
-	{{ if .IsNamedParams }}
-		{{ with .Get "type" }}{{.}}{{ end }}"
-	{{ else }}
-		{{ with .Get 0 }}{{.}}{{ end }}"
-	{{ end }}
-role="alert">{{- .Inner | markdownify -}}
-</div>

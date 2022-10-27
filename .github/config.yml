@@ -2,16 +2,16 @@
 
 # Comment to be posted to on first time issues
 newIssueWelcomeComment: >
-  Merci d'avoir ouvert une issue,  merci de respecter le modèle :pray:
+  Merci d'avoir ouvert une issue, merci de respecter le modèle :pray:
 
 # Configuration for new-pr-welcome - https://github.com/behaviorbot/new-pr-welcome
 
 # Comment to be posted to on PRs from first time contributors in your repository
 newPRWelcomeComment: >
-  Merci pour cette première contribution ! :heart:
+  Merci pour cette première contribution :heart:
 
 # Configuration for first-pr-merge - https://github.com/behaviorbot/first-pr-merge
 
 # Comment to be posted to on pull requests merged by a first time user
 firstPRMergeComment: >
-  Bien joué ! :muscle:
+  Bravo ! :muscle:

@@ -1,0 +1,36 @@
+{% set image = asset('https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:' ~ page.title|replace({',': ' '})|url_encode ~ '/jamstatic/twitter-card.png', {filename: 'assets/cards/' ~ page.title|slugify  ~ '.png'}) %}
+
+{% extends '_default/page.html.twig' %}
+
+{%- block content ~%}
+      <article itemtype="https://schema.org/BlogPosting">
+        {{~ include('partials/post.html.twig', {p: page}) ~}}
+        <main class="mx-auto prose sm:prose-lg lg:prose-xl dark:prose-dark" itemprop="articleBody">
+          {{~ page.content ~}}
+        </main>
+        <footer class="mx-auto prose sm:prose-lg lg:prose-xl dark:prose-dark mt-10">
+          <button class="flex items-center space-x-1">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"/>
+            </svg>
+            <a href="https://github.com/jamstatic/jamstatic-fr/edit/master/pages/post/{{ page.filepath }}" title="Proposer une correction de cette article sur GitHub" class="no-underline hover:underline">Proposer une correction</a>
+          </button>
+          {%- if page.categories|default(0) > 0 ~%}
+          <aside>
+            <hr class="my-2 dark:border-gray-800">
+            <div class="text-2xl font-bold font-display text-rose dark:text-rose-400">Dans la même catégorie</div>
+            <ul>
+            {%- for related in site.pages.showable|filter(r => page.categories[0] in r.categories|default({}) and r.id != page.id)|slice(0, 5) ~%}
+              <li>
+                <a class="md:text-lg font-bold no-underline text-violet hover:text-violet-light dark:text-blue-500 dark:hover:text-blue-300" href="{{ url(related) }}">{{ related.title }}</a>
+              </li>
+            {% else %}
+              <li>Aucun autre article...</li>
+            {%- endfor ~%}
+            </ul>
+          </aside>
+          {%- endif ~%}
+        </footer>
+      </article>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{%- endblock ~%}

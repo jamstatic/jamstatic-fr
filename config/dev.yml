@@ -1,0 +1,6 @@
+body:
+  images:
+    responsive:
+      enabled: false
+    webp:
+      enabled: false

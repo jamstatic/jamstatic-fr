@@ -1,0 +1,53 @@
+title: Jamstatic
+baseline: Sites statiques et architectures découplées
+baseurl: https://jamstatic.fr/
+description: Jamstatic, la communauté des sites statiques et des architectures découplées.
+author:
+  name: Jamstatic
+  url: https://jamstatic.fr
+  email: contact@jamstatic.fr
+image: images/twitter-card.png
+language: fr
+languages:
+  - code: fr
+    locale: fr
+social:
+  twitter: jamstatic_fr
+  github: jamstatic
+podcast:
+  title: Génération Statique
+  url: https://anchor.fm/jamstatic
+  rss: https://anchor.fm/s/39f4fa04/podcast/rss
+opencollective: https://opencollective.com/jamstatic
+meetup: https://www.meetup.com/fr-FR/Jamstack-Toulouse/
+cloudinary: https://res.cloudinary.com/jamstatic/image/upload
+ghrepo: https://github.com/jamstatic/jamstatic-fr/
+branch: master
+#
+pagination:
+  enabled: false
+paths:
+  - section: post
+    path: :year/:month/:day/:slug
+body:
+  images:
+    responsive:
+      enabled: true
+    webp:
+      enabled: true
+    caption:
+      enabled: true
+    remote:
+      fallback:
+        enabled: true
+        path: images/no-image.png
+  links:
+    embed:
+      enabled: true
+output:
+  formats:
+    - name: atom
+      mediatype: application/atom+xml
+      filename: feed
+      extension: xml
+      exclude: [redirect, paginated]
