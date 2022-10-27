@@ -48,6 +48,6 @@ output:
   formats:
     - name: atom
       mediatype: application/atom+xml
-      filename: index
+      filename: feed
       extension: xml
       exclude: [redirect, paginated]
