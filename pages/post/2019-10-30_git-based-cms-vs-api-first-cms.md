@@ -30,7 +30,7 @@ Bienvenue dans le monde des CMS headless. Plutôt que de [lister quelques uns de
 
 ## Les CMS basés sur Git
 
-![](git-based-cms.png)
+![Les CMS basés sur Git](../../assets/images/2019-10-30_git-based-cms-vs-api-first-cms/ec6f86c74af478ebc03092ae95b26d9e2c3b630e-2880x1030.png)
 
 Avec un CMS basé sur Git, les changements sont d'abord enregistrés dans votre dépôt Git, ce qui ensuite peut produire une nouvelle génération de votre site. Sans entrer trop dans les détails, sachez juste que vous allez travailler principalement avec des fichiers stockés dans votre dépôt Git. Voyons quels sont les avantages et les inconvénients de ce type de CMS.
 
@@ -52,7 +52,7 @@ Avec un CMS basé sur Git, les changements sont d'abord enregistrés dans votre 
 
 ## Les CMS API-first
 
-![](api-first-cms.png)
+![Les CMS API-first](../../assets/images/2019-10-30_git-based-cms-vs-api-first-cms/d6ad8a9e53a659c61d205492dec1188d8085574c-2880x1482.png)
 
 Avec les CMS dotés d'une API par défaut, vous avez accès à une API, généralement une API REST ou GraphQL, qui sert le contenu. Donc, vous récupérez vos données de la façon dont elles sont structurées mais c'est à vous de choisir le framework ou le langage que vous allez utiliser pour travailler avec ces données.
 

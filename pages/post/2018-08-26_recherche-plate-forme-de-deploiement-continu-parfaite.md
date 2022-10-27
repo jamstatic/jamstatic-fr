@@ -111,7 +111,7 @@ Forcément pour utiliser GitLab CI, vous devez héberger votre code source avec 
 
 ## Jenkins
 
-![](jenkins.svg)
+![Jenkins logo](images/jenkins-logo.svg)
 
 Jenkins est un serveur d'intégration et de déploiement continu que vous installez et lancer sur votre propre serveur. Le projet Jenkins [a débuté en 2004](https://www.cloudbees.com/jenkins/about) et aujourd'hui c'est une solution adoptée par les entreprises qui souhaitent posséder leur propre infrastructure de CI.
 

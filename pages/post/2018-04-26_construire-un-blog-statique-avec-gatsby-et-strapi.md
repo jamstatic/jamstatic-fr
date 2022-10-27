@@ -35,7 +35,7 @@ Les sites Web statiques et PWA ont tous les deux de solides avantages, ce qui no
 
 D'après ses créateurs, [Gatsby](https://www.gatsbyjs.org) est un "_blazing-fast website framework for React_". Il permet aux développeurs de créer des sites construits avec React en quelques minutes. Que vous vouliez développer un blog ou un site vitrine, Gatsby devrait correspondre à vos besoins.
 
-![https://www.gatsbyjs.org](gatsby.svg "https://www.gatsbyjs.org")
+![Gatsby logo](images/gatsby-logo.svg)
 
 Étant donné que Gatsby utilise React, les pages générées ne sont jamais rechargées, ce qui rend le site extrêmement rapide. De nombreux plugins sont disponibles pour permettre aux développeurs de gagner du temps et de récupérer la donnée depuis n'importe quelle source (fichiers Markdown, CMS, etc.). Gatsby est fortement basé sur le concept de la ["node" interface](https://www.gatsbyjs.org/docs/node-interface/), qui est le centre du système de données de Gatsby.
 
@@ -45,7 +45,7 @@ Créé par [Kyle Mathews](https://twitter.com/kylemathews), le projet a été of
 
 [Strapi](https://strapi.io) est le Content Management Framework le plus avancé sur la technologie Node.js. À mi-chemin entre un famework Nodejs et un Headless CMS (API-first), il permet d'économiser des semaines de développement.
 
-![https://strapi.io](strapi.svg "https://strapi.io")
+![Strapi logo](images/strapi-logo.svg)
 
 Grâce à son système extensible de plugin, il propose de nombreuses fonctionnalités : panel d'administration, authentification et gestion des permissions, gestion de contenu, générateur d'API, etc.
 
