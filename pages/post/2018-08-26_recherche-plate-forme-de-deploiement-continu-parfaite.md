@@ -16,8 +16,6 @@ typora-copy-images-to: ../../assets/images/post/${filename}
 L'automatisation est une des composantes qui permet de bien travailler en versionnant son projet et en configurant une publication automatique. Cette bonne pratique issue du développement permet de s'assurer que tout le monde peut contribuer et que les changements seront bien publiés. DJ Walker a pris le temps de passer en revue différents services pour vous, c'est parti pour la visite guidée.
 :::
 
-![Photo by Samuel Zeller on Unsplash](https://res.cloudinary.com/jamstatic/image/upload/c_scale,f_auto,q_auto,w_868/v1535462763/steps-building.jpg "Photo by Samuel Zeller on Unsplash.")
-
 Nous vous avons déjà parlé des [avantages du déploiement automatique,](https://forestry.io/blog/automate-deploy-w-circle-ci/) et plus particulièrement de ceux des sites statiques. L'intégration continue et le déploiement continu sont la stratégie qu'on retrouve le plus souvent quand il s'agit de gérer la publication logicielle. Il existe une multitude d'options pour la mise en place de pipelines CI/CD, avec leurs forces et leurs faiblesses. Quelle est celle qui est faite pour vous ? Dans cet article, nous nous penchons sur cinq services différents  avec lesquels vous pouvez développer, tester et déployer votre code.
 
 ## La configuration est clé
@@ -111,7 +109,7 @@ Forcément pour utiliser GitLab CI, vous devez héberger votre code source avec 
 
 ## Jenkins
 
-![Jenkins logo](images/jenkins-logo.svg)
+![Jenkins logo](/images/jenkins-logo.svg)
 
 Jenkins est un serveur d'intégration et de déploiement continu que vous installez et lancer sur votre propre serveur. Le projet Jenkins [a débuté en 2004](https://www.cloudbees.com/jenkins/about) et aujourd'hui c'est une solution adoptée par les entreprises qui souhaitent posséder leur propre infrastructure de CI.
 
