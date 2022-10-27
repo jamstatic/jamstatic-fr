@@ -1,6 +1,6 @@
 ---
 title: "Les collections dans Eleventy"
-description: Les deux manières de créer des collections de documents avec le générateur de site statique Eleventy.
+description: "Les deux manières de créer des collections de documents avec le générateur de site statique Eleventy."
 date: 2019-01-29T08:54:22+01:00
 author: frank
 categories:
@@ -11,10 +11,7 @@ source:
   url: https://www.pborenstein.com/articles/collections/
 ---
 :::intro
-Le générateur de site statique open source [Eleventy](/categories/eleventy) est à la différence d'autres générateurs — comme Jekyll ou Hugo — beaucoup moins
-opiniâtre. Là où ces deux générateurs vont imposer _la_ manière dont vous pouvez
-créer des collections de documents (appelées sections de contenu dans Hugo),
-Eleventy lui vous laisse le choix.
+Le générateur de site statique open source [Eleventy](/categories/eleventy) est à la différence d'autres générateurs — comme Jekyll ou Hugo — beaucoup moins opiniâtre. Là où ces deux générateurs vont imposer _la_ manière dont vous pouvez créer des collections de documents (appelées sections de contenu dans Hugo), Eleventy lui vous laisse le choix.
 :::
 
 Dans Eleventy les `collections` permettent de grouper des articles selon divers
@@ -24,8 +21,8 @@ collection pourrait rassembler tous les contenus d'un même répertoire.
 
 Eleventy vous permet de créer des collections de deux manières :
 
-- [implicitement](#), à l'aide de tags dans le front matter
-- [explicitement](#), avec la fonction `addCollection()`
+- [implicitement](#les-collections-à-base-de-tags), à l'aide de tags dans le front matter
+- [explicitement](#les-collections-sur-mesure), avec la fonction `addCollection()`
 
 ## Les collections à base de tags
 
@@ -99,9 +96,6 @@ documentation).
 La collection spéciale `all` représente un tableau de tous les objets page
 générés par Eleventy.
 
-<div id="elements-collection"></div>
-<div class="table-caption">propriétés des éléments de collection</div>
-
 | Propriété         | Description                                                                                                                                                                                                                              |
 | :---------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `inputPath`       | Chemin vers ce fichier incluant le répertoire source. <hr><code class="phony">./src/articles/finding-oz.md</code>                                                                                                                        |
@@ -113,14 +107,11 @@ générés par Eleventy.
 | `templateContent` | Le contenu généré de la page, n'inclut pas les balises enveloppantes de mise en page.<hr><code class="phony">&lt;p&gt;Comme la plupart des livres ... à propos du Magicien d'Oz&lt;/li&gt;\n&lt;/ul&gt;\n</code>                         |
 | `template`        | Toutes sortes de données analysées par le modèle. Des choses comme la configuration d'Eleventy, la configuration du moteur de rendu pour le markdown, et beaucoup de choses sur lesquelles nous ne devrions probablement pas nous baser. |
 
-<details style="margin-top: 1em">
+**Implémentation : Comment un tag devient une collection**
 
-<summary>Implémentation : Comment un tag devient une collection</summary>
+[`getTaggedCollectionsData()`](https://github.com/11ty/eleventy/blob/7cac4ac0b6b99dd79d07ab94d1a443c276fe73db/src/TemplateMap.js#L146-L161) est la fonction qui transforme des tags en collections.
 
-[`getTaggedCollectionsData()`](https://github.com/11ty/eleventy/blob/7cac4ac0b6b99dd79d07ab94d1a443c276fe73db/src/TemplateMap.js#L146-L161)
-est la fonction qui transforme des tags en collections.
-
-{{< highlight js "linenos=inline,hl_lines=10-11,linenostart=146" >}}
+```javascript
 async getTaggedCollectionsData() {
 let collections = {};
 collections.all = this.createTemplateMapCopy(
@@ -137,12 +128,10 @@ debug(`Collection: collections.${tag} size: ${collections[tag].length}`);
 }
 return collections;
 }
-{{</ highlight >}}
+```
 
 `getTaggedCollectionsData()` est appelée dans `TemplateMap.cache()` qui est
 l'endroit ou Eleventy génère les collections.
-
-</details>
 
 ## Les collections sur mesure
 
@@ -171,26 +160,6 @@ La fonction `addCollection()` prend deux paramètres[^addcollection] :
 - le nom de la collection (une chaîne de caractères)
 - une fonction qui prend une `collection` en paramètre.
 
-[^addcollection]:
-    `addCollection()` ne fait rien d'autre qu'associer la fonction
-    qui construit la collection au nom de la collection.
-    La fonction qui construit la collection est elle-même appelée plus tard dans
-    [`getUserConfigCollectionsData()`](https://github.com/11ty/eleventy/blob/7cac4ac0b6b99dd79d07ab94d1a443c276fe73db/src/TemplateMap.js#L167-L191).
-
-    ```js
-    addCollection(name, callback) {
-      name = this.getNamespacedName(name);
-
-      if (this.collections[name]) {
-        throw new UserConfigError(
-          `config.addCollection(${name}) already exists. Try a different name for your collection.`
-        );
-      }
-
-      this.collections[name] = callback;
-    }
-    ```
-
 Vous pourriez penser que le paramètre collection est un tableau d'objets de
 modèle comme l'objet `collections` basé sur les tags. Ce paramètre est en fait
 une instance d'une [`TemplateCollection`][template-collection], qui dérive de
@@ -213,8 +182,6 @@ La propriété `items` est un tableau de tous les objets de modèle. C'est la m�
 chose que `collections.all`. Vous ne voulez pas accéder aux éléments directement
 en écrivant : `collection.item[n]`.
 Utilisez plutôt les [méthodes suivantes][collection-methods] pour accéder aux éléments.
-
-<div class="table-caption">collection api methods</div>
 
 | Méthode                     | Description                                                                                    |
 | :-------------------------- | :--------------------------------------------------------------------------------------------- |
@@ -251,16 +218,11 @@ module.exports = function (collection) {
 };
 ```
 
-<details style="margin-top: 1em" id=getUserConfigCollectionsData>
+**Implémentation : Comment sont construites les collections sur mesure**
 
-<summary>
-Implémentation : Comment sont construites les collections sur mesure
-</summary>
+[`getUserConfigCollectionsData()`](https://github.com/11ty/eleventy/blob/7cac4ac0b6b99dd79d07ab94d1a443c276fe73db/src/TemplateMap.js#L167-L191) est la fonction qui appelle ce qui est retourné par la fonction `addCollection()`.
 
-[`getUserConfigCollectionsData()`](https://github.com/11ty/eleventy/blob/7cac4ac0b6b99dd79d07ab94d1a443c276fe73db/src/TemplateMap.js#L167-L191)
-est la fonction qui appelle ce qui est retourné par la fonction `addCollection()`.
-
-{{< highlight js "hl_lines=6" >}}
+```javascript
 async getUserConfigCollectionsData() {
 let collections = {};
 let configCollections =
@@ -284,13 +246,17 @@ debug(
 }
 return collections;
 }
-{{< /highlight >}}
+```
 
 `getUserConfigCollectionsData()` est appelé dans `TemplateMap.cache()` qui est
 l'endroit où Eleventy construit les collections.
 
-</details>
-
 [sortable-src]: https://github.com/11ty/eleventy/blob/master/src/Util/Sortable.js
 [collection-methods]: https://www.11ty.dev/docs/collections/#collection-api-methods
 [template-collection]: https://github.com/11ty/eleventy/blob/master/src/TemplateCollection.js
+
+[^addcollection]:
+    `addCollection()` ne fait rien d'autre qu'associer la fonction
+    qui construit la collection au nom de la collection.
+    La fonction qui construit la collection est elle-même appelée plus tard dans
+    [`getUserConfigCollectionsData()`](https://github.com/11ty/eleventy/blob/7cac4ac0b6b99dd79d07ab94d1a443c276fe73db/src/TemplateMap.js#L167-L191).
