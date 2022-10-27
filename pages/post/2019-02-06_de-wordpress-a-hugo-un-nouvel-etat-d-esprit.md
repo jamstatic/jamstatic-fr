@@ -9,7 +9,7 @@ categories:
 source:
   author: "Régis Philibert"
   title: "From WordPress to Hugo, a mindset transition"
-  url: "https://regisphilibert.com/blog/2019/01/from-wordpress-to-hugo-a-mindset-transition/"
+  url: https://regisphilibert.com/blog/2019/01/from-wordpress-to-hugo-a-mindset-transition/
 ---
 Dans cet article, nous n'allons pas migrer un site de WordPress vers Hugo, nous allons voir comment passer des habitudes que vous avez prises avec WordPress à celles d'Hugo.
 
@@ -55,7 +55,6 @@ Donc pour créer une page de type recette, vous pouvez soit écrire le front mat
 title: De délicieux cupcakes
 type: recette
 ---
-
 ```
 
 Ou vous reposer sur la structure de votre arborescence et laisser faire la magie :
@@ -248,7 +247,7 @@ $recents = new WP_Query(
     'meta_key'  => 'rating',
   ]
 );
- if ( $recents->have_posts() ) : while ( $recents->have_posts() ) : $recents->the_post(); ?>
+if ( $recents->have_posts() ) : while ( $recents->have_posts() ) : $recents->the_post(); ?>
   <h2>
     <a href="<?php $recents->the_permalink(); ?>"><?php $recents->the_title() ?></a>
   </h2>
@@ -325,7 +324,7 @@ On écrira dans son fichier Markdown :
 Nous avons opté pour l'utilisation de la _position_… car il n'y a qu'un seul paramètre 🤷
 
 :::
-[Tirer parti des shortcodes d'Hugo](https://jpescador.com/blog/leverage-shortcodes-in-hugo/) | [Julio Pescador](https://twitter.com/julio_pescador)
+[Tirer parti des shortcodes d'Hugo](https://jpescador.com/blog/leverage-shortcodes-in-hugo/) ([Julio Pescador](https://twitter.com/julio_pescador))
 :::
 
 ## Paramètres
@@ -338,7 +337,7 @@ Tout comme pour l'édition de contenu, la [configuration](https://gohugo.io/gett
 - TOML
 - JSON
 
-Si vous ne connaissez aucun d'entre eux (le dernier devrait vous dire quelques chose), vous pouvez vous pencher sur cet [exemple de configuration](https://gohugo.io/getting-started/configuration/#example-configuration) que vous pouvez
+Si vous ne connaissez aucun d'entre eux (le dernier devrait vous dire quelques chose), vous pouvez vous pencher sur cet [exemple de configuration](https://gohugo.io/getting-started/configuration/#example-configuration) que vous pouvez basculer entre les langues et vérifier leurs syntaxes.
 
 Ces paramètres sont stockés dans un fichier config à la racine ou dans un [répertoire](https://gohugo.io/getting-started/configuration/#configuration-directory) dédié, qui vous permet de les grouper et d'écraser les variables d'environnement de façon plus intelligente.
 
@@ -373,7 +372,6 @@ layouts
   ├── index.json
   └── recipes
       └── single.amp.html
-
 ```
 
 Et c'est tout ! Du moment que ces fichiers de gabarit contiennent le code qui va bien, votre page d'accueil sera disponible en HTML ainsi qu'en JSON, alors que vos recettes pourront être servies en HTML ou au format AMP !
@@ -429,10 +427,12 @@ Je sais! Moi aussi je ne me lasse pas de ces instructions sur deux lignes !
 Vous pouvez lancer des traitements d'images, soit à l'aide des tuyaux d'Hugo ou des [ressources de page](https://gohugo.io/content-management/page-resources/#readout).
 
 :::
+
 - [La révolution des tuyaux d'Hugo](https://regisphilibert.com/blog/2018/07/hugo-pipes-and-asset-processing-pipeline/)
 - [Traitement des images responsive avec Hugo](https://laurakalbag.com/processing-responsive-images-with-hugo/) | [Laura Kalbag](https://twitter.com/laurakalbag)
 - [Cache-bust et concatenation de fichiers JS/SCSS avec Hugo](https://blog.fullstackdigital.com/how-to-cache-bust-and-concatenate-js-and-sass-files-with-hugo-in-2018-9266fd3c411e) | [Ben Bozzay](https://twitter.com/BenBozzay)
 - [Les ressources de page d'Hugo](https://regisphilibert.com/blog/2018/01/hugo-page-resources-and-how-to-use-them/)
+
 :::
 
 ## Thèmes et Plugins VS Composants de Thème
@@ -521,7 +521,7 @@ Au revoir WPML! 🥳
 
 Hugo gère nativement [le multilingue](https://gohugo.io/content-management/multilingual/#readout), y compris l'`i18n` et la traduction de chaînes de caractères.
 
-Reportez-vous à l'article complet de Régis Philibert [sur la gestion multilingue dans Hugo]({{< ref "contenu-multilingue-avec-hugo" >}}).
+Reportez-vous à l'article complet de Régis Philibert [sur la gestion multilingue dans Hugo](page:post/contenu-multilingue-avec-hugo).
 
 ### Menus
 
@@ -643,8 +643,10 @@ Heureusement il existe un support natif de [Disqus](https://disqus.com/) [prêt 
 Et si vous n'êtes pas fans de Disqus, il existe bien d'autres solutions, qui ne demandent souvent qu'une simple balise script et le balisage correspondant.
 
 :::
+
 - [Remplacer Disqus avec les commentaires Github](http://donw.io/post/github-comments/) | [Don Williamson](https://twitter.com/Donzanoid)
 - [Hugo + Staticman : réponses imbriquées et notifications par email](https://networkhobo.com/2017/12/30/hugo-staticman-nested-replies-and-e-mail-notifications/) | [Dan C Williams](https://twitter.com/dancwilliams)
+
 :::
 
 ### Formulaires
@@ -669,8 +671,10 @@ Comme pour tout ce qui est dynamique, rien de natif dans un générateur de site
 - [Algolia](https://www.algolia.com/) et leur incroyable widget [InstantSearch.js](https://community.algolia.com/instantsearch.js/) (🆓 pour les sites de petite et moyenne tailles)
 
 :::
+
 - [Recherche sur Bleve avec Hugo](http://blevesearch.com/news/Site-Search/)
-- [Recherche côté client pour Hugo avec Fuse.js](https://gist.github.com/eddiewebb/735feb48f50f0ddd65ae5606a1cb41ae) | [Eddie Webb](https://twitter.com/edwardawebb/)
+- [Recherche côté client pour Hugo avec Fuse.js](https://gist.github.com/eddiewebb/735feb48f50f0ddd65ae5606a1cb41ae){embed=false} ([Eddie Webb](https://twitter.com/edwardawebb/))
+
 :::
 
 ## Conclusion
