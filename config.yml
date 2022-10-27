@@ -51,3 +51,6 @@ output:
       filename: feed
       extension: xml
       exclude: [redirect, paginated]
+postprocess:
+  images:
+    ext: [jpeg, jpg, png, webp, svg] # , gif
