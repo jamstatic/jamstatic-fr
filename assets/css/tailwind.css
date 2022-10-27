@@ -22,7 +22,7 @@ figure figcaption {
 }
 
 .note {
-  @apply bg-opacity-50 mb-4 px-4 py-1 border-l-4;
+  @apply mb-4 px-4 py-1 border-l-4 bg-opacity-50;
 }
 .note :is(h1, h2, h3, h4, h5, h6) {
   @apply mt-2 mb-0;
@@ -37,10 +37,10 @@ figure figcaption {
   @apply bg-black-grape-100 dark:bg-black-grape-500 border-black-grape-200 dark:border-black-grape-400;
 }
 .note-tip {
-  @apply bg-blue-100 dark:bg-blue-500 border-blue-200 dark:border-blue-400;
+  @apply bg-blue-100 dark:bg-black-grape-500 border-blue-200 dark:border-blue-400;
 }
 .note-important {
-  @apply bg-rose-100 dark:bg-rose-500 border-rose-200 dark:border-rose-400;
+  @apply bg-rose-100 dark:bg-black-grape-500 border-rose-200 dark:border-rose-400;
 }
 
 blockquote p {
