@@ -1,0 +1,38 @@
+name: Rapport de bug
+description: Signaler un problème
+title: "Bug: "
+labels: [bug, triage]
+assignees:
+  - Narno
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de prendre le temps de nous faire un retour !
+  - type: textarea
+    id: probleme
+    attributes:
+      label: Quel est le problème ?
+      description: Merci de partager également le contexte et vos actions.
+      placeholder: Dites nous ce que vous avez fait pour constater le problème.
+      value: "J'ai rencontré une anomalie."
+    validations:
+      required: true
+  - type: dropdown
+    id: navigateurs
+    attributes:
+      label: Avec quel(s) navigateur(s) ?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - Brave
+        - Autre
+  - type: textarea
+    id: logs
+    attributes:
+      label: Fichiers journaux (logs)
+      description: "Merci de copier/coller les messages d'erreur affichés depuis la console."
+      render: shell

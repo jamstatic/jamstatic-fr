@@ -13,13 +13,13 @@ Une architecture à base de pages statiques enrichies par des appels à des API 
 
 Cette approche est marketée par la société Netlify sous le nom [Jamstack](page:post/5-raisons-de-tester-la-jamstack) afin de simplifier la compréhension de leur service, mais ils sont loin d'être les seuls à proposer des services d'intégration continue et de déploiement sur CDN.
 
-Ce qui nous intéresse ici, plus que le recours à des services bien pratiques il est vrai, c'est d'abord de répondre aux enjeux d'aujourd'hui : concilier des outils de développement qui adoptent une approche par composition, automatiser les déploiements, pour mieux se concentrer sur notre cœur de métier : le front, et ainsi pouvoir délivrer de sites utilisables, y compris avec une connexion 3G instable.
+Ce qui nous intéresse ici, plus que le recours à des services bien pratiques il est vrai, c’est d’abord de répondre aux enjeux d’aujourd’hui : concilier des outils de développement qui adoptent une approche par composition, automatiser les déploiements, pour mieux se concentrer sur notre cœur de métier : le rendu du contenu, et ainsi pouvoir délivrer des sites utilisables y compris avec une connexion 3G instable.
 
 On assiste depuis quelques années à [une mouvance statique](https://frank.taillandier.me/2016/03/08/les-gestionnaires-de-contenu-statique/) et nous observons que l'écosystème autour de ce paradigme ne cesse de se développer.
 
 Sur ce site vous trouverez l'actualité relative aux principaux générateurs, tels que [Eleventy](/categories/eleventy/ "Catégorie Eleventy"), [Hugo](/categories/hugo/ "Catégorie Hugo"), [Next.js](/categories/nextjs/ "Catégorie Next.js") ou encore [Gatsby](/categories/gatsby/ "Catégorie Gatsby"), des exemples d'utilisation, des traductions d'articles de référence, des retours d'expérience, des entretiens et bien plus encore.
 
-Nous échangeons également beaucoup sur [notre Slack](https://jamstatic.fr/slack), n'hésitez à nous rejoindre !
+Nous échangeons également beaucoup sur [notre Slack](https://jamstatic.fr/slack), n’hésitez à nous rejoindre !
 
 ## Nous soutenir
 
@@ -27,7 +27,7 @@ Nous échangeons également beaucoup sur [notre Slack](https://jamstatic.fr/slac
 
 ---
 
-L'ensemble des billets est publié en sous licence [Creative Commons Attribution Share Alike](https://creativecommons.org/licenses/by-sa/4.0/) et le code source du site web est disponible sur [GitHub](https://github.com/jamstatic/jamstatic-fr).
+L’ensemble des billets est publié en sous licence [Creative Commons Attribution Share Alike](https://creativecommons.org/licenses/by-sa/4.0/) et le code source du site web est disponible sur [GitHub](https://github.com/jamstatic/jamstatic-fr).
 
 ## Contributeurs
 
