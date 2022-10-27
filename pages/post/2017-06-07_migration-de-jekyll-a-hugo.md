@@ -474,9 +474,9 @@ la page d’accueil à partir du fichier `/contents/_index.md`.
 En outre, j'appelle l’entête ainsi que le pied de page à l’aide de fichiers
 partiels.
 
-Par défaut, quand vous demandez `partial "footer.html ."`, {{< marker >}}Hugo va
+Par défaut, quand vous demandez `partial "footer.html ."`, Hugo va
 regarder s'il existe un fichier partiel dans le dossier `partials` situé dans le
-répertoire `layouts`.{{< /marker >}}
+répertoire `layouts`.
 
 Reportez-vous à
 [la documentation d’Hugo sur les fichiers partiels](https://gohugo.io/templates/partials/)

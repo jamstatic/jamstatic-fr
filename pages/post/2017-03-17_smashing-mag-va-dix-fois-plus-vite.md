@@ -106,10 +106,6 @@ Netlify a décidé qu'ils ne pouvaient laisser passer une aussi belle occasion.
 Smashing magazine serait la parfaite étude de cas pour montrer que l’utilisation
 de la Jamstack constitue **la** manière de développer des sites.
 
-{{< figure
-src=""
-caption="Mathias Biilmann : Smashing avait besoin d’un générateur, d’un CMS, de commentaires, d’une plate-forme de E-commerce, d’une gestion des abonnements et des paiements" >}}
-
 ![Mathias Biilmann : Smashing avait besoin d’un générateur, d’un CMS, de commentaires, d’une plate-forme de E-commerce, d’une gestion des abonnements et des paiements](https://cdn.netlify.com/8847cc537164cc098d3f77f8db225c41f14430a5/e553b/img/blog/gif_4.gif "Mathias Biilmann : Smashing avait besoin d’un générateur, d’un CMS, de commentaires, d’une plate-forme de E-commerce, d’une gestion des abonnements et des paiements.")
 
 Cela signifie que Smashing avait beaucoup de besoins. Il fallait créer un outil

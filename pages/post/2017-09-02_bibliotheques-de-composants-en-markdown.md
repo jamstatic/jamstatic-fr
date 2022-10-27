@@ -3,8 +3,6 @@ title: Des bibliothèques de composants avec Shadow DOM en Markdown
 description: Apprenez à inclure facilement des démos de composants dans du Markdown, à l’aide des shortcodes de Hugo et de l’encapsulation Shadow DOM.
 author: frank
 date: 2017-09-02
-images:
- - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1280,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Des%20biblioth%C3%A8ques%20de%20composants%20avec%20Shadow%20DOM%20en%20Markdown/jamstatic/twitter-card.png
 source:
   author: Heydon Pickering
   title: Building Pattern Libraries With Shadow DOM In Markdown
@@ -13,8 +11,7 @@ categories:
   - hugo
 ---
 
-{{< intro >}}
-
+:::intro
 S'il est un domaine où les générateurs de site statique se sont
 rapidement imposés c'est bien celui des sites de documentation. Avec la
 nécessaire rationalisation des interfaces multi-supports, beaucoup d’équipes en
@@ -32,10 +29,7 @@ modularisation du générateur Hugo pour mener à bien cette tâche, il nous
 explique tout cela en détail. Une bonne occasion pour découvrir les
 fonctionnalités liées aux snippets de code dans Hugo et d’apprendre à créer des
 éléments Shadow DOM en JavaScript.
-
-{{< /intro >}}
-
----
+:::
 
 Il y a des gens qui détestent écrire de la documentation et d’autres qui
 détestent écrire tout court. Il se trouve que j'aime écrire, sinon vous ne
@@ -68,8 +62,7 @@ Dans cet article, je vais vous montrer comme inclure facilement des démos de
 code dans des documents Markdown avec l’aide de snippets et de l’encapsulation
 du Shadow DOM.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346913/markdown-shadowdom.png"
-caption="Un M, une flèche qui pointe vers le bas et un détective caché dans l’obscurité pour symboliser Markdown et Shadow Dom" >}}
+![Un M, une flèche qui pointe vers le bas et un détective caché dans l’obscurité pour symboliser Markdown et Shadow Dom](../../assets/images/2017-09-02_bibliotheques-de-composants-en-markdown/markdown-shadowdom-preview-opt.png "Un M, une flèche qui pointe vers le bas et un détective caché dans l’obscurité pour symboliser Markdown et Shadow Dom")
 
 ### CSS et Markdown
 
@@ -120,7 +113,8 @@ complexes ou issus de services tiers. Par example WordPress inclus un raccourci
 pour Vimeo qui prend juste l’ID de la vidéo Vimeo en question.
 
 ```html
-[vimeo 207263942]
+<iframe src="https://player.vimeo.com/video/207263942?h=4a34bbf60a" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/207263942">Hugo in the garden</a> from <a href="https://vimeo.com/twistedpoly">Twistedpoly</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 ```
 
 Les crochets indiquent que le contenu doit être traité et remplacé par le
@@ -134,7 +128,12 @@ CodePen très simple que peux inclure dans mon contenu en Markdown :
 Un peu de contenu en Markdown avant le shortcode. Aliquam sodales rhoncus dui,
 sed congue velit semper ut. Class aptent taciti sociosqu ad litora torquent.
 
-{{ <codePen VpVNKW> }}
+<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="VpVNKW" data-user="heydon" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+  <span>See the Pen <a href="https://codepen.io/heydon/pen/VpVNKW">
+  Vue.js TODO List </a> by Heydon (<a href="https://codepen.io/heydon">@heydon</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
 Un peu de contenu en Markdown après le shortcode. Nulla vel magna sit amet dui
 lobortis commodo vitae vel nulla sit amet ante hendrerit tempus.
@@ -162,13 +161,8 @@ templating de Go, vous devrez consulter
 d’Hugo. En attendant, retenez simplement cela :
 
 - C’est pas super sexy mais c'est très puissant.
-
-- `{{ .Get 0 }}` sert à récupérer le premier (et dans cet exemple le seul)
-  argument fourni — l’ID du CodePen. Hugo supporte également les arguments
-  nommés, qui sont déclarés comme des arguments HTML.
-
-- Le `.` référence le contexte actuel. Donc `.Get 0` signifie “Récupère le
-  premier argument fourni pour le _shortcode_ courant.”
+- `{{ .Get 0 }}` sert à récupérer le premier (et dans cet exemple le seul) argument fourni — l’ID du CodePen. Hugo supporte également les arguments nommés, qui sont déclarés comme des arguments HTML.
+- Le `.` référence le contexte actuel. Donc `.Get 0` signifie “Récupère le premier argument fourni pour le _shortcode_ courant.”
 
 Quoi qu'il en soit, je pense que les _shortcodes_ sont la meilleure chose qui
 existe depuis le pain de mie en tranches et l’implémentation d’Hugo pour écrire
@@ -184,14 +178,9 @@ du code), mais on se heurte à des problèmes inhérents à ces plate-formes
 lorsqu'on veut inclure ces extraits de code dans une bibliothèque de composants
 :
 
-- On dépend d’une API et il n'est pas toujours facile de faire fonctionner cela
-  efficacement en mode hors-ligne.
-
-- Cela ne représente pas un simple composant, c'est une interface complexe à
-  part entière qui embarque les styles du service utilisé.
-
-- Cela crée du bruit et une distraction inutile alors que le focus devrait être
-  sur le composant.
+- On dépend d’une API et il n'est pas toujours facile de faire fonctionner cela efficacement en mode hors-ligne.
+- Cela ne représente pas un simple composant, c'est une interface complexe à part entière qui embarque les styles du service utilisé.
+- Cela crée du bruit et une distraction inutile alors que le focus devrait être sur le composant.
 
 Pendant un temps, j'ai tenté d’inclure mes démos de composants en utilisant mes
 propres iframes. Je faisais pointer l’iframe vers un fichier en local qui
@@ -328,15 +317,9 @@ l’implémenter de cette façon :
 </script>
 ```
 
-- `$uniq` est une variable définie pour identifier le conteneur du composant. Elle
-est passée à plusieurs fonctions de templating de Go pour créer une chaîne de
-caractères unique… enfin espérons-le ! — ce n'est pas une méthode infaillible,
-c'est simplement pour l’exemple.
-
+- `$uniq` est une variable définie pour identifier le conteneur du composant. Elle est passée à plusieurs fonctions de templating de Go pour créer une chaîne de caractères unique… enfin espérons-le ! — ce n'est pas une méthode infaillible, c'est simplement pour l’exemple.
 - `root.attachShadow` fait du conteneur du composant un hôte shadow DOM.
-
-- Je peuple le `innerHTML` du `ShadowRoot` avec `{{ .Inner }}`, qui inclus le CSS
-maintenant encapsulé.
+- Je peuple le `innerHTML` du `ShadowRoot` avec `{{ .Inner }}`, qui inclus le CSS maintenant encapsulé.
 
 #### Autoriser le comportement avec JavaScript
 
@@ -472,7 +455,7 @@ if (document.head.attachShadow) {
 Ou alors vous pouvez inclure Shady DOM et l’extension Shady CSS, ce qui veut
 dire ajouter une dépendance non négligeable (+60KB) et une API différente. Rob
 Dodson a été assez gentil pour me fournir une
-[démo basique](https://gist.github.com/robdodson/287030402bad4b496a0361314138f0f9),
+[démo basique](https://gist.github.com/robdodson/287030402bad4b496a0361314138f0f9){embed=false},
 que je suis ravi de vous partager pour vous aider à vous lancer.
 
 ### Des légendes pour les composants
@@ -586,19 +569,10 @@ comment ce curieux petit coin du Web va évoluer.
 #### Ressources
 
 - [La documentation d’Hugo](https://gohugo.io/overview/introduction/)
-
 - [Package Template du langage Go](https://golang.org/pkg/text/template/)
-
 - [Les _shortcodes_ d’Hugo](https://gohugo.io/extras/shortcodes)
-
-- [all (propriété CSS)](https://developer.mozilla.org/en/docs/Web/CSS/all),
-  Mozilla Developer Network
-
-- [initial (CSS)](https://developer.mozilla.org/en-US/docs/Web/CSS/initial), sur
-  le Mozilla Developer Network
-
+- [all (propriété CSS)](https://developer.mozilla.org/en/docs/Web/CSS/all), Mozilla Developer Network
+- [initial (CSS)](https://developer.mozilla.org/en-US/docs/Web/CSS/initial), sur le Mozilla Developer Network
 - [Shadow DOM v1 : Self-Contained Web Components](https://developers.google.com/web/fundamentals/getting-started/primers/shadowdom), Eric Bidelman, Web Fundamentals, Google Developers
-
 - [Introduction à l’élément template](https://www.webcomponents.org/community/articles/introduction-to-template-element) Eiji Kitamura, WebComponents.org
-
 - [Les includes de Jekyll](https://jekyllrb.com/docs/includes/)

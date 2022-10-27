@@ -51,8 +51,6 @@ Mathews.
 > remarque que cliquer sur des liens sur un site fait avec Gatsby, c'est comme
 > naviguer sur un site en local
 
-![Vue d’ensemble de Gatsby](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346952/architecture-gatsby.png "Vue d’ensemble de Gatsby")
-
 Dans une interview à InfoQ, Mathews parle des motivations pour lesquelles il
 développe Gastby et de son avenir.
 

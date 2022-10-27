@@ -77,7 +77,7 @@ Pour commencer à utiliser Netlify, rendez-vous sur
 Cliquez sur `Ajoutez un nouveau projet`, sélectionnez GitHub et sélectionnez le
 dépôt qui dans lequel se trouve votre site.
 
-![Netlify : Configuration du dépôt](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523360891/configure-netlify.png "Netlify : Configuration du dépôt")
+![Netlify : Configuration du dépôt](../../assets/images/2017-02-23_creer-un-environnement-de-preproduction-pour-jekyll/netlify1-1666827229390-61.png "Netlify : Configuration du dépôt")
 
 Dans l’onglet `Paramètres de base`, sélectionnez votre branche de préproduction
 (par exemple `dev`). Pour un site avec Jekyll, le dossier de publication par
@@ -96,7 +96,7 @@ un nom de domaine personnalisé pour ce site, pour cela vous devrez configurer
 votre DNS. Si vous avez choisi `dev-example-com` comme nom pour votre site, il
 vous faudra un CNAME qui pointe vers `dev-example-com.netlify.com`.
 
-![Netlify: le panneau de configuration](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523361029/config-panel-netlify.png "Netlify: le panneau de configuration")
+![Netlify : le panneau de configuration](../../assets/images/2017-02-23_creer-un-environnement-de-preproduction-pour-jekyll/netlify2.png "Netlify : le panneau de configuration")
 
 ## Configuration de Jekyll
 

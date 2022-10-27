@@ -27,7 +27,7 @@ La bonne nouvelle c'est qu'il y a pas mal de points communs entre Hugo et WordPr
 
 Quand j'ai écrit à propos d’Hugo l’année dernière, il lui manquait quelques-unes des fonctionnalités qui rendent WordPress si populaire. Mais cela a énormément évolué depuis (tout en restant incroyablement rapide) et Hugo offre maintenant des fonctionnalités matures comme l’imbrication de templates ou les contenus relatifs, et les nouvelles fonctionnalités continuent d’affluer en permanence.
 
-![Édition d’un modèle de page pour Hugo](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346880/home-page-templating-example.png "Édition d’un modèle de page pour Hugo.")
+![Édition d’un modèle de page pour Hugo](../../assets/images/2017-10-01_templates-hugo-designers-wordpress/home-page-templating-example-952x480.png "Édition d’un modèle de page pour Hugo.")
 
 ## Fondamentaux des templates Hugo
 
@@ -133,7 +133,7 @@ C’est le bon moment pour vous présenter une des différences majeures entre W
 
 Alors que les sites statiques sont simplement **des copies de fichiers sur votre ordinateur**, ce qui vous permet de visualiser et de manipuler la structure de votre site.
 
-![Un exemple typique du dossier `layouts` d’Hugo](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346873/layouts.png "Un exemple typique du dossier `layouts` d’Hugo.")
+![Un exemple typique du dossier `layouts` d’Hugo](../../assets/images/2017-10-01_templates-hugo-designers-wordpress/layouts.png "Un exemple typique du dossier `layouts` d’Hugo")
 
 C’est un peu comme les systèmes d’exploitation ordinateur et mobile. Sur les systèmes de fichiers d’un ordinateur, on peut parcourir l’arborescence de fichiers (via le Finder, l’Explorateur, etc.) alors que les OS pour mobile essaient de masquer cette hiérarchie et se contentent d’associer des fichiers à des applications, vous évitant d’avoir à vous soucier de la structure interne.
 
@@ -145,7 +145,7 @@ Heureusement, Hugo fait preuve de consistence dans le nommage des fichiers. C’
 
 Pour continuer de discuter des différences philosophiques entre Hugo et WordPress, Hugo est beaucoup moins normatif quant à l’organisation de votre site. Alors que WordPress utilise un modèle rigide d’articles et de pages, Hugo est façonné à l’aide de "contenu" générique et de répertoires.
 
-![Articles et pages dans WordPress](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346891/pages-wordpress.png "Articles et pages dans WordPress")
+![Articles et pages dans WordPress](../../assets/images/2017-10-01_templates-hugo-designers-wordpress/pages.png "Articles et pages dans WordPress")
 
 ![Répertoires de contenu dans Hugo](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346845/hugo-content-folder.png "Répertoires de contenu dans Hugo.")
 
@@ -163,7 +163,7 @@ Le truc chouette avec les modèles de section, c'est que vous n'avez rien de plu
 
 Pour voir à quoi cela ressemble en pratique, jetons un œil à la structure du [site de support de Balsamiq](https://support.balsamiq.com/) qui possède, entre autres, des sections appelées “plugins”, “tutorials”, “sales”.
 
-![Le dossier content du site de support de Balsamiq](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346838/sbc-content.png "[Le dossier content du site de support de Balsamiq](https://github.com/balsamiq/support.balsamiq.com/tree/master/content)")
+![Le dossier content du site de support de Balsamiq](../../assets/images/2017-10-01_templates-hugo-designers-wordpress/sbc-content.png "Le dossier content du site de support de Balsamiq")
 
 Dans le dossier `section`, il y a des fichiers de modèles pour quelques-unes d’entre elles, nommées en fonction du dossier de contenu (par exemple "plugins.html").
 
@@ -215,14 +215,10 @@ Enfin, voici une liste d’excellentes ressources en anglais sur Hugo pour vous 
 
 - [La documentation officielle d’Hugo](https://gohugo.io/documentation/).
 - [Le forum officiel d’Hugo](https://discourse.gohugo.io/) – un bon endroit pour trouver des réponses à vos questions et déboguer votre code.
-- [Les tutoriels vidéo de Giraffe Academy sur YouTube](https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3)
-  - 23 vidéos !
-- [Le thème “Learn” pour Hugo](https://themes.gohugo.io/theme/hugo-theme-learn/en)
-  - Un bon endroit pour commencer à jouer.
-- [D'autres thèmes pour Hugo](https://themes.gohugo.io/)
-  - pour que vous n'ayez pas à commencer de zéro.
+- [Les tutoriels vidéo de Giraffe Academy sur YouTube](https://www.youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3) - 23 vidéos !
+- [Le thème “Learn” pour Hugo](https://themes.gohugo.io/theme/hugo-theme-learn/en) - Un bon endroit pour commencer à jouer.
+- [D'autres thèmes pour Hugo](https://themes.gohugo.io/) - pour que vous n'ayez pas à commencer de zéro.
 - [Un des nombreux billets de blog sur le passage de WordPress à Hugo](https://blog.philipphauer.de/moving-wordpress-hugo/).
-- [Bien démarrer avec les sites statiques](http://blog.teamtreehouse.com/getting-started-static-sites)
-  - mon article précédent sur les sites statiques.
+- [Bien démarrer avec les sites statiques](http://blog.teamtreehouse.com/getting-started-static-sites) - mon article précédent sur les sites statiques.
 
 Merci de m'avoir lu. Bonne génération de site !
