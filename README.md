@@ -16,43 +16,45 @@ Vous pouvez :
 * [Rejoindre le channel Slack](https://jamstatic.fr/slack/)
 * [Soumettre un article à la publication](https://github.com/jamstatic/jamstatic-fr/projects/1)
 
-## Développement
+## Contribuer
 
 Le site est généré avec [Cecil](https://cecil.app).
 
-Pour télécharger Cecil:
+Télécharger Cecil :
 
 ```bash
 curl -LO https://cecil.app/cecil.phar
 ```
 
-Pour clôner le dépôt sur sa machine:
+Clôner le dépôt :
 
 ```bash
 git clone https://github.com/jamstatic/jamstatic-fr.git
 ```
 
-Pour créer un nouvel article:
+Créer un nouvel article :
 
 ```bash
 git switch --create post/nouvel-article
 cecil new:page post/nouvel-article.md
 ```
 
-### Prévisualiser en local
+Prévisualiser sur sa machine :
 
 ```bash
 php cecil.phar serve -v
 ```
 
-### Ouvrir une pull request
+Ouvrir une PR (Pull Request) :
 
 ```bash
 git commit -am "chore: nouvel article"
 gh pr create
 ```
 
-### Modifier la feuille de styles Tailwind CSS
+## Développement
+
+### Regénérer la feuille de styles gérée avec Tailwind CSS
 
 ```bash
 npm install
