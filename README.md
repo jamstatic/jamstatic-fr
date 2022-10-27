@@ -40,7 +40,7 @@ php cecil.phar new:page post/nouvel-article.md
 4. Prévisualiser le site web
 
 ```bash
-php cecil.phar serve -v
+php cecil.phar serve -d -v --config=config/dev.yml
 ```
 
 5. Envoyer l’article
