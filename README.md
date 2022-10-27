@@ -6,55 +6,58 @@
 [![Contributeurs](https://img.shields.io/badge/all_contributors-26-orange.svg?style=flat-square)](#contributeurs)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-Vous utilisez Jekyll, Hugo, Eleventy ou tout autre générateur de site statique, vous
-voulez échanger avec la communauté francophone et vous tenir informé de
-l'actualité de l'écosystème de la Jamstack ?
+Vous utilisez Jekyll, Hugo, Eleventy ou tout autre générateur de site statique, vous voulez échanger avec la communauté francophone et vous tenir informé de l'actualité de l'écosystème de la Jamstack ?
 
 Vous pouvez :
 
 * [Nous suivre sur Twitter](https://twitter.com/jamstatic_fr)
-* [Rejoindre le channel Slack](https://jamstatic.fr/slack/)
+* [Rejoindre le Slack](https://jamstatic.fr/slack/)
 * [Soumettre un article à la publication](https://github.com/jamstatic/jamstatic-fr/projects/1)
 
 ## Contribuer
 
 Le site est généré avec [Cecil](https://cecil.app).
 
-Télécharger Cecil :
+1. Télécharger Cecil
 
 ```bash
 curl -LO https://cecil.app/cecil.phar
 ```
 
-Clôner le dépôt :
+2. Clôner le dépôt Git
 
 ```bash
 git clone https://github.com/jamstatic/jamstatic-fr.git
 ```
 
-Créer un nouvel article :
+3. Créer un nouvel article (dans une branche dédiée)
 
 ```bash
 git switch --create post/nouvel-article
-cecil new:page post/nouvel-article.md
+php cecil.phar new:page post/nouvel-article.md
 ```
 
-Prévisualiser sur sa machine :
+4. Prévisualiser le site web
 
 ```bash
 php cecil.phar serve -v
 ```
 
-Ouvrir une PR (Pull Request) :
+5. Envoyer l’article
 
 ```bash
 git commit -am "chore: nouvel article"
+```
+
+6. Soumettre une PR (Pull Request)
+
+```bash
 gh pr create
 ```
 
 ## Développement
 
-### Regénérer la feuille de styles gérée avec Tailwind CSS
+### Regénérer la feuille de styles avec [Tailwind CSS](https://tailwindcss.com)
 
 ```bash
 npm install
@@ -63,13 +66,13 @@ npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/styles.css
 
 ## Production
 
-Chaque commit dans la branche `master` génère un déploiement, qui est ensuite poussé manuellement en production via l'interface de Netlify.
+Chaque commit dans la branche `master` génère un déploiement, qui est ensuite « poussé » manuellement en production via l'interface de Netlify.
 
 Si vous souhaitez contribuer, proposer des articles, vous pouvez ouvrir une issue ou soumettre directement une pull request :heart:
 
 ## Contributeurs
 
-Merci à ces personnes extraordinaires ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+Merci à ces personnes extraordinaires ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)) :
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
