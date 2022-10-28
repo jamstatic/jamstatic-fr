@@ -6,13 +6,13 @@
           {%- if paginator.links.prev is defined ~%}
           <a class="flex-auto text-left hover:underline dark:hover:text-blue-300" href="{{ url(site.pages[paginator.links.prev]) }}">&larr; {% trans %}Précédent{% endtrans %}</a>
           {%- else ~%}
-          <span class="flex-auto text-left">&larr; {% trans %}Précédent{% endtrans %}</span>
+          <span class="flex-auto text-left text-white">&larr; {% trans %}Précédent{% endtrans %}</span>
           {%- endif ~%}
           <span class="flex-auto text-center">{% trans %}%paginator_current% sur %paginator_count%{% endtrans %}</span>
           {%- if paginator.links.next is defined ~%}
           <a class="flex-auto text-right hover:underline dark:hover:text-blue-300" href="{{ url(site.pages[paginator.links.next]) }}">{% trans %}Suivant{% endtrans %} &rarr;</a>
           {%- else ~%}
-          <span class="flex-auto text-right">{% trans %}Suivant{% endtrans %} &rarr;</span>
+          <span class="flex-auto text-right text-white">{% trans %}Suivant{% endtrans %} &rarr;</span>
           {%- endif ~%}
         </nav>
 {% endif %}
