@@ -4,7 +4,7 @@
 
 [build.environment]
   PHP_VERSION = "8.0"
-  CECIL_CACHE_DIR = "/opt/build/cache/"
+  #CECIL_CACHE_DIR = "/opt/build/cache/"
 
 [context.production.environment]
   CECIL_ENV = "production"
