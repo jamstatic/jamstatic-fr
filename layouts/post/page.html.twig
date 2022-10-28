@@ -32,5 +32,7 @@
           {%- endif ~%}
         </footer>
       </article>
+      {% if page.twitter_widgets|default(false) ~%}
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      {% endif ~%}
 {%- endblock ~%}

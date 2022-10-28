@@ -12,6 +12,7 @@ source:
   lang: en
 canonical_url: https://nicolas-hoizey.com/articles/2020/05/05/jamstack-is-fast-only-if-you-make-it-so/
 typora-root-url: ../../static
+twitter_widgets: true
 ---
 :::intro
 [Nicolas Hoizey](https://nicolas-hoizey.com) partage ici sa vision de la Jamstack et le fait que celle-ci n’est performante que si vous faites véritablement en sorte qu’elle le soit. À noter que depuis la parution de son article, Netlify a supprimé les majuscules de Jamstack afin de moins insister sur l'acronyme à l'origine de cette appelation qui suscite encore trop souvent une incompréhension. Encore heureux qu'en 2020 on puisse encore générer du HTML sans passer par un framework JS !

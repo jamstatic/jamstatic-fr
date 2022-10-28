@@ -10,6 +10,7 @@ categories:
   - nextjs
 podcast:
   url: https://anchor.fm/jamstatic/episodes/Vers-une-Jamstack-lgre-et-performante--avec-Nicolas-Goutay-emunhp
+twitter_widgets: true
 ---
 :::intro
 Dans ce premier épisode de *Génération Statique* Frank Taillandier et Arnaud Ligny reçoivent Nicolas Goutay, expert performance web, actuellement développeur chez [Orbit](https://orbit.love), conférencier et organisateur des [meetups Jamstack parisiens](https://jamstack.paris). Fort d’une expérience avec React et Gatsby, le coût des frameworks JavaScript côté client a poussé Nicolas à privilégier des outils plus légers et plus adaptés aux sites de contenus.
