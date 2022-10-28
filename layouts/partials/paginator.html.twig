@@ -2,7 +2,7 @@
 {% set paginator = page.paginator %}
 {% set paginator_current = paginator.current %}
 {% set paginator_count = paginator.count %}
-        <nav class="flex flex-row items-center text-base md:text-lg font-bold font-display text-violet dark:text-blue-500">
+        <nav class="flex flex-row items-center text-base md:text-lg font-display font-extrabold text-violet dark:text-blue-500">
           {%- if paginator.links.prev is defined ~%}
           <a class="flex-auto text-left hover:underline dark:hover:text-blue-300" href="{{ url(site.pages[paginator.links.prev]) }}">&larr; {% trans %}Précédent{% endtrans %}</a>
           {%- else ~%}

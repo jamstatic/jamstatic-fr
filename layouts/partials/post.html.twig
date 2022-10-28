@@ -20,11 +20,11 @@
               </div>
               {#- title ~#}
               {%- if in_list|default(false) == true ~%}
-              <h2 class="mb-2 text-3xl font-display font-black xl:leading-snug text-violet dark:text-blue-500 dark:hover:text-blue-300">
+              <h2 class="mb-2 text-3xl font-display font-extrabold xl:leading-snug text-violet dark:text-blue-500 dark:hover:text-blue-300">
                 <a href="{{ url(p) }}" class="hover:underline">{{ p.title }}</a>
               </h2>
               {%- else ~%}
-              <h1 class="mb-2 text-3xl font-display font-black xl:leading-snug text-violet dark:text-blue-500 dark:hover:text-blue-300">
+              <h1 class="mb-2 text-3xl font-display font-extrabold xl:leading-snug text-violet dark:text-blue-500 dark:hover:text-blue-300">
                 {{ p.title }}
               </h1>
               {%- endif ~%}
@@ -52,7 +52,7 @@
               {%- if page.source|default -%}
                 {%- if page.source.url|default ~%}
               <p class="mt-2 text-base text-black-grape-400 dark:text-black-grape-200">
-                Source : <a class="no-underline font-display font-semibold text-rose hover:underline" href="{{ page.source.url }}"><em>{{ page.source.title|default(page.source.url) }}</em></a>
+                Source : <a class="no-underline font-display font-extrabold text-rose hover:underline" href="{{ page.source.url }}"><em>{{ page.source.title|default(page.source.url) }}</em></a>
                 {%- if page.source.author|default %} par {{ page.source.author }}{% endif ~%}.
               </p>
                 {%- endif -%}
