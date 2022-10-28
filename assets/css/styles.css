@@ -1464,6 +1464,10 @@ select {
   width: 91.666667%;
 }
 
+.w-\[24px\] {
+  width: 24px;
+}
+
 .flex-auto {
   flex: 1 1 auto;
 }

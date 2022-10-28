@@ -16,8 +16,8 @@
   <body class="{{ page.type }} dark:bg-gray-900">
     <div class="sticky top-0 z-10 text-white bg-violet-light">
       <div class="flex items-center justify-between pl-2">
-        {%- set logo = asset('favicon.png')|resize(24) ~%}
-        <a href="{{ url() }}"><img src="{{ url(logo) }}" alt="Logo Jamstatic" width="{{ logo.width }}" height="{{ logo.height }}"/></a>
+        {%- set logo = asset('favicon.png')|resize(48) ~%}
+        <a href="{{ url() }}"><img src="{{ url(logo) }}" alt="Logo Jamstatic" width="{{ logo.width }}" height="{{ logo.height }}" class="w-[24px]" /></a>
         <div class="flex items-center">
           <nav class="py-2 px-4">
             <ul class="flex justify-end space-x-4">
