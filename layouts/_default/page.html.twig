@@ -9,8 +9,8 @@
     <link href="{{ url(asset('css/styles.css')) }}" rel="stylesheet" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Roboto&display=swap" rel="preload" as="style" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&family=Roboto&display=swap" rel="preload" as="style" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800;900&family=Roboto&display=swap" rel="stylesheet" />
   </head>
   <body class="{{ page.type }} dark:bg-gray-900">
     <div class="sticky top-0 z-10 text-white bg-violet-light">
@@ -32,7 +32,7 @@
     </div>
     <header class="text-white bg-violet">
       <div class="pt-8 pb-12 mx-auto w-72 md:w-1/2 lg:w-2/5">
-        {%- if page.type == 'homepage' ~%}
+        {%- if page.type == 'homepage' and page.paginator.current|default(1) < 2 ~%}
         <h1>{{ include('partials/svg/jamstatic-logo-violet.svg')|spaceless }}</h1>
         {%- else ~%}
         <a href="{{ url() }}" title="Retour à l'accueil">{{ include('partials/svg/jamstatic-logo-violet.svg')|spaceless }}</a>
