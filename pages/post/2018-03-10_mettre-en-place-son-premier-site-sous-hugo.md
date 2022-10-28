@@ -207,7 +207,7 @@ ajoutant un thème issu de
 [la galerie de thèmes de Hugo](https://themes.gohugo.io/), développé par un des
 meilleurs contributeurs de la communauté.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346998/up_running_w_hugo_I_1.jpg" alt="" caption="Le thème Casper de @vjeantet" >}}
+![Le thème Casper de @vjeantet](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346998/up_running_w_hugo_I_1.jpg "Le thème Casper de @vjeantet")
 
 Nous allons utiliser le thème
 [Casper](https://github.com/vjeantet/hugo-theme-casper) de
@@ -274,14 +274,14 @@ Nous allons commencer par éditer les paramètres du site dans le fichier
 - `metadescription = "Utilisé dans la balise meta 'description' pour l’accueil et les pages d’index, faute de quoi c'est l’entrée 'description' du front matter de la page qui sera utilisé"`
 - `author = "VOTRE_NOM"`
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346962/casper-theme-default-config.png" alt="" caption="Le thème Casper avec du contenu et les styles par défaut" >}}
+![Le thème Casper avec du contenu et les styles par défaut](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346962/casper-theme-default-config.png "Le thème Casper avec du contenu et les styles par défaut")
 
 Bien, ajoutons maintenant une image de fond pour la bannière d’en-tête. Dans le
 fichier `hugo/config.toml`, vous trouverez une section `[params]`. Modifiez le
 paramètre `cover` pour qu'il ait la valeur `/img/darius-soodmand-116253.jpg`,
 sauvegardez vos changements.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347009/casper-theme-cover.jpg" alt="" caption="Ajout d’une image de fond" >}}
+![Ajout d’une image de fond](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523347009/casper-theme-cover.jpg "Ajout d’une image de fond")
 
 Retournons maintenant voir notre site dans le navigateur. C’est déjà mieux, mais
 il y a encore du travail.
@@ -372,7 +372,7 @@ fichier `src/css/styles.css` et ajoutez le code suivant à la fin du fichier :
 }
 ```
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346973/capser-theme-final.jpg" alt="" caption="Le résultat final" >}}
+![Le résultat final](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346973/capser-theme-final.jpg "Le résultat final")
 
 Admirez le résultat final dans votre navigateur !
 
