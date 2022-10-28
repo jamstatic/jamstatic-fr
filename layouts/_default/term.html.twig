@@ -6,12 +6,12 @@
   <header>
     <nav class="mb-6 md:mb-8  text-center text-semibold">
     {%- for category in site.taxonomies['categories']|filter(c => c != page.term and c|length > 3)|slice(0, 8) ~%}
-      <a class="text-xl font-semibold capitalize text-violet-dark hover:text-rose-400 dark:text-blue-500 dark:hover:text-blue-300" href="{{ url('categories/' ~ category.id) }}">{{ category.name }}</a>
+      <a class="text-xl font-semibold capitalize text-violet-dark hover:text-rose-600 dark:text-blue-500 dark:hover:text-blue-300" href="{{ url('categories/' ~ category.id) }}">{{ category.name }}</a>
       <span class="text-gray-600">({{ category|length }})</span>{% if not loop.last %}<span class="dark:text-blue-500"> &middot;</span>{%- endif -%}
     {%- endfor ~%}
     </nav>
     <h1 class="mb-6 md:mb-8  text-4xl font-extrabold text-center font-display text-violet-dark dark:text-blue-500">
-      Articles &laquo;&nbsp;<span class="capitalize text-rose-400">{{ page.title|title }}</span>&nbsp;&raquo;
+      Articles &laquo;&nbsp;<span class="capitalize text-rose-600">{{ page.title|title }}</span>&nbsp;&raquo;
     </h1>
   </header>
 {% endblock %}
