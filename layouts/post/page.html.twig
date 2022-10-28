@@ -18,7 +18,7 @@
           {%- if page.categories|default(0) > 0 ~%}
           <aside>
             <hr class="my-2 dark:border-gray-800">
-            <div class="text-2xl font-bold font-display text-rose dark:text-rose-400">Dans la même catégorie</div>
+            <div class="text-2xl font-bold font-display dark:text-rose-400">Dans la même catégorie</div>
             <ul>
             {%- for related in site.pages.showable|filter(r => page.categories[0] in r.categories|default({}) and r.id != page.id)|slice(0, 5) ~%}
               <li>

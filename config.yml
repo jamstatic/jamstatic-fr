@@ -25,7 +25,8 @@ ghrepo: https://github.com/jamstatic/jamstatic-fr
 branch: master
 #
 pagination:
-  enabled: false
+  enabled: true
+  max: 10
 paths:
   - section: post
     path: :year/:month/:day/:slug

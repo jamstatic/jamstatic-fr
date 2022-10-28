@@ -1,3 +1,4 @@
 ---
+title: Jamstatic
 pagesfrom: post
 ---
