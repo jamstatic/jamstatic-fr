@@ -1692,6 +1692,11 @@ select {
   color: rgb(48 10 102 / var(--tw-text-opacity));
 }
 
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .text-black-grape-400 {
   --tw-text-opacity: 1;
   color: rgb(78 62 112 / var(--tw-text-opacity));
@@ -1705,11 +1710,6 @@ select {
 .text-violet-dark {
   --tw-text-opacity: 1;
   color: rgb(38 21 63 / var(--tw-text-opacity));
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .text-rose-400 {
