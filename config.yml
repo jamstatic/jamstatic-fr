@@ -59,7 +59,7 @@ postprocess:
   images:
     ext: [jpeg, jpg, png, webp, svg] # , gif
 manifest:
-  background_color: '#FFFFFF'
+  background_color: '#300A66'
   theme_color: '#300A66'
   icons:
     - icon-192x192.png
