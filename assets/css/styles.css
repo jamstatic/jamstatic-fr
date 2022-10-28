@@ -1895,6 +1895,11 @@ summary::-webkit-details-marker {
     color: rgb(128 174 255 / var(--tw-text-opacity));
   }
 
+  .dark\:text-gray-900 {
+    --tw-text-opacity: 1;
+    color: rgb(24 24 27 / var(--tw-text-opacity));
+  }
+
   .dark\:text-black-grape-200 {
     --tw-text-opacity: 1;
     color: rgb(177 163 204 / var(--tw-text-opacity));
