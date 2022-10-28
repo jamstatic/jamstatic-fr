@@ -13,9 +13,6 @@
   CECIL_ENV = "preview"
 
 [[redirects]]
-  from = "/slack"
-  to = "https://jamstatic.herokuapp.com"
-[[redirects]]
   from = "/*"
   to = "/404.html"
   status = 404
