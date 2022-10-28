@@ -5,8 +5,6 @@ description: >
   Bud Parr, créateur et gérant de l’agence The New Dynamic, partage son expérience
   et sa vision sur l’écosystème actuel de la Jamstack.
 author: frank
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1000,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Entretien%20avec%20Bud%20Parr%20de%20The%20New%20Dynamic/jamstatic/twitter-card.png
 source:
   lang: en
   title: Interview with Bud Parr, Jamstack engineer
@@ -22,7 +20,7 @@ de l’écosystème de la Jamstack sur
 à l’origine du récent redesign du [site d’Hugo](https://gohugo.io/). Il a
 gentiment accepté de répondre à nos questions.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346302/jamstatic/bud_parr.jpg" caption="Bud Parr" >}}
+![Bud Parr](https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/v1523346302/jamstatic/bud_parr.jpg "Bud Parr")
 
 ## Bonjour Bud, tu es un observateur et un défenseur de ce que beaucoup désignent encore comme de simples sites statiques. Comment les choses ont-elles évolué depuis quelques années ?
 
