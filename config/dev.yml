@@ -4,3 +4,6 @@ body:
       enabled: false
     webp:
       enabled: false
+
+serviceworker:
+  enabled: false
