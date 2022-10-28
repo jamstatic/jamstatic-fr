@@ -3,6 +3,8 @@ _site/
 .cecil/
 .cache/
 vendor/
+themes/netlify/
+themes/pwa/
 
 # Node
 node_modules

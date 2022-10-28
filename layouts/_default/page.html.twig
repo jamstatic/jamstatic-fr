@@ -11,6 +11,7 @@
     <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Roboto&display=swap" rel="preload" as="style" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Roboto&display=swap" rel="stylesheet" />
+    <link href="{{ url('manifest') }}" rel="manifest" />
   </head>
   <body class="{{ page.type }} dark:bg-gray-900">
     <div class="sticky top-0 z-10 text-white bg-violet-light">
@@ -74,5 +75,6 @@
         Contenus sous Licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">CC BY-NC-SA 4.0</a>
       </p>
     </footer>
+{% include 'partials/regsw.js.twig' ~%}
   </body>
 </html>

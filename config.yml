@@ -24,6 +24,9 @@ cloudinary: https://res.cloudinary.com/jamstatic/image/upload
 ghrepo: https://github.com/jamstatic/jamstatic-fr
 branch: master
 #
+theme:
+  - netlify
+  - pwa
 pagination:
   enabled: true
   max: 10
@@ -55,3 +58,11 @@ output:
 postprocess:
   images:
     ext: [jpeg, jpg, png, webp, svg] # , gif
+manifest:
+  background_color: '#FFFFFF'
+  theme_color: '#300A66'
+  icons:
+    - icon-192x192.png
+    - icon-512x512.png
+serviceworker:
+  enabled: true
