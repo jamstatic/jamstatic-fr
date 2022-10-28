@@ -49,8 +49,10 @@ c'était déjà le cas pour les plugins. Cela signifie qu'un design peut
 s'appliquer simplement à un ou plusieurs sites, sans que la couche de
 présentation ne vienne semer la pagaille dans les fichiers de votre site.
 
-<figure>
-<pre><code>source/
+**Exemple de structure de site sous Jekyll utilisant une gem de thème :**
+
+```
+source/
 ├── _posts/
 │   └── mon-super-article-14-09-2017.md
 ├── index.html
@@ -58,9 +60,7 @@ présentation ne vienne semer la pagaille dans les fichiers de votre site.
 ├── _config.yml
 ├── 404.md
 └── a-propos.md</code></pre>
-
-<figcaption>Exemple de structure de site sous Jekyll utilisant une gem de thème</figcaption>
-</figure>
+```
 
 Il est également possible de prendre le pas sur les fichiers de thèmes, un peu à
 la manière des
@@ -107,7 +107,7 @@ theme: alembic-jekyll-thème
 Une fois que vous avez modifié ces deux fichiers, il va falloir utiliser
 [Bundler](https://bundler.io/) pour installer notre nouveau thème et pouvoir
 générer et prévisualiser notre site. Dans votre terminal tapez la commande
-suivante :
+suivante :
 
 ```sh
 bundle
@@ -134,11 +134,9 @@ thèmes pour Jekyll, mais ils recensent également les anciens types de thèmes
 recherchez plutôt
 ['jekyll-theme' sur rubygems.org](https://rubygems.org/search?query=jekyll+theme).
 
-Pour ma part j'en ai développé deux :
+Pour ma part j'en ai développé deux :
 
-- [**Alembic**](https://alembic.darn.es) - un thème prêt à l’emploi, qui peut
-  aussi servir de point de départ pour votre projet,
-
+- [**Alembic**](https://alembic.darn.es) - un thème prêt à l’emploi, qui peut aussi servir de point de départ pour votre projet,
 - [**Garth**](https://garth.darn.es) - un thème de blog très simple.
 
 Ces deux thèmes sont compatibles avec Siteleaf, vous pouvez donc configurer un
@@ -169,7 +167,7 @@ et
 Si vous avez envie de développer votre propre thème, permettez-moi de partager
 avec vous ce que mon expérience m'a enseigné.
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/c_scale,q_auto,w_1024/v1523346069/jamstatic/making-jekyll-theme-checklist.jpg" alt="checklist d’un thème jekyll">}}
+![checklist d’un thème jekyll](https://res.cloudinary.com/jamstatic/image/upload/c_scale,q_auto,w_1024/v1523346069/jamstatic/making-jekyll-theme-checklist.jpg "checklist d’un thème jekyll.")
 
 Voici quelques trucs à garder en tête quand on développe son propre thème,
 surtout que vous souhaitez qu'il soit utilisé par d’autres utilisateurs de
@@ -301,13 +299,9 @@ prévisualisation dans votre navigateur, utilisez la commande suivante :
 bundle exec jekyll serve
 ```
 
-{{< notice tip >}}
-
-Si vous utilisez Jekyll v3.7.0, vous pouvez passer l’option
-`--livereload` en paramètre pour que votre navigateur rafraîchisse
-automatiquement la page après modifications des fichiers.
-
-{{< /notice >}}
+:::tip
+Si vous utilisez Jekyll v3.7.0, vous pouvez passer l’option `--livereload` en paramètre pour que votre navigateur rafraîchisse automatiquement la page après modifications des fichiers.
+:::
 
 La sortie sur la console devrait ressembler à ça :
 
@@ -357,37 +351,15 @@ Pour le moment nous avons donc la structure suivante :
 ├── README.md
 ```
 
-Voyons à quoi servent les différents dossiers et fichiers présents :
+Voyons à quoi servent les différents dossiers et fichiers présents :
 
-- `_includes` : vide pour le moment, il sert à stocker les fichiers de gabarits
-  partiels,
-
-- `_layouts` : contient pour le moment trois exemples de gabarits :
-  `default.html`, `post.html` and `page.html`,
-
+- `_includes` : vide pour le moment, il sert à stocker les fichiers de gabarits partiels,
+- `_layouts` : contient pour le moment trois exemples de gabarits : `default.html`, `post.html` and `page.html`,
 - `_sass` : vide pour le moment, destiné à stocker vos fichiers Sass,
-
-- `assets` : également vide pour le moment, ce dossier contiendra tous les
-  fichiers statiques dont vous aurez besoin pour votre site : CSS, JS, polices
-  de caractères, images, etc. C’est dans ce dossier que nous placerons le
-  fichier de styles principal `styles.scss` qui génèrera un fichier `styles.css`
-  auquel nous ferons référence dans notre modèle de page,
-
-- le fichier `Gemfile` - qui indique à Bundler quelles gems sont nécessaires, et
-  qui pointe vers le fichier `.gemspec`,
-
-- le fichier `mon-super-theme.gemspec` dans lequel nous stockons toutes les
-  inforamtions relatives à notre thème, ainsi que les gems dont il dépend. On y
-  définira le numéro de version ainsi que la liste des fichiers de notre thème
-  défini à l’aide de `spec.files`. Vous n'avez pas besoin d’éditer cette liste,
-  qui respecte déjà la
-  [convention standard des thèmes Jekyll](https://jekyllrb.com/docs/themes/#creating-a-gem-based-theme),
-
-- des fichiers `LICENSE.txt` et `README.md` qui contiendront le fichier de
-  licence de votre theme ainsi qu'un fichier README pour les instructions
-  d’installation et d’utilisation de votre thème. Nous avons vu plus haut qu'il
-  est important de
-  [bien documenter votre thème](#trucs-et-astuces-pour-créer-un-super-thème).
+- `assets` : également vide pour le moment, ce dossier contiendra tous les fichiers statiques dont vous aurez besoin pour votre site : CSS, JS, polices de caractères, images, etc. C’est dans ce dossier que nous placerons le fichier de styles principal `styles.scss` qui génèrera un fichier `styles.css` auquel nous ferons référence dans notre modèle de page,
+- le fichier `Gemfile` - qui indique à Bundler quelles gems sont nécessaires, et qui pointe vers le fichier `.gemspec`,
+- le fichier `mon-super-theme.gemspec` dans lequel nous stockons toutes les inforamtions relatives à notre thème, ainsi que les gems dont il dépend. On y définira le numéro de version ainsi que la liste des fichiers de notre thème défini à l’aide de `spec.files`. Vous n'avez pas besoin d’éditer cette liste, qui respecte déjà la [convention standard des thèmes Jekyll](https://jekyllrb.com/docs/themes/#creating-a-gem-based-theme),
+- des fichiers `LICENSE.txt` et `README.md` qui contiendront le fichier de licence de votre theme ainsi qu'un fichier README pour les instructions d’installation et d’utilisation de votre thème. Nous avons vu plus haut qu'il est important de [bien documenter votre thème](#trucs-et-astuces-pour-créer-un-super-thème).
 
 Voilà pour la structure d’un thème - tout le reste, comme les exemples de
 contenu qui vous pourriez fournir devraient être ignorés par les fichiers
