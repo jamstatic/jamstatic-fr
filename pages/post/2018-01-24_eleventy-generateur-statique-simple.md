@@ -3,8 +3,6 @@ title: "Un site web simple avec le plus simple des générateurs de site statiqu
 description: "Présentation d’Eleventy, le générateur de site statique le plus simple et le plus intuitif."
 date: 2018-01-24T20:40:44+01:00
 author: frank
-images:
-  - https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1120,c_fit,co_white,g_north_west,x_80,y_80,l_text:poppins_80_ultrabold_line_spacing_-30:Un%2520site%2520web%2520simple%2520avec%2520le%2520plus%2520simple%2520des%2520g%25C3%25A9n%25C3%25A9rateurs%2520de%2520site%2520statique/jamstatic/twitter-card.png
 categories:
   - eleventy
 source:
@@ -12,31 +10,22 @@ source:
   title: "Making a Simple Web Site with the Simplest Static Site Generator, Level 1"
   url: "https://medium.com/@11ty/making-a-simple-web-site-with-the-simplest-static-site-generator-level-1-7fc6febca1"
 ---
-
-{{< intro >}}
-
+:::intro
 Il existe des centaines de générateurs de site statique et il en
 arrive toujours de nouveaux. Après avoir longtemps utilisé Jekyll,
 [Zach Leat](https://www.zachleat.com/web/), développeur front-end chez
 [Filament Group](https://www.filamentgroup.com/), a décidé de s'inspirer des
 principes de Jekyll pour les porter et les étendre grâce à l’écosystème de `npm`
-qu'il manipule au quotidien.
-
+qu'il manipule au quotidien.  
 Ce nouveau générateur vise donc les développeurs front end et leur donne le
 choix du langage de templating ([Liquid](https://shopify.github.io/liquid/) par
 défaut comme dans Jekyll et aussi
 [tout plein d’autres qu'on peut mélanger à loisir](https://github.com/11ty/eleventy/#eleventy-)
 bien connus des développeurs JS) tout en leur offrant la puissance de `npm`.
 Zach nous propose un premier aperçu de son fonctionnement.
+:::
 
-{{< /intro >}}
-
----
-
-{{< figure
-src="https://res.cloudinary.com/jamstatic/image/upload/dpr_auto,f_auto,q_auto/v1603622564/jamstatic/1_u1v8ojapeWAgL2xjaJZ5rA.png"
-caption="" attr="Crédit : https://unsplash.com/@jogi"
-attrlink="https://unsplash.com/photos/uCsJqqtkDps" >}}
+![Photo de Jeremy Bishop](../../assets/images/2018-01-24_eleventy-generateur-statique-simple/1a45L3MbFiiPn_B_ZZrLvxg.png "Photo de [Jeremy Bishop](https://unsplash.com/photos/d3fZSXlJ3Ok?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)")
 
 Voici [Eleventy](https://github.com/11ty/eleventy/), le générateur de site
 statique le plus simple et le plus intuitif. Avec Eleventy, vous pouvez générer
@@ -74,14 +63,10 @@ mkdir giffleball
 Ajoutons quelques images à notre site. Voici une sélection d’images d’oiseaux
 tirée de l’honorable site [bukk.it](https://bukk.it).
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/dpr_auto,f_auto,q_auto/jamstatic/e2_80_a6.jpg" caption=""
-attr="https://bukk.it/parrot.gif" attrlink="https://bukk.it/%e2%80%a6.jpg" >}}
+![img](../../assets/images/2018-01-24_eleventy-generateur-statique-simple/19_SoEA-aNHeVF8QKzEUhiw.jpeg){width=350}
+![img](../../assets/images/2018-01-24_eleventy-generateur-statique-simple/1JIkW2kqH59V9KaKsjEKqdQ.jpeg){width=350}
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/dpr_auto,f_auto,q_auto/jamstatic/3f_3f_3f.jpg" caption=""
-attr="https://bukk.it/parrot.gif" attrlink="https://bukk.it/%3f%3f%3f.jpg" >}}
-
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/dpr_auto,f_auto,q_auto/jamstatic/parrot.gif" caption=""
-attr="https://bukk.it/parrot.gif" attrlink="https://bukk.it/parrot.gif" >}}
+![img](../../assets/images/2018-01-24_eleventy-generateur-statique-simple/1E9LIfVl7pcVu3_moXc743w.gif)
 
 Sauvegardez ces images dans un dossier `img` à l’intérieur de notre répertoire
 `giffleball`.
@@ -240,10 +225,9 @@ Ah c'est bien mieux. Ça marche nickel.
 J'espère que vous vous rendez compte de l’avantage d’utiliser des moteurs de
 rendu et un générateur de site statique pour vos sites web.
 
-{{< notice info >}}
-Le code source de la deuxième partie de ce tutoriel est
-[disponible sur GitHub](https://github.com/11ty/giffleball/tree/level-2).
-{{</notice >}}
+:::info
+Le code source de la deuxième partie de ce tutoriel est [disponible sur GitHub](https://github.com/11ty/giffleball/tree/level-2).
+:::
 
 ### Ajoutons un filtre
 
