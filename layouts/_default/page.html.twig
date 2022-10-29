@@ -13,7 +13,7 @@
     </noscript>
     {%- if getenv('CECIL_ENV') == 'production' ~%}
     <style>
-      {{- asset('css/styles.css.css')|inline ~}}
+      {{- asset('css/styles.css')|inline ~}}
     </style>
     {%- else ~%}
     <link rel="preload" as="style" href="{{ url(asset('css/styles.css', {minify: false, fingerprint: false})) }}" />
