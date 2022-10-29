@@ -1,37 +1,26 @@
 ---
 title: Passer de Jekyll à Eleventy
-description: >-
-  Paul Lloyd ne tarit pas d'éloges sur les vertus du générateur de site statique
-  Eleventy. Longtemps utilisateur du très populaire Jekyll écrit en Ruby,
-  il a décidé de passer à la vitesse supérieure avec Eleventy, écrit en JS.
+description: Longtemps utilisateur du très populaire Jekyll, Paul Lloyd a décidé de passer à la vitesse supérieure avec Eleventy.
 date: 2018-12-12
 author: frank
 source:
   author: Paul Robert Lloyd
   title: Turn Jekyll up to Eleventy
-  url: https://24ways.org/2018/turn-jekyll-up-to-eleventy/
+  url: https://paulrobertlloyd.com/articles/2018/12/turn_jekyll_up_to_eleventy/
 categories:
-- jekyll
-- eleventy
+ - jekyll
+ - eleventy
 ---
 :::intro
-[Jekyll](/categories/jekyll) est à ce jour le générateur de site statique le plus utilisé, c'est aussi un des plus anciens, et il fait face aujourd'hui à beaucoup de concurrents. Un des projets récents qui se rapproche le plus de Jekyll est [Eleventy](/categories/eleventy), développé par le très sympathique [Zach Leat](https://twitter.com/zachleat). Eleventy, c'est Jekyll repensé pour tirer parti de JavaScript et de l'écosystème npm. C'est un outil qui reste très simple d'approche et qui supporte Liquid comme langage de gabarit.
-
-Autant d'arguments qui ont vite fait de convaincre [Paul Robert Lloyd](https://paulrobertlloyd.com/) de tenter de migrer son site vers Eleventy. Qui sait, la lecture de cet article vous incitera peut-être à faire de même ?
+[Jekyll](/categories/jekyll) est à ce jour le générateur de site statique le plus utilisé, c'est aussi un des plus anciens, et il fait face aujourd'hui à beaucoup de concurrents. Un des projets récents qui se rapproche le plus de Jekyll est [Eleventy](/categories/eleventy), développé par le très sympathique [Zach Leat](https://twitter.com/zachleat). Eleventy, c'est Jekyll repensé pour tirer parti de JavaScript et de l'écosystème npm. C'est un outil qui reste très simple d'approche et qui supporte Liquid comme langage de gabarit.  
+Autant d'arguments qui ont vite fait de convaincre [Paul Robert Lloyd](https://paulrobertlloyd.com/) de tenter de migrer son site vers Eleventy. Qui sait, la lecture de cet article vous incitera peut-être à faire de même ?
 :::
 
-Ne pas compliquer les choses s'avère parfois payant. Bien que beaucoup de sites
-que nous utilisons tous les jours aient besoin de bases de données
-relationnelles pour gérer leurs contenus, et de pages dynamiques pour répondre
-aux contributions de leurs utilisateurs, beaucoup de sites plus simples
-peuvent se contenter de servir du HTML pré-compilé, c'est généralement une solution beaucoup moins onéreuse et bien plus sécurisée.
+Ne pas compliquer les choses s'avère parfois payant. Bien que beaucoup de sites que nous utilisons tous les jours aient besoin de bases de données relationnelles pour gérer leurs contenus, et de pages dynamiques pour répondre aux contributions de leurs utilisateurs, beaucoup de sites plus simples peuvent se contenter de servir du HTML pré-compilé, c'est généralement une solution beaucoup moins onéreuse et bien plus sécurisée.
 
-La [Jamstack](https://www.jamstack.org) (JavaScript, APIs réutilisables et
-Markup préparé à l'avance) est un terme marketing populaire qui désigne cette
-nouvelle manière d'architecturer des sites web, et en un sens c'est un retour
-aux débuts du web, avant que les développeurs ne commencent à bricoler avec des scripts CGI ou PHP. En réalité mon site web a toujours servi du HTML pré-compilé : d'abord à l'aide de [Movable Type](https://movabletype.org), et puis récemment avec celle de [Jekyll](https://jekyllrb.com), à propos duquel [Anna écrivait en 2013](https://24ways.org/2013/get-started-with-github-pages/).
+La [Jamstack](https://www.jamstack.org) (JavaScript, APIs réutilisables et Markup préparé à l'avance) est un terme marketing populaire qui désigne cette nouvelle manière d'architecturer des sites web, et en un sens c'est un retour aux débuts du web, avant que les développeurs ne commencent à bricoler avec des scripts CGI ou PHP. En réalité mon site web a toujours servi du HTML pré-compilé : d'abord à l'aide de [Movable Type](https://movabletype.org), et puis récemment avec celle de [Jekyll](https://jekyllrb.com), à propos duquel [Anna écrivait en 2013](https://24ways.org/2013/get-started-with-github-pages/).
 
-En combinant trois langages faciles d'approche — Markdown pour le contenu, YAML pour les données et Liquid pour les modèles de page — Jekyll a rencontré un large public et a influencé le design de [beaucoup de générateurs de sites statiques](https://www.staticgen.com) qui ont suivi. Jekyll n'en est pas parfait pour autant. Outres des temps de compilation qui peuvent être importants, il est développé en Ruby. Bien que Ruby soit un langage de programmation très élégant, c'est un nouvel écosystème à appréhender et à savoir gérer, en plus ce celui que l'on utilise déjà côté front : JavaScript. Quand j'utilisais Jekyll, je me disais souvent "La même chose, mais en Node". Heureusement pour moi, un des elfes de Noël a exaucé mon vœu [Atwoodien](https://blog.codinghorror.com/the-principle-of-least-power/) et a déposé un tel générateur de site statique au pied de mon sapin.
+En combinant trois langages faciles d'approche — Markdown pour le contenu, YAML pour les données et Liquid pour les modèles de page — Jekyll a rencontré un large public et a influencé le design de [beaucoup de générateurs de sites statiques](https://www.staticgen.com) qui ont suivi. Jekyll n'en est pas parfait pour autant. Outres des temps de compilation qui peuvent être importants, il est développé en Ruby. Bien que Ruby soit un langage de programmation très élégant, c'est un nouvel écosystème à appréhender et à savoir gérer, en plus ce celui que l'on utilise déjà côté front : JavaScript. Quand j'utilisais Jekyll, je me disais souvent "La même chose, mais en Node". Heureusement pour moi, un des elfes de Noël a exaucé mon vœu [Atwoodien](https://blog.codinghorror.com/the-principle-of-least-power/) et a déposé un tel générateur de site statique au pied de mon sapin.
 
 ## Présentation d'Eleventy
 
@@ -51,14 +40,14 @@ cd markdown-guide
 
 ## Avant de commencer
 
-Si vous avez déjà utilisé des outils comme Grunt, Gulp ou webpack, vous connaissez déjà un peu l'écosystème de Node.js, mais si vous avez uniquement utilisé Jekyll pour compiler vos CSS et générer votre HTML, il est maintenant temps pour vous d'[installer Node.js](https://nodejs.org) et de configurer votre projet afin de pouvoir utiliser son gestionnaire de paquet, npm :
+Si vous avez déjà utilisé des outils comme Grunt, Gulp ou webpack, vous connaissez déjà un peu l'écosystème de Node.js, mais si vous avez uniquement utilisé Jekyll pour compiler vos CSS et générer votre HTML, il est maintenant temps pour vous d'[installer Node.js](https://nodejs.org) et de configurer votre projet afin de pouvoir utiliser son gestionnaire de paquet, npm :
 
 1. **Installer Node.js :**
 
 - Mac : Si ce n'est pas déjà fait, je vous conseille d'[installer Homebrew](https://brew.sh), a gestionnaire de paquets pour Mac. Ensuite dans un terminal tapez `brew install node`.
 - Windows : [Téléchargez l'installateur pour Windows](https://nodejs.org/en/download/) depuis le site web de Node.js et suivez les instructions.
 
-2. **Initialiser NPM :** Assurez-vous d'être dans le répertoire du projet et tapez `npm init`. Cette commande va vous poser quelques questions avant de créer un fichier appelé `package.json`. Comme le `Gemfile` de RubyGems, il contient la liste des dépendances tierces de votre projet.
+2. **Initialiser NPM :** Assurez-vous d'être dans le répertoire du projet et tapez `npm init`. Cette commande va vous poser quelques questions avant de créer un fichier appelé `package.json`. Comme le `Gemfile` de RubyGems, il contient la liste des dépendances tierces de votre projet.
 
 Si vous gérez les versions de votre site avec Git, assurez-vous également d'ajouter le répertoire `node_modules` à votre fichier `.gitignore`. Contrairement à RubyGems, npm stocke par défaut ses dépendances dans le répertoire de votre projet. Ce répertoire peut vite devenir assez important, et comme il contient des fichiers binaires compilés spécifiquement pour votre ordinateur, il ne devrait pas être versionné. Eleventy prend ce fichier en compte, ce qui veut dire que tout ce que vous voulez que Git ignore, Eleventy l'ignorera aussi.
 
@@ -70,7 +59,7 @@ Maintenant que Node.js est installé et que votre projet est prêt à utiliser n
 npm install --save-dev @11ty/eleventy
 ```
 
-Si vous ouvrez votre `package.json` vous devriez y voir figurer les lignes suivantes :
+Si vous ouvrez votre `package.json` vous devriez y voir figurer les lignes suivantes :
 
 ```sh
 …
@@ -80,20 +69,20 @@ Si vous ouvrez votre `package.json` vous devriez y voir figurer les lignes suiva
 …
 ```
 
-Nous pouvons maintenant lancer Eleventy en ligne de commande à l'aide de l'utilitaire `npx` de NPM. Par exemple pour convertir le fichier `README.md` en HTML, nous taperons la commande suivante :
+Nous pouvons maintenant lancer Eleventy en ligne de commande à l'aide de l'utilitaire `npx` de NPM. Par exemple pour convertir le fichier `README.md` en HTML, nous taperons la commande suivante :
 
 ```sh
 npx eleventy --input=README.md --formats=md
 ```
 
-Cette commande va générer un fichier HTML dans `_site/README/index.html`.
+Cette commande va générer un fichier HTML dans `_site/README/index.html`.  
 Eleventy utilise par défaut le même répertoire de destination que Jekyll (`_site`), comme nous le verrons à de nombreuses reprises pendant cette transition.
 
 ## La configuration
 
 Alors que Jekyll utilise la syntaxe YAML pour son fichier de configuration, Eleventy lui se repose sur JavaScript. Cela permet de programmer des options et ouvre donc des possibilités assez puissantes comme nous le verrons par la suite.
 
-Commençons par créer notre fichier de configuration (`.eleventy.js`), et reportons les paramètres pertinents du `_config.yml` dans leurs options équivalentes :
+Commençons par créer notre fichier de configuration (`.eleventy.js`), et reportons les paramètres pertinents du `_config.yml` dans leurs options équivalentes :
 
 ```js
 module.exports = function(eleventyConfig) {
@@ -143,7 +132,7 @@ De l'extérieur, Jekyll et Eleventy se ressemblent pas mal, mais chaque outil mo
 
 ### Les variables de site
 
-En plus des directives de compilation, Jekyll vous permet de stocker des variables globales dans son fichier de configuration et d'y accéder dans les modèles via l'espace de nom `site.*`. Par exemple dans notre Guide Markdown nous avons les valeurs suivantes :
+En plus des directives de compilation, Jekyll vous permet de stocker des variables globales dans son fichier de configuration et d'y accéder dans les modèles via l'espace de nom `site.*`. Par exemple dans notre Guide Markdown nous avons les valeurs suivantes :
 
 ```yaml
 title: "Markdown Guide"
@@ -175,7 +164,7 @@ Le fichier de configuration d'Eleventy utilise JavaScript et n'est pas fait pour
 ### Les variables de page
 
 Le tableau ci-dessous établit la correspondance entre les variables de page.
-Retenez qu'on peut accéder directement aux propriétés front matter, alors que les valeurs des méta-données dérivées (comme les URLs, les dates, etc.) sont préfixées avec l'espace de nom `pages.*` :
+Retenez qu'on peut accéder directement aux propriétés front matter, alors que les valeurs des méta-données dérivées (comme les URLs, les dates, etc.) sont préfixées avec l'espace de nom `pages.*` :
 
 | Jekyll         | Eleventy          |
 | :------------- | :---------------- |
@@ -235,7 +224,7 @@ Le filtre `where` de Jekyll est un peu plus complexe au sens où il prend deux a
 {{ site.members | where: "graduation_year","2014" }}
 ```
 
-Pour reproduire ce comportement, nous pouvons passer trois arguments au lieu d'un à la fonction passée à `addFilter`: le tableau (`array`) que nous voulons examiner, la clef sur laquelle on veut effectuer la recherche et la valeur recherchée :
+Pour reproduire ce comportement, nous pouvons passer trois arguments au lieu d'un à la fonction passée à `addFilter`: le tableau (`array`) que nous voulons examiner, la clef sur laquelle on veut effectuer la recherche et la valeur recherchée :
 
 ```js
 // {{ array | where: key,value }}
@@ -251,12 +240,12 @@ Pour reproduire ce comportement, nous pouvons passer trois arguments au lieu d'u
   });
 ```
 
-Il se passe pas mal de trucs dans ce filtre, que je vais tenter d'expliquer.
+Il se passe pas mal de trucs dans ce filtre, que je vais tenter d'expliquer.  
 Nous examinons chaque `item` dans notre `array`, et nous [réduisons](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/reduce) la `key` (passée comme une chaine à l'aide de la notation avec le point) de manière à pouvoir être analysée correctement (comme une référence d'objet) avant de comparer sa valeur avec celle de `value`. Si elle correspond, l'`item` reste dans le tableau retourné, sinon il est supprimé. Pfiou !
 
 ## Les includes
 
-Comme pour les filtres, [Jekyll fournit un jeu de tags](https://jekyllrb.com/docs/liquid/tags/) qui ne fait pas partie intégrante du cœur de Liquid. Parmi eux, l'un des plus utiles est le tag `include`. La bibliothèque utilisée par Eleventy, [LiquidJS](https://github.com/harttle/liquidjs) fournit aussi un tag `include`, mais sa syntaxe diffère légèrement de [celle définie par Shopify](https://help.shopify.com/en/themes/liquid/tags/theme-tags#include). Si vous ne passez pas de variables en paramètre de vos includes, vous ne devriez pas à avoir à faire de modification pour que ça marche.
+Comme pour les filtres, [Jekyll fournit un jeu de tags](https://jekyllrb.com/docs/liquid/tags/) qui ne fait pas partie intégrante du cœur de Liquid. Parmi eux, l'un des plus utiles est le tag `include`. La bibliothèque utilisée par Eleventy, [LiquidJS](https://github.com/harttle/liquidjs) fournit aussi un tag `include`, mais sa syntaxe diffère légèrement de [celle définie par Shopify](https://help.shopify.com/en/themes/liquid/tags/theme-tags#include). Si vous ne passez pas de variables en paramètre de vos includes, vous ne devriez pas à avoir à faire de modification pour que ça marche.  
 Dans le cas contraire, alors qu'avec Jekyll vous écrivez :
 
 ```twig
@@ -277,10 +266,7 @@ dans Eleventy, vous allez écrire :
 {{ value }}
 ```
 
-L'inconvénient de la syntaxe Shopify c'est que les assignations de variables ne
-sont plus limitées au périmètre de l'`include` et peuvent donc être exposées
-ailleurs ; gardez cela bien en tête lors de la conversion de vos gabarits, car
-vous aurez peut-être à faire des ajustements supplémentaires.
+L'inconvénient de la syntaxe Shopify c'est que les assignations de variables ne sont plus limitées au périmètre de l'`include` et peuvent donc être exposées ailleurs ; gardez cela bien en tête lors de la conversion de vos gabarits, car vous aurez peut-être à faire des ajustements supplémentaires.
 
 ### Paramétrer Liquid
 
