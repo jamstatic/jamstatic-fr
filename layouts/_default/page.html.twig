@@ -5,14 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {{~ include('partials/metatags.html.twig') ~}}
-    <link href="{{ url(asset('css/styles.css')) }}" rel="preload" as="style" />
-    <link href="{{ url(asset('css/styles.css')) }}" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Roboto&display=swap" />
     <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Roboto&display=swap" />
     <noscript>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Roboto&display=swap" />
     </noscript>
+    {%- if getenv('CECIL_ENV') == 'production' ~%}
+    <style>
+      {{- asset('css/styles.css.css')|inline ~}}
+    </style>
+    {%- else ~%}
+    <link rel="preload" as="style" href="{{ url(asset('css/styles.css', {minify: false, fingerprint: false})) }}" />
+    <link rel="stylesheet" href="{{ asset('css/styles.css', {minify: false, fingerprint: false}) }}" />
+    {%- endif ~%}
     <link href="{{ url('manifest') }}" rel="manifest" />
   </head>
   <body class="{{ page.type }} dark:bg-gray-900">
