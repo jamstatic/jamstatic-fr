@@ -45,6 +45,7 @@ body:
       fallback:
         enabled: true
         path: images/no-image.png
+    class: dark:brightness-90
   links:
     embed:
       enabled: true
