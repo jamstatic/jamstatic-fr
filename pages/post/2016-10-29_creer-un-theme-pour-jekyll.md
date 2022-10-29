@@ -304,7 +304,7 @@ pas d’utiliser les tags git pour vous rappeler du moment où vous l’avez
 générée), pensez donc à ajouter la ligne suivante dans votre fichier
 `.gitignore` :
 
-```txt
+```
 *.gem
 ```
 
