@@ -264,7 +264,7 @@ Ici nous choississons de monter notre fichier dans un répertoire nommé pour é
 
 Notre fichier partiel :
 
-```text
+```
 {{/*
   icon
   Affiche l'icône correspondant à la chaîne passée comme contexte
