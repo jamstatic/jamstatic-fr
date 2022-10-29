@@ -1,30 +1,24 @@
 ---
 title: "Passer au statique : 5 raisons de tester la Jamstack sur votre prochain projet"
-description: >
-  Référencement, performance, sécurité, automatisation, communauté grandissante, les raisons de passer au statique ne manquent pas.
+description: Référencement, performance, sécurité, automatisation, communauté grandissante, les raisons de passer au statique ne manquent pas.
 author: frank
 date: 2017-03-16
-excerpt: |
-  Adopter une stack de développement Web moderne pour pouvoir
-  générer des sites statiques présente bien des avantages et Tom Bennet en a listé cinq des principaux. Si vous n'aviez encore jamais entendu parlé de la Jamstack, cet article donne un aperçu global du processus et de l’écosystème actuel ainsi que des gains engendrés. Vous trouverez également des lectures pour approfondir votre connaissance sur le sujet.
 source:
   author: Tom Bennet
   title: "Go static: 5 reasons to try Jamstack on your next project"
   url: https://builtvisible.com/go-static-try-jamstack/
-  lang: ""
+  lang: en
 categories:
   - jamstack
   - headless
 ---
-Que ce soit pour mettre en place un blog, configurer un site de e-commerce ou
-développer une single page application en JavaScript, le temps où on se
-rabattait par défaut sur WordPress pour tout ou presque est révolu. Les
-générateurs de site statique et les réseaux de CDN ultra-rapides propulsent une
-nouvelle génération de sites Web et c'est le bon moment pour embrasser le
-mouvement.
+:::intro
+Adopter une stack de développement Web moderne pour pouvoir générer des sites statiques présente bien des avantages et Tom Bennet en a listé cinq des principaux. Si vous n'aviez encore jamais entendu parlé de la Jamstack, cet article donne un aperçu global du processus et de l’écosystème actuel ainsi que des gains engendrés. Vous trouverez également des lectures pour approfondir votre connaissance sur le sujet.
+:::
 
-Avant d’expliquer plus en détail _pourquoi_, commençons déjà par regarder de
-_quoi_ on parle.
+Que ce soit pour mettre en place un blog, configurer un site de e-commerce ou développer une single page application en JavaScript, le temps où on se rabattait par défaut sur WordPress pour tout ou presque est révolu. Les générateurs de site statique et les réseaux de CDN ultra-rapides propulsent une nouvelle génération de sites Web et c'est le bon moment pour embrasser le mouvement.
+
+Avant d’expliquer plus en détail _pourquoi_, commençons déjà par regarder de _quoi_ on parle.
 
 ## Jamstack et développement statique
 
