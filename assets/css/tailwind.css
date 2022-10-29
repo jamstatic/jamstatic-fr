@@ -50,3 +50,10 @@ blockquote p {
 summary::-webkit-details-marker {
   display: none;
 }
+
+.hljs {
+  background: none !important;
+}
+pre code.hljs {
+  padding: 0 !important;
+}

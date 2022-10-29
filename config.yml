@@ -34,6 +34,8 @@ paths:
   - section: post
     path: :year/:month/:day/:slug
 body:
+  highlight:
+    enabled: true
   images:
     responsive:
       enabled: true

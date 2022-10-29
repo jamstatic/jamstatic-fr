@@ -1850,6 +1850,14 @@ summary::-webkit-details-marker {
   display: none;
 }
 
+.hljs {
+  background: none !important;
+}
+
+pre code.hljs {
+  padding: 0 !important;
+}
+
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
