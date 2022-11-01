@@ -9,7 +9,7 @@ categories:
   - entretien
 ---
 :::intro
-Le GSS [Hugo](https://gohugo.io) est rapidement devenu l’un des gestionnaires de sites statiques les plus populaires comme en attestent ses bientôt [50 000 étoiles sur GitHub](https://github.com/gohugoio/hugo). C’est dû en partie à sa vitesse de génération : en effet il ne lui faut qu'une petite milliseconde pour générer une page. Oui, cela fait 1000 pages à la seconde et c'est plutôt impressionnant. Mais ce n'est pas la seule raison qui devrait vous faire adopter Hugo.  
+[Hugo](https://gohugo.io) est rapidement devenu l’un des gestionnaires de sites statiques les plus populaires comme en attestent ses bientôt [50 000 étoiles sur GitHub](https://github.com/gohugoio/hugo). C’est dû en partie à sa vitesse de génération : en effet il ne lui faut qu'une petite milliseconde pour générer une page. Oui, cela fait 1000 pages à la seconde et c'est plutôt impressionnant. Mais ce n'est pas la seule raison qui devrait vous faire adopter Hugo.  
 Heureusement ce GSS propose aussi tout un tas de fonctionnalités comme les contenus imbriqués, les fichiers partiels, les shortcodes, la gestion de l’i18n, les exports personnalisés (JSON, AMP, epub, Atom, etc.) et bien d’autres… Les nouvelles versions et les nouveautés se succèdent à un rythme soutenu. Depuis la v0.14, [Bjørn Erik Pedersen](https://github.com/bep) dirige les développements, il a gentiment accepté de répondre à nos questions.
 *[GSS]: Générateur de Site Statique
 *[i18n]: Internationalisation
@@ -62,7 +62,7 @@ Le [forum d’Hugo](https://discourse.gohugo.io) est fait pour ça. Steve Franci
 
 ## Qui vous soutient dans le développement ?
 
-La société [Netlify](https://netlify.com) héberge nos sites gratuitement et [Discourse](https://www.discourse.org) se charge de la maintenance du forum. [Travis](https://travis-ci.org), [Appveyor](https://www.appveyor.com) et [CircleCI](https://circleci.com) pour les tests d’intégration continue. Mais à part ça personne, nous n'avons pas de sponsors. Nous en avons juste parlé brièvement entre nous.
+[Netlify](https://netlify.com) héberge nos sites gratuitement et [Discourse](https://www.discourse.org) se charge de la maintenance du forum. [Travis](https://travis-ci.org), [Appveyor](https://www.appveyor.com) et [CircleCI](https://circleci.com) pour les tests d’intégration continue. Mais à part ça personne, nous n'avons pas de sponsors. Nous en avons juste parlé brièvement entre nous.
 
 ## Quelle est la prochaine étape pour Hugo ?
 
