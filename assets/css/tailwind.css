@@ -21,6 +21,13 @@ figure figcaption {
   max-width: 100%;
 }
 
+.anchorjs-link {
+  @apply no-underline text-violet;
+}
+.anchorjs-link:hover {
+  @apply text-violet-light;
+}
+
 .note {
   @apply mb-4 px-4 py-1 border-l-4 bg-opacity-50;
 }

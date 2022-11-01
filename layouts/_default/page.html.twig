@@ -85,6 +85,13 @@
         Contenus sous Licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">CC BY-NC-SA 4.0</a>
       </p>
     </footer>
+    {#- anchorjs ~#}
+    <script defer src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/anchor-js/' ~ site.anchor.version ~ '/anchor.min.js', {minify: false}) }}"></script>
+    <script>{% apply minify_js %}
+      document.addEventListener('DOMContentLoaded', function(event) {
+        anchors.add('.markdown h2, .markdown h3, .markdown h4, .markdown h5');
+      });
+    {% endapply %}</script>
 {% include 'partials/regsw.js.twig' ~%}
   </body>
 </html>

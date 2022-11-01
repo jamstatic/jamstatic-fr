@@ -69,3 +69,5 @@ manifest:
     - icon-512x512.png
 serviceworker:
   enabled: true
+anchor:
+  version: 4.3.1

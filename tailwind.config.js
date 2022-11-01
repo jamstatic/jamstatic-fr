@@ -4,6 +4,7 @@ module.exports = {
     './themes/**/layouts/**/*.html.twig',
   ],
   safelist: [
+    'anchorjs-link',
     'dark:brightness-90'
   ],
   darkMode: "media",
