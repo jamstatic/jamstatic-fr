@@ -12,52 +12,24 @@ categories:
   - entretien
 ---
 :::intro
-Après deux ans de développement, Gatsby vient de passer en version
-1.0. Ce générateur intègre beaucoup d’outils notamment React et GraphQL et
-permet déjà d’interagir avec les versions headless des CMS WordPress et Drupal.
-InfoQ vient de publier une interview de son créateur, Kyle Mathews, plus motivé
-que jamais pour continuer à faire évoluer ce générateur, qui devrait connaître
-une popularité grandissante. Nous en publions ici la retranscription en
-français, car nous pensons que Gatsby devrait séduire la communauté JavaScript
-et devenir un des outils phares pour développer des applications Web très
-performantes.
+Après deux ans de développement, Gatsby vient de passer en version 1.0. Ce générateur intègre beaucoup d’outils notamment React et GraphQL et permet déjà d’interagir avec les versions headless des CMS WordPress et Drupal. InfoQ vient de publier une interview de son créateur, Kyle Mathews, plus motivé que jamais pour continuer à faire évoluer ce générateur, qui devrait connaître une popularité grandissante. Nous en publions ici la retranscription en français, car nous pensons que Gatsby devrait séduire la communauté JavaScript et devenir un des outils phares pour développer des applications Web très performantes.
 :::
 
-Après avoir travaillé pour différentes startups, Kyle Mathews a démissionné pour
-se consacrer à l’un de ses projets personnels
-[à temps plein](https://www.bricolage.io/gatsby-open-source-work/). Ce projet,
-[Gatsby](https://www.gatsbyjs.org/), est né de sa volonté de créer un site web
-qui lui évite d’avoir à utiliser autre chose que ReactJS.
+Après avoir travaillé pour différentes startups, Kyle Mathews a démissionné pour se consacrer à l’un de ses projets personnels [à temps plein](https://www.bricolage.io/gatsby-open-source-work/). Ce projet, [Gatsby](https://www.gatsbyjs.org/), est né de sa volonté de créer un site web qui lui évite d’avoir à utiliser autre chose que ReactJS.
 
-Entre temps, Gatsby est passé en version 1.0 et s'est étoffé d’un large éventail
-d’outils comme un système de plugins, une couche de données traitée lors du
-build à l’aide de GraphQL, le support des Progressive Web Apps (PWA). Gatsby
-inclut également un utilitaire en ligne de commande et un processus de build
-préconfiguré basé sur Babel et Webpack.
+Entre temps, Gatsby est passé en version 1.0 et s'est étoffé d’un large éventail d’outils comme un système de plugins, une couche de données traitée lors du build à l’aide de GraphQL, le support des Progressive Web Apps (PWA). Gatsby inclut également un utilitaire en ligne de commande et un processus de build préconfiguré basé sur Babel et Webpack.
 
-Pour illustrer à quel point Gatsby est rapide, Mathews a écrit
-[un clone d’Instagram](https://www.gatsbyjs.org/blog/gatsbygram-case-study/)
-conçu pour démontrer l’utilisation du
-[pattern PRPL](https://developers.google.com/web/fundamentals/performance/prpl-pattern/)
-de Google afin d’obtenir le plus tôt possible un affichage des pixels à l’écran.
+Pour illustrer à quel point Gatsby est rapide, Mathews a écrit [un clone d’Instagram](https://www.gatsbyjs.org/blog/gatsbygram-case-study/) conçu pour démontrer l’utilisation du [pattern PRPL](https://developers.google.com/web/fundamentals/performance/prpl-pattern/) de Google afin d’obtenir le plus tôt possible un affichage des pixels à l’écran.
 
-Cette vitesse est en partie dû au fait qu'il crée "un rendu HTML statique de
-chaque page pour que l’affichage initial soit aussi rapide que possible. À côte
-de ça, le téléchargement en arrière-plan réalise le gros du travail",
-[explique](https://www.reddit.com/r/javascript/comments/6locuu/announcing_gatsby_100/djwxqyq/)
-Mathews.
+Cette vitesse est en partie dû au fait qu'il crée "un rendu HTML statique de chaque page pour que l’affichage initial soit aussi rapide que possible. À côte de ça, le téléchargement en arrière-plan réalise le gros du travail", [explique](https://www.reddit.com/r/javascript/comments/6locuu/announcing_gatsby_100/djwxqyq/) Mathews.
 
-> Gatsby est bien plus rapide puisque qu'il télécharge en arrière-plan les
-> ressources et les transitions du côté client. Beaucoup de gens ont fait la
-> remarque que cliquer sur des liens sur un site fait avec Gatsby, c'est comme
-> naviguer sur un site en local
+> Gatsby est bien plus rapide puisque qu'il télécharge en arrière-plan les ressources et les transitions du côté client. Beaucoup de gens ont fait la remarque que cliquer sur des liens sur un site fait avec Gatsby, c'est comme naviguer sur un site en local
 
-Dans une interview à InfoQ, Mathews parle des motivations pour lesquelles il
-développe Gastby et de son avenir.
+Dans une interview à InfoQ, Mathews parle des motivations pour lesquelles il développe Gastby et de son avenir.
 
 ### Quels problèmes Gatsby essaie-t-il de résoudre ?
 
-**Kyle Mathews :** Gatsby essaie de résoudre la problématique de ce à quoi un
+Gatsby essaie de résoudre la problématique de ce à quoi un
 framework de site web devrait ressembler en 2017. La plupart des positions
 adoptées par les frameworks web datent des premières générations du Web. Bien
 que ce soit d’excellents frameworks matures, ils ne sont pas conçus pour la
@@ -84,7 +56,7 @@ rendus côté client et téléchargent le contenu de manière intelligente.
 
 ### Comment se positionne Gatsby par rapport aux autres générateurs de sites statiques, qu'ils soient basés sur React ou non ?
 
-**Kyle Mathews :** Il hérite de tous les bénéfices des générateurs de site
+Il hérite de tous les bénéfices des générateurs de site
 statique traditionnels, à savoir une super performance, une sécurité accrue, un
 coût de montée en charge moindre ainsi qu'une meilleure expérience de
 développement (une migration de bases de données ça vous rappelle quelque chose
@@ -103,10 +75,10 @@ sophistiqués à l’aide des derniers outils et des dernières techniques.
 
 ### Quelle longévité peut-on espérer pour Gatsby ?
 
-**Kyle Mathews :** Gatsby connait un bel essor et est déjà le 4e générateur de
+Gatsby connait un bel essor et est déjà le 4e générateur de
 site statique après seulement deux ans. Il y a déjà quelques sites très visibles
 qui ont été lancés ou qui sont en cours de développement avec Gatsby. Nous avons
-récemment dépassé les 200 contributeurs au niveau du cœur et les 500 000
+récemment dépassé les 200 contributeurs au niveau du cœur et les 500 000
 téléchargements pour Gatsby. Pour que Gastby continue dans la durée, il va
 falloir trouver un modèle économique rentable pour soutenir le développement du
 cœur de Gatsby et une solide communauté open-source qui développe et maintienne
@@ -114,7 +86,7 @@ des modèles et des intégrations de sources de données.
 
 ### Que prévoyez-vous ensuite ?
 
-**Kyle Mathews :** Mon objectif personnel est de travailler sur comment financer
+Mon objectif personnel est de travailler sur comment financer
 le développement du cœur de Gatsby. La priorité principale du projet est de
 proposer de plus en plus d’intégration avec des APIs, des CMS et des bases de
 données pour rendre triviale la migration de sites existants ou de les refaire
