@@ -5,8 +5,8 @@ description: "Grâce à son API REST WordPress fait aussi CMS headless. Stefan B
 author: frank
 categories:
   - jamstack
+  - cms
   - headless
-  - wordpress
 source:
   author: "Stefan Baumgartner"
   title: "WordPress as CMS for your JAMStack sites"

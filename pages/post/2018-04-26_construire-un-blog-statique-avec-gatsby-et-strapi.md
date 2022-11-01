@@ -5,6 +5,7 @@ date: 2018-04-26
 author: pierre
 categories:
   - gatsby
+  - strapi
   - cms
   - headless
 source:

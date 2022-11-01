@@ -8,8 +8,8 @@ source:
   title: Gatsby for Apps
   url: https://www.gatsbyjs.org/blog/2018-11-07-gatsby-for-apps/
 categories:
-  - jamstack
   - gatsby
+  - jamstack
 typora-copy-images-to: ../../assets/images/post/${filename}
 ---
 Gatsby est génial pour la génération des sites statiques. Vous le saviez probablement déjà ! Mais c'est en fait tout aussi bien pour les applis Web. Vous ne le saviez peut-être pas. Gatsby est fait pour construire des expériences qui profitent à la fois des bénéfices des sites dits statiques et des applis web. Vous n'avez pas à sacrifier les avantages des unes pour obtenir les bénéfices des autres.

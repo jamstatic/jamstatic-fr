@@ -6,8 +6,9 @@ author: patrickF
 categories:
   - deploiement
   - nextjs
-  - headless
   - nuxtjs
+  - cms
+  - headless
 ---
 Les sites statiques pour un site de média c'est l'idéal. Rapide, léger, sécurisé, tout semble coller sur le papier. Mais est-il possible de créer un site statique avec un grand nombre de pages ?
 

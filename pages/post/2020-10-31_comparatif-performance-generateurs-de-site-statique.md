@@ -5,6 +5,7 @@ author: frank
 date: 2020-10-31T08:38:15+01:00
 updated: 2020-10-31T14:38:15+01:00
 categories:
+  - performance
   - eleventy
   - jekyll
   - hugo

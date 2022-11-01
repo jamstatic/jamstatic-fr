@@ -9,6 +9,7 @@ source:
   author: Sara Soueidan
   lang: en
 categories:
+  - jekyll
   - hugo
 ---
 :::intro

@@ -6,6 +6,7 @@ author: frank
 draft: true
 categories:
   - gatsby
+  - cms
   - headless
 source:
   author: Sam Bhagwat

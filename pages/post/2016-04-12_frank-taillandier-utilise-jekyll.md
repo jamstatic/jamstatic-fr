@@ -5,6 +5,7 @@ date: 2016-04-12
 author: bertrand
 published: false
 categories:
+  - entretien
   - jekyll
 ---
 :::intro

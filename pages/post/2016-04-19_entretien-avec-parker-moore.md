@@ -4,6 +4,7 @@ description: Traduction française de l’entretien publié le 11 mars 2016 sur 
 date: 2016-04-19
 author: bertrand
 categories:
+  - entretien
   - jekyll
 source:
   title: Interview with Parker Moore from Jekyll

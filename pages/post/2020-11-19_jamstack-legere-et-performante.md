@@ -8,6 +8,7 @@ categories:
   - gatsby
   - eleventy
   - nextjs
+  - performance
 podcast:
   url: https://anchor.fm/jamstatic/episodes/Vers-une-Jamstack-lgre-et-performante--avec-Nicolas-Goutay-emunhp
 twitter_widgets: true

@@ -9,6 +9,7 @@ source:
   url: "https://www.smashingmagazine.com/2017/07/pattern-libraries-in-markdown/"
 categories:
   - hugo
+  - markdown
 ---
 
 :::intro

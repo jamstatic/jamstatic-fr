@@ -11,9 +11,11 @@ source:
   author: Josh Weaver
 categories:
   - gatsby
+  - contentful
   - netlify
-  - headless
   - algolia
+  - cms
+  - headless
 ---
 :::intro
 Le passage d’un CMS traditionnel comme WordPress à un processus moderne de

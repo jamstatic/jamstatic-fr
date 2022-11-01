@@ -6,7 +6,8 @@ date: 2019-09-08T23:00:48+02:00
 lastmod: 2019-09-08T23:00:48+02:00
 categories:
   - eleventy
-  - headless 
+  - cms
+  - headless
 source:
   author: Jérôme Coupé
   title: Consuming a headless CMS GraphQL API with Eleventy

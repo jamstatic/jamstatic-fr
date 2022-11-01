@@ -10,6 +10,7 @@ source:
   title: Interview with Michael Rose, designer and front-end developer
 categories:
   - jekyll
+  - entretien
 ---
 
 Michael Rose est un des webdesigner les plus actifs dans la communauté Jekyll,

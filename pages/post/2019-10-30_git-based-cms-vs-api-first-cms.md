@@ -4,6 +4,7 @@ description: Les différences à connaître entre les headless CMS qui reposent 
 date: 2019-10-30T09:26:33.000+00:00
 author: frank
 categories:
+  - cms
   - headless
 source:
   author: Nebojsa Radakovic

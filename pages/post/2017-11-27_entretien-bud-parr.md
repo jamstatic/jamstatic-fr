@@ -9,6 +9,8 @@ source:
   lang: en
   title: Interview with Bud Parr, Jamstack engineer
   url: https://www.thenewdynamic.org/article/interview-bud-parr/
+categories:
+  - entretien
 ---
 
 Bud Parr est impliqué dans la communauté qui gravite autour des générateurs de

@@ -6,6 +6,7 @@ date: 2019-12-03T18:10:24+01:00
 lastmod: 2019-12-07T18:13:54+01:00
 categories:
   - hugo
+  - performance
 source:
   author: "Régis Philibert"
   title: "The Full Partial Series Part 1: Caching!"

@@ -5,6 +5,7 @@ date: 2020-10-05
 author: arnaud
 categories:
  - jamstack
+ - performance
 source:
   author: Nicolas Hoizey
   title: JAMstack is fast only if you make it so

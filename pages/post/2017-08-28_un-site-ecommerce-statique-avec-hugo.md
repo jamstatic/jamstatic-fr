@@ -11,6 +11,7 @@ source:
 categories:
   - hugo
   - ecommerce
+  - performance
 canonical:
   url: https://snipcart.com/blog/hugo-tutorial-static-site-ecommerce
   title: "Hugo Tutorial: How to Build a Fast Static E-Commerce Site"

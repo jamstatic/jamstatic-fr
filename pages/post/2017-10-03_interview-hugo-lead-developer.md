@@ -6,6 +6,7 @@ date: 2017-10-03 13:45:36 +0200
 author: frank
 categories:
   - hugo
+  - entretien
 ---
 :::intro
 [Hugo](https://gohugo.io) est rapidement devenu l’un des

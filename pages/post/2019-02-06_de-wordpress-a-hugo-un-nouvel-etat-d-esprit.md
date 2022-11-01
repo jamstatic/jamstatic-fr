@@ -6,6 +6,7 @@ date: 2019-02-06T17:12:14+01:00
 lastmod: 2019-05-03T158:12:14+01:00
 categories:
   - hugo
+  - cms
 source:
   author: "Régis Philibert"
   title: "From WordPress to Hugo, a mindset transition"

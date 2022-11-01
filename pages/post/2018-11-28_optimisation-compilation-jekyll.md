@@ -4,7 +4,8 @@ description: Comment diviser par quinze le temps de génération de son site.
 date: 2018-11-28 00:00:00 +0000
 author: boris
 categories:
-- jekyll
+ - jekyll
+ - performance
 ---
 :::intro
 Il y a trois ans, fatigué par WordPress et de sa galaxie de plugins douteux, j'ai décidé de migrer vers un générateur de site statique. Après quelques essais avec diverses solutions, j'ai opté pour Jekyll, dont la communauté me semblait plus mature.

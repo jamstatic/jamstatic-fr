@@ -4,6 +4,7 @@ description: Présentation d’Algolia, un service de recherche personnalisé po
 author: frank
 date: 2017-07-05 12:34:00 +02:00
 categories:
+  - entretien
   - algolia
 ---
 :::intro

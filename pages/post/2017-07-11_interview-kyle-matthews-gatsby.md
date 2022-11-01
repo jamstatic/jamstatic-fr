@@ -9,6 +9,7 @@ source:
   author: David Iffland
 categories:
   - gatsby
+  - entretien
 ---
 :::intro
 Après deux ans de développement, Gatsby vient de passer en version

@@ -6,6 +6,7 @@ date: 2020-12-08
 categories:
   - podcast
   - deploiement
+  - hébergement
 podcast:
   url: https://anchor.fm/jamstatic/episodes/Hberger-du-statique-en-France-enhc1t
 author: podcast

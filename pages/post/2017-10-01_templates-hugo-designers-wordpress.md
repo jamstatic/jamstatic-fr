@@ -10,6 +10,7 @@ source:
   lang: en
 categories:
   - hugo
+  - cms
 ---
 :::intro
 Loin de réinventer la roue, les gestionnaires de site statique comme Hugo s'appuient sur des conventions existantes. On retrouve beaucoup de fonctionnalités similaires entre un GSS comme Hugo et un CMS comme WordPress. Suite à la refonte du [site de support et de documentation de Balsamiq](https://support.balsamiq.com/), [Leon Barnard](http://blog.teamtreehouse.com/author/leon_barnard) en a profité pour pointer les similitudes des deux systèmes. Outre la concision de la syntaxe d’Hugo, c'est l’occasion pour les designers WordPress d’apprécier la souplesse apportée par la gestion de la structuration des contenus sous forme de dossiers et de fichiers, ainsi que l’importance de la convention de nommage adoptée.

@@ -5,6 +5,7 @@ date: 2017-12-13T13:10:36+01:00
 author: frank
 categories:
   - hugo
+  - ecommerce
 source:
   author: "Chris Marshall"
   title: "Scalable Static Ecommerce with Hugo"

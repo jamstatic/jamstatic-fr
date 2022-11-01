@@ -5,8 +5,8 @@ author: jerome
 date: 2019-09-07T10:59:06+02:00
 lastmod: 2019-09-07T12:24:06+02:00
 categories:
-  - eleventy
   - jekyll
+  - eleventy
 source:
   author: "Jérôme Coupé"
   title: "From Jekyll to Eleventy"
