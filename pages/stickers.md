@@ -1,17 +1,12 @@
 ---
 title: Autocollants Jamstatic
-description: Formulaire de collecte des adresses pour l'envoi d'autocollants jamstatic
+description: "Page de contact pour l'envoi d'autocollants."
 author: frank
 date: 2020-10-08
+updated: 2022-11-01
 sitemap: false
 draft: true
 ---
+![Stickers Jamstack](../assets/images/stickers-jamstack.jpg "Stickers Jamstack")
 
-{{< figure src="https://res.cloudinary.com/jamstatic/image/upload/w_400,ar_1:1,c_fill,g_auto,e_art:hokusai/v1607690880/jamstatic/stickers-jamstack.jpg" caption="" attr="" attrlink="" >}}
-
-Vous avez contribué sur [notre OpenCollective](https://opencollective.com/jamstatic) et vous souhaitez recevoir un autocollant.
-
-{{< stickers >}}
-
-[Participer aux frais](https://opencollective.com/jamstatic) 🙏
-
+Vous avez contribué via [OpenCollective](https://opencollective.com/jamstatic/) 🙏 et vous souhaitez recevoir un autocollant ? Alors contactez nous à l'adresse <stickers@jamstatic.fr>.
