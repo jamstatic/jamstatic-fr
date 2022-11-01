@@ -164,8 +164,7 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography')({
-      //className: 'markdown',
-      className: 'prose',
+      className: 'markdown',
     }),
   ],
 };
