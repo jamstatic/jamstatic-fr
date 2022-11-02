@@ -16,3 +16,10 @@
   from = "/*"
   to = "/404.html"
   status = 404
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+  [plugins.inputs]
+    output_path = "lighthouse.html"
+  [plugins.inputs.settings]
+    locale = "fr"
