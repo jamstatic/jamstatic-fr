@@ -5,10 +5,11 @@ author: podcast
 date: 2020-11-19
 categories:
   - podcast
+  - jamstack
+  - performance
   - gatsby
   - eleventy
   - nextjs
-  - performance
 podcast:
   url: https://anchor.fm/jamstatic/episodes/Vers-une-Jamstack-lgre-et-performante--avec-Nicolas-Goutay-emunhp
 twitter_widgets: true
