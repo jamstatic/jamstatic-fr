@@ -33,7 +33,7 @@
         </footer>
       </article>
       {#- Twitter widgets ~#}
-      {% if page.twitter_widgets|default(false) ~%}
+      {% if page.twitter_widgets ?? false ~%}
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       {% endif ~%}
 {%- endblock ~%}
