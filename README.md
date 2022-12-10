@@ -66,7 +66,7 @@ npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/styles.css
 
 ## Production
 
-Chaque commit dans la branche `master` génère un déploiement, qui est ensuite « poussé » manuellement en production via l'interface de Netlify.
+Chaque commit dans la branche `master` génère une nouvelle version du site qui, s'il n'y a pas d'erreur, est automatiquement déployée.
 
 Si vous souhaitez contribuer, proposer des articles, vous pouvez ouvrir une issue ou soumettre directement une pull request :heart:
 
