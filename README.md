@@ -1,12 +1,7 @@
-# jamstatic.fr
+# [Jamstatic.fr](https://jamstatic.fr)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/5f02cf72-0ba6-4fd3-a606-29262d8d8606/deploy-status)](https://app.netlify.com/sites/jamstatic/deploys)
-[![Slack Channel](https://jamstatic.herokuapp.com/badge.svg)](https://jamstatic.herokuapp.com)
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![Contributeurs](https://img.shields.io/badge/all_contributors-26-orange.svg?style=flat-square)](#contributeurs)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
-Vous utilisez Jekyll, Hugo, Eleventy ou tout autre générateur de site statique, vous voulez échanger avec la communauté francophone et vous tenir informé de l'actualité de l'écosystème de la Jamstack ?
+Vous utilisez [Jekyll](https://jamstatic.fr/categories/jekyll/), [Hugo](https://jamstatic.fr/categories/hugo/), [Eleventy](https://jamstatic.fr/categories/eleventy/) ou tout autre générateur de site statique ?  
+Vous voulez échanger avec la communauté francophone et vous tenir informé de l'actualité de l'écosystème de la Jamstack ?
 
 Vous pouvez :
 
@@ -14,7 +9,13 @@ Vous pouvez :
 * [Rejoindre le Slack](https://jamstatic.fr/slack/)
 * [Soumettre un article à la publication](https://github.com/jamstatic/jamstatic-fr/projects/1)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5f02cf72-0ba6-4fd3-a606-29262d8d8606/deploy-status)](https://app.netlify.com/sites/jamstatic/deploys)
+
 ## Contribuer
+
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![Contributeurs](https://img.shields.io/badge/all_contributors-26-orange.svg?style=flat-square)](#contributeurs)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Le site est généré avec [Cecil](https://cecil.app).
 
@@ -46,7 +47,7 @@ php cecil.phar serve -d -v --config=config/dev.yml
 5. Envoyer l’article
 
 ```bash
-git commit -am "chore: nouvel article"
+git commit -am "Nouvel article"
 ```
 
 6. Soumettre une PR (Pull Request)
