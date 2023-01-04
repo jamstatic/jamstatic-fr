@@ -58,6 +58,8 @@ output:
       filename: feed
       extension: xml
       exclude: [redirect, paginated]
+  pagetypeformats:
+    homepage: [html, atom, jsonfeed]
 postprocess:
   images:
     ext: [jpeg, jpg, png, webp, svg] # , gif
