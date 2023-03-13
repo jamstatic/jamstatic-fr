@@ -5,7 +5,10 @@ module.exports = {
   ],
   safelist: [
     'anchorjs-link',
-    'dark:brightness-90'
+    'dark:brightness-90',
+    'hidden',
+    'font-display',
+    'font-medium'
   ],
   darkMode: "media",
   theme: {

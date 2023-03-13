@@ -1,3 +1,4 @@
+{% set logo = asset('favicon.png')|resize(48) %}
 <!DOCTYPE html>
 <html lang="{{ site.language }}" prefix="og:http://ogp.me/ns#" class="scroll-pt-[32px]">
   <head>
@@ -27,8 +28,21 @@
   <body class="{{ page.type }} dark:bg-gray-900">
     <div class="sticky top-0 z-10 text-white bg-violet-light">
       <div class="flex items-center justify-between pl-2">
-        {%- set logo = asset('favicon.png')|resize(48) ~%}
-        <a href="{{ url() }}"><img src="{{ url(logo) }}" alt="Logo Jamstatic" width="{{ logo.width }}" height="{{ logo.height }}" class="w-[24px]" /></a>
+        <a href="{{ url() }}" class="flex space-x-1.5">
+          <img src="{{ url(logo) }}" alt="Logo Jamstatic" width="{{ logo.width }}" height="{{ logo.height }}" class="w-[24px]" />
+          <div id="site-title" class="hidden">Jamstatic</div>
+          <script>{% apply minify_js -%}
+            titleDiv = document.getElementById('site-title');
+            var scrollTitle = function () {
+              var y = window.scrollY;
+              titleDiv.className = 'hidden';
+              if (y >= 140) {
+                titleDiv.className = 'font-display font-medium';
+              }
+            };
+            window.addEventListener('scroll', scrollTitle);
+          {%- endapply %}</script>
+        </a>
         <div class="flex items-center">
           <nav class="py-2 px-4">
             <ul class="flex justify-end space-x-4">
