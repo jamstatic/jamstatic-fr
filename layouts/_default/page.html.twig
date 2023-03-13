@@ -29,8 +29,8 @@
     <div class="sticky top-0 z-10 text-white bg-violet-light">
       <div class="flex items-center justify-between pl-2">
         <a href="{{ url() }}" class="flex space-x-1.5">
-          <img src="{{ url(logo) }}" alt="Logo {{ site.site }}" width="{{ logo.width }}" height="{{ logo.height }}" class="w-[24px]" />
-          <div id="site-title" class="hidden">{{ site.site }}</div>
+          <img src="{{ url(logo) }}" alt="Logo {{ site.title }}" width="{{ logo.width }}" height="{{ logo.height }}" class="w-[24px]" />
+          <div id="site-title" class="hidden">{{ site.title }}</div>
           <script>{% apply minify_js -%}
             titleDiv = document.getElementById('site-title');
             var scrollTitle = function () {
