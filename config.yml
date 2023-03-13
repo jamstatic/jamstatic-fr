@@ -37,6 +37,7 @@ body:
   highlight:
     enabled: true
   images:
+    class: "markdown dark:brightness-90"
     responsive:
       enabled: true
     webp:
@@ -47,9 +48,19 @@ body:
       fallback:
         enabled: true
         path: images/no-image.png
-    class: dark:brightness-90
   links:
     embed:
+      enabled: true
+assets:
+  images:
+    optimize:
+      enabled: true
+    responsive:
+      enabled: true
+      widths: [768, 1024]
+      sizes:
+        markdown: "(max-width: 800px) 768px, 1024px"
+    webp:
       enabled: true
 output:
   formats:
