@@ -13,5 +13,5 @@ insert_final_newline = true
 [*.md]
 trim_trailing_whitespace = false
 
-[*.twig]
+[*.{twig,svg}]
 insert_final_newline = false
