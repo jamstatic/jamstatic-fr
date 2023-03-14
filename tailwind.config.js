@@ -8,7 +8,12 @@ module.exports = {
     'dark:brightness-90',
     'hidden',
     'font-display',
-    'font-medium'
+    'font-medium',
+    'transition-opacity',
+    'duration-1000',
+    'ease-out',
+    'opacity-0',
+    'opacity-100',
   ],
   darkMode: "media",
   theme: {
