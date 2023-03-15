@@ -1,18 +1,18 @@
 {% set logo = asset('favicon.png')|resize(48) %}
+{%- set css_highlight = {
+  'light': asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-light.css')|url,
+  'dark': asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-dark.css')|url,
+} ~%}
 <!DOCTYPE html>
 <html lang="{{ site.language }}" prefix="og:http://ogp.me/ns#" class="scroll-pt-[32px]">
   <head>
+    {%- block head -%}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {#- SEO ~#}
     {{~ include('partials/metatags.html.twig') ~}}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Roboto&display=swap" />
-    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Roboto&display=swap" />
-    <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Roboto&display=swap" />
-    </noscript>
+    {#- main CSS ~#}
     {%- if getenv('CECIL_ENV') == 'production' ~%}
     <style>
       {{- asset('css/styles.css')|inline ~}}
@@ -20,10 +20,20 @@
     {%- else ~%}
     <link rel="stylesheet" href="{{ asset('css/styles.css', {minify: false, fingerprint: false}) }}" />
     {%- endif ~%}
-    <link rel="stylesheet" href="{{ asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-light.css') }}" media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)" />
-    <link rel="stylesheet" href="{{ asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-dark.css') }}" media="(prefers-color-scheme: dark)" />
+    {#- Google fonts ~#}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="{{ site.googlefonts }}" />
+    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="{{ site.googlefonts }}" />
+    <noscript>
+      <link rel="stylesheet" href="{{ site.googlefonts }}" />
+    </noscript>
+    <link rel="preload" as="style" href="{{ css_highlight.light }}" />
+    <link rel="preload" as="style" href="{{ css_highlight.dark }}" />
+    {#- Web manifest ~#}
     <link href="{{ url('manifest') }}" rel="manifest" />
     <meta name="theme-color" content="#4A21CC" />
+    {%- endblock head ~%}
   </head>
   <body class="{{ page.type }} dark:bg-gray-900">
     <div class="sticky top-0 z-10 text-white bg-violet-light">

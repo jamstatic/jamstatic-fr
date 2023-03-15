@@ -2,6 +2,12 @@
 
 {% extends '_default/page.html.twig' %}
 
+{%- block head ~%}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ css_highlight.light }}" media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)" />
+    <link rel="stylesheet" href="{{ css_highlight.dark }}" media="(prefers-color-scheme: dark)" />
+{%- endblock ~%}
+
 {%- block content ~%}
       <article itemtype="https://schema.org/BlogPosting">
         {{~ include('partials/post.html.twig', {p: page}) ~}}
