@@ -1,20 +1,26 @@
             <header class="p-4 mb-8 bg-blue-100 bg-opacity-50 rounded-lg dark:bg-gray-800{% if in_list|default(false) == true %} hover:scale-105 transition duration-300 transform{% endif %}">
-              {#- author ~#}
               <div class="mb-2">
                 <div class="flex items-center">
+                {#- author ~#}
                 {%- if p.author|default ~%}
+                  {#- GitHub avatar ~#}
                   {%- if site.data.authors[p.author].name|default and site.data.authors[p.author].github|default -%}
                   {%- set avatar = asset('https://github.com/' ~ site.data.authors[p.author].github ~ '.png?size=64') ~%}
                   <img class="w-8 h-8 mr-2 rounded-full" rel="preload" src="{{ url(avatar) }}" width="32" height="32" alt="{{ site.data.authors[p.author].name }}" />
                   {%- endif -%}
+                  {#- website / GitHub profile ~#}
                   {%- if site.data.authors[p.author].web|default ~%}
                   <a class="text-base no-underline capitalize text-black-grape-400 dark:text-blue-500 hover:underline dark:hover:text-blue-300" rel="author" href="{{ site.data.authors[p.author].web }}">{{ site.data.authors[p.author].name }}</a>
                   {%- else ~%}
                   <a class="text-base no-underline capitalize text-black-grape-400 dark:text-blue-500 hover:underline dark:hover:text-blue-300" rel="author" href="https://github.com/{{ site.data.authors[p.author].github }}">{{ site.data.authors[p.author].name }}</a>
                   {%- endif -%}
+                  {#- translator? ~#}
                   {%- if p.source|default ~%}
                   <span class="ml-2 text-sm text-black-grape-400 dark:text-blue-500">(traducteur·trice)</span>
                   {%- endif ~%}
+                {%- endif ~%}
+                {%- if p.fmvariables.published ?? true == false or p.fmvariables.draft ?? false == true ~%}
+                  <span class="ml-2 text-sm text-black-grape-400 dark:text-blue-500 font-semibold">(non publié)</span>
                 {%- endif ~%}
                 </div>
               </div>
