@@ -9,8 +9,8 @@
 {%- endblock ~%}
 
 {%- block content ~%}
-      <article itemtype="https://schema.org/BlogPosting">
         {{~ include('partials/post.html.twig', {p: page}) ~}}
+      <article id="content" itemtype="https://schema.org/BlogPosting">
         <main class="mx-auto markdown lg:markdown-xl dark:markdown-dark" itemprop="articleBody">
           {{~ page.content ~}}
         </main>
