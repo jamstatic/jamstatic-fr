@@ -73,7 +73,7 @@ Une chose que j'avais oubliée, c'est que 11 000 pages, c'est entre 400 et 500 M
 
 Clairement, au début, j'ai cru a un bug. J'ai coupé le déploiement au bout de 39 minutes. Oui, vous avez bien lu, 39 minutes. Et non, ce n’était pas un bug : j'ai testé sur Netlify, via FTP avec une connexion fibre, ça prend bien une bonne quarantaine de minutes !
 
-![39 minutes de temps de déploiement](/images/post/11000-pages-statiques/39mindeploy.png "39 minutes de temps de déploiement")
+![39 minutes de temps de déploiement](../../assets/images/post/11000-pages-statiques/39mindeploy.png "39 minutes de temps de déploiement")
 
 Le constat est simple. Impossible de faire du full statique sur un très grand nombre de pages. Le statique ne s'y prête pas du tout. D'autant que les futurs sites doivent atteindre le double, voire le triple en quantité de pages.
 
@@ -85,11 +85,11 @@ On peut utiliser le mode `fallback` de la fonction `getStaticPaths` avec la vale
 
 Ensuite, vous donnez un tableau vide comme valeur `paths` de la fonction `getStaticPaths` pour ne générer aucune page lors du build. Les pages seront générées à la demande en cas de visite.
 
-Résultat, un **temps de génération entre deux et quatres minutes** pour un site statique hybride de 10 991 articles !
+Résultat, un **temps de génération entre deux et quatre minutes** pour un site statique hybride de 10 991 articles !
 
-![10991 articles](/images/post/11000-pages-statiques/10991articles.png "10991 articles")
+![10991 articles](../../assets/images/post/11000-pages-statiques/10991articles.png "10991 articles")
 
-![4 minutes de temps de déploiement](/images/post/11000-pages-statiques/4mindeploy.png "4 minutes de temps de déploiement")
+![4 minutes de temps de déploiement](../../assets/images/post/11000-pages-statiques/4mindeploy.png "4 minutes de temps de déploiement")
 
 Cerise sur le gâteau, en utilisant le paramètre `revalidate`, on peut régénérer la page (temps en secondes) sans relancer un build. Cela veut dire qu'en cas de mise à jour de contenu, il n'est pas nécessaire de relancer un build !
 
