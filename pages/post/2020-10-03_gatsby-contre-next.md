@@ -1,4 +1,5 @@
 ---
+published: false
 title: Gatsby contre Next.js
 description: Une illustration du surcoût de la complexité engendré par Gatsby sur un site  statique par rapport au framework React Next.js.
 date: 2020-10-03
@@ -10,7 +11,6 @@ source:
   url: https://jaredpalmer.com/gatsby-vs-nextjs
   lang: en
 canonical_url: https://jaredpalmer.com/gatsby-vs-nextjs
-published: false
 ---
 
 :::intro
