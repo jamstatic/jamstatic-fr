@@ -32,7 +32,7 @@
         <ul>
         {%- for p in pages ~%}
           <li>
-            {{~ include('partials/post.html.twig', {in_list: true}) ~}}
+            {{~ include('partials/post-header.html.twig', {in_list: true}) ~}}
           </li>
         {%- endfor ~%}
         </ul>
