@@ -5,8 +5,8 @@ description: "Retour d'expérience sur la migration du site vers Cecil."
 date: 2023-08-28
 author: arnaud
 categories:
-  - hugo
-  - cecil
+  - Hugo
+  - Cecil
 ---
 
 À la fin de l'année dernière j'ai entrepris de pérenniser le travail de refonte du site, engagé avec Frank : nouveau logo, nouvelle charte et donc modification des templates et de la feuille de styles.
@@ -23,5 +23,7 @@ J'ai alors décidé de [sauter le pas](https://github.com/jamstatic/jamstatic-fr
 
 ## Comment ?
 
-Après le "pourquoi ?" intéressons nous maintenant au "comment ?", partie nettement plus intéressante 😊
+Après le "pourquoi ?" intéressons nous maintenant à la partie la plus intéressante de ce billet, à savoir le "comment ?" 😊
+
+Le principe de génération du site, la structure des contenus et l'organisation des templates étant relativement proche entre les deux solutions, j'ai décidé d'avancer par itérations successives : à chaque modification (majeures) exécution d'un nouveau build, puis application des ajustements selon les messages d'erreur retournés, encore et encore jusqu'à ce que le build soit valide.
 
