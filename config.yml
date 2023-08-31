@@ -82,3 +82,9 @@ serviceworker:
 anchor:
   version: 4.3.1
 googlefonts: https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Roboto&display=swap
+netlify:
+  redirects:
+    - from: https://jamstatic.netlify.app/*
+      to: https://jamstatic.fr/:splat
+    - from: https://master--jamstatic.netlify.app/*
+      to: https://jamstatic.fr/:splat
