@@ -8,18 +8,15 @@ categories:
   - podcast
   - hugo
 ---
+:::intro
 Dans cet entretien, [Régis Philibert](https://twitter.com/regisphilibert) revient sur son parcours, son adoption puis son travail avec Hugo en agence au quotidien, ses fonctionnalités préférées, les challenges qu'il a du relevé et ce qui rend ce
 générateur si agréable à l'utilisation.
 
 Si vous vous intéressez à [Hugo](/categories/hugo/), il y a de grandes chance que vous ayez déjà lu ici-même un des articles de Régis ayant pour but de vous faire progresser dans votre apprentissage.
+:::
 
 <!--
-{{< player number=3 >}}
-<div>
-  {{< podcast/apple url="https://podcasts.apple.com/fr/podcast/" >}}&nbsp;
-  {{< podcast/google url="https://podcasts.google.com/feed/" >}}&nbsp;
-  {{< podcast/spotify url="https://open.spotify.com/episode/" >}}
-</div>
+<iframe src="https://anchor.fm/jamstatic/embed/episodes/XXXX"  width="100%" frameborder="0" scrolling="no"></iframe>
 -->
 
 ## Son parcours
