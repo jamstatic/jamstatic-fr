@@ -25,5 +25,10 @@ J'ai alors décidé de [sauter le pas](https://github.com/jamstatic/jamstatic-fr
 
 Après le "pourquoi ?" intéressons nous maintenant à la partie la plus intéressante de ce billet, à savoir le "comment ?" 😊
 
-Le principe de génération du site, la structure des contenus et l'organisation des templates étant relativement proche entre les deux solutions, j'ai décidé d'avancer par itérations successives : à chaque modification (majeures) exécution d'un nouveau build, puis application des ajustements selon les messages d'erreur retournés, encore et encore jusqu'à ce que le build soit valide.
+Le principe de génération du site, la structure des contenus et l'organisation des templates étant relativement proches entre Hugo et Cecil, j'ai décidé de procéder par modifications itératives plutôt que de repartir d'une page blanche, selon la boucle suivante :
+
+1. j'effectue une modification ;
+2. Je lance un nouveau build ;
+3. Je réalise les ajustements nécessaires (selon les messages d'erreur retournés) ;
+4. je recommence jusqu'à ce que le build "passe".
 
