@@ -9,7 +9,13 @@ categories:
   - Cecil
 ---
 
-À la fin de l'année dernière j'ai entrepris de pérenniser le travail de refonte du site, engagé avec Frank : nouveau logo, nouvelle charte et donc modification des templates et de la feuille de styles.
+À la fin de l'année dernière j'avais entrepris de pérenniser le travail de refonte du site, engagé avec Frank : nouveau logo, nouvelle charte et donc modification des templates et de la feuille de styles.
+
+C’est la version sur laquelle vous lisez cette article 😊
+
+Pour rappel, la version précédente ressemblait à ça :
+
+![Capture d’écran de la v1 de Jamstatic.fr](../../assets/images/jamstatic-v1-screenshot.png "[Capture d’écran de la v1 de Jamstatic.fr](https://web.archive.org/web/20201012071702/https://jamstatic.fr/)")
 
 ## Pourquoi ?
 
