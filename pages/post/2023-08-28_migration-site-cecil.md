@@ -62,33 +62,34 @@ Le principe de génération du site, la structure des contenus et l'organisation
 
 
 
-## Partage
+## Image de partage
 
-Création de l'image par défaut de partage sur les réseaux sociaux
+L’image de partage sur les réseaux sociaux était créée de manière semi-automatique via l’[API HTTP de manipulation d’image de Cloudinary](https://cloudinary.com/documentation/transformation_reference#l_text), en paçant le lien (fabriqué à la main) dans le front matter de chaque post.
 
-Création du modèle de "preview card" pour kleptomanies partage
+Même si ça fonctionnait plutôt bien en pratique, cette méthode était contraignante puisqu’il fallait recréer l’URL pour chaque nouvel article, en veillant à l’encoder correctement.
 
-Le modèle est manipulé par le service Cloudinary : injection du titre du post dans l'image
+De plus le service de Cloudinary était sollicité à chaque affichage du post concerné, alors même que l’image n’était plus modifiée.
 
-Code :
-
-https://github.com/jamstatic/jamstatic-fr/blob/master/layouts/post/page.html.twig#L1
+Aussi, j’ai délégué la construction de cette URL au template [`post/page.html.twig`](https://github.com/jamstatic/jamstatic-fr/blob/master/layouts/post/page.html.twig#L1) :
 
 ```twig
-{% set image = asset('https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:' ~ page.title|replace({',': ' '})|url_encode ~ '/jamstatic/twitter-card.png', {filename: 'assets/cards/' ~ page.title|slugify  ~ '.png'}) %}
+{% set image = asset('https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:' ~ page.title|replace({',': ' '})|url_encode ~ '/jamstatic/twitter-card.png', {filename: 'assets/cards/' ~ page.title|slugify ~ '.png'}) %}
 ```
 
-1. Création d'un asset Cecil via fonction `asset()`
-2. Cette asset est une image gérée via Cloudinary, à partir d'un modèle, dans lequel on injecte du texte :
-   1. Largeur optimisée pour le partage sur les RS : 1100px
-   2. Le texte commence à la position 80x120
-   3. Police de caractère Poppins 80 ultra bold avec un interligne de -30
-   4. Le titre du post est "nettoyé" :
-      1. Remplacement des virgules par des espaces
-      2. Encodage en URL
-   5. L'asset généré est enregistré avec un nom de fichier "sluguifié" afin d'être compatible avec es contraintes de dommage Windows et au format PNG
+En pratique :
 
+- Création d’une [image « modèle » (en veillant à garder de la place pour y intégrer le titre du billet)
+- Utilisation de la fonction [`asset()`](https://cecil.app/documentation/templates/#asset) pour manipuler l’image générée par Cloudinary :
+  1. Définition d’une largeur optimisée pour le partage sur les réseaux sociaux (1000 px)
+  2. Positionnement du texte aux coordonnées 80:120
+  3. Utilisation de la police de caractère Poppins 80 ultra bold interligne -30
+  4. Remplacement des virgules dans le titre par des espaces
+  5. Encodage de l’URL obtenue
+  6. Enfin, enregistrement de l’asset avec un nom de fichier "slugifié" afin d'être compatible avec les contraintes de nommage Windows, au format PNG
 
+Exemple :
+
+![Exemple d’une Twitter Card](../../assets/images/twitter-card-example.png "Exemple d’une Twitter Card")
 
 
 
