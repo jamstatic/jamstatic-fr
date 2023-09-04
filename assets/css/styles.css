@@ -459,7 +459,7 @@ video {
   --tw-ring-inset:  ;
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(128 174 255 / 0.5);
+  --tw-ring-color: rgb(125 172 255 / 0.5);
   --tw-ring-offset-shadow: 0 0 #0000;
   --tw-ring-shadow: 0 0 #0000;
   --tw-shadow: 0 0 #0000;
@@ -509,7 +509,7 @@ video {
   --tw-ring-inset:  ;
   --tw-ring-offset-width: 0px;
   --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(128 174 255 / 0.5);
+  --tw-ring-color: rgb(125 172 255 / 0.5);
   --tw-ring-offset-shadow: 0 0 #0000;
   --tw-ring-shadow: 0 0 #0000;
   --tw-shadow: 0 0 #0000;
@@ -1372,6 +1372,11 @@ video {
   color: rgb(82 82 91 / var(--tw-text-opacity));
 }
 
+.text-rose {
+  --tw-text-opacity: 1;
+  color: rgb(255 72 99 / var(--tw-text-opacity));
+}
+
 .text-rose-600 {
   --tw-text-opacity: 1;
   color: rgb(255 72 99 / var(--tw-text-opacity));
@@ -1572,7 +1577,6 @@ pre code.hljs {
   }
 
   .dark\:markdown-dark :where(code):not(:where([class~="not-markdown"] *)) {
-    color: #cebef6;
   }
 
   .dark\:markdown-dark :where(strong):not(:where([class~="not-markdown"] *)) {
@@ -1580,7 +1584,7 @@ pre code.hljs {
   }
 
   .dark\:markdown-dark :where(a):not(:where([class~="not-markdown"] *)) {
-    color: #80AEFF;
+    color: #7DACFF;
   }
 
   .dark\:markdown-dark :where(a):not(:where([class~="not-markdown"] *)):hover {
@@ -1588,23 +1592,23 @@ pre code.hljs {
   }
 
   .dark\:markdown-dark :where(h1):not(:where([class~="not-markdown"] *)) {
-    color: #80AEFF;
+    color: #7DACFF;
   }
 
   .dark\:markdown-dark :where(h2):not(:where([class~="not-markdown"] *)) {
-    color: #80AEFF;
+    color: #7DACFF;
   }
 
   .dark\:markdown-dark :where(h3):not(:where([class~="not-markdown"] *)) {
-    color: #80AEFF;
+    color: #7DACFF;
   }
 
   .dark\:markdown-dark :where(h4):not(:where([class~="not-markdown"] *)) {
-    color: #80AEFF;
+    color: #7DACFF;
   }
 
   .dark\:markdown-dark :where(blockquote):not(:where([class~="not-markdown"] *)) {
-    color: #80AEFF;
+    color: #7DACFF;
     background: #27272A;
     border-color: #3F3F46;
   }
@@ -2089,7 +2093,7 @@ pre code.hljs {
 
   .dark\:text-blue-500 {
     --tw-text-opacity: 1;
-    color: rgb(128 174 255 / var(--tw-text-opacity));
+    color: rgb(125 172 255 / var(--tw-text-opacity));
   }
 
   .dark\:text-gray-300 {
