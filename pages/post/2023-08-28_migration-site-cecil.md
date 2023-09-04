@@ -62,9 +62,17 @@ Le principe de génération du site, la structure des contenus et l'organisation
     6. Création du partial "head" d'un post utilisé pour la page post et les listes
     7. Création d'une template des terms d'une taxonomie (caaégories)
     8. Amélioration de la sémantique des éléments du DOM des templates (article, header, footer, etc.)
+    9. Ajout navigation par caté»gories dans les pages liste (à la palce du moteur de recherche)
 12. 1ère génération de la feuille de styles avec Tailwind CSS
 13. Mise à jour des posts, pleeeinnn !
 14. Récupération, autant que possible, des visuels d'illustration hébergé "ailleurs" (sur le serveur du site source lors d'une traduction) ou sur un CDN
+15. Ajout de `.editorconfig` https://editorconfig.org
+16. Suppression des Shortcodes Hugo pour une meilleure portabilité
+17. Ajout d’une canonical URL vers l’article d’origine
+18. Création d’une image «no image» en cas d’image d’image distante introuvable
+19. Ajout de headers
+20. Ajout d’une pagination
+21. RSS feed template
 
 
 
@@ -96,6 +104,4 @@ En pratique :
 Exemple :
 
 ![Exemple d’une Twitter Card](../../assets/images/twitter-card-example.png "Exemple d’une Twitter Card")
-
-
 
