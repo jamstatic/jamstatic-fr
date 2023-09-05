@@ -30,7 +30,7 @@
               <li>
                 <a class="md:text-lg font-bold no-underline text-violet hover:text-violet-light dark:text-blue-500 dark:hover:text-blue-300" href="{{ url(related) }}">{{ related.title }}</a>
               </li>
-            {% else %}
+            {%- else ~%}
               <li>Aucun autre article...</li>
             {%- endfor ~%}
             </ul>
@@ -39,7 +39,7 @@
         </footer>
       </article>
       {#- Twitter widgets ~#}
-      {% if page.twitter_widgets ?? false ~%}
+      {%- if page.twitter_widgets ?? false ~%}
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-      {% endif ~%}
+      {%- endif ~%}
 {%- endblock ~%}
