@@ -4,15 +4,15 @@
                 {#- author ~#}
                 {%- if p.author|default ~%}
                   {#- GitHub avatar ~#}
-                  {%- if site.data.authors[p.author].name|default and site.data.authors[p.author].github|default -%}
-                  {%- set avatar = asset('https://github.com/' ~ site.data.authors[p.author].github ~ '.png?size=64') ~%}
-                  <img class="w-8 h-8 mr-2 rounded-full" rel="preload" src="{{ url(avatar) }}" width="32" height="32" alt="{{ site.data.authors[p.author].name }}" />
+                  {%- if author.name|default and author.github|default -%}
+                  {%- set avatar = asset('https://github.com/' ~ author.github ~ '.png?size=64') ~%}
+                  <img class="w-8 h-8 mr-2 rounded-full" rel="preload" src="{{ url(avatar) }}" width="32" height="32" alt="{{ author.name }}" />
                   {%- endif -%}
                   {#- website / GitHub profile ~#}
-                  {%- if site.data.authors[p.author].web|default ~%}
-                  <a class="text-base no-underline capitalize text-black-grape-400 dark:text-blue-500 hover:underline dark:hover:text-blue-300" rel="author" href="{{ site.data.authors[p.author].web }}">{{ site.data.authors[p.author].name }}</a>
+                  {%- if author.url|default ~%}
+                  <a class="text-base no-underline capitalize text-black-grape-400 dark:text-blue-500 hover:underline dark:hover:text-blue-300" rel="author" href="{{ author.url }}">{{ author.name }}</a>
                   {%- else ~%}
-                  <a class="text-base no-underline capitalize text-black-grape-400 dark:text-blue-500 hover:underline dark:hover:text-blue-300" rel="author" href="https://github.com/{{ site.data.authors[p.author].github }}">{{ site.data.authors[p.author].name }}</a>
+                  <a class="text-base no-underline capitalize text-black-grape-400 dark:text-blue-500 hover:underline dark:hover:text-blue-300" rel="author" href="https://github.com/{{ author.github }}">{{ author.name }}</a>
                   {%- endif -%}
                   {#- translator? ~#}
                   {%- if p.source|default ~%}
