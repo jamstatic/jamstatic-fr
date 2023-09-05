@@ -12,8 +12,12 @@ languages:
   - code: fr
     locale: fr
 social:
-  twitter: jamstatic_fr
-  github: jamstatic
+  twitter:
+    username: jamstatic_fr
+    url: https://twitter.com/jamstatic_fr/
+  github:
+    username: jamstatic
+    url: https://github.com/jamstatic/
 podcast:
   title: Génération Statique
   url: https://anchor.fm/jamstatic

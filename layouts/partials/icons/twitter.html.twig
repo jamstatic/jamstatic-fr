@@ -1,3 +1,5 @@
-<a href="https://twitter.com/{{ site.social.twitter }}" title="Suivre Jamstatic sur Twitter">
+{% if site.social.twitter.url is defined %}
+<a href="{{ site.social.twitter.url }}" title="Suivre Jamstatic sur Twitter">
 	{{ include('partials/svg/icon-twitter.svg') }}
 </a>
+{% endif %}
