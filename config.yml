@@ -88,3 +88,7 @@ netlify:
       to: https://jamstatic.fr/:splat
     - from: https://master--jamstatic.netlify.app/*
       to: https://jamstatic.fr/:splat
+metatags:
+  articles: post
+  jsonld:
+    enabled: true
