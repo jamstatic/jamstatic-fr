@@ -289,7 +289,7 @@ Nous pouvons maintenant écrire notre fichier de modèle pour les webmentions. D
   {% set repliesSize = replies | size  %}
 ```
 
-Une fois nos variables définies, nous pouvons afficher ces données. Ici je vais seulement m'attarder sur la partie "réponses", libre à vous d'aller voir comment je gère les autres types de webmentions dans [ce gist](https://gist.github.com/siakaramalegos/b1f7ded21f9ecddaee91e3f6d88e2e48).
+Une fois nos variables définies, nous pouvons afficher ces données. Ici je vais seulement m'attarder sur la partie "réponses", libre à vous d'aller voir comment je gère les autres types de webmentions dans [ce gist](https://gist.github.com/siakaramalegos/b1f7ded21f9ecddaee91e3f6d88e2e48){embed=false}.
 
 L'affichage des réponses est un peu plus complexe que de simplement afficher une photo et un lien. Je fais appel à un autre template ici pour afficher chaque webmention. Nous affichons le nombre total de réponses et affichons le mot "Réponse" au pluriel si nécessaire. Puis nous bouclons sur les webmentions de type réponse et les affichons à l'aide d'un nouveau fichier partiel Nunjucks :
 
