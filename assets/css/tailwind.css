@@ -39,6 +39,7 @@ figure figcaption {
 }
 .note-intro {
   @apply border-black-grape-200 dark:border-black-grape-400;
+  @apply text-justify;
 }
 .note-info {
   @apply bg-black-grape-100 dark:bg-black-grape-500 border-black-grape-200 dark:border-black-grape-400;
