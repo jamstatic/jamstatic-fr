@@ -129,18 +129,6 @@ module.exports = {
         dark: {
           css: {
             color: theme("colors.gray.300"),
-            code: {
-              color: theme("colors.indigo.300"),
-            },
-            strong: {
-              color: theme("colors.gray.300"),
-            },
-            a: {
-              color: theme("colors.blue.500"),
-              "&:hover": {
-                color: theme("colors.blue.300"),
-              },
-            },
             h1: {
               color: theme("colors.blue.500"),
             },
@@ -153,11 +141,23 @@ module.exports = {
             h4: {
               color: theme("colors.blue.500"),
             },
+            strong: {
+              color: theme("colors.gray.300"),
+            },
+            a: {
+              color: theme("colors.blue.500"),
+              "&:hover": {
+                color: theme("colors.blue.300"),
+              },
+            },
             blockquote: {
               color: theme("colors.blue.500"),
               background: theme("colors.gray.800"),
               borderColor: theme("colors.gray.700"),
-            }
+            },
+            code: {
+              color: theme("colors.gray.300"),
+            },
           },
         },
       }),

@@ -1624,21 +1624,6 @@ pre code.hljs {
     color: #D4D4D8;
   }
 
-  .dark\:markdown-dark :where(code):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
-  }
-
-  .dark\:markdown-dark :where(strong):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
-    color: #D4D4D8;
-  }
-
-  .dark\:markdown-dark :where(a):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
-    color: #7DACFF;
-  }
-
-  .dark\:markdown-dark :where(a):not(:where([class~="not-markdown"],[class~="not-markdown"] *)):hover {
-    color: #B3CFFF;
-  }
-
   .dark\:markdown-dark :where(h1):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
     color: #7DACFF;
   }
@@ -1655,10 +1640,26 @@ pre code.hljs {
     color: #7DACFF;
   }
 
+  .dark\:markdown-dark :where(strong):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
+    color: #D4D4D8;
+  }
+
+  .dark\:markdown-dark :where(a):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
+    color: #7DACFF;
+  }
+
+  .dark\:markdown-dark :where(a):not(:where([class~="not-markdown"],[class~="not-markdown"] *)):hover {
+    color: #B3CFFF;
+  }
+
   .dark\:markdown-dark :where(blockquote):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
     color: #7DACFF;
     background: #27272A;
     border-color: #3F3F46;
+  }
+
+  .dark\:markdown-dark :where(code):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
+    color: #D4D4D8;
   }
 }
 
