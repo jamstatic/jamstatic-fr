@@ -25,7 +25,7 @@ Si vous ne connaissez pas encore ce service, sachez que c'est extrêmement simpl
 
 La manière la plus simple d’héberger un site chez Netlify est de [glisser-déposer un dossier](https://www.netlify.com/docs/manual-deploys/) contenant vos fichiers dans un navigateur sur https://app.netlify.com.
 
-[Déploiement facile par glisser-déposer sur Netlify](https://www.youtube.com/watch?v=fiw2P-UAlII)
+[Déploiement facile par glisser-déposer sur Netlify](https://www.youtube.com/watch?v=fiw2P-UAlII "Netlify’s easy peasy drag and drop deployment")
 
 Vous pouvez aussi déployer directement grâce à [l’utilitaire en ligne de commande](https://www.netlify.com/docs/cli/), mais je prefère vous renvoyer à [la documentation](https://www.netlify.com/docs) pour ça, sinon vous allez croire que j'essaie de caser discrètement des éléments en plus dans ma liste. Bon OK, c'est ce que je faisais, vous m'avez démasqué. Passons maintenant à la liste à proprement parler.
 
@@ -101,7 +101,7 @@ Cela se paramètre à l’aide d’un fichier de configuration `netlify.toml` qu
 
 Par exemple :
 
-[Example de fichier de configuration Netlify](https://gist.github.com/philhawksworth/61715131c5d229c06f161e82e93db803)
+[Example de fichier de configuration Netlify](https://gist.github.com/philhawksworth/61715131c5d229c06f161e82e93db803 "Exemple de fichier de configuration de site netlify.toml.")
 
 Vous trouverez plus d’informations à ce sujet dans la [documentation des contextes de déploiement](https://www.netlify.com/docs/continuous-deployment/#deploy-contexts).
 
@@ -145,7 +145,7 @@ Vous avez aussi la possibilité de préciser le code de réponse HTTP dans le fi
 
 Voici un exemple :
 
-[Exemple simple de fichier Netlify _redirects](https://gist.github.com/philhawksworth/7b12a0785266f8dcf1960d2df93dfc59)
+[Exemple simple de fichier Netlify _redirects](https://gist.github.com/philhawksworth/7b12a0785266f8dcf1960d2df93dfc59 "Un exemple de fichier de configuration `_redirects`.")
 
 Vous voulez des _splats_, des _placeholders_, des paramètres de requêtes et plus encore ? Jetez un œil à la [documentation sur les redirections](https://www.netlify.com/docs/redirects/).
 
@@ -159,7 +159,7 @@ Netlify utilise pour cela une approche similaire à celle de la gestion des redi
 
 Et vous pouvez faire bien plus que contrôler les entêtes de cache. La possibilité de configurer vos entêtes à l’aide de fichier `_headers` vous permet de définir votre politique de sécurité en matière de contenu (CSP), vos options `X-Frame` et plein d’autres choses toutes aussi importantes pour vous aider à contrôler la sécurité de votre site.
 
-[Exemple simple de fichier Netlify _headers](https://gist.github.com/philhawksworth/d1deda75c8bc3d025e7d62639f904222)
+[Exemple simple de fichier Netlify _headers](https://gist.github.com/philhawksworth/d1deda75c8bc3d025e7d62639f904222 "Un exemple de fichier de configuration `_headers`.")
 
 Bénéficier d’une telle granularité pour ce type de contrôle est souvent bien plus complexe que cela. Il me semble que cette fonctionnalité rend accessible le contrôle de la sécurité à davantage de développeurs.
 
