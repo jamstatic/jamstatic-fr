@@ -9,36 +9,47 @@ categories:
   - Cecil
 ---
 
-À la fin de l'année dernière j'avais entrepris de pérenniser le travail de refonte du site, engagé avec Frank : nouveau logo, nouvelle charte et donc modification des templates et de la feuille de styles.
+À la fin de l'année dernière j'avais entrepris de pérenniser le travail de refonte du site, engagé avec Frank : nouveau logo et nouvelle charte graphique, impliquant la modification des templates et de la feuille de styles.
 
 C’est la version sur laquelle vous lisez cette article 😊
 
-Pour rappel, la version précédente ressemblait à ça :
+Pour rappel, avant le site ressemblait à ça :
 
 ![Capture d’écran de la v1 de Jamstatic.fr](../../assets/images/jamstatic-v1-screenshot.png "[Capture d’écran de la v1 de Jamstatic.fr](https://web.archive.org/web/20201012071702/https://jamstatic.fr/)")
 
-## Pourquoi ?
+## Pourquoi changer de solution ?
 
-Au tout début je m'étais concentré sur la modification des styles via [Tailwind CSS](https://tailwindcss.com/) (comme [souhaité par Frank](https://github.com/jamstatic/jamstatic-fr/pull/255)) puis sur les [templates Go](https://gohugo.io/templates/introduction/).  
-Puis je me suis rapidement arraché les cheveux avec le moteur de templating de Hugo : ne pratiquant pas régulièrement, j'étais systématiquement obligé d'ouvrir la documentation et de chercher comment manipuler une variable, gérer les héritages, les inclusions, etc. Bref, une perte de temps importante et une motivation se réduisant de jour en jour.
+Au tout début je m'étais concentré sur la modification des feuilles de styles en m'appuyant sur [Tailwind CSS](https://tailwindcss.com/) (comme [souhaité par Frank](https://github.com/jamstatic/jamstatic-fr/pull/255)), puis sur la modification des [templates Go](https://gohugo.io/templates/introduction/).  
+Je me suis ensuite rapidement arraché les cheveux avec le moteur de templates d'Hugo : ne le pratiquant pas régulièrement, j'étais systématiquement de consulter la documentation pour chercher comment manipuler une variable, gérer les héritages, les inclusions, etc. Bref, une perte de temps importante et une motivation se réduisant de jour en jour.
 
-J'ai alors décidé de [sauter le pas](https://github.com/jamstatic/jamstatic-fr/pull/343) et de migrer vers [Cecil](https://cecil.app/) pour 2 raisons majeurs :
+J'ai alors décidé de [sauter le pas](https://github.com/jamstatic/jamstatic-fr/pull/343) et de migrer vers [Cecil](https://cecil.app/), pour 2 raisons majeures :
 
 1. Je connais la solution sur le bout des doigts (et pour cause puisque j'en suis le créateur) ;
-2. Je suis à l'aise (et donc très efficace) avec le moteur de template [Twig](https://twig.symfony.com/).
+2. Je suis à l'aise (et donc efficace) avec le moteur de template [Twig](https://twig.symfony.com/).
 
 ## Comment ?
 
 Après le "pourquoi ?" intéressons nous maintenant à la partie la plus intéressante de ce billet, à savoir le "comment ?" 😊
 
-Le principe de génération du site, la structure des contenus et l'organisation des templates étant relativement proches entre Hugo et Cecil, j'ai décidé de procéder par modifications itératives plutôt que de repartir d'une page blanche, selon la boucle suivante :
+Le principe de génération du site, la structure des contenus et l'organisation des templates étant relativement proches entre Hugo et Cecil, j'ai décidé de procéder par itérations successives plutôt que de repartir d'une page blanche, selon la boucle suivante :
 
 1. j'effectue une modification ;
-2. Je lance un nouveau build ;
-3. Je réalise les ajustements nécessaires (selon les messages d'erreur retournés) ;
-4. je recommence jusqu'à ce que le build "passe".
+2. je lance un nouveau build ;
+3. j'effectue les ajustements nécessaires (selon les messages d'erreur retournés) ;
+4. je recommence jusqu'à ce que le build soit valide.
 
----
+### Gestion de contenu
+
+Concernant les contenus, nous pouvons les séparer en 2 catégories :
+
+1. Les pages, c'est à dire les articles rédigés en Markdown
+2. Les assets, c'est à dire les illustrations et autres vidéos au sein des articles
+
+#### Pages
+
+J'ai tout d'abord déplacer les fichiers _*.md_, en vrac, du dossier `content/` de Hugo vers le dossier `pages/` de Cecil
+
+
 
 ### Étapes
 
