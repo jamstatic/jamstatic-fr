@@ -45,49 +45,56 @@ Concernant les contenus, nous pouvons les séparer en 2 catégories :
 1. Les pages, c'est à dire les articles rédigés en Markdown
 2. Les assets, c'est à dire les illustrations et autres vidéos au sein des articles
 
-#### Pages
+Je me suis tout d'abord concentré sur la réorganisation des contenus :
 
-J'ai tout d'abord déplacer les fichiers _*.md_, en vrac, du dossier `content/` de Hugo vers le dossier `pages/` de Cecil
+1. Déplacement des fichiers _*.md_ du dossier `content/` de Hugo vers le dossier `pages/` de Cecil
+2. Renommage des fichiers dans la section _post_ de manière à les préfixer avec la date de l'article (`YYYY-MM-DD_Titre.md`) et ainsi faciliter leur tri
+3. Déplacement des images et autres médias dans le dossier dédié de Cecil : `asset/`
 
+### Mise en forme et templates
 
+- Rationalisation et factorisation des templates de manière à ne pas/plus dupliquer de code
+- Suppression des templates inutiles, c'est à dire disponibles en natif avec Cecil (ex : les flux RSS)
+- Modification de la configuration de Tailwind CSS afin de lui indiquer les nouveaux dossiers contenant des templates
 
-### Étapes
+### Dépendances et scripts
 
-1. Déplacement des fichiers Markdown de `content/` vers `pages/`
-2. Modification de la commande de build de Netlify
-3. Simplification de package.json (pour ne garder que le strict minium : tailwind et all contributors)
-4. Modification nde la config Tailwind afi nde lui indiquer les dossiers contenant des templates
-5. Suppression des templates inutiles car déjà natif à Cecil (ex : génération du flux RSS)
-6. Rationalisation et factorisation des templates de manière à ne pas dupliquer de code
-7. Optimisation des icônes et du logo SVG
-8. Config :
+- Simplification du fichier `package.json` afin de ne garder que le strict minium (Tailwind CSS et All Contributors)
+- Modification de la commande de build de Netlify (`netlify.toml`)
+
+---
+
+### Étapes (to do)
+
+1. Optimisation des icônes et du logo SVG
+2. Config :
    1. Désactivation de la pagination
-9. Création de la page d'accueil : liste des posts
-10. Création d'une page de redirection vers le Slack
-11. Templates :
-    1. Création du template 404
-    2. Création du template de liste par défaut
-    3. Création du template de page par défaut
-    4. Création du template de liste des posts
-    5. Création du template de post
-    6. Création du partial "head" d'un post utilisé pour la page post et les listes
-    7. Création d'une template des terms d'une taxonomie (caaégories)
-    8. Amélioration de la sémantique des éléments du DOM des templates (article, header, footer, etc.)
-    9. Ajout navigation par caté»gories dans les pages liste (à la palce du moteur de recherche)
-12. 1ère génération de la feuille de styles avec Tailwind CSS
-13. Mise à jour des posts, pleeeinnn !
-14. Récupération, autant que possible, des visuels d'illustration hébergé "ailleurs" (sur le serveur du site source lors d'une traduction) ou sur un CDN
-15. Ajout de `.editorconfig` https://editorconfig.org
-16. Suppression des Shortcodes Hugo pour une meilleure portabilité
-17. Ajout d’une canonical URL vers l’article d’origine
-18. Création d’une image «no image» en cas d’image d’image distante introuvable
-19. Ajout de headers
-20. Ajout d’une pagination
-21. RSS feed template
+3. Création de la page d'accueil : liste des posts
+4. Création d'une page de redirection vers le Slack
+5. Templates :
+   1. Création du template 404
+   2. Création du template de liste par défaut
+   3. Création du template de page par défaut
+   4. Création du template de liste des posts
+   5. Création du template de post
+   6. Création du partial "head" d'un post utilisé pour la page post et les listes
+   7. Création d'une template des terms d'une taxonomie (caaégories)
+   8. Amélioration de la sémantique des éléments du DOM des templates (article, header, footer, etc.)
+   9. Ajout navigation par caté»gories dans les pages liste (à la palce du moteur de recherche)
+6. 1ère génération de la feuille de styles avec Tailwind CSS
+7. Mise à jour des posts, pleeeinnn !
+8. Récupération, autant que possible, des visuels d'illustration hébergé "ailleurs" (sur le serveur du site source lors d'une traduction) ou sur un CDN
+9. Ajout de `.editorconfig` https://editorconfig.org
+10. Suppression des Shortcodes Hugo pour une meilleure portabilité
+11. Ajout d’une canonical URL vers l’article d’origine
+12. Création d’une image «no image» en cas d’image d’image distante introuvable
+13. Ajout de headers
+14. Ajout d’une pagination
+15. RSS feed template
 
+---
 
-
-## Image de partage
+### Image de partage
 
 L’image de partage sur les réseaux sociaux était créée de manière semi-automatique via l’[API HTTP de manipulation d’image de Cloudinary](https://cloudinary.com/documentation/transformation_reference#l_text), en paçant le lien (fabriqué à la main) dans le front matter de chaque post.
 
