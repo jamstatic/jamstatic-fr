@@ -119,6 +119,6 @@
         anchors.add('.markdown h2, .markdown h3, .markdown h4, .markdown h5');
       });
     {% endapply %}</script>
-{% include 'partials/regsw.js.twig' ~%}
+{% include 'partials/regsw.js.twig' with {'site': site} only ~%}
   </body>
 </html>
