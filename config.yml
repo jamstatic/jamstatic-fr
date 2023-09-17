@@ -10,6 +10,7 @@ image: images/twitter-card.png
 language: fr
 languages:
   - code: fr
+    name: Français
     locale: fr
 social:
   twitter:
