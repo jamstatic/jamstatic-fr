@@ -1,7 +1,7 @@
 {
     "require": {
-        "cecil/theme-netlify": "^1.3",
-        "cecil/theme-pwa": "^1.13"
+        "cecil/theme-netlify": "^1.4",
+        "cecil/theme-pwa": "^1.15"
     },
     "config": {
         "allow-plugins": {

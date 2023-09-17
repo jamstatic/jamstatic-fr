@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c2b54f388d62f91fe4ddb5973509ba21",
+    "content-hash": "163018bf9c7001de6567104a20ff0a5b",
     "packages": [
         {
             "name": "cecil/theme-installer",
@@ -132,16 +132,16 @@
         },
         {
             "name": "cecil/theme-pwa",
-            "version": "1.15.3",
+            "version": "1.15.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-pwa.git",
-                "reference": "907abf5271b7b90aa999b0000e9c47c2add9c10b"
+                "reference": "38531f4cb0fa696e66e3267f6996d9e2741c9b08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-pwa/zipball/907abf5271b7b90aa999b0000e9c47c2add9c10b",
-                "reference": "907abf5271b7b90aa999b0000e9c47c2add9c10b",
+                "url": "https://api.github.com/repos/Cecilapp/theme-pwa/zipball/38531f4cb0fa696e66e3267f6996d9e2741c9b08",
+                "reference": "38531f4cb0fa696e66e3267f6996d9e2741c9b08",
                 "shasum": ""
             },
             "require": {
@@ -166,13 +166,9 @@
                 "theme"
             ],
             "support": {
-                "source": "https://github.com/Cecilapp/theme-pwa/tree/1.15.3"
+                "source": "https://github.com/Cecilapp/theme-pwa/tree/1.15.4"
             },
             "funding": [
-                {
-                    "url": "https://www.paypal.me/narno",
-                    "type": "custom"
-                },
                 {
                     "url": "https://github.com/ArnaudLigny",
                     "type": "github"
@@ -182,7 +178,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2023-04-05T09:20:45+00:00"
+            "time": "2023-09-17T00:18:47+00:00"
         }
     ],
     "packages-dev": [],
