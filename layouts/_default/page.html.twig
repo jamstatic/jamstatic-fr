@@ -1,8 +1,8 @@
-{% set logo = asset('favicon.png')|resize(48) %}
+{%- set logo = asset('favicon.png')|resize(48) -%}
 {%- set css_highlight = {
   'light': asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-light.css')|url,
   'dark': asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-dark.css')|url,
-} ~%}
+} -%}
 <!DOCTYPE html>
 <html lang="{{ site.language }}" prefix="og:http://ogp.me/ns#" class="scroll-pt-[32px]">
   <head>
