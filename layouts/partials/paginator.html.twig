@@ -1,7 +1,7 @@
-{% if page.paginator.pages is defined %}
-{% set paginator = page.paginator %}
-{% set paginator_current = paginator.current %}
-{% set paginator_count = paginator.count %}
+{%- if page.paginator.pages is defined -%}
+{%- set paginator = page.paginator -%}
+{%- set paginator_current = paginator.current -%}
+{%- set paginator_count = paginator.count ~%}
         <nav class="flex flex-row items-center text-base md:text-lg font-semibold text-violet dark:text-blue-500">
           {%- if paginator.links.prev is defined ~%}
           <span>&larr;&nbsp;</span>
@@ -17,4 +17,4 @@
           <span class="flex-auto text-right"></span>
           {%- endif ~%}
         </nav>
-{% endif %}
+{%- endif ~%}
