@@ -34,19 +34,19 @@ Après le "pourquoi ?" intéressons nous maintenant à la partie la plus intére
 
 Le principe de génération du site, la structure des contenus et l'organisation des templates étant relativement proches entre Hugo et Cecil, j'ai décidé de procéder par itérations successives plutôt que de repartir d'une page blanche, selon la boucle suivante :
 
-1. j'effectue une modification ;
-2. je lance un nouveau build ;
-3. j'effectue les ajustements nécessaires (selon les messages d'erreur retournés) ;
-4. je recommence jusqu'à ce que le build soit valide.
+1. J'effectue une modification ;
+2. Je lance un nouveau build ;
+3. J'effectue les ajustements nécessaires (selon les messages d'erreur retournés) ;
+4. Je recommence jusqu'à ce que le build soit valide.
 
 ### Gestion de contenu
 
-Concernant les contenus, nous pouvons les séparer en 2 catégories :
+Nous pouvons séparer les contenus en 2 catégories :
 
 1. Les *pages*, c'est à dire les articles rédigés en Markdown
 2. Les *assets*, c'est à dire les illustrations et autres vidéos au sein des articles
 
-Je me suis tout d'abord concentré sur la réorganisation des contenus :
+Aussi, je me suis tout d'abord concentré sur la réorganisation des contenus :
 
 1. Déplacement des fichiers _*.md_ du dossier `content/` de Hugo vers le dossier `pages/` de Cecil
 2. Renommage des fichiers dans la section _post_ de manière à les préfixer avec la date de l'article (`YYYY-MM-DD_Titre.md`) et ainsi faciliter leur tri
@@ -127,4 +127,3 @@ En pratique :
 Exemple :
 
 ![Exemple d’une Twitter Card](../../assets/images/twitter-card-example.png "Exemple d’une Twitter Card")
-
