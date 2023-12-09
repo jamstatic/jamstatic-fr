@@ -38,24 +38,25 @@ pagination:
 paths:
   - section: post
     path: :year/:month/:day/:slug
-body:
-  highlight:
-    enabled: true
-  images:
-    class: "markdown dark:brightness-90"
-    responsive:
+pages:
+  body:
+    highlight:
       enabled: true
-    webp:
-      enabled: true
-    caption:
-      enabled: true
-    remote:
-      fallback:
+    images:
+      class: "markdown dark:brightness-90"
+      responsive:
         enabled: true
-        path: images/no-image.png
-  links:
-    embed:
-      enabled: true
+      webp:
+        enabled: true
+      caption:
+        enabled: true
+      remote:
+        fallback:
+          enabled: true
+          path: images/no-image.png
+    links:
+      embed:
+        enabled: true
 assets:
   images:
     optimize:
@@ -73,7 +74,7 @@ output:
       exclude: [redirect, paginated]
   pagetypeformats:
     homepage: [html, atom, jsonfeed]
-postprocess:
+optimize:
   images:
     ext: [jpeg, jpg, png, webp, svg] # , gif
 manifest:
