@@ -1,11 +1,11 @@
 {
-    "require": {
-        "cecil/theme-netlify": "^2.0",
-        "cecil/theme-pwa": "^2.0"
-    },
-    "config": {
-        "allow-plugins": {
-            "cecil/theme-installer": true
-        }
+  "require": {
+    "cecil/theme-netlify": "^2.0",
+    "cecil/theme-pwa": "^2.1"
+  },
+  "config": {
+    "allow-plugins": {
+      "cecil/theme-installer": true
     }
+  }
 }

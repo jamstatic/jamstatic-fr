@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.3.6 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.0 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -32,9 +32,11 @@
 4. Use the user's configured `sans` font-family by default.
 5. Use the user's configured `sans` font-feature-settings by default.
 6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
 */
 
-html {
+html,
+:host {
   line-height: 1.5;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -44,12 +46,14 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
   font-variation-settings: normal;
   /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
 }
 
 /*
@@ -1625,50 +1629,6 @@ pre code.hljs {
   padding: 0 !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  .dark\:markdown-dark {
-    color: #D4D4D8;
-  }
-
-  .dark\:markdown-dark :where(h1):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
-    color: #7DACFF;
-  }
-
-  .dark\:markdown-dark :where(h2):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
-    color: #7DACFF;
-  }
-
-  .dark\:markdown-dark :where(h3):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
-    color: #7DACFF;
-  }
-
-  .dark\:markdown-dark :where(h4):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
-    color: #7DACFF;
-  }
-
-  .dark\:markdown-dark :where(strong):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
-    color: #D4D4D8;
-  }
-
-  .dark\:markdown-dark :where(a):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
-    color: #7DACFF;
-  }
-
-  .dark\:markdown-dark :where(a):not(:where([class~="not-markdown"],[class~="not-markdown"] *)):hover {
-    color: #B3CFFF;
-  }
-
-  .dark\:markdown-dark :where(blockquote):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
-    color: #7DACFF;
-    background: #27272A;
-    border-color: #3F3F46;
-  }
-
-  .dark\:markdown-dark :where(code):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
-    color: #D4D4D8;
-  }
-}
-
 @media (min-width: 640px) {
   .sm\:markdown-lg {
     font-size: 1.125rem;
@@ -2167,6 +2127,50 @@ pre code.hljs {
   }
 }
 
+@media (prefers-color-scheme: dark) {
+  .dark\:markdown-dark {
+    color: #D4D4D8;
+  }
+
+  .dark\:markdown-dark :where(h1):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
+    color: #7DACFF;
+  }
+
+  .dark\:markdown-dark :where(h2):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
+    color: #7DACFF;
+  }
+
+  .dark\:markdown-dark :where(h3):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
+    color: #7DACFF;
+  }
+
+  .dark\:markdown-dark :where(h4):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
+    color: #7DACFF;
+  }
+
+  .dark\:markdown-dark :where(strong):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
+    color: #D4D4D8;
+  }
+
+  .dark\:markdown-dark :where(a):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
+    color: #7DACFF;
+  }
+
+  .dark\:markdown-dark :where(a):not(:where([class~="not-markdown"],[class~="not-markdown"] *)):hover {
+    color: #B3CFFF;
+  }
+
+  .dark\:markdown-dark :where(blockquote):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
+    color: #7DACFF;
+    background: #27272A;
+    border-color: #3F3F46;
+  }
+
+  .dark\:markdown-dark :where(code):not(:where([class~="not-markdown"],[class~="not-markdown"] *)) {
+    color: #D4D4D8;
+  }
+}
+
 .hover\:scale-105:hover {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -2189,48 +2193,6 @@ pre code.hljs {
 
 .hover\:opacity-100:hover {
   opacity: 1;
-}
-
-@media (prefers-color-scheme: dark) {
-  .dark\:border-gray-800 {
-    --tw-border-opacity: 1;
-    border-color: rgb(39 39 42 / var(--tw-border-opacity));
-  }
-
-  .dark\:bg-gray-800 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(39 39 42 / var(--tw-bg-opacity));
-  }
-
-  .dark\:bg-gray-900 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(24 24 27 / var(--tw-bg-opacity));
-  }
-
-  .dark\:text-black-grape-200 {
-    --tw-text-opacity: 1;
-    color: rgb(177 163 204 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-blue-500 {
-    --tw-text-opacity: 1;
-    color: rgb(125 172 255 / var(--tw-text-opacity));
-  }
-
-  .dark\:text-gray-300 {
-    --tw-text-opacity: 1;
-    color: rgb(212 212 216 / var(--tw-text-opacity));
-  }
-
-  .dark\:brightness-90 {
-    --tw-brightness: brightness(.9);
-    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-  }
-
-  .dark\:hover\:text-blue-300:hover {
-    --tw-text-opacity: 1;
-    color: rgb(179 207 255 / var(--tw-text-opacity));
-  }
 }
 
 @media (min-width: 768px) {
@@ -2294,5 +2256,47 @@ pre code.hljs {
 
   .xl\:leading-snug {
     line-height: 1.375;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark\:border-gray-800 {
+    --tw-border-opacity: 1;
+    border-color: rgb(39 39 42 / var(--tw-border-opacity));
+  }
+
+  .dark\:bg-gray-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+  }
+
+  .dark\:bg-gray-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(24 24 27 / var(--tw-bg-opacity));
+  }
+
+  .dark\:text-black-grape-200 {
+    --tw-text-opacity: 1;
+    color: rgb(177 163 204 / var(--tw-text-opacity));
+  }
+
+  .dark\:text-blue-500 {
+    --tw-text-opacity: 1;
+    color: rgb(125 172 255 / var(--tw-text-opacity));
+  }
+
+  .dark\:text-gray-300 {
+    --tw-text-opacity: 1;
+    color: rgb(212 212 216 / var(--tw-text-opacity));
+  }
+
+  .dark\:brightness-90 {
+    --tw-brightness: brightness(.9);
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  }
+
+  .dark\:hover\:text-blue-300:hover {
+    --tw-text-opacity: 1;
+    color: rgb(179 207 255 / var(--tw-text-opacity));
   }
 }
