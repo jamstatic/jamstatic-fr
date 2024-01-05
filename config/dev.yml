@@ -1,9 +1,10 @@
-body:
-  images:
-    responsive:
-      enabled: false
-    webp:
-      enabled: false
+pages:
+  body:
+    images:
+      responsive:
+        enabled: false
+      webp:
+        enabled: false
 
 serviceworker:
   enabled: false
