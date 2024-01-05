@@ -11,6 +11,7 @@
 
 [context.deploy-preview.environment]
   CECIL_ENV = "preview"
+  CECIL_CMD_OPTIONS = "--drafts"
 
 [[redirects]]
   from = "/*"
