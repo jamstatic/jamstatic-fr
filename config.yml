@@ -43,7 +43,7 @@ pages:
     highlight:
       enabled: true
     images:
-      class: "markdown dark:brightness-90"
+      class: "dark:brightness-90"
       responsive:
         enabled: true
       webp:
