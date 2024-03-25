@@ -1,5 +1,4 @@
 ---
-published: false
 title: "Pourquoi et comment j'ai migré Jamstatic.fr de Hugo vers Cecil"
 description: "Retour d'expérience sur la migration du site vers Cecil."
 date: 2023-08-28
@@ -9,7 +8,9 @@ categories:
   - Cecil
 ---
 
-À la fin de l'année dernière j'avais entrepris de pérenniser le travail de refonte du site, engagé avec Frank : nouveau logo et nouvelle charte graphique, impliquant la modification des templates et de la feuille de styles.
+> Cet article a été rédigé au mois d’août de l’année dernière et… je n’avais pas pris le temps de le terminé ni de le publier. Néanmoins, je crois qu’il reste pertinent en l’état, alors je le publie tel quel.
+
+À la fin de l'année dernière j'avais entrepris de pérenniser le travail de refonte du site, engagé avec [Frank](https://frank.taillandier.me) : nouveau logo et nouvelle charte graphique, impliquant la modification des templates et de la feuille de styles.
 
 C’est la version sur laquelle vous lisez cette article 😊
 
@@ -63,41 +64,7 @@ Le changement de moteur de templates aura certainement été le plus gros du tra
 
 Cecil supportant nativement (entre autre) la minification des scripts et des feuilles de styles, il n’est plus nécessaire d’installer certaines dépendances requises par Hugo. J’ai pu de fait, réduire le fichier `package.json` au strict minimum : à savoir le support de Tailwind CSS et de All Contributors.
 
-De plus, il existe des [*Themes Components*](https://cecil.app/themes/components/) pour Cecil, c’est à dire des thèmes utilitaires, dont :
-
-1. [PWA](https://github.com/Cecilapp/theme-pwa#readme) : permettant de transformer n’importe quel site web généré ave Cecil en Progessive We bApp
-
----
-
-### Étapes (to do)
-
-1. Optimisation des icônes et du logo SVG
-2. Config :
-   1. Désactivation de la pagination
-3. Création de la page d'accueil : liste des posts
-4. Création d'une page de redirection vers le Slack
-5. Templates :
-   1. Création du template 404
-   2. Création du template de liste par défaut
-   3. Création du template de page par défaut
-   4. Création du template de liste des posts
-   5. Création du template de post
-   6. Création du partial "head" d'un post utilisé pour la page post et les listes
-   7. Création d'une template des terms d'une taxonomie (caaégories)
-   8. Amélioration de la sémantique des éléments du DOM des templates (article, header, footer, etc.)
-   9. Ajout navigation par caté»gories dans les pages liste (à la palce du moteur de recherche)
-6. 1ère génération de la feuille de styles avec Tailwind CSS
-7. Mise à jour des posts, pleeeinnn !
-8. Récupération, autant que possible, des visuels d'illustration hébergé "ailleurs" (sur le serveur du site source lors d'une traduction) ou sur un CDN
-9. Ajout de `.editorconfig` https://editorconfig.org
-10. Suppression des Shortcodes Hugo pour une meilleure portabilité
-11. Ajout d’une canonical URL vers l’article d’origine
-12. Création d’une image «no image» en cas d’image d’image distante introuvable
-13. Ajout de headers
-14. Ajout d’une pagination
-15. RSS feed template
-
----
+De plus, il existe des [*Themes Components*](https://cecil.app/themes/components/) pour Cecil, c’est à dire des thèmes utilitaires, dont [PWA](https://github.com/Cecilapp/theme-pwa#readme) permettant de transformer n’importe quel site web généré avec Cecil en Progessive Web App.
 
 ### Image de partage
 
@@ -127,3 +94,33 @@ En pratique :
 Exemple :
 
 ![Exemple d’une Twitter Card](../../assets/images/twitter-card-example.png "Exemple d’une Twitter Card")
+
+---
+
+Enfin je partage ci-dessous, pour historique, ma liste de tâches :
+
+1. Optimisation des icônes et du logo SVG
+2. Configuration :
+   1. Désactivation de la pagination
+3. Création de la page d'accueil : liste des billets
+4. Création d'une page de redirection vers Slack
+5. Templates :
+   1. Création du template 404
+   2. Création du template de liste par défaut
+   3. Création du template de page par défaut
+   4. Création du template de liste des posts
+   5. Création du template de post
+   6. Création du partial "head" d'un post utilisé pour la page post et les listes
+   7. Création d'une template des terms d'une taxonomie (catégories)
+   8. Amélioration de la sémantique des éléments du DOM des templates (article, header, footer, etc.)
+   9. Ajout navigation par catégories dans les pages liste (à la place du moteur de recherche)
+6. 1ère génération de la feuille de styles avec Tailwind CSS
+7. Mise à jour des posts, pleeeinnn !
+8. Récupération, autant que possible, des visuels d'illustration hébergé "ailleurs" (sur le serveur du site source lors d'une traduction) ou sur un CDN
+9. Ajout de `.editorconfig` https://editorconfig.org
+10. Suppression des Shortcodes Hugo pour une meilleure portabilité
+11. Ajout d’une canonical URL vers l’article d’origine
+12. Création d’une image « no image » en cas d’image d’image distante introuvable
+13. Ajout de headers
+14. Ajout d’une pagination
+15. RSS feed template
