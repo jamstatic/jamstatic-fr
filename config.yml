@@ -43,20 +43,25 @@ pages:
     highlight:
       enabled: true
     images:
-      class: "dark:brightness-90"
-      responsive:
+      resize:
         enabled: true
       webp:
         enabled: true
+      responsive:
+        enabled: true
+      class: "dark:brightness-90"
       caption:
         enabled: true
       remote:
         fallback:
           enabled: true
           path: images/no-image.png
+      placeholder: lqip
     links:
       embed:
         enabled: true
+      external:
+        blank: true
 assets:
   images:
     optimize:
