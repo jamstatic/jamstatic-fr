@@ -94,6 +94,12 @@ manifest:
       purpose: maskable
 serviceworker:
   enabled: true
+  update:
+    snackbar:
+      enabled: true
+  offline:
+    snackbar:
+      enabled: true
 anchor:
   version: 4.3.1
 googlefonts: https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Roboto&display=swap
