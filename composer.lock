@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "769a74074e401083c069b3e13d525680",
+    "content-hash": "83d9f32425545c9aa3df5b9702c3f713",
     "packages": [
         {
             "name": "cecil/theme-installer",
