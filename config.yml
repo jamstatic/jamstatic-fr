@@ -43,9 +43,8 @@ pages:
     highlight:
       enabled: true
     images:
+      formats: [webp]
       resize:
-        enabled: true
-      webp:
         enabled: true
       responsive:
         enabled: true
@@ -64,6 +63,7 @@ pages:
         blank: true
 assets:
   images:
+    formats: [webp]
     optimize:
       enabled: true
     responsive:
