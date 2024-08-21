@@ -3,8 +3,7 @@ pages:
     images:
       responsive:
         enabled: false
-      webp:
-        enabled: false
+      formats: [webp]
 
 serviceworker:
   enabled: false
