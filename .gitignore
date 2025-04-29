@@ -3,12 +3,10 @@ _site/
 .cecil/
 .cache/
 vendor/
-themes/netlify/
-themes/pwa/
+themes/
 
 # Node
 node_modules
-yarn.lock
 
 # macOS
 .DS_Store
