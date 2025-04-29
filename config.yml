@@ -12,6 +12,8 @@ languages:
   - code: fr
     name: Français
     locale: fr
+taxonomies:
+  categories: category
 social:
   twitter:
     username: jamstatic_fr
@@ -32,40 +34,32 @@ branch: master
 theme:
   - netlify
   - pwa
-pagination:
-  enabled: true
-  max: 10
-paths:
-  - section: post
-    path: :year/:month/:day/:slug
+
 pages:
+  pagination:
+    max: 10
+  paths:
+    - section: post
+      path: :year/:month/:day/:slug
   body:
-    highlight:
-      enabled: true
+    highlight: true
     images:
-      formats: [webp]
-      resize:
-        enabled: true
-      responsive:
-        enabled: true
+      formats: [webp, avif]
+      resize: true
+      responsive: true
       class: "dark:brightness-90"
-      caption:
-        enabled: true
+      caption: true
       remote:
-        fallback:
-          enabled: true
-          path: images/no-image.png
+        fallback: images/no-image.png
       placeholder: lqip
     links:
-      embed:
-        enabled: true
+      embed: true
       external:
         blank: true
 assets:
   images:
-    formats: [webp]
-    optimize:
-      enabled: true
+    formats: [webp, avif]
+    optimize: true
     responsive:
       widths: [768, 1024]
       sizes:
@@ -81,7 +75,8 @@ output:
     homepage: [html, atom, jsonfeed]
 optimize:
   images:
-    ext: [jpeg, jpg, png, webp, svg] # , gif
+    ext: [jpeg, jpg, png, webp, svg] #, gif
+
 manifest:
   background_color: '#300A66'
   theme_color: '#300A66'
@@ -100,16 +95,18 @@ serviceworker:
   offline:
     snackbar:
       enabled: true
+
 anchor:
-  version: 4.3.1
+  version: 5.0.0
 googlefonts: https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Roboto&display=swap
+
 netlify:
   redirects:
     - from: https://jamstatic.netlify.app/*
       to: https://jamstatic.fr/:splat
     - from: https://master--jamstatic.netlify.app/*
       to: https://jamstatic.fr/:splat
+
 metatags:
   articles: post
-  jsonld:
-    enabled: true
+  jsonld: true
