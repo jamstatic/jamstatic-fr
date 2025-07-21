@@ -87,6 +87,7 @@ manifest:
       purpose: maskable
     - src: icon-512x512-maskable.png
       purpose: maskable
+  shortcuts: true
 serviceworker:
   enabled: true
   update:
