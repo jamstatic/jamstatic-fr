@@ -5,7 +5,7 @@ date: 2016-04-01
 author: frank
 menu:
   main:
-    weight: 99
+    weight: 999
 ---
 Ce site s'adresse à toutes celles et tous ceux qui s'intéressent de près ou de loin aux générateurs de sites statiques et à l'ensemble de son écosystème : API, CMS headless, services de déploiement, etc.
 
