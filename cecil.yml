@@ -80,13 +80,6 @@ optimize:
 manifest:
   background_color: '#300A66'
   theme_color: '#300A66'
-  icons:
-    - icon-192x192.png
-    - icon-512x512.png
-    - src: icon-192x192-maskable.png
-      purpose: maskable
-    - src: icon-512x512-maskable.png
-      purpose: maskable
   shortcuts: true
 serviceworker:
   enabled: true
