@@ -30,9 +30,8 @@
     </noscript>
     <link rel="preload" as="style" href="{{ css_highlight.light }}" />
     <link rel="preload" as="style" href="{{ css_highlight.dark }}" />
-    {#- Web manifest ~#}
-    <link rel="manifest" href="{{ url('manifest', {language: site.language}) }}" />
-    <meta name="theme-color" content="#4A21CC" />
+    {#- PWA ~#}
+    {{- include('partials/pwa.html.twig', {site}, with_context = false) ~}}
     {%- endblock head ~%}
   </head>
   <body class="{{ page.type }} dark:bg-gray-900">
@@ -117,6 +116,5 @@
         anchors.add('.markdown h2, .markdown h3, .markdown h4, .markdown h5');
       });
     {% endapply %}</script>
-{% include 'partials/regsw.js.twig' with {'site': site} only ~%}
   </body>
 </html>
