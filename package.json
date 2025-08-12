@@ -25,8 +25,9 @@
     "tailwindcss": "^3.4"
   },
   "scripts": {
+    "css:build": "npx tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/styles.css",
     "build": "curl -sSOL https://cecil.app/build.sh && bash ./build.sh",
-    "serve": "cecil serve --config=config/dev.yml",
+    "serve": "cecil serve -vv --config=config/dev.yml",
     "contributors:add": "all-contributors add",
     "contributors:check": "all-contributors check",
     "contributors:generate": "all-contributors generate"
