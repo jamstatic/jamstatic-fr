@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ site.language }}" prefix="og:http://ogp.me/ns#" class="scroll-pt-[32px]">
   <head>
-    {#- highlight code CSS ~#}
+    {#- highlight code CSS -#}
     {%- set css_highlight = {
       'light': asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-light.css'),
       'dark': asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-dark.css'),
-    } ~%}
+    } -%}
     {%- block head ~%}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,11 +45,11 @@
         <div class="flex items-center">
           <nav class="py-2">
             <ul class="flex justify-end space-x-4">
-              <li class="w-4">{{ include('partials/icons/rss.html.twig')|spaceless }}</li>
-              <li class="w-4">{{ include('partials/icons/podcast.html.twig')|spaceless }}</li>
-              <li class="w-4">{{ include('partials/icons/slack.html.twig')|spaceless }}</li>
-              {#<li class="w-4">{{ include('partials/icons/twitter.html.twig')|spaceless }}</li>#}
-              <li class="w-4">{{ include('partials/icons/github.html.twig')|spaceless }}</li>
+              <li class="w-4">{{- include('partials/icons/rss.html.twig') -}}</li>
+              <li class="w-4">{{- include('partials/icons/podcast.html.twig') -}}</li>
+              <li class="w-4">{{- include('partials/icons/slack.html.twig') -}}</li>
+              {#<li class="w-4">{{- include('partials/icons/twitter.html.twig') -}}</li>#}
+              <li class="w-4">{{- include('partials/icons/github.html.twig') -}}</li>
             </ul>
           </nav>
         </div>
@@ -59,7 +59,7 @@
     {%- if page.type == 'homepage' ~%}
     <header class="text-white bg-violet">
       <div class="py-8 mx-auto w-72 md:w-1/2 lg:w-2/5">
-        <h1>{{ include('partials/svg/jamstatic-logo-violet.svg')|spaceless }}</h1>
+        <h1>{{- include('partials/svg/jamstatic-logo-violet.svg') -}}</h1>
         <div class="pr-4 text-xs text-right text-white lg:-mt-2 font-display md:text-base lg:text-lg">
           {{ site.baseline }}
         </div>
@@ -80,11 +80,11 @@
     </div>
     <footer class="py-8 text-lg text-center text-white border-b-8 bg-violet border-violet-light">
       <ul class="flex justify-center mb-8 space-x-6">
-        <li class="w-6">{{ include('partials/icons/rss.html.twig')|spaceless }}</li>
-        <li class="w-6">{{ include('partials/icons/podcast.html.twig')|spaceless }}</li>
-        <li class="w-6">{{ include('partials/icons/slack.html.twig')|spaceless }}</li>
-        {#<li class="w-6">{{ include('partials/icons/twitter.html.twig')|spaceless }}</li>#}
-        <li class="w-6">{{ include('partials/icons/github.html.twig')|spaceless }}</li>
+        <li class="w-6">{{- include('partials/icons/rss.html.twig') -}}</li>
+        <li class="w-6">{{- include('partials/icons/podcast.html.twig') -}}</li>
+        <li class="w-6">{{- include('partials/icons/slack.html.twig') -}}</li>
+        {#<li class="w-6">{{- include('partials/icons/twitter.html.twig') -}}</li>#}
+        <li class="w-6">{{- include('partials/icons/github.html.twig') -}}</li>
       </ul>
       <p class="mb-2 text-base">
         <a class="font-semibold hover:underline" href="{{ url('a-propos') }}">À propos</a>

@@ -43,11 +43,11 @@
                   </time>
                 </span>
                 <span class="inline">&middot;</span>
-                <span class="flex items-center space-x-1">{{ include('partials/svg/reading-time.svg')|spaceless }}</span><span>Lecture {{ readtime(p.content) }} min</span>
+                <span class="flex items-center space-x-1">{{- include('partials/svg/reading-time.svg') -}}</span><span>Lecture {{ readtime(p.content) }} min</span>
                 {#- categories ~#}
                 {%- if p.categories|default ~%}
                 <span class="inline">&middot;</span>
-                <span class="flex items-center space-x-1">{{ include('partials/svg/icon-tag.svg')|spaceless }}
+                <span class="flex items-center space-x-1">{{- include('partials/svg/icon-tag.svg') -}}
                   <span class="inline">
                   {%- for category in p.categories ~%}
                     <a class="capitalize no-underline hover:underline hover:text-violet-light dark:hover:text-blue-300" href="{{ url('categories/' ~ category) }}">{{ category|title }}</a>{% if not loop.last %}, {% endif %}
