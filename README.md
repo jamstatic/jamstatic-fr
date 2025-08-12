@@ -58,11 +58,11 @@ gh pr create
 
 ## Développement
 
-### Regénérer la feuille de styles avec [Tailwind CSS](https://tailwindcss.com)
+### Générer la feuille de styles avec [Tailwind CSS v3](https://v3.tailwindcss.com)
 
 ```bash
 npm install
-npx tailwindcss -i ./tailwind.css -o ./assets/css/styles.css
+npx run css:build
 ```
 
 ## Production
