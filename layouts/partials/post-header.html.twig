@@ -19,7 +19,7 @@
                   <span class="ml-2 text-sm text-black-grape-400 dark:text-blue-500">(traducteur·trice)</span>
                   {%- endif ~%}
                 {%- endif ~%}
-                {%- if p.fmvariables.published ?? true == false or p.fmvariables.draft ?? false == true ~%}
+                {%- if (p.fmvariables.published ?? true) == false or (p.fmvariables.draft ?? false) == true ~%}
                   <span class="ml-2 text-sm text-black-grape-400 dark:text-blue-500 font-semibold">(non publié)</span>
                 {%- endif ~%}
                 </div>
