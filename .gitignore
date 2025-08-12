@@ -1,5 +1,6 @@
 # Cecil
 _site/
+_preview/
 .cecil/
 .cache/
 vendor/
