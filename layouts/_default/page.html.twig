@@ -8,8 +8,8 @@
   <head>
     {%- block head ~%}
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     {#- SEO ~#}
     {{- include('partials/metatags.html.twig', {image: image|default}) ~}}
     {#- main CSS ~#}
@@ -18,18 +18,18 @@
       {{- asset('css/styles.css')|inline ~}}
     </style>
     {%- else ~%}
-    <link rel="stylesheet" href="{{ asset('css/styles.css', {minify: false, fingerprint: false}) }}" />
+    <link rel="stylesheet" href="{{ asset('css/styles.css', {minify: false, fingerprint: false}) }}">
     {%- endif ~%}
     {#- Google fonts ~#}
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" href="{{ site.googlefonts }}" />
-    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="{{ site.googlefonts }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="{{ site.googlefonts }}">
+    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="{{ site.googlefonts }}">
     <noscript>
-      <link rel="stylesheet" href="{{ site.googlefonts }}" />
+      <link rel="stylesheet" href="{{ site.googlefonts }}">
     </noscript>
-    <link rel="preload" as="style" href="{{ css_highlight.light }}" />
-    <link rel="preload" as="style" href="{{ css_highlight.dark }}" />
+    <link rel="preload" as="style" href="{{ css_highlight.light }}">
+    <link rel="preload" as="style" href="{{ css_highlight.dark }}">
     {#- PWA ~#}
     {{- include('partials/pwa.html.twig', {site}, with_context = false) ~}}
     {%- endblock head ~%}
