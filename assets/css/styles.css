@@ -1317,6 +1317,10 @@ video {
   padding: 1rem;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1337,16 +1341,8 @@ video {
   padding-bottom: 2rem;
 }
 
-.pb-12 {
-  padding-bottom: 3rem;
-}
-
 .pr-4 {
   padding-right: 1rem;
-}
-
-.pt-8 {
-  padding-top: 2rem;
 }
 
 .text-left {
