@@ -27,6 +27,7 @@ podcast:
   rss: https://anchor.fm/s/39f4fa04/podcast/rss
 opencollective: https://opencollective.com/jamstatic
 meetup: https://www.meetup.com/fr-FR/Jamstack-Toulouse/
+
 cloudinary: https://res.cloudinary.com/jamstatic/image/upload
 ghrepo: https://github.com/jamstatic/jamstatic-fr
 branch: master
@@ -64,6 +65,9 @@ assets:
       widths: [768, 1024]
       sizes:
         markdown: "(max-width: 800px) 768px, 1024px"
+metatags:
+  articles: post
+  jsonld: true
 output:
   formats:
     - name: atom
@@ -84,11 +88,9 @@ manifest:
 serviceworker:
   enabled: true
   update:
-    snackbar:
-      enabled: true
+    snackbar: true
   offline:
-    snackbar:
-      enabled: true
+    snackbar: true
 
 anchor:
   version: 5.0.0
@@ -100,7 +102,3 @@ netlify:
       to: https://jamstatic.fr/:splat
     - from: https://master--jamstatic.netlify.app/*
       to: https://jamstatic.fr/:splat
-
-metatags:
-  articles: post
-  jsonld: true
