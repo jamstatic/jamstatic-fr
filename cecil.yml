@@ -79,7 +79,7 @@ optimize:
 
 manifest:
   background_color: '#300A66'
-  theme_color: '#300A66'
+  theme_color: '#4A21CC'
   shortcuts: true
 serviceworker:
   enabled: true
