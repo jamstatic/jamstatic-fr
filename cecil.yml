@@ -15,9 +15,9 @@ languages:
 taxonomies:
   categories: category
 social:
-  twitter:
-    username: jamstatic_fr
-    url: https://twitter.com/jamstatic_fr/
+  #twitter:
+  #  username: jamstatic_fr
+  #  url: https://twitter.com/jamstatic_fr/
   github:
     username: jamstatic
     url: https://github.com/jamstatic/
@@ -31,7 +31,7 @@ meetup: https://www.meetup.com/fr-FR/Jamstack-Toulouse/
 cloudinary: https://res.cloudinary.com/jamstatic/image/upload
 ghrepo: https://github.com/jamstatic/jamstatic-fr
 branch: master
-#
+
 theme:
   - netlify
   - pwa
