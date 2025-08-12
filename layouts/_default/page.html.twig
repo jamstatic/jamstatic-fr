@@ -1,11 +1,11 @@
-{%- set logo = asset('favicon.png')|resize(48) -%}
-{%- set css_highlight = {
-  'light': asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-light.css')|url,
-  'dark': asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-dark.css')|url,
-} -%}
 <!DOCTYPE html>
 <html lang="{{ site.language }}" prefix="og:http://ogp.me/ns#" class="scroll-pt-[32px]">
   <head>
+    {#- highlight code CSS ~#}
+    {%- set css_highlight = {
+      'light': asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-light.css'),
+      'dark': asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-dark.css'),
+    } ~%}
     {%- block head ~%}
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +18,7 @@
       {{- asset('css/styles.css')|inline ~}}
     </style>
     {%- else ~%}
-    <link rel="stylesheet" href="{{ asset('css/styles.css', {minify: false, fingerprint: false}) }}">
+    <link rel="stylesheet" href="{{ url(asset('css/styles.css', {minify: false, fingerprint: false})) }}">
     {%- endif ~%}
     {#- Google fonts ~#}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,34 +28,22 @@
     <noscript>
       <link rel="stylesheet" href="{{ site.googlefonts }}">
     </noscript>
-    <link rel="preload" as="style" href="{{ css_highlight.light }}">
-    <link rel="preload" as="style" href="{{ css_highlight.dark }}">
+    <link rel="preload" as="style" href="{{ url(css_highlight.light) }}">
+    <link rel="preload" as="style" href="{{ url(css_highlight.dark) }}">
     {#- PWA ~#}
     {{- include('partials/pwa.html.twig', {site}, with_context = false) ~}}
     {%- endblock head ~%}
   </head>
   <body class="{{ page.type }} dark:bg-gray-900">
     <div class="sticky top-0 z-10 text-white bg-violet-light">
-      <div class="flex items-center justify-between pl-2">
+      <div class="flex items-center justify-between px-4 py-2">
         <a href="{{ url() }}" title="Accueil" class="flex space-x-1.5">
+          {%- set logo = asset('favicon.png')|resize(48) ~%}
           <img src="{{ url(logo) }}" alt="Logo {{ site.title }}" width="{{ logo.width }}" height="{{ logo.height }}" class="w-[24px]" />
           <div id="site-title" class="hidden">{{ site.title }}</div>
-          <script>{% apply minify_js -%}
-            titleDiv = document.getElementById('site-title');
-            window.addEventListener('scroll', () => {
-              if (window.scrollY >= 140) {
-                titleDiv.className = 'font-display font-medium transition-opacity duration-1000 ease-out opacity-100';
-              } else {
-                titleDiv.className = 'font-display font-medium transition-opacity duration-1000 ease-out opacity-0';
-              }
-              if (window.scrollY == 0) {
-                titleDiv.className = 'hidden';
-              }
-            });
-          {%- endapply %}</script>
         </a>
         <div class="flex items-center">
-          <nav class="py-2 px-4">
+          <nav class="py-2">
             <ul class="flex justify-end space-x-4">
               <li class="w-4">{{ include('partials/icons/rss.html.twig')|spaceless }}</li>
               <li class="w-4">{{ include('partials/icons/podcast.html.twig')|spaceless }}</li>
@@ -109,7 +97,22 @@
         Contenus sous Licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">CC BY-NC-SA 4.0</a>
       </p>
     </footer>
-    {#- anchorjs ~#}
+    {#- JS ~#}
+    {#- display title on scroll ~#}
+    <script>{% apply minify_js -%}
+      titleDiv = document.getElementById('site-title');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY >= 140) {
+          titleDiv.className = 'font-display font-medium transition-opacity duration-1000 ease-out opacity-100';
+        } else {
+          titleDiv.className = 'font-display font-medium transition-opacity duration-1000 ease-out opacity-0';
+        }
+        if (window.scrollY == 0) {
+          titleDiv.className = 'hidden';
+        }
+      });
+    {%- endapply %}</script>
+    {#- AnchorJS ~#}
     <script defer src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/anchor-js/' ~ site.anchor.version ~ '/anchor.min.js', {minify: false}) }}"></script>
     <script>{% apply minify_js %}
       document.addEventListener('DOMContentLoaded', function(event) {
