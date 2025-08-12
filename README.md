@@ -5,9 +5,9 @@ Vous voulez échanger avec la communauté francophone et vous tenir informé de 
 
 Vous pouvez :
 
-* [Nous suivre sur Twitter](https://twitter.com/jamstatic_fr)
 * [Rejoindre le Slack](https://jamstatic.fr/slack/)
 * [Soumettre un article à la publication](https://github.com/jamstatic/jamstatic-fr/projects/1)
+* ~~[Nous suivre sur Twitter](https://twitter.com/jamstatic_fr)~~
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5f02cf72-0ba6-4fd3-a606-29262d8d8606/deploy-status)](https://app.netlify.com/sites/jamstatic/deploys)
 
