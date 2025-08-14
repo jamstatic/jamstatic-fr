@@ -5,8 +5,8 @@ date: 2023-08-28
 updated: 2024-03-25
 author: arnaud
 social:
-  twitter: "ArnaudLigny"
-  mastodon: "@arnaud@gazuji.com"
+  twitter: ArnaudLigny
+  mastodon: arnaud@gazuji.com
 categories:
   - Hugo
   - Cecil
