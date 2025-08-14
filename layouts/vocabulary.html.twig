@@ -1,0 +1,19 @@
+{% extends 'page.html.twig' %}
+
+      {%- block content ~%}
+      <article class="mx-auto markdown sm:markdown-lg lg:markdown-xl dark:markdown-dark">
+        <header>
+          <h1 class="my-8 text-5xl font-display font-extrabold">{{ page.title }}</h1>
+        </header>
+        <div id="content">
+          {{ page.content }}
+        </div>
+        <ul>
+          {%- for term in page.terms ~%}
+          <li>
+            <a href="{{ url(term.id, {language: site.language}) }}">{{ term.name }}</a> ({{ term|length }})
+          </li>
+          {%- endfor ~%}
+        </ul>
+      </article>
+      {%- endblock ~%}
