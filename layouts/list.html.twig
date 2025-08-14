@@ -1,0 +1,14 @@
+{% extends '_default/list.html.twig' %}
+
+      {%- block content ~%}
+      <main id="content">
+        <ul>
+        {%- for p in pages ~%}
+          <li>
+            {{~ include('partials/post-header.html.twig', {in_list: true, author: site.data.authors[p.author]}) ~}}
+          </li>
+        {%- endfor ~%}
+        </ul>
+        {{- include('partials/paginator.html.twig') ~}}
+      </main>
+      {%- endblock ~%}
