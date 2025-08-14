@@ -3,6 +3,9 @@ title: La Jamstack n'est rapide que si vous y veillez
 description: Pour en finir avec l'incompréhension selon laquelle votre site statique doit forcément utiliser du JavaScript et des APIs.
 date: 2020-10-05
 author: arnaud
+social:
+  twitter: ArnaudLigny
+  mastodon: arnaud@gazuji.com
 categories:
  - jamstack
  - performance
