@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}" prefix="og:http://ogp.me/ns#" class="scroll-pt-[32px]">
+  <head>
+    {#- highlight code CSS -#}
+    {%- set css_highlight = {
+      'light': asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-light.css'),
+      'dark': asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-dark.css'),
+    } -%}
+    {%- block head ~%}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {#- SEO ~#}
+    {{- include('partials/metatags.html.twig', {image: image|default}) ~}}
+    {#- main CSS ~#}
+    {%- if getenv('CECIL_ENV') == 'production' ~%}
+    <style>
+      {{- asset('css/styles.css')|inline ~}}
+    </style>
+    {%- else ~%}
+    <link rel="stylesheet" href="{{ url(asset('css/styles.css', {minify: false, fingerprint: false})) }}">
+    {%- endif ~%}
+    {#- Google fonts ~#}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="{{ site.googlefonts }}">
+    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="{{ site.googlefonts }}">
+    <noscript>
+      <link rel="stylesheet" href="{{ site.googlefonts }}">
+    </noscript>
+    <link rel="preload" as="style" href="{{ url(css_highlight.light) }}">
+    <link rel="preload" as="style" href="{{ url(css_highlight.dark) }}">
+    {#- PWA ~#}
+    {{- include('partials/pwa.html.twig', {site}, with_context = false) ~}}
+    {%- endblock head ~%}
+  </head>
+  <body class="{{ page.type }} dark:bg-gray-900">
+    {#- sticky nav ~#}
+    <div class="sticky top-0 z-10 text-white bg-violet-light">
+      <div class="flex items-center justify-between px-4 py-2">
+        <a href="{{ url() }}" title="Accueil" class="flex space-x-1.5">
+          {%- set logo = asset('favicon.png')|resize(48) ~%}
+          <img src="{{ url(logo) }}" alt="Logo {{ site.title }}" width="{{ logo.width }}" height="{{ logo.height }}" class="w-[24px]" />
+          <div id="site-title" class="{% if page.type == 'homepage' %}hidden opacity-0 {% endif %}font-display font-medium transition-opacity duration-1000 ease-out">{{ site.title }}</div>
+        </a>
+        <div class="flex items-center">
+          <nav class="py-2">
+            <ul class="flex justify-end space-x-4">
+              <li class="w-4">{{- include('partials/icons/rss.html.twig') -}}</li>
+              <li class="w-4">{{- include('partials/icons/podcast.html.twig') -}}</li>
+              <li class="w-4">{{- include('partials/icons/slack.html.twig') -}}</li>
+              {#<li class="w-4">{{- include('partials/icons/twitter.html.twig') -}}</li>#}
+              <li class="w-4">{{- include('partials/icons/github.html.twig') -}}</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    {%- block header ~%}{%- endblock ~%}
+    {#- content ~#}
+    <div class="container w-11/12 py-4 md:py-8 mx-auto lg:w-2/3 xl:w-1/2">
+      {%- block content ~%}
+      <article class="mx-auto markdown sm:markdown-lg lg:markdown-xl dark:markdown-dark">
+        <header>
+          <h1 class="my-8 text-5xl font-display font-extrabold">{{ page.title }}</h1>
+        </header>
+        <div id="content">
+          {{ page.content }}
+        </div>
+      </article>
+      {%- endblock ~%}
+    </div>
+    {#- footer ~#}
+    <footer class="py-8 text-lg text-center text-white border-b-8 bg-violet border-violet-light">
+      <ul class="flex justify-center mb-8 space-x-6">
+        <li class="w-6">{{- include('partials/icons/rss.html.twig') -}}</li>
+        <li class="w-6">{{- include('partials/icons/podcast.html.twig') -}}</li>
+        <li class="w-6">{{- include('partials/icons/slack.html.twig') -}}</li>
+        {#<li class="w-6">{{- include('partials/icons/twitter.html.twig') -}}</li>#}
+        <li class="w-6">{{- include('partials/icons/github.html.twig') -}}</li>
+      </ul>
+      <p class="mb-2 text-base">
+        <a class="font-semibold hover:underline" href="{{ url('a-propos') }}">À propos</a>
+      </p>
+      <p class="mb-2 text-sm md:text-base">
+        Site web généré par <a class="font-semibold hover:underline" href="{{ cecil.url }}">Cecil</a> et déployé par <a class="font-semibold hover:underline" href="https://netlify.com">Netlify</a>
+      </p>
+      <p class="text-sm md:text-base">
+        Contenus sous Licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">CC BY-NC-SA 4.0</a>
+      </p>
+    </footer>
+    {#- JS ~#}
+    {#- display title on scroll ~#}
+    <script>{% apply minify_js -%}
+      titleDiv = document.getElementById('site-title');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY >= 140) {
+          titleDiv.classList.remove('hidden');
+          titleDiv.classList.replace('opacity-0', 'opacity-100');
+        } else {
+          titleDiv.classList.replace('opacity-100', 'opacity-0');
+        }
+      });
+    {%- endapply %}</script>
+    {#- AnchorJS ~#}
+    <script defer src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/anchor-js/' ~ site.anchor.version ~ '/anchor.min.js', {minify: false}) }}"></script>
+    <script>{% apply minify_js %}
+      document.addEventListener('DOMContentLoaded', function(event) {
+        anchors.add('.markdown h2, .markdown h3, .markdown h4, .markdown h5');
+      });
+    {% endapply %}</script>
+  </body>
+</html>
