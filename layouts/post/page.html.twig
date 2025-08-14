@@ -1,15 +1,15 @@
 {% set image = asset('https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:' ~ page.title|replace({',': ' '})|url_encode ~ '/jamstatic/twitter-card.png', {filename: 'assets/cards/' ~ page.title|slugify  ~ '.png'}) %}
 {% set author = site.data.authors[page.author] %}
 
-{% extends '_default/page.html.twig' %}
+{% extends 'page.html.twig' %}
 
-{%- block head ~%}
+    {%- block head ~%}
     {{- parent() ~}}
     <link rel="stylesheet" href="{{ url(css_highlight.light) }}" media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)" />
     <link rel="stylesheet" href="{{ url(css_highlight.dark) }}" media="(prefers-color-scheme: dark)" />
-{%- endblock ~%}
+    {%- endblock ~%}
 
-{%- block content ~%}
+      {%- block content ~%}
       <article id="content" itemtype="https://schema.org/BlogPosting">
         {{~ include('partials/post-header.html.twig', {p: page, author: author}) ~}}
         <main class="mx-auto markdown lg:markdown-xl dark:markdown-dark" itemprop="articleBody">
@@ -43,4 +43,4 @@
       {%- if page.twitter_widgets ?? false ~%}
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       {%- endif ~%}
-{%- endblock ~%}
+      {%- endblock ~%}
