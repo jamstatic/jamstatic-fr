@@ -3,6 +3,8 @@ title: "Git-based, API-first headless CMS : lequel choisir ?"
 description: Les différences à connaître entre les headless CMS qui reposent sur Git et ceux qui fournissent une API.
 date: 2019-10-30T09:26:33.000+00:00
 author: frank
+social:
+  mastodon: DirtyF@mamot.fr
 categories:
   - cms
   - headless

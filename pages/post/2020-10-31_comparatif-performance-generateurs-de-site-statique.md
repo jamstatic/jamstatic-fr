@@ -2,6 +2,8 @@
 title: "Comparaison des temps de compilation des générateurs de site statique"
 description: "Comment se comportent les principaux générateurs quand il s'agit de compiler 1, 1 000 ou 64 000 fichiers ?"
 author: frank
+social:
+  mastodon: DirtyF@mamot.fr
 date: 2020-10-31T08:38:15+01:00
 updated: 2020-10-31T14:38:15+01:00
 categories:
