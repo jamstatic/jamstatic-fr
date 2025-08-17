@@ -1,8 +1,6 @@
 ---
-published: false
 title: Autocollants Jamstatic
-description: "Page de contact pour l'envoi d'autocollants."
-author: frank
+description: Page de contact pour l'envoi d'autocollants.
 date: 2020-10-08
 updated: 2022-11-01
 sitemap: false
