@@ -2,10 +2,10 @@ title: Jamstatic
 baseline: Sites statiques et architectures découplées
 baseurl: https://jamstatic.fr/
 description: Jamstatic, la communauté des sites statiques et des architectures découplées.
-author:
-  name: Jamstatic
-  url: https://jamstatic.fr
-  email: contact@jamstatic.fr
+#author:
+#  name: Jamstatic
+#  url: https://jamstatic.fr
+#  email: contact@jamstatic.fr
 image: icon.png
 language: fr
 languages:
@@ -21,21 +21,30 @@ social:
   github:
     username: jamstatic
     url: https://github.com/jamstatic/
-podcast:
-  title: Génération Statique
-  url: https://anchor.fm/jamstatic
-  rss: https://anchor.fm/s/39f4fa04/podcast/rss
-opencollective: https://opencollective.com/jamstatic
-meetup: https://www.meetup.com/fr-FR/Jamstack-Toulouse/
-
-cloudinary: https://res.cloudinary.com/jamstatic/image/upload
-ghrepo: https://github.com/jamstatic/jamstatic-fr
-branch: master
-
+  opencollective:
+    url: https://opencollective.com/jamstatic
+  meetup:
+    url: https://www.meetup.com/fr-FR/Jamstack-Toulouse/
+  podcast:
+    title: Génération Statique
+    url: https://anchor.fm/jamstatic
+    rss: https://anchor.fm/s/39f4fa04/podcast/rss
+cloudinary:
+  account: aligny
+  asset: jamstatic/og/twitter-card-bg-2.png
+ghrepo:
+  url: https://github.com/jamstatic/jamstatic-fr
+  branch: master
+anchor:
+  version: 5.0.0
+googlefonts:
+  url: https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Roboto&display=swap
 theme:
   - netlify
   - pwa
-
+metatags:
+  articles: post
+  jsonld: true
 pages:
   pagination:
     max: 10
@@ -65,9 +74,6 @@ assets:
       widths: [768, 1024]
       sizes:
         markdown: "(max-width: 800px) 768px, 1024px"
-metatags:
-  articles: post
-  jsonld: true
 output:
   formats:
     - name: atom
@@ -80,7 +86,6 @@ output:
 optimize:
   images:
     ext: [jpeg, jpg, png, webp, svg] #, gif
-
 manifest:
   background_color: '#300A66'
   theme_color: '#4A21CC'
@@ -91,11 +96,6 @@ serviceworker:
     snackbar: true
   offline:
     snackbar: true
-
-anchor:
-  version: 5.0.0
-googlefonts: https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Roboto&display=swap
-
 netlify:
   redirects:
     - from: https://jamstatic.netlify.app/*
