@@ -23,10 +23,10 @@
     {#- Google fonts ~#}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="{{ site.googlefonts }}">
-    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="{{ site.googlefonts }}">
+    <link rel="preload" as="style" href="{{ site.googlefonts.url }}">
+    <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="{{ site.googlefonts.url }}">
     <noscript>
-      <link rel="stylesheet" href="{{ site.googlefonts }}">
+      <link rel="stylesheet" href="{{ site.googlefonts.url }}">
     </noscript>
     <link rel="preload" as="style" href="{{ url(css_highlight.light) }}">
     <link rel="preload" as="style" href="{{ url(css_highlight.dark) }}">
