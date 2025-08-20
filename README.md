@@ -62,7 +62,7 @@ gh pr create
 
 ```bash
 npm install
-npx run css:build
+npm run css:build
 ```
 
 ## Production
