@@ -2,7 +2,7 @@
 title: "Pourquoi et comment j'ai migré Jamstatic.fr de Hugo vers Cecil"
 description: "Retour d'expérience sur la migration du site vers Cecil."
 date: 2023-08-28
-updated: 2024-03-25
+updated: 2025-08-20
 author: arnaud
 social:
   twitter: ArnaudLigny
@@ -99,3 +99,7 @@ En pratique :
 Exemple :
 
 ![Exemple d’une Twitter Card](../../assets/images/twitter-card-example.png "Exemple d’une Twitter Card")
+
+## Conclusion
+
+Pour conclure rapidement, je dirais que l’important ici n’est pas la solution utilisée pour générer le site : c’est la source de la donnée, le contenu, en l’occurrence les articles. Et, dans le cas de cette migration technique, ce qui a fait la différence c’est le fait que les articles ont été rédigés dans un format standardisé, [Markdown](https://fr.wikipedia.org/wiki/Markdown), indépendant de la solution technique.
