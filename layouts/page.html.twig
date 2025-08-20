@@ -39,8 +39,8 @@
     <div class="sticky top-0 z-10 text-white bg-violet-light">
       <div class="flex items-center justify-between px-4 py-2">
         <a href="{{ url() }}" title="Accueil" class="flex space-x-1.5">
-          {%- set logo = asset('favicon.png')|resize(48) ~%}
-          <img src="{{ url(logo) }}" alt="Logo {{ site.title }}" width="{{ logo.width }}" height="{{ logo.height }}" class="w-[24px]" />
+          {%- set logo = asset('icon.png')|resize(48) ~%}
+          <img src="{{ url(logo) }}" alt="Logo {{ site.title }}" width="{{ logo.width }}" height="{{ logo.height }}" class="w-[24px] rounded-full" />
           <div id="site-title" class="{% if page.type == 'homepage' %}hidden opacity-0 {% endif %}font-display font-medium transition-opacity duration-1000 ease-out">{{ site.title }}</div>
         </a>
         <div class="flex items-center">
