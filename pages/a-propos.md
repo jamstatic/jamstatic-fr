@@ -2,7 +2,7 @@
 title: À propos
 description: Jamstatic fédère la communauté Jamstack française autour d'articles et d'évènements à propos des générateurs statiques, des CMS headless et des API tierces.
 date: 2016-04-01
-updated: 2025-08-17
+updated: 2025-09-09
 menu:
   main:
     weight: 999
@@ -15,11 +15,11 @@ Cette approche est marketée par la société Netlify sous le nom [Jamstack](pag
 
 Ce qui nous intéresse ici, plus que le recours à des services bien pratiques il est vrai, c’est d’abord de répondre aux enjeux d’aujourd’hui : concilier des outils de développement qui adoptent une approche par composition, automatiser les déploiements, pour mieux se concentrer sur notre cœur de métier : le rendu du contenu, et ainsi pouvoir délivrer des sites utilisables y compris avec une connexion 3G instable.
 
-On assiste depuis quelques années à [une mouvance statique](https://frank.taillandier.me/2016/03/08/les-gestionnaires-de-contenu-statique/) et nous observons que l’écosystème autour de ce paradigme ne cesse de se développer.
+On assiste depuis quelques années à [une mouvance statique](https://frank.taillandier.me/2016/03/08/les-gestionnaires-de-contenu-statique/), à la volonté de [ne plus faire « que » des sites statiques](https://arnaudligny.fr/blog/arretez-de-faire-des-sites-dynamiques/) et nous observons que l’écosystème autour de ce paradigme ne cesse de se développer.
 
-Sur ce site vous trouverez l’actualité relative aux principaux générateurs, tels que [Eleventy](/categories/eleventy/ "Catégorie Eleventy"), [Hugo](/categories/hugo/ "Catégorie Hugo"), [Next.js](/categories/nextjs/ "Catégorie Next.js") ou encore [Gatsby](/categories/gatsby/ "Catégorie Gatsby"), des exemples d’utilisation, des traductions d’articles de référence, des retours d’expérience, des entretiens et bien plus encore.
+Sur ce site vous trouverez l’actualité relative aux principaux générateurs, tels que [Eleventy](/categories/eleventy/ "Catégorie Eleventy"), [Hugo](/categories/hugo/ "Catégorie Hugo"), [Jekyll](/categories/jekyll/ "Catégorie Jekyll"), [Next.js](/categories/nextjs/ "Catégorie Next.js"), [Gatsby](/categories/gatsby/ "Catégorie Gatsby") ou encore [Cecil](/categories/cecil/ "Catégorie Cecil"), des exemples d’utilisation, des traductions d’articles de référence, des retours d’expérience, des entretiens et bien plus encore.
 
-Nous échangeons également beaucoup sur [notre Slack](https://jamstatic.fr/slack), n’hésitez à nous rejoindre !
+Nous échangeons également sur [notre Slack](https://jamstatic.fr/slack), n’hésitez à nous rejoindre !
 
 ## Nous soutenir
 
@@ -27,7 +27,7 @@ Nous échangeons également beaucoup sur [notre Slack](https://jamstatic.fr/slac
 
 ---
 
-L’ensemble des billets est publié en sous licence [Creative Commons Attribution Share Alike](https://creativecommons.org/licenses/by-sa/4.0/) et le code source du site web est disponible sur [GitHub](https://github.com/jamstatic/jamstatic-fr).
+Les billets sont publiés en sous licence [Creative Commons Attribution Share Alike](https://creativecommons.org/licenses/by-sa/4.0/) et le code source du site web est disponible sur [GitHub](https://github.com/jamstatic/jamstatic-fr).
 
 ## Contributeurs
 
