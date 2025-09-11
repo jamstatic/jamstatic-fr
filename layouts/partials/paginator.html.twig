@@ -5,13 +5,13 @@
         <nav class="flex flex-row items-center text-base md:text-lg font-semibold text-violet dark:text-blue-500">
           {%- if paginator.links.prev is defined ~%}
           <span>&larr;&nbsp;</span>
-          <a class="flex-auto text-left hover:underline dark:hover:text-blue-300" href="{{ url(site.pages[paginator.links.prev]) }}">{% trans %}Précédent{% endtrans %}</a>
+          <a class="flex-auto text-left hover:underline dark:hover:text-blue-300" href="{{ url(site.page(paginator.links.prev)) }}">{% trans %}Précédent{% endtrans %}</a>
           {%- else ~%}
           <span class="flex-auto text-left"></span>
           {%- endif ~%}
           <span class="flex-auto text-center">{% trans %}%paginator_current% sur %paginator_count%{% endtrans %}</span>
           {%- if paginator.links.next is defined ~%}
-          <a class="flex-auto text-right hover:underline dark:hover:text-blue-300" href="{{ url(site.pages[paginator.links.next]) }}">{% trans %}Suivant{% endtrans %}</a>
+          <a class="flex-auto text-right hover:underline dark:hover:text-blue-300" href="{{ url(site.page(paginator.links.next)) }}">{% trans %}Suivant{% endtrans %}</a>
           <span>&nbsp;&rarr;</span>
           {%- else ~%}
           <span class="flex-auto text-right"></span>
