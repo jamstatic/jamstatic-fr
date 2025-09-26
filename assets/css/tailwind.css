@@ -27,6 +27,9 @@ figure figcaption {
 .anchorjs-link:hover {
   @apply text-violet-light;
 }
+:target {
+  scroll-margin-top: 48px;
+}
 
 .note {
   @apply mb-4 px-4 py-1 border-l-4 bg-opacity-50;
