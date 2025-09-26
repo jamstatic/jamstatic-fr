@@ -173,10 +173,7 @@ si vous souhaitez utiliser des plugins dans votre thème. Dans notre exemple,
 nous voulons ajouter la gestion d’un flux RSS, la génération d’un sitemap et des
 méta-données pour le SEO.
 
-Nous ajoutons donc les dépendances ainsi que les versions minimales requises,
-comme nous le ferions dans un fichier `Gemfile` à l’aide de
-[`spec.add_runtime_dependency`](https://guides.rubygems.org/specification-reference/#add_runtime_dependency)
-:
+Nous ajoutons donc les dépendances ainsi que les versions minimales requises, comme nous le ferions dans un fichier `Gemfile` à l’aide de [`spec.add_runtime_dependency`](https://guides.rubygems.org/specification-reference/#add_runtime_dependency) :
 
 ```ruby
 spec.add_runtime_dependency "jekyll-feed", "~> 0.8"
