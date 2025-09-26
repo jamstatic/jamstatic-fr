@@ -49,7 +49,7 @@
               <li class="w-4">{{- include('partials/icons/rss.html.twig') -}}</li>
               <li class="w-4">{{- include('partials/icons/podcast.html.twig') -}}</li>
               <li class="w-4">{{- include('partials/icons/slack.html.twig') -}}</li>
-              {% if site.social.twitter.url is defined %}<li class="w-4">{{- include('partials/icons/twitter.html.twig') -}}</li>{% endif %}
+              {%- if site.social.twitter.url is defined %}<li class="w-4">{{- include('partials/icons/twitter.html.twig') -}}</li>{% endif ~%}
               <li class="w-4">{{- include('partials/icons/github.html.twig') -}}</li>
             </ul>
           </nav>
@@ -76,7 +76,9 @@
         <li class="w-6">{{- include('partials/icons/rss.html.twig') -}}</li>
         <li class="w-6">{{- include('partials/icons/podcast.html.twig') -}}</li>
         <li class="w-6">{{- include('partials/icons/slack.html.twig') -}}</li>
-        {% if site.social.twitter.url is defined %}<li class="w-6">{{- include('partials/icons/twitter.html.twig') -}}</li>{% endif %}
+        {%- if site.social.twitter.url is defined ~%}
+        <li class="w-6">{{- include('partials/icons/twitter.html.twig') -}}</li>
+        {%- endif ~%}
         <li class="w-6">{{- include('partials/icons/github.html.twig') -}}</li>
       </ul>
       <p class="mb-2 text-base">
@@ -91,7 +93,7 @@
     </footer>
     {#- JS ~#}
     {#- display title on scroll ~#}
-    <script>{% apply minify_js -%}
+    <script>{% apply minify_js ~%}
       titleDiv = document.getElementById('site-title');
       window.addEventListener('scroll', () => {
         if (window.scrollY >= 140) {
@@ -101,10 +103,10 @@
           titleDiv.classList.replace('opacity-100', 'opacity-0');
         }
       });
-    {%- endapply %}</script>
+    {% endapply %}</script>
     {#- AnchorJS ~#}
     <script defer src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/anchor-js/' ~ site.anchor.version ~ '/anchor.min.js', {minify: false}) }}"></script>
-    <script>{% apply minify_js %}
+    <script>{% apply minify_js ~%}
       document.addEventListener('DOMContentLoaded', function(event) {
         anchors.add('.markdown h2, .markdown h3, .markdown h4, .markdown h5');
       });
