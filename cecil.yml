@@ -84,7 +84,7 @@ output:
     homepage: [html, atom, jsonfeed]
 optimize:
   images:
-    ext: [jpeg, jpg, png, webp, svg] #, gif
+    ext: [jpeg, jpg, png, webp, svg, gif] #, gif
 manifest:
   background_color: '#300A66'
   theme_color: '#4A21CC'
