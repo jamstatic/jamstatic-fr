@@ -55,7 +55,6 @@ pages:
     highlight: true
     images:
       formats: [webp, avif]
-      resize: true
       responsive: true
       class: "dark:brightness-90"
       caption: true
