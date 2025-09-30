@@ -7,4 +7,4 @@ sitemap: false
 ---
 ![Stickers Jamstack](../assets/images/stickers-jamstack.jpg "Stickers Jamstack")
 
-Vous avez contribué via [OpenCollective](https://opencollective.com/jamstatic/) 🙏 et vous souhaitez recevoir un autocollant ? Alors contactez nous à l'adresse <stickers@jamstatic.fr>.
+Vous avez contribué via [OpenCollective](https://opencollective.com/jamstatic/) 🙏 et vous souhaitez recevoir un autocollant ? Alors contactez nous à l’adresse <stickers@jamstatic.fr>.
