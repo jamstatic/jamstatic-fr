@@ -13,7 +13,7 @@
                   {%- set author_url = '#' ~%}
                   {%- if author.github|default %}{% set author_url = 'https://github.com/' ~ author.github %}{% endif -%}
                   {%- if author.url|default %}{% set author_url = author.url %}{% endif -%}
-                  <a class="text-base no-underline capitalize text-black-grape-400 dark:text-blue-500 hover:underline dark:hover:text-blue-300" rel="author" href="{{ author_url }}">{{ author.name }}</a>
+                  <a class="text-base no-underline capitalize text-black-grape-400 dark:text-blue-500 hover:underline dark:hover:text-blue-300" rel="author" href="{{ author_url }}" target="_blank">{{ author.name }}</a>
                   {#- is it a translator? ~#}
                   {%- if p.source|default ~%}
                   <span class="ml-2 text-sm text-black-grape-400 dark:text-blue-500">(traducteur·trice)</span>
