@@ -2,8 +2,8 @@ name: Rapport de bug
 description: Signaler un problème
 title: "Bug: "
 labels: [bug, triage]
-assignees:
-  - Narno
+#assignees:
+#  - ArnaudLigny
 body:
   - type: markdown
     attributes:
