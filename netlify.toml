@@ -13,11 +13,6 @@
   CECIL_ENV = "preview"
   CECIL_CMD_OPTIONS = "--drafts"
 
-[[redirects]]
-  from = "/*"
-  to = "/404.html"
-  status = 404
-
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
   [plugins.inputs]
