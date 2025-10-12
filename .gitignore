@@ -11,6 +11,6 @@ node_modules
 # macOS
 .DS_Store
 
-# Editeurs
+# Editors
 .vscode/
 .idea/
