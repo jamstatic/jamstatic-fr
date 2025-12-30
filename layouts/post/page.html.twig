@@ -9,11 +9,11 @@
 
     {%- block head ~%}
     {{- parent() ~}}
-    <link rel="stylesheet" href="{{ url(css_highlight.light) }}" media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)" />
-    <link rel="stylesheet" href="{{ url(css_highlight.dark) }}" media="(prefers-color-scheme: dark)" />
+    <link rel="stylesheet" href="{{ url(css_highlight.light) }}" media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)">
+    <link rel="stylesheet" href="{{ url(css_highlight.dark) }}" media="(prefers-color-scheme: dark)">
     {%- endblock ~%}
 
-      {%- block content ~%}
+      {%- block main ~%}
       <article id="content" itemtype="https://schema.org/BlogPosting">
         {{~ include('partials/post-header.html.twig', {p: page, author: author}) ~}}
         <main class="mx-auto markdown lg:markdown-xl dark:markdown-dark" itemprop="articleBody">

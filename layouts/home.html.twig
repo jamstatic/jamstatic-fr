@@ -1,15 +1,15 @@
 {% extends 'list.html.twig' %}
 
-    {%- block header ~%}
-    <header class="text-white bg-violet">
-      <div class="py-8 mx-auto w-72 md:w-1/2 lg:w-2/5">
+    {%- block jumbotron ~%}
+    <div class="text-white bg-violet">
+      <div class="mx-auto py-8 w-72 md:w-1/2 lg:w-2/5">
         <h1>{{- include('partials/svg/jamstatic-logo-violet.svg') -}}</h1>
-        <div class="pr-4 text-xs text-right text-white lg:-mt-2 font-display md:text-base lg:text-lg">
+        <div class="lg:-mt-2 pr-4 font-display text-xs md:text-base lg:text-lg text-right">
           {{ site.baseline }}
         </div>
       </div>
-    </header>
-    <div class="container w-11/12 pt-4 md:pt-8 mx-auto lg:w-2/3 xl:w-1/2">
+    </div>
+    <div class="container mx-auto pt-4 md:pt-8 w-11/12 lg:w-2/3 xl:w-1/2">
       <details>
         <summary class="text-lg font-semibold text-center cursor-pointer list-none text-violet dark:text-blue-500">{% trans %}Naviguer par catégories{% endtrans %}</summary>
         <nav class="mt-2 text-center text-semibold">

@@ -1,11 +1,12 @@
+{# highlight code CSS #}
+{% set css_highlight = {
+  'light': asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-light.css'),
+  'dark': asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-dark.css'),
+} %}
+{% set logo = asset('icon.png')|resize(48) -%}
 <!DOCTYPE html>
 <html lang="{{ site.language }}" prefix="og:http://ogp.me/ns#" class="scroll-pt-[32px]">
   <head>
-    {#- highlight code CSS -#}
-    {%- set css_highlight = {
-      'light': asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-light.css'),
-      'dark': asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-dark.css'),
-    } -%}
     {%- block head ~%}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,41 +36,40 @@
     {%- endblock head ~%}
   </head>
   <body class="{{ page.type }} dark:bg-gray-900">
-    {#- sticky nav ~#}
     <div class="sticky top-0 z-10 text-white bg-violet-light">
-      <div class="flex items-center justify-between px-4 py-2">
-        <a href="{{ url() }}" title="Accueil" class="flex space-x-1.5">
-          {%- set logo = asset('icon.png')|resize(48) ~%}
-          <img src="{{ url(logo) }}" alt="Logo {{ site.title }}" width="{{ logo.width }}" height="{{ logo.height }}" class="w-[24px] rounded-full" />
-          <div id="site-title" class="{% if page.type == 'homepage' %}hidden opacity-0 {% endif %}font-display font-medium transition-opacity duration-1000 ease-out">{{ site.title }}</div>
+      {#- sticky header ~#}
+      <header class="container mx-auto py-2 w-11/12 lg:w-2/3 xl:w-1/2 flex items-center justify-between">
+        <a href="{{ url(site.home) }}" title="Accueil" class="flex space-x-2 items-center">
+          <img src="{{ url(logo) }}" alt="Logo {{ site.title }}" width="{{ logo.width }}" height="{{ logo.height }}" class="size-7 rounded-full" />
+          <div id="site-title" class="{% if page.type == 'homepage' %}hidden opacity-0 {% endif %}text-xl font-display font-medium transition-opacity duration-1000 ease-out">{{ site.title }}</div>
         </a>
-        <div class="flex items-center">
-          <nav class="py-2">
-            <ul class="flex justify-end space-x-4">
-              <li class="w-4">{{- include('partials/icons/rss.html.twig') -}}</li>
-              <li class="w-4">{{- include('partials/icons/podcast.html.twig') -}}</li>
-              <li class="w-4">{{- include('partials/icons/slack.html.twig') -}}</li>
-              {%- if site.social.twitter.url is defined %}<li class="w-4">{{- include('partials/icons/twitter.html.twig') -}}</li>{% endif ~%}
-              <li class="w-4">{{- include('partials/icons/github.html.twig') -}}</li>
-            </ul>
-          </nav>
-        </div>
-      </div>
+        <nav class="flex items-center py-2">
+          <ul class="flex justify-end space-x-4">
+            <li class="size-6">{{ include('partials/icons/rss.html.twig') }}</li>
+            <li class="size-6">{{ include('partials/icons/podcast.html.twig') }}</li>
+            <li class="size-6">{{ include('partials/icons/slack.html.twig') }}</li>
+            {%- if site.social.twitter.url is defined ~%}
+            <li class="size-6">{{ include('partials/icons/twitter.html.twig') }}</li>
+            {%- endif ~%}
+            <li class="size-6">{{ include('partials/icons/github.html.twig') }}</li>
+          </ul>
+        </nav>
+      </header>
     </div>
-    {%- block header ~%}{%- endblock ~%}
-    {#- content ~#}
-    <div class="container w-11/12 py-4 md:py-8 mx-auto lg:w-2/3 xl:w-1/2">
-      {%- block content ~%}
-      <article class="mx-auto markdown sm:markdown-lg lg:markdown-xl dark:markdown-dark">
+    {%- block jumbotron %}{% endblock jumbotron ~%}
+    {#- main ~#}
+    <main class="container mx-auto py-4 md:py-8 w-11/12 lg:w-2/3 xl:w-1/2">
+      {%- block main ~%}
+      <article id="content" class="mx-auto markdown sm:markdown-lg lg:markdown-xl dark:markdown-dark">
         <header>
           <h1 class="my-8 text-5xl font-display font-extrabold">{{ page.title }}</h1>
         </header>
-        <div id="content">
+        <div>
           {{ page.content }}
         </div>
       </article>
-      {%- endblock ~%}
-    </div>
+      {%- endblock main ~%}
+    </main>
     {#- footer ~#}
     <footer class="py-8 text-lg text-center text-white border-b-8 bg-violet border-violet-light">
       <ul class="flex justify-center mb-8 space-x-6">
