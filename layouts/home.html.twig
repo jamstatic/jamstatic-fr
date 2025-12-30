@@ -2,11 +2,13 @@
 
     {%- block jumbotron ~%}
     <div class="text-white bg-violet">
-      <div class="mx-auto py-8 w-72 md:w-1/2 lg:w-2/5">
-        <h1>{{- include('partials/svg/jamstatic-logo-violet.svg') -}}</h1>
-        <div class="lg:-mt-2 pr-4 font-display text-xs md:text-base lg:text-lg text-right">
-          {{ site.baseline }}
-        </div>
+      <div class="container mx-auto max-w-[600px] py-6 w-11/12 lg:w-2/3 xl:w-1/2">
+        <h1 class="flex flex-col items-end">
+          {{~ include('partials/svg/jamstatic-logo-violet.svg') ~}}
+          <div class="font-display lg:text-lg mt-1 mr-2">
+            {{- site.baseline -}}
+          </div>
+        </h1>
       </div>
     </div>
     <div class="container mx-auto pt-4 md:pt-8 w-11/12 lg:w-2/3 xl:w-1/2">
@@ -18,7 +20,7 @@
           <span class="text-gray-600">({{ category|length }})</span>
           {%- if not loop.last ~%}
           <span class="dark:text-blue-500">&middot;</span>
-          {%- endif ~%}
+          {%- endif -%}
         {%- endfor ~%}
         </nav>
       </details>
