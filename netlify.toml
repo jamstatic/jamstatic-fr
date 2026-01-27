@@ -5,6 +5,7 @@
 [build.environment]
   #PHP_VERSION = "8.1"
   #CECIL_CACHE_DIR = "/opt/build/cache/"
+  SECRETS_SCAN_SMART_DETECTION_ENABLED = "false"
 
 [context.production.environment]
   CECIL_ENV = "production"
