@@ -3,7 +3,6 @@
   'light': asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-light.css'),
   'dark': asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-dark.css'),
 } %}
-{% set logo = asset('icon.png')|resize(48) -%}
 <!DOCTYPE html>
 <html lang="{{ site.language }}" prefix="og:http://ogp.me/ns#" class="scroll-pt-[32px]">
   <head>
@@ -39,10 +38,12 @@
     <div class="sticky top-0 z-10 text-white bg-violet-light">
       {#- sticky header ~#}
       <header class="container mx-auto py-2 w-11/12 lg:w-2/3 xl:w-1/2 flex items-center justify-between">
+        {#- logo + title ~#}
         <a href="{{ url(site.home) }}" title="Accueil" class="flex space-x-2 items-center">
-          <img src="{{ url(logo) }}" alt="Logo {{ site.title }}" width="{{ logo.width }}" height="{{ logo.height }}" class="size-7 rounded-full" />
+          {{ html(asset('icon.png')|resize(56), options={responsive: 'density'}, attributes={width: 28, alt: "Logo " ~ site.title, class: "size-7 rounded-full"}) }}
           <div id="site-title" class="{% if page.type == 'homepage' %}hidden opacity-0 {% endif %}text-xl font-display font-medium transition-opacity duration-1000 ease-out">{{ site.title }}</div>
         </a>
+        {#- navigation ~#}
         <nav class="flex items-center py-2">
           <ul class="flex justify-end space-x-4">
             <li class="size-6">{{ include('partials/icons/rss.html.twig') }}</li>
