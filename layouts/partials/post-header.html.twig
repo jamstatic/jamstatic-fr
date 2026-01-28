@@ -5,8 +5,8 @@
                 {%- if p.author|default ~%}
                 {#- avatar ~#}
                 {%- if author.name|default and author.github|default -%}
-                  {%- set avatar = asset('https://github.com/' ~ author.github ~ '.png?size=64') ~%}
-                <img class="size-8 mr-2 rounded-full" rel="preload" src="{{ url(avatar) }}" width="32" height="32" alt="{{ author.name }}" />
+                  {%- set avatar = asset('https://github.com/' ~ author.github ~ '.png?size=512', {filename: 'avatar-' ~ author.github|slugify ~ '.png'}) ~%}
+                {{- html(avatar, options={responsive: 'density'}, attributes={width: 32, alt: author.name, class: 'size-8 mr-2 rounded-full'}) ~}}
                 {%- endif -%}
                 {#- website ~#}
                 {%- set author_url = '#' -%}
