@@ -1,8 +1,3 @@
-{# highlight code CSS #}
-{% set css_highlight = {
-  'light': asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-light.css'),
-  'dark': asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-dark.css'),
-} %}
 <!DOCTYPE html>
 <html lang="{{ site.language }}" prefix="og:http://ogp.me/ns#" class="scroll-pt-[32px]">
   <head>
@@ -28,8 +23,6 @@
     <noscript>
       <link rel="stylesheet" href="{{ site.googlefonts.url }}">
     </noscript>
-    <link rel="preload" as="style" href="{{ url(css_highlight.light) }}">
-    <link rel="preload" as="style" href="{{ url(css_highlight.dark) }}">
     {#- PWA ~#}
     {{- include('partials/pwa.html.twig', {site}, with_context = false) ~}}
     {%- endblock head ~%}
