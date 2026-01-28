@@ -68,3 +68,20 @@ summary::-webkit-details-marker {
 pre code.hljs {
   padding: 0 !important;
 }
+
+@view-transition {
+  navigation: auto;
+}
+
+@layer view-transitions {
+  ::view-transition-group(.page-transition) {
+    animation-duration: 0.6s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+      animation: none;
+    }
+  }
+}

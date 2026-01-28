@@ -11,7 +11,7 @@
         <ul>
           {%- for term in page.terms ~%}
           <li>
-            <a href="{{ url(term.id, {language: site.language}) }}">{{ term.name }}</a> ({{ term|length }})
+            <a style="view-transition-name: {{ term.name|slugify }}" href="{{ url(term.id, {language: site.language}) }}">{{ term.name }}</a> ({{ term|length }})
           </li>
           {%- endfor ~%}
         </ul>

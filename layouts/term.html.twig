@@ -13,7 +13,7 @@
       </nav>
       {#- title ~#}
       <h1 class="text-4xl font-display font-extrabold text-center text-violet-dark dark:text-blue-500">
-        Articles &laquo;&nbsp;<span class="capitalize text-rose-600">{{ page.title|title }}</span>&nbsp;&raquo;
+        Articles &laquo;&nbsp;<span style="view-transition-name: {{ page.title|slugify }}" class="capitalize text-rose-600">{{ page.title|title }}</span>&nbsp;&raquo;
       </h1>
     </div>
     {%- endblock ~%}
