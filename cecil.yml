@@ -67,12 +67,14 @@ pages:
         blank: true
 assets:
   images:
-    formats: [webp, avif]
     optimize: true
     responsive:
       widths: [768, 1024]
       sizes:
         markdown: "(max-width: 800px) 768px, 1024px"
+layouts:
+  images:
+    formats: [webp, avif]
 output:
   formats:
     - name: atom
