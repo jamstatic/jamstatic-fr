@@ -67,7 +67,7 @@
               {%- endif ~%}
               {#- description ~#}
               {%- if in_list|default(false) == true ~%}
-              <p class="mt-2 text-xl md:text-2xl text-gray-600 dark:text-gray-300">
+              <p class="mt-2 text-lg md:text-xl text-gray-600 dark:text-gray-300">
                 <a href="{{ url(p) }}">{{ p.description|default }}</a>
               </p>
               {%- endif ~%}
