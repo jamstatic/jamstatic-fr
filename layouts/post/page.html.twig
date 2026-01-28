@@ -1,14 +1,23 @@
+{# generate Cloudinary image for social cards #}
 {% set cloudinary_url = 'https://res.cloudinary.com/%s/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:%s/%s'|format(site.cloudinary.account, page.title|url_encode|replace({'%2C':'%252C'}), site.cloudinary.asset) %}
 {% set image = asset(cloudinary_url, {filename: 'cards/%s.png'|format(page.id)}) %}
+{# get author #}
 {% set author = '' %}
 {% if page.author|default %}
   {%- set author = site.data.authors[page.author] %}
 {% endif %}
+{# highlight code CSS #}
+{% set css_highlight = {
+  'light': asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-light.css'),
+  'dark': asset('https://raw.githubusercontent.com/highlightjs/highlight.js/main/src/styles/a11y-dark.css'),
+} %}
 
 {% extends 'page.html.twig' %}
 
     {%- block head ~%}
     {{- parent() ~}}
+    <link rel="preload" href="{{ url(css_highlight.light) }}" as="style">
+    <link rel="preload" href="{{ url(css_highlight.dark) }}" as="style">
     <link rel="stylesheet" href="{{ url(css_highlight.light) }}" media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)">
     <link rel="stylesheet" href="{{ url(css_highlight.dark) }}" media="(prefers-color-scheme: dark)">
     {%- endblock ~%}
