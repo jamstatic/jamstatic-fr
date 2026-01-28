@@ -2,7 +2,7 @@
 title: "Pourquoi et comment j’ai migré Jamstatic.fr de Hugo vers Cecil"
 description: "Retour d’expérience sur la migration du site vers Cecil."
 date: 2022-08-28
-updated: 2025-08-20
+updated: 2026-01-28
 author: arnaud
 social:
   twitter: ArnaudLigny
@@ -78,17 +78,18 @@ De plus le service de Cloudinary était sollicité à chaque affichage du post c
 Aussi, j’ai délégué la construction de cette URL au template [`post/page.html.twig`](https://github.com/jamstatic/jamstatic-fr/blob/master/layouts/post/page.html.twig#L1) :
 
 ```twig
-{% set image = asset('https://res.cloudinary.com/jamstatic/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:' ~ page.title|replace({',': ' '})|url_encode ~ '/jamstatic/twitter-card.png', {filename: 'assets/cards/' ~ page.title|slugify ~ '.png'}) %}
+{% set cloudinary_url = 'https://res.cloudinary.com/%s/image/upload/f_auto,q_auto/w_1100,c_fit,co_white,g_north_west,x_80,y_120,l_text:poppins_80_ultrabold_line_spacing_-30:%s/%s'|format(site.cloudinary.account, page.title|url_encode|replace({'%2C':'%252C'}), 'jamstatic/twitter-card.png') %}
+{% set image = asset(cloudinary_url, {filename: 'cards/%s.png'|format(page.id)}) %}
 ```
 
 En pratique :
 
-- Création d’une [image « modèle » (en veillant à garder de la place pour y intégrer le titre du billet)
+- Création d’une image « modèle » (en veillant à garder de la place pour y intégrer le titre du billet)
 - Utilisation de la fonction [`asset()`](https://cecil.app/documentation/templates/#asset) pour manipuler l’image générée par Cloudinary :
-  1. Définition d’une largeur optimisée pour le partage sur les réseaux sociaux (1000 px)
-  2. Positionnement du texte aux coordonnées 80:120
+  1. Format automatique et qualité automatique
+  2. Définition de la largeur maximum du texte avant retour à la ligne (1100 px) et positionnement du texte aux coordonnées 80:120
   3. Utilisation de la police de caractère Poppins 80 ultra bold interligne -30
-  4. Remplacement des virgules dans le titre par des espaces
+  4. Remplacement des virgules présentes dans le titre par des espaces
   5. Encodage de l’URL obtenue
   6. Enfin, enregistrement de l’asset avec un nom de fichier "slugifié" afin d'être compatible avec les contraintes de nommage Windows, au format PNG
 
