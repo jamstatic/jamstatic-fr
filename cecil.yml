@@ -1,7 +1,7 @@
 title: Jamstatic
-baseline: Sites statiques et architectures découplées
+baseline: "Sites statiques et architectures découplées"
 baseurl: https://jamstatic.fr/
-description: Jamstatic, la communauté des sites statiques et des architectures découplées.
+description: "Jamstatic, la communauté des sites statiques et des architectures découplées."
 #author:
 #  name: Jamstatic
 #  url: https://jamstatic.fr
@@ -84,10 +84,10 @@ output:
     homepage: [html, atom, jsonfeed]
 optimize:
   images:
-    ext: [jpeg, jpg, png, webp, svg, gif] #, gif
+    ext: [jpeg, jpg, png, webp, svg, gif]
 manifest:
-  background_color: '#300A66'
-  theme_color: '#4A21CC'
+  background_color: "#300A66"
+  theme_color: "#4A21CC"
   shortcuts: true
 serviceworker:
   enabled: true
