@@ -1,27 +1,5 @@
             {#- post header ~#}
             <header class="p-4 mb-8 bg-blue-100 bg-opacity-50 rounded-lg dark:bg-gray-800{% if in_list|default(false) == true %} hover:scale-105 transition duration-300 transform{% endif %}">
-              <div class="flex items-center mb-2">
-                {#- author ~#}
-                {%- if p.author|default ~%}
-                {#- avatar ~#}
-                {%- if author.name|default and author.github|default -%}
-                  {%- set avatar = asset('https://github.com/' ~ author.github ~ '.png?size=512', {filename: 'avatar-' ~ author.github|slugify ~ '.png'}) ~%}
-                {{- html(avatar, options={responsive: 'density'}, attributes={width: 32, alt: author.name, class: 'size-8 mr-2 rounded-full'}) ~}}
-                {%- endif -%}
-                {#- website ~#}
-                {%- set author_url = '#' -%}
-                {%- if author.github|default %}{% set author_url = 'https://github.com/' ~ author.github %}{% endif -%}
-                {%- if author.url|default %}{% set author_url = author.url %}{% endif ~%}
-                <a class="text-base no-underline capitalize text-black-grape-400 dark:text-blue-500 hover:underline dark:hover:text-blue-300" rel="author" href="{{ author_url }}" target="_blank">{{ author.name }}</a>
-                {#- is it a translator? -#}
-                {%- if p.source|default ~%}
-                <span class="ml-2 text-sm text-black-grape-400 dark:text-blue-500">(traducteur·trice)</span>
-                {%- endif ~%}
-                {%- endif ~%}
-                {%- if (p.fmvariables.published ?? true) == false or (p.fmvariables.draft ?? false) == true ~%}
-                  <span class="ml-2 text-sm text-black-grape-400 dark:text-blue-500 font-semibold">(non publié)</span>
-                {%- endif ~%}
-              </div>
               {#- title ~#}
               {%- if in_list|default(false) == true ~%}
               <h2 style="view-transition-name: {{ p.slug }}" class="mb-2 text-2xl md:text-3xl font-display font-extrabold xl:leading-snug text-violet dark:text-blue-500">
@@ -32,36 +10,62 @@
                 {{ p.title }}
               </h1>
               {%- endif ~%}
-              {#<div class="bg-amber-900 grid grid-cols-2 gap-2">
-                <div class="bg-amber-400 row-span-2">avatar</div>
-                <div class="bg-amber-400">author</div>
-                <div class="bg-amber-400">meta</div>
-              </div>#}
-              {#- meta ~#}
-              <div class="flex flex-col md:flex-row justify-start space-x-0 md:space-x-1 text-sm text-black-grape-400 dark:text-blue-500 leading-loose">
-                <div class="flex space-x-1">
-                  {#- date ~#}
-                  <time class="capitalize after:content-['\00a0\00B7']" datetime="{{ p.date|date('c') }}" itemprop="datePublished">{{ p.date|format_date('long') }}</time>
-                  {#- read time ~#}
-                  <div class="flex items-center space-x-1 md:after:content-['\00a0\00B7']">
-                    <div class="size-4">{{ include('partials/svg/reading-time.svg') }}</div>
-                    <div>{{ readtime(p.content) }} min</div>
-                  </div>
-                </div>
-                {#- categories ~#}
-                {%- if p.categories|default ~%}
-                <div class="flex items-center space-x-1">
-                  <div class="size-4">{{ include('partials/svg/icon-tag.svg') }}</div>
-                  <div>
-                    {%- for category in p.categories ~%}
-                    <a class="capitalize no-underline hover:underline hover:text-violet-light dark:hover:text-blue-300" href="{{ url('categories/' ~ category) }}">{{ category|title }}</a>
-                    {%- if not loop.last %}, {% endif %}
-                    {%- endfor ~%}
-                  </div>
+              {#- author + meta ~#}
+              <div class="flex items-start gap-4 text-black-grape-400 dark:text-blue-500">
+                {#- author: avatar ~#}
+                {%- if author.name|default and author.github|default -%}
+                <div>
+                  {%- set avatar = asset('https://github.com/' ~ author.github ~ '.png?size=384', {filename: 'avatar-' ~ author.github|slugify ~ '.png'}) ~%}
+                  {{- html(avatar, options={responsive: 'density'}, attributes={width: 48, alt: author.name, class: 'size-12 rounded-full'}) ~}}
                 </div>
                 {%- endif ~%}
+                <div class="flex flex-col">
+                  <div>
+                    {#- author: name + website ~#}
+                    {%- if p.author|default ~%}
+                      {%- set author_url = '#' -%}
+                      {%- if author.github|default %}{% set author_url = 'https://github.com/' ~ author.github %}{% endif -%}
+                      {%- if author.url|default %}{% set author_url = author.url %}{% endif ~%}
+                    <a class="text-base no-underline capitalize hover:underline dark:hover:text-blue-300" rel="author" href="{{ author_url }}" target="_blank">{{ author.name }}</a>
+                    {%- endif ~%}
+                    {#- translated post? -#}
+                    {%- if p.source|default ~%}
+                    <span class="text-sm">({% trans %}traducteur·trice{% endtrans %})</span>
+                    {%- endif ~%}
+                  </div>
+                  <div>
+                    {#- post meta ~#}
+                    <div class="flex flex-col md:flex-row justify-start space-x-0 md:space-x-1 text-sm leading-8">
+                      <div class="flex space-x-1">
+                        {#- post: status ~#}
+                        {%- if (p.fmvariables.published ?? true) == false or (p.fmvariables.draft ?? false) == true ~%}
+                        <div class="font-semibold">(non publié)</div>
+                        {%- endif ~%}
+                        {#- post: date ~#}
+                        <time class="capitalize after:content-['\00a0\00B7']" datetime="{{ p.date|date('c') }}" itemprop="datePublished">{{ p.date|format_date('long') }}</time>
+                        {#- post: read time ~#}
+                        <div class="flex items-center space-x-1 md:after:content-['\00a0\00B7']">
+                          <div class="size-4">{{ include('partials/svg/reading-time.svg') }}</div>
+                          <div>{{ readtime(p.content) }} min</div>
+                        </div>
+                      </div>
+                      {#- post: categories ~#}
+                      {%- if p.categories|default ~%}
+                      <div class="flex items-start md:items-center space-x-1 leading-6">
+                        <div class="size-4 mt-1 md:mt-0">{{ include('partials/svg/icon-tag.svg') }}</div>
+                        <div>
+                          {%- for category in p.categories ~%}
+                          <a class="capitalize no-underline hover:underline hover:text-violet-light dark:hover:text-blue-300" href="{{ url('categories/' ~ category) }}">{{ category|title }}</a>
+                          {%- if not loop.last %}, {% endif %}
+                          {%- endfor ~%}
+                        </div>
+                      </div>
+                      {%- endif ~%}
+                    </div>
+                  </div>
+                </div>
               </div>
-              {#- source ~#}
+              {#- post: source ~#}
               {%- if page.source|default -%}
                 {%- if page.source.url|default ~%}
               <p class="mt-2 text-base text-black-grape-400 dark:text-black-grape-200">
@@ -70,7 +74,7 @@
               </p>
                 {%- endif -%}
               {%- endif ~%}
-              {#- description ~#}
+              {#- post: description ~#}
               {%- if in_list|default(false) == true ~%}
               <p class="mt-2 text-lg md:text-xl text-gray-600 dark:text-gray-300">
                 <a href="{{ url(p) }}">{{ p.description|default }}</a>
