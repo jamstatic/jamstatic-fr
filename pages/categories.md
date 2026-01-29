@@ -1,4 +1,4 @@
 ---
 title: Catégories
 ---
-Liste des catégories.
+Liste des catégories :
