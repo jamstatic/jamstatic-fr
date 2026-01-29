@@ -4,21 +4,23 @@
         {%- set paginator_count = paginator.count ~%}
         <div class="flex flex-row items-center text-base md:text-lg font-semibold text-violet dark:text-blue-500">
           {%- if paginator.links.prev is defined ~%}
-          <div>&larr;&nbsp;</div><a class="w-32 flex-auto text-left hover:underline dark:hover:text-blue-300" href="{{ url(site.page(paginator.links.prev)) }}">
-            {%- trans %}Précédent{% endtrans -%}
+          <a class="flex space-x-1 justify-start dark:hover:text-blue-300" href="{{ url(site.page(paginator.links.prev)) }}">
+            <div class="hover:no-underline">&larr;</div>
+            <div class="hover:underline">{%- trans %}Précédent{% endtrans -%}</div>
           </a>
           {%- else ~%}
-          <div class="w-32 flex-auto text-left"></div>
+          <div class="w-32"></div>
           {%- endif ~%}
           <div class="w-64 flex-auto text-center">
             {%- trans %}%paginator_current% sur %paginator_count%{% endtrans -%}
           </div>
           {%- if paginator.links.next is defined ~%}
-          <a class="w-32 flex-auto text-right hover:underline dark:hover:text-blue-300" href="{{ url(site.page(paginator.links.next)) }}">
-            {%- trans %}Suivant{% endtrans -%}
-          </a><div>&nbsp;&rarr;</div>
+          <a class="flex space-x-1 justify-end dark:hover:text-blue-300" href="{{ url(site.page(paginator.links.next)) }}">
+            <div class="hover:underline">{%- trans %}Suivant{% endtrans -%}</div>
+            <div class="hover:no-underline">&rarr;</div>
+          </a>
           {%- else ~%}
-          <div class="w-32 flex-auto text-right"></div>
+          <div class="w-32"></div>
           {%- endif ~%}
         </div>
       {%- endif ~%}
