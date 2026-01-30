@@ -4,7 +4,7 @@ description: "Jess West vous dit comment indexer et intégrer une recherche perf
 date: 2018-03-19T21:13:46+01:00
 author: frank
 categories:
-  - algolia
+  - Algolia
 source:
   author: "Jessica West"
   title: "Getting Started with Algolia"

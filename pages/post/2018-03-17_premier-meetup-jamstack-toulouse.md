@@ -5,9 +5,9 @@ date: 2018-03-17T09:24:53+01:00
 author: frank
 categories:
   - meetup
-  - jamstack
-  - algolia
-  - netlify
+  - Jamstack
+  - Algolia
+  - Netlify
 ---
 :::intro
 Ce premier meetup Jamstack français a été l’occasion d’accueillir Netlify et Algolia, deux acteurs incontournables du mouvement. Les deux start-ups sont maintenant devenues des références dans leur domaine, l’une pour le déploiement d’applications web servies en statique, l’autre comme service de recherche embarquée. Au programme deux présentations de Phil Hawksworth et Martyn Davies toutes deux axées sur la _developer experience_ et les bénéfices apportés par ces deux services de qualité.

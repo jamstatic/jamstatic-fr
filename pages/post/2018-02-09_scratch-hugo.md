@@ -11,7 +11,7 @@ excerpt: |
 date: 2018-02-09T20:50:50+01:00
 lastmod: 2018-08-29T10:09:47-05:00
 categories:
-  - hugo
+  - Hugo
 source:
   author: Régis Philibert
   title: "Hugo .Scratch explained"

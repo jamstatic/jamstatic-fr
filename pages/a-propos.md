@@ -17,7 +17,7 @@ Ce qui nous intéresse ici, plus que le recours à des services bien pratiques i
 
 On assiste depuis quelques années à [une mouvance statique](https://frank.taillandier.me/2016/03/08/les-gestionnaires-de-contenu-statique/), à la volonté de [ne plus faire « que » des sites statiques](https://arnaudligny.fr/blog/arretez-de-faire-des-sites-dynamiques/) et nous observons que l’écosystème autour de ce paradigme ne cesse de se développer.
 
-Sur ce site vous trouverez l’actualité relative aux principaux générateurs, tels que [Eleventy](/categories/eleventy/ "Catégorie Eleventy"), [Hugo](/categories/hugo/ "Catégorie Hugo"), [Jekyll](/categories/jekyll/ "Catégorie Jekyll"), [Next.js](/categories/nextjs/ "Catégorie Next.js"), [Gatsby](/categories/gatsby/ "Catégorie Gatsby") ou encore [Cecil](/categories/cecil/ "Catégorie Cecil"), des exemples d’utilisation, des traductions d’articles de référence, des retours d’expérience, des entretiens et bien plus encore.
+Sur ce site vous trouverez l’actualité relative aux principaux générateurs, tels que [Eleventy](/categories/eleventy/ "Catégorie Eleventy"), [Hugo](/categories/hugo/ "Catégorie Hugo"), [Jekyll](/categories/jekyll/ "Catégorie Jekyll"), [Next.js](/categories/next.js/ "Catégorie Next.js"), [Gatsby](/categories/gatsby/ "Catégorie Gatsby") ou encore [Cecil](/categories/cecil/ "Catégorie Cecil"), des exemples d’utilisation, des traductions d’articles de référence, des retours d’expérience, des entretiens et bien plus encore.
 
 Nous échangeons également sur [notre Slack](https://jamstatic.fr/slack), n’hésitez à nous rejoindre !
 

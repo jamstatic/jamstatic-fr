@@ -6,7 +6,7 @@ author: frank
 social:
   mastodon: DirtyF@mamot.fr
 categories:
-  - cms
+  - CMS
   - headless
 source:
   author: Nebojsa Radakovic

@@ -4,7 +4,7 @@ description: "Exemples de gestion du contexte et signification du point dans les
 date: 2018-02-08T17:27:39+01:00
 author: regis
 categories:
-  - hugo
+  - Hugo
 source:
   author: Régis Philibert
   title: Hugo, the scope, the context and the dot

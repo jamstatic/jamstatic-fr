@@ -4,7 +4,7 @@ description: "Une approche pour gérer la navigation sur un site Jamstack multil
 author: jerome
 date: 2019-09-28
 categories:
-  - eleventy
+  - Eleventy
   - i18n
 source:
   author: Jérôme Coupé

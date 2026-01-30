@@ -10,12 +10,12 @@ source:
   url: https://www.gatsbyjs.org/blog/2017-12-06-gatsby-plus-contentful-plus-netlify/
   author: Josh Weaver
 categories:
-  - gatsby
-  - contentful
-  - netlify
-  - algolia
-  - cms
-  - headless
+  - Gatsby
+  - Contentful
+  - Netlify
+  - Algolia
+  - CMS
+  - Headless
 ---
 :::intro
 Le passage d’un CMS traditionnel comme WordPress à un processus moderne de développement faisant appel à différents services dans le Cloud et à des générateurs de site statique open source peut sembler encore risqué. C’est sans doute pour cela qu'une fois le pas franchi, vous avez immédiatement envie de partager votre enthousiasme, afin de montrer que non seulement c'est possible, mais que ça peut se faire sans douleur et à moindre coût. Le témoignage de [Josh Weaver](https://twitter.com/3cordguy) sur la migration d’un site de documentation vient s'ajouter à la longue liste des heureux convertis à la [Jamstack](page:post/5-raisons-de-tester-la-jamstack).

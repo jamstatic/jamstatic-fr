@@ -4,7 +4,7 @@ description: "Un microblog est un blog qui publie des articles courts, le plus s
 date: 2018-09-07 14:26:04 +0000
 author: frank
 categories:
-  - jekyll
+  - Jekyll
 source:
   author: Fiona Voss
   title: Microblogging in Jekyll

@@ -9,8 +9,8 @@ source:
   author: Sara Soueidan
   lang: en
 categories:
-  - jekyll
-  - hugo
+  - Jekyll
+  - Hugo
 ---
 :::intro
 Si vous faites du développement front-end, du CSS, du SVG et

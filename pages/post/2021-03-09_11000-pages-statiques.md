@@ -4,10 +4,10 @@ description: "Les sites statiques pour un site de média c'est l'idéal. Rapide,
 date: 2021-03-09 14:00:00
 author: patrickF
 categories:
-  - deploiement
-  - nextjs
-  - nuxtjs
-  - cms
+  - déploiement
+  - Next.js
+  - Nuxt
+  - CMS
   - headless
 ---
 Les sites statiques pour un site de média c'est l'idéal. Rapide, léger, sécurisé, tout semble coller sur le papier. Mais est-il possible de créer un site statique avec un grand nombre de pages ?

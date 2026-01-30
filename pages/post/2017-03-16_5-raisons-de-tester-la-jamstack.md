@@ -9,7 +9,7 @@ source:
   url: https://builtvisible.com/go-static-try-jamstack/
   lang: en
 categories:
-  - jamstack
+  - Jamstack
   - headless
 ---
 :::intro

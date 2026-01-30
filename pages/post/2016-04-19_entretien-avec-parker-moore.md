@@ -5,7 +5,7 @@ date: 2016-04-19
 author: bertrand
 categories:
   - entretien
-  - jekyll
+  - Jekyll
 source:
   title: Interview with Parker Moore from Jekyll
   url: https://www.netlify.com/blog/2016/03/11/interview-with-parker-moore-from-jekyll

@@ -4,7 +4,7 @@ description: "Les deux manières de créer des collections de documents avec le 
 date: 2019-01-29T08:54:22+01:00
 author: frank
 categories:
-  - eleventy
+  - Eleventy
 source:
   author: Philip Borenstein
   title: Working with Collections

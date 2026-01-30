@@ -6,7 +6,7 @@ date: 2021-12-20T14:18:34+01:00
 author: podcast
 categories:
   - podcast
-  - hugo
+  - Hugo
 ---
 :::intro
 Dans cet entretien, [Régis Philibert](https://twitter.com/regisphilibert) revient sur son parcours, son adoption puis son travail avec Hugo en agence au quotidien, ses fonctionnalités préférées, les challenges qu'il a du relevé et ce qui rend ce

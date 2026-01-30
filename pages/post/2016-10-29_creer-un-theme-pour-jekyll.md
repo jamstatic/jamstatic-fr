@@ -4,7 +4,7 @@ description: Jekyll permet de publier des thèmes sous forme de gem, afin de fac
 author: frank
 date: 2016-10-29T15:18:59+02:00
 categories:
-  - jekyll
+  - Jekyll
 ---
 :::intro
 Depuis la version 3.2, les webdesigners ont la possibilité de créer des thèmes pour Jekyll. Le support des thèmes sous forme de gem est encore récent mais les premiers thèmes commencent à arriver. Nous allons voir dans cet article que l’opération est assez triviale si vous êtes déjà familiarisé avec Jekyll et Git. Packager un thème se fait en quelques minutes grâce à l’utilisation de `bundler`. Voyons ensemble à quoi ressemble le workflow de création de thème pour Jekyll.

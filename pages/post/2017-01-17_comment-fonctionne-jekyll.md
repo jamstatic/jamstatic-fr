@@ -10,7 +10,7 @@ source:
   title: How does Jekyll work?
   url: https://www.bytesandwich.com/jekyll/software/blogging/2016/09/14/how-does-jekyll-work.html
 categories:
-  - jekyll
+  - Jekyll
 ---
 :::intro
 Si vous suivez ce blog, vous savez déjà que Jekyll est un

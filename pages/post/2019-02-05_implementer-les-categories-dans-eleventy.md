@@ -5,7 +5,7 @@ author: frank
 date: 2019-02-05T09:15:06+01:00
 lastmod: 2019-02-06T09:10:26+01:00
 categories:
-  - eleventy
+  - Eleventy
 source:
   author: "Philip Borenstein"
   title: "Implementing Categories"

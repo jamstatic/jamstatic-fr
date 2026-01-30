@@ -5,9 +5,9 @@ description:
 date: 2017-05-29
 author: frank
 categories:
-  - jekyll
-  - netlify
-  - cms
+  - Jekyll
+  - Netlify
+  - CMS
   - headless
 ---
 :::intro

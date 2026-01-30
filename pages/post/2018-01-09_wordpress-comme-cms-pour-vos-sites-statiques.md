@@ -4,8 +4,8 @@ date: 2018-01-09T15:50:46+01:00
 description: "Grâce à son API REST WordPress fait aussi CMS headless. Stefan Baumgartner montre comment récupérer les contenus pour générer un site statique avec Metalsmith."
 author: frank
 categories:
-  - jamstack
-  - cms
+  - Jamstack
+  - CMS
   - headless
 source:
   author: "Stefan Baumgartner"

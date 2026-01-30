@@ -8,7 +8,7 @@ source:
   title: Creating a staging environment for Jekyll
   url: https://eduardoboucas.com/blog/2017/02/22/jekyll-staging-environment.html
 categories:
-  - jekyll
+  - Jekyll
 ---
 :::intro
 Dans son article, [Eduardo Boucas](https://eduardoboucas.com/) révèle comment il

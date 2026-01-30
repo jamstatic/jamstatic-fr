@@ -10,6 +10,7 @@ social:
 categories:
   - Hugo
   - Cecil
+  - Jamstatic
 ---
 À la fin de l’année dernière j’avais entrepris de pérenniser le travail de refonte du site, engagé avec [Frank](https://frank.taillandier.me) : nouveau logo et nouvelle charte graphique, impliquant la modification des templates et de la feuille de styles.
 

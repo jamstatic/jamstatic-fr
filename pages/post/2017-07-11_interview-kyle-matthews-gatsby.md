@@ -8,7 +8,7 @@ source:
   url: https://www.infoq.com/news/2017/07/gatsby-kyle-mathews-interview
   author: David Iffland
 categories:
-  - gatsby
+  - Gatsby
   - entretien
 ---
 :::intro

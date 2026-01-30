@@ -7,7 +7,7 @@ social:
 date: 2020-09-05T13:55:22+02:00
 lastmod: 2020-09-05T13:55:22+02:00
 categories:
-  - hugo
+  - Hugo
 source:
   author: "Régis Philibert"
   title: "Hugo Modules: everything you need to know!"

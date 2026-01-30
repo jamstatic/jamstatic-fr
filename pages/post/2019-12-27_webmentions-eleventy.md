@@ -7,7 +7,7 @@ social:
 date: 2019-12-27T08:48:32+01:00
 lastmod: 2019-12-27T17:05:32+01:00
 categories:
-  - eleventy
+  - Eleventy
 source:
   author: "Sia Karamalegos"
   title: "An In-Depth Tutorial of Webmentions + Eleventy"

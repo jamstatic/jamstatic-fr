@@ -4,7 +4,7 @@ description: "Comment gérer les traductions dans plusieurs langues avec Hugo."
 date: 2018-08-17T11:36:38+02:00
 author: regis
 categories:
-  - hugo
+  - Hugo
   - i18n 
 source:
   author: "Régis Philibert"

@@ -5,7 +5,7 @@ description: Quelles différences entre les plate-formes françaises et les géa
 date: 2020-12-08
 categories:
   - podcast
-  - deploiement
+  - déploiement
   - hébergement
 podcast:
   url: https://anchor.fm/jamstatic/episodes/Hberger-du-statique-en-France-enhc1t

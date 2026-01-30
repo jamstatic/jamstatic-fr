@@ -8,7 +8,7 @@ source:
   url: https://www.thenewdynamic.org/article/interview-michael-rose/
   lang: en
 categories:
-  - jekyll
+  - Jekyll
   - entretien
 ---
 Michael Rose est un des webdesigner les plus actifs dans la communauté Jekyll, il est l’auteur de thèmes populaires comme [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/), [Basically Basic](https://mmistakes.github.io/jekyll-theme-basically-basic/) ou [Hpster](https://mmistakes.github.io/hpstr-jekyll-theme/). Michael partage son expérience et son point de vue de designer qui travaille avec des générateurs de site statique comme Jekyll, Gatsby ou Hugo. Aucun logiciel n'est parfait et il y a toujours de la place pour des améliorations selon lui.

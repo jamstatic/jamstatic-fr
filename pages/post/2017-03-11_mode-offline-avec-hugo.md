@@ -8,7 +8,7 @@ source:
   url: https://gohugohq.com/howto/go-offline-with-service-worker/
   lang: en
 categories:
-  - hugo
+  - Hugo
 ---
 :::intro
 La majorité des articles publiés jusqu'ici se référaient à Jekyll,

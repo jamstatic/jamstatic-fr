@@ -4,7 +4,7 @@ description: Comment diviser par quinze le temps de génération de son site.
 date: 2018-11-28 00:00:00 +0000
 author: boris
 categories:
- - jekyll
+ - Jekyll
  - performance
 ---
 :::intro

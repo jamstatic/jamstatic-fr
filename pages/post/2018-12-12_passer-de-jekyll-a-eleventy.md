@@ -8,8 +8,8 @@ source:
   title: Turn Jekyll up to Eleventy
   url: https://paulrobertlloyd.com/articles/2018/12/turn_jekyll_up_to_eleventy/
 categories:
- - jekyll
- - eleventy
+ - Jekyll
+ - Eleventy
 ---
 :::intro
 [Jekyll](/categories/jekyll) est à ce jour le générateur de site statique le plus utilisé, c'est aussi un des plus anciens, et il fait face aujourd'hui à beaucoup de concurrents. Un des projets récents qui se rapproche le plus de Jekyll est [Eleventy](/categories/eleventy), développé par le très sympathique [Zach Leat](https://twitter.com/zachleat). Eleventy, c'est Jekyll repensé pour tirer parti de JavaScript et de l'écosystème npm. C'est un outil qui reste très simple d'approche et qui supporte Liquid comme langage de gabarit.  

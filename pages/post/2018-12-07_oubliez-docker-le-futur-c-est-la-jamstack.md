@@ -5,7 +5,7 @@ author: frank
 date: 2018-12-07T01:21:13+01:00
 lastmod: 2018-01-26T01:09:11+01:00
 categories:
-  - jamstack
+  - Jamstack
 source:
   author: "Mike Carlisle"
   title: "Forget Docker, the future is Jamstack"

@@ -6,6 +6,9 @@ date: 2020-10-03
 author: frank
 social:
   mastodon: DirtyF@mamot.fr
+categories:
+ - Gatsby
+ - Next.js
 lastmod: 2020-10-03T21:12:22+02:00
 source:
   author: Jared Palmer

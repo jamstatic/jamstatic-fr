@@ -4,7 +4,7 @@ date: 2018-08-26T18:26:33+02:00
 description: "Travis, Circle, Drone, GitLab, Jenkins : choisissez la solution d'intégration et de déploiement continu qui vous convient le mieux."
 author: frank
 categories:
- - deploiement
+ - déploiement
 source:
   author: "DJ Walker"
   title: "In Search of the Best Continuous Deployment Service"

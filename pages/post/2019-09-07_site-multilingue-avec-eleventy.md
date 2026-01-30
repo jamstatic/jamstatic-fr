@@ -5,7 +5,7 @@ author: jerome
 date: 2019-09-07T14:27:07+02:00
 lastmod: 2019-09-07T14:27:07+02:00
 categories:
-  - eleventy
+  - Eleventy
   - i18n
 source:
   author: "Jérôme Coupé"

@@ -4,8 +4,8 @@ description: "Déployez et hébergez gratuitement vos sites statiques comme les 
 date: 2018-01-07T21:05:43+01:00
 author: frank
 categories:
-  - deploiement
-  - netlify
+  - déploiement
+  - Netlify
 source:
   author: Phil Hawksworth
   title: "10 Netlify features to surprise and delight"

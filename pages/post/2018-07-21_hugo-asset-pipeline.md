@@ -4,7 +4,7 @@ description: "Depuis la version 0.43 Hugo offre une gestion des assets: Sass, mi
 date: 2018-07-21T20:54:26+02:00
 author: frank
 categories:
-  - hugo
+  - Hugo
 typora-copy-images-to: ../../assets/images/post/${filename}
 ---
 :::intro

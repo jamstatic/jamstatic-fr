@@ -6,7 +6,7 @@ date: 2016-04-12
 author: bertrand
 categories:
   - entretien
-  - jekyll
+  - Jekyll
 ---
 :::intro
 Cet article est le premier d’une série qui présente des utilisateurs de la Jamstack, nous commençons avec Frank Taillandier, contributeur à Jamstatic.

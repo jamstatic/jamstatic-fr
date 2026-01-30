@@ -4,7 +4,7 @@ description: Un CMS headless s'occupe uniquement de vous aider à modéliser et 
 author: frank
 date: 2017-12-15T16:40:50+01:00
 categories:
-  - cms
+  - CMS
   - headless
 ---
 Dans les architectures [Jamstack](page:post/5-raisons-de-tester-la-jamstack), chaque service est assuré par un outil spécifique qui va se contenter de faire une chose et une seule, si possible de son mieux. L'édition de contenus pourra par exemple être confiée à un CMS _headless_ — qui contrairement à un CMS dynamique classique comme WordPress ou Drupal ne sera pas chargé de la gestion des modèles, puisque c'est le rôle du générateur de site statique, ni du rendu, puisque les pages HTML générées seront ensuite directement servies depuis un CDN.

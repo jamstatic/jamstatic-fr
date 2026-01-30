@@ -7,7 +7,7 @@ author: frank
 social:
   mastodon: DirtyF@mamot.fr
 categories:
-  - jamstack
+  - Jamstack
 source:
   author: "Nebojsa Radakovic"
   title: "Jamstack for clients"

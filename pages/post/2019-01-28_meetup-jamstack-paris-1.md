@@ -5,8 +5,8 @@ date: 2019-01-28T18:45:24+01:00
 author: frank
 categories:
   - meetup
-  - jamstack
-  - gatsby
+  - Jamstack
+  - Gatsby
 ---
 :::intro
 Au programme du premier meetup Jamstack Paris, un retour d'expérience sur la migration d'un site Angular vers Gatsby, et un exemple de développement en live d'un plugin Gatsby. [Les vidéos sont en ligne](https://www.youtube.com/channel/UC66eQOycjMnaqzpbRUhEK2w).

@@ -10,7 +10,7 @@ source:
   url: https://www.siteleaf.com/blog/making-your-first-jekyll-theme-part-1/
   author: David Darnes
 categories:
-  - jekyll
+  - Jekyll
 ---
 :::intro
 Si vous êtes designer web, que vous savez écrire des pages HTML, les mettre en forme avec CSS, voire les enrichir avec du JavaScript, vous n’aurez aucun mal à développer des thèmes pour Jekyll. Le langage de templating [Liquid](https://shopify.github.io/liquid/) a été conçu par Shopify pour les web designers et se prend rapidement en main. Développer un thème pour Jekyll demande de respecter quelques conventions et de se familiariser avec la gestion des gems Ruby, rien de bien sorcier. Dans cet article, [David Darnes](https://darn.es/), développeur du thème [Alembic](https://alembic.darn.es), explique comment utiliser une 💎 gem de thème pour Jekyll, puis comment développer la vôtre.

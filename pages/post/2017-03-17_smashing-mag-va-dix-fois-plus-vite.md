@@ -9,9 +9,9 @@ source:
   url: https://www.netlify.com/blog/2017/03/16/smashing-magazine-just-got-10x-faster/
   lang: en
 categories:
-  - hugo
-  - netlify
-  - cms
+  - Hugo
+  - Netlify
+  - CMS
 ---
 :::intro
 La refonte de Smashing Magazine à l’aide d’un générateur de site

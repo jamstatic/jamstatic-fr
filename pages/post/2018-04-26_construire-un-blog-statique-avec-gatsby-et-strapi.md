@@ -3,7 +3,7 @@ title: Développer un blog statique avec Gatsby et Strapi
 description: Découvrez comment développer un blog en utilisant Gatsby et Strapi en quelques minutes.
 date: 2018-04-26
 author: pierre
-categories: [cms, headless, strapi, gatsby]
+categories: [CMS, headless, Strapi, Gatsby]
 source:
   url: https://strapi.io/blog/building-a-static-website-using-gatsby-and-strapi
   author: Pierre Burgy

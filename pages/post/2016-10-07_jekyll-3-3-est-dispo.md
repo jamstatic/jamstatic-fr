@@ -6,7 +6,7 @@ description:
 date: 2016-10-07
 author: frank
 categories:
-  - jekyll
+  - Jekyll
 ---
 :::intro
 Plein de nouveautés pour vous simplifier la vie dans la version

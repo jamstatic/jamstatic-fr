@@ -9,7 +9,7 @@ source:
   url: https://snipcart.com/blog/hugo-tutorial-static-site-ecommerce
   lang: en
 categories:
-  - hugo
+  - Hugo
   - ecommerce
   - performance
 canonical:

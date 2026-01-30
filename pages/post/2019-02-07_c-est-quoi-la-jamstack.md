@@ -9,7 +9,7 @@ source:
   title: WTF is Jamstack?
   url: https://jamstack.wtf/
 categories:
-  - jamstack
+  - Jamstack
 ---
 :::intro
 [Pedro Duarte](https://twitter.com/peduarte) a lancé [https://jamstack.wtf](https://jamstack.wtf) un mini-site afin de donner une vue d'ensemble de la Jamstack. Nous vous proposons ici sa traduction en français afin de permettre à toujours plus de développeurs d'adopter cette façon de travailler.

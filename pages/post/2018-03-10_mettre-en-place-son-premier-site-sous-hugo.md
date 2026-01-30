@@ -4,7 +4,7 @@ description: Créer un site statique fonctionnel sous Hugo en moins de 30 minute
 date: 2018-03-10T14:57:51+01:00
 author: frank
 categories:
-  - hugo
+  - Hugo
 source:
   author: Chris Macrae
   title: "Up & Running With Hugo Part I: Building Your First Site"

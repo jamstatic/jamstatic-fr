@@ -4,7 +4,7 @@ description: "Présentation d’Eleventy, le générateur de site statique le pl
 date: 2018-01-24T20:40:44+01:00
 author: frank
 categories:
-  - eleventy
+  - Eleventy
 source:
   author: "Zach Leatherman"
   title: "Making a Simple Web Site with the Simplest Static Site Generator, Level 1"

@@ -7,7 +7,7 @@ description:
   site statique basé sur JavaScript, particulièrement flexible et qui sait se faire
   oublier.
 categories:
-  - eleventy
+  - Eleventy
 source:
   author: Zach Leatherman
   title: Introducing Eleventy

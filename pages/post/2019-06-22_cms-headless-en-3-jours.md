@@ -7,9 +7,9 @@ social:
   mastodon: arnaud@gazuji.com
 date: 2019-06-22
 categories:
-  - cms
+  - CMS
   - headless
-  - jekyll
+  - Jekyll
 source:
   author: Shea Daniels
   title: Implementing a CMS in 3 Days

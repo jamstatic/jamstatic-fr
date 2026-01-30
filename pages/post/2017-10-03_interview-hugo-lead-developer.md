@@ -5,7 +5,7 @@ description: >
 date: 2017-10-03 13:45:36 +0200
 author: frank
 categories:
-  - hugo
+  - Hugo
   - entretien
 ---
 :::intro

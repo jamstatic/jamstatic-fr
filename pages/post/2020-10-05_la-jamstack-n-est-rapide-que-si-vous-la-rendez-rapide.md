@@ -7,7 +7,7 @@ social:
   twitter: ArnaudLigny
   mastodon: arnaud@gazuji.com
 categories:
- - jamstack
+ - Jamstack
  - performance
 source:
   author: Nicolas Hoizey

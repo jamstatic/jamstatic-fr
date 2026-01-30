@@ -4,8 +4,8 @@ description: Jekyll et Hugo sont parmi les générateurs de site statiques les p
 author: frank
 date: 2018-04-06 18:10:03 +0000
 categories:
-- hugo
-- jekyll
+- Hugo
+- Jekyll
 source:
   author: Chris Macrae
   title: Hugo or Jekyll? 6 Factors You Should Know

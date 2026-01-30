@@ -9,7 +9,7 @@ source:
   url: https://medium.com/tmw-interactive/creating-dynamic-layouts-with-jekyll-3bbb7fc57d1f#.iac16fjec
   lang: en
 categories:
-  - jekyll
+  - Jekyll
 ---
 :::intro
 Dans [son article publié sur Medium](https://medium.com/tmw-interactive/creating-dynamic-layouts-with-jekyll-3bbb7fc57d1f#.iac16fjec), Zander Martineau partage les secrets de fabrication du portfolio client de son agence. Zander a dû faire preuve d’ingéniosité et de créativité afin de pouvoir varier les mises en pages des différentes études de cas à l’aide de Jekyll.

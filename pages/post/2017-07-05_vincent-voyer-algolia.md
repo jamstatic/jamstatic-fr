@@ -5,7 +5,7 @@ author: frank
 date: 2017-07-05 12:34:00 +02:00
 categories:
   - entretien
-  - algolia
+  - Algolia
 ---
 :::intro
 Sur un site généré, l’interactivité est reléguée côté client, au navigateur,

@@ -8,7 +8,7 @@ source:
   title: The Design Portfolio Workflow
   url: https://medium.com/@katfukui/the-design-portfolio-workflow-a94030d0b39e#.uut2a0ulw
 categories:
-  - jekyll
+  - Jekyll
 typora-copy-images-to: ../../assets/images/post/${filename}
 ---
 :::intro

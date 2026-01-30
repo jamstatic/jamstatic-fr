@@ -5,8 +5,8 @@ author: jerome
 date: 2019-09-08T23:00:48+02:00
 lastmod: 2019-09-08T23:00:48+02:00
 categories:
-  - eleventy
-  - cms
+  - Eleventy
+  - CMS
   - headless
 source:
   author: Jérôme Coupé

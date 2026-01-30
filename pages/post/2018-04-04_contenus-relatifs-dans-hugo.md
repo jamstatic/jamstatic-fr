@@ -4,7 +4,7 @@ date: 2018-04-04T22:25:16+02:00
 description: "Définissez des relations entre vos différents types de contenus dans Hugo de façon performante."
 author: regis
 categories:
-  - hugo
+  - Hugo
 source:
   author: "Régis Philibert"
   title: "Better Relationships in Hugo with Hugo's Related Content"

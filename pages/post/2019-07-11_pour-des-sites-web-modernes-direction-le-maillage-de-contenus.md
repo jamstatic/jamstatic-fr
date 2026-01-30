@@ -7,8 +7,8 @@ author: frank
 social:
   mastodon: DirtyF@mamot.fr
 categories:
-  - gatsby
-  - cms
+  - Gatsby
+  - CMS
   - headless
 source:
   author: Sam Bhagwat

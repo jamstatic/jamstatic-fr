@@ -3,6 +3,9 @@ title: "Un site statique avec des composants à l’aide de Nunjucks"
 description: "Apprenez à construire un site statique avec des composants à l’aide d’un préprocesseur HTML."
 date: 2018-03-13T20:21:48+01:00
 author: frank
+categories:
+  - Jamstack
+  - Nunjucks
 source:
   author: "Chris Coyier"
   title: "Building A Static Site With Components Using Nunjucks"
