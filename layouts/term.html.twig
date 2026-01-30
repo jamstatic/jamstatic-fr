@@ -8,17 +8,17 @@
       {#- list of 8 related categories (with more than 3 articles), excluding current category ~#}
       {%- set categories = site.taxonomies['categories']|filter(c => c != page.term and c|length > 3)|slice(0, 8) ~%}
       {%- for category in categories ~%}
-        <a style="view-transition-name: {{ category.name|slugify }}" class="text-xl font-semibold capitalize text-violet-dark hover:text-rose-600 dark:text-blue-500 dark:hover:text-blue-300" href="{{ url(category.id) }}">{{ category.name }}</a>
+        <a style="view-transition-name: {{ category.name|slugify }}" class="text-xl font-semibold text-violet-dark hover:text-rose-600 dark:text-blue-500 dark:hover:text-blue-300" href="{{ url(category.id) }}">{{ category.name }}</a>
         <span class="text-gray-600">({{ category|length }})</span>
         <span class="dark:text-blue-500">&nbsp;&middot;</span>
       {%- endfor ~%}
         {#- link to all categories ~#}
-        <a class="text-xl font-semibold capitalize text-violet-dark hover:text-rose-600 dark:text-blue-500 dark:hover:text-blue-300" href="{{ url('categories') }}">{% trans %}Toutes{% endtrans %}</a>
+        <a class="text-xl font-semibold text-violet-dark hover:text-rose-600 dark:text-blue-500 dark:hover:text-blue-300" href="{{ url('categories') }}">{% trans %}Toutes{% endtrans %}</a>
         <span class="text-gray-600">({{ site.taxonomies['categories']|length }})</span>
       </nav>
       {#- title ~#}
       <h1 class="text-4xl font-display font-extrabold text-center text-violet-dark dark:text-blue-500">
-        {% set term_html = '<span style="view-transition-name: %s" class="capitalize text-rose-600">%s</span>'|format(page.title|slugify, page.title|title) %}
+        {% set term_html = '<span style="view-transition-name: %s" class="text-rose-600">%s</span>'|format(page.title|slugify, page.title) %}
         {% trans with {'%term%': term_html} %}Articles &laquo;&nbsp;%term%&nbsp;&raquo{% endtrans %}
       </h1>
     </div>
