@@ -39,13 +39,11 @@
         {#- navigation ~#}
         <nav class="flex items-center">
           <ul class="flex justify-end space-x-4">
-            <li class="size-6">{{ include('partials/icons/rss.html.twig') }}</li>
-            <li class="size-6">{{ include('partials/icons/podcast.html.twig') }}</li>
-            <li class="size-6">{{ include('partials/icons/slack.html.twig') }}</li>
-            {%- if site.social.twitter.url is defined ~%}
-            <li class="size-6">{{ include('partials/icons/twitter.html.twig') }}</li>
-            {%- endif ~%}
-            <li class="size-6">{{ include('partials/icons/github.html.twig') }}</li>
+            <li>{{ include('partials/icons/rss.html.twig') }}</li>
+            <li>{{ include('partials/icons/podcast.html.twig') }}</li>
+            <li>{{ include('partials/icons/slack.html.twig') }}</li>
+            <li>{{ include('partials/icons/bluesky.html.twig') }}</li>
+            <li>{{ include('partials/icons/github.html.twig') }}</li>
           </ul>
         </nav>
       </header>
@@ -67,13 +65,11 @@
     {#- footer ~#}
     <footer class="py-8 text-lg text-center text-white border-b-8 bg-violet border-violet-light">
       <ul class="flex justify-center mb-8 space-x-6">
-        <li class="w-6">{{- include('partials/icons/rss.html.twig') -}}</li>
-        <li class="w-6">{{- include('partials/icons/podcast.html.twig') -}}</li>
-        <li class="w-6">{{- include('partials/icons/slack.html.twig') -}}</li>
-        {%- if site.social.twitter.url is defined ~%}
-        <li class="w-6">{{- include('partials/icons/twitter.html.twig') -}}</li>
-        {%- endif ~%}
-        <li class="w-6">{{- include('partials/icons/github.html.twig') -}}</li>
+        <li>{{ include('partials/icons/rss.html.twig') }}</li>
+        <li>{{ include('partials/icons/podcast.html.twig') }}</li>
+        <li>{{ include('partials/icons/slack.html.twig') }}</li>
+        <li>{{ include('partials/icons/bluesky.html.twig') }}</li>
+        <li>{{ include('partials/icons/github.html.twig') }}</li>
       </ul>
       <p class="mb-2 text-base">
         <a class="font-semibold hover:underline" href="{{ url('a-propos') }}">À propos</a>
