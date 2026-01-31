@@ -14,6 +14,8 @@ module.exports = {
     'ease-out',
     'opacity-0',
     'opacity-100',
+    'opacity-60',
+    'mt-0.5'
   ],
   plugins: [
     require('@tailwindcss/typography')({
