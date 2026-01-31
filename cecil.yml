@@ -15,9 +15,9 @@ languages:
 taxonomies:
   categories: category
 social:
-  #twitter:
-  #  username: jamstatic_fr
-  #  url: https://twitter.com/jamstatic_fr/
+  bluesky:
+    username: jamstatic.fr
+    url: https://bsky.app/profile/jamstatic.fr
   github:
     username: jamstatic
     url: https://github.com/jamstatic/
