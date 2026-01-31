@@ -1,0 +1,5 @@
+{%- if site.social.bluesky.url is defined -%}
+<a class="block size-6" href="{{ site.social.bluesky.url }}" title="Suivre Jamstatic sur Bluesky">
+	{{- include('partials/svg/icon-bluesky.svg') -}}
+</a>
+{%- endif -%}

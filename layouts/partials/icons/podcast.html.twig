@@ -1,5 +1,5 @@
 {%- if site.social.podcast.url is defined -%}
-<a href="{{ site.social.podcast.url }}" title="Écouter {{ site.social.podcast.title }}">
+<a class="block size-6" href="{{ site.social.podcast.url }}" title="Écouter {{ site.social.podcast.title }}">
 	{{- include('partials/svg/icon-podcast.svg') -}}
 </a>
 {%- endif -%}
