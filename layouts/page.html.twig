@@ -30,6 +30,7 @@
   <body class="{{ page.type }} dark:bg-gray-900">
     <div class="sticky top-0 z-10 text-white bg-violet-light">
       {#- sticky header ~#}
+      {%- cache 'header-' ~ site.build ~%}
       <header class="container mx-auto py-3 w-11/12 lg:w-2/3 xl:w-1/2 flex items-center justify-between">
         {#- logo + title ~#}
         <a href="{{ url(site.home) }}" title="Accueil" class="flex space-x-2 items-center">
@@ -47,6 +48,7 @@
           </ul>
         </nav>
       </header>
+      {%- endcache ~%}
     </div>
     {%- block jumbotron %}{% endblock jumbotron ~%}
     {#- main ~#}
@@ -63,6 +65,7 @@
       {%- endblock main ~%}
     </main>
     {#- footer ~#}
+    {%- cache 'footer-' ~ site.build ~%}
     <footer class="py-8 text-lg text-center text-white border-b-8 bg-violet border-violet-light">
       <ul class="flex justify-center mb-8 space-x-6">
         <li>{{ include('partials/icons/rss.html.twig') }}</li>
@@ -101,5 +104,6 @@
         anchors.add('.markdown h2, .markdown h3, .markdown h4, .markdown h5');
       });
     {% endapply %}</script>
+    {%- endcache ~%}
   </body>
 </html>
