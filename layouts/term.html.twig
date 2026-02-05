@@ -19,7 +19,7 @@
       {#- title ~#}
       <h1 class="text-4xl font-display font-extrabold text-center text-violet-dark dark:text-blue-500">
         {%- set term_html = '<span style="view-transition-name: %s" class="text-rose-600">%s</span>'|format(page.title|slugify, page.title) -%}
-        {%- trans with {'%term%': term_html} %}Articles &laquo;&nbsp;%term%&nbsp;&raquo{% endtrans ~%}
+        {%- trans with {'%term%': term_html} %}Articles « %term% »{% endtrans ~%}
       </h1>
     </div>
     {%- endblock ~%}

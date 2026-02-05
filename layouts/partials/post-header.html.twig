@@ -5,7 +5,7 @@
               <h2 style="view-transition-name: {{ p.slug }}" class="mb-2 text-2xl md:text-3xl font-display font-extrabold xl:leading-snug text-violet dark:text-blue-500">
                 {#- post: status ~#}
                 {%- if (p.fmvariables.published ?? true) == false or (p.fmvariables.draft ?? false) == true ~%}
-                <span class="mr-1">(non publié)</span>
+                <span class="mr-1">({% trans %}non publié{% endtrans %})</span>
                 {%- endif ~%}
                 <a href="{{ url(p) }}" class="hover:underline dark:hover:text-blue-300">{{ p.title }}</a>
               </h2>
@@ -13,7 +13,7 @@
               <h1 style="view-transition-name: {{ p.slug }}" class="mb-2 text-2xl md:text-3xl font-display font-extrabold xl:leading-snug text-violet dark:text-blue-500">
                 {#- post: status ~#}
                 {%- if (p.fmvariables.published ?? true) == false or (p.fmvariables.draft ?? false) == true ~%}
-                <span class="mr-1">(non publié)</span>
+                <span class="mr-1">({% trans %}non publié{% endtrans %})</span>
                 {%- endif ~%}
                 {{ p.title }}
               </h1>
@@ -24,7 +24,7 @@
                 {%- if author.name|default and author.github|default -%}
                 <div>
                   {%- set avatar = asset('https://github.com/' ~ author.github ~ '.png?size=352', {filename: 'avatar-' ~ author.github|slugify ~ '.png'}) ~%}
-                  {{- html(avatar, options={responsive: 'density'}, attributes={width: 44, alt: author.name, class: 'size-11 max-w-11 rounded-full'}) ~}}
+                  {{- html(avatar, options={responsive: 'density'}, attributes={width: 44, alt: 'Avatar de %author%'|trans({'%author%': author.name}), class: 'size-11 max-w-11 rounded-full'}) ~}}
                 </div>
                 {%- endif ~%}
                 <div class="flex flex-col gap-1">
@@ -52,7 +52,7 @@
                       {#- post: read time ~#}
                       <div class="flex items-center space-x-1 md:after:content-['\00a0\00B7']">
                         <div class="size-4">{{ include('partials/svg/icon-reading-time.svg') }}</div>
-                        <div>{{ readtime(p.content) }} min</div>
+                        <div>{{ '%readtime% min'|trans({'%readtime%': readtime(p.content)}) }}</div>
                       </div>
                     </div>
                     {#- post: categories ~#}
@@ -74,8 +74,8 @@
               {%- if page.source|default -%}
                 {%- if page.source.url|default ~%}
               <p class="mt-2 text-base text-black-grape-400 dark:text-black-grape-200">
-                Source : <a class="no-underline font-display font-extrabold text-rose hover:underline" href="{{ page.source.url }}"><em>{{ page.source.title|default(page.source.url) }}</em></a>
-                {%- if page.source.author|default %} par {{ page.source.author }}{% endif ~%}.
+                {{- 'Source : %source_title%'|trans({'%source_title%': '<a class="no-underline font-display font-extrabold text-rose hover:underline" href="' ~ page.source.url ~ '">' ~ page.source.title|default(page.source.url) ~ '</a>'}) ~}}
+                {%- if page.source.author|default %} {% trans with {'%source_author%': page.source.author} %}par %source_author%{% endtrans %}{% endif ~%}.
               </p>
                 {%- endif -%}
               {%- endif ~%}

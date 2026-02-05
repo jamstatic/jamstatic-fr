@@ -33,8 +33,8 @@
       {%- cache 'header-' ~ page.type ~'-' ~ site.build ~%}
       <header class="container mx-auto py-3 w-11/12 lg:w-2/3 xl:w-1/2 flex items-center justify-between">
         {#- logo + title ~#}
-        <a href="{{ url(site.home) }}" title="Accueil" class="flex space-x-2 items-center">
-          {{ html(asset('icon.png')|resize(84), options={responsive: 'density'}, attributes={width: 28, alt: 'Logo ' ~ site.title, class: 'size-7 rounded-full'}) }}
+        <a href="{{ url(site.home) }}" title="{{ 'Retourner à l’accueil'|trans }}" class="flex space-x-2 items-center">
+          {{ html(asset('icon.png')|resize(84), options={responsive: 'density'}, attributes={width: 28, alt: 'Logo de %site_name%'|trans({'%site_name%': site.title}), class: 'size-7 rounded-full'}) }}
           <div id="site-title" class="{% if page.type == 'homepage' %}hidden opacity-0 {% endif %}text-xl font-display font-medium transition-opacity duration-1000 ease-out">{{ site.title }}</div>
         </a>
         {#- navigation ~#}
@@ -75,13 +75,16 @@
         <li>{{ include('partials/icons/github.html.twig') }}</li>
       </ul>
       <p class="mb-2 text-base">
-        <a class="font-semibold hover:underline" href="{{ url('a-propos') }}">À propos</a>
+        <a class="font-semibold hover:underline" href="{{ url('a-propos') }}">{% trans %}À propos{% endtrans %}</a>
       </p>
       <p class="mb-2 text-sm md:text-base">
-        Site web généré par <a class="font-semibold hover:underline" href="{{ cecil.url }}">Cecil</a> et déployé par <a class="font-semibold hover:underline" href="https://netlify.com">Netlify</a>
+        {%- set generated_by = '<a class="font-semibold hover:underline" href="' ~ cecil.url ~ '">Cecil</a>' -%}
+        {%- set hosted_by = '<a class="font-semibold hover:underline" href="https://netlify.com">Netlify</a>' -%}
+        {{- 'Site web généré par %generated_by% et déployé par %hosted_by%'|trans({'%generated_by%': generated_by, '%hosted_by%': hosted_by}) ~}}
       </p>
       <p class="text-sm md:text-base">
-        Contenus sous Licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">CC BY-NC-SA 4.0</a>
+        {%- set license = '<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">CC BY-NC-SA 4.0</a>' -%}
+        {{- 'Contenus sous licence %license%'|trans({'%license%': license}) ~}}
       </p>
     </footer>
     {#- JS ~#}
