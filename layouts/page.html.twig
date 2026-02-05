@@ -30,7 +30,7 @@
   <body class="{{ page.type }} dark:bg-gray-900">
     <div class="sticky top-0 z-10 text-white bg-violet-light">
       {#- sticky header ~#}
-      {%- cache 'header-' ~ site.build ~%}
+      {%- cache 'header-' ~ page.type ~'-' ~ site.build ~%}
       <header class="container mx-auto py-3 w-11/12 lg:w-2/3 xl:w-1/2 flex items-center justify-between">
         {#- logo + title ~#}
         <a href="{{ url(site.home) }}" title="Accueil" class="flex space-x-2 items-center">
