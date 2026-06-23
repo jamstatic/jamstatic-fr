@@ -101,5 +101,9 @@ netlify:
   redirects:
     - from: https://jamstatic.netlify.app/*
       to: https://jamstatic.fr/:splat
+      status: 301
+      force: true
     - from: https://master--jamstatic.netlify.app/*
       to: https://jamstatic.fr/:splat
+      status: 301
+      force: true
