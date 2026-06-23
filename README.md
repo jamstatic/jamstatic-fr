@@ -61,8 +61,7 @@ gh pr create
 ### Générer la feuille de styles avec [Tailwind CSS v3](https://v3.tailwindcss.com)
 
 ```bash
-npm install
-npm run css:build
+vendor/bin/tailwind-builder assets/css/tailwind.css --minify --tailwind-version=v3.4.19
 ```
 
 ## Production
