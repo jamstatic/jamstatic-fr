@@ -83,7 +83,7 @@ output:
       extension: xml
       exclude: [redirect, paginated]
   pagetypeformats:
-    homepage: [html, atom, jsonfeed]
+    homepage: [html, atom, jsonfeed, llms]
 optimize:
   images:
     ext: [jpeg, jpg, png, webp, svg, gif]
