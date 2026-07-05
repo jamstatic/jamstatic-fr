@@ -74,17 +74,15 @@
         <li>{{ include('partials/icons/bluesky.html.twig') }}</li>
         <li>{{ include('partials/icons/github.html.twig') }}</li>
       </ul>
-      <p class="mb-2 text-base">
-        <a class="font-semibold hover:underline" href="{{ url('a-propos') }}">{% trans %}À propos{% endtrans %}</a>
-      </p>
+      <p class="mb-2 text-base"><a class="font-semibold hover:underline" href="{{ url('a-propos') }}">{% trans %}À propos{% endtrans %}</a></p>
       <p class="mb-2 text-sm md:text-base">
         {%- set generated_by = '<a class="font-semibold hover:underline" href="' ~ cecil.url ~ '">Cecil</a>' -%}
         {%- set hosted_by = '<a class="font-semibold hover:underline" href="https://netlify.com">Netlify</a>' -%}
-        {{- 'Site web généré par %generated_by% et déployé par %hosted_by%'|trans({'%generated_by%': generated_by, '%hosted_by%': hosted_by}) ~}}
+        {{- 'Site web généré par %generated_by% et déployé par %hosted_by%'|trans({'%generated_by%': generated_by, '%hosted_by%': hosted_by}) -}}
       </p>
       <p class="text-sm md:text-base">
         {%- set license = '<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr">CC BY-NC-SA 4.0</a>' -%}
-        {{- 'Contenus sous licence %license%'|trans({'%license%': license}) ~}}
+        {{- 'Contenus sous licence %license%'|trans({'%license%': license}) -}}
       </p>
     </footer>
     {#- JS ~#}
