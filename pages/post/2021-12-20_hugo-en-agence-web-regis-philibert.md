@@ -21,7 +21,7 @@ Si vous vous intéressez à [Hugo](/categories/hugo/), il y a de grandes chance 
 
 ## Son parcours
 
-![Rex, Regis: Hugo et Orbi](/images/regis-philibert.png "Régis Philibert"){width=250}
+![Rex, Regis: Hugo et Orbi](../../assets/images/regis-philibert.png "Régis Philibert"){width=250}
 
 Régis est développeur web front-end depuis plus de 10 ans. Après avoir développé pas mal de sites web avec WordPress, Hugo est petit à petit devenu son outil de prédilection depuis quelques années pour développer des sites pré-rendus et servis depuis des CDNs.
 
