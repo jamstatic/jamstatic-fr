@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a715bc9bbe1021d29a168f3224cda491",
+    "content-hash": "d3a9593620a6989dcb080499b6164731",
     "packages": [
         {
             "name": "aligny/tailwind-builder",
@@ -181,16 +181,16 @@
         },
         {
             "name": "cecil/theme-pwa",
-            "version": "2.20.1",
+            "version": "2.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-pwa.git",
-                "reference": "b9d4bc0ec7f20d783833e4be5cfc3adddc71726a"
+                "reference": "8c2d820b9dd201df42be607015eb7c026245d462"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-pwa/zipball/b9d4bc0ec7f20d783833e4be5cfc3adddc71726a",
-                "reference": "b9d4bc0ec7f20d783833e4be5cfc3adddc71726a",
+                "url": "https://api.github.com/repos/Cecilapp/theme-pwa/zipball/8c2d820b9dd201df42be607015eb7c026245d462",
+                "reference": "8c2d820b9dd201df42be607015eb7c026245d462",
                 "shasum": ""
             },
             "require": {
@@ -215,7 +215,7 @@
                 "theme"
             ],
             "support": {
-                "source": "https://github.com/Cecilapp/theme-pwa/tree/2.20.1"
+                "source": "https://github.com/Cecilapp/theme-pwa/tree/2.21.0"
             },
             "funding": [
                 {
@@ -227,7 +227,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2026-07-05T14:35:39+00:00"
+            "time": "2026-07-10T02:24:09+00:00"
         },
         {
             "name": "psr/container",
