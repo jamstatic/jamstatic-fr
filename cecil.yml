@@ -52,7 +52,6 @@ pages:
     - section: post
       path: :year/:month/:day/:slug
   body:
-    highlight: true
     images:
       formats: [webp, avif]
       responsive: true
