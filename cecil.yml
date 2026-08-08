@@ -23,8 +23,8 @@ social:
     url: https://github.com/jamstatic/
   opencollective:
     url: https://opencollective.com/jamstatic
-  meetup:
-    url: https://www.meetup.com/fr-FR/Jamstack-Toulouse/
+  #meetup:
+  #  url: https://www.meetup.com/fr-FR/Jamstack-Toulouse/
   podcast:
     title: Génération Statique
     url: https://anchor.fm/jamstatic
