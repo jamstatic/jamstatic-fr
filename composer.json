@@ -1,7 +1,7 @@
 {
   "require": {
-    "cecil/theme-netlify": "^2.2",
-    "cecil/theme-pwa": "^2.21",
+    "cecil/theme-netlify": "^3.0",
+    "cecil/theme-pwa": "^3.0",
     "aligny/tailwind-builder": "^1.2"
   },
   "config": {
