@@ -7,13 +7,16 @@ description: "Jamstatic, la communauté des sites statiques et des architectures
 #  url: https://jamstatic.fr
 #  email: contact@jamstatic.fr
 image: icon.png
+
 language: fr
 languages:
   - code: fr
     name: Français
     locale: fr
+
 taxonomies:
   categories: category
+
 social:
   #bluesky:
   #  username: jamstatic.fr
@@ -29,6 +32,7 @@ social:
     title: Génération Statique
     url: https://anchor.fm/jamstatic
     rss: https://anchor.fm/s/39f4fa04/podcast/rss
+
 cloudinary:
   account: aligny
   asset: jamstatic/og/twitter-card-bg-2.png
@@ -39,12 +43,15 @@ anchor:
   version: 5.0.0
 googlefonts:
   url: https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Roboto&display=swap
+
 theme:
   - netlify
   - pwa
+
 metatags:
   articles: post
   jsonld: true
+
 pages:
   pagination:
     max: 10
@@ -53,7 +60,7 @@ pages:
       path: :year/:month/:day/:slug
   body:
     images:
-      formats: [webp, avif]
+      formats: [avif, webp]
       responsive: true
       class: "dark:brightness-90"
       caption: true
@@ -86,16 +93,19 @@ output:
 optimize:
   images:
     ext: [jpeg, jpg, png, webp, svg, gif]
-manifest:
-  background_color: "#300A66"
-  theme_color: "#4A21CC"
-  shortcuts: true
-serviceworker:
-  enabled: true
-  update:
-    snackbar: true
-  offline:
-    snackbar: true
+
+pwa:
+  manifest:
+    background_color: "#300A66"
+    theme_color: "#4A21CC"
+    shortcuts: true
+  serviceworker:
+    enabled: true
+    update:
+      snackbar: true
+    offline:
+      snackbar: true
+
 netlify:
   redirects:
     - from: https://jamstatic.netlify.app/*
