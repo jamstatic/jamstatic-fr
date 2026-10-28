@@ -58,10 +58,10 @@ gh pr create
 
 ## Développement
 
-### Générer la feuille de styles avec [Tailwind CSS v3](https://v3.tailwindcss.com)
+### Générer la feuille de styles avec [Tailwind CSS v4](https://tailwindcss.com)
 
 ```bash
-vendor/bin/tailwind-builder assets/css/tailwind.css --minify --tailwind-version=v3.4.19
+vendor/bin/tailwind-builder assets/css/tailwind.css --minify --tailwind-version=v4.3.3
 ```
 
 ## Production

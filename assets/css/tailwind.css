@@ -1,11 +1,123 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss" source(none);
+@source "../../layouts";
+@source inline("anchorjs-link dark:brightness-90 hidden font-display font-medium transition-opacity duration-1000 ease-out opacity-{0,60,100} mt-0.5");
+
+@plugin "@tailwindcss/typography" {
+  className: markdown;
+}
+
+@theme {
+  --default-font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-*: initial;
+  --font-display: Poppins, system-ui, sans-serif;
+  --font-body: Roboto, system-ui, sans-serif;
+
+  --color-*: initial;
+  --color-white: white;
+  --color-black: #231b30;
+  --color-violet: #300a66;
+  --color-violet-light: #4a21cc;
+  --color-violet-dark: #26153f;
+  --color-rose: #ff4863;
+  --color-rose-50: #fcf9f8;
+  --color-rose-100: #fdeef2;
+  --color-rose-200: #fbcfe4;
+  --color-rose-300: #faa7cd;
+  --color-rose-400: #fb6ea5;
+  --color-rose-500: #fc437c;
+  --color-rose-600: #ff4863;
+  --color-rose-700: #de1f47;
+  --color-rose-800: #b31a39;
+  --color-rose-900: #8f162e;
+  --color-blue: #7dacff;
+  --color-blue-100: #e5efff;
+  --color-blue-200: #ccdfff;
+  --color-blue-300: #b3cfff;
+  --color-blue-400: #99beff;
+  --color-blue-500: #7dacff;
+  --color-blue-600: #669eff;
+  --color-blue-700: #4d8eff;
+  --color-blue-800: #337eff;
+  --color-blue-900: #1a6eff;
+  --color-black-grape: #231b31;
+  --color-black-grape-100: #e6e1ef;
+  --color-black-grape-200: #b1a3cc;
+  --color-black-grape-300: #7c64aa;
+  --color-black-grape-400: #4e3e70;
+  --color-black-grape-500: #231b31;
+  --color-black-grape-600: #1c1627;
+  --color-black-grape-700: #15101e;
+  --color-black-grape-800: #0e0b14;
+  --color-black-grape-900: #07050a;
+  --color-gray: #71717a;
+  --color-gray-50: #fafafa;
+  --color-gray-100: #f4f4f5;
+  --color-gray-200: #e4e4e7;
+  --color-gray-300: #d4d4d8;
+  --color-gray-400: #a1a1aa;
+  --color-gray-500: #71717a;
+  --color-gray-600: #52525b;
+  --color-gray-700: #3f3f46;
+  --color-gray-800: #27272a;
+  --color-gray-900: #18181b;
+}
+
+/* Typography: default */
+@utility markdown {
+  & :where(h1, h2, h3) {
+    color: var(--color-violet);
+    font-family: Poppins;
+  }
+  & :where(a) {
+    color: var(--color-violet);
+    &:hover {
+      color: var(--color-violet-light);
+    }
+  }
+  & :where(blockquote) {
+    padding: 0.5em;
+  }
+  & :where(pre) {
+    background: rgba(128, 174, 255, 0.1);
+  }
+  & :where(pre code) {
+    color: var(--color-black-grape-500);
+  }
+}
+
+/* Typography: dark */
+@utility markdown-dark {
+  color: var(--color-gray-300);
+  & :where(h1, h2, h3, h4) {
+    color: var(--color-blue-500);
+  }
+  & :where(strong, code) {
+    color: var(--color-gray-300);
+  }
+  & :where(a) {
+    color: var(--color-blue-500);
+    &:hover {
+      color: var(--color-blue-300);
+    }
+  }
+  & :where(blockquote) {
+    color: var(--color-blue-500);
+    background: var(--color-gray-800);
+    border-color: var(--color-gray-700);
+  }
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
 
 figure img {
   margin-left: auto !important;
   margin-right: auto !important;
-  @apply my-0 !important;
+  @apply my-0!;
 }
 
 figure figcaption {
@@ -22,17 +134,17 @@ figure figcaption {
 }
 
 .anchorjs-link {
-  @apply no-underline text-violet;
+  @apply no-underline text-violet dark:text-blue-500;
 }
 .anchorjs-link:hover {
-  @apply text-violet-light;
+  @apply text-violet-light dark:text-blue-300;
 }
 :target {
   scroll-margin-top: 48px;
 }
 
 .note {
-  @apply mb-4 px-4 py-1 border-l-4 bg-opacity-50;
+  @apply mb-4 px-4 py-1 border-l-4;
 }
 .note :is(h1, h2, h3, h4, h5, h6) {
   @apply mt-2 mb-0;
@@ -45,17 +157,17 @@ figure figcaption {
   @apply text-justify;
 }
 .note-info {
-  @apply bg-black-grape-100 dark:bg-black-grape-500 border-black-grape-200 dark:border-black-grape-400;
+  @apply bg-black-grape-100/50 dark:bg-black-grape-500/50 border-black-grape-200 dark:border-black-grape-400;
 }
 .note-tip {
-  @apply bg-blue-100 dark:bg-black-grape-500 border-blue-200 dark:border-blue-400;
+  @apply bg-blue-100/50 dark:bg-black-grape-500/50 border-blue-200 dark:border-blue-400;
 }
 .note-important {
-  @apply bg-rose-100 dark:bg-black-grape-500 border-rose-200 dark:border-rose-400;
+  @apply bg-rose-100/50 dark:bg-black-grape-500/50 border-rose-200 dark:border-rose-400;
 }
 
 blockquote p {
-  @apply my-2 !important;
+  @apply my-2!;
 }
 
 summary::-webkit-details-marker {

@@ -40,7 +40,7 @@
           <div id="site-title" class="{% if page.type == 'homepage' %}hidden opacity-0 {% endif %}text-xl font-display font-medium transition-opacity duration-1000 ease-out">{{ site.title }}</div>
         </a>
         {#- navigation ~#}
-        <nav class="flex items-center space-x-4">
+        <nav class="flex items-center gap-4">
           {{ include('partials/flexsearch/trigger.html.twig') }}
           <ul class="flex justify-end space-x-4">
             <li>{{ include('partials/icons/rss.html.twig') }}</li>
@@ -59,7 +59,7 @@
       {%- block main ~%}
       <article id="content" class="mx-auto markdown sm:markdown-lg lg:markdown-xl dark:markdown-dark">
         <header>
-          <h1 class="my-8 text-5xl font-display font-extrabold">{{ page.title }}</h1>
+          <h1 class="my-8! text-5xl font-display font-extrabold">{{ page.title }}</h1>
         </header>
         <div>
           {{ page.content }}
