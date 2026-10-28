@@ -2,7 +2,8 @@
   "require": {
     "cecil/theme-netlify": "^3.0",
     "cecil/theme-pwa": "^3.0",
-    "aligny/tailwind-builder": "^1.2"
+    "aligny/tailwind-builder": "^1.2",
+    "cecil/theme-flexsearch": "^1.2"
   },
   "config": {
     "allow-plugins": {

@@ -47,6 +47,7 @@ googlefonts:
 theme:
   - netlify
   - pwa
+  - flexsearch
 
 metatags:
   articles: post
@@ -105,6 +106,13 @@ pwa:
       snackbar: true
     offline:
       snackbar: true
+
+flexsearch:
+  sections:
+    post:
+      title: Articles
+      limit: 8
+      date: true
 
 netlify:
   redirects:
