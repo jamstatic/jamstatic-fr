@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@cecilapp/netlify-plugin-cache": "^1.1.0",
     "all-contributors-cli": "^v6.26"
   },
   "scripts": {

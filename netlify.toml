@@ -20,3 +20,6 @@
     output_path = "lighthouse.html"
   [plugins.inputs.settings]
     locale = "fr"
+
+[[plugins]]
+  package = "@cecilapp/netlify-plugin-cache"
