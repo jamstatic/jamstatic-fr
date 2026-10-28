@@ -1,0 +1,33 @@
+/* FlexSearch: couleurs de la charte Jamstatic */
+:root {
+  --flexsearch-accent: #4a21cc;
+  --flexsearch-mark-color: #4a21cc;
+  --flexsearch-selected-bg: #ebe5ff;
+  --flexsearch-selected-color: #300a66;
+  --flexsearch-backdrop: rgb(48 10 102 / .6);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --flexsearch-bg: #231b31;
+    --flexsearch-divider: #4e3e70;
+    --flexsearch-border: #4e3e70;
+    --flexsearch-surface: #15101e;
+    --flexsearch-accent: #7dacff;
+    --flexsearch-mark-color: #7dacff;
+    --flexsearch-selected-bg: #4e3e70;
+    --flexsearch-selected-color: #fff;
+    --flexsearch-backdrop: rgb(0 0 0 / .7);
+  }
+}
+/* bouton de recherche dans l'en-tête (fond violet) */
+header .flexsearch-trigger,
+header .flexsearch-trigger-icon {
+  color: #fff;
+}
+header button.flexsearch-trigger {
+  border: 0;
+}
+header .flexsearch-trigger:hover,
+header .flexsearch-trigger:focus-visible {
+  opacity: .8;
+}

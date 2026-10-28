@@ -74,14 +74,14 @@ Les attributs sont définis via des variables au format [YAML](https://fr.m.wiki
 cascade:
   price: 23
   variants:
-  - name: Format
-    options:
-    - value: A3
-      html: "Affiche A3 - 23 €"
-      price: 0
-    - value: A5
-      html: "Carte A5 - 8 €"
-      price: -15
+    - name: Format
+      options:
+        - value: A3
+          html: "Affiche A3 - 23 €"
+          price: 0
+        - value: A5
+          html: "Carte A5 - 8 €"
+          price: -15
 ---
 ```
 
@@ -103,8 +103,8 @@ description: "Femme ridant en toute liberté au pieds des montagnes."
 name: "#01 Pink gravel"
 image: "/images/products/01-Pink-gravel-A3_S.png"
 gallery:
-- "/images/products/01-Pink-gravel-A5_S.png"
-- "/images/products/01-Pink-gravel-ZOOM_S.png"
+  - "/images/products/01-Pink-gravel-A5_S.png"
+  - "/images/products/01-Pink-gravel-ZOOM_S.png"
 published: true
 ---
 **Gavarnie, Hautes-Pyrénées.**  

@@ -7,28 +7,32 @@ description: "Jamstatic, la communauté des sites statiques et des architectures
 #  url: https://jamstatic.fr
 #  email: contact@jamstatic.fr
 image: icon.png
+
 language: fr
 languages:
   - code: fr
     name: Français
     locale: fr
+
 taxonomies:
   categories: category
+
 social:
-  bluesky:
-    username: jamstatic.fr
-    url: https://bsky.app/profile/jamstatic.fr
+  #bluesky:
+  #  username: jamstatic.fr
+  #  url: https://bsky.app/profile/jamstatic.fr
   github:
     username: jamstatic
     url: https://github.com/jamstatic/
   opencollective:
     url: https://opencollective.com/jamstatic
-  meetup:
-    url: https://www.meetup.com/fr-FR/Jamstack-Toulouse/
+  #meetup:
+  #  url: https://www.meetup.com/fr-FR/Jamstack-Toulouse/
   podcast:
     title: Génération Statique
     url: https://anchor.fm/jamstatic
     rss: https://anchor.fm/s/39f4fa04/podcast/rss
+
 cloudinary:
   account: aligny
   asset: jamstatic/og/twitter-card-bg-2.png
@@ -39,12 +43,16 @@ anchor:
   version: 5.0.0
 googlefonts:
   url: https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&family=Roboto&display=swap
+
 theme:
   - netlify
   - pwa
+  - flexsearch
+
 metatags:
   articles: post
   jsonld: true
+
 pages:
   pagination:
     max: 10
@@ -52,9 +60,8 @@ pages:
     - section: post
       path: :year/:month/:day/:slug
   body:
-    highlight: true
     images:
-      formats: [webp, avif]
+      formats: [avif, webp]
       responsive: true
       class: "dark:brightness-90"
       caption: true
@@ -83,20 +90,31 @@ output:
       extension: xml
       exclude: [redirect, paginated]
   pagetypeformats:
-    homepage: [html, atom, jsonfeed]
+    homepage: [html, atom, jsonfeed, llms]
 optimize:
   images:
     ext: [jpeg, jpg, png, webp, svg, gif]
-manifest:
-  background_color: "#300A66"
-  theme_color: "#4A21CC"
-  shortcuts: true
-serviceworker:
-  enabled: true
-  update:
-    snackbar: true
-  offline:
-    snackbar: true
+
+pwa:
+  manifest:
+    background_color: "#300A66"
+    theme_color: "#4A21CC"
+    shortcuts: true
+  serviceworker:
+    enabled: true
+    update:
+      snackbar: true
+    offline:
+      snackbar: true
+
+flexsearch:
+  trigger: icon
+  sections:
+    post:
+      title: Articles
+      limit: 8
+      date: true
+
 netlify:
   redirects:
     - from: https://jamstatic.netlify.app/*

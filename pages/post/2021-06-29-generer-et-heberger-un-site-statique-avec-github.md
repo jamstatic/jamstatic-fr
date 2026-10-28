@@ -21,7 +21,7 @@ Dans cet article j’explique comment mettre en pratique GitHub Pages et GitHub 
 
 ## Qu’est-ce que GitHub Pages ?
 
-![GitHub Pages](/images/2021-06-29-generer-et-heberger-un-site-statique-avec-github/github-pages.png)
+![GitHub Pages](../../assets/images/2021-06-29-generer-et-heberger-un-site-statique-avec-github/github-pages.png)
 
 [GitHub Pages](https://pages.github.com/) est une solution d’hébergement de pages web statiques permettant de créer rapidement un site web associé à un projet GitHub.\
 Historiquement, cette branche dédiée d’un dépôt, utilise [Jekyll](https://jekyllrb.com/) par défaut pour générer à la volée des pages web à partir de son contenu (fichiers Markdown et HTML).
@@ -38,7 +38,7 @@ Comme je viens de l’indiquer, l’idée ici de s’appuyer sur le SSG de son c
 
 ## Qu’est-ce que GitHub Actions ?
 
-![GitHub Actions](/images/2021-06-29-generer-et-heberger-un-site-statique-avec-github/github-actions.png)
+![GitHub Actions](../../assets/images/2021-06-29-generer-et-heberger-un-site-statique-avec-github/github-actions.png)
 
 [GitHub Actions](https://github.com/features/actions) est la solution de GitHub pour automatiser des workflows de type intégration ou déploiement continue.
 
@@ -73,7 +73,7 @@ Avant de définir les tâches il est nécessaire de déterminer l’évènement 
 on:
   push:
     branches:
-    - master
+      - master
 ```
 
 Ici on considère que la branche de production est `master` et que la génération doit être déclenchée à chaque modification de code (`push`).
@@ -96,26 +96,23 @@ build:
   # Utilisation d'une image Linux Ubuntu
   runs-on: ubuntu-latest
   steps:
-
-  - name: Checkout source
-    uses: actions/checkout@v2
-    with:
-      # Inutile de récupérer tout l'historique : la dernière version suffit
-      fetch-depth: 1
-
-  - name: Build site with Cecil
-    uses: Cecilapp/Cecil-Action@v3
-    with:
-      # Pour éviter les conflits, utilisation d'un nom spécifique
-      config: 'cecil.yml'
-
-  - name: Upload site to Artifacts
-    uses: actions/upload-artifact@v2
-    with:
-      name: _site
-      path: _site
-      # La tâche ne sera pas exécutée si aucun fichier n'est généré
-      if-no-files-found: error
+    - name: Checkout source
+      uses: actions/checkout@v2
+      with:
+        # Inutile de récupérer tout l'historique : la dernière version suffit
+        fetch-depth: 1
+    - name: Build site with Cecil
+      uses: Cecilapp/Cecil-Action@v3
+      with:
+        # Pour éviter les conflits, utilisation d'un nom spécifique
+        config: 'cecil.yml'
+    - name: Upload site to Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: _site
+        path: _site
+        # La tâche ne sera pas exécutée si aucun fichier n'est généré
+        if-no-files-found: error
 ```
 
 #### 2. `deploy` : déploiement des fichiers générés
@@ -130,21 +127,19 @@ deploy:
   needs: build
   runs-on: ubuntu-latest
   steps:
-
-  - name: Download site from Artifacts
-    uses: actions/download-artifact@v2
-    with:
-      name: _site
-      path: _site
-
-  - name: Deploy site to GitHub Pages
-    uses: Cecilapp/GitHub-Pages-deploy@v3
-    env:
-      # Accès en écriture à la branche cible (`gh-pages`)
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    with:
-      # Adresse e-mail valide sur GitHub
-      email: arnaud@ligny.org
+    - name: Download site from Artifacts
+      uses: actions/download-artifact@v2
+      with:
+        name: _site
+        path: _site
+    - name: Deploy site to GitHub Pages
+      uses: Cecilapp/GitHub-Pages-deploy@v3
+      env:
+        # Accès en écriture à la branche cible (`gh-pages`)
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        # Adresse e-mail valide sur GitHub
+        email: arnaud@ligny.org
 ```
 
 > Note : par défaut *GitHub-Pages-deploy* utilise le dossier `_site` comme source et le déploie dans la branche `gh-pages`.
@@ -153,13 +148,13 @@ deploy:
 
 Enfin, il reste à activer *GitHub Pages* au sein du dépôt via `Settings` > `Pages`.
 
-![GitHub Pages settings](/images/2021-06-29-generer-et-heberger-un-site-statique-avec-github/github-settings-pages-before.png)
+![GitHub Pages settings](../../assets/images/2021-06-29-generer-et-heberger-un-site-statique-avec-github/github-settings-pages-before.png)
 
 1. Sélectionner la branche cible `gh-pages` (ainsi que le dossier `/`)
 2. Puis le domaine (si vous souhaitez le personnaliser)
 3. Et enfin activer HTTPS (si le domaine de référence est personnalisé)
 
-![GitHub Pages settings](/images/2021-06-29-generer-et-heberger-un-site-statique-avec-github/github-settings-pages-after.png)
+![GitHub Pages settings](../../assets/images/2021-06-29-generer-et-heberger-un-site-statique-avec-github/github-settings-pages-after.png)
 
 Et voilà comment générer et déployer automatiquement un site web statique, hébergé gratuitement ! 🎉
 
