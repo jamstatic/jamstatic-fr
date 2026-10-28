@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "@cecilapp/netlify-plugin-cache": "^1.1.0",
-    "all-contributors-cli": "^v6.26"
+    "all-contributors-cli": "^v7.0"
   },
   "scripts": {
     "build": "curl -sSOL https://cecil.app/build.sh && bash ./build.sh",
