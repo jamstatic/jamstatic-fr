@@ -25,9 +25,9 @@ header .flexsearch-trigger-icon {
   color: #fff;
 }
 header button.flexsearch-trigger {
-  border-color: rgb(255 255 255 / .5);
+  border: 0;
 }
 header .flexsearch-trigger:hover,
 header .flexsearch-trigger:focus-visible {
-  border-color: #fff;
+  opacity: .8;
 }
